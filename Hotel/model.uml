@@ -74,6 +74,8 @@
           <ownedOperation xmi:type="uml:Operation" xmi:id="_kgxLEHT7EeSTN6KBMiF9rQ" name="changeRoomLocation"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_o4KCEHT7EeSTN6KBMiF9rQ" name="changeHotelRoomCategory"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_rU7mgHT7EeSTN6KBMiF9rQ" name="changeConferenceRoomCategory"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_l011EHWKEeS1Iek-sidDrg" name="searchForRoom"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_uZJYcHWKEeS1Iek-sidDrg" name="searchForAvailableRooms"/>
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_8bQZ0HTxEeSTN6KBMiF9rQ" name="BookableManager" visibility="package">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_FwQaUHTyEeSTN6KBMiF9rQ" name="bookable" type="_469BAHTfEeSTN6KBMiF9rQ" association="_FwRBYHTyEeSTN6KBMiF9rQ">
@@ -353,7 +355,14 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_l7w3gHT9EeSTN6KBMiF9rQ" name="Requests">
       <packagedElement xmi:type="uml:Component" xmi:id="_x2WaMHT9EeSTN6KBMiF9rQ" name="RequestsComponent"/>
-      <packagedElement xmi:type="uml:Package" xmi:id="_rhFr0HT-EeSTN6KBMiF9rQ" name="ClassDiagram"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_rhFr0HT-EeSTN6KBMiF9rQ" name="ClassDiagram">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_DaGt8HWEEeS1Iek-sidDrg" name="IManageRequest"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_EFf0UHWEEeS1Iek-sidDrg" name="IRequestsAccess"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_FL1KQHWEEeS1Iek-sidDrg" name="RequestManager">
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_eWUcwHWEEeS1Iek-sidDrg" client="_FL1KQHWEEeS1Iek-sidDrg" supplier="_DaGt8HWEEeS1Iek-sidDrg" contract="_DaGt8HWEEeS1Iek-sidDrg"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_e0lGEHWEEeS1Iek-sidDrg" client="_FL1KQHWEEeS1Iek-sidDrg" supplier="_EFf0UHWEEeS1Iek-sidDrg" contract="_EFf0UHWEEeS1Iek-sidDrg"/>
+        </packagedElement>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_65frIHT8EeSTN6KBMiF9rQ" name="Actors">
       <packagedElement xmi:type="uml:Component" xmi:id="_BEkGQHT9EeSTN6KBMiF9rQ" name="Manager"/>
