@@ -74,8 +74,6 @@
           <ownedOperation xmi:type="uml:Operation" xmi:id="_kgxLEHT7EeSTN6KBMiF9rQ" name="changeRoomLocation"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_o4KCEHT7EeSTN6KBMiF9rQ" name="changeHotelRoomCategory"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_rU7mgHT7EeSTN6KBMiF9rQ" name="changeConferenceRoomCategory"/>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_l011EHWKEeS1Iek-sidDrg" name="searchForRoom"/>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_uZJYcHWKEeS1Iek-sidDrg" name="searchForAvailableRooms"/>
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_8bQZ0HTxEeSTN6KBMiF9rQ" name="BookableManager" visibility="package">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_FwQaUHTyEeSTN6KBMiF9rQ" name="bookable" type="_469BAHTfEeSTN6KBMiF9rQ" association="_FwRBYHTyEeSTN6KBMiF9rQ">
@@ -94,6 +92,8 @@
           <ownedOperation xmi:type="uml:Operation" xmi:id="_tifR8HT1EeSTN6KBMiF9rQ" name="getBookableCategory"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_ZZH6gHT2EeSTN6KBMiF9rQ" name="getConferenceRoomCapacity"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_cYHbMHT2EeSTN6KBMiF9rQ" name="getHotelRoomNbrBeds"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_c65bEHWZEeS1Iek-sidDrg" name="searchForRoom"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_fU7NgHWZEeS1Iek-sidDrg" name="searchForAvailableRooms"/>
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_45ML0HTyEeSTN6KBMiF9rQ" name="Room Location">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_cuYGcHTzEeSTN6KBMiF9rQ" name="floor" visibility="private">
