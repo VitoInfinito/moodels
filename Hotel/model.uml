@@ -357,18 +357,18 @@ Customer Service representative inherits the uses of Staff</body>
             </ownedEnd>
           </packagedElement>
           <packagedElement xmi:type="uml:Usage" xmi:id="_nhY20HXUEeSfyJE4wiQQOg" name="Usage0" client="_DrO1QHT3EeSTN6KBMiF9rQ" supplier="_ud--4HW7EeSfyJE4wiQQOg"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_WzYroHXYEeSfyJE4wiQQOg" name="responsible" visibility="private" memberEnd="_WzYroXXYEeSfyJE4wiQQOg _WzYEkHXYEeSfyJE4wiQQOg">
-          <ownedEnd xmi:type="uml:Property" xmi:id="_WzYroXXYEeSfyJE4wiQQOg" name="booking" type="_zoIacHW5EeSfyJE4wiQQOg" association="_WzYroHXYEeSfyJE4wiQQOg">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WzYronXYEeSfyJE4wiQQOg" value="1"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WzYro3XYEeSfyJE4wiQQOg" value="1"/>
-          </ownedEnd>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_sneDAHXYEeSfyJE4wiQQOg" name="bank" memberEnd="_sneDAXXYEeSfyJE4wiQQOg _sndb8HXYEeSfyJE4wiQQOg">
-          <ownedEnd xmi:type="uml:Property" xmi:id="_sneDAXXYEeSfyJE4wiQQOg" name="bookingsManager" type="_0kulkHW5EeSfyJE4wiQQOg" association="_sneDAHXYEeSfyJE4wiQQOg">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sneDAnXYEeSfyJE4wiQQOg" value="1"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sneDA3XYEeSfyJE4wiQQOg" value="1"/>
-          </ownedEnd>
+          <packagedElement xmi:type="uml:Association" xmi:id="_WzYroHXYEeSfyJE4wiQQOg" name="responsible" visibility="private" memberEnd="_WzYroXXYEeSfyJE4wiQQOg _WzYEkHXYEeSfyJE4wiQQOg">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_WzYroXXYEeSfyJE4wiQQOg" name="booking" type="_zoIacHW5EeSfyJE4wiQQOg" association="_WzYroHXYEeSfyJE4wiQQOg">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WzYronXYEeSfyJE4wiQQOg" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WzYro3XYEeSfyJE4wiQQOg" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_sneDAHXYEeSfyJE4wiQQOg" name="bank" memberEnd="_sneDAXXYEeSfyJE4wiQQOg _sndb8HXYEeSfyJE4wiQQOg">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_sneDAXXYEeSfyJE4wiQQOg" name="bookingsManager" type="_0kulkHW5EeSfyJE4wiQQOg" association="_sneDAHXYEeSfyJE4wiQQOg">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sneDAnXYEeSfyJE4wiQQOg" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sneDA3XYEeSfyJE4wiQQOg" value="1"/>
+            </ownedEnd>
+          </packagedElement>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_qGdvoHT4EeSTN6KBMiF9rQ" name="Statistics">
