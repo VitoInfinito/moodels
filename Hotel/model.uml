@@ -654,13 +654,42 @@ booking is the ID of the booking that booked this stay</body>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_l7w3gHT9EeSTN6KBMiF9rQ" name="Requests">
-        <packagedElement xmi:type="uml:Component" xmi:id="_x2WaMHT9EeSTN6KBMiF9rQ" name="RequestsComponent"/>
-        <packagedElement xmi:type="uml:Package" xmi:id="_rhFr0HT-EeSTN6KBMiF9rQ" name="ClassDiagram">
-          <packagedElement xmi:type="uml:Interface" xmi:id="_DaGt8HWEEeS1Iek-sidDrg" name="IManageRequest"/>
-          <packagedElement xmi:type="uml:Interface" xmi:id="_EFf0UHWEEeS1Iek-sidDrg" name="IRequestsAccess"/>
-          <packagedElement xmi:type="uml:Class" xmi:id="_FL1KQHWEEeS1Iek-sidDrg" name="RequestManager">
+        <packagedElement xmi:type="uml:Component" xmi:id="_x2WaMHT9EeSTN6KBMiF9rQ" name="RequestsComponent">
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_DaGt8HWEEeS1Iek-sidDrg" name="IManageRequest">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_jlBNcHYMEeShIacisPcfBA" name="resolveRequest"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_RuOVkHYNEeShIacisPcfBA" name="deleteRequest"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_TAWEwHYNEeShIacisPcfBA" name="changeRequest"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_EFf0UHWEEeS1Iek-sidDrg" name="IRequestsAccess">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_I9wlgHYNEeShIacisPcfBA" name="getDescription"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_Yed6UHYNEeShIacisPcfBA" name="hasBeenResolved"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_FL1KQHWEEeS1Iek-sidDrg" name="RequestManager">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_u1D-UXYMEeShIacisPcfBA" name="specialRequest" type="_oIexkHYMEeShIacisPcfBA" association="_u1D-UHYMEeShIacisPcfBA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u1D-UnYMEeShIacisPcfBA"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u1D-U3YMEeShIacisPcfBA" value="*"/>
+            </ownedAttribute>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_eWUcwHWEEeS1Iek-sidDrg" client="_FL1KQHWEEeS1Iek-sidDrg" supplier="_DaGt8HWEEeS1Iek-sidDrg" contract="_DaGt8HWEEeS1Iek-sidDrg"/>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_e0lGEHWEEeS1Iek-sidDrg" client="_FL1KQHWEEeS1Iek-sidDrg" supplier="_EFf0UHWEEeS1Iek-sidDrg" contract="_EFf0UHWEEeS1Iek-sidDrg"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_oIexkHYMEeShIacisPcfBA" name="SpecialRequest">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_4IQoAHYMEeShIacisPcfBA" name="id" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_5t2s0HYMEeShIacisPcfBA" name="description" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_A4K-cHYNEeShIacisPcfBA" name="isResolved" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            </ownedAttribute>
+          </nestedClassifier>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_rhFr0HT-EeSTN6KBMiF9rQ" name="ClassDiagram">
+          <packagedElement xmi:type="uml:Association" xmi:id="_u1D-UHYMEeShIacisPcfBA" memberEnd="_u1D-UXYMEeShIacisPcfBA _u1CJIHYMEeShIacisPcfBA">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_u1CJIHYMEeShIacisPcfBA" name="requestManager" type="_FL1KQHWEEeS1Iek-sidDrg" association="_u1D-UHYMEeShIacisPcfBA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u1CJIXYMEeShIacisPcfBA" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u1CJInYMEeShIacisPcfBA" value="1"/>
+            </ownedEnd>
           </packagedElement>
         </packagedElement>
       </packagedElement>
