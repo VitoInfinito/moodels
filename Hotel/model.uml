@@ -327,6 +327,7 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_jIO-4HXMEeSfyJE4wiQQOg" name="searchBookingsMadeInPeriod"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_m555sHXMEeSfyJE4wiQQOg" name="searchBookingsWithStaysInPeriod"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_VG5xIHXXEeSfyJE4wiQQOg" name="searchForAvailableBookablesInPeriod"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_wTl6AHXZEeSfyJE4wiQQOg" name="getAvailableBookablesInPeriod"/>
           </nestedClassifier>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_qT15wHT3EeSTN6KBMiF9rQ" name="ClassDiagram">

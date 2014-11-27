@@ -3077,6 +3077,10 @@
           <element xmi:type="uml:Operation" href="model.uml#_VG5xIHXXEeSfyJE4wiQQOg"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_VG6YMXXXEeSfyJE4wiQQOg"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_wTnIIHXZEeSfyJE4wiQQOg" type="3007">
+          <element xmi:type="uml:Operation" href="model.uml#_wTl6AHXZEeSfyJE4wiQQOg"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_wTnIIXXZEeSfyJE4wiQQOg"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_2n_d2XW5EeSfyJE4wiQQOg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_2n_d2nW5EeSfyJE4wiQQOg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_2n_d23W5EeSfyJE4wiQQOg"/>
