@@ -278,6 +278,10 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_RPNu4HXMEeSfyJE4wiQQOg" name="issueDate" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
             </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_WzYEkHXYEeSfyJE4wiQQOg" name="creditCard" type="_xjPIgHXPEeSfyJE4wiQQOg" association="_WzYroHXYEeSfyJE4wiQQOg">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WzYEkXXYEeSfyJE4wiQQOg" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WzYEknXYEeSfyJE4wiQQOg" value="1"/>
+            </ownedAttribute>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_Rr45QHXLEeSfyJE4wiQQOg" name="getBookingNbr" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_V-0HAHXLEeSfyJE4wiQQOg" name="getCustomer" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_XJw3MHXLEeSfyJE4wiQQOg" name="getNbrGuests" visibility="package"/>
@@ -286,6 +290,7 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_hIwP4HXLEeSfyJE4wiQQOg" name="addBookedStay" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_kcVggHXLEeSfyJE4wiQQOg" name="cancelBookedStay" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_Ube2kHXMEeSfyJE4wiQQOg" name="getIssueDate" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_byIdkHXYEeSfyJE4wiQQOg" name="getCreditCard" visibility="package"/>
           </nestedClassifier>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_0kulkHW5EeSfyJE4wiQQOg" name="BookingsManager" visibility="package">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_WBJSAHW6EeSfyJE4wiQQOg" name="booking" type="_zoIacHW5EeSfyJE4wiQQOg" association="_WBJ5EHW6EeSfyJE4wiQQOg">
@@ -299,6 +304,10 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_GBVMEHXKEeSfyJE4wiQQOg" name="iHotelStayManager" type="_ud--4HW7EeSfyJE4wiQQOg" association="_GBVzIHXKEeSfyJE4wiQQOg">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GBVMEXXKEeSfyJE4wiQQOg" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GBVMEnXKEeSfyJE4wiQQOg" value="1"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_sndb8HXYEeSfyJE4wiQQOg" name="bank" type="_OwydYnXPEeSfyJE4wiQQOg" association="_sneDAHXYEeSfyJE4wiQQOg">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sndb8XXYEeSfyJE4wiQQOg" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sndb8nXYEeSfyJE4wiQQOg" value="1"/>
             </ownedAttribute>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_b3NGcHW6EeSfyJE4wiQQOg" client="_0kulkHW5EeSfyJE4wiQQOg" supplier="_2n-2wHW5EeSfyJE4wiQQOg" contract="_2n-2wHW5EeSfyJE4wiQQOg"/>
           </nestedClassifier>
@@ -325,6 +334,9 @@ Customer Service representative inherits the uses of Staff</body>
             <body> TODO fixa associationerna när customer och guest interface kommer&#xD;
 </body>
           </ownedComment>
+          <ownedComment xmi:type="uml:Comment" xmi:id="_524qoHXYEeSfyJE4wiQQOg">
+            <body>For card validation when making a booking</body>
+          </ownedComment>
           <packagedElement xmi:type="uml:Association" xmi:id="_WBJ5EHW6EeSfyJE4wiQQOg" visibility="private" memberEnd="_WBJ5EXW6EeSfyJE4wiQQOg _WBJSAHW6EeSfyJE4wiQQOg">
             <ownedEnd xmi:type="uml:Property" xmi:id="_WBJ5EXW6EeSfyJE4wiQQOg" name="bookingsManager" type="_0kulkHW5EeSfyJE4wiQQOg" association="_WBJ5EHW6EeSfyJE4wiQQOg">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WBJ5EnW6EeSfyJE4wiQQOg" value="1"/>
@@ -345,6 +357,18 @@ Customer Service representative inherits the uses of Staff</body>
             </ownedEnd>
           </packagedElement>
           <packagedElement xmi:type="uml:Usage" xmi:id="_nhY20HXUEeSfyJE4wiQQOg" name="Usage0" client="_DrO1QHT3EeSTN6KBMiF9rQ" supplier="_ud--4HW7EeSfyJE4wiQQOg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_WzYroHXYEeSfyJE4wiQQOg" name="responsible" visibility="private" memberEnd="_WzYroXXYEeSfyJE4wiQQOg _WzYEkHXYEeSfyJE4wiQQOg">
+          <ownedEnd xmi:type="uml:Property" xmi:id="_WzYroXXYEeSfyJE4wiQQOg" name="booking" type="_zoIacHW5EeSfyJE4wiQQOg" association="_WzYroHXYEeSfyJE4wiQQOg">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WzYronXYEeSfyJE4wiQQOg" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WzYro3XYEeSfyJE4wiQQOg" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_sneDAHXYEeSfyJE4wiQQOg" name="bank" memberEnd="_sneDAXXYEeSfyJE4wiQQOg _sndb8HXYEeSfyJE4wiQQOg">
+          <ownedEnd xmi:type="uml:Property" xmi:id="_sneDAXXYEeSfyJE4wiQQOg" name="bookingsManager" type="_0kulkHW5EeSfyJE4wiQQOg" association="_sneDAHXYEeSfyJE4wiQQOg">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sneDAnXYEeSfyJE4wiQQOg" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sneDA3XYEeSfyJE4wiQQOg" value="1"/>
+          </ownedEnd>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_qGdvoHT4EeSTN6KBMiF9rQ" name="Statistics">
