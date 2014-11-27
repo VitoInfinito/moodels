@@ -350,8 +350,7 @@ Customer Service representative inherits the uses of Staff</body>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M3fwc3W7EeSfyJE4wiQQOg" value="1"/>
             </ownedEnd>
           </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_GBVzIHXKEeSfyJE4wiQQOg" memberEnd="_GBVzIXXKEeSfyJE4wiQQOg _GBVMEHXKEeSfyJE4wiQQOg">
-            <name xsi:nil="true"/>
+          <packagedElement xmi:type="uml:Association" xmi:id="_GBVzIHXKEeSfyJE4wiQQOg" visibility="private" memberEnd="_GBVzIXXKEeSfyJE4wiQQOg _GBVMEHXKEeSfyJE4wiQQOg">
             <ownedEnd xmi:type="uml:Property" xmi:id="_GBVzIXXKEeSfyJE4wiQQOg" name="bookingsManager" type="_0kulkHW5EeSfyJE4wiQQOg" association="_GBVzIHXKEeSfyJE4wiQQOg">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GBVzInXKEeSfyJE4wiQQOg" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GBVzI3XKEeSfyJE4wiQQOg" value="1"/>
@@ -364,7 +363,7 @@ Customer Service representative inherits the uses of Staff</body>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WzYro3XYEeSfyJE4wiQQOg" value="1"/>
             </ownedEnd>
           </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_sneDAHXYEeSfyJE4wiQQOg" name="bank" memberEnd="_sneDAXXYEeSfyJE4wiQQOg _sndb8HXYEeSfyJE4wiQQOg">
+          <packagedElement xmi:type="uml:Association" xmi:id="_sneDAHXYEeSfyJE4wiQQOg" name="bank" visibility="private" memberEnd="_sneDAXXYEeSfyJE4wiQQOg _sndb8HXYEeSfyJE4wiQQOg">
             <ownedEnd xmi:type="uml:Property" xmi:id="_sneDAXXYEeSfyJE4wiQQOg" name="bookingsManager" type="_0kulkHW5EeSfyJE4wiQQOg" association="_sneDAHXYEeSfyJE4wiQQOg">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sneDAnXYEeSfyJE4wiQQOg" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sneDA3XYEeSfyJE4wiQQOg" value="1"/>
@@ -577,7 +576,7 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_5soxMHXSEeSfyJE4wiQQOg" name="getAllUnpayedBillsOfHotelStay"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_9rbiAHXSEeSfyJE4wiQQOg" name="billCreditCardWithAllUnpaidBillsOfHotelStay"/>
           </nestedClassifier>
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_xjPIgHXPEeSfyJE4wiQQOg" name="CreditCard">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_xjPIgHXPEeSfyJE4wiQQOg" name="CreditCard" visibility="package">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_CyILgHXSEeSfyJE4wiQQOg" name="ccNumber" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedAttribute>
@@ -621,13 +620,13 @@ booking is the ID of the booking that booked this stay</body>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-h8xw3W7EeSfyJE4wiQQOg" value="1"/>
             </ownedEnd>
           </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_YJc1wHXPEeSfyJE4wiQQOg" name="bank" memberEnd="_YJc1wXXPEeSfyJE4wiQQOg _YJcOsHXPEeSfyJE4wiQQOg">
+          <packagedElement xmi:type="uml:Association" xmi:id="_YJc1wHXPEeSfyJE4wiQQOg" name="bank" visibility="private" memberEnd="_YJc1wXXPEeSfyJE4wiQQOg _YJcOsHXPEeSfyJE4wiQQOg">
             <ownedEnd xmi:type="uml:Property" xmi:id="_YJc1wXXPEeSfyJE4wiQQOg" name="hotelStayManager" type="_qx3ScHW7EeSfyJE4wiQQOg" association="_YJc1wHXPEeSfyJE4wiQQOg">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YJc1wnXPEeSfyJE4wiQQOg" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YJc1w3XPEeSfyJE4wiQQOg" value="1"/>
             </ownedEnd>
           </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_0YrroHXPEeSfyJE4wiQQOg" name="responsibleCard" memberEnd="_0YrroXXPEeSfyJE4wiQQOg _0YrEkHXPEeSfyJE4wiQQOg">
+          <packagedElement xmi:type="uml:Association" xmi:id="_0YrroHXPEeSfyJE4wiQQOg" name="responsibleCard" visibility="private" memberEnd="_0YrroXXPEeSfyJE4wiQQOg _0YrEkHXPEeSfyJE4wiQQOg">
             <ownedEnd xmi:type="uml:Property" xmi:id="_0YrroXXPEeSfyJE4wiQQOg" name="stay" type="_lTHx0HW7EeSfyJE4wiQQOg" association="_0YrroHXPEeSfyJE4wiQQOg">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0YrronXPEeSfyJE4wiQQOg" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0Yrro3XPEeSfyJE4wiQQOg" value="1"/>
