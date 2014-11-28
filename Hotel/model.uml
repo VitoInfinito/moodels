@@ -649,7 +649,21 @@ Customer Service representative inherits the uses of Staff</body>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ExOcI3boEeSwu4_phSkYgQ" value="*"/>
             </ownedEnd>
           </packagedElement>
-          <packagedElement xmi:type="uml:Interface" xmi:id="_O3hWsHboEeSwu4_phSkYgQ" name="IManageBills"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_O3hWsHboEeSwu4_phSkYgQ" name="IManageBills">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_jer1sHbtEeSWb_3hJA4u-g" name="getBill"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_kfLCUHbtEeSWb_3hJA4u-g" name="getAllBills"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_lGxN0HbtEeSWb_3hJA4u-g" name="addBill"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_lplnAHbtEeSWb_3hJA4u-g" name="changeBillInformation"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_ouNOkHbtEeSWb_3hJA4u-g" name="IManageItems">
+            <generalization xmi:type="uml:Generalization" xmi:id="_r1a3IHbtEeSWb_3hJA4u-g" general="_O3hWsHboEeSwu4_phSkYgQ"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_uGbQcHbtEeSWb_3hJA4u-g" name="changeItemName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_vcz0kHbtEeSWb_3hJA4u-g" name="changeItemPrice"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_wQ2goHbtEeSWb_3hJA4u-g" name="changeItemExpense"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_xVSZIHbtEeSWb_3hJA4u-g" name="changeItemStock"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_zXZa0HbtEeSWb_3hJA4u-g" name="addItem"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_z5NHYHbtEeSWb_3hJA4u-g" name="removeItem"/>
+          </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_DpimkHXQEeSfyJE4wiQQOg" name="BillsComponent">
           <packagedElement xmi:type="uml:Component" xmi:id="_wybLYHbnEeSwu4_phSkYgQ" name="Bill" visibility="package">
@@ -660,8 +674,13 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_QejCEHbsEeSWb_3hJA4u-g" name="isPaid" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
             </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_ifjJYHbsEeSWb_3hJA4u-g" name="paymentType" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_TlSJgHbsEeSWb_3hJA4u-g" name="getIsPaid" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_WXi1wHbsEeSWb_3hJA4u-g" name="setIsPaid" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_fV1mcHbsEeSWb_3hJA4u-g" name="getPaymentType" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_hIkIUHbsEeSWb_3hJA4u-g" name="setPaymentType" visibility="package"/>
           </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Association" xmi:id="_qegg0HboEeSwu4_phSkYgQ" name="items" visibility="private" memberEnd="_qegg0XboEeSwu4_phSkYgQ _qef5wHboEeSwu4_phSkYgQ">
@@ -894,7 +913,7 @@ booking is the ID of the booking that booked this stay</body>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v5CIcXbrEeSWb_3hJA4u-g"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v5CIcnbrEeSWb_3hJA4u-g" value="*"/>
           </ownedAttribute>
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_A1tMUHbpEeSwu4_phSkYgQ" client="_BEkGQHT9EeSTN6KBMiF9rQ" supplier="_O3hWsHboEeSwu4_phSkYgQ" contract="_O3hWsHboEeSwu4_phSkYgQ"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_A1tMUHbpEeSwu4_phSkYgQ" client="_BEkGQHT9EeSTN6KBMiF9rQ" supplier="_O3hWsHboEeSwu4_phSkYgQ _ouNOkHbtEeSWb_3hJA4u-g" contract="_ouNOkHbtEeSWb_3hJA4u-g"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_Bxe2oHT9EeSTN6KBMiF9rQ" name="Staff">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_FAoUoHbpEeSwu4_phSkYgQ" name="bill" type="_wybLYHbnEeSwu4_phSkYgQ" association="_FAo7sHbpEeSwu4_phSkYgQ">
