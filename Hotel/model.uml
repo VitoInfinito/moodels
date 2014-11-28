@@ -470,7 +470,59 @@ Customer Service representative inherits the uses of Staff</body>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_xWA_MHT7EeSTN6KBMiF9rQ" name="Restaurants">
         <packagedElement xmi:type="uml:Component" xmi:id="_tvJ7UHT9EeSTN6KBMiF9rQ" name="RestaurantsComponent"/>
-        <packagedElement xmi:type="uml:Package" xmi:id="_Y_c8oHT-EeSTN6KBMiF9rQ" name="ClassDiagram"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_Y_c8oHT-EeSTN6KBMiF9rQ" name="ClassDiagram">
+          <packagedElement xmi:type="uml:Component" xmi:id="_PGS2sHbhEeSwu4_phSkYgQ" name="Restaurant" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_pecPIHbhEeSwu4_phSkYgQ" name="reservation" type="_kuypIHbhEeSwu4_phSkYgQ" association="_pec2MHbhEeSwu4_phSkYgQ">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pecPIXbhEeSwu4_phSkYgQ"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pecPInbhEeSwu4_phSkYgQ" value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_39suAHbhEeSwu4_phSkYgQ" name="restaurantTable" type="_bt_XAHbhEeSwu4_phSkYgQ" association="_39tVEHbhEeSwu4_phSkYgQ">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_39suAXbhEeSwu4_phSkYgQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_39suAnbhEeSwu4_phSkYgQ" value="*"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Component" xmi:id="_QEUlMHbhEeSwu4_phSkYgQ" name="RestaurantManager" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_LDTs8HbiEeSwu4_phSkYgQ" name="restaurant" type="_PGS2sHbhEeSwu4_phSkYgQ" association="_LDTs83biEeSwu4_phSkYgQ">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LDTs8XbiEeSwu4_phSkYgQ"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LDTs8nbiEeSwu4_phSkYgQ" value="*"/>
+            </ownedAttribute>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_blmakHbiEeSwu4_phSkYgQ" client="_QEUlMHbhEeSwu4_phSkYgQ" supplier="_XKFuAHbhEeSwu4_phSkYgQ" contract="_XKFuAHbhEeSwu4_phSkYgQ"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_d0GScHbiEeSwu4_phSkYgQ" client="_QEUlMHbhEeSwu4_phSkYgQ" supplier="_S0PIEHbhEeSwu4_phSkYgQ" contract="_S0PIEHbhEeSwu4_phSkYgQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_S0PIEHbhEeSwu4_phSkYgQ" name="IRestaurantReserve"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_XKFuAHbhEeSwu4_phSkYgQ" name="IRestaurantManage"/>
+          <packagedElement xmi:type="uml:Component" xmi:id="_bt_XAHbhEeSwu4_phSkYgQ" name="RestaurantTable" visibility="package"/>
+          <packagedElement xmi:type="uml:Component" xmi:id="_kuypIHbhEeSwu4_phSkYgQ" name="Reservation" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_umE3UHbhEeSwu4_phSkYgQ" name="restaurantTable" type="_bt_XAHbhEeSwu4_phSkYgQ" association="_umFeYHbhEeSwu4_phSkYgQ">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_umE3UXbhEeSwu4_phSkYgQ"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_umE3UnbhEeSwu4_phSkYgQ" value="*"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_pec2MHbhEeSwu4_phSkYgQ" name="reservations" visibility="private" memberEnd="_pec2MXbhEeSwu4_phSkYgQ _pecPIHbhEeSwu4_phSkYgQ">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_pec2MXbhEeSwu4_phSkYgQ" name="restaurant" type="_PGS2sHbhEeSwu4_phSkYgQ" association="_pec2MHbhEeSwu4_phSkYgQ">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pec2MnbhEeSwu4_phSkYgQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pec2M3bhEeSwu4_phSkYgQ" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_umFeYHbhEeSwu4_phSkYgQ" name="reservedTables" visibility="private" memberEnd="_umFeYXbhEeSwu4_phSkYgQ _umE3UHbhEeSwu4_phSkYgQ">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_umFeYXbhEeSwu4_phSkYgQ" name="reservation" type="_kuypIHbhEeSwu4_phSkYgQ" association="_umFeYHbhEeSwu4_phSkYgQ">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_umFeYnbhEeSwu4_phSkYgQ"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_umFeY3bhEeSwu4_phSkYgQ" value="*"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_39tVEHbhEeSwu4_phSkYgQ" name="tables" visibility="private" memberEnd="_39tVEXbhEeSwu4_phSkYgQ _39suAHbhEeSwu4_phSkYgQ">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_39tVEXbhEeSwu4_phSkYgQ" name="restaurant" type="_PGS2sHbhEeSwu4_phSkYgQ" association="_39tVEHbhEeSwu4_phSkYgQ">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_39tVEnbhEeSwu4_phSkYgQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_39tVE3bhEeSwu4_phSkYgQ" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_LDTs83biEeSwu4_phSkYgQ" name="restaurants" visibility="private" memberEnd="_LDTs9HbiEeSwu4_phSkYgQ _LDTs8HbiEeSwu4_phSkYgQ">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_LDTs9HbiEeSwu4_phSkYgQ" name="restaurantManager" type="_QEUlMHbhEeSwu4_phSkYgQ" association="_LDTs83biEeSwu4_phSkYgQ">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LDTs9XbiEeSwu4_phSkYgQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LDTs9nbiEeSwu4_phSkYgQ" value="*"/>
+            </ownedEnd>
+          </packagedElement>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_z6V9IHT7EeSTN6KBMiF9rQ" name="Staff">
         <packagedElement xmi:type="uml:Component" xmi:id="_uRE8oHT9EeSTN6KBMiF9rQ" name="StaffComponent"/>
