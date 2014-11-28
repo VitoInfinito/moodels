@@ -61,6 +61,7 @@ Customer Service representative inherits the uses of Staff</body>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_CO1hAHT9EeSTN6KBMiF9rQ" name="Checked In Guest"/>
         <packagedElement xmi:type="uml:Component" xmi:id="_JnRHIHT9EeSTN6KBMiF9rQ" name="Customer Service Representative"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_B6CdsHcWEeS8a9tzu_DvHw" name="Usage0" client="_BEkGQHT9EeSTN6KBMiF9rQ" supplier="_A-o9EHUAEeSTN6KBMiF9rQ"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_LFNhQHT8EeSTN6KBMiF9rQ" name="Components">
@@ -321,6 +322,7 @@ Customer Service representative inherits the uses of Staff</body>
           </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_DrO1QHT3EeSTN6KBMiF9rQ" name="BookingsComponent">
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_iAe1sHcWEeS8a9tzu_DvHw" client="_DrO1QHT3EeSTN6KBMiF9rQ" supplier="_2n-2wHW5EeSfyJE4wiQQOg" contract="_2n-2wHW5EeSfyJE4wiQQOg"/>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_zoIacHW5EeSfyJE4wiQQOg" name="Booking" visibility="package">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_6SvRQHW5EeSfyJE4wiQQOg" name="bookedStays" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -470,7 +472,7 @@ Customer Service representative inherits the uses of Staff</body>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dVzOo3T6EeSTN6KBMiF9rQ" value="1"/>
             </ownedEnd>
           </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="__31QkHUAEeSTN6KBMiF9rQ" memberEnd="__31QkXUAEeSTN6KBMiF9rQ __30pgHUAEeSTN6KBMiF9rQ">
+          <packagedElement xmi:type="uml:Association" xmi:id="__31QkHUAEeSTN6KBMiF9rQ" memberEnd="__31QkXUAEeSTN6KBMiF9rQ __30pgHUAEeSTN6KBMiF9rQ" navigableOwnedEnd="__30pgHUAEeSTN6KBMiF9rQ">
             <ownedEnd xmi:type="uml:Property" xmi:id="__31QkXUAEeSTN6KBMiF9rQ" name="statisticsGenerator" type="_gxUrkHUAEeSTN6KBMiF9rQ" association="__31QkHUAEeSTN6KBMiF9rQ">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__31QknUAEeSTN6KBMiF9rQ" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__31Qk3UAEeSTN6KBMiF9rQ" value="1"/>
@@ -516,7 +518,30 @@ Customer Service representative inherits the uses of Staff</body>
           </nestedClassifier>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_gxUrkHUAEeSTN6KBMiF9rQ" name="StatisticsGenerator" visibility="package">
             <generalization xmi:type="uml:Generalization" xmi:id="__Lo48HUAEeSTN6KBMiF9rQ" general="_A-o9EHUAEeSTN6KBMiF9rQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_PeHGsHcWEeS8a9tzu_DvHw" name="iBillsAccess" type="_RRny4HbuEeSWb_3hJA4u-g" association="_PeHGs3cWEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PeHGsXcWEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PeHGsncWEeS8a9tzu_DvHw" value="1"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_e78tsHcWEeS8a9tzu_DvHw" name="iBooking" type="_2n-2wHW5EeSfyJE4wiQQOg" association="_e78ts3cWEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e78tsXcWEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e78tsncWEeS8a9tzu_DvHw" value="1"/>
+            </ownedAttribute>
           </nestedClassifier>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_CUm50HcWEeS8a9tzu_DvHw" name="Realization0" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_A-o9EHUAEeSTN6KBMiF9rQ" contract="_A-o9EHUAEeSTN6KBMiF9rQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_H_qYIHcWEeS8a9tzu_DvHw" name="Usage0" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_RRny4HbuEeSWb_3hJA4u-g"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_J0BRsHcWEeS8a9tzu_DvHw" name="Usage1" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_2n-2wHW5EeSfyJE4wiQQOg"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_PeHGs3cWEeS8a9tzu_DvHw" name="billsManager" visibility="private" memberEnd="_PeHGtHcWEeS8a9tzu_DvHw _PeHGsHcWEeS8a9tzu_DvHw">
+          <ownedEnd xmi:type="uml:Property" xmi:id="_PeHGtHcWEeS8a9tzu_DvHw" name="statisticsGenerator" type="_gxUrkHUAEeSTN6KBMiF9rQ" association="_PeHGs3cWEeS8a9tzu_DvHw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PeHGtXcWEeS8a9tzu_DvHw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PeHGtncWEeS8a9tzu_DvHw" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_e78ts3cWEeS8a9tzu_DvHw" name="bookingsManager" visibility="private" memberEnd="_e78ttHcWEeS8a9tzu_DvHw _e78tsHcWEeS8a9tzu_DvHw">
+          <ownedEnd xmi:type="uml:Property" xmi:id="_e78ttHcWEeS8a9tzu_DvHw" name="statisticsGenerator" type="_gxUrkHUAEeSTN6KBMiF9rQ" association="_e78ts3cWEeS8a9tzu_DvHw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e78ttXcWEeS8a9tzu_DvHw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e78ttncWEeS8a9tzu_DvHw" value="1"/>
+          </ownedEnd>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_w0b8IHT7EeSTN6KBMiF9rQ" name="Inventory">
