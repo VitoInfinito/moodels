@@ -622,6 +622,26 @@ Customer Service representative inherits the uses of Staff</body>
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ExN1EXboEeSwu4_phSkYgQ" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ExN1EnboEeSwu4_phSkYgQ" value="1"/>
             </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_1VfKEHbrEeSWb_3hJA4u-g" name="name" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_4QrI0HbrEeSWb_3hJA4u-g" name="price" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6KlQwHbrEeSWb_3hJA4u-g" name="expense" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_7zu_4HbrEeSWb_3hJA4u-g" name="stock" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_DoVkoHbsEeSWb_3hJA4u-g" name="getName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_FIYbEHbsEeSWb_3hJA4u-g" name="setName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_GNuSgHbsEeSWb_3hJA4u-g" name="getPrice" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_HaluQHbsEeSWb_3hJA4u-g" name="setPrice" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_IZXDoHbsEeSWb_3hJA4u-g" name="getExpense" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_J3tQ8HbsEeSWb_3hJA4u-g" name="setExpense" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_K-pq4HbsEeSWb_3hJA4u-g" name="getStock" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_MKoV0HbsEeSWb_3hJA4u-g" name="setStock" visibility="package"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Association" xmi:id="_ExOcIHboEeSwu4_phSkYgQ" name="inventory" visibility="private" memberEnd="_ExOcIXboEeSwu4_phSkYgQ _ExN1EHboEeSwu4_phSkYgQ">
             <ownedEnd xmi:type="uml:Property" xmi:id="_ExOcIXboEeSwu4_phSkYgQ" name="itemType" type="_B46yQHboEeSwu4_phSkYgQ" association="_ExOcIHboEeSwu4_phSkYgQ">
@@ -637,6 +657,11 @@ Customer Service representative inherits the uses of Staff</body>
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qef5wXboEeSwu4_phSkYgQ"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qef5wnboEeSwu4_phSkYgQ" value="*"/>
             </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_QejCEHbsEeSWb_3hJA4u-g" name="isPaid" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_TlSJgHbsEeSWb_3hJA4u-g" name="getIsPaid" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_WXi1wHbsEeSWb_3hJA4u-g" name="setIsPaid" visibility="package"/>
           </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Association" xmi:id="_qegg0HboEeSwu4_phSkYgQ" name="items" visibility="private" memberEnd="_qegg0XboEeSwu4_phSkYgQ _qef5wHboEeSwu4_phSkYgQ">
@@ -865,6 +890,10 @@ booking is the ID of the booking that booked this stay</body>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CVQ6kXbpEeSwu4_phSkYgQ" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CVQ6knbpEeSwu4_phSkYgQ" value="1"/>
           </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_v5CIcHbrEeSWb_3hJA4u-g" name="itemType" type="_B46yQHboEeSwu4_phSkYgQ" association="_v5KrUHbrEeSWb_3hJA4u-g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v5CIcXbrEeSWb_3hJA4u-g"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v5CIcnbrEeSWb_3hJA4u-g" value="*"/>
+          </ownedAttribute>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_A1tMUHbpEeSwu4_phSkYgQ" client="_BEkGQHT9EeSTN6KBMiF9rQ" supplier="_O3hWsHboEeSwu4_phSkYgQ" contract="_O3hWsHboEeSwu4_phSkYgQ"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_Bxe2oHT9EeSTN6KBMiF9rQ" name="Staff">
@@ -891,6 +920,12 @@ booking is the ID of the booking that booked this stay</body>
           <ownedEnd xmi:type="uml:Property" xmi:id="_FAo7sXbpEeSwu4_phSkYgQ" name="staff" type="_Bxe2oHT9EeSTN6KBMiF9rQ" association="_FAo7sHbpEeSwu4_phSkYgQ">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FAo7snbpEeSwu4_phSkYgQ" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FAo7s3bpEeSwu4_phSkYgQ" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_v5KrUHbrEeSWb_3hJA4u-g" name="manageItems" visibility="private" memberEnd="_v5KrUXbrEeSWb_3hJA4u-g _v5CIcHbrEeSWb_3hJA4u-g">
+          <ownedEnd xmi:type="uml:Property" xmi:id="_v5KrUXbrEeSWb_3hJA4u-g" name="manager" type="_BEkGQHT9EeSTN6KBMiF9rQ" association="_v5KrUHbrEeSWb_3hJA4u-g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v5KrUnbrEeSWb_3hJA4u-g"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v5KrU3brEeSWb_3hJA4u-g" value="*"/>
           </ownedEnd>
         </packagedElement>
       </packagedElement>
@@ -1147,4 +1182,6 @@ booking is the ID of the booking that booked this stay</body>
     </profileApplication>
   </uml:Model>
   <ActionLanguage:TextualRepresentation xmi:id="_NG8R8HXMEeSfyJE4wiQQOg" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_2V6FQHbrEeSWb_3hJA4u-g" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_RWc6cHbsEeSWb_3hJA4u-g" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
 </xmi:XMI>
