@@ -490,17 +490,37 @@ Customer Service representative inherits the uses of Staff</body>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UdXXIHbjEeSwu4_phSkYgQ" value="1"/>
             </ownedAttribute>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_JMI6gHbjEeSwu4_phSkYgQ" name="getName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_Lpkw0HbkEeSwu4_phSkYgQ" name="setName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ANKicHblEeSwu4_phSkYgQ" name="addReservation" visibility="package"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Component" xmi:id="_QEUlMHbhEeSwu4_phSkYgQ" name="RestaurantManager" visibility="package">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_LDTs8HbiEeSwu4_phSkYgQ" name="restaurant" type="_PGS2sHbhEeSwu4_phSkYgQ" association="_LDTs83biEeSwu4_phSkYgQ">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LDTs8XbiEeSwu4_phSkYgQ" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LDTs8nbiEeSwu4_phSkYgQ" value="*"/>
             </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_cTQf4HbkEeSwu4_phSkYgQ" name="id" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_blmakHbiEeSwu4_phSkYgQ" client="_QEUlMHbhEeSwu4_phSkYgQ" supplier="_XKFuAHbhEeSwu4_phSkYgQ" contract="_XKFuAHbhEeSwu4_phSkYgQ"/>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_d0GScHbiEeSwu4_phSkYgQ" client="_QEUlMHbhEeSwu4_phSkYgQ" supplier="_S0PIEHbhEeSwu4_phSkYgQ" contract="_S0PIEHbhEeSwu4_phSkYgQ"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_gjWcEHbkEeSwu4_phSkYgQ" name="getId" visibility="package"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Interface" xmi:id="_S0PIEHbhEeSwu4_phSkYgQ" name="IRestaurantReserve"/>
-          <packagedElement xmi:type="uml:Interface" xmi:id="_XKFuAHbhEeSwu4_phSkYgQ" name="IRestaurantManage"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_S0PIEHbhEeSwu4_phSkYgQ" name="IRestaurantReserve">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_xN9_QHbkEeSwu4_phSkYgQ" name="makeReservation"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_yzRwMHbkEeSwu4_phSkYgQ" name="removeReservation"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_1nOegHbkEeSwu4_phSkYgQ" name="addRestaurant"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_2nMtwHbkEeSwu4_phSkYgQ" name="removeRestaurant"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_4zpXMHbkEeSwu4_phSkYgQ" name="getReservation"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_52CoUHbkEeSwu4_phSkYgQ" name="getAllReservations"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_XKFuAHbhEeSwu4_phSkYgQ" name="IRestaurantManage">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_s0T3YHbkEeSwu4_phSkYgQ" name="changeRestaurantName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_KAT3gHblEeSwu4_phSkYgQ" name="addRestaurant"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_M8AzoHblEeSwu4_phSkYgQ" name="removeRestaurant"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_OYeKkHblEeSwu4_phSkYgQ" name="addRestaurantTable"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_PkstIHblEeSwu4_phSkYgQ" name="removeRestaurantTable"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_XyLE4HblEeSwu4_phSkYgQ" name="changeRestaurantName"/>
+          </packagedElement>
           <packagedElement xmi:type="uml:Component" xmi:id="_bt_XAHbhEeSwu4_phSkYgQ" name="RestaurantTable" visibility="package">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_hQ3e0HbjEeSwu4_phSkYgQ" name="tableNumber" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -547,7 +567,13 @@ Customer Service representative inherits the uses of Staff</body>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LDTs9nbiEeSwu4_phSkYgQ" value="*"/>
             </ownedEnd>
           </packagedElement>
-          <packagedElement xmi:type="uml:Component" xmi:id="_nIX6MHbiEeSwu4_phSkYgQ" name="Menu" visibility="package"/>
+          <packagedElement xmi:type="uml:Component" xmi:id="_nIX6MHbiEeSwu4_phSkYgQ" name="Menu" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_Q4cCYHbkEeSwu4_phSkYgQ" name="name" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_UOWOQHbkEeSwu4_phSkYgQ" name="getName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_WbuEwHbkEeSwu4_phSkYgQ" name="setName" visibility="package"/>
+          </packagedElement>
           <packagedElement xmi:type="uml:Association" xmi:id="_q_9PwHbiEeSwu4_phSkYgQ" name="menu" visibility="private" memberEnd="_q_9PwXbiEeSwu4_phSkYgQ _q_8osHbiEeSwu4_phSkYgQ">
             <ownedEnd xmi:type="uml:Property" xmi:id="_q_9PwXbiEeSwu4_phSkYgQ" name="restaurant" type="_PGS2sHbhEeSwu4_phSkYgQ" association="_q_9PwHbiEeSwu4_phSkYgQ">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_q_9PwnbiEeSwu4_phSkYgQ"/>
