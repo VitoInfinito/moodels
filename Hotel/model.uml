@@ -465,177 +465,25 @@ Customer Service representative inherits the uses of Staff</body>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_w0b8IHT7EeSTN6KBMiF9rQ" name="Inventory">
-        <packagedElement xmi:type="uml:Component" xmi:id="_s2yv8HT9EeSTN6KBMiF9rQ" name="InventoryComponent"/>
-        <packagedElement xmi:type="uml:Package" xmi:id="_UWyIYHT-EeSTN6KBMiF9rQ" name="ClassDiagram"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_xWA_MHT7EeSTN6KBMiF9rQ" name="Restaurants">
-        <packagedElement xmi:type="uml:Component" xmi:id="_tvJ7UHT9EeSTN6KBMiF9rQ" name="RestaurantsComponent">
-          <nestedClassifier xmi:type="uml:Interface" xmi:id="_S0PIEHbhEeSwu4_phSkYgQ" name="IReservationManage">
-            <generalization xmi:type="uml:Generalization" xmi:id="_uhCTYHbuEeSWb_3hJA4u-g" general="_q7xc4HbuEeSWb_3hJA4u-g"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_xN9_QHbkEeSwu4_phSkYgQ" name="makeReservation"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_yzRwMHbkEeSwu4_phSkYgQ" name="removeReservation"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_i5f-oHblEeSwu4_phSkYgQ" name="changeReservationTables"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_s2yv8HT9EeSTN6KBMiF9rQ" name="InventoryComponent">
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_7tFfIHcIEeS8a9tzu_DvHw" client="_s2yv8HT9EeSTN6KBMiF9rQ" supplier="_E7JmoHcIEeS8a9tzu_DvHw" contract="_E7JmoHcIEeS8a9tzu_DvHw"/>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_ouNOkHbtEeSWb_3hJA4u-g" name="IManageItems">
+            <generalization xmi:type="uml:Generalization" xmi:id="_wJGekHcIEeS8a9tzu_DvHw" general="_qRGJYHcIEeS8a9tzu_DvHw"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_uGbQcHbtEeSWb_3hJA4u-g" name="changeItemName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_vcz0kHbtEeSWb_3hJA4u-g" name="changeItemPrice"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_wQ2goHbtEeSWb_3hJA4u-g" name="changeItemExpense"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_zXZa0HbtEeSWb_3hJA4u-g" name="addItem"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_z5NHYHbtEeSWb_3hJA4u-g" name="removeItem"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_OlBD4HcIEeS8a9tzu_DvHw" name="changeItemName"/>
           </nestedClassifier>
-          <nestedClassifier xmi:type="uml:Interface" xmi:id="_XKFuAHbhEeSwu4_phSkYgQ" name="IRestaurantManage">
-            <generalization xmi:type="uml:Generalization" xmi:id="_sld4MHbmEeSwu4_phSkYgQ" general="_S0PIEHbhEeSwu4_phSkYgQ"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_s0T3YHbkEeSwu4_phSkYgQ" name="changeRestaurantName"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_KAT3gHblEeSwu4_phSkYgQ" name="addRestaurant"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_M8AzoHblEeSwu4_phSkYgQ" name="removeRestaurant"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_OYeKkHblEeSwu4_phSkYgQ" name="addRestaurantTable"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_PkstIHblEeSwu4_phSkYgQ" name="removeRestaurantTable"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_XyLE4HblEeSwu4_phSkYgQ" name="changeRestaurantName"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_Z1ZO8HbnEeSwu4_phSkYgQ" name="changeTableInformation"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_QKe5wHbwEeSWb_3hJA4u-g" name="addMenuItem"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_SqVAUHbwEeSWb_3hJA4u-g" name="removeMenuItem"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_TgOtkHbwEeSWb_3hJA4u-g" name="changeMenuItem"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_tCuY8HcHEeS8a9tzu_DvHw" name="Inventory" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_7PYr8HcHEeS8a9tzu_DvHw" name="itemType" type="_viF-YHcHEeS8a9tzu_DvHw" association="_7PZTAHcHEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7PYr8XcHEeS8a9tzu_DvHw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7PYr8ncHEeS8a9tzu_DvHw" value="*"/>
+            </ownedAttribute>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_AknrQHcIEeS8a9tzu_DvHw" client="_tCuY8HcHEeS8a9tzu_DvHw" supplier="_ouNOkHbtEeSWb_3hJA4u-g" contract="_ouNOkHbtEeSWb_3hJA4u-g"/>
           </nestedClassifier>
-          <packagedElement xmi:type="uml:Component" xmi:id="_PGS2sHbhEeSwu4_phSkYgQ" name="Restaurant" visibility="package">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_pecPIHbhEeSwu4_phSkYgQ" name="reservation" type="_kuypIHbhEeSwu4_phSkYgQ" association="_pec2MHbhEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pecPIXbhEeSwu4_phSkYgQ"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pecPInbhEeSwu4_phSkYgQ" value="*"/>
-            </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_39suAHbhEeSwu4_phSkYgQ" name="restaurantTable" type="_bt_XAHbhEeSwu4_phSkYgQ" association="_39tVEHbhEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_39suAXbhEeSwu4_phSkYgQ" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_39suAnbhEeSwu4_phSkYgQ" value="*"/>
-            </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_q_8osHbiEeSwu4_phSkYgQ" name="menu" type="_nIX6MHbiEeSwu4_phSkYgQ" association="_q_9PwHbiEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_q_8osXbiEeSwu4_phSkYgQ"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_q_8osnbiEeSwu4_phSkYgQ" value="1"/>
-            </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_T6SfQHbjEeSwu4_phSkYgQ" name="name" visibility="private">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UdVh8HbjEeSwu4_phSkYgQ" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UdXXIHbjEeSwu4_phSkYgQ" value="1"/>
-            </ownedAttribute>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_JMI6gHbjEeSwu4_phSkYgQ" name="getName" visibility="package"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_Lpkw0HbkEeSwu4_phSkYgQ" name="setName" visibility="package"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_ANKicHblEeSwu4_phSkYgQ" name="addReservation" visibility="package"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Component" xmi:id="_QEUlMHbhEeSwu4_phSkYgQ" name="RestaurantManager" visibility="package">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_LDTs8HbiEeSwu4_phSkYgQ" name="restaurant" type="_PGS2sHbhEeSwu4_phSkYgQ" association="_LDTs83biEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LDTs8XbiEeSwu4_phSkYgQ" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LDTs8nbiEeSwu4_phSkYgQ" value="*"/>
-            </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_cTQf4HbkEeSwu4_phSkYgQ" name="id" visibility="private">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-            </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_wi_TIHblEeSwu4_phSkYgQ" name="restaurantEmployee" type="_q9wwAHblEeSwu4_phSkYgQ" association="_wjAhQHblEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wi_TIXblEeSwu4_phSkYgQ"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wi_TInblEeSwu4_phSkYgQ" value="*"/>
-            </ownedAttribute>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_blmakHbiEeSwu4_phSkYgQ" client="_QEUlMHbhEeSwu4_phSkYgQ" supplier="_XKFuAHbhEeSwu4_phSkYgQ" contract="_XKFuAHbhEeSwu4_phSkYgQ"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_gjWcEHbkEeSwu4_phSkYgQ" name="getId" visibility="package"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Component" xmi:id="_bt_XAHbhEeSwu4_phSkYgQ" name="RestaurantTable" visibility="package">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_hQ3e0HbjEeSwu4_phSkYgQ" name="tableNumber" visibility="private">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-            </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_miSVIHbjEeSwu4_phSkYgQ" name="numberOfSeats" visibility="private">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-            </ownedAttribute>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_p6MFEHbjEeSwu4_phSkYgQ" name="getNumberOfSeats" visibility="package"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_ud_AYHbjEeSwu4_phSkYgQ" name="getTableNumber" visibility="package"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_8N3QwHbjEeSwu4_phSkYgQ" name="setNumberOfSeats" visibility="package"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_-Kt_AHbjEeSwu4_phSkYgQ" name="setTableNumber" visibility="package"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Component" xmi:id="_kuypIHbhEeSwu4_phSkYgQ" name="Reservation" visibility="package">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_umE3UHbhEeSwu4_phSkYgQ" name="restaurantTable" type="_bt_XAHbhEeSwu4_phSkYgQ" association="_umFeYHbhEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_umE3UXbhEeSwu4_phSkYgQ" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_umE3UnbhEeSwu4_phSkYgQ" value="*"/>
-            </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_cPKfgHbjEeSwu4_phSkYgQ" name="id" visibility="private">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-            </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_6_8OoHbvEeSWb_3hJA4u-g" name="reservedBy" visibility="private">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-            </ownedAttribute>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_08sJMHbjEeSwu4_phSkYgQ" name="getId" visibility="package"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_90Bf0HbvEeSWb_3hJA4u-g" name="getReservedBy" visibility="package"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="__t2vQHbvEeSWb_3hJA4u-g" name="setReservedBy" visibility="package"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Component" xmi:id="_nIX6MHbiEeSwu4_phSkYgQ" name="Menu" visibility="package">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_Q4cCYHbkEeSwu4_phSkYgQ" name="name" visibility="private">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-            </ownedAttribute>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_UOWOQHbkEeSwu4_phSkYgQ" name="getName" visibility="package"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_WbuEwHbkEeSwu4_phSkYgQ" name="setName" visibility="package"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Component" xmi:id="_q9wwAHblEeSwu4_phSkYgQ" name="RestaurantEmployee" visibility="package">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_25e7IHblEeSwu4_phSkYgQ" name="restaurant" type="_PGS2sHbhEeSwu4_phSkYgQ" association="_25fiMHblEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_25e7IXblEeSwu4_phSkYgQ"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_25e7InblEeSwu4_phSkYgQ" value="*"/>
-            </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_1MqXgHbmEeSwu4_phSkYgQ" name="id" visibility="private"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_vUPoEHblEeSwu4_phSkYgQ" client="_q9wwAHblEeSwu4_phSkYgQ" supplier="_S0PIEHbhEeSwu4_phSkYgQ" contract="_S0PIEHbhEeSwu4_phSkYgQ"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_2nogsHbmEeSwu4_phSkYgQ" name="getId" visibility="package"/>
-          </packagedElement>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Package" xmi:id="_Y_c8oHT-EeSTN6KBMiF9rQ" name="ClassDiagram">
-          <packagedElement xmi:type="uml:Association" xmi:id="_pec2MHbhEeSwu4_phSkYgQ" name="reservations" visibility="private" memberEnd="_pec2MXbhEeSwu4_phSkYgQ _pecPIHbhEeSwu4_phSkYgQ">
-            <ownedEnd xmi:type="uml:Property" xmi:id="_pec2MXbhEeSwu4_phSkYgQ" name="restaurant" type="_PGS2sHbhEeSwu4_phSkYgQ" association="_pec2MHbhEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pec2MnbhEeSwu4_phSkYgQ" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pec2M3bhEeSwu4_phSkYgQ" value="1"/>
-            </ownedEnd>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_umFeYHbhEeSwu4_phSkYgQ" name="reservedTables" visibility="private" memberEnd="_umFeYXbhEeSwu4_phSkYgQ _umE3UHbhEeSwu4_phSkYgQ">
-            <ownedEnd xmi:type="uml:Property" xmi:id="_umFeYXbhEeSwu4_phSkYgQ" name="reservation" type="_kuypIHbhEeSwu4_phSkYgQ" association="_umFeYHbhEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_umFeYnbhEeSwu4_phSkYgQ"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_umFeY3bhEeSwu4_phSkYgQ" value="*"/>
-            </ownedEnd>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_39tVEHbhEeSwu4_phSkYgQ" name="tables" visibility="private" memberEnd="_39tVEXbhEeSwu4_phSkYgQ _39suAHbhEeSwu4_phSkYgQ">
-            <ownedEnd xmi:type="uml:Property" xmi:id="_39tVEXbhEeSwu4_phSkYgQ" name="restaurant" type="_PGS2sHbhEeSwu4_phSkYgQ" association="_39tVEHbhEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_39tVEnbhEeSwu4_phSkYgQ" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_39tVE3bhEeSwu4_phSkYgQ" value="1"/>
-            </ownedEnd>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_LDTs83biEeSwu4_phSkYgQ" name="restaurants" visibility="private" memberEnd="_LDTs9HbiEeSwu4_phSkYgQ _LDTs8HbiEeSwu4_phSkYgQ">
-            <ownedEnd xmi:type="uml:Property" xmi:id="_LDTs9HbiEeSwu4_phSkYgQ" name="restaurantManager" type="_QEUlMHbhEeSwu4_phSkYgQ" association="_LDTs83biEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LDTs9XbiEeSwu4_phSkYgQ" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LDTs9nbiEeSwu4_phSkYgQ" value="*"/>
-            </ownedEnd>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_q_9PwHbiEeSwu4_phSkYgQ" name="menu" visibility="private" memberEnd="_q_9PwXbiEeSwu4_phSkYgQ _q_8osHbiEeSwu4_phSkYgQ">
-            <ownedEnd xmi:type="uml:Property" xmi:id="_q_9PwXbiEeSwu4_phSkYgQ" name="restaurant" type="_PGS2sHbhEeSwu4_phSkYgQ" association="_q_9PwHbiEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_q_9PwnbiEeSwu4_phSkYgQ"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_q_9Pw3biEeSwu4_phSkYgQ" value="1"/>
-            </ownedEnd>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_wjAhQHblEeSwu4_phSkYgQ" name="employees" visibility="private" memberEnd="_wjAhQXblEeSwu4_phSkYgQ _wi_TIHblEeSwu4_phSkYgQ">
-            <ownedEnd xmi:type="uml:Property" xmi:id="_wjAhQXblEeSwu4_phSkYgQ" name="restaurantManager" type="_QEUlMHbhEeSwu4_phSkYgQ" association="_wjAhQHblEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wjAhQnblEeSwu4_phSkYgQ" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wjAhQ3blEeSwu4_phSkYgQ" value="*"/>
-            </ownedEnd>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_25fiMHblEeSwu4_phSkYgQ" name="restaurant" visibility="private" memberEnd="_25fiMXblEeSwu4_phSkYgQ _25e7IHblEeSwu4_phSkYgQ">
-            <ownedEnd xmi:type="uml:Property" xmi:id="_25fiMXblEeSwu4_phSkYgQ" name="restaurantEmployee" type="_q9wwAHblEeSwu4_phSkYgQ" association="_25fiMHblEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_25fiMnblEeSwu4_phSkYgQ" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_25fiM3blEeSwu4_phSkYgQ" value="*"/>
-            </ownedEnd>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Interface" xmi:id="_q7xc4HbuEeSWb_3hJA4u-g" name="IReservationAccess">
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_4zpXMHbkEeSwu4_phSkYgQ" name="getReservationId"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_52CoUHbkEeSwu4_phSkYgQ" name="getAllReservationIds"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_uH8BcHbvEeSWb_3hJA4u-g" name="getEmptyTables"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_vGkM4HbvEeSWb_3hJA4u-g" name="getEmptySeats"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_wIe84HbvEeSWb_3hJA4u-g" name="getEmptyTablesWithNbrOfSeats"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_2Guc8HbvEeSWb_3hJA4u-g" name="getReservationIdByCustomerName"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_OcZnUHbwEeSWb_3hJA4u-g" name="getMenuInformation"/>
-          </packagedElement>
-        </packagedElement>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_z6V9IHT7EeSTN6KBMiF9rQ" name="Staff">
-        <packagedElement xmi:type="uml:Component" xmi:id="_uRE8oHT9EeSTN6KBMiF9rQ" name="StaffComponent"/>
-        <packagedElement xmi:type="uml:Package" xmi:id="_ah-fUHT-EeSTN6KBMiF9rQ" name="ClassDiagram"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_5CimAHT7EeSTN6KBMiF9rQ" name="Bills">
-        <packagedElement xmi:type="uml:Package" xmi:id="_b2eNEHT-EeSTN6KBMiF9rQ" name="ClassDiagram">
-          <packagedElement xmi:type="uml:Component" xmi:id="_8AAeIHbnEeSwu4_phSkYgQ" name="Inventory" visibility="package"/>
-          <packagedElement xmi:type="uml:Component" xmi:id="_B46yQHboEeSwu4_phSkYgQ" name="ItemType">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_ExN1EHboEeSwu4_phSkYgQ" name="inventory" type="_8AAeIHbnEeSwu4_phSkYgQ" association="_ExOcIHboEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ExN1EXboEeSwu4_phSkYgQ" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ExN1EnboEeSwu4_phSkYgQ" value="1"/>
-            </ownedAttribute>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_viF-YHcHEeS8a9tzu_DvHw" name="ItemType" visibility="package">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_1VfKEHbrEeSWb_3hJA4u-g" name="name" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedAttribute>
@@ -660,61 +508,258 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_K-pq4HbsEeSWb_3hJA4u-g" name="getStock" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_MKoV0HbsEeSWb_3hJA4u-g" name="setStock" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_l6S1IHbwEeSWb_3hJA4u-g" name="getId" visibility="package"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_ExOcIHboEeSwu4_phSkYgQ" name="inventory" visibility="private" memberEnd="_ExOcIXboEeSwu4_phSkYgQ _ExN1EHboEeSwu4_phSkYgQ">
-            <ownedEnd xmi:type="uml:Property" xmi:id="_ExOcIXboEeSwu4_phSkYgQ" name="itemType" type="_B46yQHboEeSwu4_phSkYgQ" association="_ExOcIHboEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ExOcInboEeSwu4_phSkYgQ"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ExOcI3boEeSwu4_phSkYgQ" value="*"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_E7JmoHcIEeS8a9tzu_DvHw" name="IItemsAccess">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_HvsK0HcIEeS8a9tzu_DvHw" name="getItemName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ISQFUHcIEeS8a9tzu_DvHw" name="getItemPrice"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_IjUnMHcIEeS8a9tzu_DvHw" name="getItemExpense"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_I6xd4HcIEeS8a9tzu_DvHw" name="getItemStock"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_f_OQ8HcIEeS8a9tzu_DvHw" name="getAllItemIDs"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_kujt4HcIEeS8a9tzu_DvHw" name="searchItems"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_qRGJYHcIEeS8a9tzu_DvHw" name="IUpdateItemStock">
+            <generalization xmi:type="uml:Generalization" xmi:id="_HI-JEHcIEeS8a9tzu_DvHw" general="_E7JmoHcIEeS8a9tzu_DvHw"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_xVSZIHbtEeSWb_3hJA4u-g" name="changeItemStock"/>
+          </nestedClassifier>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_UWyIYHT-EeSTN6KBMiF9rQ" name="ClassDiagram">
+          <packagedElement xmi:type="uml:Association" xmi:id="_7PZTAHcHEeS8a9tzu_DvHw" name="items" visibility="private" memberEnd="_7PZTAXcHEeS8a9tzu_DvHw _7PYr8HcHEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_7PZTAXcHEeS8a9tzu_DvHw" name="inventory" type="_tCuY8HcHEeS8a9tzu_DvHw" association="_7PZTAHcHEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7PZTAncHEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7PZTA3cHEeS8a9tzu_DvHw" value="1"/>
             </ownedEnd>
           </packagedElement>
-          <packagedElement xmi:type="uml:Interface" xmi:id="_O3hWsHboEeSwu4_phSkYgQ" name="IManageBills">
-            <generalization xmi:type="uml:Generalization" xmi:id="_YzdMoHbuEeSWb_3hJA4u-g" general="_RRny4HbuEeSWb_3hJA4u-g"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_lGxN0HbtEeSWb_3hJA4u-g" name="addBill"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_lplnAHbtEeSWb_3hJA4u-g" name="changeBillPaymentInformation"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_ITm5kHbvEeSWb_3hJA4u-g" name="changeBillIsPaid"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_xWA_MHT7EeSTN6KBMiF9rQ" name="Restaurants">
+        <packagedElement xmi:type="uml:Component" xmi:id="_tvJ7UHT9EeSTN6KBMiF9rQ" name="RestaurantsComponent">
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_S0PIEHbhEeSwu4_phSkYgQ" name="IReservationManage">
+            <generalization xmi:type="uml:Generalization" xmi:id="_uhCTYHbuEeSWb_3hJA4u-g" general="_q7xc4HbuEeSWb_3hJA4u-g"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_xN9_QHbkEeSwu4_phSkYgQ" name="makeReservation"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_yzRwMHbkEeSwu4_phSkYgQ" name="removeReservation"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_i5f-oHblEeSwu4_phSkYgQ" name="changeReservationTables"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_XKFuAHbhEeSwu4_phSkYgQ" name="IRestaurantManage">
+            <generalization xmi:type="uml:Generalization" xmi:id="_sld4MHbmEeSwu4_phSkYgQ" general="_S0PIEHbhEeSwu4_phSkYgQ"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_s0T3YHbkEeSwu4_phSkYgQ" name="changeRestaurantName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_KAT3gHblEeSwu4_phSkYgQ" name="addRestaurant"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_M8AzoHblEeSwu4_phSkYgQ" name="removeRestaurant"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_OYeKkHblEeSwu4_phSkYgQ" name="addRestaurantTable"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_PkstIHblEeSwu4_phSkYgQ" name="removeRestaurantTable"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_XyLE4HblEeSwu4_phSkYgQ" name="changeRestaurantName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_Z1ZO8HbnEeSwu4_phSkYgQ" name="changeTableInformation"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_QKe5wHbwEeSWb_3hJA4u-g" name="addMenuItem"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_SqVAUHbwEeSWb_3hJA4u-g" name="removeMenuItem"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_TgOtkHbwEeSWb_3hJA4u-g" name="changeMenuItem"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_aDFs4HcMEeS8a9tzu_DvHw" name="changeMenuName"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_q7xc4HbuEeSWb_3hJA4u-g" name="IReservationAccess">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_4zpXMHbkEeSwu4_phSkYgQ" name="getReservationId"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_52CoUHbkEeSwu4_phSkYgQ" name="getAllReservationIds"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_uH8BcHbvEeSWb_3hJA4u-g" name="getEmptyTables"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_vGkM4HbvEeSWb_3hJA4u-g" name="getEmptySeats"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_wIe84HbvEeSWb_3hJA4u-g" name="getEmptyTablesWithNbrOfSeats"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_2Guc8HbvEeSWb_3hJA4u-g" name="getReservationIdByGuestName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_OcZnUHbwEeSWb_3hJA4u-g" name="getMenuInformation"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3UvJYHcJEeS8a9tzu_DvHw" name="getAllRestaurantNames"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_yexOEHcLEeS8a9tzu_DvHw" name="searchRestaurants"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_z5SEQHcLEeS8a9tzu_DvHw" name="searchRestaurantReservations"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_Qj_VMHcMEeS8a9tzu_DvHw" name="searchRestaurantTables"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_bZ35oHcMEeS8a9tzu_DvHw" name="getMenuName"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_rWzXwHcJEeS8a9tzu_DvHw" name="RestaurantManager" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_vyya4HcJEeS8a9tzu_DvHw" name="restaurant">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vyya4XcJEeS8a9tzu_DvHw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vyya4ncJEeS8a9tzu_DvHw" value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_LLfRYHcKEeS8a9tzu_DvHw" name="restaurant" type="_F79RcHcKEeS8a9tzu_DvHw" association="_LLfRY3cKEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LLfRYXcKEeS8a9tzu_DvHw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LLfRYncKEeS8a9tzu_DvHw" value="*"/>
+            </ownedAttribute>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_u7YRwHcJEeS8a9tzu_DvHw" client="_rWzXwHcJEeS8a9tzu_DvHw" supplier="_XKFuAHbhEeSwu4_phSkYgQ" contract="_XKFuAHbhEeSwu4_phSkYgQ"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_F79RcHcKEeS8a9tzu_DvHw" name="Restaurant" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_T6SfQHbjEeSwu4_phSkYgQ" name="name" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UdVh8HbjEeSwu4_phSkYgQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UdXXIHbjEeSwu4_phSkYgQ" value="1"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_SnkBYHcKEeS8a9tzu_DvHw" name="reservation" type="_NizuEHcKEeS8a9tzu_DvHw" association="_SnkBY3cKEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SnkBYXcKEeS8a9tzu_DvHw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SnkBYncKEeS8a9tzu_DvHw" value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_fYG7sHcKEeS8a9tzu_DvHw" name="restaurantTable" type="_WRKlUHcKEeS8a9tzu_DvHw" association="_fYG7s3cKEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fYG7sXcKEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fYG7sncKEeS8a9tzu_DvHw" value="1"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_EtI4cHcLEeS8a9tzu_DvHw" name="menu" type="_CsHb4HcLEeS8a9tzu_DvHw" association="_EtO_EHcLEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EtI4cXcLEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EtI4cncLEeS8a9tzu_DvHw" value="1"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JMI6gHbjEeSwu4_phSkYgQ" name="getName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_Lpkw0HbkEeSwu4_phSkYgQ" name="setName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ANKicHblEeSwu4_phSkYgQ" name="addReservation" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_2jLesHcLEeS8a9tzu_DvHw" name="getAllTables" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_83O2sHcLEeS8a9tzu_DvHw" name="getAllReservations" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_-GSDwHcLEeS8a9tzu_DvHw" name="getMenu" visibility="package"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_NizuEHcKEeS8a9tzu_DvHw" name="Reservation" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_cPKfgHbjEeSwu4_phSkYgQ" name="id" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6_8OoHbvEeSWb_3hJA4u-g" name="reservedBy" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_Z46IEHcKEeS8a9tzu_DvHw" name="restaurantTable" type="_WRKlUHcKEeS8a9tzu_DvHw" association="_Z46IE3cKEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Z46IEXcKEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z46IEncKEeS8a9tzu_DvHw" value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_uo4-IHcKEeS8a9tzu_DvHw" name="from" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_yM0X4HcKEeS8a9tzu_DvHw" name="to" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_90Bf0HbvEeSWb_3hJA4u-g" name="getReservedBy" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_08sJMHbjEeSwu4_phSkYgQ" name="getId" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="__t2vQHbvEeSWb_3hJA4u-g" name="setReservedBy" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_6ggFUHcKEeS8a9tzu_DvHw" name="getFromTime" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_8yyRAHcKEeS8a9tzu_DvHw" name="getToTime" visibility="package"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_WRKlUHcKEeS8a9tzu_DvHw" name="RestaurantTable" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_hQ3e0HbjEeSwu4_phSkYgQ" name="tableNumber" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_miSVIHbjEeSwu4_phSkYgQ" name="numberOfSeats" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_p6MFEHbjEeSwu4_phSkYgQ" name="getNumberOfSeats" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ud_AYHbjEeSwu4_phSkYgQ" name="getTableNumber" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_8N3QwHbjEeSwu4_phSkYgQ" name="setNumberOfSeats" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_-Kt_AHbjEeSwu4_phSkYgQ" name="setTableNumber" visibility="package"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_CsHb4HcLEeS8a9tzu_DvHw" name="Menu" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_Q4cCYHbkEeSwu4_phSkYgQ" name="name" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_HmYWcHcLEeS8a9tzu_DvHw" name="items" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JrvgcHcLEeS8a9tzu_DvHw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JrvgcXcLEeS8a9tzu_DvHw" value="*"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_UOWOQHbkEeSwu4_phSkYgQ" name="getName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_WbuEwHbkEeSwu4_phSkYgQ" name="setName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_L9ybkHcLEeS8a9tzu_DvHw" name="getItems" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_MwxXsHcLEeS8a9tzu_DvHw" name="addItem" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_OCW7YHcLEeS8a9tzu_DvHw" name="removeItem" visibility="package"/>
+          </nestedClassifier>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_Y_c8oHT-EeSTN6KBMiF9rQ" name="ClassDiagram">
+          <packagedElement xmi:type="uml:Association" xmi:id="_LLfRY3cKEeS8a9tzu_DvHw" name="restaurants" visibility="private" memberEnd="_LLfRZHcKEeS8a9tzu_DvHw _LLfRYHcKEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_LLfRZHcKEeS8a9tzu_DvHw" name="restaurantManager" type="_rWzXwHcJEeS8a9tzu_DvHw" association="_LLfRY3cKEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LLfRZXcKEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LLfRZncKEeS8a9tzu_DvHw" value="1"/>
+            </ownedEnd>
           </packagedElement>
-          <packagedElement xmi:type="uml:Interface" xmi:id="_ouNOkHbtEeSWb_3hJA4u-g" name="IManageItems">
-            <generalization xmi:type="uml:Generalization" xmi:id="_r1a3IHbtEeSWb_3hJA4u-g" general="_O3hWsHboEeSwu4_phSkYgQ"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_uGbQcHbtEeSWb_3hJA4u-g" name="changeItemName"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_vcz0kHbtEeSWb_3hJA4u-g" name="changeItemPrice"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_wQ2goHbtEeSWb_3hJA4u-g" name="changeItemExpense"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_xVSZIHbtEeSWb_3hJA4u-g" name="changeItemStock"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_zXZa0HbtEeSWb_3hJA4u-g" name="addItem"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_z5NHYHbtEeSWb_3hJA4u-g" name="removeItem"/>
+          <packagedElement xmi:type="uml:Association" xmi:id="_SnkBY3cKEeS8a9tzu_DvHw" name="reservations" visibility="private" memberEnd="_SnkBZHcKEeS8a9tzu_DvHw _SnkBYHcKEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_SnkBZHcKEeS8a9tzu_DvHw" name="restaurant" type="_F79RcHcKEeS8a9tzu_DvHw" association="_SnkBY3cKEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SnkBZXcKEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SnkBZncKEeS8a9tzu_DvHw" value="1"/>
+            </ownedEnd>
           </packagedElement>
-          <packagedElement xmi:type="uml:Interface" xmi:id="_RRny4HbuEeSWb_3hJA4u-g" name="IBillsAccess">
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_BHjYAHbuEeSWb_3hJA4u-g" name="getIsBillPaid"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_kfLCUHbtEeSWb_3hJA4u-g" name="getAllBillsNotPaid"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_bcPMwHbuEeSWb_3hJA4u-g" name="getBillPaymentInformation"/>
+          <packagedElement xmi:type="uml:Association" xmi:id="_Z46IE3cKEeS8a9tzu_DvHw" name="reservedTables" visibility="private" memberEnd="_Z46IFHcKEeS8a9tzu_DvHw _Z46IEHcKEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_Z46IFHcKEeS8a9tzu_DvHw" name="reservation" type="_NizuEHcKEeS8a9tzu_DvHw" association="_Z46IE3cKEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Z46IFXcKEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z46IFncKEeS8a9tzu_DvHw" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_fYG7s3cKEeS8a9tzu_DvHw" name="tables" visibility="private" memberEnd="_fYG7tHcKEeS8a9tzu_DvHw _fYG7sHcKEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_fYG7tHcKEeS8a9tzu_DvHw" name="restaurant" type="_F79RcHcKEeS8a9tzu_DvHw" association="_fYG7s3cKEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fYG7tXcKEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fYG7tncKEeS8a9tzu_DvHw" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_EtO_EHcLEeS8a9tzu_DvHw" name="menu" visibility="private" memberEnd="_EtO_EXcLEeS8a9tzu_DvHw _EtI4cHcLEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_EtO_EXcLEeS8a9tzu_DvHw" name="restaurant" type="_F79RcHcKEeS8a9tzu_DvHw" association="_EtO_EHcLEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EtO_EncLEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EtO_E3cLEeS8a9tzu_DvHw" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_z6V9IHT7EeSTN6KBMiF9rQ" name="Staff">
+        <packagedElement xmi:type="uml:Component" xmi:id="_uRE8oHT9EeSTN6KBMiF9rQ" name="StaffComponent"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_ah-fUHT-EeSTN6KBMiF9rQ" name="ClassDiagram"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_5CimAHT7EeSTN6KBMiF9rQ" name="Bills">
+        <packagedElement xmi:type="uml:Package" xmi:id="_b2eNEHT-EeSTN6KBMiF9rQ" name="ClassDiagram">
+          <packagedElement xmi:type="uml:Association" xmi:id="_O4U243cHEeS8a9tzu_DvHw" name="bills" visibility="private" memberEnd="_O4U25HcHEeS8a9tzu_DvHw _O4U24HcHEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_O4U25HcHEeS8a9tzu_DvHw" name="billsManager" type="_-tte4HcFEeS8a9tzu_DvHw" association="_O4U243cHEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O4U25XcHEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_O4U25ncHEeS8a9tzu_DvHw" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_9shAQ3cIEeS8a9tzu_DvHw" name="items" visibility="private" memberEnd="_9shARHcIEeS8a9tzu_DvHw _9shAQHcIEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_9shARHcIEeS8a9tzu_DvHw" name="billsManager" type="_-tte4HcFEeS8a9tzu_DvHw" association="_9shAQ3cIEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9shARXcIEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9shARncIEeS8a9tzu_DvHw" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_Dj2DM3cNEeS8a9tzu_DvHw" name="bank" visibility="private" memberEnd="_Dj2DNHcNEeS8a9tzu_DvHw _Dj2DMHcNEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_Dj2DNHcNEeS8a9tzu_DvHw" name="billsManager" type="_-tte4HcFEeS8a9tzu_DvHw" association="_Dj2DM3cNEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Dj2DNXcNEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Dj2DNncNEeS8a9tzu_DvHw" value="1"/>
+            </ownedEnd>
           </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_DpimkHXQEeSfyJE4wiQQOg" name="BillsComponent">
-          <packagedElement xmi:type="uml:Component" xmi:id="_wybLYHbnEeSwu4_phSkYgQ" name="Bill" visibility="package">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_qef5wHboEeSwu4_phSkYgQ" name="itemType" type="_B46yQHboEeSwu4_phSkYgQ" association="_qegg0HboEeSwu4_phSkYgQ">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qef5wXboEeSwu4_phSkYgQ"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qef5wnboEeSwu4_phSkYgQ" value="*"/>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_O3hWsHboEeSwu4_phSkYgQ" name="IManageBills" visibility="package">
+            <generalization xmi:type="uml:Generalization" xmi:id="_YzdMoHbuEeSWb_3hJA4u-g" general="_RRny4HbuEeSWb_3hJA4u-g"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_lGxN0HbtEeSWb_3hJA4u-g" name="addBill"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_RBR4sHcNEeS8a9tzu_DvHw" name="payBills"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_RRny4HbuEeSWb_3hJA4u-g" name="IBillsAccess">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_BHjYAHbuEeSWb_3hJA4u-g" name="getIsBillPaid"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_kfLCUHbtEeSWb_3hJA4u-g" name="getAllBillsNotPaid"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_bcPMwHbuEeSWb_3hJA4u-g" name="getBillPaymentInformation"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_UTGdgHcHEeS8a9tzu_DvHw" name="getAllBillIDs"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_Uk5tQHcJEeS8a9tzu_DvHw" name="searchBills"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_Vv6H0HcJEeS8a9tzu_DvHw" name="getAllPayedBills"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_-tte4HcFEeS8a9tzu_DvHw" name="BillsManager" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_O4U24HcHEeS8a9tzu_DvHw" name="bill" type="_n3L9oHcGEeS8a9tzu_DvHw" association="_O4U243cHEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O4U24XcHEeS8a9tzu_DvHw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_O4U24ncHEeS8a9tzu_DvHw" value="*"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_QejCEHbsEeSWb_3hJA4u-g" name="isPaid" visibility="private">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_9shAQHcIEeS8a9tzu_DvHw" name="iItemsAccess" type="_E7JmoHcIEeS8a9tzu_DvHw" association="_9shAQ3cIEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9shAQXcIEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9shAQncIEeS8a9tzu_DvHw" value="1"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_ifjJYHbsEeSWb_3hJA4u-g" name="paymentType" visibility="private">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_Dj2DMHcNEeS8a9tzu_DvHw" name="customerProvides" type="_OwydYnXPEeSfyJE4wiQQOg" association="_Dj2DM3cNEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Dj2DMXcNEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Dj2DMncNEeS8a9tzu_DvHw" value="1"/>
+            </ownedAttribute>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_AuTdoHcGEeS8a9tzu_DvHw" client="_-tte4HcFEeS8a9tzu_DvHw" supplier="_O3hWsHboEeSwu4_phSkYgQ" contract="_O3hWsHboEeSwu4_phSkYgQ"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_n3L9oHcGEeS8a9tzu_DvHw" name="Bill" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_qXSi4HcGEeS8a9tzu_DvHw" name="isPaid" visibility="private"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_q0XgcHcGEeS8a9tzu_DvHw" name="paymentType" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_NHPnsHbvEeSWb_3hJA4u-g" name="id" visibility="private">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_rKAZQHcGEeS8a9tzu_DvHw" name="id" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedAttribute>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_TlSJgHbsEeSWb_3hJA4u-g" name="getIsPaid" visibility="package"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_WXi1wHbsEeSWb_3hJA4u-g" name="setIsPaid" visibility="package"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_fV1mcHbsEeSWb_3hJA4u-g" name="getPaymentType" visibility="package"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_hIkIUHbsEeSWb_3hJA4u-g" name="setPaymentType" visibility="package"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_POwGwHbvEeSWb_3hJA4u-g" name="getId" visibility="package"/>
-          </packagedElement>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_qegg0HboEeSwu4_phSkYgQ" name="items" visibility="private" memberEnd="_qegg0XboEeSwu4_phSkYgQ _qef5wHboEeSwu4_phSkYgQ">
-          <ownedEnd xmi:type="uml:Property" xmi:id="_qegg0XboEeSwu4_phSkYgQ" name="bill" type="_wybLYHbnEeSwu4_phSkYgQ" association="_qegg0HboEeSwu4_phSkYgQ">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qegg0nboEeSwu4_phSkYgQ"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qegg03boEeSwu4_phSkYgQ" value="*"/>
-          </ownedEnd>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_rsuEwHcGEeS8a9tzu_DvHw" name="items" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MFKLsHcHEeS8a9tzu_DvHw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MFKLsXcHEeS8a9tzu_DvHw" value="*"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_7s9OMHcGEeS8a9tzu_DvHw" name="getIsPaid" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_8IFrAHcGEeS8a9tzu_DvHw" name="setIsPaid" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_8qX4sHcGEeS8a9tzu_DvHw" name="getPaymentType" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_9QHDAHcGEeS8a9tzu_DvHw" name="setPaymentType" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_9oXK8HcGEeS8a9tzu_DvHw" name="getID" visibility="package"/>
+          </nestedClassifier>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_6r37UHT7EeSTN6KBMiF9rQ" name="RoomServices">
@@ -932,18 +977,18 @@ booking is the ID of the booking that booked this stay</body>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_65frIHT8EeSTN6KBMiF9rQ" name="Actors">
         <packagedElement xmi:type="uml:Component" xmi:id="_BEkGQHT9EeSTN6KBMiF9rQ" name="Manager">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_CVQ6kHbpEeSwu4_phSkYgQ" name="bill" type="_wybLYHbnEeSwu4_phSkYgQ" association="_CVRhoHbpEeSwu4_phSkYgQ">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_CVQ6kHbpEeSwu4_phSkYgQ" name="bill">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CVQ6kXbpEeSwu4_phSkYgQ" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CVQ6knbpEeSwu4_phSkYgQ" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_v5CIcHbrEeSWb_3hJA4u-g" name="itemType" type="_B46yQHboEeSwu4_phSkYgQ" association="_v5KrUHbrEeSWb_3hJA4u-g">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_v5CIcHbrEeSWb_3hJA4u-g" name="itemType">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v5CIcXbrEeSWb_3hJA4u-g"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v5CIcnbrEeSWb_3hJA4u-g" value="*"/>
           </ownedAttribute>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_A1tMUHbpEeSwu4_phSkYgQ" client="_BEkGQHT9EeSTN6KBMiF9rQ" supplier="_O3hWsHboEeSwu4_phSkYgQ _ouNOkHbtEeSWb_3hJA4u-g" contract="_ouNOkHbtEeSWb_3hJA4u-g"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_Bxe2oHT9EeSTN6KBMiF9rQ" name="Staff">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_FAoUoHbpEeSwu4_phSkYgQ" name="bill" type="_wybLYHbnEeSwu4_phSkYgQ" association="_FAo7sHbpEeSwu4_phSkYgQ">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_FAoUoHbpEeSwu4_phSkYgQ" name="bill">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FAoUoXbpEeSwu4_phSkYgQ" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FAoUonbpEeSwu4_phSkYgQ" value="1"/>
           </ownedAttribute>
@@ -956,24 +1001,6 @@ booking is the ID of the booking that booked this stay</body>
         <packagedElement xmi:type="uml:Usage" xmi:id="_HbQycHXVEeSfyJE4wiQQOg" name="Usage6" client="_JnRHIHT9EeSTN6KBMiF9rQ" supplier="_2n-2wHW5EeSfyJE4wiQQOg"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_KJ7_MHXVEeSfyJE4wiQQOg" name="Usage8" client="_JnRHIHT9EeSTN6KBMiF9rQ" supplier="_ud--4HW7EeSfyJE4wiQQOg"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_KN41oHXWEeSfyJE4wiQQOg" name="Usage0" client="_BEkGQHT9EeSTN6KBMiF9rQ" supplier="_iQ6dUHV0EeSARPTCGUrHkQ"/>
-        <packagedElement xmi:type="uml:Association" xmi:id="_CVRhoHbpEeSwu4_phSkYgQ" name="manageBills" visibility="private" memberEnd="_CVRhoXbpEeSwu4_phSkYgQ _CVQ6kHbpEeSwu4_phSkYgQ">
-          <ownedEnd xmi:type="uml:Property" xmi:id="_CVRhoXbpEeSwu4_phSkYgQ" name="manager" type="_BEkGQHT9EeSTN6KBMiF9rQ" association="_CVRhoHbpEeSwu4_phSkYgQ">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CVRhonbpEeSwu4_phSkYgQ" value="1"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CVRho3bpEeSwu4_phSkYgQ" value="1"/>
-          </ownedEnd>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_FAo7sHbpEeSwu4_phSkYgQ" name="bills" visibility="private" memberEnd="_FAo7sXbpEeSwu4_phSkYgQ _FAoUoHbpEeSwu4_phSkYgQ">
-          <ownedEnd xmi:type="uml:Property" xmi:id="_FAo7sXbpEeSwu4_phSkYgQ" name="staff" type="_Bxe2oHT9EeSTN6KBMiF9rQ" association="_FAo7sHbpEeSwu4_phSkYgQ">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FAo7snbpEeSwu4_phSkYgQ" value="1"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FAo7s3bpEeSwu4_phSkYgQ" value="1"/>
-          </ownedEnd>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_v5KrUHbrEeSWb_3hJA4u-g" name="manageItems" visibility="private" memberEnd="_v5KrUXbrEeSWb_3hJA4u-g _v5CIcHbrEeSWb_3hJA4u-g">
-          <ownedEnd xmi:type="uml:Property" xmi:id="_v5KrUXbrEeSWb_3hJA4u-g" name="manager" type="_BEkGQHT9EeSTN6KBMiF9rQ" association="_v5KrUHbrEeSWb_3hJA4u-g">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v5KrUnbrEeSWb_3hJA4u-g"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v5KrU3brEeSWb_3hJA4u-g" value="*"/>
-          </ownedEnd>
-        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_smGsUHVwEeSfoZjPpyLNLA" name="Accounts">
         <packagedElement xmi:type="uml:Package" xmi:id="_P1jAIHVyEeSARPTCGUrHkQ" name="ClassDiagram">
@@ -1060,6 +1087,8 @@ booking is the ID of the booking that booked this stay</body>
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
               </ownedParameter>
             </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_5n6JEHcNEeS8a9tzu_DvHw" name="getAccounts"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_6w6_kHcNEeS8a9tzu_DvHw" name="searchAccounts"/>
           </nestedClassifier>
         </packagedElement>
       </packagedElement>
