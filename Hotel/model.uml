@@ -648,6 +648,9 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_7zu_4HbrEeSWb_3hJA4u-g" name="stock" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
             </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_nSySEHbwEeSWb_3hJA4u-g" name="id" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_DoVkoHbsEeSWb_3hJA4u-g" name="getName" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_FIYbEHbsEeSWb_3hJA4u-g" name="setName" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_GNuSgHbsEeSWb_3hJA4u-g" name="getPrice" visibility="package"/>
@@ -656,6 +659,7 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_J3tQ8HbsEeSWb_3hJA4u-g" name="setExpense" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_K-pq4HbsEeSWb_3hJA4u-g" name="getStock" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_MKoV0HbsEeSWb_3hJA4u-g" name="setStock" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_l6S1IHbwEeSWb_3hJA4u-g" name="getId" visibility="package"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Association" xmi:id="_ExOcIHboEeSwu4_phSkYgQ" name="inventory" visibility="private" memberEnd="_ExOcIXboEeSwu4_phSkYgQ _ExN1EHboEeSwu4_phSkYgQ">
             <ownedEnd xmi:type="uml:Property" xmi:id="_ExOcIXboEeSwu4_phSkYgQ" name="itemType" type="_B46yQHboEeSwu4_phSkYgQ" association="_ExOcIHboEeSwu4_phSkYgQ">
