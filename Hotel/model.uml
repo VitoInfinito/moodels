@@ -470,13 +470,12 @@ Customer Service representative inherits the uses of Staff</body>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_xWA_MHT7EeSTN6KBMiF9rQ" name="Restaurants">
         <packagedElement xmi:type="uml:Component" xmi:id="_tvJ7UHT9EeSTN6KBMiF9rQ" name="RestaurantsComponent">
-          <nestedClassifier xmi:type="uml:Interface" xmi:id="_S0PIEHbhEeSwu4_phSkYgQ" name="IRestaurantAccess">
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_S0PIEHbhEeSwu4_phSkYgQ" name="IReservationManage">
+            <generalization xmi:type="uml:Generalization" xmi:id="_uhCTYHbuEeSWb_3hJA4u-g" general="_q7xc4HbuEeSWb_3hJA4u-g"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_xN9_QHbkEeSwu4_phSkYgQ" name="makeReservation"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_yzRwMHbkEeSwu4_phSkYgQ" name="removeReservation"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_1nOegHbkEeSwu4_phSkYgQ" name="addRestaurant"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_2nMtwHbkEeSwu4_phSkYgQ" name="removeRestaurant"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_4zpXMHbkEeSwu4_phSkYgQ" name="getReservation"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_52CoUHbkEeSwu4_phSkYgQ" name="getAllReservations"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_i5f-oHblEeSwu4_phSkYgQ" name="changeReservationTables"/>
           </nestedClassifier>
           <nestedClassifier xmi:type="uml:Interface" xmi:id="_XKFuAHbhEeSwu4_phSkYgQ" name="IRestaurantManage">
@@ -608,6 +607,10 @@ Customer Service representative inherits the uses of Staff</body>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_25fiM3blEeSwu4_phSkYgQ" value="*"/>
             </ownedEnd>
           </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_q7xc4HbuEeSWb_3hJA4u-g" name="IReservationAccess">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_4zpXMHbkEeSwu4_phSkYgQ" name="getReservation"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_52CoUHbkEeSwu4_phSkYgQ" name="getAllReservations"/>
+          </packagedElement>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_z6V9IHT7EeSTN6KBMiF9rQ" name="Staff">
@@ -650,10 +653,10 @@ Customer Service representative inherits the uses of Staff</body>
             </ownedEnd>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="_O3hWsHboEeSwu4_phSkYgQ" name="IManageBills">
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_jer1sHbtEeSWb_3hJA4u-g" name="getBill"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_kfLCUHbtEeSWb_3hJA4u-g" name="getAllBills"/>
+            <generalization xmi:type="uml:Generalization" xmi:id="_YzdMoHbuEeSWb_3hJA4u-g" general="_RRny4HbuEeSWb_3hJA4u-g"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_lGxN0HbtEeSWb_3hJA4u-g" name="addBill"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_lplnAHbtEeSWb_3hJA4u-g" name="changeBillInformation"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_lplnAHbtEeSWb_3hJA4u-g" name="changeBillPaymentInformation"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ITm5kHbvEeSWb_3hJA4u-g" name="changeBillIsPaid"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="_ouNOkHbtEeSWb_3hJA4u-g" name="IManageItems">
             <generalization xmi:type="uml:Generalization" xmi:id="_r1a3IHbtEeSWb_3hJA4u-g" general="_O3hWsHboEeSwu4_phSkYgQ"/>
@@ -663,6 +666,11 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_xVSZIHbtEeSWb_3hJA4u-g" name="changeItemStock"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_zXZa0HbtEeSWb_3hJA4u-g" name="addItem"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_z5NHYHbtEeSWb_3hJA4u-g" name="removeItem"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_RRny4HbuEeSWb_3hJA4u-g" name="IBillsAccess">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_BHjYAHbuEeSWb_3hJA4u-g" name="getIsBillPaid"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_kfLCUHbtEeSWb_3hJA4u-g" name="getAllBillsNotPaid"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_bcPMwHbuEeSWb_3hJA4u-g" name="getBillPaymentInformation"/>
           </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_DpimkHXQEeSfyJE4wiQQOg" name="BillsComponent">
@@ -677,10 +685,14 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_ifjJYHbsEeSWb_3hJA4u-g" name="paymentType" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_NHPnsHbvEeSWb_3hJA4u-g" name="id" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_TlSJgHbsEeSWb_3hJA4u-g" name="getIsPaid" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_WXi1wHbsEeSWb_3hJA4u-g" name="setIsPaid" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_fV1mcHbsEeSWb_3hJA4u-g" name="getPaymentType" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_hIkIUHbsEeSWb_3hJA4u-g" name="setPaymentType" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_POwGwHbvEeSWb_3hJA4u-g" name="getId" visibility="package"/>
           </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Association" xmi:id="_qegg0HboEeSwu4_phSkYgQ" name="items" visibility="private" memberEnd="_qegg0XboEeSwu4_phSkYgQ _qef5wHboEeSwu4_phSkYgQ">
