@@ -874,7 +874,52 @@ Customer Service representative inherits the uses of Staff</body>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_Al5pwHT8EeSTN6KBMiF9rQ" name="Feedback">
         <packagedElement xmi:type="uml:Component" xmi:id="_vrQboHT9EeSTN6KBMiF9rQ" name="FeedbackComponent"/>
-        <packagedElement xmi:type="uml:Package" xmi:id="_fFFeIHT-EeSTN6KBMiF9rQ" name="ClassDiagram"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_fFFeIHT-EeSTN6KBMiF9rQ" name="ClassDiagram">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_7_X-UHiPEeS8a9tzu_DvHw" name="IFeedback">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_4d_s0HiQEeS9MsZyYSaWPA" name="getAllFeedbackIDs"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_8x2HoHiQEeS9MsZyYSaWPA" name="getFeedbackDescription"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_9AuRIHiQEeS9MsZyYSaWPA" name="getFeedbackIsResolved"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_9PJHoHiQEeS9MsZyYSaWPA" name="getFeedbackIsNoted"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JHenkHiREeS9MsZyYSaWPA" name="setFeedbackDescription"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JWiXQHiREeS9MsZyYSaWPA" name="setFeedbackIsResolved"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_c-QkwHiREeS9MsZyYSaWPA" name="setFeedbackIsNoted"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_irsosHiREeS9MsZyYSaWPA" name="searchFeedback"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_8qk3cHiPEeS8a9tzu_DvHw" name="FeedbackManager" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_CBEbAHiQEeS8a9tzu_DvHw" name="feedback" type="_9ACKEHiPEeS8a9tzu_DvHw" association="_CBFCEHiQEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CBEbAXiQEeS8a9tzu_DvHw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CBEbAniQEeS8a9tzu_DvHw" value="*"/>
+            </ownedAttribute>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_BgzmkHiQEeS8a9tzu_DvHw" client="_8qk3cHiPEeS8a9tzu_DvHw" supplier="_7_X-UHiPEeS8a9tzu_DvHw" contract="_7_X-UHiPEeS8a9tzu_DvHw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_9ACKEHiPEeS8a9tzu_DvHw" name="Feedback" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_IwT6MHiQEeS8a9tzu_DvHw" name="description" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_JB_gEHiQEeS8a9tzu_DvHw" name="isNoted" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_JVRBYHiQEeS8a9tzu_DvHw" name="isResolved" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_5rEj8HiQEeS9MsZyYSaWPA" name="id" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JyghkHiREeS9MsZyYSaWPA" name="getDesc"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_KG7SYHiREeS9MsZyYSaWPA" name="getIsNoted"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_KYF64HiREeS9MsZyYSaWPA" name="getIsResolved"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_KooRQHiREeS9MsZyYSaWPA" name="getID"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_K9g8IHiREeS9MsZyYSaWPA" name="setDesc"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LXneMHiREeS9MsZyYSaWPA" name="setIsNoted"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LpSdAHiREeS9MsZyYSaWPA" name="setIsResolved"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_CBFCEHiQEeS8a9tzu_DvHw" name="feedback" visibility="private" memberEnd="_CBFCEXiQEeS8a9tzu_DvHw _CBEbAHiQEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_CBFCEXiQEeS8a9tzu_DvHw" name="feedbackManager" type="_8qk3cHiPEeS8a9tzu_DvHw" association="_CBFCEHiQEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CBFCEniQEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CBFCE3iQEeS8a9tzu_DvHw" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_lFDucHT8EeSTN6KBMiF9rQ" name="Guests">
         <packagedElement xmi:type="uml:Component" xmi:id="_wFsU4HT9EeSTN6KBMiF9rQ" name="GuestsComponent">
