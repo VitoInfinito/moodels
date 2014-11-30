@@ -62,7 +62,14 @@ Customer Service representative inherits the uses of Staff</body>
         <packagedElement xmi:type="uml:Component" xmi:id="_CO1hAHT9EeSTN6KBMiF9rQ" name="Checked In Guest"/>
         <packagedElement xmi:type="uml:Component" xmi:id="_JnRHIHT9EeSTN6KBMiF9rQ" name="Customer Service Representative"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_B6CdsHcWEeS8a9tzu_DvHw" name="Usage0" client="_BEkGQHT9EeSTN6KBMiF9rQ" supplier="_A-o9EHUAEeSTN6KBMiF9rQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_kjHaIHiNEeS8a9tzu_DvHw" name="Usage1" client="_JnRHIHT9EeSTN6KBMiF9rQ" supplier="_PnB-kHiJEeS8a9tzu_DvHw"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_lFKXQHiNEeS8a9tzu_DvHw" name="Usage2" client="_JnRHIHT9EeSTN6KBMiF9rQ" supplier="_a6YNAHiHEeS8a9tzu_DvHw"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_YyrR8HiNEeS8a9tzu_DvHw" name="Usage0" client="_DrO1QHT3EeSTN6KBMiF9rQ" supplier="_a6YNAHiHEeS8a9tzu_DvHw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_Zvjw8HiNEeS8a9tzu_DvHw" name="Usage1" client="_DrO1QHT3EeSTN6KBMiF9rQ" supplier="_PnB-kHiJEeS8a9tzu_DvHw"/>
+      <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_CUm50HcWEeS8a9tzu_DvHw" name="Realization0" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_A-o9EHUAEeSTN6KBMiF9rQ" contract="_A-o9EHUAEeSTN6KBMiF9rQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_H_qYIHcWEeS8a9tzu_DvHw" name="Usage0" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_RRny4HbuEeSWb_3hJA4u-g"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_J0BRsHcWEeS8a9tzu_DvHw" name="Usage1" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_2n-2wHW5EeSfyJE4wiQQOg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_LFNhQHT8EeSTN6KBMiF9rQ" name="Components">
       <packagedElement xmi:type="uml:Package" xmi:id="_TeuuwHTtEeSTN6KBMiF9rQ" name="Bookables">
@@ -376,6 +383,14 @@ Customer Service representative inherits the uses of Staff</body>
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9Al_UXcREeS8a9tzu_DvHw" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9Al_UncREeS8a9tzu_DvHw" value="1"/>
             </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_usesQHiMEeS8a9tzu_DvHw" name="iGuest" type="_PnB-kHiJEeS8a9tzu_DvHw" association="_usfTUHiMEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_usesQXiMEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_usesQniMEeS8a9tzu_DvHw" value="1"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_vRNJ8HiMEeS8a9tzu_DvHw" name="iCustomer" type="_a6YNAHiHEeS8a9tzu_DvHw" association="_vRNJ83iMEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vRNJ8XiMEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vRNJ8niMEeS8a9tzu_DvHw" value="1"/>
+            </ownedAttribute>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_b3NGcHW6EeSfyJE4wiQQOg" client="_0kulkHW5EeSfyJE4wiQQOg" supplier="_2n-2wHW5EeSfyJE4wiQQOg" contract="_2n-2wHW5EeSfyJE4wiQQOg"/>
           </nestedClassifier>
           <nestedClassifier xmi:type="uml:Interface" xmi:id="_2n-2wHW5EeSfyJE4wiQQOg" name="IBooking">
@@ -398,10 +413,6 @@ Customer Service representative inherits the uses of Staff</body>
           </nestedClassifier>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_qT15wHT3EeSTN6KBMiF9rQ" name="ClassDiagram">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_MTG2sHXLEeSfyJE4wiQQOg">
-            <body> TODO fixa associationerna när customer och guest interface kommer&#xD;
-</body>
-          </ownedComment>
           <ownedComment xmi:type="uml:Comment" xmi:id="_524qoHXYEeSfyJE4wiQQOg">
             <body>For card validation when making a booking</body>
           </ownedComment>
@@ -411,13 +422,13 @@ Customer Service representative inherits the uses of Staff</body>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WBJ5E3W6EeSfyJE4wiQQOg" value="1"/>
             </ownedEnd>
           </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_M3fwcHW7EeSfyJE4wiQQOg" visibility="private" memberEnd="_M3fwcXW7EeSfyJE4wiQQOg _M3fJYHW7EeSfyJE4wiQQOg">
+          <packagedElement xmi:type="uml:Association" xmi:id="_M3fwcHW7EeSfyJE4wiQQOg" name="bookablesManager" visibility="private" memberEnd="_M3fwcXW7EeSfyJE4wiQQOg _M3fJYHW7EeSfyJE4wiQQOg">
             <ownedEnd xmi:type="uml:Property" xmi:id="_M3fwcXW7EeSfyJE4wiQQOg" name="bookingsManager" type="_0kulkHW5EeSfyJE4wiQQOg" association="_M3fwcHW7EeSfyJE4wiQQOg">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_M3fwcnW7EeSfyJE4wiQQOg" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M3fwc3W7EeSfyJE4wiQQOg" value="1"/>
             </ownedEnd>
           </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_GBVzIHXKEeSfyJE4wiQQOg" visibility="private" memberEnd="_GBVzIXXKEeSfyJE4wiQQOg _GBVMEHXKEeSfyJE4wiQQOg">
+          <packagedElement xmi:type="uml:Association" xmi:id="_GBVzIHXKEeSfyJE4wiQQOg" name="stayManager" visibility="private" memberEnd="_GBVzIXXKEeSfyJE4wiQQOg _GBVMEHXKEeSfyJE4wiQQOg">
             <ownedEnd xmi:type="uml:Property" xmi:id="_GBVzIXXKEeSfyJE4wiQQOg" name="bookingsManager" type="_0kulkHW5EeSfyJE4wiQQOg" association="_GBVzIHXKEeSfyJE4wiQQOg">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GBVzInXKEeSfyJE4wiQQOg" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GBVzI3XKEeSfyJE4wiQQOg" value="1"/>
@@ -436,7 +447,7 @@ Customer Service representative inherits the uses of Staff</body>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sneDA3XYEeSfyJE4wiQQOg" value="1"/>
             </ownedEnd>
           </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_9Al_U3cREeS8a9tzu_DvHw" name="billsManager" memberEnd="_9Al_VHcREeS8a9tzu_DvHw _9Al_UHcREeS8a9tzu_DvHw">
+          <packagedElement xmi:type="uml:Association" xmi:id="_9Al_U3cREeS8a9tzu_DvHw" name="billsManager" visibility="private" memberEnd="_9Al_VHcREeS8a9tzu_DvHw _9Al_UHcREeS8a9tzu_DvHw">
             <ownedEnd xmi:type="uml:Property" xmi:id="_9Al_VHcREeS8a9tzu_DvHw" name="bookingsManager" type="_0kulkHW5EeSfyJE4wiQQOg" association="_9Al_U3cREeS8a9tzu_DvHw">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9Al_VXcREeS8a9tzu_DvHw" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9Al_VncREeS8a9tzu_DvHw" value="1"/>
@@ -444,6 +455,21 @@ Customer Service representative inherits the uses of Staff</body>
           </packagedElement>
           <packagedElement xmi:type="uml:Usage" xmi:id="_kWMFoHcSEeS8a9tzu_DvHw" name="Usage0" client="_DrO1QHT3EeSTN6KBMiF9rQ" supplier="_O3hWsHboEeSwu4_phSkYgQ"/>
           <packagedElement xmi:type="uml:Usage" xmi:id="_lXsUAHcUEeS8a9tzu_DvHw" name="Usage1" client="_DrO1QHT3EeSTN6KBMiF9rQ" supplier="_OwydYnXPEeSfyJE4wiQQOg"/>
+          <packagedElement xmi:type="uml:Association" xmi:id="_usfTUHiMEeS8a9tzu_DvHw" name="guestManager" memberEnd="_usfTUXiMEeS8a9tzu_DvHw _usesQHiMEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_usfTUXiMEeS8a9tzu_DvHw" name="bookingsManager" type="_0kulkHW5EeSfyJE4wiQQOg" association="_usfTUHiMEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_usfTUniMEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_usfTU3iMEeS8a9tzu_DvHw" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_vRNJ83iMEeS8a9tzu_DvHw" name="customerManager" visibility="private" memberEnd="_vRNJ9HiMEeS8a9tzu_DvHw _vRNJ8HiMEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_vRNJ9HiMEeS8a9tzu_DvHw" name="bookingsManager" type="_0kulkHW5EeSfyJE4wiQQOg" association="_vRNJ83iMEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vRNJ9XiMEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vRNJ9niMEeS8a9tzu_DvHw" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_wcdmsHiNEeS8a9tzu_DvHw" name="SequenceDiagrams">
+          <packagedElement xmi:type="uml:Interaction" xmi:id="_1PLu0HiNEeS8a9tzu_DvHw" name="Interaction1"/>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_qGdvoHT4EeSTN6KBMiF9rQ" name="Statistics">
@@ -480,6 +506,18 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedEnd xmi:type="uml:Property" xmi:id="__30pgHUAEeSTN6KBMiF9rQ" name="statistic" type="_s3vvAHT5EeSTN6KBMiF9rQ" association="__31QkHUAEeSTN6KBMiF9rQ">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__30pgXUAEeSTN6KBMiF9rQ"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__30pgnUAEeSTN6KBMiF9rQ" value="*"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_PeHGs3cWEeS8a9tzu_DvHw" name="billsManager" visibility="private" memberEnd="_PeHGtHcWEeS8a9tzu_DvHw _PeHGsHcWEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_PeHGtHcWEeS8a9tzu_DvHw" name="statisticsGenerator" type="_gxUrkHUAEeSTN6KBMiF9rQ" association="_PeHGs3cWEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PeHGtXcWEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PeHGtncWEeS8a9tzu_DvHw" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_e78ts3cWEeS8a9tzu_DvHw" name="bookingsManager" visibility="private" memberEnd="_e78ttHcWEeS8a9tzu_DvHw _e78tsHcWEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_e78ttHcWEeS8a9tzu_DvHw" name="statisticsGenerator" type="_gxUrkHUAEeSTN6KBMiF9rQ" association="_e78ts3cWEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e78ttXcWEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e78ttncWEeS8a9tzu_DvHw" value="1"/>
             </ownedEnd>
           </packagedElement>
         </packagedElement>
@@ -527,21 +565,6 @@ Customer Service representative inherits the uses of Staff</body>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e78tsncWEeS8a9tzu_DvHw" value="1"/>
             </ownedAttribute>
           </nestedClassifier>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_CUm50HcWEeS8a9tzu_DvHw" name="Realization0" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_A-o9EHUAEeSTN6KBMiF9rQ" contract="_A-o9EHUAEeSTN6KBMiF9rQ"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_H_qYIHcWEeS8a9tzu_DvHw" name="Usage0" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_RRny4HbuEeSWb_3hJA4u-g"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_J0BRsHcWEeS8a9tzu_DvHw" name="Usage1" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_2n-2wHW5EeSfyJE4wiQQOg"/>
-        <packagedElement xmi:type="uml:Association" xmi:id="_PeHGs3cWEeS8a9tzu_DvHw" name="billsManager" visibility="private" memberEnd="_PeHGtHcWEeS8a9tzu_DvHw _PeHGsHcWEeS8a9tzu_DvHw">
-          <ownedEnd xmi:type="uml:Property" xmi:id="_PeHGtHcWEeS8a9tzu_DvHw" name="statisticsGenerator" type="_gxUrkHUAEeSTN6KBMiF9rQ" association="_PeHGs3cWEeS8a9tzu_DvHw">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PeHGtXcWEeS8a9tzu_DvHw" value="1"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PeHGtncWEeS8a9tzu_DvHw" value="1"/>
-          </ownedEnd>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_e78ts3cWEeS8a9tzu_DvHw" name="bookingsManager" visibility="private" memberEnd="_e78ttHcWEeS8a9tzu_DvHw _e78tsHcWEeS8a9tzu_DvHw">
-          <ownedEnd xmi:type="uml:Property" xmi:id="_e78ttHcWEeS8a9tzu_DvHw" name="statisticsGenerator" type="_gxUrkHUAEeSTN6KBMiF9rQ" association="_e78ts3cWEeS8a9tzu_DvHw">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e78ttXcWEeS8a9tzu_DvHw" value="1"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e78ttncWEeS8a9tzu_DvHw" value="1"/>
-          </ownedEnd>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_w0b8IHT7EeSTN6KBMiF9rQ" name="Inventory">
@@ -854,12 +877,180 @@ Customer Service representative inherits the uses of Staff</body>
         <packagedElement xmi:type="uml:Package" xmi:id="_fFFeIHT-EeSTN6KBMiF9rQ" name="ClassDiagram"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_lFDucHT8EeSTN6KBMiF9rQ" name="Guests">
-        <packagedElement xmi:type="uml:Component" xmi:id="_wFsU4HT9EeSTN6KBMiF9rQ" name="GuestsComponent"/>
-        <packagedElement xmi:type="uml:Package" xmi:id="_h8oTAHT-EeSTN6KBMiF9rQ" name="ClassDiagram"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_wFsU4HT9EeSTN6KBMiF9rQ" name="GuestsComponent">
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_pkSDYHiMEeS8a9tzu_DvHw" client="_wFsU4HT9EeSTN6KBMiF9rQ" supplier="_PnB-kHiJEeS8a9tzu_DvHw" contract="_PnB-kHiJEeS8a9tzu_DvHw"/>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_PnB-kHiJEeS8a9tzu_DvHw" name="IGuest">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ddLZkHiKEeS8a9tzu_DvHw" name="getAllGuests"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ddLZkXiKEeS8a9tzu_DvHw" name="addGuest"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ddLZkniKEeS8a9tzu_DvHw" name="changeGuestFirstName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ddLZk3iKEeS8a9tzu_DvHw" name="changeGuestLastName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ddMAoHiKEeS8a9tzu_DvHw" name="changeGuestTitle"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ddMAoXiKEeS8a9tzu_DvHw" name="changeGuestEmail"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ddMAoniKEeS8a9tzu_DvHw" name="changeGuestPhone"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ddMApHiKEeS8a9tzu_DvHw" name="getGuestFirstName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ddMApXiKEeS8a9tzu_DvHw" name="getGuestLastName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ddMnsHiKEeS8a9tzu_DvHw" name="getGuestTitle"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ddMnsXiKEeS8a9tzu_DvHw" name="getGuestEmail"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ddMnsniKEeS8a9tzu_DvHw" name="getGuestPhone"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ddMns3iKEeS8a9tzu_DvHw" name="searchGuests"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3czu4HiLEeS8a9tzu_DvHw" name="getGuestStays"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_426VYHiLEeS8a9tzu_DvHw" name="getGuestRequests"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_Qxcb4HiMEeS8a9tzu_DvHw" name="addGuestStay"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_SyaOEHiMEeS8a9tzu_DvHw" name="removeGuestStay"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_UVOEoHiMEeS8a9tzu_DvHw" name="addGuestRequest"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_W5FvkHiMEeS8a9tzu_DvHw" name="removeGuestRequest"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_P23xYHiJEeS8a9tzu_DvHw" name="GuestManager" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_WoOwcHiJEeS8a9tzu_DvHw" name="guest" type="_QH-IcHiJEeS8a9tzu_DvHw" association="_WoOwc3iJEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WoOwcXiJEeS8a9tzu_DvHw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WoOwcniJEeS8a9tzu_DvHw" value="*"/>
+            </ownedAttribute>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_WMfPoHiJEeS8a9tzu_DvHw" client="_P23xYHiJEeS8a9tzu_DvHw" supplier="_PnB-kHiJEeS8a9tzu_DvHw" contract="_PnB-kHiJEeS8a9tzu_DvHw"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_QH-IcHiJEeS8a9tzu_DvHw" name="Guest" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_ikRrsHiJEeS8a9tzu_DvHw" name="firstname" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_ikSSwHiJEeS8a9tzu_DvHw" name="lastname" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_ikS50HiJEeS8a9tzu_DvHw" name="title" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_ikUvAHiJEeS8a9tzu_DvHw" name="email" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_ikVWEHiJEeS8a9tzu_DvHw" name="phone" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_ikWkMHiJEeS8a9tzu_DvHw" name="ssid" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_UQ73AHiLEeS8a9tzu_DvHw" name="requests" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WahZsHiLEeS8a9tzu_DvHw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WaiAwHiLEeS8a9tzu_DvHw" value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_aHTNcHiLEeS8a9tzu_DvHw" name="stays" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e_6iMHiLEeS8a9tzu_DvHw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e_6iMXiLEeS8a9tzu_DvHw" value="*"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mthuIHiLEeS8a9tzu_DvHw" name="getFirstName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mti8QHiLEeS8a9tzu_DvHw" name="getLastName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mtjjUHiLEeS8a9tzu_DvHw" name="getTitle" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mtkKYHiLEeS8a9tzu_DvHw" name="getEmail" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mtkxcHiLEeS8a9tzu_DvHw" name="getPhone" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mtl_kHiLEeS8a9tzu_DvHw" name="getSSID" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mtnNsHiLEeS8a9tzu_DvHw" name="setFirstName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mtn0wHiLEeS8a9tzu_DvHw" name="setLastName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mtpC4HiLEeS8a9tzu_DvHw" name="setTitle" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mtqRAHiLEeS8a9tzu_DvHw" name="setEmail" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mtq4EHiLEeS8a9tzu_DvHw" name="setPhone" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mttUUHiLEeS8a9tzu_DvHw" name="addStay" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mtt7YHiLEeS8a9tzu_DvHw" name="removeStay" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mtvJgHiLEeS8a9tzu_DvHw" name="addRequest" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mtwXoHiLEeS8a9tzu_DvHw" name="getStays" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mtxlwHiLEeS8a9tzu_DvHw" name="removeRequest" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_mtyz4HiLEeS8a9tzu_DvHw" name="getRequests" visibility="package"/>
+          </nestedClassifier>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_h8oTAHT-EeSTN6KBMiF9rQ" name="ClassDiagram">
+          <packagedElement xmi:type="uml:Association" xmi:id="_WoOwc3iJEeS8a9tzu_DvHw" visibility="private" memberEnd="_WoOwdHiJEeS8a9tzu_DvHw _WoOwcHiJEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_WoOwdHiJEeS8a9tzu_DvHw" name="guestManager" type="_P23xYHiJEeS8a9tzu_DvHw" association="_WoOwc3iJEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WoOwdXiJEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WoOwdniJEeS8a9tzu_DvHw" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_ms-HcHT8EeSTN6KBMiF9rQ" name="Customers">
-        <packagedElement xmi:type="uml:Component" xmi:id="_wqd14HT9EeSTN6KBMiF9rQ" name="CustomersComponent"/>
-        <packagedElement xmi:type="uml:Package" xmi:id="_j-Ks8HT-EeSTN6KBMiF9rQ" name="ClassDiagram"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_wqd14HT9EeSTN6KBMiF9rQ" name="CustomersComponent">
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_tUpWoHiMEeS8a9tzu_DvHw" client="_wqd14HT9EeSTN6KBMiF9rQ" supplier="_a6YNAHiHEeS8a9tzu_DvHw" contract="_a6YNAHiHEeS8a9tzu_DvHw"/>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_a6YNAHiHEeS8a9tzu_DvHw" name="ICustomer">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_cuO60HiIEeS8a9tzu_DvHw" name="getAllCustomers"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_gCp48HiIEeS8a9tzu_DvHw" name="addCustomer"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_iljTgHiIEeS8a9tzu_DvHw" name="changeCustomerFirstName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_pytdwHiIEeS8a9tzu_DvHw" name="changeCustomerLastName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_qD4GQHiIEeS8a9tzu_DvHw" name="changeCustomerTitle"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_qVcXYHiIEeS8a9tzu_DvHw" name="changeCustomerEmail"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_qlEHwHiIEeS8a9tzu_DvHw" name="changeCustomerPhone"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3fjoQHiIEeS8a9tzu_DvHw" name="getCustomerFirstName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_6G3BsHiIEeS8a9tzu_DvHw" name="getCustomerLastName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_7vNfkHiIEeS8a9tzu_DvHw" name="getCustomerTitle"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_9n0nAHiIEeS8a9tzu_DvHw" name="getCustomerEmail"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_-1eF4HiIEeS8a9tzu_DvHw" name="getCustomerPhone"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_AcdR0HiJEeS8a9tzu_DvHw" name="searchCustomers"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_Pze0QHiLEeS8a9tzu_DvHw" name="getCustomerBookings"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_Q_7ZQHiLEeS8a9tzu_DvHw" name="getCustomerRequests"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_86rFwHiLEeS8a9tzu_DvHw" name="addCustomerBooking"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_A64L0HiMEeS8a9tzu_DvHw" name="removeCustomerBooking"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_C07dsHiMEeS8a9tzu_DvHw" name="addCustomerRequest"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_GMsDsHiMEeS8a9tzu_DvHw" name="removeCustomerRequest"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_bdnc8HiHEeS8a9tzu_DvHw" name="CustomerManager" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_mvCt4HiHEeS8a9tzu_DvHw" name="customer" type="_cAvYIHiHEeS8a9tzu_DvHw" association="_mvCt43iHEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mvCt4XiHEeS8a9tzu_DvHw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mvCt4niHEeS8a9tzu_DvHw" value="*"/>
+            </ownedAttribute>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_e5OBIHiHEeS8a9tzu_DvHw" client="_bdnc8HiHEeS8a9tzu_DvHw" supplier="_a6YNAHiHEeS8a9tzu_DvHw" contract="_a6YNAHiHEeS8a9tzu_DvHw"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_cAvYIHiHEeS8a9tzu_DvHw" name="Customer" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_zP18AHiHEeS8a9tzu_DvHw" name="firstname" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_1GpFkHiHEeS8a9tzu_DvHw" name="lastname" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_1eQUUHiHEeS8a9tzu_DvHw" name="title" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_1yNyIHiHEeS8a9tzu_DvHw" name="email" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_2NLP0HiHEeS8a9tzu_DvHw" name="phone" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_2hxm0HiHEeS8a9tzu_DvHw" name="ssid" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_2EKWYHiKEeS8a9tzu_DvHw" name="bookings" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5YJPoHiKEeS8a9tzu_DvHw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5YJPoXiKEeS8a9tzu_DvHw" value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_7t9QcHiKEeS8a9tzu_DvHw" name="requests" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9eh2MHiKEeS8a9tzu_DvHw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9eh2MXiKEeS8a9tzu_DvHw" value="*"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_GFCgYHiIEeS8a9tzu_DvHw" name="getFirstName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_GhE8IHiIEeS8a9tzu_DvHw" name="getLastName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_G07sQHiIEeS8a9tzu_DvHw" name="getTitle" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_HJaugHiIEeS8a9tzu_DvHw" name="getEmail" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_HelGMHiIEeS8a9tzu_DvHw" name="getPhone" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_HxIOwHiIEeS8a9tzu_DvHw" name="getSSID" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_IDi0cHiIEeS8a9tzu_DvHw" name="setFirstName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_IYi0EHiIEeS8a9tzu_DvHw" name="setLastName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_IwSlsHiIEeS8a9tzu_DvHw" name="setTitle" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JDhDsHiIEeS8a9tzu_DvHw" name="setEmail" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_KoCKcHiIEeS8a9tzu_DvHw" name="setPhone" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_CaZTQHiLEeS8a9tzu_DvHw" name="addBooking" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_C4lrIHiLEeS8a9tzu_DvHw" name="removeBooking" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ETPEMHiLEeS8a9tzu_DvHw" name="addRequest" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_GQW4MHiLEeS8a9tzu_DvHw" name="getBookings" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_KlDnkHiLEeS8a9tzu_DvHw" name="removeRequest" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_MHsfAHiLEeS8a9tzu_DvHw" name="getRequests" visibility="package"/>
+          </nestedClassifier>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_j-Ks8HT-EeSTN6KBMiF9rQ" name="ClassDiagram">
+          <packagedElement xmi:type="uml:Association" xmi:id="_mvCt43iHEeS8a9tzu_DvHw" name="customers" visibility="private" memberEnd="_mvCt5HiHEeS8a9tzu_DvHw _mvCt4HiHEeS8a9tzu_DvHw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_mvCt5HiHEeS8a9tzu_DvHw" name="customerManager" type="_bdnc8HiHEeS8a9tzu_DvHw" association="_mvCt43iHEeS8a9tzu_DvHw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mvCt5XiHEeS8a9tzu_DvHw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mvCt5niHEeS8a9tzu_DvHw" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_pW5-IHT8EeSTN6KBMiF9rQ" name="Stays">
         <packagedElement xmi:type="uml:Component" xmi:id="_xJTuAHT9EeSTN6KBMiF9rQ" name="StaysComponent">
@@ -914,7 +1105,7 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_lWFIwHXHEeSfyJE4wiQQOg" name="getFromDate" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_mUfRwHXHEeSfyJE4wiQQOg" name="setFromDate" visibility="package"/>
           </nestedClassifier>
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_qx3ScHW7EeSfyJE4wiQQOg" name="HotelStayManager" visibility="package">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_qx3ScHW7EeSfyJE4wiQQOg" name="StayManager" visibility="package">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_-h8KsHW7EeSfyJE4wiQQOg" name="stay" type="_lTHx0HW7EeSfyJE4wiQQOg" association="_-h8xwHW7EeSfyJE4wiQQOg">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-h8KsXW7EeSfyJE4wiQQOg"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-h8KsnW7EeSfyJE4wiQQOg" value="*"/>
@@ -937,7 +1128,7 @@ Customer Service representative inherits the uses of Staff</body>
             </ownedAttribute>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_0LxoIHW7EeSfyJE4wiQQOg" client="_qx3ScHW7EeSfyJE4wiQQOg" supplier="_ud--4HW7EeSfyJE4wiQQOg" contract="_ud--4HW7EeSfyJE4wiQQOg"/>
           </nestedClassifier>
-          <nestedClassifier xmi:type="uml:Interface" xmi:id="_ud--4HW7EeSfyJE4wiQQOg" name="IHotelStayManager">
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_ud--4HW7EeSfyJE4wiQQOg" name="IStayManager">
             <ownedOperation xmi:type="uml:Operation" xmi:id="_lbHogHXBEeSfyJE4wiQQOg" name="checkInGuest"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_oOfnsHXEEeSfyJE4wiQQOg" name="changeBookableOfStay"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_OjoWkHXFEeSfyJE4wiQQOg" name="addNewStay"/>
