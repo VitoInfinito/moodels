@@ -64,6 +64,8 @@ Customer Service representative inherits the uses of Staff</body>
         <packagedElement xmi:type="uml:Usage" xmi:id="_B6CdsHcWEeS8a9tzu_DvHw" name="Usage0" client="_BEkGQHT9EeSTN6KBMiF9rQ" supplier="_A-o9EHUAEeSTN6KBMiF9rQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_kjHaIHiNEeS8a9tzu_DvHw" name="Usage1" client="_JnRHIHT9EeSTN6KBMiF9rQ" supplier="_PnB-kHiJEeS8a9tzu_DvHw"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_lFKXQHiNEeS8a9tzu_DvHw" name="Usage2" client="_JnRHIHT9EeSTN6KBMiF9rQ" supplier="_a6YNAHiHEeS8a9tzu_DvHw"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_DDVeYHiSEeS9MsZyYSaWPA" name="Usage3" client="_JnRHIHT9EeSTN6KBMiF9rQ" supplier="_7_X-UHiPEeS8a9tzu_DvHw"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_IXcqEHiXEeS9MsZyYSaWPA" name="Usage4" client="_BEkGQHT9EeSTN6KBMiF9rQ" supplier="_J5ePwHiSEeS9MsZyYSaWPA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_YyrR8HiNEeS8a9tzu_DvHw" name="Usage0" client="_DrO1QHT3EeSTN6KBMiF9rQ" supplier="_a6YNAHiHEeS8a9tzu_DvHw"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_Zvjw8HiNEeS8a9tzu_DvHw" name="Usage1" client="_DrO1QHT3EeSTN6KBMiF9rQ" supplier="_PnB-kHiJEeS8a9tzu_DvHw"/>
@@ -522,6 +524,7 @@ Customer Service representative inherits the uses of Staff</body>
           </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_uOvMkHT4EeSTN6KBMiF9rQ" name="StatisticsComponent">
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_DRF7oHiUEeS9MsZyYSaWPA" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_A-o9EHUAEeSTN6KBMiF9rQ" contract="_A-o9EHUAEeSTN6KBMiF9rQ"/>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_s3vvAHT5EeSTN6KBMiF9rQ" name="Statistic" isLeaf="true">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_yh-t8HT5EeSTN6KBMiF9rQ" name="type" visibility="private" isReadOnly="true">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -553,6 +556,8 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_sAvxYHUAEeSTN6KBMiF9rQ" name="getOccupancyStatistics"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_Q35p4HUCEeSTN6KBMiF9rQ" name="getRevenueStatistics"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_Vcuf8HUCEeSTN6KBMiF9rQ" name="getProfitStatistics"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_v1xEAHiWEeS9MsZyYSaWPA" name="setStaticExpenses"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_0l0SoHiWEeS9MsZyYSaWPA" name="getStaticExpenses"/>
           </nestedClassifier>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_gxUrkHUAEeSTN6KBMiF9rQ" name="StatisticsGenerator" visibility="package">
             <generalization xmi:type="uml:Generalization" xmi:id="__Lo48HUAEeSTN6KBMiF9rQ" general="_A-o9EHUAEeSTN6KBMiF9rQ"/>
@@ -564,8 +569,22 @@ Customer Service representative inherits the uses of Staff</body>
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e78tsXcWEeS8a9tzu_DvHw" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e78tsncWEeS8a9tzu_DvHw" value="1"/>
             </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_lkawAHiWEeS9MsZyYSaWPA" name="iStaff" type="_J5ePwHiSEeS9MsZyYSaWPA" association="_lkawA3iWEeS9MsZyYSaWPA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lkawAXiWEeS9MsZyYSaWPA" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lkawAniWEeS9MsZyYSaWPA" value="1"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_zZVRYHiWEeS9MsZyYSaWPA" name="staticExpenses" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+            </ownedAttribute>
           </nestedClassifier>
         </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_lkawA3iWEeS9MsZyYSaWPA" name="staffManager" visibility="private" memberEnd="_lkawBHiWEeS9MsZyYSaWPA _lkawAHiWEeS9MsZyYSaWPA">
+          <ownedEnd xmi:type="uml:Property" xmi:id="_lkawBHiWEeS9MsZyYSaWPA" name="statisticsGenerator" type="_gxUrkHUAEeSTN6KBMiF9rQ" association="_lkawA3iWEeS9MsZyYSaWPA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lkawBXiWEeS9MsZyYSaWPA" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lkawBniWEeS9MsZyYSaWPA" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_F73_gHiXEeS9MsZyYSaWPA" name="Usage0" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_J5ePwHiSEeS9MsZyYSaWPA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_w0b8IHT7EeSTN6KBMiF9rQ" name="Inventory">
         <packagedElement xmi:type="uml:Component" xmi:id="_s2yv8HT9EeSTN6KBMiF9rQ" name="InventoryComponent">
@@ -791,8 +810,111 @@ Customer Service representative inherits the uses of Staff</body>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_z6V9IHT7EeSTN6KBMiF9rQ" name="Staff">
-        <packagedElement xmi:type="uml:Component" xmi:id="_uRE8oHT9EeSTN6KBMiF9rQ" name="StaffComponent"/>
-        <packagedElement xmi:type="uml:Package" xmi:id="_ah-fUHT-EeSTN6KBMiF9rQ" name="ClassDiagram"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_uRE8oHT9EeSTN6KBMiF9rQ" name="StaffComponent">
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_J5ePwHiSEeS9MsZyYSaWPA" name="IStaff">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_rMYTgHiVEeS9MsZyYSaWPA" name="getAllStaff"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_sXpz0HiVEeS9MsZyYSaWPA" name="searchStaff"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_tMLoEHiVEeS9MsZyYSaWPA" name="getStaffFirstName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_uxziEHiVEeS9MsZyYSaWPA" name="getStaffLastName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_vx5GEHiVEeS9MsZyYSaWPA" name="getStaffJob"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_wtNe0HiVEeS9MsZyYSaWPA" name="getStaffPhone"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_zdVdEHiVEeS9MsZyYSaWPA" name="getStaffEmail"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_4IHxMHiVEeS9MsZyYSaWPA" name="getStaffSalaryContractType"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_-xhHEHiVEeS9MsZyYSaWPA" name="getStaffSalary"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_A3df4HiWEeS9MsZyYSaWPA" name="changeStaffFirstName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_EBxfwHiWEeS9MsZyYSaWPA" name="changeStaffLastName"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_HUOH8HiWEeS9MsZyYSaWPA" name="changeStaffJob"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JR-1IHiWEeS9MsZyYSaWPA" name="changeStaffPhone"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LObTsHiWEeS9MsZyYSaWPA" name="changeStaffSalaryContract"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_WCDOUHiWEeS9MsZyYSaWPA" name="scheduleStaff"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_KTSd8HiSEeS9MsZyYSaWPA" name="StaffManager" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_QEgOoHiSEeS9MsZyYSaWPA" name="staff" type="_KjtfkHiSEeS9MsZyYSaWPA" association="_QEg1sHiSEeS9MsZyYSaWPA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QEgOoXiSEeS9MsZyYSaWPA"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QEgOoniSEeS9MsZyYSaWPA" value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_GTmDUHiUEeS9MsZyYSaWPA" name="iStatisticsGenerator" type="_A-o9EHUAEeSTN6KBMiF9rQ" association="_GTmDU3iUEeS9MsZyYSaWPA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GTmDUXiUEeS9MsZyYSaWPA" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GTmDUniUEeS9MsZyYSaWPA" value="1"/>
+            </ownedAttribute>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UnKhgHiSEeS9MsZyYSaWPA" client="_KTSd8HiSEeS9MsZyYSaWPA" supplier="_J5ePwHiSEeS9MsZyYSaWPA" contract="_J5ePwHiSEeS9MsZyYSaWPA"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_KjtfkHiSEeS9MsZyYSaWPA" name="Staff" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_0Qb_4HiTEeS9MsZyYSaWPA" name="salaryContract" type="_v7ZSQHiTEeS9MsZyYSaWPA" association="_0QdOAHiTEeS9MsZyYSaWPA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0Qb_4XiTEeS9MsZyYSaWPA" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0Qb_4niTEeS9MsZyYSaWPA" value="1"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_V5idcHiUEeS9MsZyYSaWPA" name="firstName" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_WsEGkHiUEeS9MsZyYSaWPA" name="lastName" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_XG5ocHiUEeS9MsZyYSaWPA" name="job" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_XX__gHiUEeS9MsZyYSaWPA" name="phone" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_XoQCAHiUEeS9MsZyYSaWPA" name="email" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_f8H8sHiUEeS9MsZyYSaWPA" name="ssid" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ze-4UHiUEeS9MsZyYSaWPA" name="getFirstName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_zyNWUHiUEeS9MsZyYSaWPA" name="getLastName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_0CIBoHiUEeS9MsZyYSaWPA" name="getJob" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_0WnD4HiUEeS9MsZyYSaWPA" name="getPhone" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_088EEHiUEeS9MsZyYSaWPA" name="getEmail" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_1o_40HiUEeS9MsZyYSaWPA" name="getSSID" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_2DJeMHiUEeS9MsZyYSaWPA" name="setFirstName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_2YjGcHiUEeS9MsZyYSaWPA" name="setLastName" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_2y-_sHiUEeS9MsZyYSaWPA" name="setJob" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="__fgq8HiUEeS9MsZyYSaWPA" name="setPhone" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="__5uhwHiUEeS9MsZyYSaWPA" name="setEmail" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_IOks0HiVEeS9MsZyYSaWPA" name="getSalaryContract" visibility="package"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_Kj924HiVEeS9MsZyYSaWPA" name="setSalaryContract" visibility="package"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_v7ZSQHiTEeS9MsZyYSaWPA" name="SalaryContract" isAbstract="true">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_L3sIkHiVEeS9MsZyYSaWPA" name="getSalary" visibility="package" isAbstract="true"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_wLwpgHiTEeS9MsZyYSaWPA" name="MonthlySalaryContract">
+            <generalization xmi:type="uml:Generalization" xmi:id="_2ClS8HiTEeS9MsZyYSaWPA" general="_v7ZSQHiTEeS9MsZyYSaWPA"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_oBQQwHiUEeS9MsZyYSaWPA" name="salary" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+            </ownedAttribute>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_wepJQHiTEeS9MsZyYSaWPA" name="HourlySalaryContract">
+            <generalization xmi:type="uml:Generalization" xmi:id="_2YyMcHiTEeS9MsZyYSaWPA" general="_v7ZSQHiTEeS9MsZyYSaWPA"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_ogtz8HiUEeS9MsZyYSaWPA" name="salaryHour" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+            </ownedAttribute>
+          </nestedClassifier>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_ah-fUHT-EeSTN6KBMiF9rQ" name="ClassDiagram">
+          <packagedElement xmi:type="uml:Association" xmi:id="_QEg1sHiSEeS9MsZyYSaWPA" name="employees" visibility="private" memberEnd="_QEg1sXiSEeS9MsZyYSaWPA _QEgOoHiSEeS9MsZyYSaWPA">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_QEg1sXiSEeS9MsZyYSaWPA" name="staffManager" type="_KTSd8HiSEeS9MsZyYSaWPA" association="_QEg1sHiSEeS9MsZyYSaWPA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QEg1sniSEeS9MsZyYSaWPA" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QEg1s3iSEeS9MsZyYSaWPA" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_0QdOAHiTEeS9MsZyYSaWPA" name="salary" visibility="private" memberEnd="_0QdOAXiTEeS9MsZyYSaWPA _0Qb_4HiTEeS9MsZyYSaWPA">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_0QdOAXiTEeS9MsZyYSaWPA" name="staff" type="_KjtfkHiSEeS9MsZyYSaWPA" association="_0QdOAHiTEeS9MsZyYSaWPA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0QdOAniTEeS9MsZyYSaWPA" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0QdOA3iTEeS9MsZyYSaWPA" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_GTmDU3iUEeS9MsZyYSaWPA" name="statGen" visibility="private" memberEnd="_GTmDVHiUEeS9MsZyYSaWPA _GTmDUHiUEeS9MsZyYSaWPA">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_GTmDVHiUEeS9MsZyYSaWPA" name="staffManager" type="_KTSd8HiSEeS9MsZyYSaWPA" association="_GTmDU3iUEeS9MsZyYSaWPA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GTmDVXiUEeS9MsZyYSaWPA" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GTmDVniUEeS9MsZyYSaWPA" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_C1gEcHiXEeS9MsZyYSaWPA" name="Usage0" client="_uRE8oHT9EeSTN6KBMiF9rQ" supplier="_A-o9EHUAEeSTN6KBMiF9rQ"/>
+          <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_k6XtcHiWEeS9MsZyYSaWPA" client="_uRE8oHT9EeSTN6KBMiF9rQ" supplier="_J5ePwHiSEeS9MsZyYSaWPA" contract="_J5ePwHiSEeS9MsZyYSaWPA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_G1xb8HiXEeS9MsZyYSaWPA" name="Realization0" client="_uRE8oHT9EeSTN6KBMiF9rQ" supplier="_J5ePwHiSEeS9MsZyYSaWPA" contract="_J5ePwHiSEeS9MsZyYSaWPA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_5CimAHT7EeSTN6KBMiF9rQ" name="Bills">
         <packagedElement xmi:type="uml:Package" xmi:id="_b2eNEHT-EeSTN6KBMiF9rQ" name="ClassDiagram">
@@ -873,9 +995,8 @@ Customer Service representative inherits the uses of Staff</body>
         <packagedElement xmi:type="uml:Package" xmi:id="_dGMIgHT-EeSTN6KBMiF9rQ" name="ClassDiagram"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_Al5pwHT8EeSTN6KBMiF9rQ" name="Feedback">
-        <packagedElement xmi:type="uml:Component" xmi:id="_vrQboHT9EeSTN6KBMiF9rQ" name="FeedbackComponent"/>
-        <packagedElement xmi:type="uml:Package" xmi:id="_fFFeIHT-EeSTN6KBMiF9rQ" name="ClassDiagram">
-          <packagedElement xmi:type="uml:Interface" xmi:id="_7_X-UHiPEeS8a9tzu_DvHw" name="IFeedback">
+        <packagedElement xmi:type="uml:Component" xmi:id="_vrQboHT9EeSTN6KBMiF9rQ" name="FeedbackComponent">
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_7_X-UHiPEeS8a9tzu_DvHw" name="IFeedback">
             <ownedOperation xmi:type="uml:Operation" xmi:id="_4d_s0HiQEeS9MsZyYSaWPA" name="getAllFeedbackIDs"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_8x2HoHiQEeS9MsZyYSaWPA" name="getFeedbackDescription"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_9AuRIHiQEeS9MsZyYSaWPA" name="getFeedbackIsResolved"/>
@@ -884,15 +1005,16 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_JWiXQHiREeS9MsZyYSaWPA" name="setFeedbackIsResolved"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_c-QkwHiREeS9MsZyYSaWPA" name="setFeedbackIsNoted"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_irsosHiREeS9MsZyYSaWPA" name="searchFeedback"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_8qk3cHiPEeS8a9tzu_DvHw" name="FeedbackManager" visibility="package">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_z4azYHiREeS9MsZyYSaWPA" name="addFeedback"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_8qk3cHiPEeS8a9tzu_DvHw" name="FeedbackManager" visibility="package">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_CBEbAHiQEeS8a9tzu_DvHw" name="feedback" type="_9ACKEHiPEeS8a9tzu_DvHw" association="_CBFCEHiQEeS8a9tzu_DvHw">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CBEbAXiQEeS8a9tzu_DvHw"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CBEbAniQEeS8a9tzu_DvHw" value="*"/>
             </ownedAttribute>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_BgzmkHiQEeS8a9tzu_DvHw" client="_8qk3cHiPEeS8a9tzu_DvHw" supplier="_7_X-UHiPEeS8a9tzu_DvHw" contract="_7_X-UHiPEeS8a9tzu_DvHw"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_9ACKEHiPEeS8a9tzu_DvHw" name="Feedback" visibility="package">
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_9ACKEHiPEeS8a9tzu_DvHw" name="Feedback" visibility="package">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_IwT6MHiQEeS8a9tzu_DvHw" name="description" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedAttribute>
@@ -912,7 +1034,9 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_K9g8IHiREeS9MsZyYSaWPA" name="setDesc"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_LXneMHiREeS9MsZyYSaWPA" name="setIsNoted"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_LpSdAHiREeS9MsZyYSaWPA" name="setIsResolved"/>
-          </packagedElement>
+          </nestedClassifier>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_fFFeIHT-EeSTN6KBMiF9rQ" name="ClassDiagram">
           <packagedElement xmi:type="uml:Association" xmi:id="_CBFCEHiQEeS8a9tzu_DvHw" name="feedback" visibility="private" memberEnd="_CBFCEXiQEeS8a9tzu_DvHw _CBEbAHiQEeS8a9tzu_DvHw">
             <ownedEnd xmi:type="uml:Property" xmi:id="_CBFCEXiQEeS8a9tzu_DvHw" name="feedbackManager" type="_8qk3cHiPEeS8a9tzu_DvHw" association="_CBFCEHiQEeS8a9tzu_DvHw">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CBFCEniQEeS8a9tzu_DvHw" value="1"/>
@@ -920,6 +1044,7 @@ Customer Service representative inherits the uses of Staff</body>
             </ownedEnd>
           </packagedElement>
         </packagedElement>
+        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="__tVy8HiREeS9MsZyYSaWPA" name="Realization0" client="_vrQboHT9EeSTN6KBMiF9rQ" supplier="_7_X-UHiPEeS8a9tzu_DvHw" contract="_7_X-UHiPEeS8a9tzu_DvHw"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_lFDucHT8EeSTN6KBMiF9rQ" name="Guests">
         <packagedElement xmi:type="uml:Component" xmi:id="_wFsU4HT9EeSTN6KBMiF9rQ" name="GuestsComponent">
