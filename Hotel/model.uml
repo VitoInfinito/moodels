@@ -2489,6 +2489,75 @@ and skip paying or pay in another way</body>
         <message xmi:type="uml:Message" xmi:id="_Lw5JgHlEEeSysYazcyl-9Q" name="getBookingDetails_Message" messageSort="asynchCall" receiveEvent="_Lw5wkXlEEeSysYazcyl-9Q" sendEvent="_Lw5wkHlEEeSysYazcyl-9Q" signature="__A2lgHlDEeSysYazcyl-9Q"/>
         <message xmi:type="uml:Message" xmi:id="_CYiBEHlGEeSysYazcyl-9Q" name="updateBookingDetails_Message" messageSort="asynchCall" receiveEvent="_CYjPMHlGEeSysYazcyl-9Q" sendEvent="_CYioIHlGEeSysYazcyl-9Q" signature="_1R1QkHlFEeSysYazcyl-9Q"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Interaction" xmi:id="_swazsHlGEeSysYazcyl-9Q" name="cancelBooking">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_SOklUHlJEeSysYazcyl-9Q">
+          <body>Remeber error message
+</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_b7IxQHlJEeSysYazcyl-9Q">
+          <body>Remember error message
+</body>
+        </ownedComment>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_y3ffoHlGEeSysYazcyl-9Q" name="Lifeline" represents="__IZ34HinEeS9MsZyYSaWPA" coveredBy="_4TVdQHlGEeSysYazcyl-9Q _4TVdQXlGEeSysYazcyl-9Q _I4U5kHlHEeSysYazcyl-9Q _LhAMAHlHEeSysYazcyl-9Q _LhAMAXlHEeSysYazcyl-9Q _hcSXkHlHEeSysYazcyl-9Q __7OmQHlHEeSysYazcyl-9Q _a6FZYHlIEeSysYazcyl-9Q _a6GAcHlIEeSysYazcyl-9Q _yxmoIHlIEeSysYazcyl-9Q _0758gHlIEeSysYazcyl-9Q _8GjlUHlIEeSysYazcyl-9Q _HhTKUHlJEeSysYazcyl-9Q"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_1It7YHlGEeSysYazcyl-9Q" name="Lifeline0" represents="_RrQLMHisEeS9MsZyYSaWPA" coveredBy="_I4U5kXlHEeSysYazcyl-9Q _LhAMAHlHEeSysYazcyl-9Q _LhAMAXlHEeSysYazcyl-9Q _hcSXkHlHEeSysYazcyl-9Q __7OmQXlHEeSysYazcyl-9Q _a6FZYHlIEeSysYazcyl-9Q _a6GAcHlIEeSysYazcyl-9Q _8GjlUHlIEeSysYazcyl-9Q _HhTxYHlJEeSysYazcyl-9Q"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_Bj1i0HlIEeSysYazcyl-9Q" name="Lifeline1" represents="_MCFb4HivEeS9MsZyYSaWPA" coveredBy="_a6FZYHlIEeSysYazcyl-9Q _a6GAcHlIEeSysYazcyl-9Q _yxnPMHlIEeSysYazcyl-9Q _0758gXlIEeSysYazcyl-9Q _8GjlUHlIEeSysYazcyl-9Q"/>
+        <fragment xmi:type="uml:CombinedFragment" xmi:id="_4TVdQHlGEeSysYazcyl-9Q" name="CombinedFragment" covered="_y3ffoHlGEeSysYazcyl-9Q">
+          <operand xmi:type="uml:InteractionOperand" xmi:id="_4TVdQXlGEeSysYazcyl-9Q" name="InteractionOperand" covered="_y3ffoHlGEeSysYazcyl-9Q">
+            <guard xmi:type="uml:InteractionConstraint" xmi:id="_4TVdQnlGEeSysYazcyl-9Q">
+              <specification xmi:type="uml:LiteralString" xmi:id="__B8DQHlGEeSysYazcyl-9Q" value="Reference to login flow"/>
+              <maxint xmi:type="uml:LiteralInteger" xmi:id="_4TVdRXlGEeSysYazcyl-9Q" value="1"/>
+              <minint xmi:type="uml:LiteralInteger" xmi:id="_4TVdRHlGEeSysYazcyl-9Q"/>
+            </guard>
+          </operand>
+        </fragment>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_I4U5kHlHEeSysYazcyl-9Q" name="searchBookings_MessageSend" covered="_y3ffoHlGEeSysYazcyl-9Q" message="_I4USgHlHEeSysYazcyl-9Q"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_I4U5kXlHEeSysYazcyl-9Q" name="searchBookings_MessageRecv" covered="_1It7YHlGEeSysYazcyl-9Q" message="_I4USgHlHEeSysYazcyl-9Q"/>
+        <fragment xmi:type="uml:CombinedFragment" xmi:id="_LhAMAHlHEeSysYazcyl-9Q" name="CombinedFragment0" covered="_1It7YHlGEeSysYazcyl-9Q _y3ffoHlGEeSysYazcyl-9Q" interactionOperator="alt">
+          <operand xmi:type="uml:InteractionOperand" xmi:id="_LhAMAXlHEeSysYazcyl-9Q" name="InteractionOperand" covered="_1It7YHlGEeSysYazcyl-9Q _y3ffoHlGEeSysYazcyl-9Q">
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="__7OmQHlHEeSysYazcyl-9Q" name="getBookingDetails_MessageSend" covered="_y3ffoHlGEeSysYazcyl-9Q" message="__7N_MHlHEeSysYazcyl-9Q"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="__7OmQXlHEeSysYazcyl-9Q" name="getBookingDetails_MessageRecv" covered="_1It7YHlGEeSysYazcyl-9Q" message="__7N_MHlHEeSysYazcyl-9Q"/>
+            <guard xmi:type="uml:InteractionConstraint" xmi:id="_LhAMAnlHEeSysYazcyl-9Q">
+              <specification xmi:type="uml:LiteralString" xmi:id="_i6xu0HlHEeSysYazcyl-9Q" value="booking found"/>
+              <maxint xmi:type="uml:LiteralInteger" xmi:id="_LhAzEnlHEeSysYazcyl-9Q" value="1"/>
+              <minint xmi:type="uml:LiteralInteger" xmi:id="_LhAzEXlHEeSysYazcyl-9Q"/>
+            </guard>
+          </operand>
+          <operand xmi:type="uml:InteractionOperand" xmi:id="_hcSXkHlHEeSysYazcyl-9Q" name="InteractionOperand0" covered="_1It7YHlGEeSysYazcyl-9Q _y3ffoHlGEeSysYazcyl-9Q">
+            <guard xmi:type="uml:InteractionConstraint" xmi:id="_hcSXkXlHEeSysYazcyl-9Q">
+              <specification xmi:type="uml:LiteralString" xmi:id="_js9ZsHlHEeSysYazcyl-9Q" value="booking not found"/>
+              <maxint xmi:type="uml:LiteralInteger" xmi:id="_hcS-oXlHEeSysYazcyl-9Q" value="1"/>
+              <minint xmi:type="uml:LiteralInteger" xmi:id="_hcS-oHlHEeSysYazcyl-9Q"/>
+            </guard>
+          </operand>
+        </fragment>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yxmoIHlIEeSysYazcyl-9Q" name="getCustomerFirstName_MessageSend" covered="_y3ffoHlGEeSysYazcyl-9Q" message="_yxmBEHlIEeSysYazcyl-9Q"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yxnPMHlIEeSysYazcyl-9Q" name="getCustomerFirstName_MessageRecv" covered="_Bj1i0HlIEeSysYazcyl-9Q" message="_yxmBEHlIEeSysYazcyl-9Q"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0758gHlIEeSysYazcyl-9Q" name="getCustomerLastName_MessageSend" covered="_y3ffoHlGEeSysYazcyl-9Q" message="_075VcHlIEeSysYazcyl-9Q"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0758gXlIEeSysYazcyl-9Q" name="getCustomerLastName_MessageRecv" covered="_Bj1i0HlIEeSysYazcyl-9Q" message="_075VcHlIEeSysYazcyl-9Q"/>
+        <fragment xmi:type="uml:CombinedFragment" xmi:id="_a6FZYHlIEeSysYazcyl-9Q" name="CombinedFragment1" covered="_y3ffoHlGEeSysYazcyl-9Q _1It7YHlGEeSysYazcyl-9Q _Bj1i0HlIEeSysYazcyl-9Q" interactionOperator="alt">
+          <operand xmi:type="uml:InteractionOperand" xmi:id="_a6GAcHlIEeSysYazcyl-9Q" name="InteractionOperand" covered="_y3ffoHlGEeSysYazcyl-9Q _1It7YHlGEeSysYazcyl-9Q _Bj1i0HlIEeSysYazcyl-9Q">
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HhTxYHlJEeSysYazcyl-9Q" name="cancelBooking_MessageRecv" covered="_1It7YHlGEeSysYazcyl-9Q" message="_HhSjQHlJEeSysYazcyl-9Q"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HhTKUHlJEeSysYazcyl-9Q" name="cancelBooking_MessageSend" covered="_y3ffoHlGEeSysYazcyl-9Q" message="_HhSjQHlJEeSysYazcyl-9Q"/>
+            <guard xmi:type="uml:InteractionConstraint" xmi:id="_a6GAcXlIEeSysYazcyl-9Q">
+              <specification xmi:type="uml:LiteralString" xmi:id="__6IkoHlIEeSysYazcyl-9Q" value="name matches booking details"/>
+              <maxint xmi:type="uml:LiteralInteger" xmi:id="_a6GAdHlIEeSysYazcyl-9Q" value="1"/>
+              <minint xmi:type="uml:LiteralInteger" xmi:id="_a6GAc3lIEeSysYazcyl-9Q"/>
+            </guard>
+          </operand>
+          <operand xmi:type="uml:InteractionOperand" xmi:id="_8GjlUHlIEeSysYazcyl-9Q" name="InteractionOperand0" covered="_y3ffoHlGEeSysYazcyl-9Q _1It7YHlGEeSysYazcyl-9Q _Bj1i0HlIEeSysYazcyl-9Q">
+            <guard xmi:type="uml:InteractionConstraint" xmi:id="_8GkMYHlIEeSysYazcyl-9Q">
+              <specification xmi:type="uml:LiteralString" xmi:id="_NPNIUHlJEeSysYazcyl-9Q" value="name doesn't match booking details"/>
+              <maxint xmi:type="uml:LiteralInteger" xmi:id="_8GkMY3lIEeSysYazcyl-9Q" value="1"/>
+              <minint xmi:type="uml:LiteralInteger" xmi:id="_8GkMYnlIEeSysYazcyl-9Q"/>
+            </guard>
+          </operand>
+        </fragment>
+        <message xmi:type="uml:Message" xmi:id="_I4USgHlHEeSysYazcyl-9Q" name="searchBookings_Message" messageSort="asynchCall" receiveEvent="_I4U5kXlHEeSysYazcyl-9Q" sendEvent="_I4U5kHlHEeSysYazcyl-9Q" signature="_vL9hYHXKEeSfyJE4wiQQOg"/>
+        <message xmi:type="uml:Message" xmi:id="__7N_MHlHEeSysYazcyl-9Q" name="getBookingDetails_Message" messageSort="asynchCall" receiveEvent="__7OmQXlHEeSysYazcyl-9Q" sendEvent="__7OmQHlHEeSysYazcyl-9Q" signature="__A2lgHlDEeSysYazcyl-9Q"/>
+        <message xmi:type="uml:Message" xmi:id="_yxmBEHlIEeSysYazcyl-9Q" name="getCustomerFirstName_Message" messageSort="asynchCall" receiveEvent="_yxnPMHlIEeSysYazcyl-9Q" sendEvent="_yxmoIHlIEeSysYazcyl-9Q" signature="_3fjoQHiIEeS8a9tzu_DvHw"/>
+        <message xmi:type="uml:Message" xmi:id="_075VcHlIEeSysYazcyl-9Q" name="getCustomerLastName_Message" messageSort="asynchCall" receiveEvent="_0758gXlIEeSysYazcyl-9Q" sendEvent="_0758gHlIEeSysYazcyl-9Q" signature="_6G3BsHiIEeS8a9tzu_DvHw"/>
+        <message xmi:type="uml:Message" xmi:id="_HhSjQHlJEeSysYazcyl-9Q" name="cancelBooking_Message" messageSort="asynchCall" receiveEvent="_HhTxYHlJEeSysYazcyl-9Q" sendEvent="_HhTKUHlJEeSysYazcyl-9Q" signature="_pclHQHXLEeSfyJE4wiQQOg"/>
+      </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_NGTYwHXMEeSfyJE4wiQQOg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NG4nkHXMEeSfyJE4wiQQOg" source="http://www.eclipse.org/uml2/2.0.0/UML">
