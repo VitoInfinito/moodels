@@ -1243,7 +1243,6 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_ddMns3iKEeS8a9tzu_DvHw" name="searchGuests"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_3czu4HiLEeS8a9tzu_DvHw" name="getGuestStays"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_426VYHiLEeS8a9tzu_DvHw" name="getGuestRequests"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_Qxcb4HiMEeS8a9tzu_DvHw" name="addGuestStay"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_SyaOEHiMEeS8a9tzu_DvHw" name="removeGuestStay"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_UVOEoHiMEeS8a9tzu_DvHw" name="addGuestRequest"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_W5FvkHiMEeS8a9tzu_DvHw" name="removeGuestRequest"/>
