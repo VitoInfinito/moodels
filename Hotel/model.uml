@@ -60,6 +60,9 @@ Customer Service representative inherits the uses of Staff</body>
         <packagedElement xmi:type="uml:Usage" xmi:id="__ygNsHi7EeS9MsZyYSaWPA" name="Usage7" client="_BEkGQHT9EeSTN6KBMiF9rQ" supplier="_EeMWMHi7EeS9MsZyYSaWPA"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_OAldAHi8EeS9MsZyYSaWPA" name="Usage8" client="_JnRHIHT9EeSTN6KBMiF9rQ" supplier="_EFf0UHWEEeS1Iek-sidDrg"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_OW5EMHi8EeS9MsZyYSaWPA" name="Usage9" client="_CO1hAHT9EeSTN6KBMiF9rQ" supplier="_EFf0UHWEEeS1Iek-sidDrg"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_PuTAkHj_EeST-65JbGUt8g" name="Usage10" client="_CO1hAHT9EeSTN6KBMiF9rQ" supplier="_EeMWMHi7EeS9MsZyYSaWPA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_Ue2lgHj_EeST-65JbGUt8g" name="Usage101" client="_CO1hAHT9EeSTN6KBMiF9rQ" supplier="_RRny4HbuEeSWb_3hJA4u-g"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_hQUF0Hj_EeST-65JbGUt8g" name="Usage1011" client="_CO1hAHT9EeSTN6KBMiF9rQ" supplier="_ud--4HW7EeSfyJE4wiQQOg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_YyrR8HiNEeS8a9tzu_DvHw" name="Usage0" client="_DrO1QHT3EeSTN6KBMiF9rQ" supplier="_a6YNAHiHEeS8a9tzu_DvHw"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_Zvjw8HiNEeS8a9tzu_DvHw" name="Usage1" client="_DrO1QHT3EeSTN6KBMiF9rQ" supplier="_PnB-kHiJEeS8a9tzu_DvHw"/>
@@ -1500,7 +1503,7 @@ Customer Service representative inherits the uses of Staff</body>
             </ownedAttribute>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_0LxoIHW7EeSfyJE4wiQQOg" client="_qx3ScHW7EeSfyJE4wiQQOg" supplier="_ud--4HW7EeSfyJE4wiQQOg" contract="_ud--4HW7EeSfyJE4wiQQOg"/>
           </nestedClassifier>
-          <nestedClassifier xmi:type="uml:Interface" xmi:id="_ud--4HW7EeSfyJE4wiQQOg" name="IStaysManager">
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_ud--4HW7EeSfyJE4wiQQOg" name="IStays">
             <ownedOperation xmi:type="uml:Operation" xmi:id="_lbHogHXBEeSfyJE4wiQQOg" name="checkInGuest"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_oOfnsHXEEeSfyJE4wiQQOg" name="changeBookableOfStay"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_OjoWkHXFEeSfyJE4wiQQOg" name="addNewStay"/>
