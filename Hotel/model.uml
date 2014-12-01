@@ -1956,6 +1956,11 @@ bookables that are not booked in that period</body>
         <ownedComment xmi:type="uml:Comment" xmi:id="_MfleUHj-EeST-65JbGUt8g">
           <body>if payment fails the loop is broken</body>
         </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_K2xwAHlXEeST-65JbGUt8g">
+          <body>If number of guests are more&#xD;
+than the capacity of the rooms&#xD;
+an exception is thrown </body>
+        </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_xxmSAHirEeS9MsZyYSaWPA" name="user" type="_JnRHIHT9EeSTN6KBMiF9rQ"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_6BoOgHirEeS9MsZyYSaWPA" name="bookables" type="_-sPlAHTxEeSTN6KBMiF9rQ"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_RrQLMHisEeS9MsZyYSaWPA" name="bookingManager" type="_2n-2wHW5EeSfyJE4wiQQOg"/>
