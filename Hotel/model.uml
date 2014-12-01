@@ -2274,7 +2274,7 @@ bookables that are not booked in that period</body>
         <message xmi:type="uml:Message" xmi:id="_i9uY8Hj2EeST-65JbGUt8g" name="makePayment_Message" messageSort="asynchCall" receiveEvent="_i9vAAXj2EeST-65JbGUt8g" sendEvent="_i9vAAHj2EeST-65JbGUt8g" signature="_OwydY3XPEeSfyJE4wiQQOg"/>
         <message xmi:type="uml:Message" xmi:id="__BWNAHj8EeST-65JbGUt8g" name="payBillsWithCash_Message" messageSort="asynchCall" receiveEvent="__BW0EXj8EeST-65JbGUt8g" sendEvent="__BW0EHj8EeST-65JbGUt8g" signature="_KXOu4Hj3EeST-65JbGUt8g"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Interaction" xmi:id="_SsQyEHj1EeST-65JbGUt8g" name="Interaction1">
+      <packagedElement xmi:type="uml:Interaction" xmi:id="_SsQyEHj1EeST-65JbGUt8g" name="checkOut">
         <ownedComment xmi:type="uml:Comment" xmi:id="_zijAsHj3EeST-65JbGUt8g">
           <body>The user can ofcourse break this loop &#xD;
 and skip paying or pay in another way</body>
