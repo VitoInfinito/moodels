@@ -1,0 +1,49 @@
+/**
+ */
+package Classes.Staff;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Hourly Salary Contract</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link Classes.Staff.HourlySalaryContract#getSalaryHour <em>Salary Hour</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see Classes.Staff.StaffPackage#getHourlySalaryContract()
+ * @model
+ * @generated
+ */
+public interface HourlySalaryContract extends SalaryContract {
+	/**
+	 * Returns the value of the '<em><b>Salary Hour</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Salary Hour</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Salary Hour</em>' attribute.
+	 * @see #setSalaryHour(double)
+	 * @see Classes.Staff.StaffPackage#getHourlySalaryContract_SalaryHour()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	double getSalary();
+
+	/**
+	 * Sets the value of the '{@link Classes.Staff.HourlySalaryContract#getSalaryHour <em>Salary Hour</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Salary Hour</em>' attribute.
+	 * @see #getSalaryHour()
+	 * @generated
+	 */
+	void setSalary(double value);
+
+} // HourlySalaryContract
