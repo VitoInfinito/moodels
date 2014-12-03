@@ -255,6 +255,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 		Bookable bookable = bookables.get(keyword);
 		if (bookable != null) {
 			searchResult.add(bookable.getId());
+			return new ArrayList<String>(searchResult);
 		}
 
 		// Some property match exactly
