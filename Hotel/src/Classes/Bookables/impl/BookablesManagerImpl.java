@@ -13,6 +13,7 @@ import Classes.Bookables.HostelBed;
 import Classes.Bookables.HotelRoom;
 import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.Room;
+import Classes.Bookables.RoomLocation;
 import Classes.Stays.IStays;
 
 import java.lang.reflect.InvocationTargetException;
@@ -250,32 +251,64 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	public List<String> searchForBookable(String keyword) {
 		Set<String> searchResult = new LinkedHashSet<String>();
 
-		/*
-		// Exact ID match. First!
+		// Exact ID match. First Order!
 		Bookable bookable = bookables.get(keyword);
 		if (bookable != null) {
 			searchResult.add(bookable.getId());
-			return new ArrayList<String>(searchResult);
+			//return new ArrayList<String>(searchResult);
 		}
-
-		// Some property match exactly
+		
+		// ID match somewhat. Second Order!
 		Collection<Bookable> c = bookables.values();
-		for (Bookable b : c) {
-			if (b.getDescription() == keyword) {
-				searchResult.add(b.getId());
-			} else if (keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.parseInt(keyword) == b.getBaseprice()) {
-				searchResult.add(b.getId());
-			} //else if (b instanceof Room)
-		}
-
-		// Some property match somewhat
-		for (Bookable b : c) {
-			if (b.getDescription().contains(keyword)) {
+		for (Bookable b : c) {			
+			if (b.getId().contains(keyword)) {
 				searchResult.add(b.getId());
 			}
 		}
-		*/
 
+		// Some property match exactly. Third Order!
+		for (Bookable b : c) {
+			if (b.getDescription() == keyword || (keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.valueOf(keyword) == b.getBaseprice())) {
+				searchResult.add(b.getId());
+			} else if (b instanceof Room) {
+				Room r = (Room)b;
+				RoomLocation l = r.getLocation();
+				if ((keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.valueOf(keyword) == l.getFloor()) || keyword == l.getAddtionalInfo()){ 
+					searchResult.add(r.getId());
+				} else if (b instanceof HotelRoom) {
+					HotelRoom hr = (HotelRoom)b;
+					if (keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.valueOf(keyword) == hr.getNbrBeds()) {
+						searchResult.add(hr.getId());
+					}
+				} else if (b instanceof ConferenceRoom) {
+					ConferenceRoom cr = (ConferenceRoom)b;
+					if (keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.valueOf(keyword) == cr.getCapacity()) {
+						searchResult.add(cr.getId());
+					}
+				}
+			} else if (b instanceof HostelBed) {
+				HostelBed h = (HostelBed)b;
+				if (keyword == h.getRoom().getId())
+					searchResult.add(h.getId());
+			}
+		}
+
+		// Some property match somewhat. Fourth Order.
+		for (Bookable b : c) {
+			if (b.getDescription().contains(keyword)) {
+				searchResult.add(b.getId());
+			} else if (b instanceof Room) {
+				Room r = (Room)b;
+				RoomLocation l = r.getLocation();
+				if (l.getAddtionalInfo().contains(keyword)){ 
+					searchResult.add(r.getId());
+				} 
+			} else if (b instanceof HostelBed) {
+				HostelBed h = (HostelBed)b;
+				if (h.getRoom().getId().contains(keyword))
+					searchResult.add(h.getId());
+			}
+		}
 
 		return new ArrayList<String>(searchResult);
 	}
@@ -296,34 +329,49 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated 
+	 * @generated NOT
 	 */
-	public EList<String> getAllRoomIDs() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAllHotelRoomIDs() {
+		Collection<Bookable> c = bookables.values();
+		List<String> result = new ArrayList<String>();
+		for (Bookable b : c) {
+			if (b instanceof HotelRoom) {
+				result.add(b.getId());
+			}
+		}
+		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllConferenceRoomIDs() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAllConferenceRoomIDs() {
+		Collection<Bookable> c = bookables.values();
+		List<String> result = new ArrayList<String>();
+		for (Bookable b : c) {
+			if (b instanceof ConferenceRoom) {
+				result.add(b.getId());
+			}
+		}
+		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllHostelBedIDs() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAllHostelBedIDs() {
+		Collection<Bookable> c = bookables.values();
+		List<String> result = new ArrayList<String>();
+		for (Bookable b : c) {
+			if (b instanceof HostelBed) {
+				result.add(b.getId());
+			}
+		}
+		return result;
 	}
 
 	/**
@@ -599,7 +647,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 		case BookablesPackage.BOOKABLES_MANAGER___GET_ROOM_LOCATION_FLOOR__STRING:
 			return getRoomLocationFloor((String)arguments.get(0));
 		case BookablesPackage.BOOKABLES_MANAGER___GET_ALL_ROOM_IDS:
-			return getAllRoomIDs();
+			return getAllHotelRoomIDs();
 		case BookablesPackage.BOOKABLES_MANAGER___GET_ALL_CONFERENCE_ROOM_IDS:
 			return getAllConferenceRoomIDs();
 		case BookablesPackage.BOOKABLES_MANAGER___GET_ALL_HOSTEL_BED_IDS:

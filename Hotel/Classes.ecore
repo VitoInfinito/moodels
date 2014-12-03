@@ -136,7 +136,7 @@
       <eOperations name="getRoomLocationFloor" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
         <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getAllRoomIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="getAllHotelRoomIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
       <eOperations name="getAllConferenceRoomIDs" ordered="false" upperBound="-1"
           eType="ecore:EDataType types.ecore#//String"/>
       <eOperations name="getAllHostelBedIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
