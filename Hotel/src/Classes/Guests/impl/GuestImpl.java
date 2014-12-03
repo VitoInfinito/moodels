@@ -397,94 +397,6 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getFirstName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getLastName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getSSID() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFirstName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLastName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTitle() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEmail() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPhone() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void addStay() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -519,17 +431,6 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 * @generated
 	 */
 	public void removeRequest() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAccount() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -684,30 +585,6 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case GuestsPackage.GUEST___GET_FIRST_NAME:
-				getFirstName();
-				return null;
-			case GuestsPackage.GUEST___GET_LAST_NAME:
-				getLastName();
-				return null;
-			case GuestsPackage.GUEST___GET_SSID:
-				getSSID();
-				return null;
-			case GuestsPackage.GUEST___SET_FIRST_NAME:
-				setFirstName();
-				return null;
-			case GuestsPackage.GUEST___SET_LAST_NAME:
-				setLastName();
-				return null;
-			case GuestsPackage.GUEST___SET_TITLE:
-				setTitle();
-				return null;
-			case GuestsPackage.GUEST___SET_EMAIL:
-				setEmail();
-				return null;
-			case GuestsPackage.GUEST___SET_PHONE:
-				setPhone();
-				return null;
 			case GuestsPackage.GUEST___ADD_STAY:
 				addStay();
 				return null;
@@ -719,9 +596,6 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 				return null;
 			case GuestsPackage.GUEST___REMOVE_REQUEST:
 				removeRequest();
-				return null;
-			case GuestsPackage.GUEST___SET_ACCOUNT:
-				setAccount();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

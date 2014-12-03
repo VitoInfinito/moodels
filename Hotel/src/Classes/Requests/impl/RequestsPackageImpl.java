@@ -361,51 +361,6 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRequest__GetID() {
-		return requestEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRequest__GetDesc() {
-		return requestEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRequest__GetIsResolved() {
-		return requestEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRequest__SetDesc() {
-		return requestEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRequest__SetIsResolved() {
-		return requestEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public RequestsFactory getRequestsFactory() {
 		return (RequestsFactory)getEFactoryInstance();
 	}
@@ -447,11 +402,6 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 		createEAttribute(requestEClass, REQUEST__ID);
 		createEAttribute(requestEClass, REQUEST__DESCRIPTION);
 		createEAttribute(requestEClass, REQUEST__IS_RESOLVED);
-		createEOperation(requestEClass, REQUEST___GET_ID);
-		createEOperation(requestEClass, REQUEST___GET_DESC);
-		createEOperation(requestEClass, REQUEST___GET_IS_RESOLVED);
-		createEOperation(requestEClass, REQUEST___SET_DESC);
-		createEOperation(requestEClass, REQUEST___SET_IS_RESOLVED);
 	}
 
 	/**
@@ -515,16 +465,6 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 		initEAttribute(getRequest_Id(), theTypesPackage.getString(), "id", null, 1, 1, Request.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRequest_Description(), theTypesPackage.getString(), "description", null, 1, 1, Request.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRequest_IsResolved(), theTypesPackage.getBoolean(), "isResolved", null, 1, 1, Request.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getRequest__GetID(), null, "getID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRequest__GetDesc(), null, "getDesc", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRequest__GetIsResolved(), null, "getIsResolved", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRequest__SetDesc(), null, "setDesc", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRequest__SetIsResolved(), null, "setIsResolved", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

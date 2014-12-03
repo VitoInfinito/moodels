@@ -5,16 +5,9 @@ package Classes.Staff.impl;
 import Classes.Staff.SalaryContract;
 import Classes.Staff.Staff;
 import Classes.Staff.StaffPackage;
-
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -356,83 +349,6 @@ public class StaffImpl extends MinimalEObjectImpl.Container implements Staff {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getSSID() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFirstName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLastName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setJob() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPhone() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEmail() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSalaryContract() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -545,39 +461,6 @@ public class StaffImpl extends MinimalEObjectImpl.Container implements Staff {
 				return SSID_EDEFAULT == null ? ssid != null : !SSID_EDEFAULT.equals(ssid);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case StaffPackage.STAFF___GET_SSID:
-				getSSID();
-				return null;
-			case StaffPackage.STAFF___SET_FIRST_NAME:
-				setFirstName();
-				return null;
-			case StaffPackage.STAFF___SET_LAST_NAME:
-				setLastName();
-				return null;
-			case StaffPackage.STAFF___SET_JOB:
-				setJob();
-				return null;
-			case StaffPackage.STAFF___SET_PHONE:
-				setPhone();
-				return null;
-			case StaffPackage.STAFF___SET_EMAIL:
-				setEmail();
-				return null;
-			case StaffPackage.STAFF___SET_SALARY_CONTRACT:
-				setSalaryContract();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

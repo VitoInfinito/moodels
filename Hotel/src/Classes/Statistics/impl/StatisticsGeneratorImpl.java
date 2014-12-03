@@ -282,17 +282,6 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStaticExpenses() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -395,9 +384,6 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 				return null;
 			case StatisticsPackage.STATISTICS_GENERATOR___GET_PROFIT_STATISTICS:
 				getProfitStatistics();
-				return null;
-			case StatisticsPackage.STATISTICS_GENERATOR___SET_STATIC_EXPENSES:
-				setStaticExpenses();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

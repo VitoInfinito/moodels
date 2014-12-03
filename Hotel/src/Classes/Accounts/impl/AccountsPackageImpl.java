@@ -270,42 +270,6 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAccount__GetPassword() {
-		return accountEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAccount__GetUsername() {
-		return accountEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAccount__SetPassword() {
-		return accountEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAccount__SetUsername() {
-		return accountEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAccountsManager() {
 		return accountsManagerEClass;
 	}
@@ -459,10 +423,6 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 		createEAttribute(accountEClass, ACCOUNT__ACCOUNT_TYPE);
 		createEAttribute(accountEClass, ACCOUNT__USERNAME);
 		createEAttribute(accountEClass, ACCOUNT__PASSWORD);
-		createEOperation(accountEClass, ACCOUNT___GET_PASSWORD);
-		createEOperation(accountEClass, ACCOUNT___GET_USERNAME);
-		createEOperation(accountEClass, ACCOUNT___SET_PASSWORD);
-		createEOperation(accountEClass, ACCOUNT___SET_USERNAME);
 
 		accountsManagerEClass = createEClass(ACCOUNTS_MANAGER);
 		createEReference(accountsManagerEClass, ACCOUNTS_MANAGER__ACCOUNT);
@@ -523,14 +483,6 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 		initEAttribute(getAccount_AccountType(), this.getAccountType(), "accountType", null, 1, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAccount_Username(), theTypesPackage.getString(), "username", null, 1, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAccount_Password(), theTypesPackage.getString(), "password", null, 1, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getAccount__GetPassword(), null, "getPassword", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getAccount__GetUsername(), null, "getUsername", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getAccount__SetPassword(), null, "setPassword", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getAccount__SetUsername(), null, "setUsername", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(accountsManagerEClass, AccountsManager.class, "AccountsManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAccountsManager_Account(), this.getAccount(), null, "account", null, 0, -1, AccountsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

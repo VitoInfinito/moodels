@@ -182,20 +182,4 @@ public interface CreditCard extends EObject {
 	 */
 	void setLastName(String value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	void getCCV();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	void getCCNumber();
-
 } // CreditCard

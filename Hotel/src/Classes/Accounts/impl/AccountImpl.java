@@ -5,15 +5,8 @@ package Classes.Accounts.impl;
 import Classes.Accounts.Account;
 import Classes.Accounts.AccountType;
 import Classes.Accounts.AccountsPackage;
-
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -180,28 +173,6 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPassword() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUsername() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -273,24 +244,6 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 				return PASSWORD_EDEFAULT == null ? password != null : !PASSWORD_EDEFAULT.equals(password);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case AccountsPackage.ACCOUNT___SET_PASSWORD:
-				setPassword();
-				return null;
-			case AccountsPackage.ACCOUNT___SET_USERNAME:
-				setUsername();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

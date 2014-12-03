@@ -4,15 +4,8 @@ package Classes.Feedback.impl;
 
 import Classes.Feedback.Feedback;
 import Classes.Feedback.FeedbackPackage;
-
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -221,83 +214,6 @@ public class FeedbackImpl extends MinimalEObjectImpl.Container implements Feedba
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getDesc() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getIsNoted() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getIsResolved() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getID() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDesc() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIsNoted() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIsResolved() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -379,39 +295,6 @@ public class FeedbackImpl extends MinimalEObjectImpl.Container implements Feedba
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case FeedbackPackage.FEEDBACK___GET_DESC:
-				getDesc();
-				return null;
-			case FeedbackPackage.FEEDBACK___GET_IS_NOTED:
-				getIsNoted();
-				return null;
-			case FeedbackPackage.FEEDBACK___GET_IS_RESOLVED:
-				getIsResolved();
-				return null;
-			case FeedbackPackage.FEEDBACK___GET_ID:
-				getID();
-				return null;
-			case FeedbackPackage.FEEDBACK___SET_DESC:
-				setDesc();
-				return null;
-			case FeedbackPackage.FEEDBACK___SET_IS_NOTED:
-				setIsNoted();
-				return null;
-			case FeedbackPackage.FEEDBACK___SET_IS_RESOLVED:
-				setIsResolved();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

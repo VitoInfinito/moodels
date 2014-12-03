@@ -242,31 +242,13 @@ public interface StatisticsPackage extends EPackage {
 	int ISTATISTICS_GENERATOR___GET_PROFIT_STATISTICS = 2;
 
 	/**
-	 * The operation id for the '<em>Set Static Expenses</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ISTATISTICS_GENERATOR___SET_STATIC_EXPENSES = 3;
-
-	/**
-	 * The operation id for the '<em>Get Static Expenses</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ISTATISTICS_GENERATOR___GET_STATIC_EXPENSES = 4;
-
-	/**
 	 * The number of operations of the '<em>IStatistics Generator</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ISTATISTICS_GENERATOR_OPERATION_COUNT = 5;
+	int ISTATISTICS_GENERATOR_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link Classes.Statistics.impl.StatisticsGeneratorImpl <em>Generator</em>}' class.
@@ -349,24 +331,6 @@ public interface StatisticsPackage extends EPackage {
 	 * @ordered
 	 */
 	int STATISTICS_GENERATOR___GET_PROFIT_STATISTICS = ISTATISTICS_GENERATOR___GET_PROFIT_STATISTICS;
-
-	/**
-	 * The operation id for the '<em>Set Static Expenses</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATISTICS_GENERATOR___SET_STATIC_EXPENSES = ISTATISTICS_GENERATOR___SET_STATIC_EXPENSES;
-
-	/**
-	 * The operation id for the '<em>Get Static Expenses</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATISTICS_GENERATOR___GET_STATIC_EXPENSES = ISTATISTICS_GENERATOR___GET_STATIC_EXPENSES;
 
 	/**
 	 * The number of operations of the '<em>Generator</em>' class.
@@ -513,26 +477,6 @@ public interface StatisticsPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIStatisticsGenerator__GetProfitStatistics();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Statistics.IStatisticsGenerator#setStaticExpenses() <em>Set Static Expenses</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Static Expenses</em>' operation.
-	 * @see Classes.Statistics.IStatisticsGenerator#setStaticExpenses()
-	 * @generated
-	 */
-	EOperation getIStatisticsGenerator__SetStaticExpenses();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Statistics.IStatisticsGenerator#getStaticExpenses() <em>Get Static Expenses</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Static Expenses</em>' operation.
-	 * @see Classes.Statistics.IStatisticsGenerator#getStaticExpenses()
-	 * @generated
-	 */
-	EOperation getIStatisticsGenerator__GetStaticExpenses();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Statistics.StatisticsGenerator <em>Generator</em>}'.
@@ -722,22 +666,6 @@ public interface StatisticsPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ISTATISTICS_GENERATOR___GET_PROFIT_STATISTICS = eINSTANCE.getIStatisticsGenerator__GetProfitStatistics();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Static Expenses</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ISTATISTICS_GENERATOR___SET_STATIC_EXPENSES = eINSTANCE.getIStatisticsGenerator__SetStaticExpenses();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Static Expenses</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ISTATISTICS_GENERATOR___GET_STATIC_EXPENSES = eINSTANCE.getIStatisticsGenerator__GetStaticExpenses();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Statistics.impl.StatisticsGeneratorImpl <em>Generator</em>}' class.

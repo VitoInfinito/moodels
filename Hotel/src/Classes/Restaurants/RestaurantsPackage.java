@@ -764,7 +764,7 @@ public interface RestaurantsPackage extends EPackage {
 	int RESTAURANT__RESERVATION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Restaurant Table</b></em>' reference.
+	 * The feature id for the '<em><b>Restaurant Table</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -791,58 +791,13 @@ public interface RestaurantsPackage extends EPackage {
 	int RESTAURANT_FEATURE_COUNT = 4;
 
 	/**
-	 * The operation id for the '<em>Get Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTAURANT___GET_NAME = 0;
-
-	/**
-	 * The operation id for the '<em>Set Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTAURANT___SET_NAME = 1;
-
-	/**
 	 * The operation id for the '<em>Add Reservation</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESTAURANT___ADD_RESERVATION = 2;
-
-	/**
-	 * The operation id for the '<em>Get All Tables</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTAURANT___GET_ALL_TABLES = 3;
-
-	/**
-	 * The operation id for the '<em>Get All Reservations</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTAURANT___GET_ALL_RESERVATIONS = 4;
-
-	/**
-	 * The operation id for the '<em>Get Menu</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTAURANT___GET_MENU = 5;
+	int RESTAURANT___ADD_RESERVATION = 0;
 
 	/**
 	 * The number of operations of the '<em>Restaurant</em>' class.
@@ -851,7 +806,7 @@ public interface RestaurantsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTAURANT_OPERATION_COUNT = 6;
+	int RESTAURANT_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link Classes.Restaurants.impl.ReservationImpl <em>Reservation</em>}' class.
@@ -918,58 +873,13 @@ public interface RestaurantsPackage extends EPackage {
 	int RESERVATION_FEATURE_COUNT = 5;
 
 	/**
-	 * The operation id for the '<em>Get Reserved By</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___GET_RESERVED_BY = 0;
-
-	/**
-	 * The operation id for the '<em>Get Id</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___GET_ID = 1;
-
-	/**
-	 * The operation id for the '<em>Set Reserved By</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___SET_RESERVED_BY = 2;
-
-	/**
-	 * The operation id for the '<em>Get From Time</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___GET_FROM_TIME = 3;
-
-	/**
-	 * The operation id for the '<em>Get To Time</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESERVATION___GET_TO_TIME = 4;
-
-	/**
 	 * The number of operations of the '<em>Reservation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_OPERATION_COUNT = 5;
+	int RESERVATION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link Classes.Restaurants.impl.RestaurantTableImpl <em>Restaurant Table</em>}' class.
@@ -1009,49 +919,13 @@ public interface RestaurantsPackage extends EPackage {
 	int RESTAURANT_TABLE_FEATURE_COUNT = 2;
 
 	/**
-	 * The operation id for the '<em>Get Number Of Seats</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTAURANT_TABLE___GET_NUMBER_OF_SEATS = 0;
-
-	/**
-	 * The operation id for the '<em>Get Table Number</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTAURANT_TABLE___GET_TABLE_NUMBER = 1;
-
-	/**
-	 * The operation id for the '<em>Set Number Of Seats</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTAURANT_TABLE___SET_NUMBER_OF_SEATS = 2;
-
-	/**
-	 * The operation id for the '<em>Set Table Number</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTAURANT_TABLE___SET_TABLE_NUMBER = 3;
-
-	/**
 	 * The number of operations of the '<em>Restaurant Table</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESTAURANT_TABLE_OPERATION_COUNT = 4;
+	int RESTAURANT_TABLE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link Classes.Restaurants.impl.RestaurantMenuImpl <em>Restaurant Menu</em>}' class.
@@ -1091,40 +965,13 @@ public interface RestaurantsPackage extends EPackage {
 	int RESTAURANT_MENU_FEATURE_COUNT = 2;
 
 	/**
-	 * The operation id for the '<em>Get Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTAURANT_MENU___GET_NAME = 0;
-
-	/**
-	 * The operation id for the '<em>Set Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTAURANT_MENU___SET_NAME = 1;
-
-	/**
-	 * The operation id for the '<em>Get Items</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTAURANT_MENU___GET_ITEMS = 2;
-
-	/**
 	 * The operation id for the '<em>Add Item</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESTAURANT_MENU___ADD_ITEM = 3;
+	int RESTAURANT_MENU___ADD_ITEM = 0;
 
 	/**
 	 * The operation id for the '<em>Remove Item</em>' operation.
@@ -1133,7 +980,7 @@ public interface RestaurantsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTAURANT_MENU___REMOVE_ITEM = 4;
+	int RESTAURANT_MENU___REMOVE_ITEM = 1;
 
 	/**
 	 * The number of operations of the '<em>Restaurant Menu</em>' class.
@@ -1142,7 +989,7 @@ public interface RestaurantsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTAURANT_MENU_OPERATION_COUNT = 5;
+	int RESTAURANT_MENU_OPERATION_COUNT = 2;
 
 
 	/**
@@ -1469,10 +1316,10 @@ public interface RestaurantsPackage extends EPackage {
 	EReference getRestaurant_Reservation();
 
 	/**
-	 * Returns the meta object for the reference '{@link Classes.Restaurants.Restaurant#getRestaurantTable <em>Restaurant Table</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Restaurants.Restaurant#getRestaurantTable <em>Restaurant Table</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Restaurant Table</em>'.
+	 * @return the meta object for the reference list '<em>Restaurant Table</em>'.
 	 * @see Classes.Restaurants.Restaurant#getRestaurantTable()
 	 * @see #getRestaurant()
 	 * @generated
@@ -1491,26 +1338,6 @@ public interface RestaurantsPackage extends EPackage {
 	EReference getRestaurant_Menu();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.Restaurant#getName() <em>Get Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Name</em>' operation.
-	 * @see Classes.Restaurants.Restaurant#getName()
-	 * @generated
-	 */
-	EOperation getRestaurant__GetName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.Restaurant#setName() <em>Set Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Name</em>' operation.
-	 * @see Classes.Restaurants.Restaurant#setName()
-	 * @generated
-	 */
-	EOperation getRestaurant__SetName();
-
-	/**
 	 * Returns the meta object for the '{@link Classes.Restaurants.Restaurant#addReservation() <em>Add Reservation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1519,36 +1346,6 @@ public interface RestaurantsPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getRestaurant__AddReservation();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.Restaurant#getAllTables() <em>Get All Tables</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get All Tables</em>' operation.
-	 * @see Classes.Restaurants.Restaurant#getAllTables()
-	 * @generated
-	 */
-	EOperation getRestaurant__GetAllTables();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.Restaurant#getAllReservations() <em>Get All Reservations</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get All Reservations</em>' operation.
-	 * @see Classes.Restaurants.Restaurant#getAllReservations()
-	 * @generated
-	 */
-	EOperation getRestaurant__GetAllReservations();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.Restaurant#getMenu() <em>Get Menu</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Menu</em>' operation.
-	 * @see Classes.Restaurants.Restaurant#getMenu()
-	 * @generated
-	 */
-	EOperation getRestaurant__GetMenu();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Restaurants.Reservation <em>Reservation</em>}'.
@@ -1616,56 +1413,6 @@ public interface RestaurantsPackage extends EPackage {
 	EAttribute getReservation_To();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.Reservation#getReservedBy() <em>Get Reserved By</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Reserved By</em>' operation.
-	 * @see Classes.Restaurants.Reservation#getReservedBy()
-	 * @generated
-	 */
-	EOperation getReservation__GetReservedBy();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.Reservation#getId() <em>Get Id</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Id</em>' operation.
-	 * @see Classes.Restaurants.Reservation#getId()
-	 * @generated
-	 */
-	EOperation getReservation__GetId();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.Reservation#setReservedBy() <em>Set Reserved By</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Reserved By</em>' operation.
-	 * @see Classes.Restaurants.Reservation#setReservedBy()
-	 * @generated
-	 */
-	EOperation getReservation__SetReservedBy();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.Reservation#getFromTime() <em>Get From Time</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get From Time</em>' operation.
-	 * @see Classes.Restaurants.Reservation#getFromTime()
-	 * @generated
-	 */
-	EOperation getReservation__GetFromTime();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.Reservation#getToTime() <em>Get To Time</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get To Time</em>' operation.
-	 * @see Classes.Restaurants.Reservation#getToTime()
-	 * @generated
-	 */
-	EOperation getReservation__GetToTime();
-
-	/**
 	 * Returns the meta object for class '{@link Classes.Restaurants.RestaurantTable <em>Restaurant Table</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1698,46 +1445,6 @@ public interface RestaurantsPackage extends EPackage {
 	EAttribute getRestaurantTable_NumberOfSeats();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.RestaurantTable#getNumberOfSeats() <em>Get Number Of Seats</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Number Of Seats</em>' operation.
-	 * @see Classes.Restaurants.RestaurantTable#getNumberOfSeats()
-	 * @generated
-	 */
-	EOperation getRestaurantTable__GetNumberOfSeats();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.RestaurantTable#getTableNumber() <em>Get Table Number</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Table Number</em>' operation.
-	 * @see Classes.Restaurants.RestaurantTable#getTableNumber()
-	 * @generated
-	 */
-	EOperation getRestaurantTable__GetTableNumber();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.RestaurantTable#setNumberOfSeats() <em>Set Number Of Seats</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Number Of Seats</em>' operation.
-	 * @see Classes.Restaurants.RestaurantTable#setNumberOfSeats()
-	 * @generated
-	 */
-	EOperation getRestaurantTable__SetNumberOfSeats();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.RestaurantTable#setTableNumber() <em>Set Table Number</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Table Number</em>' operation.
-	 * @see Classes.Restaurants.RestaurantTable#setTableNumber()
-	 * @generated
-	 */
-	EOperation getRestaurantTable__SetTableNumber();
-
-	/**
 	 * Returns the meta object for class '{@link Classes.Restaurants.RestaurantMenu <em>Restaurant Menu</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1768,36 +1475,6 @@ public interface RestaurantsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRestaurantMenu_Items();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.RestaurantMenu#getName() <em>Get Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Name</em>' operation.
-	 * @see Classes.Restaurants.RestaurantMenu#getName()
-	 * @generated
-	 */
-	EOperation getRestaurantMenu__GetName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.RestaurantMenu#setName() <em>Set Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Name</em>' operation.
-	 * @see Classes.Restaurants.RestaurantMenu#setName()
-	 * @generated
-	 */
-	EOperation getRestaurantMenu__SetName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.RestaurantMenu#getItems() <em>Get Items</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Items</em>' operation.
-	 * @see Classes.Restaurants.RestaurantMenu#getItems()
-	 * @generated
-	 */
-	EOperation getRestaurantMenu__GetItems();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Restaurants.RestaurantMenu#addItem() <em>Add Item</em>}' operation.
@@ -2107,7 +1784,7 @@ public interface RestaurantsPackage extends EPackage {
 		EReference RESTAURANT__RESERVATION = eINSTANCE.getRestaurant_Reservation();
 
 		/**
-		 * The meta object literal for the '<em><b>Restaurant Table</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Restaurant Table</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2123,52 +1800,12 @@ public interface RestaurantsPackage extends EPackage {
 		EReference RESTAURANT__MENU = eINSTANCE.getRestaurant_Menu();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESTAURANT___GET_NAME = eINSTANCE.getRestaurant__GetName();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESTAURANT___SET_NAME = eINSTANCE.getRestaurant__SetName();
-
-		/**
 		 * The meta object literal for the '<em><b>Add Reservation</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EOperation RESTAURANT___ADD_RESERVATION = eINSTANCE.getRestaurant__AddReservation();
-
-		/**
-		 * The meta object literal for the '<em><b>Get All Tables</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESTAURANT___GET_ALL_TABLES = eINSTANCE.getRestaurant__GetAllTables();
-
-		/**
-		 * The meta object literal for the '<em><b>Get All Reservations</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESTAURANT___GET_ALL_RESERVATIONS = eINSTANCE.getRestaurant__GetAllReservations();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Menu</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESTAURANT___GET_MENU = eINSTANCE.getRestaurant__GetMenu();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Restaurants.impl.ReservationImpl <em>Reservation</em>}' class.
@@ -2221,46 +1858,6 @@ public interface RestaurantsPackage extends EPackage {
 		EAttribute RESERVATION__TO = eINSTANCE.getReservation_To();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Reserved By</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___GET_RESERVED_BY = eINSTANCE.getReservation__GetReservedBy();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Id</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___GET_ID = eINSTANCE.getReservation__GetId();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Reserved By</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___SET_RESERVED_BY = eINSTANCE.getReservation__SetReservedBy();
-
-		/**
-		 * The meta object literal for the '<em><b>Get From Time</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___GET_FROM_TIME = eINSTANCE.getReservation__GetFromTime();
-
-		/**
-		 * The meta object literal for the '<em><b>Get To Time</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESERVATION___GET_TO_TIME = eINSTANCE.getReservation__GetToTime();
-
-		/**
 		 * The meta object literal for the '{@link Classes.Restaurants.impl.RestaurantTableImpl <em>Restaurant Table</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2287,38 +1884,6 @@ public interface RestaurantsPackage extends EPackage {
 		EAttribute RESTAURANT_TABLE__NUMBER_OF_SEATS = eINSTANCE.getRestaurantTable_NumberOfSeats();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Number Of Seats</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESTAURANT_TABLE___GET_NUMBER_OF_SEATS = eINSTANCE.getRestaurantTable__GetNumberOfSeats();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Table Number</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESTAURANT_TABLE___GET_TABLE_NUMBER = eINSTANCE.getRestaurantTable__GetTableNumber();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Number Of Seats</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESTAURANT_TABLE___SET_NUMBER_OF_SEATS = eINSTANCE.getRestaurantTable__SetNumberOfSeats();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Table Number</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESTAURANT_TABLE___SET_TABLE_NUMBER = eINSTANCE.getRestaurantTable__SetTableNumber();
-
-		/**
 		 * The meta object literal for the '{@link Classes.Restaurants.impl.RestaurantMenuImpl <em>Restaurant Menu</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2343,30 +1908,6 @@ public interface RestaurantsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RESTAURANT_MENU__ITEMS = eINSTANCE.getRestaurantMenu_Items();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESTAURANT_MENU___GET_NAME = eINSTANCE.getRestaurantMenu__GetName();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESTAURANT_MENU___SET_NAME = eINSTANCE.getRestaurantMenu__SetName();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Items</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESTAURANT_MENU___GET_ITEMS = eINSTANCE.getRestaurantMenu__GetItems();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Item</b></em>' operation.

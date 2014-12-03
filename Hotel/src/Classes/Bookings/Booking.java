@@ -211,14 +211,6 @@ public interface Booking extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void setNbrGuests();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
 	void addBookedStay();
 
 	/**

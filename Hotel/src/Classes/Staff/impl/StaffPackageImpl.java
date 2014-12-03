@@ -340,123 +340,6 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStaff__GetFirstName() {
-		return staffEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStaff__GetLastName() {
-		return staffEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStaff__GetJob() {
-		return staffEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStaff__GetPhone() {
-		return staffEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStaff__GetEmail() {
-		return staffEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStaff__GetSSID() {
-		return staffEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStaff__SetFirstName() {
-		return staffEClass.getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStaff__SetLastName() {
-		return staffEClass.getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStaff__SetJob() {
-		return staffEClass.getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStaff__SetPhone() {
-		return staffEClass.getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStaff__SetEmail() {
-		return staffEClass.getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStaff__GetSalaryContract() {
-		return staffEClass.getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStaff__SetSalaryContract() {
-		return staffEClass.getEOperations().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSalaryContract() {
 		return salaryContractEClass;
 	}
@@ -502,7 +385,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getHourlySalaryContract_SalaryHour() {
+	public EAttribute getHourlySalaryContract_Salary() {
 		return (EAttribute)hourlySalaryContractEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -690,19 +573,6 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 		createEAttribute(staffEClass, STAFF__PHONE);
 		createEAttribute(staffEClass, STAFF__EMAIL);
 		createEAttribute(staffEClass, STAFF__SSID);
-		createEOperation(staffEClass, STAFF___GET_FIRST_NAME);
-		createEOperation(staffEClass, STAFF___GET_LAST_NAME);
-		createEOperation(staffEClass, STAFF___GET_JOB);
-		createEOperation(staffEClass, STAFF___GET_PHONE);
-		createEOperation(staffEClass, STAFF___GET_EMAIL);
-		createEOperation(staffEClass, STAFF___GET_SSID);
-		createEOperation(staffEClass, STAFF___SET_FIRST_NAME);
-		createEOperation(staffEClass, STAFF___SET_LAST_NAME);
-		createEOperation(staffEClass, STAFF___SET_JOB);
-		createEOperation(staffEClass, STAFF___SET_PHONE);
-		createEOperation(staffEClass, STAFF___SET_EMAIL);
-		createEOperation(staffEClass, STAFF___GET_SALARY_CONTRACT);
-		createEOperation(staffEClass, STAFF___SET_SALARY_CONTRACT);
 
 		salaryContractEClass = createEClass(SALARY_CONTRACT);
 		createEOperation(salaryContractEClass, SALARY_CONTRACT___GET_SALARY);
@@ -711,7 +581,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 		createEAttribute(monthlySalaryContractEClass, MONTHLY_SALARY_CONTRACT__SALARY);
 
 		hourlySalaryContractEClass = createEClass(HOURLY_SALARY_CONTRACT);
-		createEAttribute(hourlySalaryContractEClass, HOURLY_SALARY_CONTRACT__SALARY_HOUR);
+		createEAttribute(hourlySalaryContractEClass, HOURLY_SALARY_CONTRACT__SALARY);
 
 		iStaffEClass = createEClass(ISTAFF);
 		createEOperation(iStaffEClass, ISTAFF___GET_ALL_STAFF);
@@ -781,41 +651,15 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 		initEAttribute(getStaff_Email(), theTypesPackage.getString(), "email", null, 1, 1, Staff.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getStaff_Ssid(), theTypesPackage.getString(), "ssid", null, 1, 1, Staff.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getStaff__GetFirstName(), null, "getFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStaff__GetLastName(), null, "getLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStaff__GetJob(), null, "getJob", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStaff__GetPhone(), null, "getPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStaff__GetEmail(), null, "getEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStaff__GetSSID(), null, "getSSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStaff__SetFirstName(), null, "setFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStaff__SetLastName(), null, "setLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStaff__SetJob(), null, "setJob", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStaff__SetPhone(), null, "setPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStaff__SetEmail(), null, "setEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStaff__GetSalaryContract(), null, "getSalaryContract", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStaff__SetSalaryContract(), null, "setSalaryContract", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEClass(salaryContractEClass, SalaryContract.class, "SalaryContract", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getSalaryContract__GetSalary(), null, "getSalary", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getSalaryContract__GetSalary(), ecorePackage.getEDouble(), "getSalary", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(monthlySalaryContractEClass, MonthlySalaryContract.class, "MonthlySalaryContract", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMonthlySalaryContract_Salary(), ecorePackage.getEDouble(), "salary", null, 1, 1, MonthlySalaryContract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(hourlySalaryContractEClass, HourlySalaryContract.class, "HourlySalaryContract", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getHourlySalaryContract_SalaryHour(), ecorePackage.getEDouble(), "salaryHour", null, 1, 1, HourlySalaryContract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getHourlySalaryContract_Salary(), ecorePackage.getEDouble(), "salary", null, 1, 1, HourlySalaryContract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(iStaffEClass, IStaff.class, "IStaff", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -316,7 +316,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCustomer__GetFirstName() {
+	public EOperation getCustomer__AddBooking() {
 		return customerEClass.getEOperations().get(0);
 	}
 
@@ -325,7 +325,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCustomer__GetLastName() {
+	public EOperation getCustomer__RemoveBooking() {
 		return customerEClass.getEOperations().get(1);
 	}
 
@@ -334,7 +334,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCustomer__GetTitle() {
+	public EOperation getCustomer__AddRequest() {
 		return customerEClass.getEOperations().get(2);
 	}
 
@@ -343,125 +343,8 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCustomer__GetEmail() {
-		return customerEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCustomer__GetPhone() {
-		return customerEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCustomer__GetSSID() {
-		return customerEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCustomer__SetFirstName() {
-		return customerEClass.getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCustomer__SetLastName() {
-		return customerEClass.getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCustomer__SetTitle() {
-		return customerEClass.getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCustomer__SetEmail() {
-		return customerEClass.getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCustomer__SetPhone() {
-		return customerEClass.getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCustomer__AddBooking() {
-		return customerEClass.getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCustomer__RemoveBooking() {
-		return customerEClass.getEOperations().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCustomer__AddRequest() {
-		return customerEClass.getEOperations().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCustomer__GetBookings() {
-		return customerEClass.getEOperations().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getCustomer__RemoveRequest() {
-		return customerEClass.getEOperations().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCustomer__GetRequests() {
-		return customerEClass.getEOperations().get(16);
+		return customerEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -684,23 +567,10 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 		createEAttribute(customerEClass, CUSTOMER__SSID);
 		createEAttribute(customerEClass, CUSTOMER__BOOKINGS);
 		createEAttribute(customerEClass, CUSTOMER__REQUESTS);
-		createEOperation(customerEClass, CUSTOMER___GET_FIRST_NAME);
-		createEOperation(customerEClass, CUSTOMER___GET_LAST_NAME);
-		createEOperation(customerEClass, CUSTOMER___GET_TITLE);
-		createEOperation(customerEClass, CUSTOMER___GET_EMAIL);
-		createEOperation(customerEClass, CUSTOMER___GET_PHONE);
-		createEOperation(customerEClass, CUSTOMER___GET_SSID);
-		createEOperation(customerEClass, CUSTOMER___SET_FIRST_NAME);
-		createEOperation(customerEClass, CUSTOMER___SET_LAST_NAME);
-		createEOperation(customerEClass, CUSTOMER___SET_TITLE);
-		createEOperation(customerEClass, CUSTOMER___SET_EMAIL);
-		createEOperation(customerEClass, CUSTOMER___SET_PHONE);
 		createEOperation(customerEClass, CUSTOMER___ADD_BOOKING);
 		createEOperation(customerEClass, CUSTOMER___REMOVE_BOOKING);
 		createEOperation(customerEClass, CUSTOMER___ADD_REQUEST);
-		createEOperation(customerEClass, CUSTOMER___GET_BOOKINGS);
 		createEOperation(customerEClass, CUSTOMER___REMOVE_REQUEST);
-		createEOperation(customerEClass, CUSTOMER___GET_REQUESTS);
 
 		iCustomersEClass = createEClass(ICUSTOMERS);
 		createEOperation(iCustomersEClass, ICUSTOMERS___GET_ALL_CUSTOMERS);
@@ -771,39 +641,13 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 		initEAttribute(getCustomer_Bookings(), theTypesPackage.getString(), "bookings", null, 0, -1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCustomer_Requests(), theTypesPackage.getString(), "requests", null, 0, -1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getCustomer__GetFirstName(), null, "getFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCustomer__GetLastName(), null, "getLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCustomer__GetTitle(), null, "getTitle", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCustomer__GetEmail(), null, "getEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCustomer__GetPhone(), null, "getPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCustomer__GetSSID(), null, "getSSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCustomer__SetFirstName(), null, "setFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCustomer__SetLastName(), null, "setLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCustomer__SetTitle(), null, "setTitle", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCustomer__SetEmail(), null, "setEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCustomer__SetPhone(), null, "setPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEOperation(getCustomer__AddBooking(), null, "addBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getCustomer__RemoveBooking(), null, "removeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getCustomer__AddRequest(), null, "addRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getCustomer__GetBookings(), null, "getBookings", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEOperation(getCustomer__RemoveRequest(), null, "removeRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCustomer__GetRequests(), null, "getRequests", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iCustomersEClass, ICustomers.class, "ICustomers", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

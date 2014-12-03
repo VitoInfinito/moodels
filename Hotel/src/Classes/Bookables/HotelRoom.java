@@ -76,12 +76,4 @@ public interface HotelRoom extends Room {
 	 */
 	void setNbrBeds(int value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void setCategory();
-
 } // HotelRoom

@@ -5,16 +5,9 @@ package Classes.Bookables.impl;
 import Classes.Bookables.BookablesPackage;
 import Classes.Bookables.HostelBed;
 import Classes.Bookables.Room;
-
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -103,17 +96,6 @@ public class HostelBedImpl extends BookableImpl implements HostelBed {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRoom() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -166,21 +148,6 @@ public class HostelBedImpl extends BookableImpl implements HostelBed {
 				return room != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case BookablesPackage.HOSTEL_BED___SET_ROOM:
-				setRoom();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 } //HostelBedImpl

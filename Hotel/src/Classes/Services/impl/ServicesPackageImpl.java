@@ -268,7 +268,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomServiceMenu__GetName() {
+	public EOperation getRoomServiceMenu__AddItem() {
 		return roomServiceMenuEClass.getEOperations().get(0);
 	}
 
@@ -277,35 +277,8 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomServiceMenu__SetName() {
-		return roomServiceMenuEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomServiceMenu__GetItems() {
-		return roomServiceMenuEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomServiceMenu__AddItem() {
-		return roomServiceMenuEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getRoomServiceMenu__RemoveItem() {
-		return roomServiceMenuEClass.getEOperations().get(4);
+		return roomServiceMenuEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -583,69 +556,6 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getService__GetName() {
-		return serviceEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getService__GetPrice() {
-		return serviceEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getService__GetExpense() {
-		return serviceEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getService__GetID() {
-		return serviceEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getService__SetName() {
-		return serviceEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getService__SetPrice() {
-		return serviceEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getService__SetExpense() {
-		return serviceEClass.getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getRoomServiceOrder() {
 		return roomServiceOrderEClass;
 	}
@@ -718,7 +628,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomServiceOrder__GetIsDelivered() {
+	public EOperation getRoomServiceOrder__AddService() {
 		return roomServiceOrderEClass.getEOperations().get(0);
 	}
 
@@ -727,7 +637,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomServiceOrder__GetDeliveryDate() {
+	public EOperation getRoomServiceOrder__AddItem() {
 		return roomServiceOrderEClass.getEOperations().get(1);
 	}
 
@@ -736,7 +646,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomServiceOrder__GetBookable() {
+	public EOperation getRoomServiceOrder__RemoveItem() {
 		return roomServiceOrderEClass.getEOperations().get(2);
 	}
 
@@ -745,98 +655,8 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomServiceOrder__GetItems() {
-		return roomServiceOrderEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomServiceOrder__GetID() {
-		return roomServiceOrderEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomServiceOrder__SetIsDelivered() {
-		return roomServiceOrderEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomServiceOrder__SetDeliveryDate() {
-		return roomServiceOrderEClass.getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomServiceOrder__SetBookable() {
-		return roomServiceOrderEClass.getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomServiceOrder__AddService() {
-		return roomServiceOrderEClass.getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomServiceOrder__AddItem() {
-		return roomServiceOrderEClass.getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomServiceOrder__RemoveItem() {
-		return roomServiceOrderEClass.getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getRoomServiceOrder__RemoveService() {
-		return roomServiceOrderEClass.getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomServiceOrder__GetBill() {
-		return roomServiceOrderEClass.getEOperations().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomServiceOrder__SetBill() {
-		return roomServiceOrderEClass.getEOperations().get(13);
+		return roomServiceOrderEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -942,9 +762,6 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		roomServiceMenuEClass = createEClass(ROOM_SERVICE_MENU);
 		createEAttribute(roomServiceMenuEClass, ROOM_SERVICE_MENU__NAME);
 		createEAttribute(roomServiceMenuEClass, ROOM_SERVICE_MENU__ITEMS);
-		createEOperation(roomServiceMenuEClass, ROOM_SERVICE_MENU___GET_NAME);
-		createEOperation(roomServiceMenuEClass, ROOM_SERVICE_MENU___SET_NAME);
-		createEOperation(roomServiceMenuEClass, ROOM_SERVICE_MENU___GET_ITEMS);
 		createEOperation(roomServiceMenuEClass, ROOM_SERVICE_MENU___ADD_ITEM);
 		createEOperation(roomServiceMenuEClass, ROOM_SERVICE_MENU___REMOVE_ITEM);
 
@@ -980,13 +797,6 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		createEAttribute(serviceEClass, SERVICE__PRICE);
 		createEAttribute(serviceEClass, SERVICE__EXPENSE);
 		createEAttribute(serviceEClass, SERVICE__ID);
-		createEOperation(serviceEClass, SERVICE___GET_NAME);
-		createEOperation(serviceEClass, SERVICE___GET_PRICE);
-		createEOperation(serviceEClass, SERVICE___GET_EXPENSE);
-		createEOperation(serviceEClass, SERVICE___GET_ID);
-		createEOperation(serviceEClass, SERVICE___SET_NAME);
-		createEOperation(serviceEClass, SERVICE___SET_PRICE);
-		createEOperation(serviceEClass, SERVICE___SET_EXPENSE);
 
 		roomServiceOrderEClass = createEClass(ROOM_SERVICE_ORDER);
 		createEReference(roomServiceOrderEClass, ROOM_SERVICE_ORDER__SERVICE);
@@ -996,20 +806,10 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		createEAttribute(roomServiceOrderEClass, ROOM_SERVICE_ORDER__ITEMS);
 		createEAttribute(roomServiceOrderEClass, ROOM_SERVICE_ORDER__ID);
 		createEAttribute(roomServiceOrderEClass, ROOM_SERVICE_ORDER__BILL);
-		createEOperation(roomServiceOrderEClass, ROOM_SERVICE_ORDER___GET_IS_DELIVERED);
-		createEOperation(roomServiceOrderEClass, ROOM_SERVICE_ORDER___GET_DELIVERY_DATE);
-		createEOperation(roomServiceOrderEClass, ROOM_SERVICE_ORDER___GET_BOOKABLE);
-		createEOperation(roomServiceOrderEClass, ROOM_SERVICE_ORDER___GET_ITEMS);
-		createEOperation(roomServiceOrderEClass, ROOM_SERVICE_ORDER___GET_ID);
-		createEOperation(roomServiceOrderEClass, ROOM_SERVICE_ORDER___SET_IS_DELIVERED);
-		createEOperation(roomServiceOrderEClass, ROOM_SERVICE_ORDER___SET_DELIVERY_DATE);
-		createEOperation(roomServiceOrderEClass, ROOM_SERVICE_ORDER___SET_BOOKABLE);
 		createEOperation(roomServiceOrderEClass, ROOM_SERVICE_ORDER___ADD_SERVICE);
 		createEOperation(roomServiceOrderEClass, ROOM_SERVICE_ORDER___ADD_ITEM);
 		createEOperation(roomServiceOrderEClass, ROOM_SERVICE_ORDER___REMOVE_ITEM);
 		createEOperation(roomServiceOrderEClass, ROOM_SERVICE_ORDER___REMOVE_SERVICE);
-		createEOperation(roomServiceOrderEClass, ROOM_SERVICE_ORDER___GET_BILL);
-		createEOperation(roomServiceOrderEClass, ROOM_SERVICE_ORDER___SET_BILL);
 
 		iServicesManageEClass = createEClass(ISERVICES_MANAGE);
 		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___CHANGE_SERVICE_NAME);
@@ -1059,12 +859,6 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		initEClass(roomServiceMenuEClass, RoomServiceMenu.class, "RoomServiceMenu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoomServiceMenu_Name(), theTypesPackage.getString(), "name", null, 1, 1, RoomServiceMenu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomServiceMenu_Items(), theTypesPackage.getString(), "items", null, 0, -1, RoomServiceMenu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getRoomServiceMenu__GetName(), null, "getName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomServiceMenu__SetName(), null, "setName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomServiceMenu__GetItems(), null, "getItems", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getRoomServiceMenu__AddItem(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -1123,20 +917,6 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		initEAttribute(getService_Expense(), ecorePackage.getEDouble(), "expense", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getService_Id(), theTypesPackage.getString(), "id", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getService__GetName(), null, "getName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getService__GetPrice(), null, "getPrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getService__GetExpense(), null, "getExpense", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getService__GetID(), null, "getID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getService__SetName(), null, "setName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getService__SetPrice(), null, "setPrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getService__SetExpense(), null, "setExpense", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEClass(roomServiceOrderEClass, RoomServiceOrder.class, "RoomServiceOrder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoomServiceOrder_Service(), this.getService(), null, "service", null, 0, -1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomServiceOrder_IsDelivered(), theTypesPackage.getBoolean(), "isDelivered", null, 1, 1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1146,22 +926,6 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		initEAttribute(getRoomServiceOrder_Id(), theTypesPackage.getString(), "id", null, 1, 1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomServiceOrder_Bill(), theTypesPackage.getString(), "bill", null, 1, 1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getRoomServiceOrder__GetIsDelivered(), null, "getIsDelivered", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomServiceOrder__GetDeliveryDate(), null, "getDeliveryDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomServiceOrder__GetBookable(), null, "getBookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomServiceOrder__GetItems(), null, "getItems", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomServiceOrder__GetID(), null, "getID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomServiceOrder__SetIsDelivered(), null, "setIsDelivered", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomServiceOrder__SetDeliveryDate(), null, "setDeliveryDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomServiceOrder__SetBookable(), null, "setBookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEOperation(getRoomServiceOrder__AddService(), null, "addService", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getRoomServiceOrder__AddItem(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1169,10 +933,6 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		initEOperation(getRoomServiceOrder__RemoveItem(), null, "removeItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getRoomServiceOrder__RemoveService(), null, "removeService", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomServiceOrder__GetBill(), null, "getBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomServiceOrder__SetBill(), null, "setBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iServicesManageEClass, IServicesManage.class, "IServicesManage", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

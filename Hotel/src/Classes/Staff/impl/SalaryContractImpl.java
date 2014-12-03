@@ -62,8 +62,7 @@ public abstract class SalaryContractImpl extends MinimalEObjectImpl.Container im
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case StaffPackage.SALARY_CONTRACT___GET_SALARY:
-				getSalary();
-				return null;
+				return getSalary();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -122,17 +122,6 @@ public class RoomServiceMenuImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void addItem() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -228,9 +217,6 @@ public class RoomServiceMenuImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ServicesPackage.ROOM_SERVICE_MENU___SET_NAME:
-				setName();
-				return null;
 			case ServicesPackage.ROOM_SERVICE_MENU___ADD_ITEM:
 				addItem();
 				return null;

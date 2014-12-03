@@ -158,67 +158,13 @@ public interface StaysPackage extends EPackage {
 	int STAY_FEATURE_COUNT = 9;
 
 	/**
-	 * The operation id for the '<em>Get ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAY___GET_ID = 0;
-
-	/**
-	 * The operation id for the '<em>Get Bills</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAY___GET_BILLS = 1;
-
-	/**
 	 * The operation id for the '<em>Add Bill</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAY___ADD_BILL = 2;
-
-	/**
-	 * The operation id for the '<em>Get Bookable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAY___GET_BOOKABLE = 3;
-
-	/**
-	 * The operation id for the '<em>Set Bookable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAY___SET_BOOKABLE = 4;
-
-	/**
-	 * The operation id for the '<em>Get Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAY___GET_BOOKING = 5;
-
-	/**
-	 * The operation id for the '<em>Get Checked In Guests</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAY___GET_CHECKED_IN_GUESTS = 6;
+	int STAY___ADD_BILL = 0;
 
 	/**
 	 * The operation id for the '<em>Add Checked In Guest</em>' operation.
@@ -227,7 +173,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAY___ADD_CHECKED_IN_GUEST = 7;
+	int STAY___ADD_CHECKED_IN_GUEST = 1;
 
 	/**
 	 * The operation id for the '<em>Check Out Guest</em>' operation.
@@ -236,52 +182,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAY___CHECK_OUT_GUEST = 8;
-
-	/**
-	 * The operation id for the '<em>Get Checked Out Guests</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAY___GET_CHECKED_OUT_GUESTS = 9;
-
-	/**
-	 * The operation id for the '<em>Set From Date</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAY___SET_FROM_DATE = 10;
-
-	/**
-	 * The operation id for the '<em>Set To Date</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAY___SET_TO_DATE = 11;
-
-	/**
-	 * The operation id for the '<em>Get From Date</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAY___GET_FROM_DATE = 12;
-
-	/**
-	 * The operation id for the '<em>Get To Date</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAY___GET_TO_DATE = 13;
+	int STAY___CHECK_OUT_GUEST = 2;
 
 	/**
 	 * The number of operations of the '<em>Stay</em>' class.
@@ -290,7 +191,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAY_OPERATION_COUNT = 14;
+	int STAY_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link Classes.Stays.impl.CreditCardImpl <em>Credit Card</em>}' class.
@@ -366,67 +267,13 @@ public interface StaysPackage extends EPackage {
 	int CREDIT_CARD_FEATURE_COUNT = 6;
 
 	/**
-	 * The operation id for the '<em>Get CCV</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREDIT_CARD___GET_CCV = 0;
-
-	/**
-	 * The operation id for the '<em>Get CC Number</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREDIT_CARD___GET_CC_NUMBER = 1;
-
-	/**
-	 * The operation id for the '<em>Get Expiry Month</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREDIT_CARD___GET_EXPIRY_MONTH = 2;
-
-	/**
-	 * The operation id for the '<em>Get Expiry Year</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREDIT_CARD___GET_EXPIRY_YEAR = 3;
-
-	/**
-	 * The operation id for the '<em>Get First Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREDIT_CARD___GET_FIRST_NAME = 4;
-
-	/**
-	 * The operation id for the '<em>Get Last Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREDIT_CARD___GET_LAST_NAME = 5;
-
-	/**
 	 * The number of operations of the '<em>Credit Card</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREDIT_CARD_OPERATION_COUNT = 6;
+	int CREDIT_CARD_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link Classes.Stays.IStays <em>IStays</em>}' class.
@@ -1045,26 +892,6 @@ public interface StaysPackage extends EPackage {
 	EReference getStay_CreditCard();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.Stay#getID() <em>Get ID</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get ID</em>' operation.
-	 * @see Classes.Stays.Stay#getID()
-	 * @generated
-	 */
-	EOperation getStay__GetID();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.Stay#getBills() <em>Get Bills</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Bills</em>' operation.
-	 * @see Classes.Stays.Stay#getBills()
-	 * @generated
-	 */
-	EOperation getStay__GetBills();
-
-	/**
 	 * Returns the meta object for the '{@link Classes.Stays.Stay#addBill() <em>Add Bill</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1073,46 +900,6 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getStay__AddBill();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.Stay#getBookable() <em>Get Bookable</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Bookable</em>' operation.
-	 * @see Classes.Stays.Stay#getBookable()
-	 * @generated
-	 */
-	EOperation getStay__GetBookable();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.Stay#setBookable() <em>Set Bookable</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Bookable</em>' operation.
-	 * @see Classes.Stays.Stay#setBookable()
-	 * @generated
-	 */
-	EOperation getStay__SetBookable();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.Stay#getBooking() <em>Get Booking</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Booking</em>' operation.
-	 * @see Classes.Stays.Stay#getBooking()
-	 * @generated
-	 */
-	EOperation getStay__GetBooking();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.Stay#getCheckedInGuests() <em>Get Checked In Guests</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Checked In Guests</em>' operation.
-	 * @see Classes.Stays.Stay#getCheckedInGuests()
-	 * @generated
-	 */
-	EOperation getStay__GetCheckedInGuests();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Stays.Stay#addCheckedInGuest() <em>Add Checked In Guest</em>}' operation.
@@ -1133,56 +920,6 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getStay__CheckOutGuest();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.Stay#getCheckedOutGuests() <em>Get Checked Out Guests</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Checked Out Guests</em>' operation.
-	 * @see Classes.Stays.Stay#getCheckedOutGuests()
-	 * @generated
-	 */
-	EOperation getStay__GetCheckedOutGuests();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.Stay#setFromDate() <em>Set From Date</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set From Date</em>' operation.
-	 * @see Classes.Stays.Stay#setFromDate()
-	 * @generated
-	 */
-	EOperation getStay__SetFromDate();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.Stay#setToDate() <em>Set To Date</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set To Date</em>' operation.
-	 * @see Classes.Stays.Stay#setToDate()
-	 * @generated
-	 */
-	EOperation getStay__SetToDate();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.Stay#getFromDate() <em>Get From Date</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get From Date</em>' operation.
-	 * @see Classes.Stays.Stay#getFromDate()
-	 * @generated
-	 */
-	EOperation getStay__GetFromDate();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.Stay#getToDate() <em>Get To Date</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get To Date</em>' operation.
-	 * @see Classes.Stays.Stay#getToDate()
-	 * @generated
-	 */
-	EOperation getStay__GetToDate();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Stays.CreditCard <em>Credit Card</em>}'.
@@ -1259,66 +996,6 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCreditCard_LastName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.CreditCard#getCCV() <em>Get CCV</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get CCV</em>' operation.
-	 * @see Classes.Stays.CreditCard#getCCV()
-	 * @generated
-	 */
-	EOperation getCreditCard__GetCCV();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.CreditCard#getCCNumber() <em>Get CC Number</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get CC Number</em>' operation.
-	 * @see Classes.Stays.CreditCard#getCCNumber()
-	 * @generated
-	 */
-	EOperation getCreditCard__GetCCNumber();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.CreditCard#getExpiryMonth() <em>Get Expiry Month</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Expiry Month</em>' operation.
-	 * @see Classes.Stays.CreditCard#getExpiryMonth()
-	 * @generated
-	 */
-	EOperation getCreditCard__GetExpiryMonth();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.CreditCard#getExpiryYear() <em>Get Expiry Year</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Expiry Year</em>' operation.
-	 * @see Classes.Stays.CreditCard#getExpiryYear()
-	 * @generated
-	 */
-	EOperation getCreditCard__GetExpiryYear();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.CreditCard#getFirstName() <em>Get First Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get First Name</em>' operation.
-	 * @see Classes.Stays.CreditCard#getFirstName()
-	 * @generated
-	 */
-	EOperation getCreditCard__GetFirstName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Stays.CreditCard#getLastName() <em>Get Last Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Last Name</em>' operation.
-	 * @see Classes.Stays.CreditCard#getLastName()
-	 * @generated
-	 */
-	EOperation getCreditCard__GetLastName();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Stays.StaysManager <em>Manager</em>}'.
@@ -1720,60 +1397,12 @@ public interface StaysPackage extends EPackage {
 		EReference STAY__CREDIT_CARD = eINSTANCE.getStay_CreditCard();
 
 		/**
-		 * The meta object literal for the '<em><b>Get ID</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAY___GET_ID = eINSTANCE.getStay__GetID();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Bills</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAY___GET_BILLS = eINSTANCE.getStay__GetBills();
-
-		/**
 		 * The meta object literal for the '<em><b>Add Bill</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EOperation STAY___ADD_BILL = eINSTANCE.getStay__AddBill();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Bookable</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAY___GET_BOOKABLE = eINSTANCE.getStay__GetBookable();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Bookable</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAY___SET_BOOKABLE = eINSTANCE.getStay__SetBookable();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Booking</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAY___GET_BOOKING = eINSTANCE.getStay__GetBooking();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Checked In Guests</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAY___GET_CHECKED_IN_GUESTS = eINSTANCE.getStay__GetCheckedInGuests();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Checked In Guest</b></em>' operation.
@@ -1790,46 +1419,6 @@ public interface StaysPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation STAY___CHECK_OUT_GUEST = eINSTANCE.getStay__CheckOutGuest();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Checked Out Guests</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAY___GET_CHECKED_OUT_GUESTS = eINSTANCE.getStay__GetCheckedOutGuests();
-
-		/**
-		 * The meta object literal for the '<em><b>Set From Date</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAY___SET_FROM_DATE = eINSTANCE.getStay__SetFromDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Set To Date</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAY___SET_TO_DATE = eINSTANCE.getStay__SetToDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Get From Date</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAY___GET_FROM_DATE = eINSTANCE.getStay__GetFromDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Get To Date</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAY___GET_TO_DATE = eINSTANCE.getStay__GetToDate();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Stays.impl.CreditCardImpl <em>Credit Card</em>}' class.
@@ -1888,54 +1477,6 @@ public interface StaysPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CREDIT_CARD__LAST_NAME = eINSTANCE.getCreditCard_LastName();
-
-		/**
-		 * The meta object literal for the '<em><b>Get CCV</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CREDIT_CARD___GET_CCV = eINSTANCE.getCreditCard__GetCCV();
-
-		/**
-		 * The meta object literal for the '<em><b>Get CC Number</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CREDIT_CARD___GET_CC_NUMBER = eINSTANCE.getCreditCard__GetCCNumber();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Expiry Month</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CREDIT_CARD___GET_EXPIRY_MONTH = eINSTANCE.getCreditCard__GetExpiryMonth();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Expiry Year</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CREDIT_CARD___GET_EXPIRY_YEAR = eINSTANCE.getCreditCard__GetExpiryYear();
-
-		/**
-		 * The meta object literal for the '<em><b>Get First Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CREDIT_CARD___GET_FIRST_NAME = eINSTANCE.getCreditCard__GetFirstName();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Last Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CREDIT_CARD___GET_LAST_NAME = eINSTANCE.getCreditCard__GetLastName();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Stays.impl.StaysManagerImpl <em>Manager</em>}' class.

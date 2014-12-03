@@ -5,21 +5,13 @@ package Classes.Restaurants.impl;
 import Classes.Restaurants.Reservation;
 import Classes.Restaurants.RestaurantTable;
 import Classes.Restaurants.RestaurantsPackage;
-
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -250,39 +242,6 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReservedBy() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getFromTime() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getToTime() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -376,27 +335,6 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 				return TO_EDEFAULT == null ? to != null : !TO_EDEFAULT.equals(to);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case RestaurantsPackage.RESERVATION___SET_RESERVED_BY:
-				setReservedBy();
-				return null;
-			case RestaurantsPackage.RESERVATION___GET_FROM_TIME:
-				getFromTime();
-				return null;
-			case RestaurantsPackage.RESERVATION___GET_TO_TIME:
-				getToTime();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

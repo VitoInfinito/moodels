@@ -289,7 +289,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__GetBookingNbr() {
+	public EOperation getBooking__AddBookedStay() {
 		return bookingEClass.getEOperations().get(0);
 	}
 
@@ -298,71 +298,8 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__GetCustomer() {
-		return bookingEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBooking__GetNbrGuests() {
-		return bookingEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBooking__GetBookedStays() {
-		return bookingEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBooking__SetNbrGuests() {
-		return bookingEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBooking__AddBookedStay() {
-		return bookingEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getBooking__CancelBookedStay() {
-		return bookingEClass.getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBooking__GetIssueDate() {
-		return bookingEClass.getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBooking__GetCreditCard() {
-		return bookingEClass.getEOperations().get(8);
+		return bookingEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -671,15 +608,8 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 		createEAttribute(bookingEClass, BOOKING__ISSUE_DATE);
 		createEReference(bookingEClass, BOOKING__CREDIT_CARD);
 		createEAttribute(bookingEClass, BOOKING__REQUESTS);
-		createEOperation(bookingEClass, BOOKING___GET_BOOKING_NBR);
-		createEOperation(bookingEClass, BOOKING___GET_CUSTOMER);
-		createEOperation(bookingEClass, BOOKING___GET_NBR_GUESTS);
-		createEOperation(bookingEClass, BOOKING___GET_BOOKED_STAYS);
-		createEOperation(bookingEClass, BOOKING___SET_NBR_GUESTS);
 		createEOperation(bookingEClass, BOOKING___ADD_BOOKED_STAY);
 		createEOperation(bookingEClass, BOOKING___CANCEL_BOOKED_STAY);
-		createEOperation(bookingEClass, BOOKING___GET_ISSUE_DATE);
-		createEOperation(bookingEClass, BOOKING___GET_CREDIT_CARD);
 
 		bookingsManagerEClass = createEClass(BOOKINGS_MANAGER);
 		createEReference(bookingsManagerEClass, BOOKINGS_MANAGER__BOOKING);
@@ -763,23 +693,9 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 		initEReference(getBooking_CreditCard(), theStaysPackage.getCreditCard(), null, "creditCard", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_Requests(), theTypesPackage.getString(), "requests", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getBooking__GetBookingNbr(), null, "getBookingNbr", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBooking__GetCustomer(), null, "getCustomer", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBooking__GetNbrGuests(), null, "getNbrGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBooking__GetBookedStays(), null, "getBookedStays", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBooking__SetNbrGuests(), null, "setNbrGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEOperation(getBooking__AddBookedStay(), null, "addBookedStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getBooking__CancelBookedStay(), null, "cancelBookedStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBooking__GetIssueDate(), null, "getIssueDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBooking__GetCreditCard(), null, "getCreditCard", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bookingsManagerEClass, BookingsManager.class, "BookingsManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBookingsManager_Booking(), this.getBooking(), null, "booking", null, 0, -1, BookingsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

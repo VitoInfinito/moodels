@@ -76,12 +76,4 @@ public interface ConferenceRoom extends Room {
 	 */
 	void setCapacity(int value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void setCategory();
-
 } // ConferenceRoom

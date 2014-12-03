@@ -69,30 +69,20 @@ public interface Restaurant extends EObject {
 	EList<Reservation> getReservation();
 
 	/**
-	 * Returns the value of the '<em><b>Restaurant Table</b></em>' reference.
+	 * Returns the value of the '<em><b>Restaurant Table</b></em>' reference list.
+	 * The list contents are of type {@link Classes.Restaurants.RestaurantTable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Restaurant Table</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Restaurant Table</em>' reference.
-	 * @see #setRestaurantTable(RestaurantTable)
+	 * @return the value of the '<em>Restaurant Table</em>' reference list.
 	 * @see Classes.Restaurants.RestaurantsPackage#getRestaurant_RestaurantTable()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
-	RestaurantTable getRestaurantTable();
-
-	/**
-	 * Sets the value of the '{@link Classes.Restaurants.Restaurant#getRestaurantTable <em>Restaurant Table</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Restaurant Table</em>' reference.
-	 * @see #getRestaurantTable()
-	 * @generated
-	 */
-	void setRestaurantTable(RestaurantTable value);
+	EList<RestaurantTable> getRestaurantTable();
 
 	/**
 	 * Returns the value of the '<em><b>Menu</b></em>' reference.
@@ -126,30 +116,6 @@ public interface Restaurant extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void setName();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
 	void addReservation();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	void getAllTables();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	void getAllReservations();
 
 } // Restaurant

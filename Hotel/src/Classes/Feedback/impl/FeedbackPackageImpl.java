@@ -370,69 +370,6 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getFeedback__GetDesc() {
-		return feedbackEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getFeedback__GetIsNoted() {
-		return feedbackEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getFeedback__GetIsResolved() {
-		return feedbackEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getFeedback__GetID() {
-		return feedbackEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getFeedback__SetDesc() {
-		return feedbackEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getFeedback__SetIsNoted() {
-		return feedbackEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getFeedback__SetIsResolved() {
-		return feedbackEClass.getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public FeedbackFactory getFeedbackFactory() {
 		return (FeedbackFactory)getEFactoryInstance();
 	}
@@ -475,13 +412,6 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 		createEAttribute(feedbackEClass, FEEDBACK__IS_NOTED);
 		createEAttribute(feedbackEClass, FEEDBACK__IS_RESOLVED);
 		createEAttribute(feedbackEClass, FEEDBACK__ID);
-		createEOperation(feedbackEClass, FEEDBACK___GET_DESC);
-		createEOperation(feedbackEClass, FEEDBACK___GET_IS_NOTED);
-		createEOperation(feedbackEClass, FEEDBACK___GET_IS_RESOLVED);
-		createEOperation(feedbackEClass, FEEDBACK___GET_ID);
-		createEOperation(feedbackEClass, FEEDBACK___SET_DESC);
-		createEOperation(feedbackEClass, FEEDBACK___SET_IS_NOTED);
-		createEOperation(feedbackEClass, FEEDBACK___SET_IS_RESOLVED);
 	}
 
 	/**
@@ -546,20 +476,6 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 		initEAttribute(getFeedback_IsNoted(), theTypesPackage.getBoolean(), "isNoted", null, 1, 1, Feedback.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getFeedback_IsResolved(), theTypesPackage.getBoolean(), "isResolved", null, 1, 1, Feedback.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getFeedback_Id(), theTypesPackage.getString(), "id", null, 1, 1, Feedback.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getFeedback__GetDesc(), null, "getDesc", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getFeedback__GetIsNoted(), null, "getIsNoted", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getFeedback__GetIsResolved(), null, "getIsResolved", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getFeedback__GetID(), null, "getID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getFeedback__SetDesc(), null, "setDesc", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getFeedback__SetIsNoted(), null, "setIsNoted", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getFeedback__SetIsResolved(), null, "setIsResolved", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

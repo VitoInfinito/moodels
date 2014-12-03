@@ -556,112 +556,13 @@ public interface CustomersPackage extends EPackage {
 	int CUSTOMER_FEATURE_COUNT = 8;
 
 	/**
-	 * The operation id for the '<em>Get First Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___GET_FIRST_NAME = 0;
-
-	/**
-	 * The operation id for the '<em>Get Last Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___GET_LAST_NAME = 1;
-
-	/**
-	 * The operation id for the '<em>Get Title</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___GET_TITLE = 2;
-
-	/**
-	 * The operation id for the '<em>Get Email</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___GET_EMAIL = 3;
-
-	/**
-	 * The operation id for the '<em>Get Phone</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___GET_PHONE = 4;
-
-	/**
-	 * The operation id for the '<em>Get SSID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___GET_SSID = 5;
-
-	/**
-	 * The operation id for the '<em>Set First Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___SET_FIRST_NAME = 6;
-
-	/**
-	 * The operation id for the '<em>Set Last Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___SET_LAST_NAME = 7;
-
-	/**
-	 * The operation id for the '<em>Set Title</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___SET_TITLE = 8;
-
-	/**
-	 * The operation id for the '<em>Set Email</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___SET_EMAIL = 9;
-
-	/**
-	 * The operation id for the '<em>Set Phone</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___SET_PHONE = 10;
-
-	/**
 	 * The operation id for the '<em>Add Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER___ADD_BOOKING = 11;
+	int CUSTOMER___ADD_BOOKING = 0;
 
 	/**
 	 * The operation id for the '<em>Remove Booking</em>' operation.
@@ -670,7 +571,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER___REMOVE_BOOKING = 12;
+	int CUSTOMER___REMOVE_BOOKING = 1;
 
 	/**
 	 * The operation id for the '<em>Add Request</em>' operation.
@@ -679,16 +580,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER___ADD_REQUEST = 13;
-
-	/**
-	 * The operation id for the '<em>Get Bookings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___GET_BOOKINGS = 14;
+	int CUSTOMER___ADD_REQUEST = 2;
 
 	/**
 	 * The operation id for the '<em>Remove Request</em>' operation.
@@ -697,16 +589,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER___REMOVE_REQUEST = 15;
-
-	/**
-	 * The operation id for the '<em>Get Requests</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___GET_REQUESTS = 16;
+	int CUSTOMER___REMOVE_REQUEST = 3;
 
 	/**
 	 * The number of operations of the '<em>Customer</em>' class.
@@ -715,7 +598,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_OPERATION_COUNT = 17;
+	int CUSTOMER_OPERATION_COUNT = 4;
 
 
 	/**
@@ -838,116 +721,6 @@ public interface CustomersPackage extends EPackage {
 	EAttribute getCustomer_Requests();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.Customer#getFirstName() <em>Get First Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get First Name</em>' operation.
-	 * @see Classes.Customers.Customer#getFirstName()
-	 * @generated
-	 */
-	EOperation getCustomer__GetFirstName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Customers.Customer#getLastName() <em>Get Last Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Last Name</em>' operation.
-	 * @see Classes.Customers.Customer#getLastName()
-	 * @generated
-	 */
-	EOperation getCustomer__GetLastName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Customers.Customer#getTitle() <em>Get Title</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Title</em>' operation.
-	 * @see Classes.Customers.Customer#getTitle()
-	 * @generated
-	 */
-	EOperation getCustomer__GetTitle();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Customers.Customer#getEmail() <em>Get Email</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Email</em>' operation.
-	 * @see Classes.Customers.Customer#getEmail()
-	 * @generated
-	 */
-	EOperation getCustomer__GetEmail();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Customers.Customer#getPhone() <em>Get Phone</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Phone</em>' operation.
-	 * @see Classes.Customers.Customer#getPhone()
-	 * @generated
-	 */
-	EOperation getCustomer__GetPhone();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Customers.Customer#getSSID() <em>Get SSID</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get SSID</em>' operation.
-	 * @see Classes.Customers.Customer#getSSID()
-	 * @generated
-	 */
-	EOperation getCustomer__GetSSID();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Customers.Customer#setFirstName() <em>Set First Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set First Name</em>' operation.
-	 * @see Classes.Customers.Customer#setFirstName()
-	 * @generated
-	 */
-	EOperation getCustomer__SetFirstName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Customers.Customer#setLastName() <em>Set Last Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Last Name</em>' operation.
-	 * @see Classes.Customers.Customer#setLastName()
-	 * @generated
-	 */
-	EOperation getCustomer__SetLastName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Customers.Customer#setTitle() <em>Set Title</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Title</em>' operation.
-	 * @see Classes.Customers.Customer#setTitle()
-	 * @generated
-	 */
-	EOperation getCustomer__SetTitle();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Customers.Customer#setEmail() <em>Set Email</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Email</em>' operation.
-	 * @see Classes.Customers.Customer#setEmail()
-	 * @generated
-	 */
-	EOperation getCustomer__SetEmail();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Customers.Customer#setPhone() <em>Set Phone</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Phone</em>' operation.
-	 * @see Classes.Customers.Customer#setPhone()
-	 * @generated
-	 */
-	EOperation getCustomer__SetPhone();
-
-	/**
 	 * Returns the meta object for the '{@link Classes.Customers.Customer#addBooking() <em>Add Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -978,16 +751,6 @@ public interface CustomersPackage extends EPackage {
 	EOperation getCustomer__AddRequest();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.Customer#getBookings() <em>Get Bookings</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Bookings</em>' operation.
-	 * @see Classes.Customers.Customer#getBookings()
-	 * @generated
-	 */
-	EOperation getCustomer__GetBookings();
-
-	/**
 	 * Returns the meta object for the '{@link Classes.Customers.Customer#removeRequest() <em>Remove Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -996,16 +759,6 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getCustomer__RemoveRequest();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Customers.Customer#getRequests() <em>Get Requests</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Requests</em>' operation.
-	 * @see Classes.Customers.Customer#getRequests()
-	 * @generated
-	 */
-	EOperation getCustomer__GetRequests();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Customers.ICustomers <em>ICustomers</em>}'.
@@ -1323,94 +1076,6 @@ public interface CustomersPackage extends EPackage {
 		EAttribute CUSTOMER__REQUESTS = eINSTANCE.getCustomer_Requests();
 
 		/**
-		 * The meta object literal for the '<em><b>Get First Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___GET_FIRST_NAME = eINSTANCE.getCustomer__GetFirstName();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Last Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___GET_LAST_NAME = eINSTANCE.getCustomer__GetLastName();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Title</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___GET_TITLE = eINSTANCE.getCustomer__GetTitle();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Email</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___GET_EMAIL = eINSTANCE.getCustomer__GetEmail();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Phone</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___GET_PHONE = eINSTANCE.getCustomer__GetPhone();
-
-		/**
-		 * The meta object literal for the '<em><b>Get SSID</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___GET_SSID = eINSTANCE.getCustomer__GetSSID();
-
-		/**
-		 * The meta object literal for the '<em><b>Set First Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___SET_FIRST_NAME = eINSTANCE.getCustomer__SetFirstName();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Last Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___SET_LAST_NAME = eINSTANCE.getCustomer__SetLastName();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Title</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___SET_TITLE = eINSTANCE.getCustomer__SetTitle();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Email</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___SET_EMAIL = eINSTANCE.getCustomer__SetEmail();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Phone</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___SET_PHONE = eINSTANCE.getCustomer__SetPhone();
-
-		/**
 		 * The meta object literal for the '<em><b>Add Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1435,28 +1100,12 @@ public interface CustomersPackage extends EPackage {
 		EOperation CUSTOMER___ADD_REQUEST = eINSTANCE.getCustomer__AddRequest();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Bookings</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___GET_BOOKINGS = eINSTANCE.getCustomer__GetBookings();
-
-		/**
 		 * The meta object literal for the '<em><b>Remove Request</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EOperation CUSTOMER___REMOVE_REQUEST = eINSTANCE.getCustomer__RemoveRequest();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Requests</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___GET_REQUESTS = eINSTANCE.getCustomer__GetRequests();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Customers.ICustomers <em>ICustomers</em>}' class.

@@ -74,20 +74,4 @@ public interface RestaurantTable extends EObject {
 	 */
 	void setNumberOfSeats(int value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void setNumberOfSeats();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void setTableNumber();
-
 } // RestaurantTable

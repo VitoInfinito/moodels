@@ -95,40 +95,13 @@ public interface ServicesPackage extends EPackage {
 	int ROOM_SERVICE_MENU_FEATURE_COUNT = 2;
 
 	/**
-	 * The operation id for the '<em>Get Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_SERVICE_MENU___GET_NAME = 0;
-
-	/**
-	 * The operation id for the '<em>Set Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_SERVICE_MENU___SET_NAME = 1;
-
-	/**
-	 * The operation id for the '<em>Get Items</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_SERVICE_MENU___GET_ITEMS = 2;
-
-	/**
 	 * The operation id for the '<em>Add Item</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_SERVICE_MENU___ADD_ITEM = 3;
+	int ROOM_SERVICE_MENU___ADD_ITEM = 0;
 
 	/**
 	 * The operation id for the '<em>Remove Item</em>' operation.
@@ -137,7 +110,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_SERVICE_MENU___REMOVE_ITEM = 4;
+	int ROOM_SERVICE_MENU___REMOVE_ITEM = 1;
 
 	/**
 	 * The number of operations of the '<em>Room Service Menu</em>' class.
@@ -146,7 +119,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_SERVICE_MENU_OPERATION_COUNT = 5;
+	int ROOM_SERVICE_MENU_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link Classes.Services.IServicesAccess <em>IServices Access</em>}' class.
@@ -981,76 +954,13 @@ public interface ServicesPackage extends EPackage {
 	int SERVICE_FEATURE_COUNT = 4;
 
 	/**
-	 * The operation id for the '<em>Get Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE___GET_NAME = 0;
-
-	/**
-	 * The operation id for the '<em>Get Price</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE___GET_PRICE = 1;
-
-	/**
-	 * The operation id for the '<em>Get Expense</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE___GET_EXPENSE = 2;
-
-	/**
-	 * The operation id for the '<em>Get ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE___GET_ID = 3;
-
-	/**
-	 * The operation id for the '<em>Set Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE___SET_NAME = 4;
-
-	/**
-	 * The operation id for the '<em>Set Price</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE___SET_PRICE = 5;
-
-	/**
-	 * The operation id for the '<em>Set Expense</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE___SET_EXPENSE = 6;
-
-	/**
 	 * The number of operations of the '<em>Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_OPERATION_COUNT = 7;
+	int SERVICE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link Classes.Services.impl.RoomServiceOrderImpl <em>Room Service Order</em>}' class.
@@ -1135,85 +1045,13 @@ public interface ServicesPackage extends EPackage {
 	int ROOM_SERVICE_ORDER_FEATURE_COUNT = 7;
 
 	/**
-	 * The operation id for the '<em>Get Is Delivered</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_SERVICE_ORDER___GET_IS_DELIVERED = 0;
-
-	/**
-	 * The operation id for the '<em>Get Delivery Date</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_SERVICE_ORDER___GET_DELIVERY_DATE = 1;
-
-	/**
-	 * The operation id for the '<em>Get Bookable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_SERVICE_ORDER___GET_BOOKABLE = 2;
-
-	/**
-	 * The operation id for the '<em>Get Items</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_SERVICE_ORDER___GET_ITEMS = 3;
-
-	/**
-	 * The operation id for the '<em>Get ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_SERVICE_ORDER___GET_ID = 4;
-
-	/**
-	 * The operation id for the '<em>Set Is Delivered</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_SERVICE_ORDER___SET_IS_DELIVERED = 5;
-
-	/**
-	 * The operation id for the '<em>Set Delivery Date</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_SERVICE_ORDER___SET_DELIVERY_DATE = 6;
-
-	/**
-	 * The operation id for the '<em>Set Bookable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_SERVICE_ORDER___SET_BOOKABLE = 7;
-
-	/**
 	 * The operation id for the '<em>Add Service</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_SERVICE_ORDER___ADD_SERVICE = 8;
+	int ROOM_SERVICE_ORDER___ADD_SERVICE = 0;
 
 	/**
 	 * The operation id for the '<em>Add Item</em>' operation.
@@ -1222,7 +1060,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_SERVICE_ORDER___ADD_ITEM = 9;
+	int ROOM_SERVICE_ORDER___ADD_ITEM = 1;
 
 	/**
 	 * The operation id for the '<em>Remove Item</em>' operation.
@@ -1231,7 +1069,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_SERVICE_ORDER___REMOVE_ITEM = 10;
+	int ROOM_SERVICE_ORDER___REMOVE_ITEM = 2;
 
 	/**
 	 * The operation id for the '<em>Remove Service</em>' operation.
@@ -1240,25 +1078,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_SERVICE_ORDER___REMOVE_SERVICE = 11;
-
-	/**
-	 * The operation id for the '<em>Get Bill</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_SERVICE_ORDER___GET_BILL = 12;
-
-	/**
-	 * The operation id for the '<em>Set Bill</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_SERVICE_ORDER___SET_BILL = 13;
+	int ROOM_SERVICE_ORDER___REMOVE_SERVICE = 3;
 
 	/**
 	 * The number of operations of the '<em>Room Service Order</em>' class.
@@ -1267,7 +1087,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_SERVICE_ORDER_OPERATION_COUNT = 14;
+	int ROOM_SERVICE_ORDER_OPERATION_COUNT = 4;
 
 
 	/**
@@ -1301,36 +1121,6 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRoomServiceMenu_Items();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.RoomServiceMenu#getName() <em>Get Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Name</em>' operation.
-	 * @see Classes.Services.RoomServiceMenu#getName()
-	 * @generated
-	 */
-	EOperation getRoomServiceMenu__GetName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.RoomServiceMenu#setName() <em>Set Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Name</em>' operation.
-	 * @see Classes.Services.RoomServiceMenu#setName()
-	 * @generated
-	 */
-	EOperation getRoomServiceMenu__SetName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.RoomServiceMenu#getItems() <em>Get Items</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Items</em>' operation.
-	 * @see Classes.Services.RoomServiceMenu#getItems()
-	 * @generated
-	 */
-	EOperation getRoomServiceMenu__GetItems();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Services.RoomServiceMenu#addItem() <em>Add Item</em>}' operation.
@@ -1660,76 +1450,6 @@ public interface ServicesPackage extends EPackage {
 	EAttribute getService_Id();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.Service#getName() <em>Get Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Name</em>' operation.
-	 * @see Classes.Services.Service#getName()
-	 * @generated
-	 */
-	EOperation getService__GetName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.Service#getPrice() <em>Get Price</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Price</em>' operation.
-	 * @see Classes.Services.Service#getPrice()
-	 * @generated
-	 */
-	EOperation getService__GetPrice();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.Service#getExpense() <em>Get Expense</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Expense</em>' operation.
-	 * @see Classes.Services.Service#getExpense()
-	 * @generated
-	 */
-	EOperation getService__GetExpense();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.Service#getID() <em>Get ID</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get ID</em>' operation.
-	 * @see Classes.Services.Service#getID()
-	 * @generated
-	 */
-	EOperation getService__GetID();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.Service#setName() <em>Set Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Name</em>' operation.
-	 * @see Classes.Services.Service#setName()
-	 * @generated
-	 */
-	EOperation getService__SetName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.Service#setPrice() <em>Set Price</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Price</em>' operation.
-	 * @see Classes.Services.Service#setPrice()
-	 * @generated
-	 */
-	EOperation getService__SetPrice();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.Service#setExpense() <em>Set Expense</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Expense</em>' operation.
-	 * @see Classes.Services.Service#setExpense()
-	 * @generated
-	 */
-	EOperation getService__SetExpense();
-
-	/**
 	 * Returns the meta object for class '{@link Classes.Services.RoomServiceOrder <em>Room Service Order</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1817,86 +1537,6 @@ public interface ServicesPackage extends EPackage {
 	EAttribute getRoomServiceOrder_Bill();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.RoomServiceOrder#getIsDelivered() <em>Get Is Delivered</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Is Delivered</em>' operation.
-	 * @see Classes.Services.RoomServiceOrder#getIsDelivered()
-	 * @generated
-	 */
-	EOperation getRoomServiceOrder__GetIsDelivered();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.RoomServiceOrder#getDeliveryDate() <em>Get Delivery Date</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Delivery Date</em>' operation.
-	 * @see Classes.Services.RoomServiceOrder#getDeliveryDate()
-	 * @generated
-	 */
-	EOperation getRoomServiceOrder__GetDeliveryDate();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.RoomServiceOrder#getBookable() <em>Get Bookable</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Bookable</em>' operation.
-	 * @see Classes.Services.RoomServiceOrder#getBookable()
-	 * @generated
-	 */
-	EOperation getRoomServiceOrder__GetBookable();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.RoomServiceOrder#getItems() <em>Get Items</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Items</em>' operation.
-	 * @see Classes.Services.RoomServiceOrder#getItems()
-	 * @generated
-	 */
-	EOperation getRoomServiceOrder__GetItems();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.RoomServiceOrder#getID() <em>Get ID</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get ID</em>' operation.
-	 * @see Classes.Services.RoomServiceOrder#getID()
-	 * @generated
-	 */
-	EOperation getRoomServiceOrder__GetID();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.RoomServiceOrder#setIsDelivered() <em>Set Is Delivered</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Is Delivered</em>' operation.
-	 * @see Classes.Services.RoomServiceOrder#setIsDelivered()
-	 * @generated
-	 */
-	EOperation getRoomServiceOrder__SetIsDelivered();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.RoomServiceOrder#setDeliveryDate() <em>Set Delivery Date</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Delivery Date</em>' operation.
-	 * @see Classes.Services.RoomServiceOrder#setDeliveryDate()
-	 * @generated
-	 */
-	EOperation getRoomServiceOrder__SetDeliveryDate();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.RoomServiceOrder#setBookable() <em>Set Bookable</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Bookable</em>' operation.
-	 * @see Classes.Services.RoomServiceOrder#setBookable()
-	 * @generated
-	 */
-	EOperation getRoomServiceOrder__SetBookable();
-
-	/**
 	 * Returns the meta object for the '{@link Classes.Services.RoomServiceOrder#addService() <em>Add Service</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1935,26 +1575,6 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getRoomServiceOrder__RemoveService();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.RoomServiceOrder#getBill() <em>Get Bill</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Bill</em>' operation.
-	 * @see Classes.Services.RoomServiceOrder#getBill()
-	 * @generated
-	 */
-	EOperation getRoomServiceOrder__GetBill();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.RoomServiceOrder#setBill() <em>Set Bill</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Bill</em>' operation.
-	 * @see Classes.Services.RoomServiceOrder#setBill()
-	 * @generated
-	 */
-	EOperation getRoomServiceOrder__SetBill();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Services.IServicesManage <em>IServices Manage</em>}'.
@@ -2084,30 +1704,6 @@ public interface ServicesPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROOM_SERVICE_MENU__ITEMS = eINSTANCE.getRoomServiceMenu_Items();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_SERVICE_MENU___GET_NAME = eINSTANCE.getRoomServiceMenu__GetName();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_SERVICE_MENU___SET_NAME = eINSTANCE.getRoomServiceMenu__SetName();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Items</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_SERVICE_MENU___GET_ITEMS = eINSTANCE.getRoomServiceMenu__GetItems();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Item</b></em>' operation.
@@ -2372,62 +1968,6 @@ public interface ServicesPackage extends EPackage {
 		EAttribute SERVICE__ID = eINSTANCE.getService_Id();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SERVICE___GET_NAME = eINSTANCE.getService__GetName();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Price</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SERVICE___GET_PRICE = eINSTANCE.getService__GetPrice();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Expense</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SERVICE___GET_EXPENSE = eINSTANCE.getService__GetExpense();
-
-		/**
-		 * The meta object literal for the '<em><b>Get ID</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SERVICE___GET_ID = eINSTANCE.getService__GetID();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SERVICE___SET_NAME = eINSTANCE.getService__SetName();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Price</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SERVICE___SET_PRICE = eINSTANCE.getService__SetPrice();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Expense</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SERVICE___SET_EXPENSE = eINSTANCE.getService__SetExpense();
-
-		/**
 		 * The meta object literal for the '{@link Classes.Services.impl.RoomServiceOrderImpl <em>Room Service Order</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2494,70 +2034,6 @@ public interface ServicesPackage extends EPackage {
 		EAttribute ROOM_SERVICE_ORDER__BILL = eINSTANCE.getRoomServiceOrder_Bill();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Is Delivered</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_SERVICE_ORDER___GET_IS_DELIVERED = eINSTANCE.getRoomServiceOrder__GetIsDelivered();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Delivery Date</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_SERVICE_ORDER___GET_DELIVERY_DATE = eINSTANCE.getRoomServiceOrder__GetDeliveryDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Bookable</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_SERVICE_ORDER___GET_BOOKABLE = eINSTANCE.getRoomServiceOrder__GetBookable();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Items</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_SERVICE_ORDER___GET_ITEMS = eINSTANCE.getRoomServiceOrder__GetItems();
-
-		/**
-		 * The meta object literal for the '<em><b>Get ID</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_SERVICE_ORDER___GET_ID = eINSTANCE.getRoomServiceOrder__GetID();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Is Delivered</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_SERVICE_ORDER___SET_IS_DELIVERED = eINSTANCE.getRoomServiceOrder__SetIsDelivered();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Delivery Date</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_SERVICE_ORDER___SET_DELIVERY_DATE = eINSTANCE.getRoomServiceOrder__SetDeliveryDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Bookable</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_SERVICE_ORDER___SET_BOOKABLE = eINSTANCE.getRoomServiceOrder__SetBookable();
-
-		/**
 		 * The meta object literal for the '<em><b>Add Service</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2588,22 +2064,6 @@ public interface ServicesPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ROOM_SERVICE_ORDER___REMOVE_SERVICE = eINSTANCE.getRoomServiceOrder__RemoveService();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Bill</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_SERVICE_ORDER___GET_BILL = eINSTANCE.getRoomServiceOrder__GetBill();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Bill</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_SERVICE_ORDER___SET_BILL = eINSTANCE.getRoomServiceOrder__SetBill();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Services.IServicesManage <em>IServices Manage</em>}' class.

@@ -334,7 +334,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGuest__GetFirstName() {
+	public EOperation getGuest__AddStay() {
 		return guestEClass.getEOperations().get(0);
 	}
 
@@ -343,7 +343,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGuest__GetLastName() {
+	public EOperation getGuest__RemoveStay() {
 		return guestEClass.getEOperations().get(1);
 	}
 
@@ -352,7 +352,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGuest__GetTitle() {
+	public EOperation getGuest__AddRequest() {
 		return guestEClass.getEOperations().get(2);
 	}
 
@@ -361,143 +361,8 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGuest__GetEmail() {
-		return guestEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__GetPhone() {
-		return guestEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__GetSSID() {
-		return guestEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__SetFirstName() {
-		return guestEClass.getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__SetLastName() {
-		return guestEClass.getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__SetTitle() {
-		return guestEClass.getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__SetEmail() {
-		return guestEClass.getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__SetPhone() {
-		return guestEClass.getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__AddStay() {
-		return guestEClass.getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__RemoveStay() {
-		return guestEClass.getEOperations().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__AddRequest() {
-		return guestEClass.getEOperations().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__GetStays() {
-		return guestEClass.getEOperations().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getGuest__RemoveRequest() {
-		return guestEClass.getEOperations().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__GetRequests() {
-		return guestEClass.getEOperations().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__GetAccount() {
-		return guestEClass.getEOperations().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__SetAccount() {
-		return guestEClass.getEOperations().get(18);
+		return guestEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -749,25 +614,10 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 		createEAttribute(guestEClass, GUEST__REQUESTS);
 		createEAttribute(guestEClass, GUEST__STAYS);
 		createEAttribute(guestEClass, GUEST__ACCOUNT);
-		createEOperation(guestEClass, GUEST___GET_FIRST_NAME);
-		createEOperation(guestEClass, GUEST___GET_LAST_NAME);
-		createEOperation(guestEClass, GUEST___GET_TITLE);
-		createEOperation(guestEClass, GUEST___GET_EMAIL);
-		createEOperation(guestEClass, GUEST___GET_PHONE);
-		createEOperation(guestEClass, GUEST___GET_SSID);
-		createEOperation(guestEClass, GUEST___SET_FIRST_NAME);
-		createEOperation(guestEClass, GUEST___SET_LAST_NAME);
-		createEOperation(guestEClass, GUEST___SET_TITLE);
-		createEOperation(guestEClass, GUEST___SET_EMAIL);
-		createEOperation(guestEClass, GUEST___SET_PHONE);
 		createEOperation(guestEClass, GUEST___ADD_STAY);
 		createEOperation(guestEClass, GUEST___REMOVE_STAY);
 		createEOperation(guestEClass, GUEST___ADD_REQUEST);
-		createEOperation(guestEClass, GUEST___GET_STAYS);
 		createEOperation(guestEClass, GUEST___REMOVE_REQUEST);
-		createEOperation(guestEClass, GUEST___GET_REQUESTS);
-		createEOperation(guestEClass, GUEST___GET_ACCOUNT);
-		createEOperation(guestEClass, GUEST___SET_ACCOUNT);
 
 		iGuestsEClass = createEClass(IGUESTS);
 		createEOperation(iGuestsEClass, IGUESTS___GET_ALL_GUESTS);
@@ -844,43 +694,13 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 		initEAttribute(getGuest_Stays(), theTypesPackage.getString(), "stays", null, 0, -1, Guest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getGuest_Account(), theTypesPackage.getString(), "account", null, 1, 1, Guest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getGuest__GetFirstName(), null, "getFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getGuest__GetLastName(), null, "getLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getGuest__GetTitle(), null, "getTitle", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getGuest__GetEmail(), null, "getEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getGuest__GetPhone(), null, "getPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getGuest__GetSSID(), null, "getSSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getGuest__SetFirstName(), null, "setFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getGuest__SetLastName(), null, "setLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getGuest__SetTitle(), null, "setTitle", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getGuest__SetEmail(), null, "setEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getGuest__SetPhone(), null, "setPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEOperation(getGuest__AddStay(), null, "addStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getGuest__RemoveStay(), null, "removeStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getGuest__AddRequest(), null, "addRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getGuest__GetStays(), null, "getStays", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEOperation(getGuest__RemoveRequest(), null, "removeRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getGuest__GetRequests(), null, "getRequests", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getGuest__GetAccount(), null, "getAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getGuest__SetAccount(), null, "setAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iGuestsEClass, IGuests.class, "IGuests", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

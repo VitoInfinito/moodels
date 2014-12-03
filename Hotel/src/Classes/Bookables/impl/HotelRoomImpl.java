@@ -5,15 +5,8 @@ package Classes.Bookables.impl;
 import Classes.Bookables.BookablesPackage;
 import Classes.Bookables.HotelRoom;
 import Classes.Bookables.HotelRoomCategory;
-
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -137,17 +130,6 @@ public class HotelRoomImpl extends RoomImpl implements HotelRoom {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCategory() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -209,21 +191,6 @@ public class HotelRoomImpl extends RoomImpl implements HotelRoom {
 				return nbrBeds != NBR_BEDS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case BookablesPackage.HOTEL_ROOM___SET_CATEGORY:
-				setCategory();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

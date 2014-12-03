@@ -105,67 +105,13 @@ public interface BookablesPackage extends EPackage {
 	int BOOKABLE_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>Create Bookable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKABLE___CREATE_BOOKABLE = 0;
-
-	/**
-	 * The operation id for the '<em>Get ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKABLE___GET_ID = 1;
-
-	/**
-	 * The operation id for the '<em>Get Baseprice</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKABLE___GET_BASEPRICE = 2;
-
-	/**
-	 * The operation id for the '<em>Get Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKABLE___GET_DESCRIPTION = 3;
-
-	/**
-	 * The operation id for the '<em>Set Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKABLE___SET_DESCRIPTION = 4;
-
-	/**
-	 * The operation id for the '<em>Set Baseprice</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKABLE___SET_BASEPRICE = 5;
-
-	/**
 	 * The number of operations of the '<em>Bookable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKABLE_OPERATION_COUNT = 6;
+	int BOOKABLE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link Classes.Bookables.impl.RoomImpl <em>Room</em>}' class.
@@ -223,76 +169,13 @@ public interface BookablesPackage extends EPackage {
 	int ROOM_FEATURE_COUNT = BOOKABLE_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Create Bookable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM___CREATE_BOOKABLE = BOOKABLE___CREATE_BOOKABLE;
-
-	/**
-	 * The operation id for the '<em>Get ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM___GET_ID = BOOKABLE___GET_ID;
-
-	/**
-	 * The operation id for the '<em>Get Baseprice</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM___GET_BASEPRICE = BOOKABLE___GET_BASEPRICE;
-
-	/**
-	 * The operation id for the '<em>Get Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM___GET_DESCRIPTION = BOOKABLE___GET_DESCRIPTION;
-
-	/**
-	 * The operation id for the '<em>Set Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM___SET_DESCRIPTION = BOOKABLE___SET_DESCRIPTION;
-
-	/**
-	 * The operation id for the '<em>Set Baseprice</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM___SET_BASEPRICE = BOOKABLE___SET_BASEPRICE;
-
-	/**
-	 * The operation id for the '<em>Get Room Location</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM___GET_ROOM_LOCATION = BOOKABLE_OPERATION_COUNT + 0;
-
-	/**
 	 * The number of operations of the '<em>Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_OPERATION_COUNT = BOOKABLE_OPERATION_COUNT + 1;
+	int ROOM_OPERATION_COUNT = BOOKABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link Classes.Bookables.impl.RoomLocationImpl <em>Room Location</em>}' class.
@@ -332,40 +215,13 @@ public interface BookablesPackage extends EPackage {
 	int ROOM_LOCATION_FEATURE_COUNT = 2;
 
 	/**
-	 * The operation id for the '<em>Get Floor</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_LOCATION___GET_FLOOR = 0;
-
-	/**
-	 * The operation id for the '<em>Get Info</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_LOCATION___GET_INFO = 1;
-
-	/**
-	 * The operation id for the '<em>Set Floor</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_LOCATION___SET_FLOOR = 2;
-
-	/**
 	 * The operation id for the '<em>Set Info</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_LOCATION___SET_INFO = 3;
+	int ROOM_LOCATION___SET_INFO = 0;
 
 	/**
 	 * The number of operations of the '<em>Room Location</em>' class.
@@ -374,7 +230,7 @@ public interface BookablesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_LOCATION_OPERATION_COUNT = 4;
+	int ROOM_LOCATION_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link Classes.Bookables.impl.HostelBedImpl <em>Hostel Bed</em>}' class.
@@ -432,85 +288,13 @@ public interface BookablesPackage extends EPackage {
 	int HOSTEL_BED_FEATURE_COUNT = BOOKABLE_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Create Bookable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOSTEL_BED___CREATE_BOOKABLE = BOOKABLE___CREATE_BOOKABLE;
-
-	/**
-	 * The operation id for the '<em>Get ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOSTEL_BED___GET_ID = BOOKABLE___GET_ID;
-
-	/**
-	 * The operation id for the '<em>Get Baseprice</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOSTEL_BED___GET_BASEPRICE = BOOKABLE___GET_BASEPRICE;
-
-	/**
-	 * The operation id for the '<em>Get Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOSTEL_BED___GET_DESCRIPTION = BOOKABLE___GET_DESCRIPTION;
-
-	/**
-	 * The operation id for the '<em>Set Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOSTEL_BED___SET_DESCRIPTION = BOOKABLE___SET_DESCRIPTION;
-
-	/**
-	 * The operation id for the '<em>Set Baseprice</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOSTEL_BED___SET_BASEPRICE = BOOKABLE___SET_BASEPRICE;
-
-	/**
-	 * The operation id for the '<em>Get Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOSTEL_BED___GET_ROOM = BOOKABLE_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Set Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOSTEL_BED___SET_ROOM = BOOKABLE_OPERATION_COUNT + 1;
-
-	/**
 	 * The number of operations of the '<em>Hostel Bed</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOSTEL_BED_OPERATION_COUNT = BOOKABLE_OPERATION_COUNT + 2;
+	int HOSTEL_BED_OPERATION_COUNT = BOOKABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link Classes.Bookables.impl.ConferenceRoomImpl <em>Conference Room</em>}' class.
@@ -586,94 +370,13 @@ public interface BookablesPackage extends EPackage {
 	int CONFERENCE_ROOM_FEATURE_COUNT = ROOM_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Create Bookable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFERENCE_ROOM___CREATE_BOOKABLE = ROOM___CREATE_BOOKABLE;
-
-	/**
-	 * The operation id for the '<em>Get ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFERENCE_ROOM___GET_ID = ROOM___GET_ID;
-
-	/**
-	 * The operation id for the '<em>Get Baseprice</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFERENCE_ROOM___GET_BASEPRICE = ROOM___GET_BASEPRICE;
-
-	/**
-	 * The operation id for the '<em>Get Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFERENCE_ROOM___GET_DESCRIPTION = ROOM___GET_DESCRIPTION;
-
-	/**
-	 * The operation id for the '<em>Set Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFERENCE_ROOM___SET_DESCRIPTION = ROOM___SET_DESCRIPTION;
-
-	/**
-	 * The operation id for the '<em>Set Baseprice</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFERENCE_ROOM___SET_BASEPRICE = ROOM___SET_BASEPRICE;
-
-	/**
-	 * The operation id for the '<em>Get Room Location</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFERENCE_ROOM___GET_ROOM_LOCATION = ROOM___GET_ROOM_LOCATION;
-
-	/**
-	 * The operation id for the '<em>Get Category</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFERENCE_ROOM___GET_CATEGORY = ROOM_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Set Category</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFERENCE_ROOM___SET_CATEGORY = ROOM_OPERATION_COUNT + 1;
-
-	/**
 	 * The number of operations of the '<em>Conference Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONFERENCE_ROOM_OPERATION_COUNT = ROOM_OPERATION_COUNT + 2;
+	int CONFERENCE_ROOM_OPERATION_COUNT = ROOM_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link Classes.Bookables.impl.HotelRoomImpl <em>Hotel Room</em>}' class.
@@ -749,94 +452,13 @@ public interface BookablesPackage extends EPackage {
 	int HOTEL_ROOM_FEATURE_COUNT = ROOM_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Create Bookable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM___CREATE_BOOKABLE = ROOM___CREATE_BOOKABLE;
-
-	/**
-	 * The operation id for the '<em>Get ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM___GET_ID = ROOM___GET_ID;
-
-	/**
-	 * The operation id for the '<em>Get Baseprice</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM___GET_BASEPRICE = ROOM___GET_BASEPRICE;
-
-	/**
-	 * The operation id for the '<em>Get Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM___GET_DESCRIPTION = ROOM___GET_DESCRIPTION;
-
-	/**
-	 * The operation id for the '<em>Set Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM___SET_DESCRIPTION = ROOM___SET_DESCRIPTION;
-
-	/**
-	 * The operation id for the '<em>Set Baseprice</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM___SET_BASEPRICE = ROOM___SET_BASEPRICE;
-
-	/**
-	 * The operation id for the '<em>Get Room Location</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM___GET_ROOM_LOCATION = ROOM___GET_ROOM_LOCATION;
-
-	/**
-	 * The operation id for the '<em>Get Category</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM___GET_CATEGORY = ROOM_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Set Category</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_ROOM___SET_CATEGORY = ROOM_OPERATION_COUNT + 1;
-
-	/**
 	 * The number of operations of the '<em>Hotel Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOTEL_ROOM_OPERATION_COUNT = ROOM_OPERATION_COUNT + 2;
+	int HOTEL_ROOM_OPERATION_COUNT = ROOM_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link Classes.Bookables.IBookablesAccess <em>IBookables Access</em>}' class.
@@ -1392,66 +1014,6 @@ public interface BookablesPackage extends EPackage {
 	EAttribute getBookable_Description();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.Bookable#createBookable() <em>Create Bookable</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Bookable</em>' operation.
-	 * @see Classes.Bookables.Bookable#createBookable()
-	 * @generated
-	 */
-	EOperation getBookable__CreateBookable();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.Bookable#getID() <em>Get ID</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get ID</em>' operation.
-	 * @see Classes.Bookables.Bookable#getID()
-	 * @generated
-	 */
-	EOperation getBookable__GetID();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.Bookable#getBaseprice() <em>Get Baseprice</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Baseprice</em>' operation.
-	 * @see Classes.Bookables.Bookable#getBaseprice()
-	 * @generated
-	 */
-	EOperation getBookable__GetBaseprice();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.Bookable#getDescription() <em>Get Description</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Description</em>' operation.
-	 * @see Classes.Bookables.Bookable#getDescription()
-	 * @generated
-	 */
-	EOperation getBookable__GetDescription();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.Bookable#setDescription() <em>Set Description</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Description</em>' operation.
-	 * @see Classes.Bookables.Bookable#setDescription()
-	 * @generated
-	 */
-	EOperation getBookable__SetDescription();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.Bookable#setBaseprice() <em>Set Baseprice</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Baseprice</em>' operation.
-	 * @see Classes.Bookables.Bookable#setBaseprice()
-	 * @generated
-	 */
-	EOperation getBookable__SetBaseprice();
-
-	/**
 	 * Returns the meta object for class '{@link Classes.Bookables.Room <em>Room</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1471,16 +1033,6 @@ public interface BookablesPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRoom_Location();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.Room#getRoomLocation() <em>Get Room Location</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Room Location</em>' operation.
-	 * @see Classes.Bookables.Room#getRoomLocation()
-	 * @generated
-	 */
-	EOperation getRoom__GetRoomLocation();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Bookables.RoomLocation <em>Room Location</em>}'.
@@ -1515,36 +1067,6 @@ public interface BookablesPackage extends EPackage {
 	EAttribute getRoomLocation_AddtionalInfo();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.RoomLocation#getFloor() <em>Get Floor</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Floor</em>' operation.
-	 * @see Classes.Bookables.RoomLocation#getFloor()
-	 * @generated
-	 */
-	EOperation getRoomLocation__GetFloor();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.RoomLocation#getInfo() <em>Get Info</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Info</em>' operation.
-	 * @see Classes.Bookables.RoomLocation#getInfo()
-	 * @generated
-	 */
-	EOperation getRoomLocation__GetInfo();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.RoomLocation#setFloor() <em>Set Floor</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Floor</em>' operation.
-	 * @see Classes.Bookables.RoomLocation#setFloor()
-	 * @generated
-	 */
-	EOperation getRoomLocation__SetFloor();
-
-	/**
 	 * Returns the meta object for the '{@link Classes.Bookables.RoomLocation#setInfo() <em>Set Info</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1574,26 +1096,6 @@ public interface BookablesPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getHostelBed_Room();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.HostelBed#getRoom() <em>Get Room</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Room</em>' operation.
-	 * @see Classes.Bookables.HostelBed#getRoom()
-	 * @generated
-	 */
-	EOperation getHostelBed__GetRoom();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.HostelBed#setRoom() <em>Set Room</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Room</em>' operation.
-	 * @see Classes.Bookables.HostelBed#setRoom()
-	 * @generated
-	 */
-	EOperation getHostelBed__SetRoom();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Bookables.ConferenceRoom <em>Conference Room</em>}'.
@@ -1628,26 +1130,6 @@ public interface BookablesPackage extends EPackage {
 	EAttribute getConferenceRoom_Capacity();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.ConferenceRoom#getCategory() <em>Get Category</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Category</em>' operation.
-	 * @see Classes.Bookables.ConferenceRoom#getCategory()
-	 * @generated
-	 */
-	EOperation getConferenceRoom__GetCategory();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.ConferenceRoom#setCategory() <em>Set Category</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Category</em>' operation.
-	 * @see Classes.Bookables.ConferenceRoom#setCategory()
-	 * @generated
-	 */
-	EOperation getConferenceRoom__SetCategory();
-
-	/**
 	 * Returns the meta object for class '{@link Classes.Bookables.HotelRoom <em>Hotel Room</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1678,26 +1160,6 @@ public interface BookablesPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getHotelRoom_NbrBeds();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.HotelRoom#getCategory() <em>Get Category</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Category</em>' operation.
-	 * @see Classes.Bookables.HotelRoom#getCategory()
-	 * @generated
-	 */
-	EOperation getHotelRoom__GetCategory();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.HotelRoom#setCategory() <em>Set Category</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Category</em>' operation.
-	 * @see Classes.Bookables.HotelRoom#setCategory()
-	 * @generated
-	 */
-	EOperation getHotelRoom__SetCategory();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Bookables.IBookablesManage <em>IBookables Manage</em>}'.
@@ -1999,54 +1461,6 @@ public interface BookablesPackage extends EPackage {
 		EAttribute BOOKABLE__DESCRIPTION = eINSTANCE.getBookable_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Create Bookable</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKABLE___CREATE_BOOKABLE = eINSTANCE.getBookable__CreateBookable();
-
-		/**
-		 * The meta object literal for the '<em><b>Get ID</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKABLE___GET_ID = eINSTANCE.getBookable__GetID();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Baseprice</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKABLE___GET_BASEPRICE = eINSTANCE.getBookable__GetBaseprice();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Description</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKABLE___GET_DESCRIPTION = eINSTANCE.getBookable__GetDescription();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Description</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKABLE___SET_DESCRIPTION = eINSTANCE.getBookable__SetDescription();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Baseprice</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKABLE___SET_BASEPRICE = eINSTANCE.getBookable__SetBaseprice();
-
-		/**
 		 * The meta object literal for the '{@link Classes.Bookables.impl.RoomImpl <em>Room</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2063,14 +1477,6 @@ public interface BookablesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROOM__LOCATION = eINSTANCE.getRoom_Location();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Room Location</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM___GET_ROOM_LOCATION = eINSTANCE.getRoom__GetRoomLocation();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Bookables.impl.RoomLocationImpl <em>Room Location</em>}' class.
@@ -2099,30 +1505,6 @@ public interface BookablesPackage extends EPackage {
 		EAttribute ROOM_LOCATION__ADDTIONAL_INFO = eINSTANCE.getRoomLocation_AddtionalInfo();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Floor</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_LOCATION___GET_FLOOR = eINSTANCE.getRoomLocation__GetFloor();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Info</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_LOCATION___GET_INFO = eINSTANCE.getRoomLocation__GetInfo();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Floor</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_LOCATION___SET_FLOOR = eINSTANCE.getRoomLocation__SetFloor();
-
-		/**
 		 * The meta object literal for the '<em><b>Set Info</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2147,22 +1529,6 @@ public interface BookablesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference HOSTEL_BED__ROOM = eINSTANCE.getHostelBed_Room();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Room</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation HOSTEL_BED___GET_ROOM = eINSTANCE.getHostelBed__GetRoom();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Room</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation HOSTEL_BED___SET_ROOM = eINSTANCE.getHostelBed__SetRoom();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Bookables.impl.ConferenceRoomImpl <em>Conference Room</em>}' class.
@@ -2191,22 +1557,6 @@ public interface BookablesPackage extends EPackage {
 		EAttribute CONFERENCE_ROOM__CAPACITY = eINSTANCE.getConferenceRoom_Capacity();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Category</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CONFERENCE_ROOM___GET_CATEGORY = eINSTANCE.getConferenceRoom__GetCategory();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Category</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CONFERENCE_ROOM___SET_CATEGORY = eINSTANCE.getConferenceRoom__SetCategory();
-
-		/**
 		 * The meta object literal for the '{@link Classes.Bookables.impl.HotelRoomImpl <em>Hotel Room</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2231,22 +1581,6 @@ public interface BookablesPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute HOTEL_ROOM__NBR_BEDS = eINSTANCE.getHotelRoom_NbrBeds();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Category</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation HOTEL_ROOM___GET_CATEGORY = eINSTANCE.getHotelRoom__GetCategory();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Category</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation HOTEL_ROOM___SET_CATEGORY = eINSTANCE.getHotelRoom__SetCategory();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Bookables.IBookablesManage <em>IBookables Manage</em>}' class.

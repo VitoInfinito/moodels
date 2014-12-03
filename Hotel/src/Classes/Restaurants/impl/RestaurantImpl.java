@@ -72,14 +72,14 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	protected EList<Reservation> reservation;
 
 	/**
-	 * The cached value of the '{@link #getRestaurantTable() <em>Restaurant Table</em>}' reference.
+	 * The cached value of the '{@link #getRestaurantTable() <em>Restaurant Table</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRestaurantTable()
 	 * @generated
 	 * @ordered
 	 */
-	protected RestaurantTable restaurantTable;
+	protected EList<RestaurantTable> restaurantTable;
 
 	/**
 	 * The cached value of the '{@link #getMenu() <em>Menu</em>}' reference.
@@ -148,37 +148,11 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RestaurantTable getRestaurantTable() {
-		if (restaurantTable != null && restaurantTable.eIsProxy()) {
-			InternalEObject oldRestaurantTable = (InternalEObject)restaurantTable;
-			restaurantTable = (RestaurantTable)eResolveProxy(oldRestaurantTable);
-			if (restaurantTable != oldRestaurantTable) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RestaurantsPackage.RESTAURANT__RESTAURANT_TABLE, oldRestaurantTable, restaurantTable));
-			}
+	public EList<RestaurantTable> getRestaurantTable() {
+		if (restaurantTable == null) {
+			restaurantTable = new EObjectResolvingEList<RestaurantTable>(RestaurantTable.class, this, RestaurantsPackage.RESTAURANT__RESTAURANT_TABLE);
 		}
 		return restaurantTable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RestaurantTable basicGetRestaurantTable() {
-		return restaurantTable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRestaurantTable(RestaurantTable newRestaurantTable) {
-		RestaurantTable oldRestaurantTable = restaurantTable;
-		restaurantTable = newRestaurantTable;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RestaurantsPackage.RESTAURANT__RESTAURANT_TABLE, oldRestaurantTable, restaurantTable));
 	}
 
 	/**
@@ -224,40 +198,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void addReservation() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getAllTables() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getAllReservations() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -276,8 +217,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 			case RestaurantsPackage.RESTAURANT__RESERVATION:
 				return getReservation();
 			case RestaurantsPackage.RESTAURANT__RESTAURANT_TABLE:
-				if (resolve) return getRestaurantTable();
-				return basicGetRestaurantTable();
+				return getRestaurantTable();
 			case RestaurantsPackage.RESTAURANT__MENU:
 				if (resolve) return getMenu();
 				return basicGetMenu();
@@ -302,7 +242,8 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 				getReservation().addAll((Collection<? extends Reservation>)newValue);
 				return;
 			case RestaurantsPackage.RESTAURANT__RESTAURANT_TABLE:
-				setRestaurantTable((RestaurantTable)newValue);
+				getRestaurantTable().clear();
+				getRestaurantTable().addAll((Collection<? extends RestaurantTable>)newValue);
 				return;
 			case RestaurantsPackage.RESTAURANT__MENU:
 				setMenu((RestaurantMenu)newValue);
@@ -326,7 +267,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 				getReservation().clear();
 				return;
 			case RestaurantsPackage.RESTAURANT__RESTAURANT_TABLE:
-				setRestaurantTable((RestaurantTable)null);
+				getRestaurantTable().clear();
 				return;
 			case RestaurantsPackage.RESTAURANT__MENU:
 				setMenu((RestaurantMenu)null);
@@ -348,7 +289,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 			case RestaurantsPackage.RESTAURANT__RESERVATION:
 				return reservation != null && !reservation.isEmpty();
 			case RestaurantsPackage.RESTAURANT__RESTAURANT_TABLE:
-				return restaurantTable != null;
+				return restaurantTable != null && !restaurantTable.isEmpty();
 			case RestaurantsPackage.RESTAURANT__MENU:
 				return menu != null;
 		}
@@ -363,17 +304,8 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case RestaurantsPackage.RESTAURANT___SET_NAME:
-				setName();
-				return null;
 			case RestaurantsPackage.RESTAURANT___ADD_RESERVATION:
 				addReservation();
-				return null;
-			case RestaurantsPackage.RESTAURANT___GET_ALL_TABLES:
-				getAllTables();
-				return null;
-			case RestaurantsPackage.RESTAURANT___GET_ALL_RESERVATIONS:
-				getAllReservations();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

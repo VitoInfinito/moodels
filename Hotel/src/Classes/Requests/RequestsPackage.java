@@ -331,58 +331,13 @@ public interface RequestsPackage extends EPackage {
 	int REQUEST_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>Get ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUEST___GET_ID = 0;
-
-	/**
-	 * The operation id for the '<em>Get Desc</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUEST___GET_DESC = 1;
-
-	/**
-	 * The operation id for the '<em>Get Is Resolved</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUEST___GET_IS_RESOLVED = 2;
-
-	/**
-	 * The operation id for the '<em>Set Desc</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUEST___SET_DESC = 3;
-
-	/**
-	 * The operation id for the '<em>Set Is Resolved</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUEST___SET_IS_RESOLVED = 4;
-
-	/**
 	 * The number of operations of the '<em>Request</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUEST_OPERATION_COUNT = 5;
+	int REQUEST_OPERATION_COUNT = 0;
 
 
 	/**
@@ -550,56 +505,6 @@ public interface RequestsPackage extends EPackage {
 	EAttribute getRequest_IsResolved();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Requests.Request#getID() <em>Get ID</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get ID</em>' operation.
-	 * @see Classes.Requests.Request#getID()
-	 * @generated
-	 */
-	EOperation getRequest__GetID();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Requests.Request#getDesc() <em>Get Desc</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Desc</em>' operation.
-	 * @see Classes.Requests.Request#getDesc()
-	 * @generated
-	 */
-	EOperation getRequest__GetDesc();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Requests.Request#getIsResolved() <em>Get Is Resolved</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Is Resolved</em>' operation.
-	 * @see Classes.Requests.Request#getIsResolved()
-	 * @generated
-	 */
-	EOperation getRequest__GetIsResolved();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Requests.Request#setDesc() <em>Set Desc</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Desc</em>' operation.
-	 * @see Classes.Requests.Request#setDesc()
-	 * @generated
-	 */
-	EOperation getRequest__SetDesc();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Requests.Request#setIsResolved() <em>Set Is Resolved</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Is Resolved</em>' operation.
-	 * @see Classes.Requests.Request#setIsResolved()
-	 * @generated
-	 */
-	EOperation getRequest__SetIsResolved();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -755,46 +660,6 @@ public interface RequestsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute REQUEST__IS_RESOLVED = eINSTANCE.getRequest_IsResolved();
-
-		/**
-		 * The meta object literal for the '<em><b>Get ID</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation REQUEST___GET_ID = eINSTANCE.getRequest__GetID();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Desc</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation REQUEST___GET_DESC = eINSTANCE.getRequest__GetDesc();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Is Resolved</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation REQUEST___GET_IS_RESOLVED = eINSTANCE.getRequest__GetIsResolved();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Desc</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation REQUEST___SET_DESC = eINSTANCE.getRequest__SetDesc();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Is Resolved</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation REQUEST___SET_IS_RESOLVED = eINSTANCE.getRequest__SetIsResolved();
 
 	}
 

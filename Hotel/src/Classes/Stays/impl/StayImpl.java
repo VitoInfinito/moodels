@@ -399,17 +399,6 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBookable() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void addCheckedInGuest() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -422,28 +411,6 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 	 * @generated
 	 */
 	public void checkOutGuest() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFromDate() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setToDate() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -603,20 +570,11 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 			case StaysPackage.STAY___ADD_BILL:
 				addBill();
 				return null;
-			case StaysPackage.STAY___SET_BOOKABLE:
-				setBookable();
-				return null;
 			case StaysPackage.STAY___ADD_CHECKED_IN_GUEST:
 				addCheckedInGuest();
 				return null;
 			case StaysPackage.STAY___CHECK_OUT_GUEST:
 				checkOutGuest();
-				return null;
-			case StaysPackage.STAY___SET_FROM_DATE:
-				setFromDate();
-				return null;
-			case StaysPackage.STAY___SET_TO_DATE:
-				setToDate();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

@@ -315,7 +315,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStay__GetID() {
+	public EOperation getStay__AddBill() {
 		return stayEClass.getEOperations().get(0);
 	}
 
@@ -324,7 +324,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStay__GetBills() {
+	public EOperation getStay__AddCheckedInGuest() {
 		return stayEClass.getEOperations().get(1);
 	}
 
@@ -333,107 +333,8 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStay__AddBill() {
-		return stayEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStay__GetBookable() {
-		return stayEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStay__SetBookable() {
-		return stayEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStay__GetBooking() {
-		return stayEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStay__GetCheckedInGuests() {
-		return stayEClass.getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStay__AddCheckedInGuest() {
-		return stayEClass.getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getStay__CheckOutGuest() {
-		return stayEClass.getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStay__GetCheckedOutGuests() {
-		return stayEClass.getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStay__SetFromDate() {
-		return stayEClass.getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStay__SetToDate() {
-		return stayEClass.getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStay__GetFromDate() {
-		return stayEClass.getEOperations().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getStay__GetToDate() {
-		return stayEClass.getEOperations().get(13);
+		return stayEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -497,60 +398,6 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 */
 	public EAttribute getCreditCard_LastName() {
 		return (EAttribute)creditCardEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCreditCard__GetCCV() {
-		return creditCardEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCreditCard__GetCCNumber() {
-		return creditCardEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCreditCard__GetExpiryMonth() {
-		return creditCardEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCreditCard__GetExpiryYear() {
-		return creditCardEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCreditCard__GetFirstName() {
-		return creditCardEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCreditCard__GetLastName() {
-		return creditCardEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -852,20 +699,9 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 		createEAttribute(stayEClass, STAY__FROM_DATE);
 		createEAttribute(stayEClass, STAY__TO_DATE);
 		createEReference(stayEClass, STAY__CREDIT_CARD);
-		createEOperation(stayEClass, STAY___GET_ID);
-		createEOperation(stayEClass, STAY___GET_BILLS);
 		createEOperation(stayEClass, STAY___ADD_BILL);
-		createEOperation(stayEClass, STAY___GET_BOOKABLE);
-		createEOperation(stayEClass, STAY___SET_BOOKABLE);
-		createEOperation(stayEClass, STAY___GET_BOOKING);
-		createEOperation(stayEClass, STAY___GET_CHECKED_IN_GUESTS);
 		createEOperation(stayEClass, STAY___ADD_CHECKED_IN_GUEST);
 		createEOperation(stayEClass, STAY___CHECK_OUT_GUEST);
-		createEOperation(stayEClass, STAY___GET_CHECKED_OUT_GUESTS);
-		createEOperation(stayEClass, STAY___SET_FROM_DATE);
-		createEOperation(stayEClass, STAY___SET_TO_DATE);
-		createEOperation(stayEClass, STAY___GET_FROM_DATE);
-		createEOperation(stayEClass, STAY___GET_TO_DATE);
 
 		creditCardEClass = createEClass(CREDIT_CARD);
 		createEAttribute(creditCardEClass, CREDIT_CARD__CC_NUMBER);
@@ -874,12 +710,6 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 		createEAttribute(creditCardEClass, CREDIT_CARD__EXPIRY_YEAR);
 		createEAttribute(creditCardEClass, CREDIT_CARD__FIRST_NAME);
 		createEAttribute(creditCardEClass, CREDIT_CARD__LAST_NAME);
-		createEOperation(creditCardEClass, CREDIT_CARD___GET_CCV);
-		createEOperation(creditCardEClass, CREDIT_CARD___GET_CC_NUMBER);
-		createEOperation(creditCardEClass, CREDIT_CARD___GET_EXPIRY_MONTH);
-		createEOperation(creditCardEClass, CREDIT_CARD___GET_EXPIRY_YEAR);
-		createEOperation(creditCardEClass, CREDIT_CARD___GET_FIRST_NAME);
-		createEOperation(creditCardEClass, CREDIT_CARD___GET_LAST_NAME);
 
 		staysManagerEClass = createEClass(STAYS_MANAGER);
 		createEReference(staysManagerEClass, STAYS_MANAGER__STAY);
@@ -961,33 +791,11 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 		initEAttribute(getStay_ToDate(), ecorePackage.getEDate(), "toDate", null, 1, 1, Stay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getStay_CreditCard(), this.getCreditCard(), null, "creditCard", null, 1, 1, Stay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getStay__GetID(), null, "getID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStay__GetBills(), null, "getBills", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEOperation(getStay__AddBill(), null, "addBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStay__GetBookable(), null, "getBookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStay__SetBookable(), null, "setBookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStay__GetBooking(), null, "getBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStay__GetCheckedInGuests(), null, "getCheckedInGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getStay__AddCheckedInGuest(), null, "addCheckedInGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getStay__CheckOutGuest(), null, "checkOutGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStay__GetCheckedOutGuests(), null, "getCheckedOutGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStay__SetFromDate(), null, "setFromDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStay__SetToDate(), null, "setToDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStay__GetFromDate(), null, "getFromDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStay__GetToDate(), null, "getToDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(creditCardEClass, CreditCard.class, "CreditCard", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCreditCard_CcNumber(), theTypesPackage.getString(), "ccNumber", null, 1, 1, CreditCard.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -996,18 +804,6 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 		initEAttribute(getCreditCard_ExpiryYear(), theTypesPackage.getInteger(), "expiryYear", null, 1, 1, CreditCard.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCreditCard_FirstName(), theTypesPackage.getString(), "firstName", null, 1, 1, CreditCard.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCreditCard_LastName(), theTypesPackage.getString(), "lastName", null, 1, 1, CreditCard.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getCreditCard__GetCCV(), null, "getCCV", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCreditCard__GetCCNumber(), null, "getCCNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCreditCard__GetExpiryMonth(), null, "getExpiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCreditCard__GetExpiryYear(), null, "getExpiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCreditCard__GetFirstName(), null, "getFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCreditCard__GetLastName(), null, "getLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(staysManagerEClass, StaysManager.class, "StaysManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStaysManager_Stay(), this.getStay(), null, "stay", null, 0, -1, StaysManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Classes.Staff.impl.HourlySalaryContractImpl#getSalaryHour <em>Salary Hour</em>}</li>
+ *   <li>{@link Classes.Staff.impl.HourlySalaryContractImpl#getSalary <em>Salary</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,24 +26,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class HourlySalaryContractImpl extends SalaryContractImpl implements HourlySalaryContract {
 	/**
-	 * The default value of the '{@link #getSalaryHour() <em>Salary Hour</em>}' attribute.
+	 * The default value of the '{@link #getSalary() <em>Salary</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSalaryHour()
+	 * @see #getSalary()
 	 * @generated
 	 * @ordered
 	 */
 	protected static final double SALARY_EDEFAULT = 0.0;
 
 	/**
-	 * The cached value of the '{@link #getSalaryHour() <em>Salary Hour</em>}' attribute.
+	 * The cached value of the '{@link #getSalary() <em>Salary</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSalaryHour()
+	 * @see #getSalary()
 	 * @generated
 	 * @ordered
 	 */
-	protected double salaryHour = SALARY_EDEFAULT;
+	protected double salary = SALARY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,7 +70,7 @@ public class HourlySalaryContractImpl extends SalaryContractImpl implements Hour
 	 * @generated
 	 */
 	public double getSalary() {
-		return salaryHour;
+		return salary;
 	}
 
 	/**
@@ -78,11 +78,11 @@ public class HourlySalaryContractImpl extends SalaryContractImpl implements Hour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSalary(double newSalaryHour) {
-		double oldSalaryHour = salaryHour;
-		salaryHour = newSalaryHour;
+	public void setSalary(double newSalary) {
+		double oldSalary = salary;
+		salary = newSalary;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StaffPackage.HOURLY_SALARY_CONTRACT__SALARY_HOUR, oldSalaryHour, salaryHour));
+			eNotify(new ENotificationImpl(this, Notification.SET, StaffPackage.HOURLY_SALARY_CONTRACT__SALARY, oldSalary, salary));
 	}
 
 	/**
@@ -93,7 +93,7 @@ public class HourlySalaryContractImpl extends SalaryContractImpl implements Hour
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StaffPackage.HOURLY_SALARY_CONTRACT__SALARY_HOUR:
+			case StaffPackage.HOURLY_SALARY_CONTRACT__SALARY:
 				return getSalary();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -107,7 +107,7 @@ public class HourlySalaryContractImpl extends SalaryContractImpl implements Hour
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StaffPackage.HOURLY_SALARY_CONTRACT__SALARY_HOUR:
+			case StaffPackage.HOURLY_SALARY_CONTRACT__SALARY:
 				setSalary((Double)newValue);
 				return;
 		}
@@ -122,7 +122,7 @@ public class HourlySalaryContractImpl extends SalaryContractImpl implements Hour
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StaffPackage.HOURLY_SALARY_CONTRACT__SALARY_HOUR:
+			case StaffPackage.HOURLY_SALARY_CONTRACT__SALARY:
 				setSalary(SALARY_EDEFAULT);
 				return;
 		}
@@ -137,8 +137,8 @@ public class HourlySalaryContractImpl extends SalaryContractImpl implements Hour
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StaffPackage.HOURLY_SALARY_CONTRACT__SALARY_HOUR:
-				return salaryHour != SALARY_EDEFAULT;
+			case StaffPackage.HOURLY_SALARY_CONTRACT__SALARY:
+				return salary != SALARY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,8 +153,8 @@ public class HourlySalaryContractImpl extends SalaryContractImpl implements Hour
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (salaryHour: ");
-		result.append(salaryHour);
+		result.append(" (salary: ");
+		result.append(salary);
 		result.append(')');
 		return result.toString();
 	}

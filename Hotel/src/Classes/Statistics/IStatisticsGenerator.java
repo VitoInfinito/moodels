@@ -39,20 +39,4 @@ public interface IStatisticsGenerator extends EObject {
 	 */
 	void getProfitStatistics();
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void setStaticExpenses();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	double getStaticExpenses();
-
 } // IStatisticsGenerator

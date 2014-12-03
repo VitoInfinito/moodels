@@ -343,17 +343,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNbrGuests() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void addBookedStay() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -500,9 +489,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BookingsPackage.BOOKING___SET_NBR_GUESTS:
-				setNbrGuests();
-				return null;
 			case BookingsPackage.BOOKING___ADD_BOOKED_STAY:
 				addBookedStay();
 				return null;

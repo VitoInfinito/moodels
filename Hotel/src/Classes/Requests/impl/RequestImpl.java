@@ -4,15 +4,8 @@ package Classes.Requests.impl;
 
 import Classes.Requests.Request;
 import Classes.Requests.RequestsPackage;
-
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -179,61 +172,6 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getID() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getDesc() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getIsResolved() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDesc() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIsResolved() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -305,33 +243,6 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 				return isResolved != IS_RESOLVED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case RequestsPackage.REQUEST___GET_ID:
-				getID();
-				return null;
-			case RequestsPackage.REQUEST___GET_DESC:
-				getDesc();
-				return null;
-			case RequestsPackage.REQUEST___GET_IS_RESOLVED:
-				getIsResolved();
-				return null;
-			case RequestsPackage.REQUEST___SET_DESC:
-				setDesc();
-				return null;
-			case RequestsPackage.REQUEST___SET_IS_RESOLVED:
-				setIsResolved();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

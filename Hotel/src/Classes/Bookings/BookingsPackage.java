@@ -140,58 +140,13 @@ public interface BookingsPackage extends EPackage {
 	int BOOKING_FEATURE_COUNT = 7;
 
 	/**
-	 * The operation id for the '<em>Get Booking Nbr</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___GET_BOOKING_NBR = 0;
-
-	/**
-	 * The operation id for the '<em>Get Customer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___GET_CUSTOMER = 1;
-
-	/**
-	 * The operation id for the '<em>Get Nbr Guests</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___GET_NBR_GUESTS = 2;
-
-	/**
-	 * The operation id for the '<em>Get Booked Stays</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___GET_BOOKED_STAYS = 3;
-
-	/**
-	 * The operation id for the '<em>Set Nbr Guests</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___SET_NBR_GUESTS = 4;
-
-	/**
 	 * The operation id for the '<em>Add Booked Stay</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___ADD_BOOKED_STAY = 5;
+	int BOOKING___ADD_BOOKED_STAY = 0;
 
 	/**
 	 * The operation id for the '<em>Cancel Booked Stay</em>' operation.
@@ -200,25 +155,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___CANCEL_BOOKED_STAY = 6;
-
-	/**
-	 * The operation id for the '<em>Get Issue Date</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___GET_ISSUE_DATE = 7;
-
-	/**
-	 * The operation id for the '<em>Get Credit Card</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___GET_CREDIT_CARD = 8;
+	int BOOKING___CANCEL_BOOKED_STAY = 1;
 
 	/**
 	 * The number of operations of the '<em>Booking</em>' class.
@@ -227,7 +164,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 9;
+	int BOOKING_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link Classes.Bookings.IBookings <em>IBookings</em>}' class.
@@ -815,56 +752,6 @@ public interface BookingsPackage extends EPackage {
 	EAttribute getBooking_Requests();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.Booking#getBookingNbr() <em>Get Booking Nbr</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Booking Nbr</em>' operation.
-	 * @see Classes.Bookings.Booking#getBookingNbr()
-	 * @generated
-	 */
-	EOperation getBooking__GetBookingNbr();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.Booking#getCustomer() <em>Get Customer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Customer</em>' operation.
-	 * @see Classes.Bookings.Booking#getCustomer()
-	 * @generated
-	 */
-	EOperation getBooking__GetCustomer();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.Booking#getNbrGuests() <em>Get Nbr Guests</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Nbr Guests</em>' operation.
-	 * @see Classes.Bookings.Booking#getNbrGuests()
-	 * @generated
-	 */
-	EOperation getBooking__GetNbrGuests();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.Booking#getBookedStays() <em>Get Booked Stays</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Booked Stays</em>' operation.
-	 * @see Classes.Bookings.Booking#getBookedStays()
-	 * @generated
-	 */
-	EOperation getBooking__GetBookedStays();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.Booking#setNbrGuests() <em>Set Nbr Guests</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Nbr Guests</em>' operation.
-	 * @see Classes.Bookings.Booking#setNbrGuests()
-	 * @generated
-	 */
-	EOperation getBooking__SetNbrGuests();
-
-	/**
 	 * Returns the meta object for the '{@link Classes.Bookings.Booking#addBookedStay() <em>Add Booked Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -883,26 +770,6 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBooking__CancelBookedStay();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.Booking#getIssueDate() <em>Get Issue Date</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Issue Date</em>' operation.
-	 * @see Classes.Bookings.Booking#getIssueDate()
-	 * @generated
-	 */
-	EOperation getBooking__GetIssueDate();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.Booking#getCreditCard() <em>Get Credit Card</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Credit Card</em>' operation.
-	 * @see Classes.Bookings.Booking#getCreditCard()
-	 * @generated
-	 */
-	EOperation getBooking__GetCreditCard();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Bookings.BookingsManager <em>Manager</em>}'.
@@ -1301,46 +1168,6 @@ public interface BookingsPackage extends EPackage {
 		EAttribute BOOKING__REQUESTS = eINSTANCE.getBooking_Requests();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Booking Nbr</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___GET_BOOKING_NBR = eINSTANCE.getBooking__GetBookingNbr();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Customer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___GET_CUSTOMER = eINSTANCE.getBooking__GetCustomer();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Nbr Guests</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___GET_NBR_GUESTS = eINSTANCE.getBooking__GetNbrGuests();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Booked Stays</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___GET_BOOKED_STAYS = eINSTANCE.getBooking__GetBookedStays();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Nbr Guests</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___SET_NBR_GUESTS = eINSTANCE.getBooking__SetNbrGuests();
-
-		/**
 		 * The meta object literal for the '<em><b>Add Booked Stay</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1355,22 +1182,6 @@ public interface BookingsPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING___CANCEL_BOOKED_STAY = eINSTANCE.getBooking__CancelBookedStay();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Issue Date</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___GET_ISSUE_DATE = eINSTANCE.getBooking__GetIssueDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Credit Card</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___GET_CREDIT_CARD = eINSTANCE.getBooking__GetCreditCard();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Bookings.impl.BookingsManagerImpl <em>Manager</em>}' class.

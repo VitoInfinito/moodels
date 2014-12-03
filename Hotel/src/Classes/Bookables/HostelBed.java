@@ -46,12 +46,4 @@ public interface HostelBed extends Bookable {
 	 */
 	void setRoom(Room value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void setRoom();
-
 } // HostelBed

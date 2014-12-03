@@ -316,61 +316,6 @@ public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getIsDelivered() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getID() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIsDelivered() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDeliveryDate() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBookable() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void addService() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -405,17 +350,6 @@ public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	public void removeService() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBill() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -550,21 +484,6 @@ public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ServicesPackage.ROOM_SERVICE_ORDER___GET_IS_DELIVERED:
-				getIsDelivered();
-				return null;
-			case ServicesPackage.ROOM_SERVICE_ORDER___GET_ID:
-				getID();
-				return null;
-			case ServicesPackage.ROOM_SERVICE_ORDER___SET_IS_DELIVERED:
-				setIsDelivered();
-				return null;
-			case ServicesPackage.ROOM_SERVICE_ORDER___SET_DELIVERY_DATE:
-				setDeliveryDate();
-				return null;
-			case ServicesPackage.ROOM_SERVICE_ORDER___SET_BOOKABLE:
-				setBookable();
-				return null;
 			case ServicesPackage.ROOM_SERVICE_ORDER___ADD_SERVICE:
 				addService();
 				return null;
@@ -576,9 +495,6 @@ public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implement
 				return null;
 			case ServicesPackage.ROOM_SERVICE_ORDER___REMOVE_SERVICE:
 				removeService();
-				return null;
-			case ServicesPackage.ROOM_SERVICE_ORDER___SET_BILL:
-				setBill();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

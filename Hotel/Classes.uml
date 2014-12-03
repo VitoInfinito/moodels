@@ -13,12 +13,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9LbeHpsEeST-65JbGUt8g" name="description" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9LbeXpsEeST-65JbGUt8g" name="createBookable" visibility="package" isStatic="true"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9LbenpsEeST-65JbGUt8g" name="getID" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Lbe3psEeST-65JbGUt8g" name="getBaseprice" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9LbfHpsEeST-65JbGUt8g" name="getDescription" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9LbfXpsEeST-65JbGUt8g" name="setDescription" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9LbfnpsEeST-65JbGUt8g" name="setBaseprice" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9Lbf3psEeST-65JbGUt8g" name="Room" visibility="package" isAbstract="true">
       <generalization xmi:type="uml:Generalization" xmi:id="_w9LbgHpsEeST-65JbGUt8g" general="_w9Lbc3psEeST-65JbGUt8g"/>
@@ -26,7 +20,6 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9LbgnpsEeST-65JbGUt8g" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9Lbg3psEeST-65JbGUt8g" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9LbhHpsEeST-65JbGUt8g" name="getRoomLocation" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9LbhXpsEeST-65JbGUt8g" name="Hostel Bed" visibility="package">
       <generalization xmi:type="uml:Generalization" xmi:id="_w9LbhnpsEeST-65JbGUt8g" general="_w9Lbc3psEeST-65JbGUt8g"/>
@@ -34,8 +27,6 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9LbiHpsEeST-65JbGUt8g" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9LbiXpsEeST-65JbGUt8g" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9LbinpsEeST-65JbGUt8g" name="getRoom" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Lbi3psEeST-65JbGUt8g" name="setRoom" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9LbjHpsEeST-65JbGUt8g" name="Conference Room" visibility="package">
       <generalization xmi:type="uml:Generalization" xmi:id="_w9LbjXpsEeST-65JbGUt8g" general="_w9Lbf3psEeST-65JbGUt8g"/>
@@ -46,8 +37,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9LbkXpsEeST-65JbGUt8g" name="capacity" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9LbknpsEeST-65JbGUt8g" name="getCategory" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Lbk3psEeST-65JbGUt8g" name="setCategory" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9LblHpsEeST-65JbGUt8g" name="Hotel Room" visibility="package">
       <generalization xmi:type="uml:Generalization" xmi:id="_w9LblXpsEeST-65JbGUt8g" general="_w9Lbf3psEeST-65JbGUt8g"/>
@@ -58,8 +47,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9LbmXpsEeST-65JbGUt8g" name="nbrBeds" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9LbmnpsEeST-65JbGUt8g" name="getCategory" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Lbm3psEeST-65JbGUt8g" name="setCategory" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_w9LbnHpsEeST-65JbGUt8g" name="Hotel Room Category" visibility="package">
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_w9LbnXpsEeST-65JbGUt8g" name="StandardRoom" visibility="package"/>
@@ -112,9 +99,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9Lbw3psEeST-65JbGUt8g" name="addtionalInfo" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9LbxHpsEeST-65JbGUt8g" name="getFloor" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9LbxXpsEeST-65JbGUt8g" name="getInfo" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9LbxnpsEeST-65JbGUt8g" name="setFloor" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Lbx3psEeST-65JbGUt8g" name="setInfo" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9LbyXpsEeST-65JbGUt8g" visibility="private" memberEnd="_w9LbynpsEeST-65JbGUt8g _w9Lbh3psEeST-65JbGUt8g">
@@ -174,15 +158,8 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9MC8npsEeST-65JbGUt8g" name="requests" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MC83psEeST-65JbGUt8g" name="getBookingNbr" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MC9HpsEeST-65JbGUt8g" name="getCustomer" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MC9XpsEeST-65JbGUt8g" name="getNbrGuests" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MC9npsEeST-65JbGUt8g" name="getBookedStays" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MC93psEeST-65JbGUt8g" name="setNbrGuests" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MC-HpsEeST-65JbGUt8g" name="addBookedStay" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MC-XpsEeST-65JbGUt8g" name="cancelBookedStay" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MC-npsEeST-65JbGUt8g" name="getIssueDate" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MC-3psEeST-65JbGUt8g" name="getCreditCard" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9MC_HpsEeST-65JbGUt8g" name="BookingsManager" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9MC_XpsEeST-65JbGUt8g" name="booking" visibility="private" type="_w9MC53psEeST-65JbGUt8g" association="_w9MDMHpsEeST-65JbGUt8g">
@@ -378,8 +355,6 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MpynpsEeST-65JbGUt8g" name="getOccupancyStatistics"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Mpy3psEeST-65JbGUt8g" name="getRevenueStatistics"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MpzHpsEeST-65JbGUt8g" name="getProfitStatistics"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MpzXpsEeST-65JbGUt8g" name="setStaticExpenses"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MpznpsEeST-65JbGUt8g" name="getStaticExpenses"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9Mpz3psEeST-65JbGUt8g" name="StatisticsGenerator" visibility="package">
       <generalization xmi:type="uml:Generalization" xmi:id="_w9Mp0HpsEeST-65JbGUt8g" general="_w9MpyXpsEeST-65JbGUt8g"/>
@@ -432,15 +407,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9NQtHpsEeST-65JbGUt8g" name="id" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQtXpsEeST-65JbGUt8g" name="getName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQtnpsEeST-65JbGUt8g" name="setName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQt3psEeST-65JbGUt8g" name="getPrice" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQuHpsEeST-65JbGUt8g" name="setPrice" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQuXpsEeST-65JbGUt8g" name="getExpense" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQunpsEeST-65JbGUt8g" name="setExpense" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQu3psEeST-65JbGUt8g" name="getStock" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQvHpsEeST-65JbGUt8g" name="setStock" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQvXpsEeST-65JbGUt8g" name="getId" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_w9NQvnpsEeST-65JbGUt8g" name="IInventoryAccess">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQv3psEeST-65JbGUt8g" name="changeItemStock"/>
@@ -507,19 +473,14 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9NQ-HpsEeST-65JbGUt8g" value="*"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9NQ-XpsEeST-65JbGUt8g" name="restaurantTable" visibility="private" type="_w9NREnpsEeST-65JbGUt8g" association="_w9NRMHpsEeST-65JbGUt8g">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9NQ-npsEeST-65JbGUt8g" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9NQ-3psEeST-65JbGUt8g" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9NQ-npsEeST-65JbGUt8g"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9NQ-3psEeST-65JbGUt8g" value="*"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9NQ_HpsEeST-65JbGUt8g" name="menu" visibility="private" type="_w9NRGXpsEeST-65JbGUt8g" association="_w9NRNHpsEeST-65JbGUt8g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9NQ_XpsEeST-65JbGUt8g" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9NQ_npsEeST-65JbGUt8g" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQ_3psEeST-65JbGUt8g" name="getName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRAHpsEeST-65JbGUt8g" name="setName" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRAXpsEeST-65JbGUt8g" name="addReservation" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRAnpsEeST-65JbGUt8g" name="getAllTables" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRA3psEeST-65JbGUt8g" name="getAllReservations" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRBHpsEeST-65JbGUt8g" name="getMenu" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9NRBXpsEeST-65JbGUt8g" name="Reservation" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9NRBnpsEeST-65JbGUt8g" name="id" visibility="private">
@@ -538,11 +499,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9NRDHpsEeST-65JbGUt8g" name="to" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRDXpsEeST-65JbGUt8g" name="getReservedBy" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRDnpsEeST-65JbGUt8g" name="getId" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRD3psEeST-65JbGUt8g" name="setReservedBy" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NREHpsEeST-65JbGUt8g" name="getFromTime" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NREXpsEeST-65JbGUt8g" name="getToTime" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9NREnpsEeST-65JbGUt8g" name="RestaurantTable" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9NRE3psEeST-65JbGUt8g" name="tableNumber" visibility="private">
@@ -551,10 +507,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9NRFHpsEeST-65JbGUt8g" name="numberOfSeats" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRFXpsEeST-65JbGUt8g" name="getNumberOfSeats" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRFnpsEeST-65JbGUt8g" name="getTableNumber" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRF3psEeST-65JbGUt8g" name="setNumberOfSeats" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRGHpsEeST-65JbGUt8g" name="setTableNumber" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9NRGXpsEeST-65JbGUt8g" name="RestaurantMenu" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9NRGnpsEeST-65JbGUt8g" name="name" visibility="private">
@@ -565,9 +517,6 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9NRHHpsEeST-65JbGUt8g"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9NRHXpsEeST-65JbGUt8g" value="*"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRHnpsEeST-65JbGUt8g" name="getName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRH3psEeST-65JbGUt8g" name="setName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRIHpsEeST-65JbGUt8g" name="getItems" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRIXpsEeST-65JbGUt8g" name="addItem" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRInpsEeST-65JbGUt8g" name="removeItem" visibility="package"/>
     </packagedElement>
@@ -654,22 +603,13 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9N303psEeST-65JbGUt8g" name="ssid" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N31HpsEeST-65JbGUt8g" name="getFirstName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N31XpsEeST-65JbGUt8g" name="getLastName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N31npsEeST-65JbGUt8g" name="getJob" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N313psEeST-65JbGUt8g" name="getPhone" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N32HpsEeST-65JbGUt8g" name="getEmail" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N32XpsEeST-65JbGUt8g" name="getSSID" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N32npsEeST-65JbGUt8g" name="setFirstName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N323psEeST-65JbGUt8g" name="setLastName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N33HpsEeST-65JbGUt8g" name="setJob" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N33XpsEeST-65JbGUt8g" name="setPhone" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N33npsEeST-65JbGUt8g" name="setEmail" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N333psEeST-65JbGUt8g" name="getSalaryContract" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N34HpsEeST-65JbGUt8g" name="setSalaryContract" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9N34XpsEeST-65JbGUt8g" name="SalaryContract" isAbstract="true">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N34npsEeST-65JbGUt8g" name="getSalary" visibility="package" isAbstract="true"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N34npsEeST-65JbGUt8g" name="getSalary" visibility="package" isAbstract="true">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xdH-AHr0EeS6-b_7Ud_oOg" direction="return" effect="read">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9N343psEeST-65JbGUt8g" name="MonthlySalaryContract">
       <generalization xmi:type="uml:Generalization" xmi:id="_w9N35HpsEeST-65JbGUt8g" general="_w9N34XpsEeST-65JbGUt8g"/>
@@ -679,7 +619,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9N35npsEeST-65JbGUt8g" name="HourlySalaryContract">
       <generalization xmi:type="uml:Generalization" xmi:id="_w9N353psEeST-65JbGUt8g" general="_w9N34XpsEeST-65JbGUt8g"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9N36HpsEeST-65JbGUt8g" name="salaryHour" visibility="private">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9N36HpsEeST-65JbGUt8g" name="salary" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
       </ownedAttribute>
     </packagedElement>
@@ -761,17 +701,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9Oe9HpsEeST-65JbGUt8g" name="paymentDate" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe9XpsEeST-65JbGUt8g" name="getIsPaid" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe9npsEeST-65JbGUt8g" name="setIsPaid" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe93psEeST-65JbGUt8g" name="getPaymentType" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe-HpsEeST-65JbGUt8g" name="setPaymentType" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe-XpsEeST-65JbGUt8g" name="getID" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe-npsEeST-65JbGUt8g" name="getItems" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe-3psEeST-65JbGUt8g" name="getServices" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe_HpsEeST-65JbGUt8g" name="getBookable" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe_XpsEeST-65JbGUt8g" name="getIssueDate" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe_npsEeST-65JbGUt8g" name="getPaymentDate" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe_3psEeST-65JbGUt8g" name="setPaymentDate" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9OewnpsEeST-65JbGUt8g" name="bills" visibility="private" memberEnd="_w9Oew3psEeST-65JbGUt8g _w9Oe3npsEeST-65JbGUt8g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9Oew3psEeST-65JbGUt8g" name="billsManager" type="_w9Oe3XpsEeST-65JbGUt8g" association="_w9OewnpsEeST-65JbGUt8g">
@@ -796,9 +725,6 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9OfBnpsEeST-65JbGUt8g"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9OfB3psEeST-65JbGUt8g" value="*"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfCHpsEeST-65JbGUt8g" name="getName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfCXpsEeST-65JbGUt8g" name="setName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfCnpsEeST-65JbGUt8g" name="getItems" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfC3psEeST-65JbGUt8g" name="addItem" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfDHpsEeST-65JbGUt8g" name="removeItem" visibility="package"/>
     </packagedElement>
@@ -864,20 +790,10 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9OfOHpsEeST-65JbGUt8g" name="bill" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfOXpsEeST-65JbGUt8g" name="getIsDelivered" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfOnpsEeST-65JbGUt8g" name="getDeliveryDate" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfO3psEeST-65JbGUt8g" name="getBookable" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfPHpsEeST-65JbGUt8g" name="getItems" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfPXpsEeST-65JbGUt8g" name="getID" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfPnpsEeST-65JbGUt8g" name="setIsDelivered" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfP3psEeST-65JbGUt8g" name="setDeliveryDate" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfQHpsEeST-65JbGUt8g" name="setBookable" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfQXpsEeST-65JbGUt8g" name="addService" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfQnpsEeST-65JbGUt8g" name="addItem" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfQ3psEeST-65JbGUt8g" name="removeItem" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfRHpsEeST-65JbGUt8g" name="removeService" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfRXpsEeST-65JbGUt8g" name="getBill" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfRnpsEeST-65JbGUt8g" name="setBill" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9OfR3psEeST-65JbGUt8g" name="Service" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9OfSHpsEeST-65JbGUt8g" name="name" visibility="private">
@@ -892,13 +808,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9OfS3psEeST-65JbGUt8g" name="id" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfTHpsEeST-65JbGUt8g" name="getName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfTXpsEeST-65JbGUt8g" name="getPrice" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfTnpsEeST-65JbGUt8g" name="getExpense" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfT3psEeST-65JbGUt8g" name="getID" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfUHpsEeST-65JbGUt8g" name="setName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfUXpsEeST-65JbGUt8g" name="setPrice" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OfUnpsEeST-65JbGUt8g" name="setExpense" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_w9OfU3psEeST-65JbGUt8g" name="IServicesManage">
       <generalization xmi:type="uml:Generalization" xmi:id="_w9OfVHpsEeST-65JbGUt8g" general="_w9OfDXpsEeST-65JbGUt8g"/>
@@ -967,13 +876,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9PF5XpsEeST-65JbGUt8g" name="id" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF5npsEeST-65JbGUt8g" name="getDesc"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF53psEeST-65JbGUt8g" name="getIsNoted"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF6HpsEeST-65JbGUt8g" name="getIsResolved"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF6XpsEeST-65JbGUt8g" name="getID"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF6npsEeST-65JbGUt8g" name="setDesc"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF63psEeST-65JbGUt8g" name="setIsNoted"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF7HpsEeST-65JbGUt8g" name="setIsResolved"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9PF7npsEeST-65JbGUt8g" name="feedback" visibility="private" memberEnd="_w9PF73psEeST-65JbGUt8g _w9PF3XpsEeST-65JbGUt8g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9PF73psEeST-65JbGUt8g" name="feedbackManager" type="_w9PF3HpsEeST-65JbGUt8g" association="_w9PF7npsEeST-65JbGUt8g">
@@ -1050,25 +952,10 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9PGIXpsEeST-65JbGUt8g" name="account" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGInpsEeST-65JbGUt8g" name="getFirstName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGI3psEeST-65JbGUt8g" name="getLastName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGJHpsEeST-65JbGUt8g" name="getTitle" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGJXpsEeST-65JbGUt8g" name="getEmail" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGJnpsEeST-65JbGUt8g" name="getPhone" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGJ3psEeST-65JbGUt8g" name="getSSID" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGKHpsEeST-65JbGUt8g" name="setFirstName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGKXpsEeST-65JbGUt8g" name="setLastName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGKnpsEeST-65JbGUt8g" name="setTitle" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGK3psEeST-65JbGUt8g" name="setEmail" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGLHpsEeST-65JbGUt8g" name="setPhone" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGLXpsEeST-65JbGUt8g" name="addStay" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGLnpsEeST-65JbGUt8g" name="removeStay" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGL3psEeST-65JbGUt8g" name="addRequest" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGMHpsEeST-65JbGUt8g" name="getStays" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGMXpsEeST-65JbGUt8g" name="removeRequest" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGMnpsEeST-65JbGUt8g" name="getRequests" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGM3psEeST-65JbGUt8g" name="getAccount" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGNHpsEeST-65JbGUt8g" name="setAccount" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9PGNnpsEeST-65JbGUt8g" visibility="private" memberEnd="_w9PGN3psEeST-65JbGUt8g _w9PGDXpsEeST-65JbGUt8g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9PGN3psEeST-65JbGUt8g" name="guestManager" type="_w9PGDHpsEeST-65JbGUt8g" association="_w9PGNnpsEeST-65JbGUt8g">
@@ -1141,23 +1028,10 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9PGZnpsEeST-65JbGUt8g"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9PGZ3psEeST-65JbGUt8g" value="*"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGaHpsEeST-65JbGUt8g" name="getFirstName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGaXpsEeST-65JbGUt8g" name="getLastName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGanpsEeST-65JbGUt8g" name="getTitle" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGa3psEeST-65JbGUt8g" name="getEmail" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGbHpsEeST-65JbGUt8g" name="getPhone" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGbXpsEeST-65JbGUt8g" name="getSSID" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGbnpsEeST-65JbGUt8g" name="setFirstName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGb3psEeST-65JbGUt8g" name="setLastName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGcHpsEeST-65JbGUt8g" name="setTitle" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGcXpsEeST-65JbGUt8g" name="setEmail" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGcnpsEeST-65JbGUt8g" name="setPhone" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGc3psEeST-65JbGUt8g" name="addBooking" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGdHpsEeST-65JbGUt8g" name="removeBooking" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGdXpsEeST-65JbGUt8g" name="addRequest" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGdnpsEeST-65JbGUt8g" name="getBookings" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGd3psEeST-65JbGUt8g" name="removeRequest" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGeHpsEeST-65JbGUt8g" name="getRequests" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9PGenpsEeST-65JbGUt8g" name="customers" visibility="private" memberEnd="_w9PGe3psEeST-65JbGUt8g _w9PGV3psEeST-65JbGUt8g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9PGe3psEeST-65JbGUt8g" name="customerManager" type="_w9PGVnpsEeST-65JbGUt8g" association="_w9PGenpsEeST-65JbGUt8g">
@@ -1202,20 +1076,9 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9Ps83psEeST-65JbGUt8g" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9Ps9HpsEeST-65JbGUt8g" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps9XpsEeST-65JbGUt8g" name="getID" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps9npsEeST-65JbGUt8g" name="getBills" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps93psEeST-65JbGUt8g" name="addBill" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps-HpsEeST-65JbGUt8g" name="getBookable" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps-XpsEeST-65JbGUt8g" name="setBookable" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps-npsEeST-65JbGUt8g" name="getBooking" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps-3psEeST-65JbGUt8g" name="getCheckedInGuests" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps_HpsEeST-65JbGUt8g" name="addCheckedInGuest" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps_XpsEeST-65JbGUt8g" name="checkOutGuest" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps_npsEeST-65JbGUt8g" name="getCheckedOutGuests" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps_3psEeST-65JbGUt8g" name="setFromDate" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PtAHpsEeST-65JbGUt8g" name="setToDate" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PtAXpsEeST-65JbGUt8g" name="getFromDate" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PtAnpsEeST-65JbGUt8g" name="getToDate" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9PtA3psEeST-65JbGUt8g" name="StaysManager" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9PtBHpsEeST-65JbGUt8g" name="stay" visibility="private" type="_w9Ps43psEeST-65JbGUt8g" association="_w9PtQnpsEeST-65JbGUt8g">
@@ -1284,12 +1147,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9PtOXpsEeST-65JbGUt8g" name="lastName" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PtOnpsEeST-65JbGUt8g" name="getCCV" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PtO3psEeST-65JbGUt8g" name="getCCNumber" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PtPHpsEeST-65JbGUt8g" name="getExpiryMonth" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PtPXpsEeST-65JbGUt8g" name="getExpiryYear" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PtPnpsEeST-65JbGUt8g" name="getFirstName" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PtP3psEeST-65JbGUt8g" name="getLastName" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9PtQnpsEeST-65JbGUt8g" name="stays" visibility="private" memberEnd="_w9PtQ3psEeST-65JbGUt8g _w9PtBHpsEeST-65JbGUt8g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9PtQ3psEeST-65JbGUt8g" name="hotelStayManager" type="_w9PtA3psEeST-65JbGUt8g" association="_w9PtQnpsEeST-65JbGUt8g">
@@ -1351,11 +1208,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9QUBHpsEeST-65JbGUt8g" name="isResolved" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QUBXpsEeST-65JbGUt8g" name="getID" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QUBnpsEeST-65JbGUt8g" name="getDesc" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QUB3psEeST-65JbGUt8g" name="getIsResolved" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QUCHpsEeST-65JbGUt8g" name="setDesc" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QUCXpsEeST-65JbGUt8g" name="setIsResolved" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9QUC3psEeST-65JbGUt8g" name="requests" visibility="private" memberEnd="_w9QT_XpsEeST-65JbGUt8g _w9QUDHpsEeST-65JbGUt8g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9QUDHpsEeST-65JbGUt8g" name="requestManager" type="_w9QT_HpsEeST-65JbGUt8g" association="_w9QUC3psEeST-65JbGUt8g">
@@ -1376,10 +1228,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9QUIHpsEeST-65JbGUt8g" name="password" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QUIXpsEeST-65JbGUt8g" name="getPassword"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QUInpsEeST-65JbGUt8g" name="getUsername"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QUI3psEeST-65JbGUt8g" name="setPassword"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QUJHpsEeST-65JbGUt8g" name="setUsername"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_w9QUJXpsEeST-65JbGUt8g" name="AccountType" visibility="package">
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_w9QUJnpsEeST-65JbGUt8g" name="Manager" visibility="package"/>

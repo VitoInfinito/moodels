@@ -137,28 +137,6 @@ public class RoomLocationImpl extends MinimalEObjectImpl.Container implements Ro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getInfo() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFloor() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void setInfo() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -241,12 +219,6 @@ public class RoomLocationImpl extends MinimalEObjectImpl.Container implements Ro
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BookablesPackage.ROOM_LOCATION___GET_INFO:
-				getInfo();
-				return null;
-			case BookablesPackage.ROOM_LOCATION___SET_FLOOR:
-				setFloor();
-				return null;
 			case BookablesPackage.ROOM_LOCATION___SET_INFO:
 				setInfo();
 				return null;

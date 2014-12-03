@@ -46,12 +46,4 @@ public interface Room extends Bookable {
 	 */
 	void setLocation(RoomLocation value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	void getRoomLocation();
-
 } // Room

@@ -251,14 +251,6 @@ public interface Stay extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void setBookable();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
 	void addCheckedInGuest();
 
 	/**
@@ -268,21 +260,5 @@ public interface Stay extends EObject {
 	 * @generated
 	 */
 	void checkOutGuest();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void setFromDate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void setToDate();
 
 } // Stay

@@ -423,87 +423,6 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getItemType__GetName() {
-		return itemTypeEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getItemType__SetName() {
-		return itemTypeEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getItemType__GetPrice() {
-		return itemTypeEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getItemType__SetPrice() {
-		return itemTypeEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getItemType__GetExpense() {
-		return itemTypeEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getItemType__SetExpense() {
-		return itemTypeEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getItemType__GetStock() {
-		return itemTypeEClass.getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getItemType__SetStock() {
-		return itemTypeEClass.getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getItemType__GetId() {
-		return itemTypeEClass.getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public InventoryFactory getInventoryFactory() {
 		return (InventoryFactory)getEFactoryInstance();
 	}
@@ -552,15 +471,6 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		createEAttribute(itemTypeEClass, ITEM_TYPE__EXPENSE);
 		createEAttribute(itemTypeEClass, ITEM_TYPE__STOCK);
 		createEAttribute(itemTypeEClass, ITEM_TYPE__ID);
-		createEOperation(itemTypeEClass, ITEM_TYPE___GET_NAME);
-		createEOperation(itemTypeEClass, ITEM_TYPE___SET_NAME);
-		createEOperation(itemTypeEClass, ITEM_TYPE___GET_PRICE);
-		createEOperation(itemTypeEClass, ITEM_TYPE___SET_PRICE);
-		createEOperation(itemTypeEClass, ITEM_TYPE___GET_EXPENSE);
-		createEOperation(itemTypeEClass, ITEM_TYPE___SET_EXPENSE);
-		createEOperation(itemTypeEClass, ITEM_TYPE___GET_STOCK);
-		createEOperation(itemTypeEClass, ITEM_TYPE___SET_STOCK);
-		createEOperation(itemTypeEClass, ITEM_TYPE___GET_ID);
 	}
 
 	/**
@@ -635,24 +545,6 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		initEAttribute(getItemType_Expense(), theTypesPackage.getInteger(), "expense", null, 1, 1, ItemType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getItemType_Stock(), theTypesPackage.getInteger(), "stock", null, 1, 1, ItemType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getItemType_Id(), theTypesPackage.getInteger(), "id", null, 1, 1, ItemType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getItemType__GetName(), null, "getName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getItemType__SetName(), null, "setName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getItemType__GetPrice(), null, "getPrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getItemType__SetPrice(), null, "setPrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getItemType__GetExpense(), null, "getExpense", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getItemType__SetExpense(), null, "setExpense", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getItemType__GetStock(), null, "getStock", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getItemType__SetStock(), null, "setStock", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getItemType__GetId(), null, "getId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

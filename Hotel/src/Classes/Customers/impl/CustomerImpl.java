@@ -355,94 +355,6 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getFirstName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getLastName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getSSID() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFirstName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLastName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTitle() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEmail() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPhone() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void addBooking() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -621,30 +533,6 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case CustomersPackage.CUSTOMER___GET_FIRST_NAME:
-				getFirstName();
-				return null;
-			case CustomersPackage.CUSTOMER___GET_LAST_NAME:
-				getLastName();
-				return null;
-			case CustomersPackage.CUSTOMER___GET_SSID:
-				getSSID();
-				return null;
-			case CustomersPackage.CUSTOMER___SET_FIRST_NAME:
-				setFirstName();
-				return null;
-			case CustomersPackage.CUSTOMER___SET_LAST_NAME:
-				setLastName();
-				return null;
-			case CustomersPackage.CUSTOMER___SET_TITLE:
-				setTitle();
-				return null;
-			case CustomersPackage.CUSTOMER___SET_EMAIL:
-				setEmail();
-				return null;
-			case CustomersPackage.CUSTOMER___SET_PHONE:
-				setPhone();
-				return null;
 			case CustomersPackage.CUSTOMER___ADD_BOOKING:
 				addBooking();
 				return null;

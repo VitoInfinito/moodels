@@ -105,49 +105,13 @@ public interface AccountsPackage extends EPackage {
 	int ACCOUNT_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>Get Password</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCOUNT___GET_PASSWORD = 0;
-
-	/**
-	 * The operation id for the '<em>Get Username</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCOUNT___GET_USERNAME = 1;
-
-	/**
-	 * The operation id for the '<em>Set Password</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCOUNT___SET_PASSWORD = 2;
-
-	/**
-	 * The operation id for the '<em>Set Username</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCOUNT___SET_USERNAME = 3;
-
-	/**
 	 * The number of operations of the '<em>Account</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_OPERATION_COUNT = 4;
+	int ACCOUNT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link Classes.Accounts.IManageAccounts <em>IManage Accounts</em>}' class.
@@ -459,46 +423,6 @@ public interface AccountsPackage extends EPackage {
 	EAttribute getAccount_Password();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Accounts.Account#getPassword() <em>Get Password</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Password</em>' operation.
-	 * @see Classes.Accounts.Account#getPassword()
-	 * @generated
-	 */
-	EOperation getAccount__GetPassword();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Accounts.Account#getUsername() <em>Get Username</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Username</em>' operation.
-	 * @see Classes.Accounts.Account#getUsername()
-	 * @generated
-	 */
-	EOperation getAccount__GetUsername();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Accounts.Account#setPassword() <em>Set Password</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Password</em>' operation.
-	 * @see Classes.Accounts.Account#setPassword()
-	 * @generated
-	 */
-	EOperation getAccount__SetPassword();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Accounts.Account#setUsername() <em>Set Username</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Username</em>' operation.
-	 * @see Classes.Accounts.Account#setUsername()
-	 * @generated
-	 */
-	EOperation getAccount__SetUsername();
-
-	/**
 	 * Returns the meta object for class '{@link Classes.Accounts.AccountsManager <em>Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -695,38 +619,6 @@ public interface AccountsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACCOUNT__PASSWORD = eINSTANCE.getAccount_Password();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Password</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ACCOUNT___GET_PASSWORD = eINSTANCE.getAccount__GetPassword();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Username</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ACCOUNT___GET_USERNAME = eINSTANCE.getAccount__GetUsername();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Password</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ACCOUNT___SET_PASSWORD = eINSTANCE.getAccount__SetPassword();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Username</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ACCOUNT___SET_USERNAME = eINSTANCE.getAccount__SetUsername();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Accounts.impl.AccountsManagerImpl <em>Manager</em>}' class.

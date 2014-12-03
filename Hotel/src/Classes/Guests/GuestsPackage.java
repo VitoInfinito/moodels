@@ -628,112 +628,13 @@ public interface GuestsPackage extends EPackage {
 	int GUEST_FEATURE_COUNT = 9;
 
 	/**
-	 * The operation id for the '<em>Get First Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___GET_FIRST_NAME = 0;
-
-	/**
-	 * The operation id for the '<em>Get Last Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___GET_LAST_NAME = 1;
-
-	/**
-	 * The operation id for the '<em>Get Title</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___GET_TITLE = 2;
-
-	/**
-	 * The operation id for the '<em>Get Email</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___GET_EMAIL = 3;
-
-	/**
-	 * The operation id for the '<em>Get Phone</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___GET_PHONE = 4;
-
-	/**
-	 * The operation id for the '<em>Get SSID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___GET_SSID = 5;
-
-	/**
-	 * The operation id for the '<em>Set First Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___SET_FIRST_NAME = 6;
-
-	/**
-	 * The operation id for the '<em>Set Last Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___SET_LAST_NAME = 7;
-
-	/**
-	 * The operation id for the '<em>Set Title</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___SET_TITLE = 8;
-
-	/**
-	 * The operation id for the '<em>Set Email</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___SET_EMAIL = 9;
-
-	/**
-	 * The operation id for the '<em>Set Phone</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___SET_PHONE = 10;
-
-	/**
 	 * The operation id for the '<em>Add Stay</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST___ADD_STAY = 11;
+	int GUEST___ADD_STAY = 0;
 
 	/**
 	 * The operation id for the '<em>Remove Stay</em>' operation.
@@ -742,7 +643,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST___REMOVE_STAY = 12;
+	int GUEST___REMOVE_STAY = 1;
 
 	/**
 	 * The operation id for the '<em>Add Request</em>' operation.
@@ -751,16 +652,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST___ADD_REQUEST = 13;
-
-	/**
-	 * The operation id for the '<em>Get Stays</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___GET_STAYS = 14;
+	int GUEST___ADD_REQUEST = 2;
 
 	/**
 	 * The operation id for the '<em>Remove Request</em>' operation.
@@ -769,34 +661,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST___REMOVE_REQUEST = 15;
-
-	/**
-	 * The operation id for the '<em>Get Requests</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___GET_REQUESTS = 16;
-
-	/**
-	 * The operation id for the '<em>Get Account</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___GET_ACCOUNT = 17;
-
-	/**
-	 * The operation id for the '<em>Set Account</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___SET_ACCOUNT = 18;
+	int GUEST___REMOVE_REQUEST = 3;
 
 	/**
 	 * The number of operations of the '<em>Guest</em>' class.
@@ -805,7 +670,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST_OPERATION_COUNT = 19;
+	int GUEST_OPERATION_COUNT = 4;
 
 
 	/**
@@ -950,116 +815,6 @@ public interface GuestsPackage extends EPackage {
 	EAttribute getGuest_Account();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#getFirstName() <em>Get First Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get First Name</em>' operation.
-	 * @see Classes.Guests.Guest#getFirstName()
-	 * @generated
-	 */
-	EOperation getGuest__GetFirstName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#getLastName() <em>Get Last Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Last Name</em>' operation.
-	 * @see Classes.Guests.Guest#getLastName()
-	 * @generated
-	 */
-	EOperation getGuest__GetLastName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#getTitle() <em>Get Title</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Title</em>' operation.
-	 * @see Classes.Guests.Guest#getTitle()
-	 * @generated
-	 */
-	EOperation getGuest__GetTitle();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#getEmail() <em>Get Email</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Email</em>' operation.
-	 * @see Classes.Guests.Guest#getEmail()
-	 * @generated
-	 */
-	EOperation getGuest__GetEmail();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#getPhone() <em>Get Phone</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Phone</em>' operation.
-	 * @see Classes.Guests.Guest#getPhone()
-	 * @generated
-	 */
-	EOperation getGuest__GetPhone();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#getSSID() <em>Get SSID</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get SSID</em>' operation.
-	 * @see Classes.Guests.Guest#getSSID()
-	 * @generated
-	 */
-	EOperation getGuest__GetSSID();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#setFirstName() <em>Set First Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set First Name</em>' operation.
-	 * @see Classes.Guests.Guest#setFirstName()
-	 * @generated
-	 */
-	EOperation getGuest__SetFirstName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#setLastName() <em>Set Last Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Last Name</em>' operation.
-	 * @see Classes.Guests.Guest#setLastName()
-	 * @generated
-	 */
-	EOperation getGuest__SetLastName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#setTitle() <em>Set Title</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Title</em>' operation.
-	 * @see Classes.Guests.Guest#setTitle()
-	 * @generated
-	 */
-	EOperation getGuest__SetTitle();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#setEmail() <em>Set Email</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Email</em>' operation.
-	 * @see Classes.Guests.Guest#setEmail()
-	 * @generated
-	 */
-	EOperation getGuest__SetEmail();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#setPhone() <em>Set Phone</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Phone</em>' operation.
-	 * @see Classes.Guests.Guest#setPhone()
-	 * @generated
-	 */
-	EOperation getGuest__SetPhone();
-
-	/**
 	 * Returns the meta object for the '{@link Classes.Guests.Guest#addStay() <em>Add Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1090,16 +845,6 @@ public interface GuestsPackage extends EPackage {
 	EOperation getGuest__AddRequest();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#getStays() <em>Get Stays</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Stays</em>' operation.
-	 * @see Classes.Guests.Guest#getStays()
-	 * @generated
-	 */
-	EOperation getGuest__GetStays();
-
-	/**
 	 * Returns the meta object for the '{@link Classes.Guests.Guest#removeRequest() <em>Remove Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1108,36 +853,6 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getGuest__RemoveRequest();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#getRequests() <em>Get Requests</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Requests</em>' operation.
-	 * @see Classes.Guests.Guest#getRequests()
-	 * @generated
-	 */
-	EOperation getGuest__GetRequests();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#getAccount() <em>Get Account</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Account</em>' operation.
-	 * @see Classes.Guests.Guest#getAccount()
-	 * @generated
-	 */
-	EOperation getGuest__GetAccount();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#setAccount() <em>Set Account</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Account</em>' operation.
-	 * @see Classes.Guests.Guest#setAccount()
-	 * @generated
-	 */
-	EOperation getGuest__SetAccount();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Guests.IGuests <em>IGuests</em>}'.
@@ -1501,94 +1216,6 @@ public interface GuestsPackage extends EPackage {
 		EAttribute GUEST__ACCOUNT = eINSTANCE.getGuest_Account();
 
 		/**
-		 * The meta object literal for the '<em><b>Get First Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST___GET_FIRST_NAME = eINSTANCE.getGuest__GetFirstName();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Last Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST___GET_LAST_NAME = eINSTANCE.getGuest__GetLastName();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Title</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST___GET_TITLE = eINSTANCE.getGuest__GetTitle();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Email</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST___GET_EMAIL = eINSTANCE.getGuest__GetEmail();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Phone</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST___GET_PHONE = eINSTANCE.getGuest__GetPhone();
-
-		/**
-		 * The meta object literal for the '<em><b>Get SSID</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST___GET_SSID = eINSTANCE.getGuest__GetSSID();
-
-		/**
-		 * The meta object literal for the '<em><b>Set First Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST___SET_FIRST_NAME = eINSTANCE.getGuest__SetFirstName();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Last Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST___SET_LAST_NAME = eINSTANCE.getGuest__SetLastName();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Title</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST___SET_TITLE = eINSTANCE.getGuest__SetTitle();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Email</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST___SET_EMAIL = eINSTANCE.getGuest__SetEmail();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Phone</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST___SET_PHONE = eINSTANCE.getGuest__SetPhone();
-
-		/**
 		 * The meta object literal for the '<em><b>Add Stay</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1613,44 +1240,12 @@ public interface GuestsPackage extends EPackage {
 		EOperation GUEST___ADD_REQUEST = eINSTANCE.getGuest__AddRequest();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Stays</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST___GET_STAYS = eINSTANCE.getGuest__GetStays();
-
-		/**
 		 * The meta object literal for the '<em><b>Remove Request</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EOperation GUEST___REMOVE_REQUEST = eINSTANCE.getGuest__RemoveRequest();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Requests</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST___GET_REQUESTS = eINSTANCE.getGuest__GetRequests();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Account</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST___GET_ACCOUNT = eINSTANCE.getGuest__GetAccount();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Account</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST___SET_ACCOUNT = eINSTANCE.getGuest__SetAccount();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Guests.IGuests <em>IGuests</em>}' class.

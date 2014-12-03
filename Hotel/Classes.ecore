@@ -3,12 +3,6 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Classes" nsURI="http:///Classes.ecore" nsPrefix="Classes">
   <eSubpackages name="Bookables" nsURI="http:///Classes/Bookables.ecore" nsPrefix="Classes.Bookables">
     <eClassifiers xsi:type="ecore:EClass" name="Bookable" abstract="true">
-      <eOperations name="createBookable" ordered="false" lowerBound="1"/>
-      <eOperations name="getID" ordered="false" lowerBound="1"/>
-      <eOperations name="getBaseprice" ordered="false" lowerBound="1"/>
-      <eOperations name="getDescription" ordered="false" lowerBound="1"/>
-      <eOperations name="setDescription" ordered="false" lowerBound="1"/>
-      <eOperations name="setBaseprice" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseprice" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//Real"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
@@ -17,7 +11,6 @@
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Room" abstract="true" eSuperTypes="#//Bookables/Bookable">
-      <eOperations name="getRoomLocation" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="location" ordered="false"
           lowerBound="1" eType="#//Bookables/RoomLocation"/>
     </eClassifiers>
@@ -25,9 +18,6 @@
       <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
         <details key="originalName" value="Room Location"/>
       </eAnnotations>
-      <eOperations name="getFloor" ordered="false" lowerBound="1"/>
-      <eOperations name="getInfo" ordered="false" lowerBound="1"/>
-      <eOperations name="setFloor" ordered="false" lowerBound="1"/>
       <eOperations name="setInfo" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="floor" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
@@ -38,8 +28,6 @@
       <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
         <details key="originalName" value="Hostel Bed"/>
       </eAnnotations>
-      <eOperations name="getRoom" ordered="false" lowerBound="1"/>
-      <eOperations name="setRoom" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="room" ordered="false"
           lowerBound="1" eType="#//Bookables/Room"/>
     </eClassifiers>
@@ -47,8 +35,6 @@
       <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
         <details key="originalName" value="Conference Room"/>
       </eAnnotations>
-      <eOperations name="getCategory" ordered="false" lowerBound="1"/>
-      <eOperations name="setCategory" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" ordered="false"
           lowerBound="1" eType="#//Bookables/ConferenceRoomCategory"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" ordered="false"
@@ -67,8 +53,6 @@
       <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
         <details key="originalName" value="Hotel Room"/>
       </eAnnotations>
-      <eOperations name="getCategory" ordered="false" lowerBound="1"/>
-      <eOperations name="setCategory" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" ordered="false"
           lowerBound="1" eType="#//Bookables/HotelRoomCategory"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbrBeds" ordered="false"
@@ -114,20 +98,9 @@
   </eSubpackages>
   <eSubpackages name="Stays" nsURI="http:///Classes/Stays.ecore" nsPrefix="Classes.Stays">
     <eClassifiers xsi:type="ecore:EClass" name="Stay">
-      <eOperations name="getID" ordered="false" lowerBound="1"/>
-      <eOperations name="getBills" ordered="false" lowerBound="1"/>
       <eOperations name="addBill" ordered="false" lowerBound="1"/>
-      <eOperations name="getBookable" ordered="false" lowerBound="1"/>
-      <eOperations name="setBookable" ordered="false" lowerBound="1"/>
-      <eOperations name="getBooking" ordered="false" lowerBound="1"/>
-      <eOperations name="getCheckedInGuests" ordered="false" lowerBound="1"/>
       <eOperations name="addCheckedInGuest" ordered="false" lowerBound="1"/>
       <eOperations name="checkOutGuest" ordered="false" lowerBound="1"/>
-      <eOperations name="getCheckedOutGuests" ordered="false" lowerBound="1"/>
-      <eOperations name="setFromDate" ordered="false" lowerBound="1"/>
-      <eOperations name="setToDate" ordered="false" lowerBound="1"/>
-      <eOperations name="getFromDate" ordered="false" lowerBound="1"/>
-      <eOperations name="getToDate" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" ordered="false" lowerBound="1"
           eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookable" ordered="false"
@@ -148,12 +121,6 @@
           lowerBound="1" eType="#//Stays/CreditCard"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CreditCard">
-      <eOperations name="getCCV" ordered="false" lowerBound="1"/>
-      <eOperations name="getCCNumber" ordered="false" lowerBound="1"/>
-      <eOperations name="getExpiryMonth" ordered="false" lowerBound="1"/>
-      <eOperations name="getExpiryYear" ordered="false" lowerBound="1"/>
-      <eOperations name="getFirstName" ordered="false" lowerBound="1"/>
-      <eOperations name="getLastName" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ccNumber" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ccv" ordered="false"
@@ -272,17 +239,6 @@
           lowerBound="1" eType="#//Banking/CustomerProvides"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Bill">
-      <eOperations name="getIsPaid" ordered="false" lowerBound="1"/>
-      <eOperations name="setIsPaid" ordered="false" lowerBound="1"/>
-      <eOperations name="getPaymentType" ordered="false" lowerBound="1"/>
-      <eOperations name="setPaymentType" ordered="false" lowerBound="1"/>
-      <eOperations name="getID" ordered="false" lowerBound="1"/>
-      <eOperations name="getItems" ordered="false" lowerBound="1"/>
-      <eOperations name="getServices" ordered="false" lowerBound="1"/>
-      <eOperations name="getBookable" ordered="false" lowerBound="1"/>
-      <eOperations name="getIssueDate" ordered="false" lowerBound="1"/>
-      <eOperations name="getPaymentDate" ordered="false" lowerBound="1"/>
-      <eOperations name="setPaymentDate" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPaid" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="paymentType" ordered="false"
@@ -327,25 +283,10 @@
           lowerBound="1" eType="#//Accounts/IManageAccounts"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Guest">
-      <eOperations name="getFirstName" ordered="false" lowerBound="1"/>
-      <eOperations name="getLastName" ordered="false" lowerBound="1"/>
-      <eOperations name="getTitle" ordered="false" lowerBound="1"/>
-      <eOperations name="getEmail" ordered="false" lowerBound="1"/>
-      <eOperations name="getPhone" ordered="false" lowerBound="1"/>
-      <eOperations name="getSSID" ordered="false" lowerBound="1"/>
-      <eOperations name="setFirstName" ordered="false" lowerBound="1"/>
-      <eOperations name="setLastName" ordered="false" lowerBound="1"/>
-      <eOperations name="setTitle" ordered="false" lowerBound="1"/>
-      <eOperations name="setEmail" ordered="false" lowerBound="1"/>
-      <eOperations name="setPhone" ordered="false" lowerBound="1"/>
       <eOperations name="addStay" ordered="false" lowerBound="1"/>
       <eOperations name="removeStay" ordered="false" lowerBound="1"/>
       <eOperations name="addRequest" ordered="false" lowerBound="1"/>
-      <eOperations name="getStays" ordered="false" lowerBound="1"/>
       <eOperations name="removeRequest" ordered="false" lowerBound="1"/>
-      <eOperations name="getRequests" ordered="false" lowerBound="1"/>
-      <eOperations name="getAccount" ordered="false" lowerBound="1"/>
-      <eOperations name="setAccount" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstname" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastname" ordered="false"
@@ -392,10 +333,6 @@
   </eSubpackages>
   <eSubpackages name="Accounts" nsURI="http:///Classes/Accounts.ecore" nsPrefix="Classes.Accounts">
     <eClassifiers xsi:type="ecore:EClass" name="Account">
-      <eOperations name="getPassword" ordered="false" lowerBound="1"/>
-      <eOperations name="getUsername" ordered="false" lowerBound="1"/>
-      <eOperations name="setPassword" ordered="false" lowerBound="1"/>
-      <eOperations name="setUsername" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="accountType" ordered="false"
           lowerBound="1" eType="#//Accounts/AccountType"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="username" ordered="false"
@@ -446,15 +383,8 @@
   </eSubpackages>
   <eSubpackages name="Bookings" nsURI="http:///Classes/Bookings.ecore" nsPrefix="Classes.Bookings">
     <eClassifiers xsi:type="ecore:EClass" name="Booking">
-      <eOperations name="getBookingNbr" ordered="false" lowerBound="1"/>
-      <eOperations name="getCustomer" ordered="false" lowerBound="1"/>
-      <eOperations name="getNbrGuests" ordered="false" lowerBound="1"/>
-      <eOperations name="getBookedStays" ordered="false" lowerBound="1"/>
-      <eOperations name="setNbrGuests" ordered="false" lowerBound="1"/>
       <eOperations name="addBookedStay" ordered="false" lowerBound="1"/>
       <eOperations name="cancelBookedStay" ordered="false" lowerBound="1"/>
-      <eOperations name="getIssueDate" ordered="false" lowerBound="1"/>
-      <eOperations name="getCreditCard" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookedStays" ordered="false"
           upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="customer" ordered="false"
@@ -519,23 +449,10 @@
           upperBound="-1" eType="#//Customers/Customer"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Customer">
-      <eOperations name="getFirstName" ordered="false" lowerBound="1"/>
-      <eOperations name="getLastName" ordered="false" lowerBound="1"/>
-      <eOperations name="getTitle" ordered="false" lowerBound="1"/>
-      <eOperations name="getEmail" ordered="false" lowerBound="1"/>
-      <eOperations name="getPhone" ordered="false" lowerBound="1"/>
-      <eOperations name="getSSID" ordered="false" lowerBound="1"/>
-      <eOperations name="setFirstName" ordered="false" lowerBound="1"/>
-      <eOperations name="setLastName" ordered="false" lowerBound="1"/>
-      <eOperations name="setTitle" ordered="false" lowerBound="1"/>
-      <eOperations name="setEmail" ordered="false" lowerBound="1"/>
-      <eOperations name="setPhone" ordered="false" lowerBound="1"/>
       <eOperations name="addBooking" ordered="false" lowerBound="1"/>
       <eOperations name="removeBooking" ordered="false" lowerBound="1"/>
       <eOperations name="addRequest" ordered="false" lowerBound="1"/>
-      <eOperations name="getBookings" ordered="false" lowerBound="1"/>
       <eOperations name="removeRequest" ordered="false" lowerBound="1"/>
-      <eOperations name="getRequests" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstname" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastname" ordered="false"
@@ -605,8 +522,6 @@
       <eOperations name="getOccupancyStatistics" ordered="false" lowerBound="1"/>
       <eOperations name="getRevenueStatistics" ordered="false" lowerBound="1"/>
       <eOperations name="getProfitStatistics" ordered="false" lowerBound="1"/>
-      <eOperations name="setStaticExpenses" ordered="false" lowerBound="1"/>
-      <eOperations name="getStaticExpenses" ordered="false" lowerBound="1"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="StatisticsGenerator" eSuperTypes="#//Statistics/IStatisticsGenerator">
       <eStructuralFeatures xsi:type="ecore:EReference" name="iBillsAccess" ordered="false"
@@ -627,19 +542,6 @@
           ordered="false" lowerBound="1" eType="#//Statistics/IStatisticsGenerator"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Staff">
-      <eOperations name="getFirstName" ordered="false" lowerBound="1"/>
-      <eOperations name="getLastName" ordered="false" lowerBound="1"/>
-      <eOperations name="getJob" ordered="false" lowerBound="1"/>
-      <eOperations name="getPhone" ordered="false" lowerBound="1"/>
-      <eOperations name="getEmail" ordered="false" lowerBound="1"/>
-      <eOperations name="getSSID" ordered="false" lowerBound="1"/>
-      <eOperations name="setFirstName" ordered="false" lowerBound="1"/>
-      <eOperations name="setLastName" ordered="false" lowerBound="1"/>
-      <eOperations name="setJob" ordered="false" lowerBound="1"/>
-      <eOperations name="setPhone" ordered="false" lowerBound="1"/>
-      <eOperations name="setEmail" ordered="false" lowerBound="1"/>
-      <eOperations name="getSalaryContract" ordered="false" lowerBound="1"/>
-      <eOperations name="setSalaryContract" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="salaryContract" ordered="false"
           lowerBound="1" eType="#//Staff/SalaryContract"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstName" ordered="false"
@@ -656,14 +558,14 @@
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SalaryContract" abstract="true">
-      <eOperations name="getSalary" ordered="false" lowerBound="1"/>
+      <eOperations name="getSalary" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MonthlySalaryContract" eSuperTypes="#//Staff/SalaryContract">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="salary" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="HourlySalaryContract" eSuperTypes="#//Staff/SalaryContract">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="salaryHour" ordered="false"
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="salary" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IStaff" abstract="true" interface="true">
@@ -708,15 +610,6 @@
           upperBound="-1" eType="#//Inventory/ItemType"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ItemType">
-      <eOperations name="getName" ordered="false" lowerBound="1"/>
-      <eOperations name="setName" ordered="false" lowerBound="1"/>
-      <eOperations name="getPrice" ordered="false" lowerBound="1"/>
-      <eOperations name="setPrice" ordered="false" lowerBound="1"/>
-      <eOperations name="getExpense" ordered="false" lowerBound="1"/>
-      <eOperations name="setExpense" ordered="false" lowerBound="1"/>
-      <eOperations name="getStock" ordered="false" lowerBound="1"/>
-      <eOperations name="setStock" ordered="false" lowerBound="1"/>
-      <eOperations name="getId" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
@@ -766,27 +659,17 @@
           upperBound="-1" eType="#//Restaurants/Restaurant"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Restaurant">
-      <eOperations name="getName" ordered="false" lowerBound="1"/>
-      <eOperations name="setName" ordered="false" lowerBound="1"/>
       <eOperations name="addReservation" ordered="false" lowerBound="1"/>
-      <eOperations name="getAllTables" ordered="false" lowerBound="1"/>
-      <eOperations name="getAllReservations" ordered="false" lowerBound="1"/>
-      <eOperations name="getMenu" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="reservation" ordered="false"
           upperBound="-1" eType="#//Restaurants/Reservation"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="restaurantTable" ordered="false"
-          lowerBound="1" eType="#//Restaurants/RestaurantTable"/>
+          upperBound="-1" eType="#//Restaurants/RestaurantTable"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="menu" ordered="false"
           lowerBound="1" eType="#//Restaurants/RestaurantMenu"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Reservation">
-      <eOperations name="getReservedBy" ordered="false" lowerBound="1"/>
-      <eOperations name="getId" ordered="false" lowerBound="1"/>
-      <eOperations name="setReservedBy" ordered="false" lowerBound="1"/>
-      <eOperations name="getFromTime" ordered="false" lowerBound="1"/>
-      <eOperations name="getToTime" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
           eType="ecore:EDataType types.ecore#//Integer"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="reservedBy" ordered="false"
@@ -799,19 +682,12 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RestaurantTable">
-      <eOperations name="getNumberOfSeats" ordered="false" lowerBound="1"/>
-      <eOperations name="getTableNumber" ordered="false" lowerBound="1"/>
-      <eOperations name="setNumberOfSeats" ordered="false" lowerBound="1"/>
-      <eOperations name="setTableNumber" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="tableNumber" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSeats" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RestaurantMenu">
-      <eOperations name="getName" ordered="false" lowerBound="1"/>
-      <eOperations name="setName" ordered="false" lowerBound="1"/>
-      <eOperations name="getItems" ordered="false" lowerBound="1"/>
       <eOperations name="addItem" ordered="false" lowerBound="1"/>
       <eOperations name="removeItem" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
@@ -822,9 +698,6 @@
   </eSubpackages>
   <eSubpackages name="Services" nsURI="http:///Classes/Services.ecore" nsPrefix="Classes.Services">
     <eClassifiers xsi:type="ecore:EClass" name="RoomServiceMenu">
-      <eOperations name="getName" ordered="false" lowerBound="1"/>
-      <eOperations name="setName" ordered="false" lowerBound="1"/>
-      <eOperations name="getItems" ordered="false" lowerBound="1"/>
       <eOperations name="addItem" ordered="false" lowerBound="1"/>
       <eOperations name="removeItem" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
@@ -863,13 +736,6 @@
           lowerBound="1" eType="#//Services/RoomServiceMenu"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Service">
-      <eOperations name="getName" ordered="false" lowerBound="1"/>
-      <eOperations name="getPrice" ordered="false" lowerBound="1"/>
-      <eOperations name="getExpense" ordered="false" lowerBound="1"/>
-      <eOperations name="getID" ordered="false" lowerBound="1"/>
-      <eOperations name="setName" ordered="false" lowerBound="1"/>
-      <eOperations name="setPrice" ordered="false" lowerBound="1"/>
-      <eOperations name="setExpense" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
@@ -880,20 +746,10 @@
           eType="ecore:EDataType types.ecore#//String"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RoomServiceOrder">
-      <eOperations name="getIsDelivered" ordered="false" lowerBound="1"/>
-      <eOperations name="getDeliveryDate" ordered="false" lowerBound="1"/>
-      <eOperations name="getBookable" ordered="false" lowerBound="1"/>
-      <eOperations name="getItems" ordered="false" lowerBound="1"/>
-      <eOperations name="getID" ordered="false" lowerBound="1"/>
-      <eOperations name="setIsDelivered" ordered="false" lowerBound="1"/>
-      <eOperations name="setDeliveryDate" ordered="false" lowerBound="1"/>
-      <eOperations name="setBookable" ordered="false" lowerBound="1"/>
       <eOperations name="addService" ordered="false" lowerBound="1"/>
       <eOperations name="addItem" ordered="false" lowerBound="1"/>
       <eOperations name="removeItem" ordered="false" lowerBound="1"/>
       <eOperations name="removeService" ordered="false" lowerBound="1"/>
-      <eOperations name="getBill" ordered="false" lowerBound="1"/>
-      <eOperations name="setBill" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="service" ordered="false"
           upperBound="-1" eType="#//Services/Service"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDelivered" ordered="false"
@@ -937,13 +793,6 @@
           upperBound="-1" eType="#//Feedback/Feedback"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Feedback">
-      <eOperations name="getDesc" ordered="false" lowerBound="1"/>
-      <eOperations name="getIsNoted" ordered="false" lowerBound="1"/>
-      <eOperations name="getIsResolved" ordered="false" lowerBound="1"/>
-      <eOperations name="getID" ordered="false" lowerBound="1"/>
-      <eOperations name="setDesc" ordered="false" lowerBound="1"/>
-      <eOperations name="setIsNoted" ordered="false" lowerBound="1"/>
-      <eOperations name="setIsResolved" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isNoted" ordered="false"
@@ -971,11 +820,6 @@
           upperBound="-1" eType="#//Requests/Request"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Request">
-      <eOperations name="getID" ordered="false" lowerBound="1"/>
-      <eOperations name="getDesc" ordered="false" lowerBound="1"/>
-      <eOperations name="getIsResolved" ordered="false" lowerBound="1"/>
-      <eOperations name="setDesc" ordered="false" lowerBound="1"/>
-      <eOperations name="setIsResolved" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
           eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"

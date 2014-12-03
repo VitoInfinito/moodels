@@ -325,105 +325,6 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBill__GetIsPaid() {
-		return billEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBill__SetIsPaid() {
-		return billEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBill__GetPaymentType() {
-		return billEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBill__SetPaymentType() {
-		return billEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBill__GetID() {
-		return billEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBill__GetItems() {
-		return billEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBill__GetServices() {
-		return billEClass.getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBill__GetBookable() {
-		return billEClass.getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBill__GetIssueDate() {
-		return billEClass.getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBill__GetPaymentDate() {
-		return billEClass.getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBill__SetPaymentDate() {
-		return billEClass.getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getIBills() {
 		return iBillsEClass;
 	}
@@ -613,17 +514,6 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 		createEAttribute(billEClass, BILL__BOOKABLE);
 		createEAttribute(billEClass, BILL__ISSUE_DATE);
 		createEAttribute(billEClass, BILL__PAYMENT_DATE);
-		createEOperation(billEClass, BILL___GET_IS_PAID);
-		createEOperation(billEClass, BILL___SET_IS_PAID);
-		createEOperation(billEClass, BILL___GET_PAYMENT_TYPE);
-		createEOperation(billEClass, BILL___SET_PAYMENT_TYPE);
-		createEOperation(billEClass, BILL___GET_ID);
-		createEOperation(billEClass, BILL___GET_ITEMS);
-		createEOperation(billEClass, BILL___GET_SERVICES);
-		createEOperation(billEClass, BILL___GET_BOOKABLE);
-		createEOperation(billEClass, BILL___GET_ISSUE_DATE);
-		createEOperation(billEClass, BILL___GET_PAYMENT_DATE);
-		createEOperation(billEClass, BILL___SET_PAYMENT_DATE);
 
 		iBillsEClass = createEClass(IBILLS);
 		createEOperation(iBillsEClass, IBILLS___GET_IS_BILL_PAID);
@@ -692,28 +582,6 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 		initEAttribute(getBill_Bookable(), theTypesPackage.getString(), "bookable", null, 1, 1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBill_IssueDate(), ecorePackage.getEDate(), "issueDate", null, 1, 1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBill_PaymentDate(), ecorePackage.getEDate(), "paymentDate", null, 1, 1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getBill__GetIsPaid(), null, "getIsPaid", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBill__SetIsPaid(), null, "setIsPaid", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBill__GetPaymentType(), null, "getPaymentType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBill__SetPaymentType(), null, "setPaymentType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBill__GetID(), null, "getID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBill__GetItems(), null, "getItems", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBill__GetServices(), null, "getServices", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBill__GetBookable(), null, "getBookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBill__GetIssueDate(), null, "getIssueDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBill__GetPaymentDate(), null, "getPaymentDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBill__SetPaymentDate(), null, "setPaymentDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iBillsEClass, IBills.class, "IBills", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

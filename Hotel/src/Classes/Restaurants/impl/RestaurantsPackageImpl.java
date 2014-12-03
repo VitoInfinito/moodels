@@ -555,53 +555,8 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRestaurant__GetName() {
-		return restaurantEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRestaurant__SetName() {
-		return restaurantEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getRestaurant__AddReservation() {
-		return restaurantEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRestaurant__GetAllTables() {
-		return restaurantEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRestaurant__GetAllReservations() {
-		return restaurantEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRestaurant__GetMenu() {
-		return restaurantEClass.getEOperations().get(5);
+		return restaurantEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -663,51 +618,6 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getReservation__GetReservedBy() {
-		return reservationEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getReservation__GetId() {
-		return reservationEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getReservation__SetReservedBy() {
-		return reservationEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getReservation__GetFromTime() {
-		return reservationEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getReservation__GetToTime() {
-		return reservationEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getRestaurantTable() {
 		return restaurantTableEClass;
 	}
@@ -728,42 +638,6 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 	 */
 	public EAttribute getRestaurantTable_NumberOfSeats() {
 		return (EAttribute)restaurantTableEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRestaurantTable__GetNumberOfSeats() {
-		return restaurantTableEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRestaurantTable__GetTableNumber() {
-		return restaurantTableEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRestaurantTable__SetNumberOfSeats() {
-		return restaurantTableEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRestaurantTable__SetTableNumber() {
-		return restaurantTableEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -798,7 +672,7 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRestaurantMenu__GetName() {
+	public EOperation getRestaurantMenu__AddItem() {
 		return restaurantMenuEClass.getEOperations().get(0);
 	}
 
@@ -807,35 +681,8 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRestaurantMenu__SetName() {
-		return restaurantMenuEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRestaurantMenu__GetItems() {
-		return restaurantMenuEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRestaurantMenu__AddItem() {
-		return restaurantMenuEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getRestaurantMenu__RemoveItem() {
-		return restaurantMenuEClass.getEOperations().get(4);
+		return restaurantMenuEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -903,12 +750,7 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 		createEReference(restaurantEClass, RESTAURANT__RESERVATION);
 		createEReference(restaurantEClass, RESTAURANT__RESTAURANT_TABLE);
 		createEReference(restaurantEClass, RESTAURANT__MENU);
-		createEOperation(restaurantEClass, RESTAURANT___GET_NAME);
-		createEOperation(restaurantEClass, RESTAURANT___SET_NAME);
 		createEOperation(restaurantEClass, RESTAURANT___ADD_RESERVATION);
-		createEOperation(restaurantEClass, RESTAURANT___GET_ALL_TABLES);
-		createEOperation(restaurantEClass, RESTAURANT___GET_ALL_RESERVATIONS);
-		createEOperation(restaurantEClass, RESTAURANT___GET_MENU);
 
 		reservationEClass = createEClass(RESERVATION);
 		createEAttribute(reservationEClass, RESERVATION__ID);
@@ -916,26 +758,14 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 		createEReference(reservationEClass, RESERVATION__RESTAURANT_TABLE);
 		createEAttribute(reservationEClass, RESERVATION__FROM);
 		createEAttribute(reservationEClass, RESERVATION__TO);
-		createEOperation(reservationEClass, RESERVATION___GET_RESERVED_BY);
-		createEOperation(reservationEClass, RESERVATION___GET_ID);
-		createEOperation(reservationEClass, RESERVATION___SET_RESERVED_BY);
-		createEOperation(reservationEClass, RESERVATION___GET_FROM_TIME);
-		createEOperation(reservationEClass, RESERVATION___GET_TO_TIME);
 
 		restaurantTableEClass = createEClass(RESTAURANT_TABLE);
 		createEAttribute(restaurantTableEClass, RESTAURANT_TABLE__TABLE_NUMBER);
 		createEAttribute(restaurantTableEClass, RESTAURANT_TABLE__NUMBER_OF_SEATS);
-		createEOperation(restaurantTableEClass, RESTAURANT_TABLE___GET_NUMBER_OF_SEATS);
-		createEOperation(restaurantTableEClass, RESTAURANT_TABLE___GET_TABLE_NUMBER);
-		createEOperation(restaurantTableEClass, RESTAURANT_TABLE___SET_NUMBER_OF_SEATS);
-		createEOperation(restaurantTableEClass, RESTAURANT_TABLE___SET_TABLE_NUMBER);
 
 		restaurantMenuEClass = createEClass(RESTAURANT_MENU);
 		createEAttribute(restaurantMenuEClass, RESTAURANT_MENU__NAME);
 		createEAttribute(restaurantMenuEClass, RESTAURANT_MENU__ITEMS);
-		createEOperation(restaurantMenuEClass, RESTAURANT_MENU___GET_NAME);
-		createEOperation(restaurantMenuEClass, RESTAURANT_MENU___SET_NAME);
-		createEOperation(restaurantMenuEClass, RESTAURANT_MENU___GET_ITEMS);
 		createEOperation(restaurantMenuEClass, RESTAURANT_MENU___ADD_ITEM);
 		createEOperation(restaurantMenuEClass, RESTAURANT_MENU___REMOVE_ITEM);
 	}
@@ -1035,20 +865,10 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 		initEClass(restaurantEClass, Restaurant.class, "Restaurant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRestaurant_Name(), theTypesPackage.getString(), "name", null, 1, 1, Restaurant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRestaurant_Reservation(), this.getReservation(), null, "reservation", null, 0, -1, Restaurant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getRestaurant_RestaurantTable(), this.getRestaurantTable(), null, "restaurantTable", null, 1, 1, Restaurant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRestaurant_RestaurantTable(), this.getRestaurantTable(), null, "restaurantTable", null, 0, -1, Restaurant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRestaurant_Menu(), this.getRestaurantMenu(), null, "menu", null, 1, 1, Restaurant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getRestaurant__GetName(), null, "getName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRestaurant__SetName(), null, "setName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEOperation(getRestaurant__AddReservation(), null, "addReservation", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRestaurant__GetAllTables(), null, "getAllTables", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRestaurant__GetAllReservations(), null, "getAllReservations", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRestaurant__GetMenu(), null, "getMenu", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(reservationEClass, Reservation.class, "Reservation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getReservation_Id(), theTypesPackage.getInteger(), "id", null, 1, 1, Reservation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1057,37 +877,13 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 		initEAttribute(getReservation_From(), ecorePackage.getEDate(), "from", null, 1, 1, Reservation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getReservation_To(), ecorePackage.getEDate(), "to", null, 1, 1, Reservation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getReservation__GetReservedBy(), null, "getReservedBy", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getReservation__GetId(), null, "getId", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getReservation__SetReservedBy(), null, "setReservedBy", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getReservation__GetFromTime(), null, "getFromTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getReservation__GetToTime(), null, "getToTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEClass(restaurantTableEClass, RestaurantTable.class, "RestaurantTable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRestaurantTable_TableNumber(), theTypesPackage.getInteger(), "tableNumber", null, 1, 1, RestaurantTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRestaurantTable_NumberOfSeats(), theTypesPackage.getInteger(), "numberOfSeats", null, 1, 1, RestaurantTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getRestaurantTable__GetNumberOfSeats(), null, "getNumberOfSeats", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRestaurantTable__GetTableNumber(), null, "getTableNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRestaurantTable__SetNumberOfSeats(), null, "setNumberOfSeats", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRestaurantTable__SetTableNumber(), null, "setTableNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEClass(restaurantMenuEClass, RestaurantMenu.class, "RestaurantMenu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRestaurantMenu_Name(), theTypesPackage.getString(), "name", null, 1, 1, RestaurantMenu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRestaurantMenu_Items(), theTypesPackage.getString(), "items", null, 0, -1, RestaurantMenu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getRestaurantMenu__GetName(), null, "getName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRestaurantMenu__SetName(), null, "setName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRestaurantMenu__GetItems(), null, "getItems", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getRestaurantMenu__AddItem(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

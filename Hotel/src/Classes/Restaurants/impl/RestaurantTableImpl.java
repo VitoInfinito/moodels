@@ -4,15 +4,8 @@ package Classes.Restaurants.impl;
 
 import Classes.Restaurants.RestaurantTable;
 import Classes.Restaurants.RestaurantsPackage;
-
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -137,28 +130,6 @@ public class RestaurantTableImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNumberOfSeats() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTableNumber() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -220,24 +191,6 @@ public class RestaurantTableImpl extends MinimalEObjectImpl.Container implements
 				return numberOfSeats != NUMBER_OF_SEATS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case RestaurantsPackage.RESTAURANT_TABLE___SET_NUMBER_OF_SEATS:
-				setNumberOfSeats();
-				return null;
-			case RestaurantsPackage.RESTAURANT_TABLE___SET_TABLE_NUMBER:
-				setTableNumber();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

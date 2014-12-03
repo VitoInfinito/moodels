@@ -318,60 +318,6 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookable__CreateBookable() {
-		return bookableEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBookable__GetID() {
-		return bookableEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBookable__GetBaseprice() {
-		return bookableEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBookable__GetDescription() {
-		return bookableEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBookable__SetDescription() {
-		return bookableEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBookable__SetBaseprice() {
-		return bookableEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getRoom() {
 		return roomEClass;
 	}
@@ -383,15 +329,6 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 */
 	public EReference getRoom_Location() {
 		return (EReference)roomEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoom__GetRoomLocation() {
-		return roomEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -426,35 +363,8 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomLocation__GetFloor() {
-		return roomLocationEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomLocation__GetInfo() {
-		return roomLocationEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomLocation__SetFloor() {
-		return roomLocationEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getRoomLocation__SetInfo() {
-		return roomLocationEClass.getEOperations().get(3);
+		return roomLocationEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -473,24 +383,6 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 */
 	public EReference getHostelBed_Room() {
 		return (EReference)hostelBedEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getHostelBed__GetRoom() {
-		return hostelBedEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getHostelBed__SetRoom() {
-		return hostelBedEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -525,24 +417,6 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getConferenceRoom__GetCategory() {
-		return conferenceRoomEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getConferenceRoom__SetCategory() {
-		return conferenceRoomEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getHotelRoom() {
 		return hotelRoomEClass;
 	}
@@ -563,24 +437,6 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 */
 	public EAttribute getHotelRoom_NbrBeds() {
 		return (EAttribute)hotelRoomEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getHotelRoom__GetCategory() {
-		return hotelRoomEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getHotelRoom__SetCategory() {
-		return hotelRoomEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -831,41 +687,25 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		createEAttribute(bookableEClass, BOOKABLE__BASEPRICE);
 		createEAttribute(bookableEClass, BOOKABLE__ID);
 		createEAttribute(bookableEClass, BOOKABLE__DESCRIPTION);
-		createEOperation(bookableEClass, BOOKABLE___CREATE_BOOKABLE);
-		createEOperation(bookableEClass, BOOKABLE___GET_ID);
-		createEOperation(bookableEClass, BOOKABLE___GET_BASEPRICE);
-		createEOperation(bookableEClass, BOOKABLE___GET_DESCRIPTION);
-		createEOperation(bookableEClass, BOOKABLE___SET_DESCRIPTION);
-		createEOperation(bookableEClass, BOOKABLE___SET_BASEPRICE);
 
 		roomEClass = createEClass(ROOM);
 		createEReference(roomEClass, ROOM__LOCATION);
-		createEOperation(roomEClass, ROOM___GET_ROOM_LOCATION);
 
 		roomLocationEClass = createEClass(ROOM_LOCATION);
 		createEAttribute(roomLocationEClass, ROOM_LOCATION__FLOOR);
 		createEAttribute(roomLocationEClass, ROOM_LOCATION__ADDTIONAL_INFO);
-		createEOperation(roomLocationEClass, ROOM_LOCATION___GET_FLOOR);
-		createEOperation(roomLocationEClass, ROOM_LOCATION___GET_INFO);
-		createEOperation(roomLocationEClass, ROOM_LOCATION___SET_FLOOR);
 		createEOperation(roomLocationEClass, ROOM_LOCATION___SET_INFO);
 
 		hostelBedEClass = createEClass(HOSTEL_BED);
 		createEReference(hostelBedEClass, HOSTEL_BED__ROOM);
-		createEOperation(hostelBedEClass, HOSTEL_BED___GET_ROOM);
-		createEOperation(hostelBedEClass, HOSTEL_BED___SET_ROOM);
 
 		conferenceRoomEClass = createEClass(CONFERENCE_ROOM);
 		createEAttribute(conferenceRoomEClass, CONFERENCE_ROOM__CATEGORY);
 		createEAttribute(conferenceRoomEClass, CONFERENCE_ROOM__CAPACITY);
-		createEOperation(conferenceRoomEClass, CONFERENCE_ROOM___GET_CATEGORY);
-		createEOperation(conferenceRoomEClass, CONFERENCE_ROOM___SET_CATEGORY);
 
 		hotelRoomEClass = createEClass(HOTEL_ROOM);
 		createEAttribute(hotelRoomEClass, HOTEL_ROOM__CATEGORY);
 		createEAttribute(hotelRoomEClass, HOTEL_ROOM__NBR_BEDS);
-		createEOperation(hotelRoomEClass, HOTEL_ROOM___GET_CATEGORY);
-		createEOperation(hotelRoomEClass, HOTEL_ROOM___SET_CATEGORY);
 
 		iBookablesManageEClass = createEClass(IBOOKABLES_MANAGE);
 		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___ADD_BOOKABLE);
@@ -942,57 +782,25 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		initEAttribute(getBookable_Id(), theTypesPackage.getString(), "id", null, 1, 1, Bookable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBookable_Description(), theTypesPackage.getString(), "description", null, 1, 1, Bookable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getBookable__CreateBookable(), null, "createBookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBookable__GetID(), null, "getID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBookable__GetBaseprice(), null, "getBaseprice", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBookable__GetDescription(), null, "getDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBookable__SetDescription(), null, "setDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBookable__SetBaseprice(), null, "setBaseprice", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEClass(roomEClass, Room.class, "Room", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoom_Location(), this.getRoomLocation(), null, "location", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getRoom__GetRoomLocation(), null, "getRoomLocation", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(roomLocationEClass, RoomLocation.class, "RoomLocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoomLocation_Floor(), theTypesPackage.getInteger(), "floor", null, 1, 1, RoomLocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomLocation_AddtionalInfo(), theTypesPackage.getString(), "addtionalInfo", null, 1, 1, RoomLocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getRoomLocation__GetFloor(), null, "getFloor", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomLocation__GetInfo(), null, "getInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomLocation__SetFloor(), null, "setFloor", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getRoomLocation__SetInfo(), null, "setInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(hostelBedEClass, HostelBed.class, "HostelBed", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getHostelBed_Room(), this.getRoom(), null, "room", null, 1, 1, HostelBed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getHostelBed__GetRoom(), null, "getRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getHostelBed__SetRoom(), null, "setRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEClass(conferenceRoomEClass, ConferenceRoom.class, "ConferenceRoom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getConferenceRoom_Category(), this.getConferenceRoomCategory(), "category", null, 1, 1, ConferenceRoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getConferenceRoom_Capacity(), theTypesPackage.getInteger(), "capacity", null, 1, 1, ConferenceRoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getConferenceRoom__GetCategory(), null, "getCategory", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getConferenceRoom__SetCategory(), null, "setCategory", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEClass(hotelRoomEClass, HotelRoom.class, "HotelRoom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHotelRoom_Category(), this.getHotelRoomCategory(), "category", null, 1, 1, HotelRoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getHotelRoom_NbrBeds(), theTypesPackage.getInteger(), "nbrBeds", null, 1, 1, HotelRoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getHotelRoom__GetCategory(), null, "getCategory", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getHotelRoom__SetCategory(), null, "setCategory", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iBookablesManageEClass, IBookablesManage.class, "IBookablesManage", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -72,14 +72,6 @@ public interface RestaurantMenu extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void setName();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
 	void addItem();
 
 	/**

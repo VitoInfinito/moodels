@@ -340,76 +340,13 @@ public interface FeedbackPackage extends EPackage {
 	int FEEDBACK_FEATURE_COUNT = 4;
 
 	/**
-	 * The operation id for the '<em>Get Desc</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEEDBACK___GET_DESC = 0;
-
-	/**
-	 * The operation id for the '<em>Get Is Noted</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEEDBACK___GET_IS_NOTED = 1;
-
-	/**
-	 * The operation id for the '<em>Get Is Resolved</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEEDBACK___GET_IS_RESOLVED = 2;
-
-	/**
-	 * The operation id for the '<em>Get ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEEDBACK___GET_ID = 3;
-
-	/**
-	 * The operation id for the '<em>Set Desc</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEEDBACK___SET_DESC = 4;
-
-	/**
-	 * The operation id for the '<em>Set Is Noted</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEEDBACK___SET_IS_NOTED = 5;
-
-	/**
-	 * The operation id for the '<em>Set Is Resolved</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEEDBACK___SET_IS_RESOLVED = 6;
-
-	/**
 	 * The number of operations of the '<em>Feedback</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEEDBACK_OPERATION_COUNT = 7;
+	int FEEDBACK_OPERATION_COUNT = 0;
 
 
 	/**
@@ -588,76 +525,6 @@ public interface FeedbackPackage extends EPackage {
 	EAttribute getFeedback_Id();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.Feedback#getDesc() <em>Get Desc</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Desc</em>' operation.
-	 * @see Classes.Feedback.Feedback#getDesc()
-	 * @generated
-	 */
-	EOperation getFeedback__GetDesc();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.Feedback#getIsNoted() <em>Get Is Noted</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Is Noted</em>' operation.
-	 * @see Classes.Feedback.Feedback#getIsNoted()
-	 * @generated
-	 */
-	EOperation getFeedback__GetIsNoted();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.Feedback#getIsResolved() <em>Get Is Resolved</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Is Resolved</em>' operation.
-	 * @see Classes.Feedback.Feedback#getIsResolved()
-	 * @generated
-	 */
-	EOperation getFeedback__GetIsResolved();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.Feedback#getID() <em>Get ID</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get ID</em>' operation.
-	 * @see Classes.Feedback.Feedback#getID()
-	 * @generated
-	 */
-	EOperation getFeedback__GetID();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.Feedback#setDesc() <em>Set Desc</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Desc</em>' operation.
-	 * @see Classes.Feedback.Feedback#setDesc()
-	 * @generated
-	 */
-	EOperation getFeedback__SetDesc();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.Feedback#setIsNoted() <em>Set Is Noted</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Is Noted</em>' operation.
-	 * @see Classes.Feedback.Feedback#setIsNoted()
-	 * @generated
-	 */
-	EOperation getFeedback__SetIsNoted();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.Feedback#setIsResolved() <em>Set Is Resolved</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Is Resolved</em>' operation.
-	 * @see Classes.Feedback.Feedback#setIsResolved()
-	 * @generated
-	 */
-	EOperation getFeedback__SetIsResolved();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -821,62 +688,6 @@ public interface FeedbackPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FEEDBACK__ID = eINSTANCE.getFeedback_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Desc</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation FEEDBACK___GET_DESC = eINSTANCE.getFeedback__GetDesc();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Is Noted</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation FEEDBACK___GET_IS_NOTED = eINSTANCE.getFeedback__GetIsNoted();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Is Resolved</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation FEEDBACK___GET_IS_RESOLVED = eINSTANCE.getFeedback__GetIsResolved();
-
-		/**
-		 * The meta object literal for the '<em><b>Get ID</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation FEEDBACK___GET_ID = eINSTANCE.getFeedback__GetID();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Desc</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation FEEDBACK___SET_DESC = eINSTANCE.getFeedback__SetDesc();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Is Noted</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation FEEDBACK___SET_IS_NOTED = eINSTANCE.getFeedback__SetIsNoted();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Is Resolved</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation FEEDBACK___SET_IS_RESOLVED = eINSTANCE.getFeedback__SetIsResolved();
 
 	}
 

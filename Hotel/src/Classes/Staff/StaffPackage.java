@@ -484,130 +484,13 @@ public interface StaffPackage extends EPackage {
 	int STAFF_FEATURE_COUNT = 7;
 
 	/**
-	 * The operation id for the '<em>Get First Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF___GET_FIRST_NAME = 0;
-
-	/**
-	 * The operation id for the '<em>Get Last Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF___GET_LAST_NAME = 1;
-
-	/**
-	 * The operation id for the '<em>Get Job</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF___GET_JOB = 2;
-
-	/**
-	 * The operation id for the '<em>Get Phone</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF___GET_PHONE = 3;
-
-	/**
-	 * The operation id for the '<em>Get Email</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF___GET_EMAIL = 4;
-
-	/**
-	 * The operation id for the '<em>Get SSID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF___GET_SSID = 5;
-
-	/**
-	 * The operation id for the '<em>Set First Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF___SET_FIRST_NAME = 6;
-
-	/**
-	 * The operation id for the '<em>Set Last Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF___SET_LAST_NAME = 7;
-
-	/**
-	 * The operation id for the '<em>Set Job</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF___SET_JOB = 8;
-
-	/**
-	 * The operation id for the '<em>Set Phone</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF___SET_PHONE = 9;
-
-	/**
-	 * The operation id for the '<em>Set Email</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF___SET_EMAIL = 10;
-
-	/**
-	 * The operation id for the '<em>Get Salary Contract</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF___GET_SALARY_CONTRACT = 11;
-
-	/**
-	 * The operation id for the '<em>Set Salary Contract</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF___SET_SALARY_CONTRACT = 12;
-
-	/**
 	 * The number of operations of the '<em>Staff</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_OPERATION_COUNT = 13;
+	int STAFF_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link Classes.Staff.impl.SalaryContractImpl <em>Salary Contract</em>}' class.
@@ -703,13 +586,13 @@ public interface StaffPackage extends EPackage {
 	int HOURLY_SALARY_CONTRACT = 4;
 
 	/**
-	 * The feature id for the '<em><b>Salary Hour</b></em>' attribute.
+	 * The feature id for the '<em><b>Salary</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOURLY_SALARY_CONTRACT__SALARY_HOUR = SALARY_CONTRACT_FEATURE_COUNT + 0;
+	int HOURLY_SALARY_CONTRACT__SALARY = SALARY_CONTRACT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Hourly Salary Contract</em>' class.
@@ -859,136 +742,6 @@ public interface StaffPackage extends EPackage {
 	EAttribute getStaff_Ssid();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.Staff#getFirstName() <em>Get First Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get First Name</em>' operation.
-	 * @see Classes.Staff.Staff#getFirstName()
-	 * @generated
-	 */
-	EOperation getStaff__GetFirstName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Staff.Staff#getLastName() <em>Get Last Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Last Name</em>' operation.
-	 * @see Classes.Staff.Staff#getLastName()
-	 * @generated
-	 */
-	EOperation getStaff__GetLastName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Staff.Staff#getJob() <em>Get Job</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Job</em>' operation.
-	 * @see Classes.Staff.Staff#getJob()
-	 * @generated
-	 */
-	EOperation getStaff__GetJob();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Staff.Staff#getPhone() <em>Get Phone</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Phone</em>' operation.
-	 * @see Classes.Staff.Staff#getPhone()
-	 * @generated
-	 */
-	EOperation getStaff__GetPhone();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Staff.Staff#getEmail() <em>Get Email</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Email</em>' operation.
-	 * @see Classes.Staff.Staff#getEmail()
-	 * @generated
-	 */
-	EOperation getStaff__GetEmail();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Staff.Staff#getSSID() <em>Get SSID</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get SSID</em>' operation.
-	 * @see Classes.Staff.Staff#getSSID()
-	 * @generated
-	 */
-	EOperation getStaff__GetSSID();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Staff.Staff#setFirstName() <em>Set First Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set First Name</em>' operation.
-	 * @see Classes.Staff.Staff#setFirstName()
-	 * @generated
-	 */
-	EOperation getStaff__SetFirstName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Staff.Staff#setLastName() <em>Set Last Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Last Name</em>' operation.
-	 * @see Classes.Staff.Staff#setLastName()
-	 * @generated
-	 */
-	EOperation getStaff__SetLastName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Staff.Staff#setJob() <em>Set Job</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Job</em>' operation.
-	 * @see Classes.Staff.Staff#setJob()
-	 * @generated
-	 */
-	EOperation getStaff__SetJob();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Staff.Staff#setPhone() <em>Set Phone</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Phone</em>' operation.
-	 * @see Classes.Staff.Staff#setPhone()
-	 * @generated
-	 */
-	EOperation getStaff__SetPhone();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Staff.Staff#setEmail() <em>Set Email</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Email</em>' operation.
-	 * @see Classes.Staff.Staff#setEmail()
-	 * @generated
-	 */
-	EOperation getStaff__SetEmail();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Staff.Staff#getSalaryContract() <em>Get Salary Contract</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Salary Contract</em>' operation.
-	 * @see Classes.Staff.Staff#getSalaryContract()
-	 * @generated
-	 */
-	EOperation getStaff__GetSalaryContract();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Staff.Staff#setSalaryContract() <em>Set Salary Contract</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Salary Contract</em>' operation.
-	 * @see Classes.Staff.Staff#setSalaryContract()
-	 * @generated
-	 */
-	EOperation getStaff__SetSalaryContract();
-
-	/**
 	 * Returns the meta object for class '{@link Classes.Staff.SalaryContract <em>Salary Contract</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1040,15 +793,15 @@ public interface StaffPackage extends EPackage {
 	EClass getHourlySalaryContract();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Classes.Staff.HourlySalaryContract#getSalaryHour <em>Salary Hour</em>}'.
+	 * Returns the meta object for the attribute '{@link Classes.Staff.HourlySalaryContract#getSalary <em>Salary</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Salary Hour</em>'.
-	 * @see Classes.Staff.HourlySalaryContract#getSalaryHour()
+	 * @return the meta object for the attribute '<em>Salary</em>'.
+	 * @see Classes.Staff.HourlySalaryContract#getSalary()
 	 * @see #getHourlySalaryContract()
 	 * @generated
 	 */
-	EAttribute getHourlySalaryContract_SalaryHour();
+	EAttribute getHourlySalaryContract_Salary();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Staff.IStaff <em>IStaff</em>}'.
@@ -1326,110 +1079,6 @@ public interface StaffPackage extends EPackage {
 		EAttribute STAFF__SSID = eINSTANCE.getStaff_Ssid();
 
 		/**
-		 * The meta object literal for the '<em><b>Get First Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF___GET_FIRST_NAME = eINSTANCE.getStaff__GetFirstName();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Last Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF___GET_LAST_NAME = eINSTANCE.getStaff__GetLastName();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Job</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF___GET_JOB = eINSTANCE.getStaff__GetJob();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Phone</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF___GET_PHONE = eINSTANCE.getStaff__GetPhone();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Email</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF___GET_EMAIL = eINSTANCE.getStaff__GetEmail();
-
-		/**
-		 * The meta object literal for the '<em><b>Get SSID</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF___GET_SSID = eINSTANCE.getStaff__GetSSID();
-
-		/**
-		 * The meta object literal for the '<em><b>Set First Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF___SET_FIRST_NAME = eINSTANCE.getStaff__SetFirstName();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Last Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF___SET_LAST_NAME = eINSTANCE.getStaff__SetLastName();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Job</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF___SET_JOB = eINSTANCE.getStaff__SetJob();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Phone</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF___SET_PHONE = eINSTANCE.getStaff__SetPhone();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Email</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF___SET_EMAIL = eINSTANCE.getStaff__SetEmail();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Salary Contract</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF___GET_SALARY_CONTRACT = eINSTANCE.getStaff__GetSalaryContract();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Salary Contract</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF___SET_SALARY_CONTRACT = eINSTANCE.getStaff__SetSalaryContract();
-
-		/**
 		 * The meta object literal for the '{@link Classes.Staff.impl.SalaryContractImpl <em>Salary Contract</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1476,12 +1125,12 @@ public interface StaffPackage extends EPackage {
 		EClass HOURLY_SALARY_CONTRACT = eINSTANCE.getHourlySalaryContract();
 
 		/**
-		 * The meta object literal for the '<em><b>Salary Hour</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Salary</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute HOURLY_SALARY_CONTRACT__SALARY_HOUR = eINSTANCE.getHourlySalaryContract_SalaryHour();
+		EAttribute HOURLY_SALARY_CONTRACT__SALARY = eINSTANCE.getHourlySalaryContract_Salary();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Staff.IStaff <em>IStaff</em>}' class.

@@ -4,15 +4,8 @@ package Classes.Inventory.impl;
 
 import Classes.Inventory.InventoryPackage;
 import Classes.Inventory.ItemType;
-
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -263,50 +256,6 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPrice() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExpense() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStock() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -398,30 +347,6 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 				return id != ID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case InventoryPackage.ITEM_TYPE___SET_NAME:
-				setName();
-				return null;
-			case InventoryPackage.ITEM_TYPE___SET_PRICE:
-				setPrice();
-				return null;
-			case InventoryPackage.ITEM_TYPE___SET_EXPENSE:
-				setExpense();
-				return null;
-			case InventoryPackage.ITEM_TYPE___SET_STOCK:
-				setStock();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

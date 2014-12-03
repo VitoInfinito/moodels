@@ -494,94 +494,13 @@ public interface InventoryPackage extends EPackage {
 	int ITEM_TYPE_FEATURE_COUNT = 5;
 
 	/**
-	 * The operation id for the '<em>Get Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ITEM_TYPE___GET_NAME = 0;
-
-	/**
-	 * The operation id for the '<em>Set Name</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ITEM_TYPE___SET_NAME = 1;
-
-	/**
-	 * The operation id for the '<em>Get Price</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ITEM_TYPE___GET_PRICE = 2;
-
-	/**
-	 * The operation id for the '<em>Set Price</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ITEM_TYPE___SET_PRICE = 3;
-
-	/**
-	 * The operation id for the '<em>Get Expense</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ITEM_TYPE___GET_EXPENSE = 4;
-
-	/**
-	 * The operation id for the '<em>Set Expense</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ITEM_TYPE___SET_EXPENSE = 5;
-
-	/**
-	 * The operation id for the '<em>Get Stock</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ITEM_TYPE___GET_STOCK = 6;
-
-	/**
-	 * The operation id for the '<em>Set Stock</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ITEM_TYPE___SET_STOCK = 7;
-
-	/**
-	 * The operation id for the '<em>Get Id</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ITEM_TYPE___GET_ID = 8;
-
-	/**
 	 * The number of operations of the '<em>Item Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM_TYPE_OPERATION_COUNT = 9;
+	int ITEM_TYPE_OPERATION_COUNT = 0;
 
 
 	/**
@@ -811,96 +730,6 @@ public interface InventoryPackage extends EPackage {
 	EAttribute getItemType_Id();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.ItemType#getName() <em>Get Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Name</em>' operation.
-	 * @see Classes.Inventory.ItemType#getName()
-	 * @generated
-	 */
-	EOperation getItemType__GetName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.ItemType#setName() <em>Set Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Name</em>' operation.
-	 * @see Classes.Inventory.ItemType#setName()
-	 * @generated
-	 */
-	EOperation getItemType__SetName();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.ItemType#getPrice() <em>Get Price</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Price</em>' operation.
-	 * @see Classes.Inventory.ItemType#getPrice()
-	 * @generated
-	 */
-	EOperation getItemType__GetPrice();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.ItemType#setPrice() <em>Set Price</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Price</em>' operation.
-	 * @see Classes.Inventory.ItemType#setPrice()
-	 * @generated
-	 */
-	EOperation getItemType__SetPrice();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.ItemType#getExpense() <em>Get Expense</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Expense</em>' operation.
-	 * @see Classes.Inventory.ItemType#getExpense()
-	 * @generated
-	 */
-	EOperation getItemType__GetExpense();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.ItemType#setExpense() <em>Set Expense</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Expense</em>' operation.
-	 * @see Classes.Inventory.ItemType#setExpense()
-	 * @generated
-	 */
-	EOperation getItemType__SetExpense();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.ItemType#getStock() <em>Get Stock</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Stock</em>' operation.
-	 * @see Classes.Inventory.ItemType#getStock()
-	 * @generated
-	 */
-	EOperation getItemType__GetStock();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.ItemType#setStock() <em>Set Stock</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Stock</em>' operation.
-	 * @see Classes.Inventory.ItemType#setStock()
-	 * @generated
-	 */
-	EOperation getItemType__SetStock();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.ItemType#getId() <em>Get Id</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Id</em>' operation.
-	 * @see Classes.Inventory.ItemType#getId()
-	 * @generated
-	 */
-	EOperation getItemType__GetId();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1106,78 +935,6 @@ public interface InventoryPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ITEM_TYPE__ID = eINSTANCE.getItemType_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ITEM_TYPE___GET_NAME = eINSTANCE.getItemType__GetName();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Name</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ITEM_TYPE___SET_NAME = eINSTANCE.getItemType__SetName();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Price</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ITEM_TYPE___GET_PRICE = eINSTANCE.getItemType__GetPrice();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Price</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ITEM_TYPE___SET_PRICE = eINSTANCE.getItemType__SetPrice();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Expense</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ITEM_TYPE___GET_EXPENSE = eINSTANCE.getItemType__GetExpense();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Expense</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ITEM_TYPE___SET_EXPENSE = eINSTANCE.getItemType__SetExpense();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Stock</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ITEM_TYPE___GET_STOCK = eINSTANCE.getItemType__GetStock();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Stock</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ITEM_TYPE___SET_STOCK = eINSTANCE.getItemType__SetStock();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Id</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ITEM_TYPE___GET_ID = eINSTANCE.getItemType__GetId();
 
 	}
 

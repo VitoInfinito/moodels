@@ -350,24 +350,6 @@ public class StatisticsPackageImpl extends EPackageImpl implements StatisticsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStatisticsGenerator__SetStaticExpenses() {
-		return iStatisticsGeneratorEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIStatisticsGenerator__GetStaticExpenses() {
-		return iStatisticsGeneratorEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getStatisticsGenerator() {
 		return statisticsGeneratorEClass;
 	}
@@ -452,8 +434,6 @@ public class StatisticsPackageImpl extends EPackageImpl implements StatisticsPac
 		createEOperation(iStatisticsGeneratorEClass, ISTATISTICS_GENERATOR___GET_OCCUPANCY_STATISTICS);
 		createEOperation(iStatisticsGeneratorEClass, ISTATISTICS_GENERATOR___GET_REVENUE_STATISTICS);
 		createEOperation(iStatisticsGeneratorEClass, ISTATISTICS_GENERATOR___GET_PROFIT_STATISTICS);
-		createEOperation(iStatisticsGeneratorEClass, ISTATISTICS_GENERATOR___SET_STATIC_EXPENSES);
-		createEOperation(iStatisticsGeneratorEClass, ISTATISTICS_GENERATOR___GET_STATIC_EXPENSES);
 
 		statisticsGeneratorEClass = createEClass(STATISTICS_GENERATOR);
 		createEReference(statisticsGeneratorEClass, STATISTICS_GENERATOR__IBILLS_ACCESS);
@@ -518,10 +498,6 @@ public class StatisticsPackageImpl extends EPackageImpl implements StatisticsPac
 		initEOperation(getIStatisticsGenerator__GetRevenueStatistics(), null, "getRevenueStatistics", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIStatisticsGenerator__GetProfitStatistics(), null, "getProfitStatistics", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIStatisticsGenerator__SetStaticExpenses(), null, "setStaticExpenses", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIStatisticsGenerator__GetStaticExpenses(), null, "getStaticExpenses", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(statisticsGeneratorEClass, StatisticsGenerator.class, "StatisticsGenerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStatisticsGenerator_IBillsAccess(), theBillsPackage.getIBills(), null, "iBillsAccess", null, 1, 1, StatisticsGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
