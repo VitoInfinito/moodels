@@ -34,7 +34,7 @@ public interface Bookable extends EObject {
 	 * @return the value of the '<em>Baseprice</em>' attribute.
 	 * @see #setBaseprice(double)
 	 * @see Classes.Bookables.BookablesPackage#getBookable_Baseprice()
-	 * @model dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	double getBaseprice();

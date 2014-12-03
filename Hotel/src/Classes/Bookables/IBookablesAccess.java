@@ -2,6 +2,7 @@
  */
 package Classes.Bookables;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,73 +19,137 @@ public interface IBookablesAccess extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model required="true" ordered="false" bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false"
 	 * @generated
 	 */
-	void getBookableBasePrice();
+	double getBookableBasePrice(String bookableID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated
 	 */
-	void getRoomLocationInfo();
+	String getRoomLocationInfo(String roomID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false"
 	 * @generated
 	 */
-	void getBookableDescription();
+	String getBookableDescription(String bookableID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
-	void getAllBookableIDs();
+	EList<String> getAllBookableIDs();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" hostelBedIDDataType="org.eclipse.uml2.types.String" hostelBedIDRequired="true" hostelBedIDOrdered="false"
 	 * @generated
 	 */
-	void getRoomOfHostelBed();
+	String getRoomOfHostelBed(String hostelBedID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated
 	 */
-	void getBookableCategory();
+	HotelRoomCategory getHotelRoomCategory(String roomID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated
 	 */
-	void getConferenceRoomCapacity();
+	int getConferenceRoomCapacity(String roomID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" IDDataType="org.eclipse.uml2.types.String" IDRequired="true" IDOrdered="false"
 	 * @generated
 	 */
-	void getHotelRoomNbrBeds();
+	int getHotelRoomNbrBeds(String ID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated
 	 */
-	void searchForBookable();
+	EList<String> searchForBookable(String keyword);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated
+	 */
+	int getRoomLocationFloor(String roomID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
+	 * @generated
+	 */
+	EList<String> getAllRoomIDs();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
+	 * @generated
+	 */
+	EList<String> getAllConferenceRoomIDs();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
+	 * @generated
+	 */
+	EList<String> getAllHostelBedIDs();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated
+	 */
+	ConferenceRoomCategory getConferenceRoomCategory(String roomID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
+	 * @generated
+	 */
+	EList<String> searchHotelRooms(String keyword);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
+	 * @generated
+	 */
+	EList<String> searchHostelBeds(String keyword);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
+	 * @generated
+	 */
+	EList<String> searchConferenceRooms(String keyword);
 
 } // IBookablesAccess

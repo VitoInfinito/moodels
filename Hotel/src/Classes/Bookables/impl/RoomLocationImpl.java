@@ -4,15 +4,8 @@ package Classes.Bookables.impl;
 
 import Classes.Bookables.BookablesPackage;
 import Classes.Bookables.RoomLocation;
-
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -137,17 +130,6 @@ public class RoomLocationImpl extends MinimalEObjectImpl.Container implements Ro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInfo() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -209,21 +191,6 @@ public class RoomLocationImpl extends MinimalEObjectImpl.Container implements Ro
 				return ADDTIONAL_INFO_EDEFAULT == null ? addtionalInfo != null : !ADDTIONAL_INFO_EDEFAULT.equals(addtionalInfo);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case BookablesPackage.ROOM_LOCATION___SET_INFO:
-				setInfo();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

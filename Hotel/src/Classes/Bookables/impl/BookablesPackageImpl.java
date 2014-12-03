@@ -3,17 +3,11 @@
 package Classes.Bookables.impl;
 
 import Classes.Accounts.AccountsPackage;
-
 import Classes.Accounts.impl.AccountsPackageImpl;
-
 import Classes.Banking.BankingPackage;
-
 import Classes.Banking.impl.BankingPackageImpl;
-
 import Classes.Bills.BillsPackage;
-
 import Classes.Bills.impl.BillsPackageImpl;
-
 import Classes.Bookables.Bookable;
 import Classes.Bookables.BookablesFactory;
 import Classes.Bookables.BookablesManager;
@@ -27,62 +21,36 @@ import Classes.Bookables.IBookablesAccess;
 import Classes.Bookables.IBookablesManage;
 import Classes.Bookables.Room;
 import Classes.Bookables.RoomLocation;
-
 import Classes.Bookings.BookingsPackage;
-
 import Classes.Bookings.impl.BookingsPackageImpl;
-
 import Classes.Customers.CustomersPackage;
-
 import Classes.Customers.impl.CustomersPackageImpl;
-
 import Classes.Feedback.FeedbackPackage;
-
 import Classes.Feedback.impl.FeedbackPackageImpl;
-
 import Classes.Guests.GuestsPackage;
-
 import Classes.Guests.impl.GuestsPackageImpl;
-
 import Classes.Inventory.InventoryPackage;
-
 import Classes.Inventory.impl.InventoryPackageImpl;
-
 import Classes.Requests.RequestsPackage;
-
 import Classes.Requests.impl.RequestsPackageImpl;
-
 import Classes.Restaurants.RestaurantsPackage;
-
 import Classes.Restaurants.impl.RestaurantsPackageImpl;
-
 import Classes.Services.ServicesPackage;
-
 import Classes.Services.impl.ServicesPackageImpl;
-
 import Classes.Staff.StaffPackage;
-
 import Classes.Staff.impl.StaffPackageImpl;
-
 import Classes.Statistics.StatisticsPackage;
-
 import Classes.Statistics.impl.StatisticsPackageImpl;
-
 import Classes.Stays.StaysPackage;
-
 import Classes.Stays.impl.StaysPackageImpl;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.uml2.types.TypesPackage;
-
 import org.eclipse.uml2.types.impl.TypesPackageImpl;
 
 /**
@@ -363,15 +331,6 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomLocation__SetInfo() {
-		return roomLocationEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getHostelBed() {
 		return hostelBedEClass;
 	}
@@ -453,7 +412,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesManage__AddBookable() {
+	public EOperation getIBookablesManage__AddBookable__double_String() {
 		return iBookablesManageEClass.getEOperations().get(0);
 	}
 
@@ -462,7 +421,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesManage__ChangeRoomOfHostelBed() {
+	public EOperation getIBookablesManage__ChangeRoomOfHostelBed__String_String() {
 		return iBookablesManageEClass.getEOperations().get(1);
 	}
 
@@ -471,7 +430,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesManage__DeleteBookable() {
+	public EOperation getIBookablesManage__DeleteBookable__String() {
 		return iBookablesManageEClass.getEOperations().get(2);
 	}
 
@@ -480,7 +439,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesManage__ChangeRoomLocation() {
+	public EOperation getIBookablesManage__ChangeRoomLocation__String_int_String() {
 		return iBookablesManageEClass.getEOperations().get(3);
 	}
 
@@ -489,7 +448,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesManage__ChangeHotelRoomCategory() {
+	public EOperation getIBookablesManage__ChangeHotelRoomCategory__String_HotelRoomCategory() {
 		return iBookablesManageEClass.getEOperations().get(4);
 	}
 
@@ -498,7 +457,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesManage__ChangeConferenceRoomCategory() {
+	public EOperation getIBookablesManage__ChangeConferenceRoomCategory__String_ConferenceRoomCategory() {
 		return iBookablesManageEClass.getEOperations().get(5);
 	}
 
@@ -507,7 +466,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesManage__ChangeBasePrice() {
+	public EOperation getIBookablesManage__ChangeBasePrice__String_double() {
 		return iBookablesManageEClass.getEOperations().get(6);
 	}
 
@@ -516,7 +475,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesManage__ChangeDescription() {
+	public EOperation getIBookablesManage__ChangeDescription__String_String() {
 		return iBookablesManageEClass.getEOperations().get(7);
 	}
 
@@ -534,7 +493,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesAccess__GetBookableBasePrice() {
+	public EOperation getIBookablesAccess__GetBookableBasePrice__String() {
 		return iBookablesAccessEClass.getEOperations().get(0);
 	}
 
@@ -543,7 +502,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesAccess__GetRoomLocationInfo() {
+	public EOperation getIBookablesAccess__GetRoomLocationInfo__String() {
 		return iBookablesAccessEClass.getEOperations().get(1);
 	}
 
@@ -552,7 +511,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesAccess__GetBookableDescription() {
+	public EOperation getIBookablesAccess__GetBookableDescription__String() {
 		return iBookablesAccessEClass.getEOperations().get(2);
 	}
 
@@ -570,7 +529,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesAccess__GetRoomOfHostelBed() {
+	public EOperation getIBookablesAccess__GetRoomOfHostelBed__String() {
 		return iBookablesAccessEClass.getEOperations().get(4);
 	}
 
@@ -579,7 +538,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesAccess__GetBookableCategory() {
+	public EOperation getIBookablesAccess__GetHotelRoomCategory__String() {
 		return iBookablesAccessEClass.getEOperations().get(5);
 	}
 
@@ -588,7 +547,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesAccess__GetConferenceRoomCapacity() {
+	public EOperation getIBookablesAccess__GetConferenceRoomCapacity__String() {
 		return iBookablesAccessEClass.getEOperations().get(6);
 	}
 
@@ -597,7 +556,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesAccess__GetHotelRoomNbrBeds() {
+	public EOperation getIBookablesAccess__GetHotelRoomNbrBeds__String() {
 		return iBookablesAccessEClass.getEOperations().get(7);
 	}
 
@@ -606,8 +565,80 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesAccess__SearchForBookable() {
+	public EOperation getIBookablesAccess__SearchForBookable__String() {
 		return iBookablesAccessEClass.getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBookablesAccess__GetRoomLocationFloor__String() {
+		return iBookablesAccessEClass.getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBookablesAccess__GetAllRoomIDs() {
+		return iBookablesAccessEClass.getEOperations().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBookablesAccess__GetAllConferenceRoomIDs() {
+		return iBookablesAccessEClass.getEOperations().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBookablesAccess__GetAllHostelBedIDs() {
+		return iBookablesAccessEClass.getEOperations().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBookablesAccess__GetConferenceRoomCategory__String() {
+		return iBookablesAccessEClass.getEOperations().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBookablesAccess__SearchHotelRooms__String() {
+		return iBookablesAccessEClass.getEOperations().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBookablesAccess__SearchHostelBeds__String() {
+		return iBookablesAccessEClass.getEOperations().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBookablesAccess__SearchConferenceRooms__String() {
+		return iBookablesAccessEClass.getEOperations().get(16);
 	}
 
 	/**
@@ -694,7 +725,6 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		roomLocationEClass = createEClass(ROOM_LOCATION);
 		createEAttribute(roomLocationEClass, ROOM_LOCATION__FLOOR);
 		createEAttribute(roomLocationEClass, ROOM_LOCATION__ADDTIONAL_INFO);
-		createEOperation(roomLocationEClass, ROOM_LOCATION___SET_INFO);
 
 		hostelBedEClass = createEClass(HOSTEL_BED);
 		createEReference(hostelBedEClass, HOSTEL_BED__ROOM);
@@ -708,25 +738,33 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		createEAttribute(hotelRoomEClass, HOTEL_ROOM__NBR_BEDS);
 
 		iBookablesManageEClass = createEClass(IBOOKABLES_MANAGE);
-		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___ADD_BOOKABLE);
-		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___CHANGE_ROOM_OF_HOSTEL_BED);
-		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___DELETE_BOOKABLE);
-		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___CHANGE_ROOM_LOCATION);
-		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___CHANGE_HOTEL_ROOM_CATEGORY);
-		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___CHANGE_CONFERENCE_ROOM_CATEGORY);
-		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___CHANGE_BASE_PRICE);
-		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___CHANGE_DESCRIPTION);
+		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___ADD_BOOKABLE__DOUBLE_STRING);
+		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___CHANGE_ROOM_OF_HOSTEL_BED__STRING_STRING);
+		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___DELETE_BOOKABLE__STRING);
+		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___CHANGE_ROOM_LOCATION__STRING_INT_STRING);
+		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___CHANGE_HOTEL_ROOM_CATEGORY__STRING_HOTELROOMCATEGORY);
+		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___CHANGE_CONFERENCE_ROOM_CATEGORY__STRING_CONFERENCEROOMCATEGORY);
+		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___CHANGE_BASE_PRICE__STRING_DOUBLE);
+		createEOperation(iBookablesManageEClass, IBOOKABLES_MANAGE___CHANGE_DESCRIPTION__STRING_STRING);
 
 		iBookablesAccessEClass = createEClass(IBOOKABLES_ACCESS);
-		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_BOOKABLE_BASE_PRICE);
-		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_ROOM_LOCATION_INFO);
-		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_BOOKABLE_DESCRIPTION);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_BOOKABLE_BASE_PRICE__STRING);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_ROOM_LOCATION_INFO__STRING);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_BOOKABLE_DESCRIPTION__STRING);
 		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_ALL_BOOKABLE_IDS);
-		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_ROOM_OF_HOSTEL_BED);
-		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_BOOKABLE_CATEGORY);
-		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_CONFERENCE_ROOM_CAPACITY);
-		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_HOTEL_ROOM_NBR_BEDS);
-		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___SEARCH_FOR_BOOKABLE);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_ROOM_OF_HOSTEL_BED__STRING);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_HOTEL_ROOM_CATEGORY__STRING);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_CONFERENCE_ROOM_CAPACITY__STRING);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_HOTEL_ROOM_NBR_BEDS__STRING);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___SEARCH_FOR_BOOKABLE__STRING);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_ROOM_LOCATION_FLOOR__STRING);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_ALL_ROOM_IDS);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_ALL_CONFERENCE_ROOM_IDS);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_ALL_HOSTEL_BED_IDS);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_CONFERENCE_ROOM_CATEGORY__STRING);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___SEARCH_HOTEL_ROOMS__STRING);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___SEARCH_HOSTEL_BEDS__STRING);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___SEARCH_CONFERENCE_ROOMS__STRING);
 
 		bookablesManagerEClass = createEClass(BOOKABLES_MANAGER);
 		createEReference(bookablesManagerEClass, BOOKABLES_MANAGER__BOOKABLE);
@@ -778,7 +816,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(bookableEClass, Bookable.class, "Bookable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBookable_Baseprice(), theTypesPackage.getReal(), "baseprice", null, 1, 1, Bookable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBookable_Baseprice(), ecorePackage.getEDouble(), "baseprice", null, 1, 1, Bookable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBookable_Id(), theTypesPackage.getString(), "id", null, 1, 1, Bookable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBookable_Description(), theTypesPackage.getString(), "description", null, 1, 1, Bookable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -788,8 +826,6 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		initEClass(roomLocationEClass, RoomLocation.class, "RoomLocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoomLocation_Floor(), theTypesPackage.getInteger(), "floor", null, 1, 1, RoomLocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomLocation_AddtionalInfo(), theTypesPackage.getString(), "addtionalInfo", null, 1, 1, RoomLocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getRoomLocation__SetInfo(), null, "setInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(hostelBedEClass, HostelBed.class, "HostelBed", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getHostelBed_Room(), this.getRoom(), null, "room", null, 1, 1, HostelBed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -804,41 +840,86 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 
 		initEClass(iBookablesManageEClass, IBookablesManage.class, "IBookablesManage", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getIBookablesManage__AddBookable(), null, "addBookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getIBookablesManage__AddBookable__double_String(), null, "addBookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "basePrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookablesManage__ChangeRoomOfHostelBed(), null, "changeRoomOfHostelBed", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesManage__ChangeRoomOfHostelBed__String_String(), null, "changeRoomOfHostelBed", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "hostelBedID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookablesManage__DeleteBookable(), null, "deleteBookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesManage__DeleteBookable__String(), null, "deleteBookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookableID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookablesManage__ChangeRoomLocation(), null, "changeRoomLocation", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesManage__ChangeRoomLocation__String_int_String(), null, "changeRoomLocation", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "floor", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "additionalInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookablesManage__ChangeHotelRoomCategory(), null, "changeHotelRoomCategory", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesManage__ChangeHotelRoomCategory__String_HotelRoomCategory(), null, "changeHotelRoomCategory", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getHotelRoomCategory(), "category", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookablesManage__ChangeConferenceRoomCategory(), null, "changeConferenceRoomCategory", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesManage__ChangeConferenceRoomCategory__String_ConferenceRoomCategory(), null, "changeConferenceRoomCategory", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getConferenceRoomCategory(), "category", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookablesManage__ChangeBasePrice(), null, "changeBasePrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesManage__ChangeBasePrice__String_double(), null, "changeBasePrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookableID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "basePrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookablesManage__ChangeDescription(), null, "changeDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesManage__ChangeDescription__String_String(), null, "changeDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookableID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iBookablesAccessEClass, IBookablesAccess.class, "IBookablesAccess", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getIBookablesAccess__GetBookableBasePrice(), null, "getBookableBasePrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesAccess__GetBookableBasePrice__String(), ecorePackage.getEDouble(), "getBookableBasePrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookableID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookablesAccess__GetRoomLocationInfo(), null, "getRoomLocationInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesAccess__GetRoomLocationInfo__String(), theTypesPackage.getString(), "getRoomLocationInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookablesAccess__GetBookableDescription(), null, "getBookableDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesAccess__GetBookableDescription__String(), theTypesPackage.getString(), "getBookableDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookableID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookablesAccess__GetAllBookableIDs(), null, "getAllBookableIDs", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIBookablesAccess__GetAllBookableIDs(), theTypesPackage.getString(), "getAllBookableIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookablesAccess__GetRoomOfHostelBed(), null, "getRoomOfHostelBed", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesAccess__GetRoomOfHostelBed__String(), theTypesPackage.getString(), "getRoomOfHostelBed", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "hostelBedID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookablesAccess__GetBookableCategory(), null, "getBookableCategory", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesAccess__GetHotelRoomCategory__String(), this.getHotelRoomCategory(), "getHotelRoomCategory", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookablesAccess__GetConferenceRoomCapacity(), null, "getConferenceRoomCapacity", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesAccess__GetConferenceRoomCapacity__String(), theTypesPackage.getInteger(), "getConferenceRoomCapacity", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookablesAccess__GetHotelRoomNbrBeds(), null, "getHotelRoomNbrBeds", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesAccess__GetHotelRoomNbrBeds__String(), theTypesPackage.getInteger(), "getHotelRoomNbrBeds", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookablesAccess__SearchForBookable(), null, "searchForBookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesAccess__SearchForBookable__String(), theTypesPackage.getString(), "searchForBookable", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookablesAccess__GetRoomLocationFloor__String(), theTypesPackage.getInteger(), "getRoomLocationFloor", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getIBookablesAccess__GetAllRoomIDs(), theTypesPackage.getString(), "getAllRoomIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getIBookablesAccess__GetAllConferenceRoomIDs(), theTypesPackage.getString(), "getAllConferenceRoomIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getIBookablesAccess__GetAllHostelBedIDs(), theTypesPackage.getString(), "getAllHostelBedIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookablesAccess__GetConferenceRoomCategory__String(), this.getConferenceRoomCategory(), "getConferenceRoomCategory", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookablesAccess__SearchHotelRooms__String(), theTypesPackage.getString(), "searchHotelRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookablesAccess__SearchHostelBeds__String(), theTypesPackage.getString(), "searchHostelBeds", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookablesAccess__SearchConferenceRooms__String(), theTypesPackage.getString(), "searchConferenceRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bookablesManagerEClass, BookablesManager.class, "BookablesManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBookablesManager_Bookable(), this.getBookable(), null, "bookable", null, 0, -1, BookablesManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

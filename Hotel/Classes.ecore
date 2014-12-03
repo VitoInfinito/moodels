@@ -4,7 +4,7 @@
   <eSubpackages name="Bookables" nsURI="http:///Classes/Bookables.ecore" nsPrefix="Classes.Bookables">
     <eClassifiers xsi:type="ecore:EClass" name="Bookable" abstract="true">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseprice" ordered="false"
-          lowerBound="1" eType="ecore:EDataType types.ecore#//Real"/>
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
           eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
@@ -18,7 +18,6 @@
       <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
         <details key="originalName" value="Room Location"/>
       </eAnnotations>
-      <eOperations name="setInfo" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="floor" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="addtionalInfo" ordered="false"
@@ -68,26 +67,87 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IBookablesManage" abstract="true"
         interface="true" eSuperTypes="#//Bookables/IBookablesAccess">
-      <eOperations name="addBookable" ordered="false" lowerBound="1"/>
-      <eOperations name="changeRoomOfHostelBed" ordered="false" lowerBound="1"/>
-      <eOperations name="deleteBookable" ordered="false" lowerBound="1"/>
-      <eOperations name="changeRoomLocation" ordered="false" lowerBound="1"/>
-      <eOperations name="changeHotelRoomCategory" ordered="false" lowerBound="1"/>
-      <eOperations name="changeConferenceRoomCategory" ordered="false" lowerBound="1"/>
-      <eOperations name="changeBasePrice" ordered="false" lowerBound="1"/>
-      <eOperations name="changeDescription" ordered="false" lowerBound="1"/>
+      <eOperations name="addBookable" ordered="false" lowerBound="1">
+        <eParameters name="basePrice" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="changeRoomOfHostelBed" ordered="false" lowerBound="1">
+        <eParameters name="hostelBedID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="deleteBookable" ordered="false" lowerBound="1">
+        <eParameters name="bookableID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="changeRoomLocation" ordered="false" lowerBound="1">
+        <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="floor" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="additionalInfo" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="changeHotelRoomCategory" ordered="false" lowerBound="1">
+        <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="category" ordered="false" lowerBound="1" eType="#//Bookables/HotelRoomCategory"/>
+      </eOperations>
+      <eOperations name="changeConferenceRoomCategory" ordered="false" lowerBound="1">
+        <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="category" ordered="false" lowerBound="1" eType="#//Bookables/ConferenceRoomCategory"/>
+      </eOperations>
+      <eOperations name="changeBasePrice" ordered="false" lowerBound="1">
+        <eParameters name="bookableID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="basePrice" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </eOperations>
+      <eOperations name="changeDescription" ordered="false" lowerBound="1">
+        <eParameters name="bookableID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IBookablesAccess" abstract="true"
         interface="true">
-      <eOperations name="getBookableBasePrice" ordered="false" lowerBound="1"/>
-      <eOperations name="getRoomLocationInfo" ordered="false" lowerBound="1"/>
-      <eOperations name="getBookableDescription" ordered="false" lowerBound="1"/>
-      <eOperations name="getAllBookableIDs" ordered="false" lowerBound="1"/>
-      <eOperations name="getRoomOfHostelBed" ordered="false" lowerBound="1"/>
-      <eOperations name="getBookableCategory" ordered="false" lowerBound="1"/>
-      <eOperations name="getConferenceRoomCapacity" ordered="false" lowerBound="1"/>
-      <eOperations name="getHotelRoomNbrBeds" ordered="false" lowerBound="1"/>
-      <eOperations name="searchForBookable" ordered="false" lowerBound="1"/>
+      <eOperations name="getBookableBasePrice" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+        <eParameters name="bookableID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getRoomLocationInfo" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getBookableDescription" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="bookableID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getAllBookableIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="getRoomOfHostelBed" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="hostelBedID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getHotelRoomCategory" ordered="false" lowerBound="1" eType="#//Bookables/HotelRoomCategory">
+        <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getConferenceRoomCapacity" ordered="false" lowerBound="1"
+          eType="ecore:EDataType types.ecore#//Integer">
+        <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getHotelRoomNbrBeds" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+        <eParameters name="ID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="searchForBookable" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getRoomLocationFloor" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+        <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getAllRoomIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="getAllConferenceRoomIDs" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="getAllHostelBedIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="getConferenceRoomCategory" ordered="false" lowerBound="1"
+          eType="#//Bookables/ConferenceRoomCategory">
+        <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="searchHotelRooms" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="searchHostelBeds" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="searchConferenceRooms" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BookablesManager" eSuperTypes="#//Bookables/IBookablesManage">
       <eStructuralFeatures xsi:type="ecore:EReference" name="bookable" ordered="false"
@@ -828,4 +888,5 @@
           lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
     </eClassifiers>
   </eSubpackages>
+  <eSubpackages name="Exceptions" nsURI="http:///Classes/Exceptions.ecore" nsPrefix="Classes.Exceptions"/>
 </ecore:EPackage>

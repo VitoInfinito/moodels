@@ -6,6 +6,8 @@ import Classes.Bookables.Bookable;
 import Classes.Bookables.BookablesManager;
 import Classes.Bookables.BookablesPackage;
 
+import Classes.Bookables.ConferenceRoomCategory;
+import Classes.Bookables.HotelRoomCategory;
 import Classes.Stays.IStays;
 
 import java.lang.reflect.InvocationTargetException;
@@ -133,7 +135,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBookableBasePrice() {
+	public double getBookableBasePrice(String bookableID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -144,7 +146,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getRoomLocationInfo() {
+	public String getRoomLocationInfo(String roomID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -155,7 +157,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBookableDescription() {
+	public String getBookableDescription(String bookableID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -166,7 +168,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllBookableIDs() {
+	public EList<String> getAllBookableIDs() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -177,7 +179,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getRoomOfHostelBed() {
+	public String getRoomOfHostelBed(String hostelBedID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -188,7 +190,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBookableCategory() {
+	public HotelRoomCategory getHotelRoomCategory(String roomID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -199,7 +201,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getConferenceRoomCapacity() {
+	public int getConferenceRoomCapacity(String roomID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -210,7 +212,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getHotelRoomNbrBeds() {
+	public int getHotelRoomNbrBeds(String ID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -221,7 +223,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchForBookable() {
+	public EList<String> searchForBookable(String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -232,7 +234,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addBookable() {
+	public int getRoomLocationFloor(String roomID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -243,7 +245,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeRoomOfHostelBed() {
+	public EList<String> getAllRoomIDs() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -254,7 +256,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void deleteBookable() {
+	public EList<String> getAllConferenceRoomIDs() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -265,7 +267,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeRoomLocation() {
+	public EList<String> getAllHostelBedIDs() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -276,7 +278,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeHotelRoomCategory() {
+	public ConferenceRoomCategory getConferenceRoomCategory(String roomID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -287,7 +289,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeConferenceRoomCategory() {
+	public EList<String> searchHotelRooms(String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -298,7 +300,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeBasePrice() {
+	public EList<String> searchHostelBeds(String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -309,7 +311,95 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeDescription() {
+	public EList<String> searchConferenceRooms(String keyword) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void addBookable(double basePrice, String description) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void changeRoomOfHostelBed(String hostelBedID, String roomID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void deleteBookable(String bookableID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void changeRoomLocation(String roomID, int floor, String additionalInfo) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void changeHotelRoomCategory(String roomID, HotelRoomCategory category) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void changeConferenceRoomCategory(String roomID, ConferenceRoomCategory category) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void changeBasePrice(String bookableID, double basePrice) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void changeDescription(String bookableID, String description) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -394,56 +484,63 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BookablesPackage.BOOKABLES_MANAGER___GET_BOOKABLE_BASE_PRICE:
-				getBookableBasePrice();
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___GET_ROOM_LOCATION_INFO:
-				getRoomLocationInfo();
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___GET_BOOKABLE_DESCRIPTION:
-				getBookableDescription();
-				return null;
+			case BookablesPackage.BOOKABLES_MANAGER___GET_BOOKABLE_BASE_PRICE__STRING:
+				return getBookableBasePrice((String)arguments.get(0));
+			case BookablesPackage.BOOKABLES_MANAGER___GET_ROOM_LOCATION_INFO__STRING:
+				return getRoomLocationInfo((String)arguments.get(0));
+			case BookablesPackage.BOOKABLES_MANAGER___GET_BOOKABLE_DESCRIPTION__STRING:
+				return getBookableDescription((String)arguments.get(0));
 			case BookablesPackage.BOOKABLES_MANAGER___GET_ALL_BOOKABLE_IDS:
-				getAllBookableIDs();
+				return getAllBookableIDs();
+			case BookablesPackage.BOOKABLES_MANAGER___GET_ROOM_OF_HOSTEL_BED__STRING:
+				return getRoomOfHostelBed((String)arguments.get(0));
+			case BookablesPackage.BOOKABLES_MANAGER___GET_HOTEL_ROOM_CATEGORY__STRING:
+				return getHotelRoomCategory((String)arguments.get(0));
+			case BookablesPackage.BOOKABLES_MANAGER___GET_CONFERENCE_ROOM_CAPACITY__STRING:
+				return getConferenceRoomCapacity((String)arguments.get(0));
+			case BookablesPackage.BOOKABLES_MANAGER___GET_HOTEL_ROOM_NBR_BEDS__STRING:
+				return getHotelRoomNbrBeds((String)arguments.get(0));
+			case BookablesPackage.BOOKABLES_MANAGER___SEARCH_FOR_BOOKABLE__STRING:
+				return searchForBookable((String)arguments.get(0));
+			case BookablesPackage.BOOKABLES_MANAGER___GET_ROOM_LOCATION_FLOOR__STRING:
+				return getRoomLocationFloor((String)arguments.get(0));
+			case BookablesPackage.BOOKABLES_MANAGER___GET_ALL_ROOM_IDS:
+				return getAllRoomIDs();
+			case BookablesPackage.BOOKABLES_MANAGER___GET_ALL_CONFERENCE_ROOM_IDS:
+				return getAllConferenceRoomIDs();
+			case BookablesPackage.BOOKABLES_MANAGER___GET_ALL_HOSTEL_BED_IDS:
+				return getAllHostelBedIDs();
+			case BookablesPackage.BOOKABLES_MANAGER___GET_CONFERENCE_ROOM_CATEGORY__STRING:
+				return getConferenceRoomCategory((String)arguments.get(0));
+			case BookablesPackage.BOOKABLES_MANAGER___SEARCH_HOTEL_ROOMS__STRING:
+				return searchHotelRooms((String)arguments.get(0));
+			case BookablesPackage.BOOKABLES_MANAGER___SEARCH_HOSTEL_BEDS__STRING:
+				return searchHostelBeds((String)arguments.get(0));
+			case BookablesPackage.BOOKABLES_MANAGER___SEARCH_CONFERENCE_ROOMS__STRING:
+				return searchConferenceRooms((String)arguments.get(0));
+			case BookablesPackage.BOOKABLES_MANAGER___ADD_BOOKABLE__DOUBLE_STRING:
+				addBookable((Double)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___GET_ROOM_OF_HOSTEL_BED:
-				getRoomOfHostelBed();
+			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_ROOM_OF_HOSTEL_BED__STRING_STRING:
+				changeRoomOfHostelBed((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___GET_BOOKABLE_CATEGORY:
-				getBookableCategory();
+			case BookablesPackage.BOOKABLES_MANAGER___DELETE_BOOKABLE__STRING:
+				deleteBookable((String)arguments.get(0));
 				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___GET_CONFERENCE_ROOM_CAPACITY:
-				getConferenceRoomCapacity();
+			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_ROOM_LOCATION__STRING_INT_STRING:
+				changeRoomLocation((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2));
 				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___GET_HOTEL_ROOM_NBR_BEDS:
-				getHotelRoomNbrBeds();
+			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_HOTEL_ROOM_CATEGORY__STRING_HOTELROOMCATEGORY:
+				changeHotelRoomCategory((String)arguments.get(0), (HotelRoomCategory)arguments.get(1));
 				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___SEARCH_FOR_BOOKABLE:
-				searchForBookable();
+			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_CONFERENCE_ROOM_CATEGORY__STRING_CONFERENCEROOMCATEGORY:
+				changeConferenceRoomCategory((String)arguments.get(0), (ConferenceRoomCategory)arguments.get(1));
 				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___ADD_BOOKABLE:
-				addBookable();
+			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_BASE_PRICE__STRING_DOUBLE:
+				changeBasePrice((String)arguments.get(0), (Double)arguments.get(1));
 				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_ROOM_OF_HOSTEL_BED:
-				changeRoomOfHostelBed();
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___DELETE_BOOKABLE:
-				deleteBookable();
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_ROOM_LOCATION:
-				changeRoomLocation();
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_HOTEL_ROOM_CATEGORY:
-				changeHotelRoomCategory();
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_CONFERENCE_ROOM_CATEGORY:
-				changeConferenceRoomCategory();
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_BASE_PRICE:
-				changeBasePrice();
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_DESCRIPTION:
-				changeDescription();
+			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_DESCRIPTION__STRING_STRING:
+				changeDescription((String)arguments.get(0), (String)arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

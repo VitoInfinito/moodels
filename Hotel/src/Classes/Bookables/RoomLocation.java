@@ -74,12 +74,4 @@ public interface RoomLocation extends EObject {
 	 */
 	void setAddtionalInfo(String value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void setInfo();
-
 } // RoomLocation
