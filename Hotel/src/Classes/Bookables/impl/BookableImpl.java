@@ -30,10 +30,10 @@ public abstract class BookableImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBaseprice()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected static final double BASEPRICE_EDEFAULT = 0.0;
+	static final double BASEPRICE_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getBaseprice() <em>Baseprice</em>}' attribute.

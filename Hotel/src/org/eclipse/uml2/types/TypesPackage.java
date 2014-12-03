@@ -2,8 +2,11 @@
  */
 package org.eclipse.uml2.types;
 
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -56,13 +59,59 @@ public interface TypesPackage extends EPackage {
 	TypesPackage eINSTANCE = org.eclipse.uml2.types.impl.TypesPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.uml2.types.impl.StringToBookableMapImpl <em>String To Bookable Map</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.uml2.types.impl.StringToBookableMapImpl
+	 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getStringToBookableMap()
+	 * @generated
+	 */
+	int STRING_TO_BOOKABLE_MAP = 0;
+
+	/**
+	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_BOOKABLE_MAP__KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_BOOKABLE_MAP__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>String To Bookable Map</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_BOOKABLE_MAP_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>String To Bookable Map</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_BOOKABLE_MAP_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '<em>Boolean</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getBoolean()
 	 * @generated
 	 */
-	int BOOLEAN = 0;
+	int BOOLEAN = 1;
 
 	/**
 	 * The meta object id for the '<em>Integer</em>' data type.
@@ -71,7 +120,7 @@ public interface TypesPackage extends EPackage {
 	 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getInteger()
 	 * @generated
 	 */
-	int INTEGER = 1;
+	int INTEGER = 2;
 
 	/**
 	 * The meta object id for the '<em>String</em>' data type.
@@ -81,7 +130,51 @@ public interface TypesPackage extends EPackage {
 	 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getString()
 	 * @generated
 	 */
-	int STRING = 4;
+	int STRING = 5;
+
+	/**
+	 * The meta object id for the '<em>Invalid ID Exception</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.Object
+	 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getInvalidIDException()
+	 * @generated
+	 */
+	int INVALID_ID_EXCEPTION = 6;
+
+	/**
+	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To Bookable Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>String To Bookable Map</em>'.
+	 * @see java.util.Map.Entry
+	 * @model keyDataType="org.eclipse.uml2.types.String"
+	 *        valueType="Classes.Bookables.Bookable"
+	 * @generated
+	 */
+	EClass getStringToBookableMap();
+
+	/**
+	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Key</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getStringToBookableMap()
+	 * @generated
+	 */
+	EAttribute getStringToBookableMap_Key();
+
+	/**
+	 * Returns the meta object for the reference '{@link java.util.Map.Entry <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getStringToBookableMap()
+	 * @generated
+	 */
+	EReference getStringToBookableMap_Value();
 
 	/**
 	 * The meta object id for the '<em>Unlimited Natural</em>' data type.
@@ -90,7 +183,7 @@ public interface TypesPackage extends EPackage {
 	 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getUnlimitedNatural()
 	 * @generated
 	 */
-	int UNLIMITED_NATURAL = 3;
+	int UNLIMITED_NATURAL = 4;
 
 	/**
 	 * The meta object id for the '<em>Real</em>' data type.
@@ -99,7 +192,7 @@ public interface TypesPackage extends EPackage {
 	 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getReal()
 	 * @generated
 	 */
-	int REAL = 2;
+	int REAL = 3;
 
 
 	/**
@@ -132,6 +225,17 @@ public interface TypesPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getString();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.Object <em>Invalid ID Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Invalid ID Exception</em>'.
+	 * @see java.lang.Object
+	 * @model instanceClass="java.lang.Object" serializeable="false"
+	 * @generated
+	 */
+	EDataType getInvalidIDException();
 
 	/**
 	 * Returns the meta object for data type '<em>Unlimited Natural</em>'.
@@ -177,6 +281,32 @@ public interface TypesPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
+		 * The meta object literal for the '{@link org.eclipse.uml2.types.impl.StringToBookableMapImpl <em>String To Bookable Map</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.uml2.types.impl.StringToBookableMapImpl
+		 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getStringToBookableMap()
+		 * @generated
+		 */
+		EClass STRING_TO_BOOKABLE_MAP = eINSTANCE.getStringToBookableMap();
+
+		/**
+		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRING_TO_BOOKABLE_MAP__KEY = eINSTANCE.getStringToBookableMap_Key();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRING_TO_BOOKABLE_MAP__VALUE = eINSTANCE.getStringToBookableMap_Value();
+
+		/**
 		 * The meta object literal for the '<em>Boolean</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -203,6 +333,16 @@ public interface TypesPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType STRING = eINSTANCE.getString();
+
+		/**
+		 * The meta object literal for the '<em>Invalid ID Exception</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.Object
+		 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getInvalidIDException()
+		 * @generated
+		 */
+		EDataType INVALID_ID_EXCEPTION = eINSTANCE.getInvalidIDException();
 
 		/**
 		 * The meta object literal for the '<em>Unlimited Natural</em>' data type.

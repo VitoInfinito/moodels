@@ -896,13 +896,13 @@ public interface BookablesPackage extends EPackage {
 	int BOOKABLES_MANAGER = 8;
 
 	/**
-	 * The feature id for the '<em><b>Bookable</b></em>' reference list.
+	 * The feature id for the '<em><b>Bookables</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKABLES_MANAGER__BOOKABLE = IBOOKABLES_MANAGE_FEATURE_COUNT + 0;
+	int BOOKABLES_MANAGER__BOOKABLES = IBOOKABLES_MANAGE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>IHotel Stay Manager</b></em>' reference.
@@ -1639,15 +1639,15 @@ public interface BookablesPackage extends EPackage {
 	EClass getBookablesManager();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Classes.Bookables.BookablesManager#getBookable <em>Bookable</em>}'.
+	 * Returns the meta object for the map '{@link Classes.Bookables.BookablesManager#getBookables <em>Bookables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Bookable</em>'.
-	 * @see Classes.Bookables.BookablesManager#getBookable()
+	 * @return the meta object for the map '<em>Bookables</em>'.
+	 * @see Classes.Bookables.BookablesManager#getBookables()
 	 * @see #getBookablesManager()
 	 * @generated
 	 */
-	EReference getBookablesManager_Bookable();
+	EReference getBookablesManager_Bookables();
 
 	/**
 	 * Returns the meta object for the reference '{@link Classes.Bookables.BookablesManager#getIHotelStayManager <em>IHotel Stay Manager</em>}'.
@@ -2082,12 +2082,12 @@ public interface BookablesPackage extends EPackage {
 		EClass BOOKABLES_MANAGER = eINSTANCE.getBookablesManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Bookable</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Bookables</b></em>' map feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BOOKABLES_MANAGER__BOOKABLE = eINSTANCE.getBookablesManager_Bookable();
+		EReference BOOKABLES_MANAGER__BOOKABLES = eINSTANCE.getBookablesManager_Bookables();
 
 		/**
 		 * The meta object literal for the '<em><b>IHotel Stay Manager</b></em>' reference feature.

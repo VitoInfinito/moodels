@@ -62,9 +62,13 @@ import Classes.Stays.StaysPackage;
 
 import Classes.Stays.impl.StaysPackageImpl;
 
+import java.util.Map;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
 
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.uml2.types.TypesFactory;
@@ -77,6 +81,13 @@ import org.eclipse.uml2.types.TypesPackage;
  * @generated
  */
 public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stringToBookableMapEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -97,6 +108,13 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * @generated
 	 */
 	private EDataType stringEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType invalidIDExceptionEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -225,6 +243,33 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getStringToBookableMap() {
+		return stringToBookableMapEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStringToBookableMap_Key() {
+		return (EAttribute)stringToBookableMapEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStringToBookableMap_Value() {
+		return (EReference)stringToBookableMapEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getBoolean() {
 		return booleanEDataType;
 	}
@@ -245,6 +290,15 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 */
 	public EDataType getString() {
 		return stringEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getInvalidIDException() {
+		return invalidIDExceptionEDataType;
 	}
 
 	/**
@@ -292,12 +346,18 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		if (isCreated) return;
 		isCreated = true;
 
+		// Create classes and their features
+		stringToBookableMapEClass = createEClass(STRING_TO_BOOKABLE_MAP);
+		createEAttribute(stringToBookableMapEClass, STRING_TO_BOOKABLE_MAP__KEY);
+		createEReference(stringToBookableMapEClass, STRING_TO_BOOKABLE_MAP__VALUE);
+
 		// Create data types
 		booleanEDataType = createEDataType(BOOLEAN);
 		integerEDataType = createEDataType(INTEGER);
 		realEDataType = createEDataType(REAL);
 		unlimitedNaturalEDataType = createEDataType(UNLIMITED_NATURAL);
 		stringEDataType = createEDataType(STRING);
+		invalidIDExceptionEDataType = createEDataType(INVALID_ID_EXCEPTION);
 	}
 
 	/**
@@ -323,12 +383,27 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		BookablesPackage theBookablesPackage = (BookablesPackage)EPackage.Registry.INSTANCE.getEPackage(BookablesPackage.eNS_URI);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+
+		// Initialize classes, features, and operations; add parameters
+		initEClass(stringToBookableMapEClass, Map.Entry.class, "StringToBookableMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStringToBookableMap_Key(), this.getString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStringToBookableMap_Value(), theBookablesPackage.getBookable(), null, "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize data types
 		initEDataType(booleanEDataType, boolean.class, "Boolean", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(integerEDataType, int.class, "Integer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(realEDataType, double.class, "Real", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(unlimitedNaturalEDataType, int.class, "UnlimitedNatural", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(stringEDataType, String.class, "String", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(invalidIDExceptionEDataType, Object.class, "InvalidIDException", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

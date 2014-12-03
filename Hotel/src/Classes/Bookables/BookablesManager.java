@@ -3,8 +3,7 @@
 package Classes.Bookables;
 
 import Classes.Stays.IStays;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link Classes.Bookables.BookablesManager#getBookable <em>Bookable</em>}</li>
+ *   <li>{@link Classes.Bookables.BookablesManager#getBookables <em>Bookables</em>}</li>
  *   <li>{@link Classes.Bookables.BookablesManager#getIHotelStayManager <em>IHotel Stay Manager</em>}</li>
  * </ul>
  * </p>
@@ -25,20 +24,21 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface BookablesManager extends IBookablesManage {
 	/**
-	 * Returns the value of the '<em><b>Bookable</b></em>' reference list.
-	 * The list contents are of type {@link Classes.Bookables.Bookable}.
+	 * Returns the value of the '<em><b>Bookables</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link Classes.Bookables.Bookable},
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Bookable</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Bookables</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bookable</em>' reference list.
-	 * @see Classes.Bookables.BookablesPackage#getBookablesManager_Bookable()
-	 * @model ordered="false"
+	 * @return the value of the '<em>Bookables</em>' map.
+	 * @see Classes.Bookables.BookablesPackage#getBookablesManager_Bookables()
+	 * @model mapType="org.eclipse.uml2.types.StringToBookableMap<org.eclipse.uml2.types.String, Classes.Bookables.Bookable>" ordered="false"
 	 * @generated
 	 */
-	EList<Bookable> getBookable();
+	EMap<String, Bookable> getBookables();
 
 	/**
 	 * Returns the value of the '<em><b>IHotel Stay Manager</b></em>' reference.

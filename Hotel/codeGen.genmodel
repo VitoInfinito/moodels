@@ -150,7 +150,7 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Bookables/BookablesManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Bookables/BookablesManager/bookable"/>
+            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Bookables/BookablesManager/bookables"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Bookables/BookablesManager/iHotelStayManager"/>
       </genClasses>

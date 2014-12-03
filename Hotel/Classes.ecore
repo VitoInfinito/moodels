@@ -102,20 +102,25 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IBookablesAccess" abstract="true"
         interface="true">
-      <eOperations name="getBookableBasePrice" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eOperations name="getBookableBasePrice" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          eExceptions="ecore:EDataType types.ecore#//InvalidIDException">
         <eParameters name="bookableID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getRoomLocationInfo" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eOperations name="getRoomLocationInfo" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"
+          eExceptions="ecore:EDataType types.ecore#//InvalidIDException">
         <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getBookableDescription" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eOperations name="getBookableDescription" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"
+          eExceptions="ecore:EDataType types.ecore#//InvalidIDException">
         <eParameters name="bookableID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="getAllBookableIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
-      <eOperations name="getRoomOfHostelBed" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eOperations name="getRoomOfHostelBed" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"
+          eExceptions="ecore:EDataType types.ecore#//InvalidIDException">
         <eParameters name="hostelBedID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getHotelRoomCategory" ordered="false" lowerBound="1" eType="#//Bookables/HotelRoomCategory">
+      <eOperations name="getHotelRoomCategory" ordered="false" lowerBound="1" eType="#//Bookables/HotelRoomCategory"
+          eExceptions="ecore:EDataType types.ecore#//InvalidIDException">
         <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="getConferenceRoomCapacity" ordered="false" lowerBound="1"
@@ -150,8 +155,8 @@
       </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BookablesManager" eSuperTypes="#//Bookables/IBookablesManage">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="bookable" ordered="false"
-          upperBound="-1" eType="#//Bookables/Bookable"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="bookables" ordered="false"
+          upperBound="-1" eType="ecore:EClass types.ecore#//StringToBookableMap" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="iHotelStayManager" ordered="false"
           lowerBound="1" eType="#//Stays/IStays"/>
     </eClassifiers>

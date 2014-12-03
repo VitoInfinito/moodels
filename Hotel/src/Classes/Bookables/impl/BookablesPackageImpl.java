@@ -655,7 +655,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBookablesManager_Bookable() {
+	public EReference getBookablesManager_Bookables() {
 		return (EReference)bookablesManagerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -767,7 +767,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___SEARCH_CONFERENCE_ROOMS__STRING);
 
 		bookablesManagerEClass = createEClass(BOOKABLES_MANAGER);
-		createEReference(bookablesManagerEClass, BOOKABLES_MANAGER__BOOKABLE);
+		createEReference(bookablesManagerEClass, BOOKABLES_MANAGER__BOOKABLES);
 		createEReference(bookablesManagerEClass, BOOKABLES_MANAGER__IHOTEL_STAY_MANAGER);
 
 		// Create enums
@@ -876,20 +876,25 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 
 		op = initEOperation(getIBookablesAccess__GetBookableBasePrice__String(), ecorePackage.getEDouble(), "getBookableBasePrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookableID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEException(op, theTypesPackage.getInvalidIDException());
 
 		op = initEOperation(getIBookablesAccess__GetRoomLocationInfo__String(), theTypesPackage.getString(), "getRoomLocationInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEException(op, theTypesPackage.getInvalidIDException());
 
 		op = initEOperation(getIBookablesAccess__GetBookableDescription__String(), theTypesPackage.getString(), "getBookableDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookableID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEException(op, theTypesPackage.getInvalidIDException());
 
 		initEOperation(getIBookablesAccess__GetAllBookableIDs(), theTypesPackage.getString(), "getAllBookableIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIBookablesAccess__GetRoomOfHostelBed__String(), theTypesPackage.getString(), "getRoomOfHostelBed", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "hostelBedID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEException(op, theTypesPackage.getInvalidIDException());
 
 		op = initEOperation(getIBookablesAccess__GetHotelRoomCategory__String(), this.getHotelRoomCategory(), "getHotelRoomCategory", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEException(op, theTypesPackage.getInvalidIDException());
 
 		op = initEOperation(getIBookablesAccess__GetConferenceRoomCapacity__String(), theTypesPackage.getInteger(), "getConferenceRoomCapacity", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -922,7 +927,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bookablesManagerEClass, BookablesManager.class, "BookablesManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBookablesManager_Bookable(), this.getBookable(), null, "bookable", null, 0, -1, BookablesManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBookablesManager_Bookables(), theTypesPackage.getStringToBookableMap(), null, "bookables", null, 0, -1, BookablesManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookablesManager_IHotelStayManager(), theStaysPackage.getIStays(), null, "iHotelStayManager", null, 1, 1, BookablesManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Initialize enums and add enum literals

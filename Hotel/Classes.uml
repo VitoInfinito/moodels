@@ -123,7 +123,8 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9Lbr3psEeST-65JbGUt8g" name="BookablesManager" visibility="package">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9LbsHpsEeST-65JbGUt8g" name="bookable" visibility="private" type="_w9Lbc3psEeST-65JbGUt8g" association="_w9Lb2XpsEeST-65JbGUt8g">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9LbsHpsEeST-65JbGUt8g" name="bookables" visibility="private" association="_w9Lb2XpsEeST-65JbGUt8g">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EStringToStringMapEntry"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9LbsXpsEeST-65JbGUt8g"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9LbsnpsEeST-65JbGUt8g" value="*"/>
       </ownedAttribute>
@@ -1642,7 +1643,6 @@
       </ownedOperation>
     </packagedElement>
   </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_HTYqMHr2EeS6-b_7Ud_oOg" name="Exceptions"/>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Z4eCUHpvEeS6-b_7Ud_oOg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Z4vvIHpvEeS6-b_7Ud_oOg" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
