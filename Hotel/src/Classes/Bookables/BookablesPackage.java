@@ -932,7 +932,7 @@ public interface BookablesPackage extends EPackage {
 	int BOOKABLES_MANAGER = 8;
 
 	/**
-	 * The feature id for the '<em><b>Bookables</b></em>' map.
+	 * The feature id for the '<em><b>Bookables</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1751,10 +1751,10 @@ public interface BookablesPackage extends EPackage {
 	EClass getBookablesManager();
 
 	/**
-	 * Returns the meta object for the map '{@link Classes.Bookables.BookablesManager#getBookables <em>Bookables</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Bookables.BookablesManager#getBookables <em>Bookables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the map '<em>Bookables</em>'.
+	 * @return the meta object for the reference list '<em>Bookables</em>'.
 	 * @see Classes.Bookables.BookablesManager#getBookables()
 	 * @see #getBookablesManager()
 	 * @generated
@@ -2226,7 +2226,7 @@ public interface BookablesPackage extends EPackage {
 		EClass BOOKABLES_MANAGER = eINSTANCE.getBookablesManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Bookables</b></em>' map feature.
+		 * The meta object literal for the '<em><b>Bookables</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

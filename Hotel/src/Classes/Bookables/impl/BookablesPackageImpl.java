@@ -198,7 +198,6 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		ServicesPackageImpl theServicesPackage = (ServicesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) instanceof ServicesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) : ServicesPackage.eINSTANCE);
 		FeedbackPackageImpl theFeedbackPackage = (FeedbackPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) instanceof FeedbackPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) : FeedbackPackage.eINSTANCE);
 		RequestsPackageImpl theRequestsPackage = (RequestsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) instanceof RequestsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) : RequestsPackage.eINSTANCE);
-		Classes.ECoreMapEntries.impl.ECoreMapEntriesPackageImpl theECoreMapEntriesPackage = (Classes.ECoreMapEntries.impl.ECoreMapEntriesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(Classes.ECoreMapEntries.ECoreMapEntriesPackage.eNS_URI) instanceof Classes.ECoreMapEntries.impl.ECoreMapEntriesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(Classes.ECoreMapEntries.ECoreMapEntriesPackage.eNS_URI) : Classes.ECoreMapEntries.ECoreMapEntriesPackage.eINSTANCE);
 		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
 
 		// Create package meta-data objects
@@ -217,7 +216,6 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		theServicesPackage.createPackageContents();
 		theFeedbackPackage.createPackageContents();
 		theRequestsPackage.createPackageContents();
-		theECoreMapEntriesPackage.createPackageContents();
 		theTypesPackage.createPackageContents();
 
 		// Initialize created meta-data
@@ -236,7 +234,6 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		theServicesPackage.initializePackageContents();
 		theFeedbackPackage.initializePackageContents();
 		theRequestsPackage.initializePackageContents();
-		theECoreMapEntriesPackage.initializePackageContents();
 		theTypesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
@@ -843,7 +840,6 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 
 		// Obtain other dependent packages
 		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
-		Classes.ECoreMapEntries.ECoreMapEntriesPackage theECoreMapEntriesPackage = (Classes.ECoreMapEntries.ECoreMapEntriesPackage)EPackage.Registry.INSTANCE.getEPackage(Classes.ECoreMapEntries.ECoreMapEntriesPackage.eNS_URI);
 		StaysPackage theStaysPackage = (StaysPackage)EPackage.Registry.INSTANCE.getEPackage(StaysPackage.eNS_URI);
 
 		// Create type parameters
@@ -993,7 +989,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		addEParameter(op, this.getConferenceRoomCategory(), "category", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bookablesManagerEClass, BookablesManager.class, "BookablesManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBookablesManager_Bookables(), theECoreMapEntriesPackage.getStringToBookableMap(), null, "bookables", null, 0, -1, BookablesManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBookablesManager_Bookables(), this.getBookable(), null, "bookables", null, 0, -1, BookablesManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookablesManager_IHotelStayManager(), theStaysPackage.getIStays(), null, "iHotelStayManager", null, 1, 1, BookablesManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Initialize enums and add enum literals

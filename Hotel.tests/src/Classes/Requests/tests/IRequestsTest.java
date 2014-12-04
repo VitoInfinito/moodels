@@ -13,12 +13,12 @@ import junit.framework.TestCase;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link Classes.Requests.IRequests#getRequestDescription() <em>Get Request Description</em>}</li>
- *   <li>{@link Classes.Requests.IRequests#hasRequestBeenResolved() <em>Has Request Been Resolved</em>}</li>
+ *   <li>{@link Classes.Requests.IRequests#getRequestDescription(java.lang.String) <em>Get Request Description</em>}</li>
+ *   <li>{@link Classes.Requests.IRequests#hasRequestBeenResolved(boolean) <em>Has Request Been Resolved</em>}</li>
  *   <li>{@link Classes.Requests.IRequests#setRequestResolved() <em>Set Request Resolved</em>}</li>
- *   <li>{@link Classes.Requests.IRequests#deleteRequest() <em>Delete Request</em>}</li>
- *   <li>{@link Classes.Requests.IRequests#changeRequestDesc() <em>Change Request Desc</em>}</li>
- *   <li>{@link Classes.Requests.IRequests#searchRequests() <em>Search Requests</em>}</li>
+ *   <li>{@link Classes.Requests.IRequests#deleteRequest(java.lang.String) <em>Delete Request</em>}</li>
+ *   <li>{@link Classes.Requests.IRequests#changeRequestDesc(java.lang.String) <em>Change Request Desc</em>}</li>
+ *   <li>{@link Classes.Requests.IRequests#searchRequests(java.lang.String, org.eclipse.emf.common.util.EList) <em>Search Requests</em>}</li>
  *   <li>{@link Classes.Requests.IRequests#getAllRequestIDs() <em>Get All Request IDs</em>}</li>
  *   <li>{@link Classes.Requests.IRequests#setRequestDescription() <em>Set Request Description</em>}</li>
  *   <li>{@link Classes.Requests.IRequests#addRequest() <em>Add Request</em>}</li>
@@ -67,26 +67,26 @@ public abstract class IRequestsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Requests.IRequests#getRequestDescription() <em>Get Request Description</em>}' operation.
+	 * Tests the '{@link Classes.Requests.IRequests#getRequestDescription(java.lang.String) <em>Get Request Description</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Requests.IRequests#getRequestDescription()
+	 * @see Classes.Requests.IRequests#getRequestDescription(java.lang.String)
 	 * @generated
 	 */
-	public void testGetRequestDescription() {
+	public void testGetRequestDescription__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Requests.IRequests#hasRequestBeenResolved() <em>Has Request Been Resolved</em>}' operation.
+	 * Tests the '{@link Classes.Requests.IRequests#hasRequestBeenResolved(boolean) <em>Has Request Been Resolved</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Requests.IRequests#hasRequestBeenResolved()
+	 * @see Classes.Requests.IRequests#hasRequestBeenResolved(boolean)
 	 * @generated
 	 */
-	public void testHasRequestBeenResolved() {
+	public void testHasRequestBeenResolved__boolean() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -106,39 +106,39 @@ public abstract class IRequestsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Requests.IRequests#deleteRequest() <em>Delete Request</em>}' operation.
+	 * Tests the '{@link Classes.Requests.IRequests#deleteRequest(java.lang.String) <em>Delete Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Requests.IRequests#deleteRequest()
+	 * @see Classes.Requests.IRequests#deleteRequest(java.lang.String)
 	 * @generated
 	 */
-	public void testDeleteRequest() {
+	public void testDeleteRequest__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Requests.IRequests#changeRequestDesc() <em>Change Request Desc</em>}' operation.
+	 * Tests the '{@link Classes.Requests.IRequests#changeRequestDesc(java.lang.String) <em>Change Request Desc</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Requests.IRequests#changeRequestDesc()
+	 * @see Classes.Requests.IRequests#changeRequestDesc(java.lang.String)
 	 * @generated
 	 */
-	public void testChangeRequestDesc() {
+	public void testChangeRequestDesc__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Requests.IRequests#searchRequests() <em>Search Requests</em>}' operation.
+	 * Tests the '{@link Classes.Requests.IRequests#searchRequests(java.lang.String, org.eclipse.emf.common.util.EList) <em>Search Requests</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Requests.IRequests#searchRequests()
+	 * @see Classes.Requests.IRequests#searchRequests(java.lang.String, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	public void testSearchRequests() {
+	public void testSearchRequests__String_EList() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

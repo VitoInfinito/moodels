@@ -309,7 +309,7 @@ public class BookablesManagerTest extends TestCase {
 	 * @see Classes.Bookables.IBookablesAccess#searchHotelRooms(java.lang.String, Classes.Bookables.HotelRoomCategory)
 	 * @generated
 	 */
-	public void testSearchHotelRooms__String() {
+	public void testSearchHotelRooms__String_HotelRoomCategory() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -335,7 +335,7 @@ public class BookablesManagerTest extends TestCase {
 	 * @see Classes.Bookables.IBookablesAccess#searchConferenceRooms(java.lang.String, Classes.Bookables.ConferenceRoomCategory)
 	 * @generated
 	 */
-	public void testSearchConferenceRooms__String() {
+	public void testSearchConferenceRooms__String_ConferenceRoomCategory() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

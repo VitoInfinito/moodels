@@ -13,11 +13,11 @@ import junit.framework.TestCase;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link Classes.Inventory.IInventoryAccess#changeItemStock() <em>Change Item Stock</em>}</li>
- *   <li>{@link Classes.Inventory.IInventoryAccess#getItemPrice() <em>Get Item Price</em>}</li>
- *   <li>{@link Classes.Inventory.IInventoryAccess#getItemName() <em>Get Item Name</em>}</li>
- *   <li>{@link Classes.Inventory.IInventoryAccess#getItemStock() <em>Get Item Stock</em>}</li>
- *   <li>{@link Classes.Inventory.IInventoryAccess#getItemExpense() <em>Get Item Expense</em>}</li>
+ *   <li>{@link Classes.Inventory.IInventoryAccess#changeItemStock(int, int) <em>Change Item Stock</em>}</li>
+ *   <li>{@link Classes.Inventory.IInventoryAccess#getItemPrice(int) <em>Get Item Price</em>}</li>
+ *   <li>{@link Classes.Inventory.IInventoryAccess#getItemName(int) <em>Get Item Name</em>}</li>
+ *   <li>{@link Classes.Inventory.IInventoryAccess#getItemStock(int) <em>Get Item Stock</em>}</li>
+ *   <li>{@link Classes.Inventory.IInventoryAccess#getItemExpense(int) <em>Get Item Expense</em>}</li>
  *   <li>{@link Classes.Inventory.IInventoryAccess#getAllItemIDs() <em>Get All Item IDs</em>}</li>
  *   <li>{@link Classes.Inventory.IInventoryAccess#searchItems() <em>Search Items</em>}</li>
  * </ul>
@@ -65,65 +65,65 @@ public abstract class IInventoryAccessTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IInventoryAccess#changeItemStock() <em>Change Item Stock</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IInventoryAccess#changeItemStock(int, int) <em>Change Item Stock</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IInventoryAccess#changeItemStock()
+	 * @see Classes.Inventory.IInventoryAccess#changeItemStock(int, int)
 	 * @generated
 	 */
-	public void testChangeItemStock() {
+	public void testChangeItemStock__int_int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemPrice() <em>Get Item Price</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemPrice(int) <em>Get Item Price</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IInventoryAccess#getItemPrice()
+	 * @see Classes.Inventory.IInventoryAccess#getItemPrice(int)
 	 * @generated
 	 */
-	public void testGetItemPrice() {
+	public void testGetItemPrice__int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemName() <em>Get Item Name</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemName(int) <em>Get Item Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IInventoryAccess#getItemName()
+	 * @see Classes.Inventory.IInventoryAccess#getItemName(int)
 	 * @generated
 	 */
-	public void testGetItemName() {
+	public void testGetItemName__int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemStock() <em>Get Item Stock</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemStock(int) <em>Get Item Stock</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IInventoryAccess#getItemStock()
+	 * @see Classes.Inventory.IInventoryAccess#getItemStock(int)
 	 * @generated
 	 */
-	public void testGetItemStock() {
+	public void testGetItemStock__int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemExpense() <em>Get Item Expense</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemExpense(int) <em>Get Item Expense</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IInventoryAccess#getItemExpense()
+	 * @see Classes.Inventory.IInventoryAccess#getItemExpense(int)
 	 * @generated
 	 */
-	public void testGetItemExpense() {
+	public void testGetItemExpense__int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

@@ -231,7 +231,7 @@ public interface StaffPackage extends EPackage {
 	int STAFF_MANAGER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Staff</b></em>' map.
+	 * The feature id for the '<em><b>Staff</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -633,10 +633,10 @@ public interface StaffPackage extends EPackage {
 	EClass getStaffManager();
 
 	/**
-	 * Returns the meta object for the map '{@link Classes.Staff.StaffManager#getStaff <em>Staff</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Staff.StaffManager#getStaff <em>Staff</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the map '<em>Staff</em>'.
+	 * @return the meta object for the reference list '<em>Staff</em>'.
 	 * @see Classes.Staff.StaffManager#getStaff()
 	 * @see #getStaffManager()
 	 * @generated
@@ -997,7 +997,7 @@ public interface StaffPackage extends EPackage {
 		EClass STAFF_MANAGER = eINSTANCE.getStaffManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Staff</b></em>' map feature.
+		 * The meta object literal for the '<em><b>Staff</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

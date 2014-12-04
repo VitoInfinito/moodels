@@ -177,7 +177,7 @@ public interface FeedbackPackage extends EPackage {
 	int FEEDBACK_MANAGER = 1;
 
 	/**
-	 * The feature id for the '<em><b>Feedback</b></em>' map.
+	 * The feature id for the '<em><b>Feedback</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -460,10 +460,10 @@ public interface FeedbackPackage extends EPackage {
 	EClass getFeedbackManager();
 
 	/**
-	 * Returns the meta object for the map '{@link Classes.Feedback.FeedbackManager#getFeedback <em>Feedback</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Feedback.FeedbackManager#getFeedback <em>Feedback</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the map '<em>Feedback</em>'.
+	 * @return the meta object for the reference list '<em>Feedback</em>'.
 	 * @see Classes.Feedback.FeedbackManager#getFeedback()
 	 * @see #getFeedbackManager()
 	 * @generated
@@ -640,7 +640,7 @@ public interface FeedbackPackage extends EPackage {
 		EClass FEEDBACK_MANAGER = eINSTANCE.getFeedbackManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Feedback</b></em>' map feature.
+		 * The meta object literal for the '<em><b>Feedback</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

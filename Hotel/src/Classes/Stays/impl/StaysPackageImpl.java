@@ -141,7 +141,6 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 		ServicesPackageImpl theServicesPackage = (ServicesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) instanceof ServicesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) : ServicesPackage.eINSTANCE);
 		FeedbackPackageImpl theFeedbackPackage = (FeedbackPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) instanceof FeedbackPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) : FeedbackPackage.eINSTANCE);
 		RequestsPackageImpl theRequestsPackage = (RequestsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) instanceof RequestsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) : RequestsPackage.eINSTANCE);
-		Classes.ECoreMapEntries.impl.ECoreMapEntriesPackageImpl theECoreMapEntriesPackage = (Classes.ECoreMapEntries.impl.ECoreMapEntriesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(Classes.ECoreMapEntries.ECoreMapEntriesPackage.eNS_URI) instanceof Classes.ECoreMapEntries.impl.ECoreMapEntriesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(Classes.ECoreMapEntries.ECoreMapEntriesPackage.eNS_URI) : Classes.ECoreMapEntries.ECoreMapEntriesPackage.eINSTANCE);
 		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
 
 		// Create package meta-data objects
@@ -160,7 +159,6 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 		theServicesPackage.createPackageContents();
 		theFeedbackPackage.createPackageContents();
 		theRequestsPackage.createPackageContents();
-		theECoreMapEntriesPackage.createPackageContents();
 		theTypesPackage.createPackageContents();
 
 		// Initialize created meta-data
@@ -179,7 +177,6 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 		theServicesPackage.initializePackageContents();
 		theFeedbackPackage.initializePackageContents();
 		theRequestsPackage.initializePackageContents();
-		theECoreMapEntriesPackage.initializePackageContents();
 		theTypesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
@@ -739,7 +736,6 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 
 		// Obtain other dependent packages
 		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
-		Classes.ECoreMapEntries.ECoreMapEntriesPackage theECoreMapEntriesPackage = (Classes.ECoreMapEntries.ECoreMapEntriesPackage)EPackage.Registry.INSTANCE.getEPackage(Classes.ECoreMapEntries.ECoreMapEntriesPackage.eNS_URI);
 		BankingPackage theBankingPackage = (BankingPackage)EPackage.Registry.INSTANCE.getEPackage(BankingPackage.eNS_URI);
 		BillsPackage theBillsPackage = (BillsPackage)EPackage.Registry.INSTANCE.getEPackage(BillsPackage.eNS_URI);
 		GuestsPackage theGuestsPackage = (GuestsPackage)EPackage.Registry.INSTANCE.getEPackage(GuestsPackage.eNS_URI);
@@ -778,7 +774,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 		initEAttribute(getCreditCard_LastName(), theTypesPackage.getString(), "lastName", null, 1, 1, CreditCard.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(staysManagerEClass, StaysManager.class, "StaysManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getStaysManager_Stay(), theECoreMapEntriesPackage.getStringToStayMap(), null, "stay", null, 0, -1, StaysManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getStaysManager_Stay(), this.getStay(), null, "stay", null, 0, -1, StaysManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getStaysManager_CustomerProvides(), theBankingPackage.getCustomerProvides(), null, "customerProvides", null, 1, 1, StaysManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getStaysManager_IBills(), theBillsPackage.getIBills(), null, "iBills", null, 1, 1, StaysManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getStaysManager_IGuests(), theGuestsPackage.getIGuests(), null, "iGuests", null, 1, 1, StaysManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

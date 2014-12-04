@@ -16,18 +16,18 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link Classes.Inventory.IInventoryAccess#changeItemStock() <em>Change Item Stock</em>}</li>
- *   <li>{@link Classes.Inventory.IInventoryAccess#getItemPrice() <em>Get Item Price</em>}</li>
- *   <li>{@link Classes.Inventory.IInventoryAccess#getItemName() <em>Get Item Name</em>}</li>
- *   <li>{@link Classes.Inventory.IInventoryAccess#getItemStock() <em>Get Item Stock</em>}</li>
- *   <li>{@link Classes.Inventory.IInventoryAccess#getItemExpense() <em>Get Item Expense</em>}</li>
+ *   <li>{@link Classes.Inventory.IInventoryAccess#changeItemStock(int, int) <em>Change Item Stock</em>}</li>
+ *   <li>{@link Classes.Inventory.IInventoryAccess#getItemPrice(int) <em>Get Item Price</em>}</li>
+ *   <li>{@link Classes.Inventory.IInventoryAccess#getItemName(int) <em>Get Item Name</em>}</li>
+ *   <li>{@link Classes.Inventory.IInventoryAccess#getItemStock(int) <em>Get Item Stock</em>}</li>
+ *   <li>{@link Classes.Inventory.IInventoryAccess#getItemExpense(int) <em>Get Item Expense</em>}</li>
  *   <li>{@link Classes.Inventory.IInventoryAccess#getAllItemIDs() <em>Get All Item IDs</em>}</li>
  *   <li>{@link Classes.Inventory.IInventoryAccess#searchItems() <em>Search Items</em>}</li>
- *   <li>{@link Classes.Inventory.IManageInventory#changeItemName() <em>Change Item Name</em>}</li>
- *   <li>{@link Classes.Inventory.IManageInventory#changeItemPrice() <em>Change Item Price</em>}</li>
- *   <li>{@link Classes.Inventory.IManageInventory#changeItemExpense() <em>Change Item Expense</em>}</li>
- *   <li>{@link Classes.Inventory.IManageInventory#addItem() <em>Add Item</em>}</li>
- *   <li>{@link Classes.Inventory.IManageInventory#removeItem() <em>Remove Item</em>}</li>
+ *   <li>{@link Classes.Inventory.IManageInventory#changeItemName(int, java.lang.String) <em>Change Item Name</em>}</li>
+ *   <li>{@link Classes.Inventory.IManageInventory#changeItemPrice(int, int) <em>Change Item Price</em>}</li>
+ *   <li>{@link Classes.Inventory.IManageInventory#changeItemExpense(int, int) <em>Change Item Expense</em>}</li>
+ *   <li>{@link Classes.Inventory.IManageInventory#addItem(java.lang.String, int, int, int) <em>Add Item</em>}</li>
+ *   <li>{@link Classes.Inventory.IManageInventory#removeItem(int) <em>Remove Item</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -104,65 +104,65 @@ public class InventoryTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IInventoryAccess#changeItemStock() <em>Change Item Stock</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IInventoryAccess#changeItemStock(int, int) <em>Change Item Stock</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IInventoryAccess#changeItemStock()
+	 * @see Classes.Inventory.IInventoryAccess#changeItemStock(int, int)
 	 * @generated
 	 */
-	public void testChangeItemStock() {
+	public void testChangeItemStock__int_int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemPrice() <em>Get Item Price</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemPrice(int) <em>Get Item Price</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IInventoryAccess#getItemPrice()
+	 * @see Classes.Inventory.IInventoryAccess#getItemPrice(int)
 	 * @generated
 	 */
-	public void testGetItemPrice() {
+	public void testGetItemPrice__int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemName() <em>Get Item Name</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemName(int) <em>Get Item Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IInventoryAccess#getItemName()
+	 * @see Classes.Inventory.IInventoryAccess#getItemName(int)
 	 * @generated
 	 */
-	public void testGetItemName() {
+	public void testGetItemName__int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemStock() <em>Get Item Stock</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemStock(int) <em>Get Item Stock</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IInventoryAccess#getItemStock()
+	 * @see Classes.Inventory.IInventoryAccess#getItemStock(int)
 	 * @generated
 	 */
-	public void testGetItemStock() {
+	public void testGetItemStock__int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemExpense() <em>Get Item Expense</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IInventoryAccess#getItemExpense(int) <em>Get Item Expense</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IInventoryAccess#getItemExpense()
+	 * @see Classes.Inventory.IInventoryAccess#getItemExpense(int)
 	 * @generated
 	 */
-	public void testGetItemExpense() {
+	public void testGetItemExpense__int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -195,65 +195,65 @@ public class InventoryTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IManageInventory#changeItemName() <em>Change Item Name</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IManageInventory#changeItemName(int, java.lang.String) <em>Change Item Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IManageInventory#changeItemName()
+	 * @see Classes.Inventory.IManageInventory#changeItemName(int, java.lang.String)
 	 * @generated
 	 */
-	public void testChangeItemName() {
+	public void testChangeItemName__int_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IManageInventory#changeItemPrice() <em>Change Item Price</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IManageInventory#changeItemPrice(int, int) <em>Change Item Price</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IManageInventory#changeItemPrice()
+	 * @see Classes.Inventory.IManageInventory#changeItemPrice(int, int)
 	 * @generated
 	 */
-	public void testChangeItemPrice() {
+	public void testChangeItemPrice__int_int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IManageInventory#changeItemExpense() <em>Change Item Expense</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IManageInventory#changeItemExpense(int, int) <em>Change Item Expense</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IManageInventory#changeItemExpense()
+	 * @see Classes.Inventory.IManageInventory#changeItemExpense(int, int)
 	 * @generated
 	 */
-	public void testChangeItemExpense() {
+	public void testChangeItemExpense__int_int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IManageInventory#addItem() <em>Add Item</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IManageInventory#addItem(java.lang.String, int, int, int) <em>Add Item</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IManageInventory#addItem()
+	 * @see Classes.Inventory.IManageInventory#addItem(java.lang.String, int, int, int)
 	 * @generated
 	 */
-	public void testAddItem() {
+	public void testAddItem__String_int_int_int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IManageInventory#removeItem() <em>Remove Item</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IManageInventory#removeItem(int) <em>Remove Item</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IManageInventory#removeItem()
+	 * @see Classes.Inventory.IManageInventory#removeItem(int)
 	 * @generated
 	 */
-	public void testRemoveItem() {
+	public void testRemoveItem__int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

@@ -267,7 +267,7 @@ public interface CustomersPackage extends EPackage {
 	int CUSTOMERS_MANAGER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Customer</b></em>' map.
+	 * The feature id for the '<em><b>Customer</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -612,10 +612,10 @@ public interface CustomersPackage extends EPackage {
 	EClass getCustomersManager();
 
 	/**
-	 * Returns the meta object for the map '{@link Classes.Customers.CustomersManager#getCustomer <em>Customer</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Customers.CustomersManager#getCustomer <em>Customer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the map '<em>Customer</em>'.
+	 * @return the meta object for the reference list '<em>Customer</em>'.
 	 * @see Classes.Customers.CustomersManager#getCustomer()
 	 * @see #getCustomersManager()
 	 * @generated
@@ -994,7 +994,7 @@ public interface CustomersPackage extends EPackage {
 		EClass CUSTOMERS_MANAGER = eINSTANCE.getCustomersManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Customer</b></em>' map feature.
+		 * The meta object literal for the '<em><b>Customer</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

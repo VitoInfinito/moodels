@@ -178,7 +178,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BookablesManager" eSuperTypes="#//Bookables/IBookablesManage">
       <eStructuralFeatures xsi:type="ecore:EReference" name="bookables" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToBookableMap" containment="true"/>
+          upperBound="-1" eType="#//Bookables/Bookable"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="iHotelStayManager" ordered="false"
           lowerBound="1" eType="#//Stays/IStays"/>
     </eClassifiers>
@@ -223,7 +223,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="StaysManager" eSuperTypes="#//Stays/IStays">
       <eStructuralFeatures xsi:type="ecore:EReference" name="stay" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToStayMap" containment="true"/>
+          upperBound="-1" eType="#//Stays/Stay"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="customerProvides" ordered="false"
           lowerBound="1" eType="#//Banking/CustomerProvides"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="iBills" ordered="false"
@@ -321,7 +321,7 @@
   <eSubpackages name="Bills" nsURI="http:///Classes/Bills.ecore" nsPrefix="Classes.Bills">
     <eClassifiers xsi:type="ecore:EClass" name="BillsManager" eSuperTypes="#//Bills/IBills">
       <eStructuralFeatures xsi:type="ecore:EReference" name="bill" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToBillMap" containment="true"/>
+          upperBound="-1" eType="#//Bills/Bill"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="customerProvides" ordered="false"
           lowerBound="1" eType="#//Banking/CustomerProvides"/>
     </eClassifiers>
@@ -365,7 +365,7 @@
   <eSubpackages name="Guests" nsURI="http:///Classes/Guests.ecore" nsPrefix="Classes.Guests">
     <eClassifiers xsi:type="ecore:EClass" name="GuestsManager" eSuperTypes="#//Guests/IGuests">
       <eStructuralFeatures xsi:type="ecore:EReference" name="guest" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToGuestMap" containment="true"/>
+          upperBound="-1" eType="#//Guests/Guest"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="iManageAccounts" ordered="false"
           lowerBound="1" eType="#//Accounts/IManageAccounts"/>
     </eClassifiers>
@@ -435,7 +435,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AccountsManager" eSuperTypes="#//Accounts/IManageAccounts #//Accounts/IAccountsAccess">
       <eStructuralFeatures xsi:type="ecore:EReference" name="account" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToAccountMap" containment="true"/>
+          upperBound="-1" eType="#//Accounts/Account"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IAccountsAccess" abstract="true" interface="true">
       <eOperations name="validateAccount" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
@@ -489,7 +489,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BookingsManager" eSuperTypes="#//Bookings/IBookings">
       <eStructuralFeatures xsi:type="ecore:EReference" name="booking" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToBookingMap" containment="true"/>
+          upperBound="-1" eType="#//Bookings/Booking"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="iBookableAccess" ordered="false"
           lowerBound="1" eType="#//Bookables/IBookablesAccess"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="iHotelStayManager" ordered="false"
@@ -533,7 +533,7 @@
   <eSubpackages name="Customers" nsURI="http:///Classes/Customers.ecore" nsPrefix="Classes.Customers">
     <eClassifiers xsi:type="ecore:EClass" name="CustomersManager" eSuperTypes="#//Customers/ICustomers">
       <eStructuralFeatures xsi:type="ecore:EReference" name="customer" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToCustomerMap" containment="true"/>
+          upperBound="-1" eType="#//Customers/Customer"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Customer">
       <eOperations name="addBooking" ordered="false" lowerBound="1"/>
@@ -624,7 +624,7 @@
   <eSubpackages name="Staff" nsURI="http:///Classes/Staff.ecore" nsPrefix="Classes.Staff">
     <eClassifiers xsi:type="ecore:EClass" name="StaffManager" eSuperTypes="#//Staff/IStaff">
       <eStructuralFeatures xsi:type="ecore:EReference" name="staff" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToStaffMap" containment="true"/>
+          upperBound="-1" eType="#//Staff/Staff"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="iStatisticsGenerator"
           ordered="false" lowerBound="1" eType="#//Statistics/IStatisticsGenerator"/>
     </eClassifiers>
@@ -750,7 +750,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Inventory" eSuperTypes="#//Inventory/IManageInventory">
       <eStructuralFeatures xsi:type="ecore:EReference" name="itemType" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToItemTypeMap" containment="true"/>
+          upperBound="-1" eType="#//Inventory/ItemType"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ItemType">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
@@ -799,16 +799,16 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RestaurantsManager" eSuperTypes="#//Restaurants/IRestaurantsManage">
       <eStructuralFeatures xsi:type="ecore:EReference" name="restaurant" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToRestaurantMap" containment="true"/>
+          upperBound="-1" eType="#//Restaurants/Restaurant"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Restaurant">
       <eOperations name="addReservation" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="reservation" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToReservationMap" containment="true"/>
+          upperBound="-1" eType="#//Restaurants/Reservation"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="restaurantTable" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToRestaurantTableMap" containment="true"/>
+          upperBound="-1" eType="#//Restaurants/RestaurantTable"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="menu" ordered="false"
           lowerBound="1" eType="#//Restaurants/RestaurantMenu"/>
     </eClassifiers>
@@ -872,9 +872,9 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ServiceManager" eSuperTypes="#//Services/IServicesManage">
       <eStructuralFeatures xsi:type="ecore:EReference" name="service" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToServiceMap" containment="true"/>
+          upperBound="-1" eType="#//Services/Service"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="roomServiceOrder" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToRoomServiceOrderMap" containment="true"/>
+          upperBound="-1" eType="#//Services/RoomServiceOrder"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="roomServiceMenu" ordered="false"
           lowerBound="1" eType="#//Services/RoomServiceMenu"/>
     </eClassifiers>
@@ -933,7 +933,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FeedbackManager" eSuperTypes="#//Feedback/IFeedback">
       <eStructuralFeatures xsi:type="ecore:EReference" name="feedback" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToFeedbackMap" containment="true"/>
+          upperBound="-1" eType="#//Feedback/Feedback"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Feedback">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
@@ -971,7 +971,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RequestsManager" eSuperTypes="#//Requests/IRequests">
       <eStructuralFeatures xsi:type="ecore:EReference" name="specialRequest" ordered="false"
-          upperBound="-1" eType="#//ECoreMapEntries/StringToRequestMap"/>
+          upperBound="-1" eType="#//Requests/Request"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Request">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
@@ -980,72 +980,6 @@
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isResolved" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
-    </eClassifiers>
-  </eSubpackages>
-  <eSubpackages name="ECoreMapEntries">
-    <eClassifiers xsi:type="ecore:EClass" name="StringToBookableMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Bookables/Bookable"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToStayMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Stays/Stay"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToCustomerMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Customers/Customer"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToGuestMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Guests/Guest"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToBillMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Bills/Bill"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToFeedbackMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Feedback/Feedback"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToAccountMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Accounts/Account"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToItemTypeMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Inventory/ItemType"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToRequestMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Requests/Request"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToStaffMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Staff/Staff"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToBookingMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Bookings/Booking"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToRestaurantMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Restaurants/Restaurant"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToReservationMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Restaurants/Reservation"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToRestaurantTableMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Restaurants/RestaurantTable"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToServiceMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Services/Service"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToRoomServiceOrderMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Services/RoomServiceOrder"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

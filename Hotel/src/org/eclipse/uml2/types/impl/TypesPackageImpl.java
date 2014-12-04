@@ -3,74 +3,38 @@
 package org.eclipse.uml2.types.impl;
 
 import Classes.Accounts.AccountsPackage;
-
 import Classes.Accounts.impl.AccountsPackageImpl;
-
 import Classes.Banking.BankingPackage;
-
 import Classes.Banking.impl.BankingPackageImpl;
-
 import Classes.Bills.BillsPackage;
-
 import Classes.Bills.impl.BillsPackageImpl;
-
 import Classes.Bookables.BookablesPackage;
-
 import Classes.Bookables.impl.BookablesPackageImpl;
-
 import Classes.Bookings.BookingsPackage;
-
 import Classes.Bookings.impl.BookingsPackageImpl;
-
 import Classes.Customers.CustomersPackage;
-
 import Classes.Customers.impl.CustomersPackageImpl;
-
-import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
-
-import Classes.ECoreMapEntries.impl.ECoreMapEntriesPackageImpl;
-
 import Classes.Feedback.FeedbackPackage;
-
 import Classes.Feedback.impl.FeedbackPackageImpl;
-
 import Classes.Guests.GuestsPackage;
-
 import Classes.Guests.impl.GuestsPackageImpl;
-
 import Classes.Inventory.InventoryPackage;
-
 import Classes.Inventory.impl.InventoryPackageImpl;
-
 import Classes.Requests.RequestsPackage;
-
 import Classes.Requests.impl.RequestsPackageImpl;
-
 import Classes.Restaurants.RestaurantsPackage;
-
 import Classes.Restaurants.impl.RestaurantsPackageImpl;
-
 import Classes.Services.ServicesPackage;
-
 import Classes.Services.impl.ServicesPackageImpl;
-
 import Classes.Staff.StaffPackage;
-
 import Classes.Staff.impl.StaffPackageImpl;
-
 import Classes.Statistics.StatisticsPackage;
-
 import Classes.Statistics.impl.StatisticsPackageImpl;
-
 import Classes.Stays.StaysPackage;
-
 import Classes.Stays.impl.StaysPackageImpl;
-
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.uml2.types.TypesFactory;
 import org.eclipse.uml2.types.TypesPackage;
 
@@ -178,7 +142,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		ServicesPackageImpl theServicesPackage = (ServicesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) instanceof ServicesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) : ServicesPackage.eINSTANCE);
 		FeedbackPackageImpl theFeedbackPackage = (FeedbackPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) instanceof FeedbackPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) : FeedbackPackage.eINSTANCE);
 		RequestsPackageImpl theRequestsPackage = (RequestsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) instanceof RequestsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) : RequestsPackage.eINSTANCE);
-		ECoreMapEntriesPackageImpl theECoreMapEntriesPackage = (ECoreMapEntriesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ECoreMapEntriesPackage.eNS_URI) instanceof ECoreMapEntriesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ECoreMapEntriesPackage.eNS_URI) : ECoreMapEntriesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theTypesPackage.createPackageContents();
@@ -197,7 +160,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		theServicesPackage.createPackageContents();
 		theFeedbackPackage.createPackageContents();
 		theRequestsPackage.createPackageContents();
-		theECoreMapEntriesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theTypesPackage.initializePackageContents();
@@ -216,7 +178,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		theServicesPackage.initializePackageContents();
 		theFeedbackPackage.initializePackageContents();
 		theRequestsPackage.initializePackageContents();
-		theECoreMapEntriesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theTypesPackage.freeze();

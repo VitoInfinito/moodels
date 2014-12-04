@@ -484,7 +484,7 @@ public interface RestaurantsPackage extends EPackage {
 	int RESTAURANTS_MANAGER = 2;
 
 	/**
-	 * The feature id for the '<em><b>Restaurant</b></em>' map.
+	 * The feature id for the '<em><b>Restaurant</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -755,7 +755,7 @@ public interface RestaurantsPackage extends EPackage {
 	int RESTAURANT__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Reservation</b></em>' map.
+	 * The feature id for the '<em><b>Reservation</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -764,7 +764,7 @@ public interface RestaurantsPackage extends EPackage {
 	int RESTAURANT__RESERVATION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Restaurant Table</b></em>' map.
+	 * The feature id for the '<em><b>Restaurant Table</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1273,10 +1273,10 @@ public interface RestaurantsPackage extends EPackage {
 	EClass getRestaurantsManager();
 
 	/**
-	 * Returns the meta object for the map '{@link Classes.Restaurants.RestaurantsManager#getRestaurant <em>Restaurant</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Restaurants.RestaurantsManager#getRestaurant <em>Restaurant</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the map '<em>Restaurant</em>'.
+	 * @return the meta object for the reference list '<em>Restaurant</em>'.
 	 * @see Classes.Restaurants.RestaurantsManager#getRestaurant()
 	 * @see #getRestaurantsManager()
 	 * @generated
@@ -1305,10 +1305,10 @@ public interface RestaurantsPackage extends EPackage {
 	EAttribute getRestaurant_Name();
 
 	/**
-	 * Returns the meta object for the map '{@link Classes.Restaurants.Restaurant#getReservation <em>Reservation</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Restaurants.Restaurant#getReservation <em>Reservation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the map '<em>Reservation</em>'.
+	 * @return the meta object for the reference list '<em>Reservation</em>'.
 	 * @see Classes.Restaurants.Restaurant#getReservation()
 	 * @see #getRestaurant()
 	 * @generated
@@ -1316,10 +1316,10 @@ public interface RestaurantsPackage extends EPackage {
 	EReference getRestaurant_Reservation();
 
 	/**
-	 * Returns the meta object for the map '{@link Classes.Restaurants.Restaurant#getRestaurantTable <em>Restaurant Table</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Restaurants.Restaurant#getRestaurantTable <em>Restaurant Table</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the map '<em>Restaurant Table</em>'.
+	 * @return the meta object for the reference list '<em>Restaurant Table</em>'.
 	 * @see Classes.Restaurants.Restaurant#getRestaurantTable()
 	 * @see #getRestaurant()
 	 * @generated
@@ -1750,7 +1750,7 @@ public interface RestaurantsPackage extends EPackage {
 		EClass RESTAURANTS_MANAGER = eINSTANCE.getRestaurantsManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Restaurant</b></em>' map feature.
+		 * The meta object literal for the '<em><b>Restaurant</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1776,7 +1776,7 @@ public interface RestaurantsPackage extends EPackage {
 		EAttribute RESTAURANT__NAME = eINSTANCE.getRestaurant_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Reservation</b></em>' map feature.
+		 * The meta object literal for the '<em><b>Reservation</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1784,7 +1784,7 @@ public interface RestaurantsPackage extends EPackage {
 		EReference RESTAURANT__RESERVATION = eINSTANCE.getRestaurant_Reservation();
 
 		/**
-		 * The meta object literal for the '<em><b>Restaurant Table</b></em>' map feature.
+		 * The meta object literal for the '<em><b>Restaurant Table</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

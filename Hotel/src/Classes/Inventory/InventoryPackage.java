@@ -295,7 +295,7 @@ public interface InventoryPackage extends EPackage {
 	int INVENTORY = 2;
 
 	/**
-	 * The feature id for the '<em><b>Item Type</b></em>' map.
+	 * The feature id for the '<em><b>Item Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -654,10 +654,10 @@ public interface InventoryPackage extends EPackage {
 	EClass getInventory();
 
 	/**
-	 * Returns the meta object for the map '{@link Classes.Inventory.Inventory#getItemType <em>Item Type</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Inventory.Inventory#getItemType <em>Item Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the map '<em>Item Type</em>'.
+	 * @return the meta object for the reference list '<em>Item Type</em>'.
 	 * @see Classes.Inventory.Inventory#getItemType()
 	 * @see #getInventory()
 	 * @generated
@@ -879,7 +879,7 @@ public interface InventoryPackage extends EPackage {
 		EClass INVENTORY = eINSTANCE.getInventory();
 
 		/**
-		 * The meta object literal for the '<em><b>Item Type</b></em>' map feature.
+		 * The meta object literal for the '<em><b>Item Type</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

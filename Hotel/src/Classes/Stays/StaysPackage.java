@@ -521,7 +521,7 @@ public interface StaysPackage extends EPackage {
 	int STAYS_MANAGER = 2;
 
 	/**
-	 * The feature id for the '<em><b>Stay</b></em>' map.
+	 * The feature id for the '<em><b>Stay</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1008,10 +1008,10 @@ public interface StaysPackage extends EPackage {
 	EClass getStaysManager();
 
 	/**
-	 * Returns the meta object for the map '{@link Classes.Stays.StaysManager#getStay <em>Stay</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Stays.StaysManager#getStay <em>Stay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the map '<em>Stay</em>'.
+	 * @return the meta object for the reference list '<em>Stay</em>'.
 	 * @see Classes.Stays.StaysManager#getStay()
 	 * @see #getStaysManager()
 	 * @generated
@@ -1489,7 +1489,7 @@ public interface StaysPackage extends EPackage {
 		EClass STAYS_MANAGER = eINSTANCE.getStaysManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Stay</b></em>' map feature.
+		 * The meta object literal for the '<em><b>Stay</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

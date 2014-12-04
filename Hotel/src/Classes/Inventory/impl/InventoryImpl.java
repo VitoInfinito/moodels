@@ -2,8 +2,6 @@
  */
 package Classes.Inventory.impl;
 
-import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
-import Classes.ECoreMapEntries.impl.StringToItemTypeMapImpl;
 import Classes.InvalidIDException;
 import Classes.Inventory.Inventory;
 import Classes.Inventory.InventoryPackage;
@@ -16,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -82,9 +80,9 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EMap<String, ItemType> getItemType() {
+	public EList<ItemType> getItemType() {
 		if (itemType == null) {
-			itemType = new EcoreEMap<String,ItemType>(ECoreMapEntriesPackage.Literals.STRING_TO_ITEM_TYPE_MAP, StringToItemTypeMapImpl.class, this, InventoryPackage.INVENTORY__ITEM_TYPE);
+			itemType = new EObjectResolvingEList<ItemType>(ItemType.class, this, InventoryPackage.INVENTORY__ITEM_TYPE);
 		}
 		return itemType;
 	}

@@ -15,18 +15,18 @@ import junit.framework.TestCase;
  * <ul>
  *   <li>{@link Classes.Staff.IStaff#getAllStaff() <em>Get All Staff</em>}</li>
  *   <li>{@link Classes.Staff.IStaff#searchStaff() <em>Search Staff</em>}</li>
- *   <li>{@link Classes.Staff.IStaff#getStaffFirstName() <em>Get Staff First Name</em>}</li>
- *   <li>{@link Classes.Staff.IStaff#getStaffLastName() <em>Get Staff Last Name</em>}</li>
- *   <li>{@link Classes.Staff.IStaff#getStaffJob() <em>Get Staff Job</em>}</li>
- *   <li>{@link Classes.Staff.IStaff#getStaffPhone() <em>Get Staff Phone</em>}</li>
- *   <li>{@link Classes.Staff.IStaff#getStaffEmail() <em>Get Staff Email</em>}</li>
- *   <li>{@link Classes.Staff.IStaff#getStaffSalaryContractType() <em>Get Staff Salary Contract Type</em>}</li>
- *   <li>{@link Classes.Staff.IStaff#getStaffSalary() <em>Get Staff Salary</em>}</li>
- *   <li>{@link Classes.Staff.IStaff#changeStaffFirstName() <em>Change Staff First Name</em>}</li>
- *   <li>{@link Classes.Staff.IStaff#changeStaffLastName() <em>Change Staff Last Name</em>}</li>
- *   <li>{@link Classes.Staff.IStaff#changeStaffJob() <em>Change Staff Job</em>}</li>
- *   <li>{@link Classes.Staff.IStaff#changeStaffPhone() <em>Change Staff Phone</em>}</li>
- *   <li>{@link Classes.Staff.IStaff#changeStaffSalaryContract() <em>Change Staff Salary Contract</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#getStaffFirstName(java.lang.String) <em>Get Staff First Name</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#getStaffLastName(java.lang.String) <em>Get Staff Last Name</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#getStaffJob(java.lang.String) <em>Get Staff Job</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#getStaffPhone(java.lang.String) <em>Get Staff Phone</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#getStaffEmail(java.lang.String) <em>Get Staff Email</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#getStaffSalaryContractType(java.lang.String) <em>Get Staff Salary Contract Type</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#getStaffSalary(java.lang.String) <em>Get Staff Salary</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#changeStaffFirstName(java.lang.String, java.lang.String) <em>Change Staff First Name</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#changeStaffLastName(java.lang.String, java.lang.String) <em>Change Staff Last Name</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#changeStaffJob(java.lang.String, java.lang.String) <em>Change Staff Job</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#changeStaffPhone(java.lang.String, java.lang.String) <em>Change Staff Phone</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, java.lang.String) <em>Change Staff Salary Contract</em>}</li>
  *   <li>{@link Classes.Staff.IStaff#scheduleStaff() <em>Schedule Staff</em>}</li>
  * </ul>
  * </p>
@@ -99,156 +99,156 @@ public abstract class IStaffTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Staff.IStaff#getStaffFirstName() <em>Get Staff First Name</em>}' operation.
+	 * Tests the '{@link Classes.Staff.IStaff#getStaffFirstName(java.lang.String) <em>Get Staff First Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Staff.IStaff#getStaffFirstName()
+	 * @see Classes.Staff.IStaff#getStaffFirstName(java.lang.String)
 	 * @generated
 	 */
-	public void testGetStaffFirstName() {
+	public void testGetStaffFirstName__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Staff.IStaff#getStaffLastName() <em>Get Staff Last Name</em>}' operation.
+	 * Tests the '{@link Classes.Staff.IStaff#getStaffLastName(java.lang.String) <em>Get Staff Last Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Staff.IStaff#getStaffLastName()
+	 * @see Classes.Staff.IStaff#getStaffLastName(java.lang.String)
 	 * @generated
 	 */
-	public void testGetStaffLastName() {
+	public void testGetStaffLastName__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Staff.IStaff#getStaffJob() <em>Get Staff Job</em>}' operation.
+	 * Tests the '{@link Classes.Staff.IStaff#getStaffJob(java.lang.String) <em>Get Staff Job</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Staff.IStaff#getStaffJob()
+	 * @see Classes.Staff.IStaff#getStaffJob(java.lang.String)
 	 * @generated
 	 */
-	public void testGetStaffJob() {
+	public void testGetStaffJob__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Staff.IStaff#getStaffPhone() <em>Get Staff Phone</em>}' operation.
+	 * Tests the '{@link Classes.Staff.IStaff#getStaffPhone(java.lang.String) <em>Get Staff Phone</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Staff.IStaff#getStaffPhone()
+	 * @see Classes.Staff.IStaff#getStaffPhone(java.lang.String)
 	 * @generated
 	 */
-	public void testGetStaffPhone() {
+	public void testGetStaffPhone__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Staff.IStaff#getStaffEmail() <em>Get Staff Email</em>}' operation.
+	 * Tests the '{@link Classes.Staff.IStaff#getStaffEmail(java.lang.String) <em>Get Staff Email</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Staff.IStaff#getStaffEmail()
+	 * @see Classes.Staff.IStaff#getStaffEmail(java.lang.String)
 	 * @generated
 	 */
-	public void testGetStaffEmail() {
+	public void testGetStaffEmail__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Staff.IStaff#getStaffSalaryContractType() <em>Get Staff Salary Contract Type</em>}' operation.
+	 * Tests the '{@link Classes.Staff.IStaff#getStaffSalaryContractType(java.lang.String) <em>Get Staff Salary Contract Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Staff.IStaff#getStaffSalaryContractType()
+	 * @see Classes.Staff.IStaff#getStaffSalaryContractType(java.lang.String)
 	 * @generated
 	 */
-	public void testGetStaffSalaryContractType() {
+	public void testGetStaffSalaryContractType__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Staff.IStaff#getStaffSalary() <em>Get Staff Salary</em>}' operation.
+	 * Tests the '{@link Classes.Staff.IStaff#getStaffSalary(java.lang.String) <em>Get Staff Salary</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Staff.IStaff#getStaffSalary()
+	 * @see Classes.Staff.IStaff#getStaffSalary(java.lang.String)
 	 * @generated
 	 */
-	public void testGetStaffSalary() {
+	public void testGetStaffSalary__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Staff.IStaff#changeStaffFirstName() <em>Change Staff First Name</em>}' operation.
+	 * Tests the '{@link Classes.Staff.IStaff#changeStaffFirstName(java.lang.String, java.lang.String) <em>Change Staff First Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Staff.IStaff#changeStaffFirstName()
+	 * @see Classes.Staff.IStaff#changeStaffFirstName(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testChangeStaffFirstName() {
+	public void testChangeStaffFirstName__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Staff.IStaff#changeStaffLastName() <em>Change Staff Last Name</em>}' operation.
+	 * Tests the '{@link Classes.Staff.IStaff#changeStaffLastName(java.lang.String, java.lang.String) <em>Change Staff Last Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Staff.IStaff#changeStaffLastName()
+	 * @see Classes.Staff.IStaff#changeStaffLastName(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testChangeStaffLastName() {
+	public void testChangeStaffLastName__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Staff.IStaff#changeStaffJob() <em>Change Staff Job</em>}' operation.
+	 * Tests the '{@link Classes.Staff.IStaff#changeStaffJob(java.lang.String, java.lang.String) <em>Change Staff Job</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Staff.IStaff#changeStaffJob()
+	 * @see Classes.Staff.IStaff#changeStaffJob(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testChangeStaffJob() {
+	public void testChangeStaffJob__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Staff.IStaff#changeStaffPhone() <em>Change Staff Phone</em>}' operation.
+	 * Tests the '{@link Classes.Staff.IStaff#changeStaffPhone(java.lang.String, java.lang.String) <em>Change Staff Phone</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Staff.IStaff#changeStaffPhone()
+	 * @see Classes.Staff.IStaff#changeStaffPhone(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testChangeStaffPhone() {
+	public void testChangeStaffPhone__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Staff.IStaff#changeStaffSalaryContract() <em>Change Staff Salary Contract</em>}' operation.
+	 * Tests the '{@link Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, java.lang.String) <em>Change Staff Salary Contract</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Staff.IStaff#changeStaffSalaryContract()
+	 * @see Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testChangeStaffSalaryContract() {
+	public void testChangeStaffSalaryContract__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
