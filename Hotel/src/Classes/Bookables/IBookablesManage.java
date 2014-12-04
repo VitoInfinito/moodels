@@ -2,6 +2,8 @@
  */
 package Classes.Bookables;
 
+import Classes.InvalidIDException;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +22,7 @@ public interface IBookablesManage extends IBookablesAccess {
 	 * @model hostelBedIDDataType="org.eclipse.uml2.types.String" hostelBedIDRequired="true" hostelBedIDOrdered="false" roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
 	 */
-	void changeHostelBedRoom(String hostelBedID, String roomID);
+	void changeHostelBedRoom(String hostelBedID, String roomID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -28,47 +30,47 @@ public interface IBookablesManage extends IBookablesAccess {
 	 * @model bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false"
 	 * @generated NOT
 	 */
-	void deleteBookable(String bookableID);
+	void deleteBookable(String bookableID) throws InvalidIDException ;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false" floorDataType="org.eclipse.uml2.types.Integer" floorRequired="true" floorOrdered="false" additionalInfoDataType="org.eclipse.uml2.types.String" additionalInfoRequired="true" additionalInfoOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void changeRoomLocation(String roomID, int floor, String additionalInfo);
+	void changeRoomLocation(String roomID, int floor, String additionalInfo) throws InvalidIDException ;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false" categoryRequired="true" categoryOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void changeHotelRoomCategory(String roomID, HotelRoomCategory category);
+	void changeHotelRoomCategory(String roomID, HotelRoomCategory category) throws InvalidIDException ;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false" categoryRequired="true" categoryOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void changeConferenceRoomCategory(String roomID, ConferenceRoomCategory category);
+	void changeConferenceRoomCategory(String roomID, ConferenceRoomCategory category) throws InvalidIDException ;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false" basePriceRequired="true" basePriceOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void changeBookableBasePrice(String bookableID, double basePrice);
+	void changeBookableBasePrice(String bookableID, double basePrice) throws InvalidIDException ;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void changeBookableDescription(String bookableID, String description);
+	void changeBookableDescription(String bookableID, String description) throws InvalidIDException ;
 
 	/**
 	 * <!-- begin-user-doc -->

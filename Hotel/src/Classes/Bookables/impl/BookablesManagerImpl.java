@@ -37,6 +37,8 @@ import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.uml2.types.TypesPackage;
 import org.eclipse.uml2.types.impl.StringToBookableMapImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -53,6 +55,8 @@ import org.eclipse.uml2.types.impl.StringToBookableMapImpl;
  * @generated
  */
 public class BookablesManagerImpl extends MinimalEObjectImpl.Container implements BookablesManager {
+	
+	private final Logger logger = LoggerFactory.getLogger(BookablesManagerImpl.class);
 
 	/**
 	 * The cached value of the '{@link #getBookables() <em>Bookables</em>}' map.
@@ -78,7 +82,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected BookablesManagerImpl() {
 		super();
@@ -152,6 +156,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	public double getBookableBasePrice(String bookableID) throws InvalidIDException {
 		Bookable bookable = bookables.get(bookableID);
 		if (bookable == null) {
+			logger.debug("The bookable with ID {} could not be found.", bookableID);
 			throw new InvalidIDException();
 		}
 		return bookable.getBaseprice();
@@ -558,7 +563,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changeHostelBedRoom(String hostelBedID, String roomID) {
+	public void changeHostelBedRoom(String hostelBedID, String roomID) throws InvalidIDException  {
 		Bookable hostelBed = bookables.get(hostelBedID);
 		Bookable room = bookables.get(roomID);
 		if (hostelBed == null || room == null || !(hostelBed instanceof HostelBed) || !(room instanceof HotelRoom)) {
@@ -577,62 +582,74 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 		if (bookable == null) {
 			throw new InvalidIDException();
 		}
-		// TODO might need to notify so that stays in this bookable get another bookable
+		// TODO might need to notify so that stays in this bookable get another bookable. (maybe EMap does this though)
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void changeRoomLocation(String roomID, int floor, String additionalInfo) throws InvalidIDException {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Bookable room = bookables.get(roomID);
+		if (room == null || !(room instanceof Room)) {
+			throw new InvalidIDException();
+		}
+		RoomLocation loc = ((Room)room).getLocation();
+		loc.setFloor(floor);
+		loc.setAddtionalInfo(additionalInfo);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void changeHotelRoomCategory(String roomID, HotelRoomCategory category) throws InvalidIDException {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Bookable room = bookables.get(roomID);
+		if (room == null || !(room instanceof HotelRoom)) {
+			throw new InvalidIDException();
+		}
+		((HotelRoom)room).setCategory(category);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void changeConferenceRoomCategory(String roomID, ConferenceRoomCategory category) throws InvalidIDException {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Bookable room = bookables.get(roomID);
+		if (room == null || !(room instanceof ConferenceRoom)) {
+			throw new InvalidIDException();
+		}
+		((ConferenceRoom)room).setCategory(category);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void changeBookableBasePrice(String bookableID, double basePrice) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void changeBookableBasePrice(String bookableID, double basePrice) throws InvalidIDException  {
+		Bookable bookable = bookables.get(bookableID);
+		if (bookable == null) {
+			throw new InvalidIDException();
+		}
+		bookable.setBaseprice(basePrice);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void changeBookableDescription(String bookableID, String description) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void changeBookableDescription(String bookableID, String description) throws InvalidIDException  {
+		Bookable bookable = bookables.get(bookableID);
+		if (bookable == null) {
+			throw new InvalidIDException();
+		}
+		bookable.setDescription(description);
 	}
 
 	/**
