@@ -421,7 +421,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__GetStaffFirstName() {
+	public EOperation getIStaff__GetStaffFirstName__String() {
 		return iStaffEClass.getEOperations().get(2);
 	}
 
@@ -586,7 +586,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 		iStaffEClass = createEClass(ISTAFF);
 		createEOperation(iStaffEClass, ISTAFF___GET_ALL_STAFF);
 		createEOperation(iStaffEClass, ISTAFF___SEARCH_STAFF);
-		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_FIRST_NAME);
+		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_FIRST_NAME__STRING);
 		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_LAST_NAME);
 		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_JOB);
 		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_PHONE);
@@ -667,7 +667,8 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 
 		initEOperation(getIStaff__SearchStaff(), null, "searchStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStaff__GetStaffFirstName(), null, "getStaffFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getIStaff__GetStaffFirstName__String(), null, "getStaffFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIStaff__GetStaffLastName(), null, "getStaffLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

@@ -101,7 +101,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___GET_STAFF_FIRST_NAME = 2;
+	int ISTAFF___GET_STAFF_FIRST_NAME__STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Get Staff Last Name</em>' operation.
@@ -282,7 +282,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___GET_STAFF_FIRST_NAME = ISTAFF___GET_STAFF_FIRST_NAME;
+	int STAFF_MANAGER___GET_STAFF_FIRST_NAME__STRING = ISTAFF___GET_STAFF_FIRST_NAME__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Staff Last Name</em>' operation.
@@ -834,14 +834,14 @@ public interface StaffPackage extends EPackage {
 	EOperation getIStaff__SearchStaff();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffFirstName() <em>Get Staff First Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffFirstName(java.lang.String) <em>Get Staff First Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Staff First Name</em>' operation.
-	 * @see Classes.Staff.IStaff#getStaffFirstName()
+	 * @see Classes.Staff.IStaff#getStaffFirstName(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStaff__GetStaffFirstName();
+	EOperation getIStaff__GetStaffFirstName__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffLastName() <em>Get Staff Last Name</em>}' operation.
@@ -1164,7 +1164,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___GET_STAFF_FIRST_NAME = eINSTANCE.getIStaff__GetStaffFirstName();
+		EOperation ISTAFF___GET_STAFF_FIRST_NAME__STRING = eINSTANCE.getIStaff__GetStaffFirstName__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Staff Last Name</b></em>' operation.

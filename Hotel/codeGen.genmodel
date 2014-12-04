@@ -598,7 +598,9 @@
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Staff/IStaff">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getAllStaff"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/searchStaff"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffFirstName"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffFirstName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/getStaffFirstName/SSID"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffLastName"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffJob"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffPhone"/>

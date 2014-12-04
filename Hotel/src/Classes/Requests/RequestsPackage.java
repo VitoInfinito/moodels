@@ -83,7 +83,7 @@ public interface RequestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IREQUESTS___GET_REQUEST_DESCRIPTION = 0;
+	int IREQUESTS___GET_REQUEST_DESCRIPTION__STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Has Request Been Resolved</em>' operation.
@@ -92,7 +92,7 @@ public interface RequestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IREQUESTS___HAS_REQUEST_BEEN_RESOLVED = 1;
+	int IREQUESTS___HAS_REQUEST_BEEN_RESOLVED__BOOLEAN = 1;
 
 	/**
 	 * The operation id for the '<em>Set Request Resolved</em>' operation.
@@ -110,7 +110,7 @@ public interface RequestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IREQUESTS___DELETE_REQUEST = 3;
+	int IREQUESTS___DELETE_REQUEST__STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Change Request Desc</em>' operation.
@@ -119,7 +119,7 @@ public interface RequestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IREQUESTS___CHANGE_REQUEST_DESC = 4;
+	int IREQUESTS___CHANGE_REQUEST_DESC__STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Search Requests</em>' operation.
@@ -128,7 +128,7 @@ public interface RequestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IREQUESTS___SEARCH_REQUESTS = 5;
+	int IREQUESTS___SEARCH_REQUESTS__STRING_ELIST = 5;
 
 	/**
 	 * The operation id for the '<em>Get All Request IDs</em>' operation.
@@ -201,7 +201,7 @@ public interface RequestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUESTS_MANAGER___GET_REQUEST_DESCRIPTION = IREQUESTS___GET_REQUEST_DESCRIPTION;
+	int REQUESTS_MANAGER___GET_REQUEST_DESCRIPTION__STRING = IREQUESTS___GET_REQUEST_DESCRIPTION__STRING;
 
 	/**
 	 * The operation id for the '<em>Has Request Been Resolved</em>' operation.
@@ -210,7 +210,7 @@ public interface RequestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUESTS_MANAGER___HAS_REQUEST_BEEN_RESOLVED = IREQUESTS___HAS_REQUEST_BEEN_RESOLVED;
+	int REQUESTS_MANAGER___HAS_REQUEST_BEEN_RESOLVED__BOOLEAN = IREQUESTS___HAS_REQUEST_BEEN_RESOLVED__BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Set Request Resolved</em>' operation.
@@ -228,7 +228,7 @@ public interface RequestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUESTS_MANAGER___DELETE_REQUEST = IREQUESTS___DELETE_REQUEST;
+	int REQUESTS_MANAGER___DELETE_REQUEST__STRING = IREQUESTS___DELETE_REQUEST__STRING;
 
 	/**
 	 * The operation id for the '<em>Change Request Desc</em>' operation.
@@ -237,7 +237,7 @@ public interface RequestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUESTS_MANAGER___CHANGE_REQUEST_DESC = IREQUESTS___CHANGE_REQUEST_DESC;
+	int REQUESTS_MANAGER___CHANGE_REQUEST_DESC__STRING = IREQUESTS___CHANGE_REQUEST_DESC__STRING;
 
 	/**
 	 * The operation id for the '<em>Search Requests</em>' operation.
@@ -246,7 +246,7 @@ public interface RequestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUESTS_MANAGER___SEARCH_REQUESTS = IREQUESTS___SEARCH_REQUESTS;
+	int REQUESTS_MANAGER___SEARCH_REQUESTS__STRING_ELIST = IREQUESTS___SEARCH_REQUESTS__STRING_ELIST;
 
 	/**
 	 * The operation id for the '<em>Get All Request IDs</em>' operation.
@@ -351,24 +351,24 @@ public interface RequestsPackage extends EPackage {
 	EClass getIRequests();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Requests.IRequests#getRequestDescription() <em>Get Request Description</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Requests.IRequests#getRequestDescription(java.lang.String) <em>Get Request Description</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Request Description</em>' operation.
-	 * @see Classes.Requests.IRequests#getRequestDescription()
+	 * @see Classes.Requests.IRequests#getRequestDescription(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIRequests__GetRequestDescription();
+	EOperation getIRequests__GetRequestDescription__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Requests.IRequests#hasRequestBeenResolved() <em>Has Request Been Resolved</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Requests.IRequests#hasRequestBeenResolved(boolean) <em>Has Request Been Resolved</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Has Request Been Resolved</em>' operation.
-	 * @see Classes.Requests.IRequests#hasRequestBeenResolved()
+	 * @see Classes.Requests.IRequests#hasRequestBeenResolved(boolean)
 	 * @generated
 	 */
-	EOperation getIRequests__HasRequestBeenResolved();
+	EOperation getIRequests__HasRequestBeenResolved__boolean();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Requests.IRequests#setRequestResolved() <em>Set Request Resolved</em>}' operation.
@@ -381,34 +381,34 @@ public interface RequestsPackage extends EPackage {
 	EOperation getIRequests__SetRequestResolved();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Requests.IRequests#deleteRequest() <em>Delete Request</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Requests.IRequests#deleteRequest(java.lang.String) <em>Delete Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Delete Request</em>' operation.
-	 * @see Classes.Requests.IRequests#deleteRequest()
+	 * @see Classes.Requests.IRequests#deleteRequest(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIRequests__DeleteRequest();
+	EOperation getIRequests__DeleteRequest__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Requests.IRequests#changeRequestDesc() <em>Change Request Desc</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Requests.IRequests#changeRequestDesc(java.lang.String) <em>Change Request Desc</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Request Desc</em>' operation.
-	 * @see Classes.Requests.IRequests#changeRequestDesc()
+	 * @see Classes.Requests.IRequests#changeRequestDesc(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIRequests__ChangeRequestDesc();
+	EOperation getIRequests__ChangeRequestDesc__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Requests.IRequests#searchRequests() <em>Search Requests</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Requests.IRequests#searchRequests(java.lang.String, org.eclipse.emf.common.util.EList) <em>Search Requests</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Requests</em>' operation.
-	 * @see Classes.Requests.IRequests#searchRequests()
+	 * @see Classes.Requests.IRequests#searchRequests(java.lang.String, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getIRequests__SearchRequests();
+	EOperation getIRequests__SearchRequests__String_EList();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Requests.IRequests#getAllRequestIDs() <em>Get All Request IDs</em>}' operation.
@@ -543,7 +543,7 @@ public interface RequestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IREQUESTS___GET_REQUEST_DESCRIPTION = eINSTANCE.getIRequests__GetRequestDescription();
+		EOperation IREQUESTS___GET_REQUEST_DESCRIPTION__STRING = eINSTANCE.getIRequests__GetRequestDescription__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Has Request Been Resolved</b></em>' operation.
@@ -551,7 +551,7 @@ public interface RequestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IREQUESTS___HAS_REQUEST_BEEN_RESOLVED = eINSTANCE.getIRequests__HasRequestBeenResolved();
+		EOperation IREQUESTS___HAS_REQUEST_BEEN_RESOLVED__BOOLEAN = eINSTANCE.getIRequests__HasRequestBeenResolved__boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Set Request Resolved</b></em>' operation.
@@ -567,7 +567,7 @@ public interface RequestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IREQUESTS___DELETE_REQUEST = eINSTANCE.getIRequests__DeleteRequest();
+		EOperation IREQUESTS___DELETE_REQUEST__STRING = eINSTANCE.getIRequests__DeleteRequest__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Request Desc</b></em>' operation.
@@ -575,7 +575,7 @@ public interface RequestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IREQUESTS___CHANGE_REQUEST_DESC = eINSTANCE.getIRequests__ChangeRequestDesc();
+		EOperation IREQUESTS___CHANGE_REQUEST_DESC__STRING = eINSTANCE.getIRequests__ChangeRequestDesc__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Search Requests</b></em>' operation.
@@ -583,7 +583,7 @@ public interface RequestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IREQUESTS___SEARCH_REQUESTS = eINSTANCE.getIRequests__SearchRequests();
+		EOperation IREQUESTS___SEARCH_REQUESTS__STRING_ELIST = eINSTANCE.getIRequests__SearchRequests__String_EList();
 
 		/**
 		 * The meta object literal for the '<em><b>Get All Request IDs</b></em>' operation.

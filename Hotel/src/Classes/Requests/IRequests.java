@@ -2,6 +2,7 @@
  */
 package Classes.Requests;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,18 +19,18 @@ public interface IRequests extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" specialRequestIdDataType="org.eclipse.uml2.types.String" specialRequestIdRequired="true" specialRequestIdOrdered="false"
 	 * @generated
 	 */
-	void getRequestDescription();
+	String getRequestDescription(String specialRequestId);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model _DataType="org.eclipse.uml2.types.Boolean" _Required="true" _Ordered="false"
 	 * @generated
 	 */
-	void hasRequestBeenResolved();
+	void hasRequestBeenResolved(boolean _);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -42,26 +43,26 @@ public interface IRequests extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model specialRequestIdDataType="org.eclipse.uml2.types.String" specialRequestIdRequired="true" specialRequestIdOrdered="false"
 	 * @generated
 	 */
-	void deleteRequest();
+	void deleteRequest(String specialRequestId);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model specialRequestIdDataType="org.eclipse.uml2.types.String" specialRequestIdRequired="true" specialRequestIdOrdered="false"
 	 * @generated
 	 */
-	void changeRequestDesc();
+	void changeRequestDesc(String specialRequestId);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model specialRequestIdDataType="org.eclipse.uml2.types.String" specialRequestIdRequired="true" specialRequestIdOrdered="false" _DataType="org.eclipse.uml2.types.String" _Many="true" _Ordered="false"
 	 * @generated
 	 */
-	void searchRequests();
+	void searchRequests(String specialRequestId, EList<String> _);
 
 	/**
 	 * <!-- begin-user-doc -->

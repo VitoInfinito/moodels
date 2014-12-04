@@ -878,7 +878,11 @@
     <packagedElement xmi:type="uml:Interface" xmi:id="_w9N3snpsEeST-65JbGUt8g" name="IStaff">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3s3psEeST-65JbGUt8g" name="getAllStaff"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3tHpsEeST-65JbGUt8g" name="searchStaff"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3tXpsEeST-65JbGUt8g" name="getStaffFirstName"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3tXpsEeST-65JbGUt8g" name="getStaffFirstName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_IyS3IHvFEeSLvtP7wKaE3g" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3tnpsEeST-65JbGUt8g" name="getStaffLastName"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3t3psEeST-65JbGUt8g" name="getStaffJob"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3uHpsEeST-65JbGUt8g" name="getStaffPhone"/>

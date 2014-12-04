@@ -226,7 +226,7 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRequests__GetRequestDescription() {
+	public EOperation getIRequests__GetRequestDescription__String() {
 		return iRequestsEClass.getEOperations().get(0);
 	}
 
@@ -235,7 +235,7 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRequests__HasRequestBeenResolved() {
+	public EOperation getIRequests__HasRequestBeenResolved__boolean() {
 		return iRequestsEClass.getEOperations().get(1);
 	}
 
@@ -253,7 +253,7 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRequests__DeleteRequest() {
+	public EOperation getIRequests__DeleteRequest__String() {
 		return iRequestsEClass.getEOperations().get(3);
 	}
 
@@ -262,7 +262,7 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRequests__ChangeRequestDesc() {
+	public EOperation getIRequests__ChangeRequestDesc__String() {
 		return iRequestsEClass.getEOperations().get(4);
 	}
 
@@ -271,7 +271,7 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRequests__SearchRequests() {
+	public EOperation getIRequests__SearchRequests__String_EList() {
 		return iRequestsEClass.getEOperations().get(5);
 	}
 
@@ -385,12 +385,12 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 
 		// Create classes and their features
 		iRequestsEClass = createEClass(IREQUESTS);
-		createEOperation(iRequestsEClass, IREQUESTS___GET_REQUEST_DESCRIPTION);
-		createEOperation(iRequestsEClass, IREQUESTS___HAS_REQUEST_BEEN_RESOLVED);
+		createEOperation(iRequestsEClass, IREQUESTS___GET_REQUEST_DESCRIPTION__STRING);
+		createEOperation(iRequestsEClass, IREQUESTS___HAS_REQUEST_BEEN_RESOLVED__BOOLEAN);
 		createEOperation(iRequestsEClass, IREQUESTS___SET_REQUEST_RESOLVED);
-		createEOperation(iRequestsEClass, IREQUESTS___DELETE_REQUEST);
-		createEOperation(iRequestsEClass, IREQUESTS___CHANGE_REQUEST_DESC);
-		createEOperation(iRequestsEClass, IREQUESTS___SEARCH_REQUESTS);
+		createEOperation(iRequestsEClass, IREQUESTS___DELETE_REQUEST__STRING);
+		createEOperation(iRequestsEClass, IREQUESTS___CHANGE_REQUEST_DESC__STRING);
+		createEOperation(iRequestsEClass, IREQUESTS___SEARCH_REQUESTS__STRING_ELIST);
 		createEOperation(iRequestsEClass, IREQUESTS___GET_ALL_REQUEST_IDS);
 		createEOperation(iRequestsEClass, IREQUESTS___SET_REQUEST_DESCRIPTION);
 		createEOperation(iRequestsEClass, IREQUESTS___ADD_REQUEST);
@@ -440,17 +440,23 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 		// Initialize classes, features, and operations; add parameters
 		initEClass(iRequestsEClass, IRequests.class, "IRequests", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getIRequests__GetRequestDescription(), null, "getRequestDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getIRequests__GetRequestDescription__String(), theTypesPackage.getString(), "getRequestDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "specialRequestId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIRequests__HasRequestBeenResolved(), null, "hasRequestBeenResolved", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRequests__HasRequestBeenResolved__boolean(), null, "hasRequestBeenResolved", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getBoolean(), "_", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIRequests__SetRequestResolved(), null, "setRequestResolved", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIRequests__DeleteRequest(), null, "deleteRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRequests__DeleteRequest__String(), null, "deleteRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "specialRequestId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIRequests__ChangeRequestDesc(), null, "changeRequestDesc", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRequests__ChangeRequestDesc__String(), null, "changeRequestDesc", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "specialRequestId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIRequests__SearchRequests(), null, "searchRequests", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRequests__SearchRequests__String_EList(), null, "searchRequests", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "specialRequestId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "_", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIRequests__GetAllRequestIDs(), null, "getAllRequestIDs", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

@@ -155,7 +155,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getStaffFirstName() {
+	public void getStaffFirstName(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -378,8 +378,8 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 			case StaffPackage.STAFF_MANAGER___SEARCH_STAFF:
 				searchStaff();
 				return null;
-			case StaffPackage.STAFF_MANAGER___GET_STAFF_FIRST_NAME:
-				getStaffFirstName();
+			case StaffPackage.STAFF_MANAGER___GET_STAFF_FIRST_NAME__STRING:
+				getStaffFirstName((String)arguments.get(0));
 				return null;
 			case StaffPackage.STAFF_MANAGER___GET_STAFF_LAST_NAME:
 				getStaffLastName();

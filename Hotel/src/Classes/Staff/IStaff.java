@@ -34,10 +34,10 @@ public interface IStaff extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void getStaffFirstName();
+	void getStaffFirstName(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->

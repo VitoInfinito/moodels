@@ -284,9 +284,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 				return getItemStock((Integer)arguments.get(0));
 			case InventoryPackage.INVENTORY___GET_ITEM_EXPENSE__INT:
 				return getItemExpense((Integer)arguments.get(0));
-			case InventoryPackage.INVENTORY___GET_ALL_ITEM_IDS__ELIST:
-				getAllItemIDs((EList<Integer>)arguments.get(0));
-				return null;
+			case InventoryPackage.INVENTORY___GET_ALL_ITEM_IDS:
+				return getAllItemIDs();
 			case InventoryPackage.INVENTORY___SEARCH_ITEMS:
 				searchItems();
 				return null;

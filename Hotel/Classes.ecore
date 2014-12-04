@@ -658,7 +658,9 @@
     <eClassifiers xsi:type="ecore:EClass" name="IStaff" abstract="true" interface="true">
       <eOperations name="getAllStaff" ordered="false" lowerBound="1"/>
       <eOperations name="searchStaff" ordered="false" lowerBound="1"/>
-      <eOperations name="getStaffFirstName" ordered="false" lowerBound="1"/>
+      <eOperations name="getStaffFirstName" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
       <eOperations name="getStaffLastName" ordered="false" lowerBound="1"/>
       <eOperations name="getStaffJob" ordered="false" lowerBound="1"/>
       <eOperations name="getStaffPhone" ordered="false" lowerBound="1"/>

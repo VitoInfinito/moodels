@@ -76,9 +76,9 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public void getRequestDescription() {
+	public String getRequestDescription(String specialRequestId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -89,7 +89,18 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void hasRequestBeenResolved() {
+	public void hasRequestBeenResolved(boolean _) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void getRequestDescription() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -111,7 +122,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void deleteRequest() {
+	public void deleteRequest(String specialRequestId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -122,7 +133,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeRequestDesc() {
+	public void changeRequestDesc(String specialRequestId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -133,7 +144,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchRequests() {
+	public void searchRequests(String specialRequestId, EList<String> _) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -238,25 +249,25 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case RequestsPackage.REQUESTS_MANAGER___GET_REQUEST_DESCRIPTION:
-				getRequestDescription();
-				return null;
-			case RequestsPackage.REQUESTS_MANAGER___HAS_REQUEST_BEEN_RESOLVED:
-				hasRequestBeenResolved();
+			case RequestsPackage.REQUESTS_MANAGER___GET_REQUEST_DESCRIPTION__STRING:
+				return getRequestDescription((String)arguments.get(0));
+			case RequestsPackage.REQUESTS_MANAGER___HAS_REQUEST_BEEN_RESOLVED__BOOLEAN:
+				hasRequestBeenResolved((Boolean)arguments.get(0));
 				return null;
 			case RequestsPackage.REQUESTS_MANAGER___SET_REQUEST_RESOLVED:
 				setRequestResolved();
 				return null;
-			case RequestsPackage.REQUESTS_MANAGER___DELETE_REQUEST:
-				deleteRequest();
+			case RequestsPackage.REQUESTS_MANAGER___DELETE_REQUEST__STRING:
+				deleteRequest((String)arguments.get(0));
 				return null;
-			case RequestsPackage.REQUESTS_MANAGER___CHANGE_REQUEST_DESC:
-				changeRequestDesc();
+			case RequestsPackage.REQUESTS_MANAGER___CHANGE_REQUEST_DESC__STRING:
+				changeRequestDesc((String)arguments.get(0));
 				return null;
-			case RequestsPackage.REQUESTS_MANAGER___SEARCH_REQUESTS:
-				searchRequests();
+			case RequestsPackage.REQUESTS_MANAGER___SEARCH_REQUESTS__STRING_ELIST:
+				searchRequests((String)arguments.get(0), (EList<String>)arguments.get(1));
 				return null;
 			case RequestsPackage.REQUESTS_MANAGER___GET_ALL_REQUEST_IDS:
 				getAllRequestIDs();
