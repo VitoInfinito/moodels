@@ -29,8 +29,4 @@
       <details key="documentation" value="String is a sequence of characters in some suitable character set used to display information about the model. Character sets may include non-Roman alphabets and characters."/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StringToBookableMap" instanceClassName="java.util.Map$Entry">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass Classes.ecore#//Bookables/Bookable"/>
-  </eClassifiers>
 </ecore:EPackage>

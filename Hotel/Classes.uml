@@ -1425,12 +1425,40 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_w9QT8HpsEeST-65JbGUt8g" name="Requests">
     <packagedElement xmi:type="uml:Interface" xmi:id="_w9QT8npsEeST-65JbGUt8g" name="IRequests">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT83psEeST-65JbGUt8g" name="getRequestDescription"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT9HpsEeST-65JbGUt8g" name="hasRequestBeenResolved"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT83psEeST-65JbGUt8g" name="getRequestDescription">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DHcUgHvCEeSebpgcqy0qFw" name="specialRequestId">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Mt_YAHvCEeSebpgcqy0qFw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT9HpsEeST-65JbGUt8g" name="hasRequestBeenResolved">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_busXEHvCEeSebpgcqy0qFw">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT9XpsEeST-65JbGUt8g" name="setRequestResolved"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT9npsEeST-65JbGUt8g" name="deleteRequest"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT93psEeST-65JbGUt8g" name="changeRequestDesc"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT-HpsEeST-65JbGUt8g" name="searchRequests"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT9npsEeST-65JbGUt8g" name="deleteRequest">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_h998wHvCEeSebpgcqy0qFw" name="specialRequestId">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT93psEeST-65JbGUt8g" name="changeRequestDesc">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QGV-cHvDEeSebpgcqy0qFw" name="specialRequestId">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT-HpsEeST-65JbGUt8g" name="searchRequests">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gupNcHvDEeSebpgcqy0qFw" name="specialRequestId">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9ME3YHvDEeSebpgcqy0qFw">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BMVn0HvEEeSebpgcqy0qFw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BMfY0HvEEeSebpgcqy0qFw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT-XpsEeST-65JbGUt8g" name="getAllRequestIDs"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT-npsEeST-65JbGUt8g" name="setRequestDescription"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT-3psEeST-65JbGUt8g" name="addRequest"/>

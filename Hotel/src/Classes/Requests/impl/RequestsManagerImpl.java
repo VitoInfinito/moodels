@@ -76,7 +76,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void getRequestDescription() {
 		// TODO: implement this method

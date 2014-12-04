@@ -165,12 +165,14 @@
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesAccess/searchHotelRooms">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesAccess/searchHotelRooms/keyword"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesAccess/searchHotelRooms/category"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesAccess/searchHostelBeds">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesAccess/searchHostelBeds/keyword"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesAccess/searchConferenceRooms">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesAccess/searchConferenceRooms/keyword"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesAccess/searchConferenceRooms/category"/>
         </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Bookables/BookablesManager">
@@ -800,12 +802,23 @@
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Requests" basePackage="Classes"
         disposableProviderFactory="true" ecorePackage="Classes.ecore#//Requests">
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Requests/IRequests">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/getRequestDescription"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/hasRequestBeenResolved"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/getRequestDescription">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/getRequestDescription/specialRequestId"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/hasRequestBeenResolved">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/hasRequestBeenResolved/_"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/setRequestResolved"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/deleteRequest"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/changeRequestDesc"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/searchRequests"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/deleteRequest">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/deleteRequest/specialRequestId"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/changeRequestDesc">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/changeRequestDesc/specialRequestId"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/searchRequests">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/searchRequests/specialRequestId"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/searchRequests/_"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/getAllRequestIDs"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/setRequestDescription"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/addRequest"/>
