@@ -156,7 +156,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	public double getBookableBasePrice(String bookableID) throws InvalidIDException {
 		Bookable bookable = bookables.get(bookableID);
 		if (bookable == null) {
-			logger.debug("The bookable with ID {} could not be found.", bookableID);
+			logger.warn("The bookable with ID {} could not be found.", bookableID);
 			throw new InvalidIDException();
 		}
 		return bookable.getBaseprice();
