@@ -110,7 +110,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___GET_STAFF_LAST_NAME = 3;
+	int ISTAFF___GET_STAFF_LAST_NAME__STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Get Staff Job</em>' operation.
@@ -119,7 +119,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___GET_STAFF_JOB = 4;
+	int ISTAFF___GET_STAFF_JOB__STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Get Staff Phone</em>' operation.
@@ -128,7 +128,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___GET_STAFF_PHONE = 5;
+	int ISTAFF___GET_STAFF_PHONE__STRING = 5;
 
 	/**
 	 * The operation id for the '<em>Get Staff Email</em>' operation.
@@ -137,7 +137,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___GET_STAFF_EMAIL = 6;
+	int ISTAFF___GET_STAFF_EMAIL__STRING = 6;
 
 	/**
 	 * The operation id for the '<em>Get Staff Salary Contract Type</em>' operation.
@@ -146,7 +146,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___GET_STAFF_SALARY_CONTRACT_TYPE = 7;
+	int ISTAFF___GET_STAFF_SALARY_CONTRACT_TYPE__STRING = 7;
 
 	/**
 	 * The operation id for the '<em>Get Staff Salary</em>' operation.
@@ -155,7 +155,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___GET_STAFF_SALARY = 8;
+	int ISTAFF___GET_STAFF_SALARY__STRING = 8;
 
 	/**
 	 * The operation id for the '<em>Change Staff First Name</em>' operation.
@@ -164,7 +164,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___CHANGE_STAFF_FIRST_NAME = 9;
+	int ISTAFF___CHANGE_STAFF_FIRST_NAME__STRING_STRING = 9;
 
 	/**
 	 * The operation id for the '<em>Change Staff Last Name</em>' operation.
@@ -173,7 +173,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___CHANGE_STAFF_LAST_NAME = 10;
+	int ISTAFF___CHANGE_STAFF_LAST_NAME__STRING_STRING = 10;
 
 	/**
 	 * The operation id for the '<em>Change Staff Job</em>' operation.
@@ -182,7 +182,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___CHANGE_STAFF_JOB = 11;
+	int ISTAFF___CHANGE_STAFF_JOB__STRING_STRING = 11;
 
 	/**
 	 * The operation id for the '<em>Change Staff Phone</em>' operation.
@@ -191,7 +191,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___CHANGE_STAFF_PHONE = 12;
+	int ISTAFF___CHANGE_STAFF_PHONE__STRING_STRING = 12;
 
 	/**
 	 * The operation id for the '<em>Change Staff Salary Contract</em>' operation.
@@ -200,7 +200,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___CHANGE_STAFF_SALARY_CONTRACT = 13;
+	int ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING = 13;
 
 	/**
 	 * The operation id for the '<em>Schedule Staff</em>' operation.
@@ -291,7 +291,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___GET_STAFF_LAST_NAME = ISTAFF___GET_STAFF_LAST_NAME;
+	int STAFF_MANAGER___GET_STAFF_LAST_NAME__STRING = ISTAFF___GET_STAFF_LAST_NAME__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Staff Job</em>' operation.
@@ -300,7 +300,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___GET_STAFF_JOB = ISTAFF___GET_STAFF_JOB;
+	int STAFF_MANAGER___GET_STAFF_JOB__STRING = ISTAFF___GET_STAFF_JOB__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Staff Phone</em>' operation.
@@ -309,7 +309,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___GET_STAFF_PHONE = ISTAFF___GET_STAFF_PHONE;
+	int STAFF_MANAGER___GET_STAFF_PHONE__STRING = ISTAFF___GET_STAFF_PHONE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Staff Email</em>' operation.
@@ -318,7 +318,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___GET_STAFF_EMAIL = ISTAFF___GET_STAFF_EMAIL;
+	int STAFF_MANAGER___GET_STAFF_EMAIL__STRING = ISTAFF___GET_STAFF_EMAIL__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Staff Salary Contract Type</em>' operation.
@@ -327,7 +327,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___GET_STAFF_SALARY_CONTRACT_TYPE = ISTAFF___GET_STAFF_SALARY_CONTRACT_TYPE;
+	int STAFF_MANAGER___GET_STAFF_SALARY_CONTRACT_TYPE__STRING = ISTAFF___GET_STAFF_SALARY_CONTRACT_TYPE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Staff Salary</em>' operation.
@@ -336,7 +336,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___GET_STAFF_SALARY = ISTAFF___GET_STAFF_SALARY;
+	int STAFF_MANAGER___GET_STAFF_SALARY__STRING = ISTAFF___GET_STAFF_SALARY__STRING;
 
 	/**
 	 * The operation id for the '<em>Change Staff First Name</em>' operation.
@@ -345,7 +345,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___CHANGE_STAFF_FIRST_NAME = ISTAFF___CHANGE_STAFF_FIRST_NAME;
+	int STAFF_MANAGER___CHANGE_STAFF_FIRST_NAME__STRING_STRING = ISTAFF___CHANGE_STAFF_FIRST_NAME__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Staff Last Name</em>' operation.
@@ -354,7 +354,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___CHANGE_STAFF_LAST_NAME = ISTAFF___CHANGE_STAFF_LAST_NAME;
+	int STAFF_MANAGER___CHANGE_STAFF_LAST_NAME__STRING_STRING = ISTAFF___CHANGE_STAFF_LAST_NAME__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Staff Job</em>' operation.
@@ -363,7 +363,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___CHANGE_STAFF_JOB = ISTAFF___CHANGE_STAFF_JOB;
+	int STAFF_MANAGER___CHANGE_STAFF_JOB__STRING_STRING = ISTAFF___CHANGE_STAFF_JOB__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Staff Phone</em>' operation.
@@ -372,7 +372,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___CHANGE_STAFF_PHONE = ISTAFF___CHANGE_STAFF_PHONE;
+	int STAFF_MANAGER___CHANGE_STAFF_PHONE__STRING_STRING = ISTAFF___CHANGE_STAFF_PHONE__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Staff Salary Contract</em>' operation.
@@ -381,7 +381,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___CHANGE_STAFF_SALARY_CONTRACT = ISTAFF___CHANGE_STAFF_SALARY_CONTRACT;
+	int STAFF_MANAGER___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING = ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Schedule Staff</em>' operation.
@@ -844,114 +844,114 @@ public interface StaffPackage extends EPackage {
 	EOperation getIStaff__GetStaffFirstName__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffLastName() <em>Get Staff Last Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffLastName(java.lang.String) <em>Get Staff Last Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Staff Last Name</em>' operation.
-	 * @see Classes.Staff.IStaff#getStaffLastName()
+	 * @see Classes.Staff.IStaff#getStaffLastName(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStaff__GetStaffLastName();
+	EOperation getIStaff__GetStaffLastName__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffJob() <em>Get Staff Job</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffJob(java.lang.String) <em>Get Staff Job</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Staff Job</em>' operation.
-	 * @see Classes.Staff.IStaff#getStaffJob()
+	 * @see Classes.Staff.IStaff#getStaffJob(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStaff__GetStaffJob();
+	EOperation getIStaff__GetStaffJob__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffPhone() <em>Get Staff Phone</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffPhone(java.lang.String) <em>Get Staff Phone</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Staff Phone</em>' operation.
-	 * @see Classes.Staff.IStaff#getStaffPhone()
+	 * @see Classes.Staff.IStaff#getStaffPhone(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStaff__GetStaffPhone();
+	EOperation getIStaff__GetStaffPhone__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffEmail() <em>Get Staff Email</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffEmail(java.lang.String) <em>Get Staff Email</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Staff Email</em>' operation.
-	 * @see Classes.Staff.IStaff#getStaffEmail()
+	 * @see Classes.Staff.IStaff#getStaffEmail(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStaff__GetStaffEmail();
+	EOperation getIStaff__GetStaffEmail__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffSalaryContractType() <em>Get Staff Salary Contract Type</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffSalaryContractType(java.lang.String) <em>Get Staff Salary Contract Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Staff Salary Contract Type</em>' operation.
-	 * @see Classes.Staff.IStaff#getStaffSalaryContractType()
+	 * @see Classes.Staff.IStaff#getStaffSalaryContractType(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStaff__GetStaffSalaryContractType();
+	EOperation getIStaff__GetStaffSalaryContractType__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffSalary() <em>Get Staff Salary</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffSalary(java.lang.String) <em>Get Staff Salary</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Staff Salary</em>' operation.
-	 * @see Classes.Staff.IStaff#getStaffSalary()
+	 * @see Classes.Staff.IStaff#getStaffSalary(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStaff__GetStaffSalary();
+	EOperation getIStaff__GetStaffSalary__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#changeStaffFirstName() <em>Change Staff First Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#changeStaffFirstName(java.lang.String, java.lang.String) <em>Change Staff First Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Staff First Name</em>' operation.
-	 * @see Classes.Staff.IStaff#changeStaffFirstName()
+	 * @see Classes.Staff.IStaff#changeStaffFirstName(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStaff__ChangeStaffFirstName();
+	EOperation getIStaff__ChangeStaffFirstName__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#changeStaffLastName() <em>Change Staff Last Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#changeStaffLastName(java.lang.String, java.lang.String) <em>Change Staff Last Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Staff Last Name</em>' operation.
-	 * @see Classes.Staff.IStaff#changeStaffLastName()
+	 * @see Classes.Staff.IStaff#changeStaffLastName(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStaff__ChangeStaffLastName();
+	EOperation getIStaff__ChangeStaffLastName__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#changeStaffJob() <em>Change Staff Job</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#changeStaffJob(java.lang.String, java.lang.String) <em>Change Staff Job</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Staff Job</em>' operation.
-	 * @see Classes.Staff.IStaff#changeStaffJob()
+	 * @see Classes.Staff.IStaff#changeStaffJob(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStaff__ChangeStaffJob();
+	EOperation getIStaff__ChangeStaffJob__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#changeStaffPhone() <em>Change Staff Phone</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#changeStaffPhone(java.lang.String, java.lang.String) <em>Change Staff Phone</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Staff Phone</em>' operation.
-	 * @see Classes.Staff.IStaff#changeStaffPhone()
+	 * @see Classes.Staff.IStaff#changeStaffPhone(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStaff__ChangeStaffPhone();
+	EOperation getIStaff__ChangeStaffPhone__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#changeStaffSalaryContract() <em>Change Staff Salary Contract</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, java.lang.String) <em>Change Staff Salary Contract</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Staff Salary Contract</em>' operation.
-	 * @see Classes.Staff.IStaff#changeStaffSalaryContract()
+	 * @see Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStaff__ChangeStaffSalaryContract();
+	EOperation getIStaff__ChangeStaffSalaryContract__String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Staff.IStaff#scheduleStaff() <em>Schedule Staff</em>}' operation.
@@ -1172,7 +1172,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___GET_STAFF_LAST_NAME = eINSTANCE.getIStaff__GetStaffLastName();
+		EOperation ISTAFF___GET_STAFF_LAST_NAME__STRING = eINSTANCE.getIStaff__GetStaffLastName__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Staff Job</b></em>' operation.
@@ -1180,7 +1180,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___GET_STAFF_JOB = eINSTANCE.getIStaff__GetStaffJob();
+		EOperation ISTAFF___GET_STAFF_JOB__STRING = eINSTANCE.getIStaff__GetStaffJob__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Staff Phone</b></em>' operation.
@@ -1188,7 +1188,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___GET_STAFF_PHONE = eINSTANCE.getIStaff__GetStaffPhone();
+		EOperation ISTAFF___GET_STAFF_PHONE__STRING = eINSTANCE.getIStaff__GetStaffPhone__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Staff Email</b></em>' operation.
@@ -1196,7 +1196,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___GET_STAFF_EMAIL = eINSTANCE.getIStaff__GetStaffEmail();
+		EOperation ISTAFF___GET_STAFF_EMAIL__STRING = eINSTANCE.getIStaff__GetStaffEmail__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Staff Salary Contract Type</b></em>' operation.
@@ -1204,7 +1204,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___GET_STAFF_SALARY_CONTRACT_TYPE = eINSTANCE.getIStaff__GetStaffSalaryContractType();
+		EOperation ISTAFF___GET_STAFF_SALARY_CONTRACT_TYPE__STRING = eINSTANCE.getIStaff__GetStaffSalaryContractType__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Staff Salary</b></em>' operation.
@@ -1212,7 +1212,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___GET_STAFF_SALARY = eINSTANCE.getIStaff__GetStaffSalary();
+		EOperation ISTAFF___GET_STAFF_SALARY__STRING = eINSTANCE.getIStaff__GetStaffSalary__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Staff First Name</b></em>' operation.
@@ -1220,7 +1220,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___CHANGE_STAFF_FIRST_NAME = eINSTANCE.getIStaff__ChangeStaffFirstName();
+		EOperation ISTAFF___CHANGE_STAFF_FIRST_NAME__STRING_STRING = eINSTANCE.getIStaff__ChangeStaffFirstName__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Staff Last Name</b></em>' operation.
@@ -1228,7 +1228,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___CHANGE_STAFF_LAST_NAME = eINSTANCE.getIStaff__ChangeStaffLastName();
+		EOperation ISTAFF___CHANGE_STAFF_LAST_NAME__STRING_STRING = eINSTANCE.getIStaff__ChangeStaffLastName__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Staff Job</b></em>' operation.
@@ -1236,7 +1236,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___CHANGE_STAFF_JOB = eINSTANCE.getIStaff__ChangeStaffJob();
+		EOperation ISTAFF___CHANGE_STAFF_JOB__STRING_STRING = eINSTANCE.getIStaff__ChangeStaffJob__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Staff Phone</b></em>' operation.
@@ -1244,7 +1244,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___CHANGE_STAFF_PHONE = eINSTANCE.getIStaff__ChangeStaffPhone();
+		EOperation ISTAFF___CHANGE_STAFF_PHONE__STRING_STRING = eINSTANCE.getIStaff__ChangeStaffPhone__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Staff Salary Contract</b></em>' operation.
@@ -1252,7 +1252,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___CHANGE_STAFF_SALARY_CONTRACT = eINSTANCE.getIStaff__ChangeStaffSalaryContract();
+		EOperation ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING = eINSTANCE.getIStaff__ChangeStaffSalaryContract__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Schedule Staff</b></em>' operation.

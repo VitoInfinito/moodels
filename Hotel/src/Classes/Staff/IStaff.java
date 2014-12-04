@@ -42,90 +42,90 @@ public interface IStaff extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void getStaffLastName();
+	void getStaffLastName(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void getStaffJob();
+	void getStaffJob(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void getStaffPhone();
+	void getStaffPhone(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void getStaffEmail();
+	void getStaffEmail(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void getStaffSalaryContractType();
+	void getStaffSalaryContractType(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void getStaffSalary();
+	void getStaffSalary(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model SSIDRequired="true" SSIDOrdered="false" firstNameRequired="true" firstNameOrdered="false"
 	 * @generated
 	 */
-	void changeStaffFirstName();
+	void changeStaffFirstName(String SSID, String firstName);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model SSIDRequired="true" SSIDOrdered="false" lastNameRequired="true" lastNameOrdered="false"
 	 * @generated
 	 */
-	void changeStaffLastName();
+	void changeStaffLastName(String SSID, String lastName);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model SSIDRequired="true" SSIDOrdered="false" jobRequired="true" jobOrdered="false"
 	 * @generated
 	 */
-	void changeStaffJob();
+	void changeStaffJob(String SSID, String job);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model SSIDRequired="true" SSIDOrdered="false" phoneNumberRequired="true" phoneNumberOrdered="false"
 	 * @generated
 	 */
-	void changeStaffPhone();
+	void changeStaffPhone(String SSID, String phoneNumber);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model SSIDRequired="true" SSIDOrdered="false" salaryContractRequired="true" salaryContractOrdered="false"
 	 * @generated
 	 */
-	void changeStaffSalaryContract();
+	void changeStaffSalaryContract(String SSID, String salaryContract);
 
 	/**
 	 * <!-- begin-user-doc -->

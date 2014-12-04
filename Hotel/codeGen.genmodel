@@ -601,17 +601,44 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffFirstName">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/getStaffFirstName/SSID"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffLastName"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffJob"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffPhone"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffEmail"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffSalaryContractType"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffSalary"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/changeStaffFirstName"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/changeStaffLastName"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/changeStaffJob"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/changeStaffPhone"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/changeStaffSalaryContract"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffLastName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/getStaffLastName/SSID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffJob">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/getStaffJob/SSID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffPhone">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/getStaffPhone/SSID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffEmail">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/getStaffEmail/SSID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffSalaryContractType">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/getStaffSalaryContractType/SSID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffSalary">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/getStaffSalary/SSID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/changeStaffFirstName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/changeStaffFirstName/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/changeStaffFirstName/firstName"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/changeStaffLastName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/changeStaffLastName/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/changeStaffLastName/lastName"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/changeStaffJob">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/changeStaffJob/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/changeStaffJob/job"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/changeStaffPhone">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/changeStaffPhone/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/changeStaffPhone/phoneNumber"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/changeStaffSalaryContract">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/changeStaffSalaryContract/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/changeStaffSalaryContract/salaryContract"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/scheduleStaff"/>
       </genClasses>
     </nestedGenPackages>

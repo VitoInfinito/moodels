@@ -883,17 +883,76 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3tnpsEeST-65JbGUt8g" name="getStaffLastName"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3t3psEeST-65JbGUt8g" name="getStaffJob"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3uHpsEeST-65JbGUt8g" name="getStaffPhone"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3uXpsEeST-65JbGUt8g" name="getStaffEmail"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3unpsEeST-65JbGUt8g" name="getStaffSalaryContractType"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3u3psEeST-65JbGUt8g" name="getStaffSalary"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3vHpsEeST-65JbGUt8g" name="changeStaffFirstName"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3vXpsEeST-65JbGUt8g" name="changeStaffLastName"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3vnpsEeST-65JbGUt8g" name="changeStaffJob"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3v3psEeST-65JbGUt8g" name="changeStaffPhone"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3wHpsEeST-65JbGUt8g" name="changeStaffSalaryContract"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3tnpsEeST-65JbGUt8g" name="getStaffLastName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hy08YHvFEeSLvtP7wKaE3g" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3t3psEeST-65JbGUt8g" name="getStaffJob">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_jZW1UHvFEeSLvtP7wKaE3g" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3uHpsEeST-65JbGUt8g" name="getStaffPhone">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_kxJHoHvFEeSLvtP7wKaE3g" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3uXpsEeST-65JbGUt8g" name="getStaffEmail">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_mfBlwHvFEeSLvtP7wKaE3g" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3unpsEeST-65JbGUt8g" name="getStaffSalaryContractType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_oI4fgHvFEeSLvtP7wKaE3g" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3u3psEeST-65JbGUt8g" name="getStaffSalary">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pvw9wHvFEeSLvtP7wKaE3g" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3vHpsEeST-65JbGUt8g" name="changeStaffFirstName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_rVzHcHvFEeSLvtP7wKaE3g" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_skwN4HvFEeSLvtP7wKaE3g" name="firstName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3vXpsEeST-65JbGUt8g" name="changeStaffLastName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_uE-DcHvFEeSLvtP7wKaE3g" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_vSx6YHvFEeSLvtP7wKaE3g" name="lastName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3vnpsEeST-65JbGUt8g" name="changeStaffJob">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_wt50kHvFEeSLvtP7wKaE3g" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xzrJ0HvFEeSLvtP7wKaE3g" name="job">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3v3psEeST-65JbGUt8g" name="changeStaffPhone">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_zWuQ8HvFEeSLvtP7wKaE3g" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_1-lEAHvFEeSLvtP7wKaE3g" name="phoneNumber">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3wHpsEeST-65JbGUt8g" name="changeStaffSalaryContract">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_34H_kHvFEeSLvtP7wKaE3g" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5Ru20HvFEeSLvtP7wKaE3g" name="salaryContract">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3wXpsEeST-65JbGUt8g" name="scheduleStaff"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9N3wnpsEeST-65JbGUt8g" name="StaffManager" visibility="package">

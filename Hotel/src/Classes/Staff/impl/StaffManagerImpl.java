@@ -166,7 +166,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getStaffLastName() {
+	public void getStaffLastName(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -177,7 +177,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getStaffJob() {
+	public void getStaffJob(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -188,7 +188,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getStaffPhone() {
+	public void getStaffPhone(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -199,7 +199,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getStaffEmail() {
+	public void getStaffEmail(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -210,7 +210,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getStaffSalaryContractType() {
+	public void getStaffSalaryContractType(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -221,7 +221,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getStaffSalary() {
+	public void getStaffSalary(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -232,7 +232,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeStaffFirstName() {
+	public void changeStaffFirstName(String SSID, String firstName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -243,7 +243,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeStaffLastName() {
+	public void changeStaffLastName(String SSID, String lastName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -254,7 +254,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeStaffJob() {
+	public void changeStaffJob(String SSID, String job) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -265,7 +265,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeStaffPhone() {
+	public void changeStaffPhone(String SSID, String phoneNumber) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -276,7 +276,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeStaffSalaryContract() {
+	public void changeStaffSalaryContract(String SSID, String salaryContract) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -381,38 +381,38 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 			case StaffPackage.STAFF_MANAGER___GET_STAFF_FIRST_NAME__STRING:
 				getStaffFirstName((String)arguments.get(0));
 				return null;
-			case StaffPackage.STAFF_MANAGER___GET_STAFF_LAST_NAME:
-				getStaffLastName();
+			case StaffPackage.STAFF_MANAGER___GET_STAFF_LAST_NAME__STRING:
+				getStaffLastName((String)arguments.get(0));
 				return null;
-			case StaffPackage.STAFF_MANAGER___GET_STAFF_JOB:
-				getStaffJob();
+			case StaffPackage.STAFF_MANAGER___GET_STAFF_JOB__STRING:
+				getStaffJob((String)arguments.get(0));
 				return null;
-			case StaffPackage.STAFF_MANAGER___GET_STAFF_PHONE:
-				getStaffPhone();
+			case StaffPackage.STAFF_MANAGER___GET_STAFF_PHONE__STRING:
+				getStaffPhone((String)arguments.get(0));
 				return null;
-			case StaffPackage.STAFF_MANAGER___GET_STAFF_EMAIL:
-				getStaffEmail();
+			case StaffPackage.STAFF_MANAGER___GET_STAFF_EMAIL__STRING:
+				getStaffEmail((String)arguments.get(0));
 				return null;
-			case StaffPackage.STAFF_MANAGER___GET_STAFF_SALARY_CONTRACT_TYPE:
-				getStaffSalaryContractType();
+			case StaffPackage.STAFF_MANAGER___GET_STAFF_SALARY_CONTRACT_TYPE__STRING:
+				getStaffSalaryContractType((String)arguments.get(0));
 				return null;
-			case StaffPackage.STAFF_MANAGER___GET_STAFF_SALARY:
-				getStaffSalary();
+			case StaffPackage.STAFF_MANAGER___GET_STAFF_SALARY__STRING:
+				getStaffSalary((String)arguments.get(0));
 				return null;
-			case StaffPackage.STAFF_MANAGER___CHANGE_STAFF_FIRST_NAME:
-				changeStaffFirstName();
+			case StaffPackage.STAFF_MANAGER___CHANGE_STAFF_FIRST_NAME__STRING_STRING:
+				changeStaffFirstName((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case StaffPackage.STAFF_MANAGER___CHANGE_STAFF_LAST_NAME:
-				changeStaffLastName();
+			case StaffPackage.STAFF_MANAGER___CHANGE_STAFF_LAST_NAME__STRING_STRING:
+				changeStaffLastName((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case StaffPackage.STAFF_MANAGER___CHANGE_STAFF_JOB:
-				changeStaffJob();
+			case StaffPackage.STAFF_MANAGER___CHANGE_STAFF_JOB__STRING_STRING:
+				changeStaffJob((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case StaffPackage.STAFF_MANAGER___CHANGE_STAFF_PHONE:
-				changeStaffPhone();
+			case StaffPackage.STAFF_MANAGER___CHANGE_STAFF_PHONE__STRING_STRING:
+				changeStaffPhone((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case StaffPackage.STAFF_MANAGER___CHANGE_STAFF_SALARY_CONTRACT:
-				changeStaffSalaryContract();
+			case StaffPackage.STAFF_MANAGER___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING:
+				changeStaffSalaryContract((String)arguments.get(0), (String)arguments.get(1));
 				return null;
 			case StaffPackage.STAFF_MANAGER___SCHEDULE_STAFF:
 				scheduleStaff();

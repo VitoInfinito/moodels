@@ -430,7 +430,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__GetStaffLastName() {
+	public EOperation getIStaff__GetStaffLastName__String() {
 		return iStaffEClass.getEOperations().get(3);
 	}
 
@@ -439,7 +439,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__GetStaffJob() {
+	public EOperation getIStaff__GetStaffJob__String() {
 		return iStaffEClass.getEOperations().get(4);
 	}
 
@@ -448,7 +448,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__GetStaffPhone() {
+	public EOperation getIStaff__GetStaffPhone__String() {
 		return iStaffEClass.getEOperations().get(5);
 	}
 
@@ -457,7 +457,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__GetStaffEmail() {
+	public EOperation getIStaff__GetStaffEmail__String() {
 		return iStaffEClass.getEOperations().get(6);
 	}
 
@@ -466,7 +466,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__GetStaffSalaryContractType() {
+	public EOperation getIStaff__GetStaffSalaryContractType__String() {
 		return iStaffEClass.getEOperations().get(7);
 	}
 
@@ -475,7 +475,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__GetStaffSalary() {
+	public EOperation getIStaff__GetStaffSalary__String() {
 		return iStaffEClass.getEOperations().get(8);
 	}
 
@@ -484,7 +484,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__ChangeStaffFirstName() {
+	public EOperation getIStaff__ChangeStaffFirstName__String_String() {
 		return iStaffEClass.getEOperations().get(9);
 	}
 
@@ -493,7 +493,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__ChangeStaffLastName() {
+	public EOperation getIStaff__ChangeStaffLastName__String_String() {
 		return iStaffEClass.getEOperations().get(10);
 	}
 
@@ -502,7 +502,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__ChangeStaffJob() {
+	public EOperation getIStaff__ChangeStaffJob__String_String() {
 		return iStaffEClass.getEOperations().get(11);
 	}
 
@@ -511,7 +511,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__ChangeStaffPhone() {
+	public EOperation getIStaff__ChangeStaffPhone__String_String() {
 		return iStaffEClass.getEOperations().get(12);
 	}
 
@@ -520,7 +520,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__ChangeStaffSalaryContract() {
+	public EOperation getIStaff__ChangeStaffSalaryContract__String_String() {
 		return iStaffEClass.getEOperations().get(13);
 	}
 
@@ -587,17 +587,17 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 		createEOperation(iStaffEClass, ISTAFF___GET_ALL_STAFF);
 		createEOperation(iStaffEClass, ISTAFF___SEARCH_STAFF);
 		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_FIRST_NAME__STRING);
-		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_LAST_NAME);
-		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_JOB);
-		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_PHONE);
-		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_EMAIL);
-		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_SALARY_CONTRACT_TYPE);
-		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_SALARY);
-		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_FIRST_NAME);
-		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_LAST_NAME);
-		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_JOB);
-		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_PHONE);
-		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_SALARY_CONTRACT);
+		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_LAST_NAME__STRING);
+		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_JOB__STRING);
+		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_PHONE__STRING);
+		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_EMAIL__STRING);
+		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_SALARY_CONTRACT_TYPE__STRING);
+		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_SALARY__STRING);
+		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_FIRST_NAME__STRING_STRING);
+		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_LAST_NAME__STRING_STRING);
+		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_JOB__STRING_STRING);
+		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_PHONE__STRING_STRING);
+		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING);
 		createEOperation(iStaffEClass, ISTAFF___SCHEDULE_STAFF);
 	}
 
@@ -670,27 +670,43 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 		EOperation op = initEOperation(getIStaff__GetStaffFirstName__String(), null, "getStaffFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStaff__GetStaffLastName(), null, "getStaffLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__GetStaffLastName__String(), null, "getStaffLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStaff__GetStaffJob(), null, "getStaffJob", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__GetStaffJob__String(), null, "getStaffJob", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStaff__GetStaffPhone(), null, "getStaffPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__GetStaffPhone__String(), null, "getStaffPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStaff__GetStaffEmail(), null, "getStaffEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__GetStaffEmail__String(), null, "getStaffEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStaff__GetStaffSalaryContractType(), null, "getStaffSalaryContractType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__GetStaffSalaryContractType__String(), null, "getStaffSalaryContractType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStaff__GetStaffSalary(), null, "getStaffSalary", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__GetStaffSalary__String(), null, "getStaffSalary", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStaff__ChangeStaffFirstName(), null, "changeStaffFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__ChangeStaffFirstName__String_String(), null, "changeStaffFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStaff__ChangeStaffLastName(), null, "changeStaffLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__ChangeStaffLastName__String_String(), null, "changeStaffLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStaff__ChangeStaffJob(), null, "changeStaffJob", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__ChangeStaffJob__String_String(), null, "changeStaffJob", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "job", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStaff__ChangeStaffPhone(), null, "changeStaffPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__ChangeStaffPhone__String_String(), null, "changeStaffPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "phoneNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStaff__ChangeStaffSalaryContract(), null, "changeStaffSalaryContract", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__ChangeStaffSalaryContract__String_String(), null, "changeStaffSalaryContract", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "salaryContract", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIStaff__ScheduleStaff(), null, "scheduleStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
