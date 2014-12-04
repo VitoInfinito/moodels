@@ -234,7 +234,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIManageInventory__ChangeItemName() {
+	public EOperation getIManageInventory__ChangeItemName__int_String() {
 		return iManageInventoryEClass.getEOperations().get(0);
 	}
 
@@ -243,7 +243,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIManageInventory__ChangeItemPrice() {
+	public EOperation getIManageInventory__ChangeItemPrice__int_int() {
 		return iManageInventoryEClass.getEOperations().get(1);
 	}
 
@@ -252,7 +252,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIManageInventory__ChangeItemExpense() {
+	public EOperation getIManageInventory__ChangeItemExpense__int_int() {
 		return iManageInventoryEClass.getEOperations().get(2);
 	}
 
@@ -261,7 +261,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIManageInventory__AddItem() {
+	public EOperation getIManageInventory__AddItem__String_int_int_int() {
 		return iManageInventoryEClass.getEOperations().get(3);
 	}
 
@@ -270,7 +270,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIManageInventory__RemoveItem() {
+	public EOperation getIManageInventory__RemoveItem__int() {
 		return iManageInventoryEClass.getEOperations().get(4);
 	}
 
@@ -288,7 +288,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIInventoryAccess__ChangeItemStock() {
+	public EOperation getIInventoryAccess__ChangeItemStock__int_int() {
 		return iInventoryAccessEClass.getEOperations().get(0);
 	}
 
@@ -297,7 +297,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIInventoryAccess__GetItemPrice() {
+	public EOperation getIInventoryAccess__GetItemPrice__int() {
 		return iInventoryAccessEClass.getEOperations().get(1);
 	}
 
@@ -306,7 +306,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIInventoryAccess__GetItemName() {
+	public EOperation getIInventoryAccess__GetItemName__int() {
 		return iInventoryAccessEClass.getEOperations().get(2);
 	}
 
@@ -315,7 +315,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIInventoryAccess__GetItemStock() {
+	public EOperation getIInventoryAccess__GetItemStock__int() {
 		return iInventoryAccessEClass.getEOperations().get(3);
 	}
 
@@ -324,7 +324,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIInventoryAccess__GetItemExpense() {
+	public EOperation getIInventoryAccess__GetItemExpense__int() {
 		return iInventoryAccessEClass.getEOperations().get(4);
 	}
 
@@ -447,18 +447,18 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 
 		// Create classes and their features
 		iManageInventoryEClass = createEClass(IMANAGE_INVENTORY);
-		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___CHANGE_ITEM_NAME);
-		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___CHANGE_ITEM_PRICE);
-		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE);
-		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___ADD_ITEM);
-		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___REMOVE_ITEM);
+		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___CHANGE_ITEM_NAME__INT_STRING);
+		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___CHANGE_ITEM_PRICE__INT_INT);
+		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE__INT_INT);
+		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___ADD_ITEM__STRING_INT_INT_INT);
+		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___REMOVE_ITEM__INT);
 
 		iInventoryAccessEClass = createEClass(IINVENTORY_ACCESS);
-		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___CHANGE_ITEM_STOCK);
-		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_PRICE);
-		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_NAME);
-		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_STOCK);
-		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_EXPENSE);
+		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___CHANGE_ITEM_STOCK__INT_INT);
+		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_PRICE__INT);
+		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_NAME__INT);
+		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_STOCK__INT);
+		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_EXPENSE__INT);
 		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ALL_ITEM_IDS);
 		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___SEARCH_ITEMS);
 
@@ -510,29 +510,46 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		// Initialize classes, features, and operations; add parameters
 		initEClass(iManageInventoryEClass, IManageInventory.class, "IManageInventory", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getIManageInventory__ChangeItemName(), null, "changeItemName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getIManageInventory__ChangeItemName__int_String(), null, "changeItemName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIManageInventory__ChangeItemPrice(), null, "changeItemPrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIManageInventory__ChangeItemPrice__int_int(), null, "changeItemPrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIManageInventory__ChangeItemExpense(), null, "changeItemExpense", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIManageInventory__ChangeItemExpense__int_int(), null, "changeItemExpense", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expense", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIManageInventory__AddItem(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIManageInventory__AddItem__String_int_int_int(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expense", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "stock", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIManageInventory__RemoveItem(), null, "removeItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIManageInventory__RemoveItem__int(), null, "removeItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iInventoryAccessEClass, IInventoryAccess.class, "IInventoryAccess", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getIInventoryAccess__ChangeItemStock(), null, "changeItemStock", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIInventoryAccess__ChangeItemStock__int_int(), null, "changeItemStock", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "stock", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIInventoryAccess__GetItemPrice(), null, "getItemPrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIInventoryAccess__GetItemPrice__int(), theTypesPackage.getInteger(), "getItemPrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIInventoryAccess__GetItemName(), null, "getItemName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIInventoryAccess__GetItemName__int(), theTypesPackage.getString(), "getItemName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIInventoryAccess__GetItemStock(), null, "getItemStock", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIInventoryAccess__GetItemStock__int(), theTypesPackage.getInteger(), "getItemStock", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIInventoryAccess__GetItemExpense(), null, "getItemExpense", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIInventoryAccess__GetItemExpense__int(), theTypesPackage.getInteger(), "getItemExpense", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIInventoryAccess__GetAllItemIDs(), null, "getAllItemIDs", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIInventoryAccess__GetAllItemIDs(), theTypesPackage.getInteger(), "getAllItemIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIInventoryAccess__SearchItems(), null, "searchItems", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

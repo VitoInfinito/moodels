@@ -622,11 +622,49 @@
   <packagedElement xmi:type="uml:Package" xmi:id="_w9NQoHpsEeST-65JbGUt8g" name="Inventory">
     <packagedElement xmi:type="uml:Interface" xmi:id="_w9NQonpsEeST-65JbGUt8g" name="IManageInventory">
       <generalization xmi:type="uml:Generalization" xmi:id="_w9NQo3psEeST-65JbGUt8g" general="_w9NQvnpsEeST-65JbGUt8g"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQpHpsEeST-65JbGUt8g" name="changeItemName"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQpXpsEeST-65JbGUt8g" name="changeItemPrice"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQpnpsEeST-65JbGUt8g" name="changeItemExpense"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQp3psEeST-65JbGUt8g" name="addItem"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQqHpsEeST-65JbGUt8g" name="removeItem"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQpHpsEeST-65JbGUt8g" name="changeItemName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_l8bIoHu9EeSpkKm-v6P6Dw" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_nHtQAHu9EeSpkKm-v6P6Dw" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQpXpsEeST-65JbGUt8g" name="changeItemPrice">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_zKd3QHu9EeSpkKm-v6P6Dw" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_07ZCUHu9EeSpkKm-v6P6Dw" name="price">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQpnpsEeST-65JbGUt8g" name="changeItemExpense">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2clvUHu9EeSpkKm-v6P6Dw" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3ouyUHu9EeSpkKm-v6P6Dw" name="expense">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQp3psEeST-65JbGUt8g" name="addItem">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6EQZkHu9EeSpkKm-v6P6Dw" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7aMRwHu9EeSpkKm-v6P6Dw" name="price">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_806jUHu9EeSpkKm-v6P6Dw" name="expense">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_91HcEHu9EeSpkKm-v6P6Dw" name="stock">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQqHpsEeST-65JbGUt8g" name="removeItem">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DHLyoHu-EeSpkKm-v6P6Dw" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9NQqnpsEeST-65JbGUt8g" name="Inventory" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9NQq3psEeST-65JbGUt8g" name="itemType" visibility="private" type="_w9NQr3psEeST-65JbGUt8g" association="_w9NQx3psEeST-65JbGUt8g">
@@ -653,12 +691,53 @@
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_w9NQvnpsEeST-65JbGUt8g" name="IInventoryAccess">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQv3psEeST-65JbGUt8g" name="changeItemStock"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQwHpsEeST-65JbGUt8g" name="getItemPrice"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQwXpsEeST-65JbGUt8g" name="getItemName"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQwnpsEeST-65JbGUt8g" name="getItemStock"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQw3psEeST-65JbGUt8g" name="getItemExpense"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQxHpsEeST-65JbGUt8g" name="getAllItemIDs"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQv3psEeST-65JbGUt8g" name="changeItemStock" concurrency="concurrent">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_fS9BoHu6EeSpkKm-v6P6Dw" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SdIwUHu7EeSpkKm-v6P6Dw" name="stock">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQwHpsEeST-65JbGUt8g" name="getItemPrice">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_FXeaQHu-EeSpkKm-v6P6Dw" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_JIpl0Hu-EeSpkKm-v6P6Dw" name="price" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQwXpsEeST-65JbGUt8g" name="getItemName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LwP6MHu-EeSpkKm-v6P6Dw" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Na0loHu-EeSpkKm-v6P6Dw" name="name" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQwnpsEeST-65JbGUt8g" name="getItemStock">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_USscYHu-EeSpkKm-v6P6Dw" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_X--g4Hu-EeSpkKm-v6P6Dw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQw3psEeST-65JbGUt8g" name="getItemExpense">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_c-d5sHu-EeSpkKm-v6P6Dw" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_eCAaUHu-EeSpkKm-v6P6Dw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQxHpsEeST-65JbGUt8g" name="getAllItemIDs">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_uWKTYHvAEeSpkKm-v6P6Dw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vJgb4HvAEeSpkKm-v6P6Dw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vJhC8HvAEeSpkKm-v6P6Dw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQxXpsEeST-65JbGUt8g" name="searchItems"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9NQx3psEeST-65JbGUt8g" name="items" visibility="private" memberEnd="_w9NQyHpsEeST-65JbGUt8g _w9NQq3psEeST-65JbGUt8g">

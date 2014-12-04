@@ -2,21 +2,20 @@
  */
 package Classes.Inventory.impl;
 
+import Classes.InvalidIDException;
 import Classes.Inventory.Inventory;
 import Classes.Inventory.InventoryPackage;
 import Classes.Inventory.ItemType;
 
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,6 +31,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * @generated
  */
 public class InventoryImpl extends MinimalEObjectImpl.Container implements Inventory {
+	private final Logger logger = LoggerFactory.getLogger(ItemTypeImpl.class);
+	
 	/**
 	 * The cached value of the '{@link #getItemType() <em>Item Type</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -60,6 +61,17 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	protected EClass eStaticClass() {
 		return InventoryPackage.Literals.INVENTORY;
 	}
+	
+	private int getItemTypeIndex(int id) throws InvalidIDException {
+		for (int i = 0; i < itemType.size(); i++) {
+			if (itemType.get(i).getId() == id) {
+				return i;
+			}
+		}
+		
+		logger.warn("The ItemType with ID {} could not be found.", id);
+		throw new InvalidIDException();
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,64 +88,54 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void changeItemStock() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void changeItemStock(int id, int stock) {
+		itemType.get(getItemTypeIndex(id)).setStock(stock);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void getItemPrice() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public int getItemPrice(int id) {
+		return itemType.get(getItemTypeIndex(id)).getPrice();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void getItemName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public String getItemName(int id) {
+		return itemType.get(getItemTypeIndex(id)).getName();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void getItemStock() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public int getItemStock(int id) {
+		return itemType.get(getItemTypeIndex(id)).getStock();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void getItemExpense() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public int getItemExpense(int id) {
+		return itemType.get(getItemTypeIndex(id)).getExpense();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void getAllItemIDs() {
+	public EList<Integer> getAllItemIDs() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -153,56 +155,53 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void changeItemName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void changeItemName(int id, String name) {
+		itemType.get(getItemTypeIndex(id)).setName(name);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void changeItemPrice() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void changeItemPrice(int id, int price) {
+		itemType.get(getItemTypeIndex(id)).setPrice(price);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void changeItemExpense() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void changeItemExpense(int id, int expense) {
+		itemType.get(getItemTypeIndex(id)).setExpense(expense);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void addItem() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void addItem(String name, int price, int expense, int stock) {
+		ItemTypeImpl item = new ItemTypeImpl();
+		
+		item.setName(name);
+		item.setPrice(price);
+		item.setExpense(expense);
+		item.setStock(stock);
+		
+		itemType.add(item);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void removeItem() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void removeItem(int id) {
+		itemType.remove(getItemTypeIndex(id));
 	}
 
 	/**
@@ -271,43 +270,40 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case InventoryPackage.INVENTORY___CHANGE_ITEM_STOCK:
-				changeItemStock();
+			case InventoryPackage.INVENTORY___CHANGE_ITEM_STOCK__INT_INT:
+				changeItemStock((Integer)arguments.get(0), (Integer)arguments.get(1));
 				return null;
-			case InventoryPackage.INVENTORY___GET_ITEM_PRICE:
-				getItemPrice();
-				return null;
-			case InventoryPackage.INVENTORY___GET_ITEM_NAME:
-				getItemName();
-				return null;
-			case InventoryPackage.INVENTORY___GET_ITEM_STOCK:
-				getItemStock();
-				return null;
-			case InventoryPackage.INVENTORY___GET_ITEM_EXPENSE:
-				getItemExpense();
-				return null;
-			case InventoryPackage.INVENTORY___GET_ALL_ITEM_IDS:
-				getAllItemIDs();
+			case InventoryPackage.INVENTORY___GET_ITEM_PRICE__INT:
+				return getItemPrice((Integer)arguments.get(0));
+			case InventoryPackage.INVENTORY___GET_ITEM_NAME__INT:
+				return getItemName((Integer)arguments.get(0));
+			case InventoryPackage.INVENTORY___GET_ITEM_STOCK__INT:
+				return getItemStock((Integer)arguments.get(0));
+			case InventoryPackage.INVENTORY___GET_ITEM_EXPENSE__INT:
+				return getItemExpense((Integer)arguments.get(0));
+			case InventoryPackage.INVENTORY___GET_ALL_ITEM_IDS__ELIST:
+				getAllItemIDs((EList<Integer>)arguments.get(0));
 				return null;
 			case InventoryPackage.INVENTORY___SEARCH_ITEMS:
 				searchItems();
 				return null;
-			case InventoryPackage.INVENTORY___CHANGE_ITEM_NAME:
-				changeItemName();
+			case InventoryPackage.INVENTORY___CHANGE_ITEM_NAME__INT_STRING:
+				changeItemName((Integer)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case InventoryPackage.INVENTORY___CHANGE_ITEM_PRICE:
-				changeItemPrice();
+			case InventoryPackage.INVENTORY___CHANGE_ITEM_PRICE__INT_INT:
+				changeItemPrice((Integer)arguments.get(0), (Integer)arguments.get(1));
 				return null;
-			case InventoryPackage.INVENTORY___CHANGE_ITEM_EXPENSE:
-				changeItemExpense();
+			case InventoryPackage.INVENTORY___CHANGE_ITEM_EXPENSE__INT_INT:
+				changeItemExpense((Integer)arguments.get(0), (Integer)arguments.get(1));
 				return null;
-			case InventoryPackage.INVENTORY___ADD_ITEM:
-				addItem();
+			case InventoryPackage.INVENTORY___ADD_ITEM__STRING_INT_INT_INT:
+				addItem((String)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3));
 				return null;
-			case InventoryPackage.INVENTORY___REMOVE_ITEM:
-				removeItem();
+			case InventoryPackage.INVENTORY___REMOVE_ITEM__INT:
+				removeItem((Integer)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

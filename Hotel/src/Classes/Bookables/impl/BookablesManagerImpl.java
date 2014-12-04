@@ -15,7 +15,6 @@ import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.Room;
 import Classes.Bookables.RoomLocation;
 import Classes.Stays.IStays;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -23,18 +22,14 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
-import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.uml2.types.TypesPackage;
 import org.eclipse.uml2.types.impl.StringToBookableMapImpl;
 import org.slf4j.Logger;
@@ -713,25 +708,10 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case BookablesPackage.BOOKABLES_MANAGER__BOOKABLES:
-				return ((InternalEList<?>)getBookables()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case BookablesPackage.BOOKABLES_MANAGER__BOOKABLES:
-				if (coreType) return getBookables();
-				else return getBookables().map();
+				return getBookables();
 			case BookablesPackage.BOOKABLES_MANAGER__IHOTEL_STAY_MANAGER:
 				if (resolve) return getIHotelStayManager();
 				return basicGetIHotelStayManager();
@@ -749,7 +729,8 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BookablesPackage.BOOKABLES_MANAGER__BOOKABLES:
-				((EStructuralFeature.Setting)getBookables()).set(newValue);
+				getBookables().clear();
+				getBookables().addAll((Collection<? extends Bookable>)newValue);
 				return;
 			case BookablesPackage.BOOKABLES_MANAGER__IHOTEL_STAY_MANAGER:
 				setIHotelStayManager((IStays)newValue);
@@ -828,11 +809,11 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 				return getAllHostelBedIDs();
 			case BookablesPackage.BOOKABLES_MANAGER___GET_CONFERENCE_ROOM_CATEGORY__STRING:
 				return getConferenceRoomCategory((String)arguments.get(0));
-			case BookablesPackage.BOOKABLES_MANAGER___SEARCH_HOTEL_ROOMS__STRING:
+			case BookablesPackage.BOOKABLES_MANAGER___SEARCH_HOTEL_ROOMS__STRING_HOTELROOMCATEGORY:
 				return searchHotelRooms((String)arguments.get(0), (HotelRoomCategory)arguments.get(1));
 			case BookablesPackage.BOOKABLES_MANAGER___SEARCH_HOSTEL_BEDS__STRING:
 				return searchHostelBeds((String)arguments.get(0));
-			case BookablesPackage.BOOKABLES_MANAGER___SEARCH_CONFERENCE_ROOMS__STRING:
+			case BookablesPackage.BOOKABLES_MANAGER___SEARCH_CONFERENCE_ROOMS__STRING_CONFERENCEROOMCATEGORY:
 				return searchConferenceRooms((String)arguments.get(0), (ConferenceRoomCategory)arguments.get(1));
 			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_HOSTEL_BED_ROOM__STRING_STRING:
 				changeHostelBedRoom((String)arguments.get(0), (String)arguments.get(1));

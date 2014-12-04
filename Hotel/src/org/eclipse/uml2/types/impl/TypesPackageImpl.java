@@ -3,74 +3,38 @@
 package org.eclipse.uml2.types.impl;
 
 import Classes.Accounts.AccountsPackage;
-
 import Classes.Accounts.impl.AccountsPackageImpl;
-
 import Classes.Banking.BankingPackage;
-
 import Classes.Banking.impl.BankingPackageImpl;
-
 import Classes.Bills.BillsPackage;
-
 import Classes.Bills.impl.BillsPackageImpl;
-
 import Classes.Bookables.BookablesPackage;
-
 import Classes.Bookables.impl.BookablesPackageImpl;
-
 import Classes.Bookings.BookingsPackage;
-
 import Classes.Bookings.impl.BookingsPackageImpl;
-
 import Classes.Customers.CustomersPackage;
-
 import Classes.Customers.impl.CustomersPackageImpl;
-
 import Classes.Feedback.FeedbackPackage;
-
 import Classes.Feedback.impl.FeedbackPackageImpl;
-
 import Classes.Guests.GuestsPackage;
-
 import Classes.Guests.impl.GuestsPackageImpl;
-
 import Classes.Inventory.InventoryPackage;
-
 import Classes.Inventory.impl.InventoryPackageImpl;
-
 import Classes.Requests.RequestsPackage;
-
 import Classes.Requests.impl.RequestsPackageImpl;
-
 import Classes.Restaurants.RestaurantsPackage;
-
 import Classes.Restaurants.impl.RestaurantsPackageImpl;
-
 import Classes.Services.ServicesPackage;
-
 import Classes.Services.impl.ServicesPackageImpl;
-
 import Classes.Staff.StaffPackage;
-
 import Classes.Staff.impl.StaffPackageImpl;
-
 import Classes.Statistics.StatisticsPackage;
-
 import Classes.Statistics.impl.StatisticsPackageImpl;
-
 import Classes.Stays.StaysPackage;
-
 import Classes.Stays.impl.StaysPackageImpl;
-
-import java.util.Map;
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
-
-import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.uml2.types.TypesFactory;
 import org.eclipse.uml2.types.TypesPackage;
 
@@ -81,13 +45,6 @@ import org.eclipse.uml2.types.TypesPackage;
  * @generated
  */
 public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass stringToBookableMapEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -236,33 +193,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getStringToBookableMap() {
-		return stringToBookableMapEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getStringToBookableMap_Key() {
-		return (EAttribute)stringToBookableMapEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getStringToBookableMap_Value() {
-		return (EReference)stringToBookableMapEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EDataType getBoolean() {
 		return booleanEDataType;
 	}
@@ -330,11 +260,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		if (isCreated) return;
 		isCreated = true;
 
-		// Create classes and their features
-		stringToBookableMapEClass = createEClass(STRING_TO_BOOKABLE_MAP);
-		createEAttribute(stringToBookableMapEClass, STRING_TO_BOOKABLE_MAP__KEY);
-		createEReference(stringToBookableMapEClass, STRING_TO_BOOKABLE_MAP__VALUE);
-
 		// Create data types
 		booleanEDataType = createEDataType(BOOLEAN);
 		integerEDataType = createEDataType(INTEGER);
@@ -365,20 +290,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		setName(eNAME);
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
-
-		// Obtain other dependent packages
-		BookablesPackage theBookablesPackage = (BookablesPackage)EPackage.Registry.INSTANCE.getEPackage(BookablesPackage.eNS_URI);
-
-		// Create type parameters
-
-		// Set bounds for type parameters
-
-		// Add supertypes to classes
-
-		// Initialize classes, features, and operations; add parameters
-		initEClass(stringToBookableMapEClass, Map.Entry.class, "StringToBookableMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStringToBookableMap_Key(), this.getString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStringToBookableMap_Value(), theBookablesPackage.getBookable(), null, "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(booleanEDataType, boolean.class, "Boolean", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

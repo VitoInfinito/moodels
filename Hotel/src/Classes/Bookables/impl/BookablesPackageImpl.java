@@ -655,7 +655,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesAccess__SearchHotelRooms__String() {
+	public EOperation getIBookablesAccess__SearchHotelRooms__String_HotelRoomCategory() {
 		return iBookablesAccessEClass.getEOperations().get(14);
 	}
 
@@ -673,7 +673,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookablesAccess__SearchConferenceRooms__String() {
+	public EOperation getIBookablesAccess__SearchConferenceRooms__String_ConferenceRoomCategory() {
 		return iBookablesAccessEClass.getEOperations().get(16);
 	}
 
@@ -802,9 +802,9 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_ALL_CONFERENCE_ROOM_IDS);
 		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_ALL_HOSTEL_BED_IDS);
 		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___GET_CONFERENCE_ROOM_CATEGORY__STRING);
-		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___SEARCH_HOTEL_ROOMS__STRING);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___SEARCH_HOTEL_ROOMS__STRING_HOTELROOMCATEGORY);
 		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___SEARCH_HOSTEL_BEDS__STRING);
-		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___SEARCH_CONFERENCE_ROOMS__STRING);
+		createEOperation(iBookablesAccessEClass, IBOOKABLES_ACCESS___SEARCH_CONFERENCE_ROOMS__STRING_CONFERENCEROOMCATEGORY);
 
 		bookablesManagerEClass = createEClass(BOOKABLES_MANAGER);
 		createEReference(bookablesManagerEClass, BOOKABLES_MANAGER__BOOKABLES);
@@ -977,19 +977,19 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		op = initEOperation(getIBookablesAccess__GetConferenceRoomCategory__String(), this.getConferenceRoomCategory(), "getConferenceRoomCategory", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookablesAccess__SearchHotelRooms__String(), theTypesPackage.getString(), "searchHotelRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesAccess__SearchHotelRooms__String_HotelRoomCategory(), theTypesPackage.getString(), "searchHotelRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getHotelRoomCategory(), "category", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIBookablesAccess__SearchHostelBeds__String(), theTypesPackage.getString(), "searchHostelBeds", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookablesAccess__SearchConferenceRooms__String(), theTypesPackage.getString(), "searchConferenceRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookablesAccess__SearchConferenceRooms__String_ConferenceRoomCategory(), theTypesPackage.getString(), "searchConferenceRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getConferenceRoomCategory(), "category", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bookablesManagerEClass, BookablesManager.class, "BookablesManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBookablesManager_Bookables(), theTypesPackage.getStringToBookableMap(), null, "bookables", null, 0, -1, BookablesManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBookablesManager_Bookables(), this.getBookable(), null, "bookables", null, 0, -1, BookablesManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookablesManager_IHotelStayManager(), theStaysPackage.getIStays(), null, "iHotelStayManager", null, 1, 1, BookablesManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
