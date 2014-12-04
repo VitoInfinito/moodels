@@ -2,6 +2,7 @@
  */
 package Classes.Inventory;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,50 +19,50 @@ public interface IInventoryAccess extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model idDataType="org.eclipse.uml2.types.Integer" idRequired="true" idOrdered="false" stockDataType="org.eclipse.uml2.types.Integer" stockRequired="true" stockOrdered="false"
 	 * @generated
 	 */
-	void changeItemStock();
+	void changeItemStock(int id, int stock);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" idDataType="org.eclipse.uml2.types.Integer" idRequired="true" idOrdered="false"
 	 * @generated
 	 */
-	void getItemPrice();
+	int getItemPrice(int id);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" idDataType="org.eclipse.uml2.types.Integer" idRequired="true" idOrdered="false"
 	 * @generated
 	 */
-	void getItemName();
+	String getItemName(int id);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" idDataType="org.eclipse.uml2.types.Integer" idRequired="true" idOrdered="false"
 	 * @generated
 	 */
-	void getItemStock();
+	int getItemStock(int id);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" idDataType="org.eclipse.uml2.types.Integer" idRequired="true" idOrdered="false"
 	 * @generated
 	 */
-	void getItemExpense();
+	int getItemExpense(int id);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.Integer" ordered="false"
 	 * @generated
 	 */
-	void getAllItemIDs();
+	EList<Integer> getAllItemIDs();
 
 	/**
 	 * <!-- begin-user-doc -->

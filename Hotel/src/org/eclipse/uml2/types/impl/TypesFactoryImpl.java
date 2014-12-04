@@ -2,17 +2,12 @@
  */
 package org.eclipse.uml2.types.impl;
 
-import Classes.Bookables.Bookable;
-import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import org.eclipse.uml2.types.*;
 
 /**
@@ -59,7 +54,6 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case TypesPackage.STRING_TO_BOOKABLE_MAP: return (EObject)createStringToBookableMap();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -109,16 +103,6 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory {
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Map.Entry<String, Bookable> createStringToBookableMap() {
-		StringToBookableMapImpl stringToBookableMap = new StringToBookableMapImpl();
-		return stringToBookableMap;
 	}
 
 	/**

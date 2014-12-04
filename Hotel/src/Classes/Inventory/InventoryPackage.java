@@ -83,7 +83,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IINVENTORY_ACCESS___CHANGE_ITEM_STOCK = 0;
+	int IINVENTORY_ACCESS___CHANGE_ITEM_STOCK__INT_INT = 0;
 
 	/**
 	 * The operation id for the '<em>Get Item Price</em>' operation.
@@ -92,7 +92,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IINVENTORY_ACCESS___GET_ITEM_PRICE = 1;
+	int IINVENTORY_ACCESS___GET_ITEM_PRICE__INT = 1;
 
 	/**
 	 * The operation id for the '<em>Get Item Name</em>' operation.
@@ -101,7 +101,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IINVENTORY_ACCESS___GET_ITEM_NAME = 2;
+	int IINVENTORY_ACCESS___GET_ITEM_NAME__INT = 2;
 
 	/**
 	 * The operation id for the '<em>Get Item Stock</em>' operation.
@@ -110,7 +110,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IINVENTORY_ACCESS___GET_ITEM_STOCK = 3;
+	int IINVENTORY_ACCESS___GET_ITEM_STOCK__INT = 3;
 
 	/**
 	 * The operation id for the '<em>Get Item Expense</em>' operation.
@@ -119,7 +119,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IINVENTORY_ACCESS___GET_ITEM_EXPENSE = 4;
+	int IINVENTORY_ACCESS___GET_ITEM_EXPENSE__INT = 4;
 
 	/**
 	 * The operation id for the '<em>Get All Item IDs</em>' operation.
@@ -174,7 +174,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_INVENTORY___CHANGE_ITEM_STOCK = IINVENTORY_ACCESS___CHANGE_ITEM_STOCK;
+	int IMANAGE_INVENTORY___CHANGE_ITEM_STOCK__INT_INT = IINVENTORY_ACCESS___CHANGE_ITEM_STOCK__INT_INT;
 
 	/**
 	 * The operation id for the '<em>Get Item Price</em>' operation.
@@ -183,7 +183,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_INVENTORY___GET_ITEM_PRICE = IINVENTORY_ACCESS___GET_ITEM_PRICE;
+	int IMANAGE_INVENTORY___GET_ITEM_PRICE__INT = IINVENTORY_ACCESS___GET_ITEM_PRICE__INT;
 
 	/**
 	 * The operation id for the '<em>Get Item Name</em>' operation.
@@ -192,7 +192,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_INVENTORY___GET_ITEM_NAME = IINVENTORY_ACCESS___GET_ITEM_NAME;
+	int IMANAGE_INVENTORY___GET_ITEM_NAME__INT = IINVENTORY_ACCESS___GET_ITEM_NAME__INT;
 
 	/**
 	 * The operation id for the '<em>Get Item Stock</em>' operation.
@@ -201,7 +201,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_INVENTORY___GET_ITEM_STOCK = IINVENTORY_ACCESS___GET_ITEM_STOCK;
+	int IMANAGE_INVENTORY___GET_ITEM_STOCK__INT = IINVENTORY_ACCESS___GET_ITEM_STOCK__INT;
 
 	/**
 	 * The operation id for the '<em>Get Item Expense</em>' operation.
@@ -210,7 +210,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_INVENTORY___GET_ITEM_EXPENSE = IINVENTORY_ACCESS___GET_ITEM_EXPENSE;
+	int IMANAGE_INVENTORY___GET_ITEM_EXPENSE__INT = IINVENTORY_ACCESS___GET_ITEM_EXPENSE__INT;
 
 	/**
 	 * The operation id for the '<em>Get All Item IDs</em>' operation.
@@ -237,7 +237,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_INVENTORY___CHANGE_ITEM_NAME = IINVENTORY_ACCESS_OPERATION_COUNT + 0;
+	int IMANAGE_INVENTORY___CHANGE_ITEM_NAME__INT_STRING = IINVENTORY_ACCESS_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Change Item Price</em>' operation.
@@ -246,7 +246,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_INVENTORY___CHANGE_ITEM_PRICE = IINVENTORY_ACCESS_OPERATION_COUNT + 1;
+	int IMANAGE_INVENTORY___CHANGE_ITEM_PRICE__INT_INT = IINVENTORY_ACCESS_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Change Item Expense</em>' operation.
@@ -255,7 +255,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE = IINVENTORY_ACCESS_OPERATION_COUNT + 2;
+	int IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE__INT_INT = IINVENTORY_ACCESS_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Add Item</em>' operation.
@@ -264,7 +264,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_INVENTORY___ADD_ITEM = IINVENTORY_ACCESS_OPERATION_COUNT + 3;
+	int IMANAGE_INVENTORY___ADD_ITEM__STRING_INT_INT_INT = IINVENTORY_ACCESS_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Remove Item</em>' operation.
@@ -273,7 +273,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_INVENTORY___REMOVE_ITEM = IINVENTORY_ACCESS_OPERATION_COUNT + 4;
+	int IMANAGE_INVENTORY___REMOVE_ITEM__INT = IINVENTORY_ACCESS_OPERATION_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>IManage Inventory</em>' class.
@@ -319,7 +319,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVENTORY___CHANGE_ITEM_STOCK = IMANAGE_INVENTORY___CHANGE_ITEM_STOCK;
+	int INVENTORY___CHANGE_ITEM_STOCK__INT_INT = IMANAGE_INVENTORY___CHANGE_ITEM_STOCK__INT_INT;
 
 	/**
 	 * The operation id for the '<em>Get Item Price</em>' operation.
@@ -328,7 +328,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVENTORY___GET_ITEM_PRICE = IMANAGE_INVENTORY___GET_ITEM_PRICE;
+	int INVENTORY___GET_ITEM_PRICE__INT = IMANAGE_INVENTORY___GET_ITEM_PRICE__INT;
 
 	/**
 	 * The operation id for the '<em>Get Item Name</em>' operation.
@@ -337,7 +337,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVENTORY___GET_ITEM_NAME = IMANAGE_INVENTORY___GET_ITEM_NAME;
+	int INVENTORY___GET_ITEM_NAME__INT = IMANAGE_INVENTORY___GET_ITEM_NAME__INT;
 
 	/**
 	 * The operation id for the '<em>Get Item Stock</em>' operation.
@@ -346,7 +346,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVENTORY___GET_ITEM_STOCK = IMANAGE_INVENTORY___GET_ITEM_STOCK;
+	int INVENTORY___GET_ITEM_STOCK__INT = IMANAGE_INVENTORY___GET_ITEM_STOCK__INT;
 
 	/**
 	 * The operation id for the '<em>Get Item Expense</em>' operation.
@@ -355,7 +355,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVENTORY___GET_ITEM_EXPENSE = IMANAGE_INVENTORY___GET_ITEM_EXPENSE;
+	int INVENTORY___GET_ITEM_EXPENSE__INT = IMANAGE_INVENTORY___GET_ITEM_EXPENSE__INT;
 
 	/**
 	 * The operation id for the '<em>Get All Item IDs</em>' operation.
@@ -382,7 +382,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVENTORY___CHANGE_ITEM_NAME = IMANAGE_INVENTORY___CHANGE_ITEM_NAME;
+	int INVENTORY___CHANGE_ITEM_NAME__INT_STRING = IMANAGE_INVENTORY___CHANGE_ITEM_NAME__INT_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Item Price</em>' operation.
@@ -391,7 +391,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVENTORY___CHANGE_ITEM_PRICE = IMANAGE_INVENTORY___CHANGE_ITEM_PRICE;
+	int INVENTORY___CHANGE_ITEM_PRICE__INT_INT = IMANAGE_INVENTORY___CHANGE_ITEM_PRICE__INT_INT;
 
 	/**
 	 * The operation id for the '<em>Change Item Expense</em>' operation.
@@ -400,7 +400,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVENTORY___CHANGE_ITEM_EXPENSE = IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE;
+	int INVENTORY___CHANGE_ITEM_EXPENSE__INT_INT = IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE__INT_INT;
 
 	/**
 	 * The operation id for the '<em>Add Item</em>' operation.
@@ -409,7 +409,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVENTORY___ADD_ITEM = IMANAGE_INVENTORY___ADD_ITEM;
+	int INVENTORY___ADD_ITEM__STRING_INT_INT_INT = IMANAGE_INVENTORY___ADD_ITEM__STRING_INT_INT_INT;
 
 	/**
 	 * The operation id for the '<em>Remove Item</em>' operation.
@@ -418,7 +418,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVENTORY___REMOVE_ITEM = IMANAGE_INVENTORY___REMOVE_ITEM;
+	int INVENTORY___REMOVE_ITEM__INT = IMANAGE_INVENTORY___REMOVE_ITEM__INT;
 
 	/**
 	 * The number of operations of the '<em>Inventory</em>' class.
@@ -514,54 +514,54 @@ public interface InventoryPackage extends EPackage {
 	EClass getIManageInventory();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#changeItemName() <em>Change Item Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#changeItemName(int, java.lang.String) <em>Change Item Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Item Name</em>' operation.
-	 * @see Classes.Inventory.IManageInventory#changeItemName()
+	 * @see Classes.Inventory.IManageInventory#changeItemName(int, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIManageInventory__ChangeItemName();
+	EOperation getIManageInventory__ChangeItemName__int_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#changeItemPrice() <em>Change Item Price</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#changeItemPrice(int, int) <em>Change Item Price</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Item Price</em>' operation.
-	 * @see Classes.Inventory.IManageInventory#changeItemPrice()
+	 * @see Classes.Inventory.IManageInventory#changeItemPrice(int, int)
 	 * @generated
 	 */
-	EOperation getIManageInventory__ChangeItemPrice();
+	EOperation getIManageInventory__ChangeItemPrice__int_int();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#changeItemExpense() <em>Change Item Expense</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#changeItemExpense(int, int) <em>Change Item Expense</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Item Expense</em>' operation.
-	 * @see Classes.Inventory.IManageInventory#changeItemExpense()
+	 * @see Classes.Inventory.IManageInventory#changeItemExpense(int, int)
 	 * @generated
 	 */
-	EOperation getIManageInventory__ChangeItemExpense();
+	EOperation getIManageInventory__ChangeItemExpense__int_int();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#addItem() <em>Add Item</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#addItem(java.lang.String, int, int, int) <em>Add Item</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Item</em>' operation.
-	 * @see Classes.Inventory.IManageInventory#addItem()
+	 * @see Classes.Inventory.IManageInventory#addItem(java.lang.String, int, int, int)
 	 * @generated
 	 */
-	EOperation getIManageInventory__AddItem();
+	EOperation getIManageInventory__AddItem__String_int_int_int();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#removeItem() <em>Remove Item</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#removeItem(int) <em>Remove Item</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Item</em>' operation.
-	 * @see Classes.Inventory.IManageInventory#removeItem()
+	 * @see Classes.Inventory.IManageInventory#removeItem(int)
 	 * @generated
 	 */
-	EOperation getIManageInventory__RemoveItem();
+	EOperation getIManageInventory__RemoveItem__int();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Inventory.IInventoryAccess <em>IInventory Access</em>}'.
@@ -574,54 +574,54 @@ public interface InventoryPackage extends EPackage {
 	EClass getIInventoryAccess();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.IInventoryAccess#changeItemStock() <em>Change Item Stock</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Inventory.IInventoryAccess#changeItemStock(int, int) <em>Change Item Stock</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Item Stock</em>' operation.
-	 * @see Classes.Inventory.IInventoryAccess#changeItemStock()
+	 * @see Classes.Inventory.IInventoryAccess#changeItemStock(int, int)
 	 * @generated
 	 */
-	EOperation getIInventoryAccess__ChangeItemStock();
+	EOperation getIInventoryAccess__ChangeItemStock__int_int();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.IInventoryAccess#getItemPrice() <em>Get Item Price</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Inventory.IInventoryAccess#getItemPrice(int) <em>Get Item Price</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Item Price</em>' operation.
-	 * @see Classes.Inventory.IInventoryAccess#getItemPrice()
+	 * @see Classes.Inventory.IInventoryAccess#getItemPrice(int)
 	 * @generated
 	 */
-	EOperation getIInventoryAccess__GetItemPrice();
+	EOperation getIInventoryAccess__GetItemPrice__int();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.IInventoryAccess#getItemName() <em>Get Item Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Inventory.IInventoryAccess#getItemName(int) <em>Get Item Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Item Name</em>' operation.
-	 * @see Classes.Inventory.IInventoryAccess#getItemName()
+	 * @see Classes.Inventory.IInventoryAccess#getItemName(int)
 	 * @generated
 	 */
-	EOperation getIInventoryAccess__GetItemName();
+	EOperation getIInventoryAccess__GetItemName__int();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.IInventoryAccess#getItemStock() <em>Get Item Stock</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Inventory.IInventoryAccess#getItemStock(int) <em>Get Item Stock</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Item Stock</em>' operation.
-	 * @see Classes.Inventory.IInventoryAccess#getItemStock()
+	 * @see Classes.Inventory.IInventoryAccess#getItemStock(int)
 	 * @generated
 	 */
-	EOperation getIInventoryAccess__GetItemStock();
+	EOperation getIInventoryAccess__GetItemStock__int();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.IInventoryAccess#getItemExpense() <em>Get Item Expense</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Inventory.IInventoryAccess#getItemExpense(int) <em>Get Item Expense</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Item Expense</em>' operation.
-	 * @see Classes.Inventory.IInventoryAccess#getItemExpense()
+	 * @see Classes.Inventory.IInventoryAccess#getItemExpense(int)
 	 * @generated
 	 */
-	EOperation getIInventoryAccess__GetItemExpense();
+	EOperation getIInventoryAccess__GetItemExpense__int();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Inventory.IInventoryAccess#getAllItemIDs() <em>Get All Item IDs</em>}' operation.
@@ -768,7 +768,7 @@ public interface InventoryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMANAGE_INVENTORY___CHANGE_ITEM_NAME = eINSTANCE.getIManageInventory__ChangeItemName();
+		EOperation IMANAGE_INVENTORY___CHANGE_ITEM_NAME__INT_STRING = eINSTANCE.getIManageInventory__ChangeItemName__int_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Item Price</b></em>' operation.
@@ -776,7 +776,7 @@ public interface InventoryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMANAGE_INVENTORY___CHANGE_ITEM_PRICE = eINSTANCE.getIManageInventory__ChangeItemPrice();
+		EOperation IMANAGE_INVENTORY___CHANGE_ITEM_PRICE__INT_INT = eINSTANCE.getIManageInventory__ChangeItemPrice__int_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Item Expense</b></em>' operation.
@@ -784,7 +784,7 @@ public interface InventoryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE = eINSTANCE.getIManageInventory__ChangeItemExpense();
+		EOperation IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE__INT_INT = eINSTANCE.getIManageInventory__ChangeItemExpense__int_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Item</b></em>' operation.
@@ -792,7 +792,7 @@ public interface InventoryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMANAGE_INVENTORY___ADD_ITEM = eINSTANCE.getIManageInventory__AddItem();
+		EOperation IMANAGE_INVENTORY___ADD_ITEM__STRING_INT_INT_INT = eINSTANCE.getIManageInventory__AddItem__String_int_int_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Item</b></em>' operation.
@@ -800,7 +800,7 @@ public interface InventoryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMANAGE_INVENTORY___REMOVE_ITEM = eINSTANCE.getIManageInventory__RemoveItem();
+		EOperation IMANAGE_INVENTORY___REMOVE_ITEM__INT = eINSTANCE.getIManageInventory__RemoveItem__int();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Inventory.IInventoryAccess <em>IInventory Access</em>}' class.
@@ -818,7 +818,7 @@ public interface InventoryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IINVENTORY_ACCESS___CHANGE_ITEM_STOCK = eINSTANCE.getIInventoryAccess__ChangeItemStock();
+		EOperation IINVENTORY_ACCESS___CHANGE_ITEM_STOCK__INT_INT = eINSTANCE.getIInventoryAccess__ChangeItemStock__int_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Item Price</b></em>' operation.
@@ -826,7 +826,7 @@ public interface InventoryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IINVENTORY_ACCESS___GET_ITEM_PRICE = eINSTANCE.getIInventoryAccess__GetItemPrice();
+		EOperation IINVENTORY_ACCESS___GET_ITEM_PRICE__INT = eINSTANCE.getIInventoryAccess__GetItemPrice__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Item Name</b></em>' operation.
@@ -834,7 +834,7 @@ public interface InventoryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IINVENTORY_ACCESS___GET_ITEM_NAME = eINSTANCE.getIInventoryAccess__GetItemName();
+		EOperation IINVENTORY_ACCESS___GET_ITEM_NAME__INT = eINSTANCE.getIInventoryAccess__GetItemName__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Item Stock</b></em>' operation.
@@ -842,7 +842,7 @@ public interface InventoryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IINVENTORY_ACCESS___GET_ITEM_STOCK = eINSTANCE.getIInventoryAccess__GetItemStock();
+		EOperation IINVENTORY_ACCESS___GET_ITEM_STOCK__INT = eINSTANCE.getIInventoryAccess__GetItemStock__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Item Expense</b></em>' operation.
@@ -850,7 +850,7 @@ public interface InventoryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IINVENTORY_ACCESS___GET_ITEM_EXPENSE = eINSTANCE.getIInventoryAccess__GetItemExpense();
+		EOperation IINVENTORY_ACCESS___GET_ITEM_EXPENSE__INT = eINSTANCE.getIInventoryAccess__GetItemExpense__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Get All Item IDs</b></em>' operation.

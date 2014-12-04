@@ -165,12 +165,14 @@
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesAccess/searchHotelRooms">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesAccess/searchHotelRooms/keyword"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesAccess/searchHotelRooms/category"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesAccess/searchHostelBeds">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesAccess/searchHostelBeds/keyword"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesAccess/searchConferenceRooms">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesAccess/searchConferenceRooms/keyword"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesAccess/searchConferenceRooms/category"/>
         </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Bookables/BookablesManager">
@@ -614,18 +616,45 @@
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Inventory" basePackage="Classes"
         disposableProviderFactory="true" ecorePackage="Classes.ecore#//Inventory">
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Inventory/IManageInventory">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IManageInventory/changeItemName"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IManageInventory/changeItemPrice"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IManageInventory/changeItemExpense"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IManageInventory/addItem"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IManageInventory/removeItem"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IManageInventory/changeItemName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IManageInventory/changeItemName/id"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IManageInventory/changeItemName/name"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IManageInventory/changeItemPrice">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IManageInventory/changeItemPrice/id"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IManageInventory/changeItemPrice/price"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IManageInventory/changeItemExpense">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IManageInventory/changeItemExpense/id"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IManageInventory/changeItemExpense/expense"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IManageInventory/addItem">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IManageInventory/addItem/name"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IManageInventory/addItem/price"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IManageInventory/addItem/expense"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IManageInventory/addItem/stock"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IManageInventory/removeItem">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IManageInventory/removeItem/id"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Inventory/IInventoryAccess">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/changeItemStock"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/getItemPrice"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/getItemName"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/getItemStock"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/getItemExpense"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/changeItemStock">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IInventoryAccess/changeItemStock/id"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IInventoryAccess/changeItemStock/stock"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/getItemPrice">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IInventoryAccess/getItemPrice/id"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/getItemName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IInventoryAccess/getItemName/id"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/getItemStock">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IInventoryAccess/getItemStock/id"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/getItemExpense">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IInventoryAccess/getItemExpense/id"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/getAllItemIDs"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/searchItems"/>
       </genClasses>
