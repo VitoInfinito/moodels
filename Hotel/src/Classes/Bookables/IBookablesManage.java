@@ -17,24 +17,16 @@ public interface IBookablesManage extends IBookablesAccess {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model basePriceRequired="true" basePriceOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
-	 * @generated
-	 */
-	void addBookable(double basePrice, String description);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model hostelBedIDDataType="org.eclipse.uml2.types.String" hostelBedIDRequired="true" hostelBedIDOrdered="false" roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void changeRoomOfHostelBed(String hostelBedID, String roomID);
+	void changeHostelBedRoom(String hostelBedID, String roomID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void deleteBookable(String bookableID);
 
@@ -68,7 +60,7 @@ public interface IBookablesManage extends IBookablesAccess {
 	 * @model bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false" basePriceRequired="true" basePriceOrdered="false"
 	 * @generated
 	 */
-	void changeBasePrice(String bookableID, double basePrice);
+	void changeBookableBasePrice(String bookableID, double basePrice);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,6 +68,46 @@ public interface IBookablesManage extends IBookablesAccess {
 	 * @model bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
 	 * @generated
 	 */
-	void changeDescription(String bookableID, String description);
+	void changeBookableDescription(String bookableID, String description);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" basePriceRequired="true" basePriceOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false" floorDataType="org.eclipse.uml2.types.Integer" floorRequired="true" floorOrdered="false" locationInfoDataType="org.eclipse.uml2.types.String" locationInfoRequired="true" locationInfoOrdered="false" categoryRequired="true" categoryOrdered="false" nbrBedsDataType="org.eclipse.uml2.types.Integer" nbrBedsRequired="true" nbrBedsOrdered="false"
+	 * @generated
+	 */
+	String addHotelRoom(double basePrice, String description, int floor, String locationInfo, HotelRoomCategory category, int nbrBeds);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" basePriceRequired="true" basePriceOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false" roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated
+	 */
+	String addHostelBed(double basePrice, String description, String roomID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" basePriceRequired="true" basePriceOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false" floorDataType="org.eclipse.uml2.types.Integer" floorRequired="true" floorOrdered="false" locationInfoDataType="org.eclipse.uml2.types.String" locationInfoRequired="true" locationInfoOrdered="false" categoryRequired="true" categoryOrdered="false" capacityDataType="org.eclipse.uml2.types.Integer" capacityRequired="true" capacityOrdered="false"
+	 * @generated
+	 */
+	String addConferenceRoom(double basePrice, String description, int floor, String locationInfo, ConferenceRoomCategory category, int capacity);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false" nbrBedsDataType="org.eclipse.uml2.types.Integer" nbrBedsRequired="true" nbrBedsOrdered="false"
+	 * @generated
+	 */
+	void changeHotelRoomNumberBeds(String roomID, int nbrBeds);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false" capacityDataType="org.eclipse.uml2.types.Integer" capacityRequired="true" capacityOrdered="false"
+	 * @generated
+	 */
+	void changeConferenceRoomCapacity(String roomID, int capacity);
 
 } // IBookablesManage

@@ -70,13 +70,9 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Bookables/HotelRoom/nbrBeds"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Bookables/IBookablesManage">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesManage/addBookable">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addBookable/basePrice"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addBookable/description"/>
-        </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesManage/changeRoomOfHostelBed">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeRoomOfHostelBed/hostelBedID"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeRoomOfHostelBed/roomID"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesManage/changeHostelBedRoom">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeHostelBedRoom/hostelBedID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeHostelBedRoom/roomID"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesManage/deleteBookable">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/deleteBookable/bookableID"/>
@@ -94,13 +90,42 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeConferenceRoomCategory/roomID"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeConferenceRoomCategory/category"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesManage/changeBasePrice">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeBasePrice/bookableID"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeBasePrice/basePrice"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesManage/changeBookableBasePrice">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeBookableBasePrice/bookableID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeBookableBasePrice/basePrice"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesManage/changeDescription">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeDescription/bookableID"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeDescription/description"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesManage/changeBookableDescription">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeBookableDescription/bookableID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeBookableDescription/description"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesManage/addHotelRoom">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addHotelRoom/basePrice"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addHotelRoom/description"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addHotelRoom/floor"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addHotelRoom/locationInfo"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addHotelRoom/category"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addHotelRoom/nbrBeds"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesManage/addHostelBed">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addHostelBed/basePrice"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addHostelBed/description"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addHostelBed/roomID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesManage/addConferenceRoom">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addConferenceRoom/basePrice"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addConferenceRoom/description"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addConferenceRoom/floor"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addConferenceRoom/locationInfo"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addConferenceRoom/category"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/addConferenceRoom/capacity"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesManage/changeHotelRoomNumberBeds">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeHotelRoomNumberBeds/roomID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeHotelRoomNumberBeds/nbrBeds"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesManage/changeConferenceRoomCapacity">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeConferenceRoomCapacity/roomID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesManage/changeConferenceRoomCapacity/capacity"/>
         </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Bookables/IBookablesAccess">
@@ -132,7 +157,7 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesAccess/getRoomLocationFloor">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookables/IBookablesAccess/getRoomLocationFloor/roomID"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesAccess/getAllRoomIDs"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesAccess/getAllHotelRoomIDs"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesAccess/getAllConferenceRoomIDs"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesAccess/getAllHostelBedIDs"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookables/IBookablesAccess/getConferenceRoomCategory">
@@ -795,8 +820,6 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Requests/Request/isResolved"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Exceptions" basePackage="Classes"
-        disposableProviderFactory="true" ecorePackage="Classes.ecore#//Exceptions"/>
   </genPackages>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Types" basePackage="org.eclipse.uml2"
       disposableProviderFactory="true" ecorePackage="types.ecore#/">

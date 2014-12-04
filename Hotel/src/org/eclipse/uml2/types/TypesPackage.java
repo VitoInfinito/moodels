@@ -133,16 +133,6 @@ public interface TypesPackage extends EPackage {
 	int STRING = 5;
 
 	/**
-	 * The meta object id for the '<em>Invalid ID Exception</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see java.lang.Object
-	 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getInvalidIDException()
-	 * @generated
-	 */
-	int INVALID_ID_EXCEPTION = 6;
-
-	/**
 	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To Bookable Map</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -225,17 +215,6 @@ public interface TypesPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getString();
-
-	/**
-	 * Returns the meta object for data type '{@link java.lang.Object <em>Invalid ID Exception</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Invalid ID Exception</em>'.
-	 * @see java.lang.Object
-	 * @model instanceClass="java.lang.Object" serializeable="false"
-	 * @generated
-	 */
-	EDataType getInvalidIDException();
 
 	/**
 	 * Returns the meta object for data type '<em>Unlimited Natural</em>'.
@@ -333,16 +312,6 @@ public interface TypesPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType STRING = eINSTANCE.getString();
-
-		/**
-		 * The meta object literal for the '<em>Invalid ID Exception</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see java.lang.Object
-		 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getInvalidIDException()
-		 * @generated
-		 */
-		EDataType INVALID_ID_EXCEPTION = eINSTANCE.getInvalidIDException();
 
 		/**
 		 * The meta object literal for the '<em>Unlimited Natural</em>' data type.

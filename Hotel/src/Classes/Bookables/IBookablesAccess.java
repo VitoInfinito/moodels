@@ -3,11 +3,7 @@
 package Classes.Bookables;
 
 import java.util.List;
-import java.util.Set;
-
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-
 import Classes.InvalidIDException;
 
 /**
@@ -135,26 +131,28 @@ public interface IBookablesAccess extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOTE: category == null implies that all categories are searched.
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchHotelRooms(String keyword);
+	List<String> searchHotelRooms(String keyword, HotelRoomCategory category);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchHostelBeds(String keyword);
+	List<String> searchHostelBeds(String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOTE: category == null implies that all categories are searched.
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchConferenceRooms(String keyword);
+	List<String> searchConferenceRooms(String keyword, ConferenceRoomCategory category);
 
 } // IBookablesAccess

@@ -561,13 +561,13 @@ public interface BookablesPackage extends EPackage {
 	int IBOOKABLES_ACCESS___GET_ROOM_LOCATION_FLOOR__STRING = 9;
 
 	/**
-	 * The operation id for the '<em>Get All Room IDs</em>' operation.
+	 * The operation id for the '<em>Get All Hotel Room IDs</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKABLES_ACCESS___GET_ALL_ROOM_IDS = 10;
+	int IBOOKABLES_ACCESS___GET_ALL_HOTEL_ROOM_IDS = 10;
 
 	/**
 	 * The operation id for the '<em>Get All Conference Room IDs</em>' operation.
@@ -742,13 +742,13 @@ public interface BookablesPackage extends EPackage {
 	int IBOOKABLES_MANAGE___GET_ROOM_LOCATION_FLOOR__STRING = IBOOKABLES_ACCESS___GET_ROOM_LOCATION_FLOOR__STRING;
 
 	/**
-	 * The operation id for the '<em>Get All Room IDs</em>' operation.
+	 * The operation id for the '<em>Get All Hotel Room IDs</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKABLES_MANAGE___GET_ALL_ROOM_IDS = IBOOKABLES_ACCESS___GET_ALL_ROOM_IDS;
+	int IBOOKABLES_MANAGE___GET_ALL_HOTEL_ROOM_IDS = IBOOKABLES_ACCESS___GET_ALL_HOTEL_ROOM_IDS;
 
 	/**
 	 * The operation id for the '<em>Get All Conference Room IDs</em>' operation.
@@ -805,22 +805,13 @@ public interface BookablesPackage extends EPackage {
 	int IBOOKABLES_MANAGE___SEARCH_CONFERENCE_ROOMS__STRING = IBOOKABLES_ACCESS___SEARCH_CONFERENCE_ROOMS__STRING;
 
 	/**
-	 * The operation id for the '<em>Add Bookable</em>' operation.
+	 * The operation id for the '<em>Change Hostel Bed Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKABLES_MANAGE___ADD_BOOKABLE__DOUBLE_STRING = IBOOKABLES_ACCESS_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Change Room Of Hostel Bed</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKABLES_MANAGE___CHANGE_ROOM_OF_HOSTEL_BED__STRING_STRING = IBOOKABLES_ACCESS_OPERATION_COUNT + 1;
+	int IBOOKABLES_MANAGE___CHANGE_HOSTEL_BED_ROOM__STRING_STRING = IBOOKABLES_ACCESS_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Delete Bookable</em>' operation.
@@ -829,7 +820,7 @@ public interface BookablesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKABLES_MANAGE___DELETE_BOOKABLE__STRING = IBOOKABLES_ACCESS_OPERATION_COUNT + 2;
+	int IBOOKABLES_MANAGE___DELETE_BOOKABLE__STRING = IBOOKABLES_ACCESS_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Change Room Location</em>' operation.
@@ -838,7 +829,7 @@ public interface BookablesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKABLES_MANAGE___CHANGE_ROOM_LOCATION__STRING_INT_STRING = IBOOKABLES_ACCESS_OPERATION_COUNT + 3;
+	int IBOOKABLES_MANAGE___CHANGE_ROOM_LOCATION__STRING_INT_STRING = IBOOKABLES_ACCESS_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Change Hotel Room Category</em>' operation.
@@ -847,7 +838,7 @@ public interface BookablesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKABLES_MANAGE___CHANGE_HOTEL_ROOM_CATEGORY__STRING_HOTELROOMCATEGORY = IBOOKABLES_ACCESS_OPERATION_COUNT + 4;
+	int IBOOKABLES_MANAGE___CHANGE_HOTEL_ROOM_CATEGORY__STRING_HOTELROOMCATEGORY = IBOOKABLES_ACCESS_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Change Conference Room Category</em>' operation.
@@ -856,25 +847,70 @@ public interface BookablesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKABLES_MANAGE___CHANGE_CONFERENCE_ROOM_CATEGORY__STRING_CONFERENCEROOMCATEGORY = IBOOKABLES_ACCESS_OPERATION_COUNT + 5;
+	int IBOOKABLES_MANAGE___CHANGE_CONFERENCE_ROOM_CATEGORY__STRING_CONFERENCEROOMCATEGORY = IBOOKABLES_ACCESS_OPERATION_COUNT + 4;
 
 	/**
-	 * The operation id for the '<em>Change Base Price</em>' operation.
+	 * The operation id for the '<em>Change Bookable Base Price</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKABLES_MANAGE___CHANGE_BASE_PRICE__STRING_DOUBLE = IBOOKABLES_ACCESS_OPERATION_COUNT + 6;
+	int IBOOKABLES_MANAGE___CHANGE_BOOKABLE_BASE_PRICE__STRING_DOUBLE = IBOOKABLES_ACCESS_OPERATION_COUNT + 5;
 
 	/**
-	 * The operation id for the '<em>Change Description</em>' operation.
+	 * The operation id for the '<em>Change Bookable Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKABLES_MANAGE___CHANGE_DESCRIPTION__STRING_STRING = IBOOKABLES_ACCESS_OPERATION_COUNT + 7;
+	int IBOOKABLES_MANAGE___CHANGE_BOOKABLE_DESCRIPTION__STRING_STRING = IBOOKABLES_ACCESS_OPERATION_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Add Hotel Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKABLES_MANAGE___ADD_HOTEL_ROOM__DOUBLE_STRING_INT_STRING_HOTELROOMCATEGORY_INT = IBOOKABLES_ACCESS_OPERATION_COUNT + 7;
+
+	/**
+	 * The operation id for the '<em>Add Hostel Bed</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKABLES_MANAGE___ADD_HOSTEL_BED__DOUBLE_STRING_STRING = IBOOKABLES_ACCESS_OPERATION_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>Add Conference Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKABLES_MANAGE___ADD_CONFERENCE_ROOM__DOUBLE_STRING_INT_STRING_CONFERENCEROOMCATEGORY_INT = IBOOKABLES_ACCESS_OPERATION_COUNT + 9;
+
+	/**
+	 * The operation id for the '<em>Change Hotel Room Number Beds</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKABLES_MANAGE___CHANGE_HOTEL_ROOM_NUMBER_BEDS__STRING_INT = IBOOKABLES_ACCESS_OPERATION_COUNT + 10;
+
+	/**
+	 * The operation id for the '<em>Change Conference Room Capacity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKABLES_MANAGE___CHANGE_CONFERENCE_ROOM_CAPACITY__STRING_INT = IBOOKABLES_ACCESS_OPERATION_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>IBookables Manage</em>' class.
@@ -883,7 +919,7 @@ public interface BookablesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKABLES_MANAGE_OPERATION_COUNT = IBOOKABLES_ACCESS_OPERATION_COUNT + 8;
+	int IBOOKABLES_MANAGE_OPERATION_COUNT = IBOOKABLES_ACCESS_OPERATION_COUNT + 12;
 
 	/**
 	 * The meta object id for the '{@link Classes.Bookables.impl.BookablesManagerImpl <em>Manager</em>}' class.
@@ -1013,13 +1049,13 @@ public interface BookablesPackage extends EPackage {
 	int BOOKABLES_MANAGER___GET_ROOM_LOCATION_FLOOR__STRING = IBOOKABLES_MANAGE___GET_ROOM_LOCATION_FLOOR__STRING;
 
 	/**
-	 * The operation id for the '<em>Get All Room IDs</em>' operation.
+	 * The operation id for the '<em>Get All Hotel Room IDs</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKABLES_MANAGER___GET_ALL_ROOM_IDS = IBOOKABLES_MANAGE___GET_ALL_ROOM_IDS;
+	int BOOKABLES_MANAGER___GET_ALL_HOTEL_ROOM_IDS = IBOOKABLES_MANAGE___GET_ALL_HOTEL_ROOM_IDS;
 
 	/**
 	 * The operation id for the '<em>Get All Conference Room IDs</em>' operation.
@@ -1076,22 +1112,13 @@ public interface BookablesPackage extends EPackage {
 	int BOOKABLES_MANAGER___SEARCH_CONFERENCE_ROOMS__STRING = IBOOKABLES_MANAGE___SEARCH_CONFERENCE_ROOMS__STRING;
 
 	/**
-	 * The operation id for the '<em>Add Bookable</em>' operation.
+	 * The operation id for the '<em>Change Hostel Bed Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKABLES_MANAGER___ADD_BOOKABLE__DOUBLE_STRING = IBOOKABLES_MANAGE___ADD_BOOKABLE__DOUBLE_STRING;
-
-	/**
-	 * The operation id for the '<em>Change Room Of Hostel Bed</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKABLES_MANAGER___CHANGE_ROOM_OF_HOSTEL_BED__STRING_STRING = IBOOKABLES_MANAGE___CHANGE_ROOM_OF_HOSTEL_BED__STRING_STRING;
+	int BOOKABLES_MANAGER___CHANGE_HOSTEL_BED_ROOM__STRING_STRING = IBOOKABLES_MANAGE___CHANGE_HOSTEL_BED_ROOM__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Delete Bookable</em>' operation.
@@ -1130,22 +1157,67 @@ public interface BookablesPackage extends EPackage {
 	int BOOKABLES_MANAGER___CHANGE_CONFERENCE_ROOM_CATEGORY__STRING_CONFERENCEROOMCATEGORY = IBOOKABLES_MANAGE___CHANGE_CONFERENCE_ROOM_CATEGORY__STRING_CONFERENCEROOMCATEGORY;
 
 	/**
-	 * The operation id for the '<em>Change Base Price</em>' operation.
+	 * The operation id for the '<em>Change Bookable Base Price</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKABLES_MANAGER___CHANGE_BASE_PRICE__STRING_DOUBLE = IBOOKABLES_MANAGE___CHANGE_BASE_PRICE__STRING_DOUBLE;
+	int BOOKABLES_MANAGER___CHANGE_BOOKABLE_BASE_PRICE__STRING_DOUBLE = IBOOKABLES_MANAGE___CHANGE_BOOKABLE_BASE_PRICE__STRING_DOUBLE;
 
 	/**
-	 * The operation id for the '<em>Change Description</em>' operation.
+	 * The operation id for the '<em>Change Bookable Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKABLES_MANAGER___CHANGE_DESCRIPTION__STRING_STRING = IBOOKABLES_MANAGE___CHANGE_DESCRIPTION__STRING_STRING;
+	int BOOKABLES_MANAGER___CHANGE_BOOKABLE_DESCRIPTION__STRING_STRING = IBOOKABLES_MANAGE___CHANGE_BOOKABLE_DESCRIPTION__STRING_STRING;
+
+	/**
+	 * The operation id for the '<em>Add Hotel Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKABLES_MANAGER___ADD_HOTEL_ROOM__DOUBLE_STRING_INT_STRING_HOTELROOMCATEGORY_INT = IBOOKABLES_MANAGE___ADD_HOTEL_ROOM__DOUBLE_STRING_INT_STRING_HOTELROOMCATEGORY_INT;
+
+	/**
+	 * The operation id for the '<em>Add Hostel Bed</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKABLES_MANAGER___ADD_HOSTEL_BED__DOUBLE_STRING_STRING = IBOOKABLES_MANAGE___ADD_HOSTEL_BED__DOUBLE_STRING_STRING;
+
+	/**
+	 * The operation id for the '<em>Add Conference Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKABLES_MANAGER___ADD_CONFERENCE_ROOM__DOUBLE_STRING_INT_STRING_CONFERENCEROOMCATEGORY_INT = IBOOKABLES_MANAGE___ADD_CONFERENCE_ROOM__DOUBLE_STRING_INT_STRING_CONFERENCEROOMCATEGORY_INT;
+
+	/**
+	 * The operation id for the '<em>Change Hotel Room Number Beds</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKABLES_MANAGER___CHANGE_HOTEL_ROOM_NUMBER_BEDS__STRING_INT = IBOOKABLES_MANAGE___CHANGE_HOTEL_ROOM_NUMBER_BEDS__STRING_INT;
+
+	/**
+	 * The operation id for the '<em>Change Conference Room Capacity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKABLES_MANAGER___CHANGE_CONFERENCE_ROOM_CAPACITY__STRING_INT = IBOOKABLES_MANAGE___CHANGE_CONFERENCE_ROOM_CAPACITY__STRING_INT;
 
 	/**
 	 * The number of operations of the '<em>Manager</em>' class.
@@ -1369,24 +1441,14 @@ public interface BookablesPackage extends EPackage {
 	EClass getIBookablesManage();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesManage#addBookable(double, java.lang.String) <em>Add Bookable</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesManage#changeHostelBedRoom(java.lang.String, java.lang.String) <em>Change Hostel Bed Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Bookable</em>' operation.
-	 * @see Classes.Bookables.IBookablesManage#addBookable(double, java.lang.String)
+	 * @return the meta object for the '<em>Change Hostel Bed Room</em>' operation.
+	 * @see Classes.Bookables.IBookablesManage#changeHostelBedRoom(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookablesManage__AddBookable__double_String();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesManage#changeRoomOfHostelBed(java.lang.String, java.lang.String) <em>Change Room Of Hostel Bed</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Change Room Of Hostel Bed</em>' operation.
-	 * @see Classes.Bookables.IBookablesManage#changeRoomOfHostelBed(java.lang.String, java.lang.String)
-	 * @generated
-	 */
-	EOperation getIBookablesManage__ChangeRoomOfHostelBed__String_String();
+	EOperation getIBookablesManage__ChangeHostelBedRoom__String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesManage#deleteBookable(java.lang.String) <em>Delete Bookable</em>}' operation.
@@ -1429,24 +1491,74 @@ public interface BookablesPackage extends EPackage {
 	EOperation getIBookablesManage__ChangeConferenceRoomCategory__String_ConferenceRoomCategory();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesManage#changeBasePrice(java.lang.String, double) <em>Change Base Price</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesManage#changeBookableBasePrice(java.lang.String, double) <em>Change Bookable Base Price</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Change Base Price</em>' operation.
-	 * @see Classes.Bookables.IBookablesManage#changeBasePrice(java.lang.String, double)
+	 * @return the meta object for the '<em>Change Bookable Base Price</em>' operation.
+	 * @see Classes.Bookables.IBookablesManage#changeBookableBasePrice(java.lang.String, double)
 	 * @generated
 	 */
-	EOperation getIBookablesManage__ChangeBasePrice__String_double();
+	EOperation getIBookablesManage__ChangeBookableBasePrice__String_double();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesManage#changeDescription(java.lang.String, java.lang.String) <em>Change Description</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesManage#changeBookableDescription(java.lang.String, java.lang.String) <em>Change Bookable Description</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Change Description</em>' operation.
-	 * @see Classes.Bookables.IBookablesManage#changeDescription(java.lang.String, java.lang.String)
+	 * @return the meta object for the '<em>Change Bookable Description</em>' operation.
+	 * @see Classes.Bookables.IBookablesManage#changeBookableDescription(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookablesManage__ChangeDescription__String_String();
+	EOperation getIBookablesManage__ChangeBookableDescription__String_String();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesManage#addHotelRoom(double, java.lang.String, int, java.lang.String, Classes.Bookables.HotelRoomCategory, int) <em>Add Hotel Room</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Hotel Room</em>' operation.
+	 * @see Classes.Bookables.IBookablesManage#addHotelRoom(double, java.lang.String, int, java.lang.String, Classes.Bookables.HotelRoomCategory, int)
+	 * @generated
+	 */
+	EOperation getIBookablesManage__AddHotelRoom__double_String_int_String_HotelRoomCategory_int();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesManage#addHostelBed(double, java.lang.String, java.lang.String) <em>Add Hostel Bed</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Hostel Bed</em>' operation.
+	 * @see Classes.Bookables.IBookablesManage#addHostelBed(double, java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getIBookablesManage__AddHostelBed__double_String_String();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesManage#addConferenceRoom(double, java.lang.String, int, java.lang.String, Classes.Bookables.ConferenceRoomCategory, int) <em>Add Conference Room</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Conference Room</em>' operation.
+	 * @see Classes.Bookables.IBookablesManage#addConferenceRoom(double, java.lang.String, int, java.lang.String, Classes.Bookables.ConferenceRoomCategory, int)
+	 * @generated
+	 */
+	EOperation getIBookablesManage__AddConferenceRoom__double_String_int_String_ConferenceRoomCategory_int();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesManage#changeHotelRoomNumberBeds(java.lang.String, int) <em>Change Hotel Room Number Beds</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Change Hotel Room Number Beds</em>' operation.
+	 * @see Classes.Bookables.IBookablesManage#changeHotelRoomNumberBeds(java.lang.String, int)
+	 * @generated
+	 */
+	EOperation getIBookablesManage__ChangeHotelRoomNumberBeds__String_int();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesManage#changeConferenceRoomCapacity(java.lang.String, int) <em>Change Conference Room Capacity</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Change Conference Room Capacity</em>' operation.
+	 * @see Classes.Bookables.IBookablesManage#changeConferenceRoomCapacity(java.lang.String, int)
+	 * @generated
+	 */
+	EOperation getIBookablesManage__ChangeConferenceRoomCapacity__String_int();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Bookables.IBookablesAccess <em>IBookables Access</em>}'.
@@ -1559,14 +1671,14 @@ public interface BookablesPackage extends EPackage {
 	EOperation getIBookablesAccess__GetRoomLocationFloor__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesAccess#getAllRoomIDs() <em>Get All Room IDs</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesAccess#getAllHotelRoomIDs() <em>Get All Hotel Room IDs</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get All Room IDs</em>' operation.
-	 * @see Classes.Bookables.IBookablesAccess#getAllRoomIDs()
+	 * @return the meta object for the '<em>Get All Hotel Room IDs</em>' operation.
+	 * @see Classes.Bookables.IBookablesAccess#getAllHotelRoomIDs()
 	 * @generated
 	 */
-	EOperation getIBookablesAccess__GetAllRoomIDs();
+	EOperation getIBookablesAccess__GetAllHotelRoomIDs();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesAccess#getAllConferenceRoomIDs() <em>Get All Conference Room IDs</em>}' operation.
@@ -1599,11 +1711,11 @@ public interface BookablesPackage extends EPackage {
 	EOperation getIBookablesAccess__GetConferenceRoomCategory__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesAccess#searchHotelRooms(java.lang.String) <em>Search Hotel Rooms</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesAccess#searchHotelRooms(java.lang.String, Classes.Bookables.HotelRoomCategory) <em>Search Hotel Rooms</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Hotel Rooms</em>' operation.
-	 * @see Classes.Bookables.IBookablesAccess#searchHotelRooms(java.lang.String)
+	 * @see Classes.Bookables.IBookablesAccess#searchHotelRooms(java.lang.String, Classes.Bookables.HotelRoomCategory)
 	 * @generated
 	 */
 	EOperation getIBookablesAccess__SearchHotelRooms__String();
@@ -1619,11 +1731,11 @@ public interface BookablesPackage extends EPackage {
 	EOperation getIBookablesAccess__SearchHostelBeds__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesAccess#searchConferenceRooms(java.lang.String) <em>Search Conference Rooms</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookables.IBookablesAccess#searchConferenceRooms(java.lang.String, Classes.Bookables.ConferenceRoomCategory) <em>Search Conference Rooms</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Conference Rooms</em>' operation.
-	 * @see Classes.Bookables.IBookablesAccess#searchConferenceRooms(java.lang.String)
+	 * @see Classes.Bookables.IBookablesAccess#searchConferenceRooms(java.lang.String, Classes.Bookables.ConferenceRoomCategory)
 	 * @generated
 	 */
 	EOperation getIBookablesAccess__SearchConferenceRooms__String();
@@ -1862,20 +1974,12 @@ public interface BookablesPackage extends EPackage {
 		EClass IBOOKABLES_MANAGE = eINSTANCE.getIBookablesManage();
 
 		/**
-		 * The meta object literal for the '<em><b>Add Bookable</b></em>' operation.
+		 * The meta object literal for the '<em><b>Change Hostel Bed Room</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKABLES_MANAGE___ADD_BOOKABLE__DOUBLE_STRING = eINSTANCE.getIBookablesManage__AddBookable__double_String();
-
-		/**
-		 * The meta object literal for the '<em><b>Change Room Of Hostel Bed</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IBOOKABLES_MANAGE___CHANGE_ROOM_OF_HOSTEL_BED__STRING_STRING = eINSTANCE.getIBookablesManage__ChangeRoomOfHostelBed__String_String();
+		EOperation IBOOKABLES_MANAGE___CHANGE_HOSTEL_BED_ROOM__STRING_STRING = eINSTANCE.getIBookablesManage__ChangeHostelBedRoom__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Delete Bookable</b></em>' operation.
@@ -1910,20 +2014,60 @@ public interface BookablesPackage extends EPackage {
 		EOperation IBOOKABLES_MANAGE___CHANGE_CONFERENCE_ROOM_CATEGORY__STRING_CONFERENCEROOMCATEGORY = eINSTANCE.getIBookablesManage__ChangeConferenceRoomCategory__String_ConferenceRoomCategory();
 
 		/**
-		 * The meta object literal for the '<em><b>Change Base Price</b></em>' operation.
+		 * The meta object literal for the '<em><b>Change Bookable Base Price</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKABLES_MANAGE___CHANGE_BASE_PRICE__STRING_DOUBLE = eINSTANCE.getIBookablesManage__ChangeBasePrice__String_double();
+		EOperation IBOOKABLES_MANAGE___CHANGE_BOOKABLE_BASE_PRICE__STRING_DOUBLE = eINSTANCE.getIBookablesManage__ChangeBookableBasePrice__String_double();
 
 		/**
-		 * The meta object literal for the '<em><b>Change Description</b></em>' operation.
+		 * The meta object literal for the '<em><b>Change Bookable Description</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKABLES_MANAGE___CHANGE_DESCRIPTION__STRING_STRING = eINSTANCE.getIBookablesManage__ChangeDescription__String_String();
+		EOperation IBOOKABLES_MANAGE___CHANGE_BOOKABLE_DESCRIPTION__STRING_STRING = eINSTANCE.getIBookablesManage__ChangeBookableDescription__String_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Hotel Room</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKABLES_MANAGE___ADD_HOTEL_ROOM__DOUBLE_STRING_INT_STRING_HOTELROOMCATEGORY_INT = eINSTANCE.getIBookablesManage__AddHotelRoom__double_String_int_String_HotelRoomCategory_int();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Hostel Bed</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKABLES_MANAGE___ADD_HOSTEL_BED__DOUBLE_STRING_STRING = eINSTANCE.getIBookablesManage__AddHostelBed__double_String_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Conference Room</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKABLES_MANAGE___ADD_CONFERENCE_ROOM__DOUBLE_STRING_INT_STRING_CONFERENCEROOMCATEGORY_INT = eINSTANCE.getIBookablesManage__AddConferenceRoom__double_String_int_String_ConferenceRoomCategory_int();
+
+		/**
+		 * The meta object literal for the '<em><b>Change Hotel Room Number Beds</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKABLES_MANAGE___CHANGE_HOTEL_ROOM_NUMBER_BEDS__STRING_INT = eINSTANCE.getIBookablesManage__ChangeHotelRoomNumberBeds__String_int();
+
+		/**
+		 * The meta object literal for the '<em><b>Change Conference Room Capacity</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKABLES_MANAGE___CHANGE_CONFERENCE_ROOM_CAPACITY__STRING_INT = eINSTANCE.getIBookablesManage__ChangeConferenceRoomCapacity__String_int();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Bookables.IBookablesAccess <em>IBookables Access</em>}' class.
@@ -2016,12 +2160,12 @@ public interface BookablesPackage extends EPackage {
 		EOperation IBOOKABLES_ACCESS___GET_ROOM_LOCATION_FLOOR__STRING = eINSTANCE.getIBookablesAccess__GetRoomLocationFloor__String();
 
 		/**
-		 * The meta object literal for the '<em><b>Get All Room IDs</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get All Hotel Room IDs</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKABLES_ACCESS___GET_ALL_ROOM_IDS = eINSTANCE.getIBookablesAccess__GetAllRoomIDs();
+		EOperation IBOOKABLES_ACCESS___GET_ALL_HOTEL_ROOM_IDS = eINSTANCE.getIBookablesAccess__GetAllHotelRoomIDs();
 
 		/**
 		 * The meta object literal for the '<em><b>Get All Conference Room IDs</b></em>' operation.

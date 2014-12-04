@@ -187,8 +187,7 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9Lbr3psEeST-65JbGUt8g" name="BookablesManager" visibility="package">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9LbsHpsEeST-65JbGUt8g" name="bookables" visibility="private" association="_w9Lb2XpsEeST-65JbGUt8g">
-        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EStringToStringMapEntry"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9LbsHpsEeST-65JbGUt8g" name="bookables" visibility="private" type="_w9Lbc3psEeST-65JbGUt8g" association="_w9Lb2XpsEeST-65JbGUt8g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9LbsXpsEeST-65JbGUt8g"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9LbsnpsEeST-65JbGUt8g" value="*"/>
       </ownedAttribute>
@@ -314,6 +313,7 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ipCP4Xr6EeS6-b_7Ud_oOg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ipCP4nr6EeS6-b_7Ud_oOg" value="*"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_I4NYsHtTEeSNQJV-h03TNw" name="category" type="_w9LbnHpsEeST-65JbGUt8g"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_XfquwHr6EeS6-b_7Ud_oOg" name="searchHostelBeds">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_gZz_QHr6EeS6-b_7Ud_oOg" name="keyword">
@@ -334,6 +334,7 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i8y5YXr6EeS6-b_7Ud_oOg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i8y5Ynr6EeS6-b_7Ud_oOg" value="*"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Q162IHtTEeSNQJV-h03TNw" name="category" type="_w9LboHpsEeST-65JbGUt8g"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9LbwXpsEeST-65JbGUt8g" name="Room Location">

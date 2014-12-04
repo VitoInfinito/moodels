@@ -33,6 +33,4 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="#//String"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass Classes.ecore#//Bookables/Bookable"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="InvalidIDException" instanceTypeName="InvalidIDException"
-      serializable="false"/>
 </ecore:EPackage>

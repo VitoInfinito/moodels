@@ -114,13 +114,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType invalidIDExceptionEDataType = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EDataType unlimitedNaturalEDataType = null;
 
 	/**
@@ -297,15 +290,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getInvalidIDException() {
-		return invalidIDExceptionEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EDataType getUnlimitedNatural() {
 		return unlimitedNaturalEDataType;
 	}
@@ -357,7 +341,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		realEDataType = createEDataType(REAL);
 		unlimitedNaturalEDataType = createEDataType(UNLIMITED_NATURAL);
 		stringEDataType = createEDataType(STRING);
-		invalidIDExceptionEDataType = createEDataType(INVALID_ID_EXCEPTION);
 	}
 
 	/**
@@ -403,7 +386,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		initEDataType(realEDataType, double.class, "Real", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(unlimitedNaturalEDataType, int.class, "UnlimitedNatural", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(stringEDataType, String.class, "String", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(invalidIDExceptionEDataType, Object.class, "InvalidIDException", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

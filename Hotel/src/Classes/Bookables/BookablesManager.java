@@ -36,7 +36,7 @@ public interface BookablesManager extends IBookablesManage {
 	 * @return the value of the '<em>Bookables</em>' map.
 	 * @see Classes.Bookables.BookablesPackage#getBookablesManager_Bookables()
 	 * @model mapType="org.eclipse.uml2.types.StringToBookableMap<org.eclipse.uml2.types.String, Classes.Bookables.Bookable>" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	EMap<String, Bookable> getBookables();
 
