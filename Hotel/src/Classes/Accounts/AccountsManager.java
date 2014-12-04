@@ -2,7 +2,7 @@
  */
 package Classes.Accounts;
 
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,23 +18,24 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see Classes.Accounts.AccountsPackage#getAccountsManager()
  * @model
- * @generated
+ * @generated NOT
  */
 public interface AccountsManager extends IManageAccounts, IAccountsAccess {
 	/**
-	 * Returns the value of the '<em><b>Account</b></em>' reference list.
-	 * The list contents are of type {@link Classes.Accounts.Account}.
+	 * Returns the value of the '<em><b>Account</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link Classes.Accounts.Account},
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Account</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Account</em>' reference list.
+	 * @return the value of the '<em>Account</em>' map.
 	 * @see Classes.Accounts.AccountsPackage#getAccountsManager_Account()
-	 * @model ordered="false"
-	 * @generated
+	 * @model mapType="Classes.ECoreMapEntries.StringToAccountMap<org.eclipse.uml2.types.String, Classes.Accounts.Account>" ordered="false"
+	 * @generated 
 	 */
-	EList<Account> getAccount();
+	EMap<String, Account> getAccount();
 
 } // AccountsManager

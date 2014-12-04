@@ -3,12 +3,9 @@
 package Classes.Stays;
 
 import Classes.Banking.CustomerProvides;
-
 import Classes.Bills.IBills;
-
 import Classes.Guests.IGuests;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,24 +24,25 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see Classes.Stays.StaysPackage#getStaysManager()
  * @model
- * @generated
+ * @generated NOT
  */
 public interface StaysManager extends IStays {
 	/**
-	 * Returns the value of the '<em><b>Stay</b></em>' reference list.
-	 * The list contents are of type {@link Classes.Stays.Stay}.
+	 * Returns the value of the '<em><b>Stay</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link Classes.Stays.Stay},
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Stay</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Stay</em>' reference list.
+	 * @return the value of the '<em>Stay</em>' map.
 	 * @see Classes.Stays.StaysPackage#getStaysManager_Stay()
-	 * @model ordered="false"
+	 * @model mapType="Classes.ECoreMapEntries.StringToStayMap<org.eclipse.uml2.types.String, Classes.Stays.Stay>" ordered="false"
 	 * @generated
 	 */
-	EList<Stay> getStay();
+	EMap<String, Stay> getStay();
 
 	/**
 	 * Returns the value of the '<em><b>Customer Provides</b></em>' reference.

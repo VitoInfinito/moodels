@@ -1,6 +1,6 @@
 /**
  */
-package ECoreMapEntries.impl;
+package org.eclipse.uml2.types.impl;
 
 import Classes.Accounts.AccountsPackage;
 
@@ -25,6 +25,10 @@ import Classes.Bookings.impl.BookingsPackageImpl;
 import Classes.Customers.CustomersPackage;
 
 import Classes.Customers.impl.CustomersPackageImpl;
+
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+
+import Classes.ECoreMapEntries.impl.ECoreMapEntriesPackageImpl;
 
 import Classes.Feedback.FeedbackPackage;
 
@@ -62,18 +66,12 @@ import Classes.Stays.StaysPackage;
 
 import Classes.Stays.impl.StaysPackageImpl;
 
-import ECoreMapEntries.ECoreMapEntriesFactory;
-import ECoreMapEntries.ECoreMapEntriesPackage;
-
-import java.util.Map;
-
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.uml2.types.TypesFactory;
 import org.eclipse.uml2.types.TypesPackage;
 
 /**
@@ -82,13 +80,41 @@ import org.eclipse.uml2.types.TypesPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMapEntriesPackage {
+public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass stringToBookableMapEClass = null;
+	private EDataType booleanEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType integerEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType realEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType unlimitedNaturalEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType stringEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -101,12 +127,12 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see ECoreMapEntries.ECoreMapEntriesPackage#eNS_URI
+	 * @see org.eclipse.uml2.types.TypesPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private ECoreMapEntriesPackageImpl() {
-		super(eNS_URI, ECoreMapEntriesFactory.eINSTANCE);
+	private TypesPackageImpl() {
+		super(eNS_URI, TypesFactory.eINSTANCE);
 	}
 
 	/**
@@ -119,7 +145,7 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link ECoreMapEntriesPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link TypesPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128,16 +154,13 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static ECoreMapEntriesPackage init() {
-		if (isInited) return (ECoreMapEntriesPackage)EPackage.Registry.INSTANCE.getEPackage(ECoreMapEntriesPackage.eNS_URI);
+	public static TypesPackage init() {
+		if (isInited) return (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ECoreMapEntriesPackageImpl theECoreMapEntriesPackage = (ECoreMapEntriesPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ECoreMapEntriesPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ECoreMapEntriesPackageImpl());
+		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new TypesPackageImpl());
 
 		isInited = true;
-
-		// Initialize simple dependencies
-		TypesPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		BookablesPackageImpl theBookablesPackage = (BookablesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BookablesPackage.eNS_URI) instanceof BookablesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BookablesPackage.eNS_URI) : BookablesPackage.eINSTANCE);
@@ -155,9 +178,10 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 		ServicesPackageImpl theServicesPackage = (ServicesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) instanceof ServicesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) : ServicesPackage.eINSTANCE);
 		FeedbackPackageImpl theFeedbackPackage = (FeedbackPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) instanceof FeedbackPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) : FeedbackPackage.eINSTANCE);
 		RequestsPackageImpl theRequestsPackage = (RequestsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) instanceof RequestsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) : RequestsPackage.eINSTANCE);
+		ECoreMapEntriesPackageImpl theECoreMapEntriesPackage = (ECoreMapEntriesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ECoreMapEntriesPackage.eNS_URI) instanceof ECoreMapEntriesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ECoreMapEntriesPackage.eNS_URI) : ECoreMapEntriesPackage.eINSTANCE);
 
 		// Create package meta-data objects
-		theECoreMapEntriesPackage.createPackageContents();
+		theTypesPackage.createPackageContents();
 		theBookablesPackage.createPackageContents();
 		theStaysPackage.createPackageContents();
 		theBankingPackage.createPackageContents();
@@ -173,9 +197,10 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 		theServicesPackage.createPackageContents();
 		theFeedbackPackage.createPackageContents();
 		theRequestsPackage.createPackageContents();
+		theECoreMapEntriesPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theECoreMapEntriesPackage.initializePackageContents();
+		theTypesPackage.initializePackageContents();
 		theBookablesPackage.initializePackageContents();
 		theStaysPackage.initializePackageContents();
 		theBankingPackage.initializePackageContents();
@@ -191,14 +216,15 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 		theServicesPackage.initializePackageContents();
 		theFeedbackPackage.initializePackageContents();
 		theRequestsPackage.initializePackageContents();
+		theECoreMapEntriesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theECoreMapEntriesPackage.freeze();
+		theTypesPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(ECoreMapEntriesPackage.eNS_URI, theECoreMapEntriesPackage);
-		return theECoreMapEntriesPackage;
+		EPackage.Registry.INSTANCE.put(TypesPackage.eNS_URI, theTypesPackage);
+		return theTypesPackage;
 	}
 
 	/**
@@ -206,8 +232,8 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getStringToBookableMap() {
-		return stringToBookableMapEClass;
+	public EDataType getBoolean() {
+		return booleanEDataType;
 	}
 
 	/**
@@ -215,8 +241,8 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getStringToBookableMap_Key() {
-		return (EAttribute)stringToBookableMapEClass.getEStructuralFeatures().get(0);
+	public EDataType getInteger() {
+		return integerEDataType;
 	}
 
 	/**
@@ -224,8 +250,8 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStringToBookableMap_Value() {
-		return (EReference)stringToBookableMapEClass.getEStructuralFeatures().get(1);
+	public EDataType getReal() {
+		return realEDataType;
 	}
 
 	/**
@@ -233,8 +259,26 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ECoreMapEntriesFactory getECoreMapEntriesFactory() {
-		return (ECoreMapEntriesFactory)getEFactoryInstance();
+	public EDataType getUnlimitedNatural() {
+		return unlimitedNaturalEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getString() {
+		return stringEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TypesFactory getTypesFactory() {
+		return (TypesFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -255,10 +299,12 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 		if (isCreated) return;
 		isCreated = true;
 
-		// Create classes and their features
-		stringToBookableMapEClass = createEClass(STRING_TO_BOOKABLE_MAP);
-		createEAttribute(stringToBookableMapEClass, STRING_TO_BOOKABLE_MAP__KEY);
-		createEReference(stringToBookableMapEClass, STRING_TO_BOOKABLE_MAP__VALUE);
+		// Create data types
+		booleanEDataType = createEDataType(BOOLEAN);
+		integerEDataType = createEDataType(INTEGER);
+		realEDataType = createEDataType(REAL);
+		unlimitedNaturalEDataType = createEDataType(UNLIMITED_NATURAL);
+		stringEDataType = createEDataType(STRING);
 	}
 
 	/**
@@ -284,23 +330,35 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
-		// Obtain other dependent packages
-		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
-		BookablesPackage theBookablesPackage = (BookablesPackage)EPackage.Registry.INSTANCE.getEPackage(BookablesPackage.eNS_URI);
-
-		// Create type parameters
-
-		// Set bounds for type parameters
-
-		// Add supertypes to classes
-
-		// Initialize classes, features, and operations; add parameters
-		initEClass(stringToBookableMapEClass, Map.Entry.class, "StringToBookableMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStringToBookableMap_Key(), theTypesPackage.getString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStringToBookableMap_Value(), theBookablesPackage.getBookable(), null, "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		// Initialize data types
+		initEDataType(booleanEDataType, boolean.class, "Boolean", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(integerEDataType, int.class, "Integer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(realEDataType, double.class, "Real", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(unlimitedNaturalEDataType, int.class, "UnlimitedNatural", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(stringEDataType, String.class, "String", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/uml2/2.0.0/UML
+		createUMLAnnotations();
 	}
 
-} //ECoreMapEntriesPackageImpl
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/uml2/2.0.0/UML</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createUMLAnnotations() {
+		String source = "http://www.eclipse.org/uml2/2.0.0/UML";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "originalName", "PrimitiveTypes"
+		   });
+	}
+
+} //TypesPackageImpl

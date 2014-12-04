@@ -1,10 +1,10 @@
 /**
  */
-package ECoreMapEntries.impl;
+package Classes.ECoreMapEntries.impl;
 
-import Classes.Bookables.Bookable;
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 
-import ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.Restaurants.RestaurantTable;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -20,19 +20,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>String To Bookable Map</b></em>'.
+ * An implementation of the model object '<em><b>String To Restaurant Table Map</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link ECoreMapEntries.impl.StringToBookableMapImpl#getTypedKey <em>Key</em>}</li>
- *   <li>{@link ECoreMapEntries.impl.StringToBookableMapImpl#getTypedValue <em>Value</em>}</li>
+ *   <li>{@link Classes.ECoreMapEntries.impl.StringToRestaurantTableMapImpl#getTypedKey <em>Key</em>}</li>
+ *   <li>{@link Classes.ECoreMapEntries.impl.StringToRestaurantTableMapImpl#getTypedValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
- * @generated
+ * @generated NOT
  */
-public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,Bookable> {
+public class StringToRestaurantTableMapImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,RestaurantTable> {
 	/**
 	 * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -61,14 +61,14 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected Bookable value;
+	protected RestaurantTable value;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StringToBookableMapImpl() {
+	protected StringToRestaurantTableMapImpl() {
 		super();
 	}
 
@@ -79,7 +79,7 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ECoreMapEntriesPackage.Literals.STRING_TO_BOOKABLE_MAP;
+		return ECoreMapEntriesPackage.Literals.STRING_TO_RESTAURANT_TABLE_MAP;
 	}
 
 	/**
@@ -100,7 +100,7 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 		String oldKey = key;
 		key = newKey;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__KEY, oldKey, key));
+			eNotify(new ENotificationImpl(this, Notification.SET, ECoreMapEntriesPackage.STRING_TO_RESTAURANT_TABLE_MAP__KEY, oldKey, key));
 	}
 
 	/**
@@ -108,13 +108,13 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Bookable getTypedValue() {
+	public RestaurantTable getTypedValue() {
 		if (value != null && value.eIsProxy()) {
 			InternalEObject oldValue = (InternalEObject)value;
-			value = (Bookable)eResolveProxy(oldValue);
+			value = (RestaurantTable)eResolveProxy(oldValue);
 			if (value != oldValue) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__VALUE, oldValue, value));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ECoreMapEntriesPackage.STRING_TO_RESTAURANT_TABLE_MAP__VALUE, oldValue, value));
 			}
 		}
 		return value;
@@ -125,7 +125,7 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Bookable basicGetTypedValue() {
+	public RestaurantTable basicGetTypedValue() {
 		return value;
 	}
 
@@ -134,11 +134,11 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTypedValue(Bookable newValue) {
-		Bookable oldValue = value;
+	public void setTypedValue(RestaurantTable newValue) {
+		RestaurantTable oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, ECoreMapEntriesPackage.STRING_TO_RESTAURANT_TABLE_MAP__VALUE, oldValue, value));
 	}
 
 	/**
@@ -149,9 +149,9 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__KEY:
+			case ECoreMapEntriesPackage.STRING_TO_RESTAURANT_TABLE_MAP__KEY:
 				return getTypedKey();
-			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__VALUE:
+			case ECoreMapEntriesPackage.STRING_TO_RESTAURANT_TABLE_MAP__VALUE:
 				if (resolve) return getTypedValue();
 				return basicGetTypedValue();
 		}
@@ -166,11 +166,11 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__KEY:
+			case ECoreMapEntriesPackage.STRING_TO_RESTAURANT_TABLE_MAP__KEY:
 				setTypedKey((String)newValue);
 				return;
-			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__VALUE:
-				setTypedValue((Bookable)newValue);
+			case ECoreMapEntriesPackage.STRING_TO_RESTAURANT_TABLE_MAP__VALUE:
+				setTypedValue((RestaurantTable)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -184,11 +184,11 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__KEY:
+			case ECoreMapEntriesPackage.STRING_TO_RESTAURANT_TABLE_MAP__KEY:
 				setTypedKey(KEY_EDEFAULT);
 				return;
-			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__VALUE:
-				setTypedValue((Bookable)null);
+			case ECoreMapEntriesPackage.STRING_TO_RESTAURANT_TABLE_MAP__VALUE:
+				setTypedValue((RestaurantTable)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -202,9 +202,9 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__KEY:
+			case ECoreMapEntriesPackage.STRING_TO_RESTAURANT_TABLE_MAP__KEY:
 				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
-			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__VALUE:
+			case ECoreMapEntriesPackage.STRING_TO_RESTAURANT_TABLE_MAP__VALUE:
 				return value != null;
 		}
 		return super.eIsSet(featureID);
@@ -278,7 +278,7 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Bookable getValue() {
+	public RestaurantTable getValue() {
 		return getTypedValue();
 	}
 
@@ -287,8 +287,8 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Bookable setValue(Bookable value) {
-		Bookable oldValue = getValue();
+	public RestaurantTable setValue(RestaurantTable value) {
+		RestaurantTable oldValue = getValue();
 		setTypedValue(value);
 		return oldValue;
 	}
@@ -299,9 +299,9 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EMap<String, Bookable> getEMap() {
+	public EMap<String, RestaurantTable> getEMap() {
 		EObject container = eContainer();
-		return container == null ? null : (EMap<String, Bookable>)container.eGet(eContainmentFeature());
+		return container == null ? null : (EMap<String, RestaurantTable>)container.eGet(eContainmentFeature());
 	}
 
-} //StringToBookableMapImpl
+} //StringToRestaurantTableMapImpl

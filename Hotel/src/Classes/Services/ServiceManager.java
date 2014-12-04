@@ -2,7 +2,7 @@
  */
 package Classes.Services;
 
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,40 +20,42 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see Classes.Services.ServicesPackage#getServiceManager()
  * @model
- * @generated
+ * @generated NOT
  */
 public interface ServiceManager extends IServicesManage {
 	/**
-	 * Returns the value of the '<em><b>Service</b></em>' reference list.
-	 * The list contents are of type {@link Classes.Services.Service}.
+	 * Returns the value of the '<em><b>Service</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link Classes.Services.Service},
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Service</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Service</em>' reference list.
+	 * @return the value of the '<em>Service</em>' map.
 	 * @see Classes.Services.ServicesPackage#getServiceManager_Service()
-	 * @model ordered="false"
+	 * @model mapType="Classes.ECoreMapEntries.StringToServiceMap<org.eclipse.uml2.types.String, Classes.Services.Service>" ordered="false"
 	 * @generated
 	 */
-	EList<Service> getService();
+	EMap<String, Service> getService();
 
 	/**
-	 * Returns the value of the '<em><b>Room Service Order</b></em>' reference list.
-	 * The list contents are of type {@link Classes.Services.RoomServiceOrder}.
+	 * Returns the value of the '<em><b>Room Service Order</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link Classes.Services.RoomServiceOrder},
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Room Service Order</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Room Service Order</em>' reference list.
+	 * @return the value of the '<em>Room Service Order</em>' map.
 	 * @see Classes.Services.ServicesPackage#getServiceManager_RoomServiceOrder()
-	 * @model ordered="false"
+	 * @model mapType="Classes.ECoreMapEntries.StringToRoomServiceOrderMap<org.eclipse.uml2.types.String, Classes.Services.RoomServiceOrder>" ordered="false"
 	 * @generated
 	 */
-	EList<RoomServiceOrder> getRoomServiceOrder();
+	EMap<String, RoomServiceOrder> getRoomServiceOrder();
 
 	/**
 	 * Returns the value of the '<em><b>Room Service Menu</b></em>' reference.

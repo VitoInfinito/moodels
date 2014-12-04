@@ -5,18 +5,18 @@ package Classes.Customers.impl;
 import Classes.Customers.Customer;
 import Classes.Customers.CustomersManager;
 import Classes.Customers.CustomersPackage;
-
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToCustomerMapImpl;
 import java.lang.reflect.InvocationTargetException;
-
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
-
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,14 +33,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class CustomersManagerImpl extends MinimalEObjectImpl.Container implements CustomersManager {
 	/**
-	 * The cached value of the '{@link #getCustomer() <em>Customer</em>}' reference list.
+	 * The cached value of the '{@link #getCustomer() <em>Customer</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCustomer()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<Customer> customer;
+	private EMap<String, Customer> customer;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -64,11 +64,11 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Customer> getCustomer() {
+	public EMap<String, Customer> getCustomer() {
 		if (customer == null) {
-			customer = new EObjectResolvingEList<Customer>(Customer.class, this, CustomersPackage.CUSTOMERS_MANAGER__CUSTOMER);
+			customer = new EcoreEMap<String,Customer>(ECoreMapEntriesPackage.Literals.STRING_TO_CUSTOMER_MAP, StringToCustomerMapImpl.class, this, CustomersPackage.CUSTOMERS_MANAGER__CUSTOMER);
 		}
 		return customer;
 	}
@@ -285,13 +285,28 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CustomersPackage.CUSTOMERS_MANAGER__CUSTOMER:
+				return ((InternalEList<?>)getCustomer()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CustomersPackage.CUSTOMERS_MANAGER__CUSTOMER:
-				return getCustomer();
+				if (coreType) return getCustomer();
+				else return getCustomer().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -299,15 +314,14 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CustomersPackage.CUSTOMERS_MANAGER__CUSTOMER:
-				getCustomer().clear();
-				getCustomer().addAll((Collection<? extends Customer>)newValue);
+				((EStructuralFeature.Setting)getCustomer()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -316,7 +330,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
@@ -331,7 +345,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {

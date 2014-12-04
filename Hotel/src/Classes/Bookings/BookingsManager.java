@@ -3,18 +3,12 @@
 package Classes.Bookings;
 
 import Classes.Banking.CustomerProvides;
-
 import Classes.Bills.IBills;
-
 import Classes.Bookables.IBookablesAccess;
-
 import Classes.Customers.ICustomers;
-
 import Classes.Guests.IGuests;
-
 import Classes.Stays.IStays;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,24 +30,25 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see Classes.Bookings.BookingsPackage#getBookingsManager()
  * @model
- * @generated
+ * @generated NOT
  */
 public interface BookingsManager extends IBookings {
 	/**
-	 * Returns the value of the '<em><b>Booking</b></em>' reference list.
-	 * The list contents are of type {@link Classes.Bookings.Booking}.
+	 * Returns the value of the '<em><b>Booking</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link Classes.Bookings.Booking},
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Booking</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Booking</em>' reference list.
+	 * @return the value of the '<em>Booking</em>' map.
 	 * @see Classes.Bookings.BookingsPackage#getBookingsManager_Booking()
-	 * @model ordered="false"
+	 * @model mapType="Classes.ECoreMapEntries.StringToBookingMap<org.eclipse.uml2.types.String, Classes.Bookings.Booking>" ordered="false"
 	 * @generated
 	 */
-	EList<Booking> getBooking();
+	EMap<String, Booking> getBooking();
 
 	/**
 	 * Returns the value of the '<em><b>IBookable Access</b></em>' reference.

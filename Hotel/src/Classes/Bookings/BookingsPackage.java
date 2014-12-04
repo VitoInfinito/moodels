@@ -394,7 +394,7 @@ public interface BookingsPackage extends EPackage {
 	int BOOKINGS_MANAGER = 1;
 
 	/**
-	 * The feature id for the '<em><b>Booking</b></em>' reference list.
+	 * The feature id for the '<em><b>Booking</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -782,10 +782,10 @@ public interface BookingsPackage extends EPackage {
 	EClass getBookingsManager();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Classes.Bookings.BookingsManager#getBooking <em>Booking</em>}'.
+	 * Returns the meta object for the map '{@link Classes.Bookings.BookingsManager#getBooking <em>Booking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Booking</em>'.
+	 * @return the meta object for the map '<em>Booking</em>'.
 	 * @see Classes.Bookings.BookingsManager#getBooking()
 	 * @see #getBookingsManager()
 	 * @generated
@@ -1194,7 +1194,7 @@ public interface BookingsPackage extends EPackage {
 		EClass BOOKINGS_MANAGER = eINSTANCE.getBookingsManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Booking</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Booking</b></em>' map feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

@@ -3,26 +3,23 @@
 package Classes.Guests.impl;
 
 import Classes.Accounts.IManageAccounts;
-
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToGuestMapImpl;
 import Classes.Guests.Guest;
 import Classes.Guests.GuestsManager;
 import Classes.Guests.GuestsPackage;
-
 import java.lang.reflect.InvocationTargetException;
-
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,14 +37,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements GuestsManager {
 	/**
-	 * The cached value of the '{@link #getGuest() <em>Guest</em>}' reference list.
+	 * The cached value of the '{@link #getGuest() <em>Guest</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGuest()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<Guest> guest;
+	private EMap<String, Guest> guest;
 
 	/**
 	 * The cached value of the '{@link #getIManageAccounts() <em>IManage Accounts</em>}' reference.
@@ -81,11 +78,11 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Guest> getGuest() {
+	public EMap<String, Guest> getGuest() {
 		if (guest == null) {
-			guest = new EObjectResolvingEList<Guest>(Guest.class, this, GuestsPackage.GUESTS_MANAGER__GUEST);
+			guest = new EcoreEMap<String,Guest>(ECoreMapEntriesPackage.Literals.STRING_TO_GUEST_MAP, StringToGuestMapImpl.class, this, GuestsPackage.GUESTS_MANAGER__GUEST);
 		}
 		return guest;
 	}
@@ -373,13 +370,28 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GuestsPackage.GUESTS_MANAGER__GUEST:
+				return ((InternalEList<?>)getGuest()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case GuestsPackage.GUESTS_MANAGER__GUEST:
-				return getGuest();
+				if (coreType) return getGuest();
+				else return getGuest().map();
 			case GuestsPackage.GUESTS_MANAGER__IMANAGE_ACCOUNTS:
 				if (resolve) return getIManageAccounts();
 				return basicGetIManageAccounts();
@@ -390,15 +402,14 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case GuestsPackage.GUESTS_MANAGER__GUEST:
-				getGuest().clear();
-				getGuest().addAll((Collection<? extends Guest>)newValue);
+				((EStructuralFeature.Setting)getGuest()).set(newValue);
 				return;
 			case GuestsPackage.GUESTS_MANAGER__IMANAGE_ACCOUNTS:
 				setIManageAccounts((IManageAccounts)newValue);
@@ -410,7 +421,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
@@ -428,7 +439,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {

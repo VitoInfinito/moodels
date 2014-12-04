@@ -2,21 +2,21 @@
  */
 package Classes.Feedback.impl;
 
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToFeedbackMapImpl;
 import Classes.Feedback.Feedback;
 import Classes.Feedback.FeedbackManager;
 import Classes.Feedback.FeedbackPackage;
-
 import java.lang.reflect.InvocationTargetException;
-
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
-
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,14 +33,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements FeedbackManager {
 	/**
-	 * The cached value of the '{@link #getFeedback() <em>Feedback</em>}' reference list.
+	 * The cached value of the '{@link #getFeedback() <em>Feedback</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFeedback()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<Feedback> feedback;
+	private EMap<String, Feedback> feedback;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -64,11 +64,11 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Feedback> getFeedback() {
+	public EMap<String, Feedback> getFeedback() {
 		if (feedback == null) {
-			feedback = new EObjectResolvingEList<Feedback>(Feedback.class, this, FeedbackPackage.FEEDBACK_MANAGER__FEEDBACK);
+			feedback = new EcoreEMap<String,Feedback>(ECoreMapEntriesPackage.Literals.STRING_TO_FEEDBACK_MAP, StringToFeedbackMapImpl.class, this, FeedbackPackage.FEEDBACK_MANAGER__FEEDBACK);
 		}
 		return feedback;
 	}
@@ -175,13 +175,28 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACK:
+				return ((InternalEList<?>)getFeedback()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACK:
-				return getFeedback();
+				if (coreType) return getFeedback();
+				else return getFeedback().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -189,15 +204,14 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACK:
-				getFeedback().clear();
-				getFeedback().addAll((Collection<? extends Feedback>)newValue);
+				((EStructuralFeature.Setting)getFeedback()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -206,7 +220,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
@@ -221,7 +235,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {

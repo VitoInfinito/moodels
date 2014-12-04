@@ -240,7 +240,7 @@ public interface BillsPackage extends EPackage {
 	int BILLS_MANAGER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Bill</b></em>' reference list.
+	 * The feature id for the '<em><b>Bill</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -531,10 +531,10 @@ public interface BillsPackage extends EPackage {
 	EClass getBillsManager();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Classes.Bills.BillsManager#getBill <em>Bill</em>}'.
+	 * Returns the meta object for the map '{@link Classes.Bills.BillsManager#getBill <em>Bill</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Bill</em>'.
+	 * @return the meta object for the map '<em>Bill</em>'.
 	 * @see Classes.Bills.BillsManager#getBill()
 	 * @see #getBillsManager()
 	 * @generated
@@ -854,7 +854,7 @@ public interface BillsPackage extends EPackage {
 		EClass BILLS_MANAGER = eINSTANCE.getBillsManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Bill</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Bill</b></em>' map feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

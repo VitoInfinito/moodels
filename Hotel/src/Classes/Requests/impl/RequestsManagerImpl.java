@@ -10,6 +10,8 @@ import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 
+import java.util.Map;
+import java.util.Map.Entry;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -37,10 +39,10 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSpecialRequest()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<Request> specialRequest;
+	private EList<Map.Entry<String, Request>> specialRequest;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -64,11 +66,11 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Request> getSpecialRequest() {
+	public EList<Map.Entry<String, Request>> getSpecialRequest() {
 		if (specialRequest == null) {
-			specialRequest = new EObjectResolvingEList<Request>(Request.class, this, RequestsPackage.REQUESTS_MANAGER__SPECIAL_REQUEST);
+			specialRequest = new EObjectResolvingEList<Map.Entry<String, Request>>(Entry.class, this, RequestsPackage.REQUESTS_MANAGER__SPECIAL_REQUEST);
 		}
 		return specialRequest;
 	}
@@ -186,7 +188,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
@@ -200,7 +202,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
@@ -208,7 +210,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 		switch (featureID) {
 			case RequestsPackage.REQUESTS_MANAGER__SPECIAL_REQUEST:
 				getSpecialRequest().clear();
-				getSpecialRequest().addAll((Collection<? extends Request>)newValue);
+				getSpecialRequest().addAll((Collection<? extends Map.Entry<String, Request>>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -217,7 +219,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
@@ -232,7 +234,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {

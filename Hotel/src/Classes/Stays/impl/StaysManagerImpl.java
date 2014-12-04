@@ -3,30 +3,25 @@
 package Classes.Stays.impl;
 
 import Classes.Banking.CustomerProvides;
-
 import Classes.Bills.IBills;
-
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToStayMapImpl;
 import Classes.Guests.IGuests;
-
 import Classes.Stays.Stay;
 import Classes.Stays.StaysManager;
 import Classes.Stays.StaysPackage;
-
 import java.lang.reflect.InvocationTargetException;
-
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,14 +41,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class StaysManagerImpl extends MinimalEObjectImpl.Container implements StaysManager {
 	/**
-	 * The cached value of the '{@link #getStay() <em>Stay</em>}' reference list.
+	 * The cached value of the '{@link #getStay() <em>Stay</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getStay()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<Stay> stay;
+	private EMap<String, Stay> stay;
 
 	/**
 	 * The cached value of the '{@link #getCustomerProvides() <em>Customer Provides</em>}' reference.
@@ -107,11 +102,11 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Stay> getStay() {
+	public EMap<String, Stay> getStay() {
 		if (stay == null) {
-			stay = new EObjectResolvingEList<Stay>(Stay.class, this, StaysPackage.STAYS_MANAGER__STAY);
+			stay = new EcoreEMap<String,Stay>(ECoreMapEntriesPackage.Literals.STRING_TO_STAY_MAP, StringToStayMapImpl.class, this, StaysPackage.STAYS_MANAGER__STAY);
 		}
 		return stay;
 	}
@@ -486,13 +481,28 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case StaysPackage.STAYS_MANAGER__STAY:
+				return ((InternalEList<?>)getStay()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case StaysPackage.STAYS_MANAGER__STAY:
-				return getStay();
+				if (coreType) return getStay();
+				else return getStay().map();
 			case StaysPackage.STAYS_MANAGER__CUSTOMER_PROVIDES:
 				if (resolve) return getCustomerProvides();
 				return basicGetCustomerProvides();
@@ -509,15 +519,14 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case StaysPackage.STAYS_MANAGER__STAY:
-				getStay().clear();
-				getStay().addAll((Collection<? extends Stay>)newValue);
+				((EStructuralFeature.Setting)getStay()).set(newValue);
 				return;
 			case StaysPackage.STAYS_MANAGER__CUSTOMER_PROVIDES:
 				setCustomerProvides((CustomerProvides)newValue);
@@ -535,7 +544,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
@@ -559,7 +568,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {

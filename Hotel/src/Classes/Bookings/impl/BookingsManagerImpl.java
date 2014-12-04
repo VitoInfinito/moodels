@@ -3,37 +3,29 @@
 package Classes.Bookings.impl;
 
 import Classes.Banking.CustomerProvides;
-
 import Classes.Bills.IBills;
-
 import Classes.Bookables.IBookablesAccess;
-
 import Classes.Bookings.Booking;
 import Classes.Bookings.BookingsManager;
 import Classes.Bookings.BookingsPackage;
-
 import Classes.Customers.ICustomers;
-
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToBookingMapImpl;
 import Classes.Guests.IGuests;
-
 import Classes.Stays.IStays;
-
 import java.lang.reflect.InvocationTargetException;
-
-import java.util.Collection;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -56,14 +48,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements BookingsManager {
 	/**
-	 * The cached value of the '{@link #getBooking() <em>Booking</em>}' reference list.
+	 * The cached value of the '{@link #getBooking() <em>Booking</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBooking()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<Booking> booking;
+	private EMap<String, Booking> booking;
 
 	/**
 	 * The cached value of the '{@link #getIBookableAccess() <em>IBookable Access</em>}' reference.
@@ -147,11 +139,11 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Booking> getBooking() {
+	public EMap<String, Booking> getBooking() {
 		if (booking == null) {
-			booking = new EObjectResolvingEList<Booking>(Booking.class, this, BookingsPackage.BOOKINGS_MANAGER__BOOKING);
+			booking = new EcoreEMap<String,Booking>(ECoreMapEntriesPackage.Literals.STRING_TO_BOOKING_MAP, StringToBookingMapImpl.class, this, BookingsPackage.BOOKINGS_MANAGER__BOOKING);
 		}
 		return booking;
 	}
@@ -618,13 +610,28 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BookingsPackage.BOOKINGS_MANAGER__BOOKING:
+				return ((InternalEList<?>)getBooking()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case BookingsPackage.BOOKINGS_MANAGER__BOOKING:
-				return getBooking();
+				if (coreType) return getBooking();
+				else return getBooking().map();
 			case BookingsPackage.BOOKINGS_MANAGER__IBOOKABLE_ACCESS:
 				if (resolve) return getIBookableAccess();
 				return basicGetIBookableAccess();
@@ -650,15 +657,14 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BookingsPackage.BOOKINGS_MANAGER__BOOKING:
-				getBooking().clear();
-				getBooking().addAll((Collection<? extends Booking>)newValue);
+				((EStructuralFeature.Setting)getBooking()).set(newValue);
 				return;
 			case BookingsPackage.BOOKINGS_MANAGER__IBOOKABLE_ACCESS:
 				setIBookableAccess((IBookablesAccess)newValue);
@@ -685,7 +691,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
@@ -718,7 +724,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {

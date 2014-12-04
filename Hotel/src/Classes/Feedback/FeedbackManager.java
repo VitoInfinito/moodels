@@ -2,7 +2,7 @@
  */
 package Classes.Feedback;
 
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,23 +18,24 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see Classes.Feedback.FeedbackPackage#getFeedbackManager()
  * @model
- * @generated
+ * @generated NOT
  */
 public interface FeedbackManager extends IFeedback {
 	/**
-	 * Returns the value of the '<em><b>Feedback</b></em>' reference list.
-	 * The list contents are of type {@link Classes.Feedback.Feedback}.
+	 * Returns the value of the '<em><b>Feedback</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link Classes.Feedback.Feedback},
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Feedback</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Feedback</em>' reference list.
+	 * @return the value of the '<em>Feedback</em>' map.
 	 * @see Classes.Feedback.FeedbackPackage#getFeedbackManager_Feedback()
-	 * @model ordered="false"
+	 * @model mapType="Classes.ECoreMapEntries.StringToFeedbackMap<org.eclipse.uml2.types.String, Classes.Feedback.Feedback>" ordered="false"
 	 * @generated
 	 */
-	EList<Feedback> getFeedback();
+	EMap<String, Feedback> getFeedback();
 
 } // FeedbackManager

@@ -215,7 +215,7 @@ public interface AccountsPackage extends EPackage {
 	int ACCOUNTS_MANAGER = 1;
 
 	/**
-	 * The feature id for the '<em><b>Account</b></em>' reference list.
+	 * The feature id for the '<em><b>Account</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -433,10 +433,10 @@ public interface AccountsPackage extends EPackage {
 	EClass getAccountsManager();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Classes.Accounts.AccountsManager#getAccount <em>Account</em>}'.
+	 * Returns the meta object for the map '{@link Classes.Accounts.AccountsManager#getAccount <em>Account</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Account</em>'.
+	 * @return the meta object for the map '<em>Account</em>'.
 	 * @see Classes.Accounts.AccountsManager#getAccount()
 	 * @see #getAccountsManager()
 	 * @generated
@@ -631,7 +631,7 @@ public interface AccountsPackage extends EPackage {
 		EClass ACCOUNTS_MANAGER = eINSTANCE.getAccountsManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Account</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Account</b></em>' map feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

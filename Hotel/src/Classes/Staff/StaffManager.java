@@ -3,8 +3,7 @@
 package Classes.Staff;
 
 import Classes.Statistics.IStatisticsGenerator;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,24 +20,25 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see Classes.Staff.StaffPackage#getStaffManager()
  * @model
- * @generated
+ * @generated NOT
  */
 public interface StaffManager extends IStaff {
 	/**
-	 * Returns the value of the '<em><b>Staff</b></em>' reference list.
-	 * The list contents are of type {@link Classes.Staff.Staff}.
+	 * Returns the value of the '<em><b>Staff</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link Classes.Staff.Staff},
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Staff</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Staff</em>' reference list.
+	 * @return the value of the '<em>Staff</em>' map.
 	 * @see Classes.Staff.StaffPackage#getStaffManager_Staff()
-	 * @model ordered="false"
+	 * @model mapType="Classes.ECoreMapEntries.StringToStaffMap<org.eclipse.uml2.types.String, Classes.Staff.Staff>" ordered="false"
 	 * @generated
 	 */
-	EList<Staff> getStaff();
+	EMap<String, Staff> getStaff();
 
 	/**
 	 * Returns the value of the '<em><b>IStatistics Generator</b></em>' reference.

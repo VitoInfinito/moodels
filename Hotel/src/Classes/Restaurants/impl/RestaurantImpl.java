@@ -2,27 +2,26 @@
  */
 package Classes.Restaurants.impl;
 
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToReservationMapImpl;
+import Classes.ECoreMapEntries.impl.StringToRestaurantTableMapImpl;
 import Classes.Restaurants.Reservation;
 import Classes.Restaurants.Restaurant;
 import Classes.Restaurants.RestaurantMenu;
 import Classes.Restaurants.RestaurantTable;
 import Classes.Restaurants.RestaurantsPackage;
-
 import java.lang.reflect.InvocationTargetException;
-
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,24 +61,24 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getReservation() <em>Reservation</em>}' reference list.
+	 * The cached value of the '{@link #getReservation() <em>Reservation</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getReservation()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<Reservation> reservation;
+	private EMap<String, Reservation> reservation;
 
 	/**
-	 * The cached value of the '{@link #getRestaurantTable() <em>Restaurant Table</em>}' reference list.
+	 * The cached value of the '{@link #getRestaurantTable() <em>Restaurant Table</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRestaurantTable()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<RestaurantTable> restaurantTable;
+	private EMap<String, RestaurantTable> restaurantTable;
 
 	/**
 	 * The cached value of the '{@link #getMenu() <em>Menu</em>}' reference.
@@ -134,11 +133,11 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Reservation> getReservation() {
+	public EMap<String, Reservation> getReservation() {
 		if (reservation == null) {
-			reservation = new EObjectResolvingEList<Reservation>(Reservation.class, this, RestaurantsPackage.RESTAURANT__RESERVATION);
+			reservation = new EcoreEMap<String,Reservation>(ECoreMapEntriesPackage.Literals.STRING_TO_RESERVATION_MAP, StringToReservationMapImpl.class, this, RestaurantsPackage.RESTAURANT__RESERVATION);
 		}
 		return reservation;
 	}
@@ -146,11 +145,11 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<RestaurantTable> getRestaurantTable() {
+	public EMap<String, RestaurantTable> getRestaurantTable() {
 		if (restaurantTable == null) {
-			restaurantTable = new EObjectResolvingEList<RestaurantTable>(RestaurantTable.class, this, RestaurantsPackage.RESTAURANT__RESTAURANT_TABLE);
+			restaurantTable = new EcoreEMap<String,RestaurantTable>(ECoreMapEntriesPackage.Literals.STRING_TO_RESTAURANT_TABLE_MAP, StringToRestaurantTableMapImpl.class, this, RestaurantsPackage.RESTAURANT__RESTAURANT_TABLE);
 		}
 		return restaurantTable;
 	}
@@ -207,7 +206,23 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case RestaurantsPackage.RESTAURANT__RESERVATION:
+				return ((InternalEList<?>)getReservation()).basicRemove(otherEnd, msgs);
+			case RestaurantsPackage.RESTAURANT__RESTAURANT_TABLE:
+				return ((InternalEList<?>)getRestaurantTable()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
@@ -215,9 +230,11 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 			case RestaurantsPackage.RESTAURANT__NAME:
 				return getName();
 			case RestaurantsPackage.RESTAURANT__RESERVATION:
-				return getReservation();
+				if (coreType) return getReservation();
+				else return getReservation().map();
 			case RestaurantsPackage.RESTAURANT__RESTAURANT_TABLE:
-				return getRestaurantTable();
+				if (coreType) return getRestaurantTable();
+				else return getRestaurantTable().map();
 			case RestaurantsPackage.RESTAURANT__MENU:
 				if (resolve) return getMenu();
 				return basicGetMenu();
@@ -228,7 +245,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
@@ -238,12 +255,10 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 				setName((String)newValue);
 				return;
 			case RestaurantsPackage.RESTAURANT__RESERVATION:
-				getReservation().clear();
-				getReservation().addAll((Collection<? extends Reservation>)newValue);
+				((EStructuralFeature.Setting)getReservation()).set(newValue);
 				return;
 			case RestaurantsPackage.RESTAURANT__RESTAURANT_TABLE:
-				getRestaurantTable().clear();
-				getRestaurantTable().addAll((Collection<? extends RestaurantTable>)newValue);
+				((EStructuralFeature.Setting)getRestaurantTable()).set(newValue);
 				return;
 			case RestaurantsPackage.RESTAURANT__MENU:
 				setMenu((RestaurantMenu)newValue);
@@ -255,7 +270,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
@@ -279,7 +294,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {

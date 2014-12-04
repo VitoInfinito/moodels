@@ -3,8 +3,7 @@
 package Classes.Guests;
 
 import Classes.Accounts.IManageAccounts;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,24 +20,25 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see Classes.Guests.GuestsPackage#getGuestsManager()
  * @model
- * @generated
+ * @generated NOT
  */
 public interface GuestsManager extends IGuests {
 	/**
-	 * Returns the value of the '<em><b>Guest</b></em>' reference list.
-	 * The list contents are of type {@link Classes.Guests.Guest}.
+	 * Returns the value of the '<em><b>Guest</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link Classes.Guests.Guest},
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Guest</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Guest</em>' reference list.
+	 * @return the value of the '<em>Guest</em>' map.
 	 * @see Classes.Guests.GuestsPackage#getGuestsManager_Guest()
-	 * @model ordered="false"
+	 * @model mapType="Classes.ECoreMapEntries.StringToGuestMap<org.eclipse.uml2.types.String, Classes.Guests.Guest>" ordered="false"
 	 * @generated
 	 */
-	EList<Guest> getGuest();
+	EMap<String, Guest> getGuest();
 
 	/**
 	 * Returns the value of the '<em><b>IManage Accounts</b></em>' reference.

@@ -2,18 +2,22 @@
  */
 package Classes.Inventory.impl;
 
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToItemTypeMapImpl;
 import Classes.InvalidIDException;
 import Classes.Inventory.Inventory;
 import Classes.Inventory.InventoryPackage;
 import Classes.Inventory.ItemType;
-
 import java.lang.reflect.InvocationTargetException;
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,14 +38,14 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	private final Logger logger = LoggerFactory.getLogger(ItemTypeImpl.class);
 	
 	/**
-	 * The cached value of the '{@link #getItemType() <em>Item Type</em>}' reference list.
+	 * The cached value of the '{@link #getItemType() <em>Item Type</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getItemType()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<ItemType> itemType;
+	private EMap<String, ItemType> itemType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,9 +82,9 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ItemType> getItemType() {
+	public EMap<String, ItemType> getItemType() {
 		if (itemType == null) {
-			itemType = new EObjectResolvingEList<ItemType>(ItemType.class, this, InventoryPackage.INVENTORY__ITEM_TYPE);
+			itemType = new EcoreEMap<String,ItemType>(ECoreMapEntriesPackage.Literals.STRING_TO_ITEM_TYPE_MAP, StringToItemTypeMapImpl.class, this, InventoryPackage.INVENTORY__ITEM_TYPE);
 		}
 		return itemType;
 	}
@@ -207,13 +211,28 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case InventoryPackage.INVENTORY__ITEM_TYPE:
+				return ((InternalEList<?>)getItemType()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case InventoryPackage.INVENTORY__ITEM_TYPE:
-				return getItemType();
+				if (coreType) return getItemType();
+				else return getItemType().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -221,15 +240,14 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case InventoryPackage.INVENTORY__ITEM_TYPE:
-				getItemType().clear();
-				getItemType().addAll((Collection<? extends ItemType>)newValue);
+				((EStructuralFeature.Setting)getItemType()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -238,7 +256,7 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
@@ -253,7 +271,7 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {

@@ -611,7 +611,7 @@ public interface ServicesPackage extends EPackage {
 	int SERVICE_MANAGER = 2;
 
 	/**
-	 * The feature id for the '<em><b>Service</b></em>' reference list.
+	 * The feature id for the '<em><b>Service</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -620,7 +620,7 @@ public interface ServicesPackage extends EPackage {
 	int SERVICE_MANAGER__SERVICE = ISERVICES_MANAGE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Room Service Order</b></em>' reference list.
+	 * The feature id for the '<em><b>Room Service Order</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1363,10 +1363,10 @@ public interface ServicesPackage extends EPackage {
 	EClass getServiceManager();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Classes.Services.ServiceManager#getService <em>Service</em>}'.
+	 * Returns the meta object for the map '{@link Classes.Services.ServiceManager#getService <em>Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Service</em>'.
+	 * @return the meta object for the map '<em>Service</em>'.
 	 * @see Classes.Services.ServiceManager#getService()
 	 * @see #getServiceManager()
 	 * @generated
@@ -1374,10 +1374,10 @@ public interface ServicesPackage extends EPackage {
 	EReference getServiceManager_Service();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Classes.Services.ServiceManager#getRoomServiceOrder <em>Room Service Order</em>}'.
+	 * Returns the meta object for the map '{@link Classes.Services.ServiceManager#getRoomServiceOrder <em>Room Service Order</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Room Service Order</em>'.
+	 * @return the meta object for the map '<em>Room Service Order</em>'.
 	 * @see Classes.Services.ServiceManager#getRoomServiceOrder()
 	 * @see #getServiceManager()
 	 * @generated
@@ -1902,7 +1902,7 @@ public interface ServicesPackage extends EPackage {
 		EClass SERVICE_MANAGER = eINSTANCE.getServiceManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Service</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Service</b></em>' map feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1910,7 +1910,7 @@ public interface ServicesPackage extends EPackage {
 		EReference SERVICE_MANAGER__SERVICE = eINSTANCE.getServiceManager_Service();
 
 		/**
-		 * The meta object literal for the '<em><b>Room Service Order</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Room Service Order</b></em>' map feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

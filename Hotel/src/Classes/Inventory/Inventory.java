@@ -2,7 +2,7 @@
  */
 package Classes.Inventory;
 
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,23 +18,24 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see Classes.Inventory.InventoryPackage#getInventory()
  * @model
- * @generated
+ * @generated NOT
  */
 public interface Inventory extends IManageInventory {
 	/**
-	 * Returns the value of the '<em><b>Item Type</b></em>' reference list.
-	 * The list contents are of type {@link Classes.Inventory.ItemType}.
+	 * Returns the value of the '<em><b>Item Type</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link Classes.Inventory.ItemType},
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Item Type</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Item Type</em>' reference list.
+	 * @return the value of the '<em>Item Type</em>' map.
 	 * @see Classes.Inventory.InventoryPackage#getInventory_ItemType()
-	 * @model ordered="false"
+	 * @model mapType="Classes.ECoreMapEntries.StringToItemTypeMap<org.eclipse.uml2.types.String, Classes.Inventory.ItemType>" ordered="false"
 	 * @generated
 	 */
-	EList<ItemType> getItemType();
+	EMap<String, ItemType> getItemType();
 
 } // Inventory

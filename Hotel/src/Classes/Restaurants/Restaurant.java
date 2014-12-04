@@ -2,8 +2,7 @@
  */
 package Classes.Restaurants;
 
-import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see Classes.Restaurants.RestaurantsPackage#getRestaurant()
  * @model
- * @generated
+ * @generated NOT
  */
 public interface Restaurant extends EObject {
 	/**
@@ -53,36 +52,38 @@ public interface Restaurant extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Reservation</b></em>' reference list.
-	 * The list contents are of type {@link Classes.Restaurants.Reservation}.
+	 * Returns the value of the '<em><b>Reservation</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link Classes.Restaurants.Reservation},
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Reservation</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reservation</em>' reference list.
+	 * @return the value of the '<em>Reservation</em>' map.
 	 * @see Classes.Restaurants.RestaurantsPackage#getRestaurant_Reservation()
-	 * @model ordered="false"
+	 * @model mapType="Classes.ECoreMapEntries.StringToReservationMap<org.eclipse.uml2.types.String, Classes.Restaurants.Reservation>" ordered="false"
 	 * @generated
 	 */
-	EList<Reservation> getReservation();
+	EMap<String, Reservation> getReservation();
 
 	/**
-	 * Returns the value of the '<em><b>Restaurant Table</b></em>' reference list.
-	 * The list contents are of type {@link Classes.Restaurants.RestaurantTable}.
+	 * Returns the value of the '<em><b>Restaurant Table</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link Classes.Restaurants.RestaurantTable},
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Restaurant Table</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Restaurant Table</em>' reference list.
+	 * @return the value of the '<em>Restaurant Table</em>' map.
 	 * @see Classes.Restaurants.RestaurantsPackage#getRestaurant_RestaurantTable()
-	 * @model ordered="false"
+	 * @model mapType="Classes.ECoreMapEntries.StringToRestaurantTableMap<org.eclipse.uml2.types.String, Classes.Restaurants.RestaurantTable>" ordered="false"
 	 * @generated
 	 */
-	EList<RestaurantTable> getRestaurantTable();
+	EMap<String, RestaurantTable> getRestaurantTable();
 
 	/**
 	 * Returns the value of the '<em><b>Menu</b></em>' reference.

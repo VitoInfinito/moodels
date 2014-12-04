@@ -6,18 +6,18 @@ import Classes.Accounts.Account;
 import Classes.Accounts.AccountsManager;
 import Classes.Accounts.AccountsPackage;
 import Classes.Accounts.IAccountsAccess;
-
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToAccountMapImpl;
 import java.lang.reflect.InvocationTargetException;
-
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
-
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,14 +34,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements AccountsManager {
 	/**
-	 * The cached value of the '{@link #getAccount() <em>Account</em>}' reference list.
+	 * The cached value of the '{@link #getAccount() <em>Account</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAccount()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<Account> account;
+	private EMap<String, Account> account;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -65,11 +65,11 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Account> getAccount() {
+	public EMap<String, Account> getAccount() {
 		if (account == null) {
-			account = new EObjectResolvingEList<Account>(Account.class, this, AccountsPackage.ACCOUNTS_MANAGER__ACCOUNT);
+			account = new EcoreEMap<String,Account>(ECoreMapEntriesPackage.Literals.STRING_TO_ACCOUNT_MAP, StringToAccountMapImpl.class, this, AccountsPackage.ACCOUNTS_MANAGER__ACCOUNT);
 		}
 		return account;
 	}
@@ -176,13 +176,28 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case AccountsPackage.ACCOUNTS_MANAGER__ACCOUNT:
+				return ((InternalEList<?>)getAccount()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case AccountsPackage.ACCOUNTS_MANAGER__ACCOUNT:
-				return getAccount();
+				if (coreType) return getAccount();
+				else return getAccount().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -190,15 +205,14 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case AccountsPackage.ACCOUNTS_MANAGER__ACCOUNT:
-				getAccount().clear();
-				getAccount().addAll((Collection<? extends Account>)newValue);
+				((EStructuralFeature.Setting)getAccount()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -207,7 +221,7 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
@@ -222,7 +236,7 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {

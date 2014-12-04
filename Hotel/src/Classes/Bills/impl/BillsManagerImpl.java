@@ -3,26 +3,23 @@
 package Classes.Bills.impl;
 
 import Classes.Banking.CustomerProvides;
-
 import Classes.Bills.Bill;
 import Classes.Bills.BillsManager;
 import Classes.Bills.BillsPackage;
-
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToBillMapImpl;
 import java.lang.reflect.InvocationTargetException;
-
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,14 +37,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class BillsManagerImpl extends MinimalEObjectImpl.Container implements BillsManager {
 	/**
-	 * The cached value of the '{@link #getBill() <em>Bill</em>}' reference list.
+	 * The cached value of the '{@link #getBill() <em>Bill</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBill()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<Bill> bill;
+	private EMap<String, Bill> bill;
 
 	/**
 	 * The cached value of the '{@link #getCustomerProvides() <em>Customer Provides</em>}' reference.
@@ -81,11 +78,11 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Bill> getBill() {
+	public EMap<String, Bill> getBill() {
 		if (bill == null) {
-			bill = new EObjectResolvingEList<Bill>(Bill.class, this, BillsPackage.BILLS_MANAGER__BILL);
+			bill = new EcoreEMap<String,Bill>(ECoreMapEntriesPackage.Literals.STRING_TO_BILL_MAP, StringToBillMapImpl.class, this, BillsPackage.BILLS_MANAGER__BILL);
 		}
 		return bill;
 	}
@@ -307,13 +304,28 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BillsPackage.BILLS_MANAGER__BILL:
+				return ((InternalEList<?>)getBill()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case BillsPackage.BILLS_MANAGER__BILL:
-				return getBill();
+				if (coreType) return getBill();
+				else return getBill().map();
 			case BillsPackage.BILLS_MANAGER__CUSTOMER_PROVIDES:
 				if (resolve) return getCustomerProvides();
 				return basicGetCustomerProvides();
@@ -324,15 +336,14 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BillsPackage.BILLS_MANAGER__BILL:
-				getBill().clear();
-				getBill().addAll((Collection<? extends Bill>)newValue);
+				((EStructuralFeature.Setting)getBill()).set(newValue);
 				return;
 			case BillsPackage.BILLS_MANAGER__CUSTOMER_PROVIDES:
 				setCustomerProvides((CustomerProvides)newValue);
@@ -344,7 +355,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
@@ -362,7 +373,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {

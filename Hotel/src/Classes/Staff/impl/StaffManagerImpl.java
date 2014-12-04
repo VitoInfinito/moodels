@@ -2,27 +2,24 @@
  */
 package Classes.Staff.impl;
 
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToStaffMapImpl;
 import Classes.Staff.Staff;
 import Classes.Staff.StaffManager;
 import Classes.Staff.StaffPackage;
-
 import Classes.Statistics.IStatisticsGenerator;
-
 import java.lang.reflect.InvocationTargetException;
-
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,14 +37,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class StaffManagerImpl extends MinimalEObjectImpl.Container implements StaffManager {
 	/**
-	 * The cached value of the '{@link #getStaff() <em>Staff</em>}' reference list.
+	 * The cached value of the '{@link #getStaff() <em>Staff</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getStaff()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<Staff> staff;
+	private EMap<String, Staff> staff;
 
 	/**
 	 * The cached value of the '{@link #getIStatisticsGenerator() <em>IStatistics Generator</em>}' reference.
@@ -81,11 +78,11 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Staff> getStaff() {
+	public EMap<String, Staff> getStaff() {
 		if (staff == null) {
-			staff = new EObjectResolvingEList<Staff>(Staff.class, this, StaffPackage.STAFF_MANAGER__STAFF);
+			staff = new EcoreEMap<String,Staff>(ECoreMapEntriesPackage.Literals.STRING_TO_STAFF_MAP, StringToStaffMapImpl.class, this, StaffPackage.STAFF_MANAGER__STAFF);
 		}
 		return staff;
 	}
@@ -296,13 +293,28 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case StaffPackage.STAFF_MANAGER__STAFF:
+				return ((InternalEList<?>)getStaff()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case StaffPackage.STAFF_MANAGER__STAFF:
-				return getStaff();
+				if (coreType) return getStaff();
+				else return getStaff().map();
 			case StaffPackage.STAFF_MANAGER__ISTATISTICS_GENERATOR:
 				if (resolve) return getIStatisticsGenerator();
 				return basicGetIStatisticsGenerator();
@@ -313,15 +325,14 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case StaffPackage.STAFF_MANAGER__STAFF:
-				getStaff().clear();
-				getStaff().addAll((Collection<? extends Staff>)newValue);
+				((EStructuralFeature.Setting)getStaff()).set(newValue);
 				return;
 			case StaffPackage.STAFF_MANAGER__ISTATISTICS_GENERATOR:
 				setIStatisticsGenerator((IStatisticsGenerator)newValue);
@@ -333,7 +344,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
@@ -351,7 +362,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {

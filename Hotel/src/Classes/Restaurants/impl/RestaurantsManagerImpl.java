@@ -2,21 +2,21 @@
  */
 package Classes.Restaurants.impl;
 
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToRestaurantMapImpl;
 import Classes.Restaurants.Restaurant;
 import Classes.Restaurants.RestaurantsManager;
 import Classes.Restaurants.RestaurantsPackage;
-
 import java.lang.reflect.InvocationTargetException;
-
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
-
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,18 +29,18 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </ul>
  * </p>
  *
- * @generated
+ * @generated NOT
  */
 public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container implements RestaurantsManager {
 	/**
-	 * The cached value of the '{@link #getRestaurant() <em>Restaurant</em>}' reference list.
+	 * The cached value of the '{@link #getRestaurant() <em>Restaurant</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRestaurant()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<Restaurant> restaurant;
+	private EMap<String, Restaurant> restaurant;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -64,11 +64,11 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Restaurant> getRestaurant() {
+	public EMap<String, Restaurant> getRestaurant() {
 		if (restaurant == null) {
-			restaurant = new EObjectResolvingEList<Restaurant>(Restaurant.class, this, RestaurantsPackage.RESTAURANTS_MANAGER__RESTAURANT);
+			restaurant = new EcoreEMap<String,Restaurant>(ECoreMapEntriesPackage.Literals.STRING_TO_RESTAURANT_MAP, StringToRestaurantMapImpl.class, this, RestaurantsPackage.RESTAURANTS_MANAGER__RESTAURANT);
 		}
 		return restaurant;
 	}
@@ -351,13 +351,28 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case RestaurantsPackage.RESTAURANTS_MANAGER__RESTAURANT:
+				return ((InternalEList<?>)getRestaurant()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case RestaurantsPackage.RESTAURANTS_MANAGER__RESTAURANT:
-				return getRestaurant();
+				if (coreType) return getRestaurant();
+				else return getRestaurant().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -365,15 +380,14 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case RestaurantsPackage.RESTAURANTS_MANAGER__RESTAURANT:
-				getRestaurant().clear();
-				getRestaurant().addAll((Collection<? extends Restaurant>)newValue);
+				((EStructuralFeature.Setting)getRestaurant()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -382,7 +396,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
@@ -397,7 +411,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {

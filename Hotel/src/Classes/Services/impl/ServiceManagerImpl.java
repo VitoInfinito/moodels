@@ -2,27 +2,26 @@
  */
 package Classes.Services.impl;
 
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToRoomServiceOrderMapImpl;
+import Classes.ECoreMapEntries.impl.StringToServiceMapImpl;
 import Classes.Services.RoomServiceMenu;
 import Classes.Services.RoomServiceOrder;
 import Classes.Services.Service;
 import Classes.Services.ServiceManager;
 import Classes.Services.ServicesPackage;
-
 import java.lang.reflect.InvocationTargetException;
-
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,28 +36,28 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </ul>
  * </p>
  *
- * @generated
+ * @generated NOT
  */
 public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements ServiceManager {
 	/**
-	 * The cached value of the '{@link #getService() <em>Service</em>}' reference list.
+	 * The cached value of the '{@link #getService() <em>Service</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getService()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<Service> service;
+	private EMap<String, Service> service;
 
 	/**
-	 * The cached value of the '{@link #getRoomServiceOrder() <em>Room Service Order</em>}' reference list.
+	 * The cached value of the '{@link #getRoomServiceOrder() <em>Room Service Order</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRoomServiceOrder()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<RoomServiceOrder> roomServiceOrder;
+	private EMap<String, RoomServiceOrder> roomServiceOrder;
 
 	/**
 	 * The cached value of the '{@link #getRoomServiceMenu() <em>Room Service Menu</em>}' reference.
@@ -92,11 +91,11 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Service> getService() {
+	public EMap<String, Service> getService() {
 		if (service == null) {
-			service = new EObjectResolvingEList<Service>(Service.class, this, ServicesPackage.SERVICE_MANAGER__SERVICE);
+			service = new EcoreEMap<String,Service>(ECoreMapEntriesPackage.Literals.STRING_TO_SERVICE_MAP, StringToServiceMapImpl.class, this, ServicesPackage.SERVICE_MANAGER__SERVICE);
 		}
 		return service;
 	}
@@ -104,11 +103,11 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<RoomServiceOrder> getRoomServiceOrder() {
+	public EMap<String, RoomServiceOrder> getRoomServiceOrder() {
 		if (roomServiceOrder == null) {
-			roomServiceOrder = new EObjectResolvingEList<RoomServiceOrder>(RoomServiceOrder.class, this, ServicesPackage.SERVICE_MANAGER__ROOM_SERVICE_ORDER);
+			roomServiceOrder = new EcoreEMap<String,RoomServiceOrder>(ECoreMapEntriesPackage.Literals.STRING_TO_ROOM_SERVICE_ORDER_MAP, StringToRoomServiceOrderMapImpl.class, this, ServicesPackage.SERVICE_MANAGER__ROOM_SERVICE_ORDER);
 		}
 		return roomServiceOrder;
 	}
@@ -451,15 +450,33 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ServicesPackage.SERVICE_MANAGER__SERVICE:
+				return ((InternalEList<?>)getService()).basicRemove(otherEnd, msgs);
+			case ServicesPackage.SERVICE_MANAGER__ROOM_SERVICE_ORDER:
+				return ((InternalEList<?>)getRoomServiceOrder()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ServicesPackage.SERVICE_MANAGER__SERVICE:
-				return getService();
+				if (coreType) return getService();
+				else return getService().map();
 			case ServicesPackage.SERVICE_MANAGER__ROOM_SERVICE_ORDER:
-				return getRoomServiceOrder();
+				if (coreType) return getRoomServiceOrder();
+				else return getRoomServiceOrder().map();
 			case ServicesPackage.SERVICE_MANAGER__ROOM_SERVICE_MENU:
 				if (resolve) return getRoomServiceMenu();
 				return basicGetRoomServiceMenu();
@@ -470,19 +487,17 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ServicesPackage.SERVICE_MANAGER__SERVICE:
-				getService().clear();
-				getService().addAll((Collection<? extends Service>)newValue);
+				((EStructuralFeature.Setting)getService()).set(newValue);
 				return;
 			case ServicesPackage.SERVICE_MANAGER__ROOM_SERVICE_ORDER:
-				getRoomServiceOrder().clear();
-				getRoomServiceOrder().addAll((Collection<? extends RoomServiceOrder>)newValue);
+				((EStructuralFeature.Setting)getRoomServiceOrder()).set(newValue);
 				return;
 			case ServicesPackage.SERVICE_MANAGER__ROOM_SERVICE_MENU:
 				setRoomServiceMenu((RoomServiceMenu)newValue);
@@ -494,7 +509,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
@@ -515,7 +530,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {

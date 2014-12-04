@@ -294,7 +294,7 @@ public interface GuestsPackage extends EPackage {
 	int GUESTS_MANAGER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Guest</b></em>' reference list.
+	 * The feature id for the '<em><b>Guest</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -684,10 +684,10 @@ public interface GuestsPackage extends EPackage {
 	EClass getGuestsManager();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Classes.Guests.GuestsManager#getGuest <em>Guest</em>}'.
+	 * Returns the meta object for the map '{@link Classes.Guests.GuestsManager#getGuest <em>Guest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Guest</em>'.
+	 * @return the meta object for the map '<em>Guest</em>'.
 	 * @see Classes.Guests.GuestsManager#getGuest()
 	 * @see #getGuestsManager()
 	 * @generated
@@ -1118,7 +1118,7 @@ public interface GuestsPackage extends EPackage {
 		EClass GUESTS_MANAGER = eINSTANCE.getGuestsManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Guest</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Guest</b></em>' map feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
