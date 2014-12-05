@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
@@ -20,13 +21,13 @@ public class Main extends Application {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Hotel Management");
 
-        initRootLayout();
+        initLoginLayout();
     }
 
     /**
      * Initializes the root layout.
      */
-    public void initRootLayout() {
+    public void initLoginLayout() {
         try {
             // Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
@@ -35,8 +36,11 @@ public class Main extends Application {
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(loginLayout);
+            primaryStage.initStyle(StageStyle.UNDECORATED);
             primaryStage.setScene(scene);
             primaryStage.show();
+            primaryStage.setResizable(false);
+            primaryStage.centerOnScreen();
         } catch (IOException e) {
             e.printStackTrace();
         }
