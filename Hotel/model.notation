@@ -3222,7 +3222,7 @@
       <owner xmi:type="uml:Package" href="model.uml#_wPpmUHT2EeSTN6KBMiF9rQ"/>
     </styles>
     <element xmi:type="uml:Package" href="model.uml#_wPpmUHT2EeSTN6KBMiF9rQ"/>
-    <edges xmi:type="notation:Connector" xmi:id="_63WrMHT-EeSTN6KBMiF9rQ" type="4001" source="_4ux1IHT-EeSTN6KBMiF9rQ" target="_4usVkHT-EeSTN6KBMiF9rQ">
+    <edges xmi:type="notation:Connector" xmi:id="_63WrMHT-EeSTN6KBMiF9rQ" type="4001" source="_4ux1IHT-EeSTN6KBMiF9rQ" target="_4u7mIHT-EeSTN6KBMiF9rQ">
       <children xmi:type="notation:DecorationNode" xmi:id="_63XSQHT-EeSTN6KBMiF9rQ" type="6001">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_63XSQXT-EeSTN6KBMiF9rQ" y="-20"/>
       </children>
@@ -3245,7 +3245,7 @@
       <element xmi:type="uml:Association" href="model.uml#_rnLBUHTgEeSTN6KBMiF9rQ"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_63WrMnT-EeSTN6KBMiF9rQ" points="[-50, -50, -35, -35]$[35, 35, 50, 50]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7pB_wXT-EeSTN6KBMiF9rQ" id="(0.0,0.58)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7pB_wnT-EeSTN6KBMiF9rQ" id="(1.0,0.5)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7pB_wnT-EeSTN6KBMiF9rQ" id="(0.5804195804195804,0.16806722689075632)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_63dY4HT-EeSTN6KBMiF9rQ" type="4001" source="_4u7mIHT-EeSTN6KBMiF9rQ" target="_4vAeoHT-EeSTN6KBMiF9rQ">
       <children xmi:type="notation:DecorationNode" xmi:id="_63d_8HT-EeSTN6KBMiF9rQ" type="6001">

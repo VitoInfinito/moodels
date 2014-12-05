@@ -28,7 +28,24 @@
         <details key="originalName" value="Hostel Bed"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="room" ordered="false"
-          lowerBound="1" eType="#//Bookables/Room"/>
+          lowerBound="1" eType="#//Bookables/HotelRoom"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="HotelRoom" eSuperTypes="#//Bookables/Room">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="Hotel Room"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" ordered="false"
+          lowerBound="1" eType="#//Bookables/HotelRoomCategory"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbrBeds" ordered="false"
+          lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="HotelRoomCategory">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="Hotel Room Category"/>
+      </eAnnotations>
+      <eLiterals name="StandardRoom"/>
+      <eLiterals name="FamilyRoom" value="1"/>
+      <eLiterals name="Suite" value="2"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ConferenceRoom" eSuperTypes="#//Bookables/Room">
       <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -47,23 +64,6 @@
       <eLiterals name="LectureRoom" value="1"/>
       <eLiterals name="MeetingRoom" value="2"/>
       <eLiterals name="Other" value="3"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="HotelRoom" eSuperTypes="#//Bookables/Room">
-      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <details key="originalName" value="Hotel Room"/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" ordered="false"
-          lowerBound="1" eType="#//Bookables/HotelRoomCategory"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbrBeds" ordered="false"
-          lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EEnum" name="HotelRoomCategory">
-      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <details key="originalName" value="Hotel Room Category"/>
-      </eAnnotations>
-      <eLiterals name="StandardRoom"/>
-      <eLiterals name="FamilyRoom" value="1"/>
-      <eLiterals name="Suite" value="2"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IBookablesManage" abstract="true"
         interface="true" eSuperTypes="#//Bookables/IBookablesAccess">
@@ -96,6 +96,7 @@
         <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="addHotelRoom" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="basePrice" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
         <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="floor" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
@@ -104,11 +105,13 @@
         <eParameters name="nbrBeds" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="addHostelBed" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="bedNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="basePrice" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
         <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="addConferenceRoom" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="basePrice" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
         <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="floor" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>

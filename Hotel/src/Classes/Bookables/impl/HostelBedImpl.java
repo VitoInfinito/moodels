@@ -4,7 +4,7 @@ package Classes.Bookables.impl;
 
 import Classes.Bookables.BookablesPackage;
 import Classes.Bookables.HostelBed;
-import Classes.Bookables.Room;
+import Classes.Bookables.HotelRoom;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -32,7 +32,7 @@ public class HostelBedImpl extends BookableImpl implements HostelBed {
 	 * @generated
 	 * @ordered
 	 */
-	protected Room room;
+	protected HotelRoom room;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -58,10 +58,10 @@ public class HostelBedImpl extends BookableImpl implements HostelBed {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Room getRoom() {
+	public HotelRoom getRoom() {
 		if (room != null && room.eIsProxy()) {
 			InternalEObject oldRoom = (InternalEObject)room;
-			room = (Room)eResolveProxy(oldRoom);
+			room = (HotelRoom)eResolveProxy(oldRoom);
 			if (room != oldRoom) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookablesPackage.HOSTEL_BED__ROOM, oldRoom, room));
@@ -75,7 +75,7 @@ public class HostelBedImpl extends BookableImpl implements HostelBed {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Room basicGetRoom() {
+	public HotelRoom basicGetRoom() {
 		return room;
 	}
 
@@ -84,8 +84,8 @@ public class HostelBedImpl extends BookableImpl implements HostelBed {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRoom(Room newRoom) {
-		Room oldRoom = room;
+	public void setRoom(HotelRoom newRoom) {
+		HotelRoom oldRoom = room;
 		room = newRoom;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BookablesPackage.HOSTEL_BED__ROOM, oldRoom, room));
@@ -115,7 +115,7 @@ public class HostelBedImpl extends BookableImpl implements HostelBed {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BookablesPackage.HOSTEL_BED__ROOM:
-				setRoom((Room)newValue);
+				setRoom((HotelRoom)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -130,7 +130,7 @@ public class HostelBedImpl extends BookableImpl implements HostelBed {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case BookablesPackage.HOSTEL_BED__ROOM:
-				setRoom((Room)null);
+				setRoom((HotelRoom)null);
 				return;
 		}
 		super.eUnset(featureID);

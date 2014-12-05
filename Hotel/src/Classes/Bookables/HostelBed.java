@@ -29,12 +29,12 @@ public interface HostelBed extends Bookable {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Room</em>' reference.
-	 * @see #setRoom(Room)
+	 * @see #setRoom(HotelRoom)
 	 * @see Classes.Bookables.BookablesPackage#getHostelBed_Room()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Room getRoom();
+	HotelRoom getRoom();
 
 	/**
 	 * Sets the value of the '{@link Classes.Bookables.HostelBed#getRoom <em>Room</em>}' reference.
@@ -44,6 +44,6 @@ public interface HostelBed extends Bookable {
 	 * @see #getRoom()
 	 * @generated
 	 */
-	void setRoom(Room value);
+	void setRoom(HotelRoom value);
 
 } // HostelBed

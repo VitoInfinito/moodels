@@ -23,7 +23,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9LbhXpsEeST-65JbGUt8g" name="Hostel Bed" visibility="package">
       <generalization xmi:type="uml:Generalization" xmi:id="_w9LbhnpsEeST-65JbGUt8g" general="_w9Lbc3psEeST-65JbGUt8g"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9Lbh3psEeST-65JbGUt8g" name="room" visibility="private" type="_w9Lbf3psEeST-65JbGUt8g" association="_w9LbyXpsEeST-65JbGUt8g">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9Lbh3psEeST-65JbGUt8g" name="room" visibility="private" type="_w9LblHpsEeST-65JbGUt8g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9LbiHpsEeST-65JbGUt8g" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9LbiXpsEeST-65JbGUt8g" value="1"/>
       </ownedAttribute>
@@ -114,6 +114,9 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_cMlD0Hs8EeSNQJV-h03TNw" name="addHotelRoom">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F6kR4HwOEeSNQJV-h03TNw" name="roomNumber">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_p-nQUHs8EeSNQJV-h03TNw" name="basePrice" effect="read">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
         </ownedParameter>
@@ -135,6 +138,9 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_e7-CQHs8EeSNQJV-h03TNw" name="addHostelBed">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_L6zWAHwOEeSNQJV-h03TNw" name="bedNumber">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_qIb6sHs8EeSNQJV-h03TNw" name="basePrice" effect="read">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
         </ownedParameter>
@@ -149,6 +155,9 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_gjEi8Hs8EeSNQJV-h03TNw" name="addConferenceRoom">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_J0TjkHwOEeSNQJV-h03TNw" name="roomNumber">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_qTCBIHs8EeSNQJV-h03TNw" name="basePrice" effect="read">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
         </ownedParameter>
@@ -345,11 +354,12 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_w9LbyXpsEeST-65JbGUt8g" visibility="private" memberEnd="_w9LbynpsEeST-65JbGUt8g _w9Lbh3psEeST-65JbGUt8g">
+    <packagedElement xmi:type="uml:Association" xmi:id="_w9LbyXpsEeST-65JbGUt8g" name="hotelRoom" visibility="private" memberEnd="_w9LbynpsEeST-65JbGUt8g _0pQhIHwYEeSdJr2ued9Z6A" navigableOwnedEnd="_0pQhIHwYEeSdJr2ued9Z6A">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9LbynpsEeST-65JbGUt8g" name="bed" type="_w9LbhXpsEeST-65JbGUt8g" association="_w9LbyXpsEeST-65JbGUt8g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9Lby3psEeST-65JbGUt8g"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9LbzHpsEeST-65JbGUt8g" value="*"/>
       </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_0pQhIHwYEeSdJr2ued9Z6A" name="hotelRoom" visibility="private" type="_w9LblHpsEeST-65JbGUt8g" association="_w9LbyXpsEeST-65JbGUt8g"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9LbzXpsEeST-65JbGUt8g" visibility="private" memberEnd="_w9LbznpsEeST-65JbGUt8g _w9LblnpsEeST-65JbGUt8g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9LbznpsEeST-65JbGUt8g" name="hotel Room" type="_w9LblHpsEeST-65JbGUt8g" association="_w9LbzXpsEeST-65JbGUt8g">

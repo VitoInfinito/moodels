@@ -109,7 +109,7 @@ Customer Service representative inherits the uses of Staff</body>
           </nestedClassifier>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_ZpkMQHTgEeSTN6KBMiF9rQ" name="Hostel Bed" visibility="package">
             <generalization xmi:type="uml:Generalization" xmi:id="_cbBPIHT_EeSTN6KBMiF9rQ" general="_469BAHTfEeSTN6KBMiF9rQ"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_rnKaQHTgEeSTN6KBMiF9rQ" name="room" type="_SBkgIHTgEeSTN6KBMiF9rQ" association="_rnLBUHTgEeSTN6KBMiF9rQ">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_rnKaQHTgEeSTN6KBMiF9rQ" name="room" type="_gN_ikHTgEeSTN6KBMiF9rQ" association="_rnLBUHTgEeSTN6KBMiF9rQ">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rnKaQXTgEeSTN6KBMiF9rQ" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rnKaQnTgEeSTN6KBMiF9rQ" value="1"/>
             </ownedAttribute>

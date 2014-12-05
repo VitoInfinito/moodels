@@ -59,8 +59,8 @@ public class BookablesFactoryImpl extends EFactoryImpl implements BookablesFacto
 		switch (eClass.getClassifierID()) {
 			case BookablesPackage.ROOM_LOCATION: return createRoomLocation();
 			case BookablesPackage.HOSTEL_BED: return createHostelBed();
-			case BookablesPackage.CONFERENCE_ROOM: return createConferenceRoom();
 			case BookablesPackage.HOTEL_ROOM: return createHotelRoom();
+			case BookablesPackage.CONFERENCE_ROOM: return createConferenceRoom();
 			case BookablesPackage.BOOKABLES_MANAGER: return createBookablesManager();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -75,10 +75,10 @@ public class BookablesFactoryImpl extends EFactoryImpl implements BookablesFacto
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case BookablesPackage.CONFERENCE_ROOM_CATEGORY:
-				return createConferenceRoomCategoryFromString(eDataType, initialValue);
 			case BookablesPackage.HOTEL_ROOM_CATEGORY:
 				return createHotelRoomCategoryFromString(eDataType, initialValue);
+			case BookablesPackage.CONFERENCE_ROOM_CATEGORY:
+				return createConferenceRoomCategoryFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -92,10 +92,10 @@ public class BookablesFactoryImpl extends EFactoryImpl implements BookablesFacto
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case BookablesPackage.CONFERENCE_ROOM_CATEGORY:
-				return convertConferenceRoomCategoryToString(eDataType, instanceValue);
 			case BookablesPackage.HOTEL_ROOM_CATEGORY:
 				return convertHotelRoomCategoryToString(eDataType, instanceValue);
+			case BookablesPackage.CONFERENCE_ROOM_CATEGORY:
+				return convertConferenceRoomCategoryToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}

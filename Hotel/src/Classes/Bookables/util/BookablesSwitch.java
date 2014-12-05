@@ -92,19 +92,19 @@ public class BookablesSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BookablesPackage.CONFERENCE_ROOM: {
-				ConferenceRoom conferenceRoom = (ConferenceRoom)theEObject;
-				T result = caseConferenceRoom(conferenceRoom);
-				if (result == null) result = caseRoom(conferenceRoom);
-				if (result == null) result = caseBookable(conferenceRoom);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case BookablesPackage.HOTEL_ROOM: {
 				HotelRoom hotelRoom = (HotelRoom)theEObject;
 				T result = caseHotelRoom(hotelRoom);
 				if (result == null) result = caseRoom(hotelRoom);
 				if (result == null) result = caseBookable(hotelRoom);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BookablesPackage.CONFERENCE_ROOM: {
+				ConferenceRoom conferenceRoom = (ConferenceRoom)theEObject;
+				T result = caseConferenceRoom(conferenceRoom);
+				if (result == null) result = caseRoom(conferenceRoom);
+				if (result == null) result = caseBookable(conferenceRoom);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

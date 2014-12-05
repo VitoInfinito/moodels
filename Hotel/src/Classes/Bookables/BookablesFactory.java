@@ -53,7 +53,7 @@ public interface BookablesFactory extends EFactory {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Hotel Room</em>'.
-	 * @generated
+	 * @generated NOT
 	 */
 	HotelRoom createHotelRoom();
 

@@ -84,12 +84,12 @@ public class BookablesAdapterFactory extends AdapterFactoryImpl {
 				return createHostelBedAdapter();
 			}
 			@Override
-			public Adapter caseConferenceRoom(ConferenceRoom object) {
-				return createConferenceRoomAdapter();
-			}
-			@Override
 			public Adapter caseHotelRoom(HotelRoom object) {
 				return createHotelRoomAdapter();
+			}
+			@Override
+			public Adapter caseConferenceRoom(ConferenceRoom object) {
+				return createConferenceRoomAdapter();
 			}
 			@Override
 			public Adapter caseIBookablesManage(IBookablesManage object) {
