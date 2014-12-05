@@ -293,6 +293,15 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getBill_TotalAmount() {
+		return (EAttribute)billEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIBills() {
 		return iBillsEClass;
 	}
@@ -482,6 +491,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 		createEAttribute(billEClass, BILL__BOOKABLE);
 		createEAttribute(billEClass, BILL__ISSUE_DATE);
 		createEAttribute(billEClass, BILL__PAYMENT_DATE);
+		createEAttribute(billEClass, BILL__TOTAL_AMOUNT);
 
 		iBillsEClass = createEClass(IBILLS);
 		createEOperation(iBillsEClass, IBILLS___GET_IS_BILL_PAID);
@@ -550,6 +560,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 		initEAttribute(getBill_Bookable(), theTypesPackage.getString(), "bookable", null, 1, 1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBill_IssueDate(), ecorePackage.getEDate(), "issueDate", null, 1, 1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBill_PaymentDate(), ecorePackage.getEDate(), "paymentDate", null, 1, 1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBill_TotalAmount(), ecorePackage.getEDouble(), "totalAmount", null, 1, 1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(iBillsEClass, IBills.class, "IBills", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

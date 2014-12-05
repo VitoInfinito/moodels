@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EMap;
  *
  * @see Classes.Bookables.BookablesPackage#getBookablesManager()
  * @model
- * @generated
+ * @generated NOT
  */
 public interface BookablesManager extends IBookablesManage {
 	/**

@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Classes.Bills.Bill#getBookable <em>Bookable</em>}</li>
  *   <li>{@link Classes.Bills.Bill#getIssueDate <em>Issue Date</em>}</li>
  *   <li>{@link Classes.Bills.Bill#getPaymentDate <em>Payment Date</em>}</li>
+ *   <li>{@link Classes.Bills.Bill#getTotalAmount <em>Total Amount</em>}</li>
  * </ul>
  * </p>
  *
@@ -219,5 +220,31 @@ public interface Bill extends EObject {
 	 * @generated
 	 */
 	void setPaymentDate(Date value);
+
+	/**
+	 * Returns the value of the '<em><b>Total Amount</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Total Amount</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Total Amount</em>' attribute.
+	 * @see #setTotalAmount(double)
+	 * @see Classes.Bills.BillsPackage#getBill_TotalAmount()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	double getTotalAmount();
+
+	/**
+	 * Sets the value of the '{@link Classes.Bills.Bill#getTotalAmount <em>Total Amount</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Total Amount</em>' attribute.
+	 * @see #getTotalAmount()
+	 * @generated
+	 */
+	void setTotalAmount(double value);
 
 } // Bill

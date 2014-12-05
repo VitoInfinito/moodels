@@ -1097,6 +1097,9 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9Oe9HpsEeST-65JbGUt8g" name="paymentDate" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dZ8IkHwdEeSdJr2ued9Z6A" name="totalAmount" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9OewnpsEeST-65JbGUt8g" name="bills" visibility="private" memberEnd="_w9Oew3psEeST-65JbGUt8g _w9Oe3npsEeST-65JbGUt8g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9Oew3psEeST-65JbGUt8g" name="billsManager" type="_w9Oe3XpsEeST-65JbGUt8g" association="_w9OewnpsEeST-65JbGUt8g">

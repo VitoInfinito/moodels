@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  *   <li>{@link Classes.Bills.impl.BillImpl#getBookable <em>Bookable</em>}</li>
  *   <li>{@link Classes.Bills.impl.BillImpl#getIssueDate <em>Issue Date</em>}</li>
  *   <li>{@link Classes.Bills.impl.BillImpl#getPaymentDate <em>Payment Date</em>}</li>
+ *   <li>{@link Classes.Bills.impl.BillImpl#getTotalAmount <em>Total Amount</em>}</li>
  * </ul>
  * </p>
  *
@@ -94,6 +95,8 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	 */
 	protected String id = ID_EDEFAULT;
 
+	// TODO what if a bill get issued and then the prices of the items/services change?....
+	
 	/**
 	 * The cached value of the '{@link #getItems() <em>Items</em>}' attribute list.
 	 * <!-- begin-user-doc -->
@@ -173,6 +176,26 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	 * @ordered
 	 */
 	protected Date paymentDate = PAYMENT_DATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTotalAmount() <em>Total Amount</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTotalAmount()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double TOTAL_AMOUNT_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getTotalAmount() <em>Total Amount</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTotalAmount()
+	 * @generated
+	 * @ordered
+	 */
+	protected double totalAmount = TOTAL_AMOUNT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -348,6 +371,27 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public double getTotalAmount() {
+		return totalAmount;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTotalAmount(double newTotalAmount) {
+		double oldTotalAmount = totalAmount;
+		totalAmount = newTotalAmount;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BillsPackage.BILL__TOTAL_AMOUNT, oldTotalAmount, totalAmount));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -367,6 +411,8 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 				return getIssueDate();
 			case BillsPackage.BILL__PAYMENT_DATE:
 				return getPaymentDate();
+			case BillsPackage.BILL__TOTAL_AMOUNT:
+				return getTotalAmount();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -406,6 +452,9 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 			case BillsPackage.BILL__PAYMENT_DATE:
 				setPaymentDate((Date)newValue);
 				return;
+			case BillsPackage.BILL__TOTAL_AMOUNT:
+				setTotalAmount((Double)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -442,6 +491,9 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 			case BillsPackage.BILL__PAYMENT_DATE:
 				setPaymentDate(PAYMENT_DATE_EDEFAULT);
 				return;
+			case BillsPackage.BILL__TOTAL_AMOUNT:
+				setTotalAmount(TOTAL_AMOUNT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -470,6 +522,8 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 				return ISSUE_DATE_EDEFAULT == null ? issueDate != null : !ISSUE_DATE_EDEFAULT.equals(issueDate);
 			case BillsPackage.BILL__PAYMENT_DATE:
 				return PAYMENT_DATE_EDEFAULT == null ? paymentDate != null : !PAYMENT_DATE_EDEFAULT.equals(paymentDate);
+			case BillsPackage.BILL__TOTAL_AMOUNT:
+				return totalAmount != TOTAL_AMOUNT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -500,6 +554,8 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 		result.append(issueDate);
 		result.append(", paymentDate: ");
 		result.append(paymentDate);
+		result.append(", totalAmount: ");
+		result.append(totalAmount);
 		result.append(')');
 		return result.toString();
 	}

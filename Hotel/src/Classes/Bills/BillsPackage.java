@@ -502,13 +502,22 @@ public interface BillsPackage extends EPackage {
 	int BILL__PAYMENT_DATE = 7;
 
 	/**
+	 * The feature id for the '<em><b>Total Amount</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILL__TOTAL_AMOUNT = 8;
+
+	/**
 	 * The number of structural features of the '<em>Bill</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BILL_FEATURE_COUNT = 8;
+	int BILL_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Bill</em>' class.
@@ -649,6 +658,17 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBill_PaymentDate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Classes.Bills.Bill#getTotalAmount <em>Total Amount</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Total Amount</em>'.
+	 * @see Classes.Bills.Bill#getTotalAmount()
+	 * @see #getBill()
+	 * @generated
+	 */
+	EAttribute getBill_TotalAmount();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Bills.IBills <em>IBills</em>}'.
@@ -942,6 +962,14 @@ public interface BillsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BILL__PAYMENT_DATE = eINSTANCE.getBill_PaymentDate();
+
+		/**
+		 * The meta object literal for the '<em><b>Total Amount</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BILL__TOTAL_AMOUNT = eINSTANCE.getBill_TotalAmount();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Bills.IBills <em>IBills</em>}' class.
