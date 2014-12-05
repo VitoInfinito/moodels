@@ -1,8 +1,10 @@
 /**
  */
-package org.eclipse.uml2.types.util;
+package ECoreMapEntries.util;
 
 import Classes.Bookables.Bookable;
+
+import ECoreMapEntries.*;
 
 import java.util.Map;
 
@@ -10,8 +12,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
-
-import org.eclipse.uml2.types.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,17 +23,17 @@ import org.eclipse.uml2.types.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.uml2.types.TypesPackage
+ * @see ECoreMapEntries.ECoreMapEntriesPackage
  * @generated
  */
-public class TypesSwitch<T> extends Switch<T> {
+public class ECoreMapEntriesSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static TypesPackage modelPackage;
+	protected static ECoreMapEntriesPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -41,9 +41,9 @@ public class TypesSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypesSwitch() {
+	public ECoreMapEntriesSwitch() {
 		if (modelPackage == null) {
-			modelPackage = TypesPackage.eINSTANCE;
+			modelPackage = ECoreMapEntriesPackage.eINSTANCE;
 		}
 	}
 
@@ -70,7 +70,7 @@ public class TypesSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case TypesPackage.STRING_TO_BOOKABLE_MAP: {
+			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP: {
 				@SuppressWarnings("unchecked") Map.Entry<String, Bookable> stringToBookableMap = (Map.Entry<String, Bookable>)theEObject;
 				T result = caseStringToBookableMap(stringToBookableMap);
 				if (result == null) result = defaultCase(theEObject);
@@ -111,4 +111,4 @@ public class TypesSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //TypesSwitch
+} //ECoreMapEntriesSwitch

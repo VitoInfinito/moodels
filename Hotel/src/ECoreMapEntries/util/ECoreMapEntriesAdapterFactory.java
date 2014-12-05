@@ -1,8 +1,10 @@
 /**
  */
-package org.eclipse.uml2.types.util;
+package ECoreMapEntries.util;
 
 import Classes.Bookables.Bookable;
+
+import ECoreMapEntries.*;
 
 import java.util.Map;
 
@@ -13,24 +15,22 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.uml2.types.*;
-
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.uml2.types.TypesPackage
+ * @see ECoreMapEntries.ECoreMapEntriesPackage
  * @generated
  */
-public class TypesAdapterFactory extends AdapterFactoryImpl {
+public class ECoreMapEntriesAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static TypesPackage modelPackage;
+	protected static ECoreMapEntriesPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -38,9 +38,9 @@ public class TypesAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypesAdapterFactory() {
+	public ECoreMapEntriesAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = TypesPackage.eINSTANCE;
+			modelPackage = ECoreMapEntriesPackage.eINSTANCE;
 		}
 	}
 
@@ -69,8 +69,8 @@ public class TypesAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TypesSwitch<Adapter> modelSwitch =
-		new TypesSwitch<Adapter>() {
+	protected ECoreMapEntriesSwitch<Adapter> modelSwitch =
+		new ECoreMapEntriesSwitch<Adapter>() {
 			@Override
 			public Adapter caseStringToBookableMap(Map.Entry<String, Bookable> object) {
 				return createStringToBookableMapAdapter();
@@ -121,4 +121,4 @@ public class TypesAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //TypesAdapterFactory
+} //ECoreMapEntriesAdapterFactory

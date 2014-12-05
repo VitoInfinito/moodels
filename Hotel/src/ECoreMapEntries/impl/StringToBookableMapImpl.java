@@ -1,8 +1,10 @@
 /**
  */
-package org.eclipse.uml2.types.impl;
+package ECoreMapEntries.impl;
 
 import Classes.Bookables.Bookable;
+
+import ECoreMapEntries.ECoreMapEntriesPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -16,8 +18,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.uml2.types.TypesPackage;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>String To Bookable Map</b></em>'.
@@ -25,8 +25,8 @@ import org.eclipse.uml2.types.TypesPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.uml2.types.impl.StringToBookableMapImpl#getTypedKey <em>Key</em>}</li>
- *   <li>{@link org.eclipse.uml2.types.impl.StringToBookableMapImpl#getTypedValue <em>Value</em>}</li>
+ *   <li>{@link ECoreMapEntries.impl.StringToBookableMapImpl#getTypedKey <em>Key</em>}</li>
+ *   <li>{@link ECoreMapEntries.impl.StringToBookableMapImpl#getTypedValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -79,7 +79,7 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TypesPackage.Literals.STRING_TO_BOOKABLE_MAP;
+		return ECoreMapEntriesPackage.Literals.STRING_TO_BOOKABLE_MAP;
 	}
 
 	/**
@@ -100,7 +100,7 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 		String oldKey = key;
 		key = newKey;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TypesPackage.STRING_TO_BOOKABLE_MAP__KEY, oldKey, key));
+			eNotify(new ENotificationImpl(this, Notification.SET, ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__KEY, oldKey, key));
 	}
 
 	/**
@@ -114,7 +114,7 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 			value = (Bookable)eResolveProxy(oldValue);
 			if (value != oldValue) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TypesPackage.STRING_TO_BOOKABLE_MAP__VALUE, oldValue, value));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__VALUE, oldValue, value));
 			}
 		}
 		return value;
@@ -138,7 +138,7 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 		Bookable oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TypesPackage.STRING_TO_BOOKABLE_MAP__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__VALUE, oldValue, value));
 	}
 
 	/**
@@ -149,9 +149,9 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TypesPackage.STRING_TO_BOOKABLE_MAP__KEY:
+			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__KEY:
 				return getTypedKey();
-			case TypesPackage.STRING_TO_BOOKABLE_MAP__VALUE:
+			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__VALUE:
 				if (resolve) return getTypedValue();
 				return basicGetTypedValue();
 		}
@@ -166,10 +166,10 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TypesPackage.STRING_TO_BOOKABLE_MAP__KEY:
+			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__KEY:
 				setTypedKey((String)newValue);
 				return;
-			case TypesPackage.STRING_TO_BOOKABLE_MAP__VALUE:
+			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__VALUE:
 				setTypedValue((Bookable)newValue);
 				return;
 		}
@@ -184,10 +184,10 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TypesPackage.STRING_TO_BOOKABLE_MAP__KEY:
+			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__KEY:
 				setTypedKey(KEY_EDEFAULT);
 				return;
-			case TypesPackage.STRING_TO_BOOKABLE_MAP__VALUE:
+			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__VALUE:
 				setTypedValue((Bookable)null);
 				return;
 		}
@@ -202,9 +202,9 @@ public class StringToBookableMapImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TypesPackage.STRING_TO_BOOKABLE_MAP__KEY:
+			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__KEY:
 				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
-			case TypesPackage.STRING_TO_BOOKABLE_MAP__VALUE:
+			case ECoreMapEntriesPackage.STRING_TO_BOOKABLE_MAP__VALUE:
 				return value != null;
 		}
 		return super.eIsSet(featureID);

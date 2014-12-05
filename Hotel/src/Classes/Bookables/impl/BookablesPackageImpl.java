@@ -43,6 +43,8 @@ import Classes.Statistics.StatisticsPackage;
 import Classes.Statistics.impl.StatisticsPackageImpl;
 import Classes.Stays.StaysPackage;
 import Classes.Stays.impl.StaysPackageImpl;
+import ECoreMapEntries.ECoreMapEntriesPackage;
+import ECoreMapEntries.impl.ECoreMapEntriesPackageImpl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -51,7 +53,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.uml2.types.TypesPackage;
-import org.eclipse.uml2.types.impl.TypesPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -183,6 +184,9 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		TypesPackage.eINSTANCE.eClass();
+
 		// Obtain or create and register interdependencies
 		StaysPackageImpl theStaysPackage = (StaysPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StaysPackage.eNS_URI) instanceof StaysPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StaysPackage.eNS_URI) : StaysPackage.eINSTANCE);
 		BankingPackageImpl theBankingPackage = (BankingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BankingPackage.eNS_URI) instanceof BankingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BankingPackage.eNS_URI) : BankingPackage.eINSTANCE);
@@ -198,7 +202,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		ServicesPackageImpl theServicesPackage = (ServicesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) instanceof ServicesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) : ServicesPackage.eINSTANCE);
 		FeedbackPackageImpl theFeedbackPackage = (FeedbackPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) instanceof FeedbackPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) : FeedbackPackage.eINSTANCE);
 		RequestsPackageImpl theRequestsPackage = (RequestsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) instanceof RequestsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) : RequestsPackage.eINSTANCE);
-		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
+		ECoreMapEntriesPackageImpl theECoreMapEntriesPackage = (ECoreMapEntriesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ECoreMapEntriesPackage.eNS_URI) instanceof ECoreMapEntriesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ECoreMapEntriesPackage.eNS_URI) : ECoreMapEntriesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theBookablesPackage.createPackageContents();
@@ -216,7 +220,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		theServicesPackage.createPackageContents();
 		theFeedbackPackage.createPackageContents();
 		theRequestsPackage.createPackageContents();
-		theTypesPackage.createPackageContents();
+		theECoreMapEntriesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theBookablesPackage.initializePackageContents();
@@ -234,7 +238,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		theServicesPackage.initializePackageContents();
 		theFeedbackPackage.initializePackageContents();
 		theRequestsPackage.initializePackageContents();
-		theTypesPackage.initializePackageContents();
+		theECoreMapEntriesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theBookablesPackage.freeze();
@@ -840,6 +844,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 
 		// Obtain other dependent packages
 		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
+		ECoreMapEntriesPackage theECoreMapEntriesPackage = (ECoreMapEntriesPackage)EPackage.Registry.INSTANCE.getEPackage(ECoreMapEntriesPackage.eNS_URI);
 		StaysPackage theStaysPackage = (StaysPackage)EPackage.Registry.INSTANCE.getEPackage(StaysPackage.eNS_URI);
 
 		// Create type parameters
@@ -989,7 +994,7 @@ public class BookablesPackageImpl extends EPackageImpl implements BookablesPacka
 		addEParameter(op, this.getConferenceRoomCategory(), "category", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bookablesManagerEClass, BookablesManager.class, "BookablesManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBookablesManager_Bookables(), this.getBookable(), null, "bookables", null, 0, -1, BookablesManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBookablesManager_Bookables(), theECoreMapEntriesPackage.getStringToBookableMap(), null, "bookables", null, 0, -1, BookablesManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookablesManager_IHotelStayManager(), theStaysPackage.getIStays(), null, "iHotelStayManager", null, 1, 1, BookablesManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Initialize enums and add enum literals

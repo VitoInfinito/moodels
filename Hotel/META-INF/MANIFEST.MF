@@ -52,9 +52,10 @@ Export-Package: Classes.Accounts,
  Classes.Stays,
  Classes.Stays.impl,
  Classes.Stays.util,
- org.eclipse.uml2.types,
- org.eclipse.uml2.types.impl,
- org.eclipse.uml2.types.util
+ ECoreMapEntries,
+ ECoreMapEntries.impl,
+ ECoreMapEntries.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.uml2.types;visibility:=reexport
 Bundle-ActivationPolicy: lazy

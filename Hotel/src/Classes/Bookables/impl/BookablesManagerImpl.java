@@ -15,6 +15,8 @@ import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.Room;
 import Classes.Bookables.RoomLocation;
 import Classes.Stays.IStays;
+import ECoreMapEntries.ECoreMapEntriesPackage;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,16 +24,19 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.uml2.types.TypesPackage;
-import org.eclipse.uml2.types.impl.StringToBookableMapImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -100,7 +105,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public EMap<String, Bookable> getBookables() {
 		if (bookables == null) {
-			bookables = new EcoreEMap<String,Bookable>(TypesPackage.Literals.STRING_TO_BOOKABLE_MAP, StringToBookableMapImpl.class, this, BookablesPackage.BOOKABLES_MANAGER__BOOKABLES);
+			bookables = new EcoreEMap<String,Bookable>(ECoreMapEntriesPackage.Literals.STRING_TO_BOOKABLE_MAP, ECoreMapEntries.impl.StringToBookableMapImpl.class, this, BookablesPackage.BOOKABLES_MANAGER__BOOKABLES);
 		}
 		return bookables;
 	}
@@ -708,10 +713,25 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BookablesPackage.BOOKABLES_MANAGER__BOOKABLES:
+				return ((InternalEList<?>)getBookables()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case BookablesPackage.BOOKABLES_MANAGER__BOOKABLES:
-				return getBookables();
+				if (coreType) return getBookables();
+				else return getBookables().map();
 			case BookablesPackage.BOOKABLES_MANAGER__IHOTEL_STAY_MANAGER:
 				if (resolve) return getIHotelStayManager();
 				return basicGetIHotelStayManager();
@@ -729,8 +749,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BookablesPackage.BOOKABLES_MANAGER__BOOKABLES:
-				getBookables().clear();
-				getBookables().addAll((Collection<? extends Bookable>)newValue);
+				((EStructuralFeature.Setting)getBookables()).set(newValue);
 				return;
 			case BookablesPackage.BOOKABLES_MANAGER__IHOTEL_STAY_MANAGER:
 				setIHotelStayManager((IStays)newValue);

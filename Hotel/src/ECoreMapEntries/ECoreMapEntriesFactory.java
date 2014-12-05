@@ -1,6 +1,6 @@
 /**
  */
-package org.eclipse.uml2.types;
+package ECoreMapEntries;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -9,17 +9,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.uml2.types.TypesPackage
+ * @see ECoreMapEntries.ECoreMapEntriesPackage
  * @generated
  */
-public interface TypesFactory extends EFactory {
+public interface ECoreMapEntriesFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	TypesFactory eINSTANCE = org.eclipse.uml2.types.impl.TypesFactoryImpl.init();
+	ECoreMapEntriesFactory eINSTANCE = ECoreMapEntries.impl.ECoreMapEntriesFactoryImpl.init();
 
 	/**
 	 * Returns the package supported by this factory.
@@ -28,6 +28,6 @@ public interface TypesFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	TypesPackage getTypesPackage();
+	ECoreMapEntriesPackage getECoreMapEntriesPackage();
 
-} //TypesFactory
+} //ECoreMapEntriesFactory
