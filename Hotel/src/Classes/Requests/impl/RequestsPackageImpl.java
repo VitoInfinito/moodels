@@ -425,7 +425,7 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIRequests__SearchRequests__String(), theTypesPackage.getString(), "searchRequests", 0, -1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "specialRequestId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIRequests__GetAllRequestIDs(), theTypesPackage.getString(), "getAllRequestIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 

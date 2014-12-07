@@ -1615,7 +1615,7 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT-HpsEeST-65JbGUt8g" name="searchRequests">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gupNcHvDEeSebpgcqy0qFw" name="specialRequestId">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gupNcHvDEeSebpgcqy0qFw" name="keyword">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_9ME3YHvDEeSebpgcqy0qFw" direction="return">

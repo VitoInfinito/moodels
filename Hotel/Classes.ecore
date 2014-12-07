@@ -970,7 +970,7 @@
         <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="searchRequests" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
-        <eParameters name="specialRequestId" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="getAllRequestIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
       <eOperations name="setRequestDescription" ordered="false" lowerBound="1">
