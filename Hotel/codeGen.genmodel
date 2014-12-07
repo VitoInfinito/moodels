@@ -866,22 +866,30 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/getRequestDescription/specialRequestId"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/hasRequestBeenResolved">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/hasRequestBeenResolved/_"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/hasRequestBeenResolved/specialRequestId"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/setRequestResolved"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/setRequestResolved">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/setRequestResolved/SpecialRequestId"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/deleteRequest">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/deleteRequest/specialRequestId"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/changeRequestDesc">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/changeRequestDesc/specialRequestId"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/changeRequestDesc/description"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/searchRequests">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/searchRequests/specialRequestId"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/searchRequests/_"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/getAllRequestIDs"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/setRequestDescription"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/addRequest"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/setRequestDescription">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/setRequestDescription/specialRequestId"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/setRequestDescription/description"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/addRequest">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/addRequest/specialRequestId"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/addRequest/description"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Requests/RequestsManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

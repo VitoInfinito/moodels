@@ -956,23 +956,31 @@
       <eOperations name="getRequestDescription" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="specialRequestId" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="hasRequestBeenResolved" ordered="false" lowerBound="1">
-        <eParameters name="_" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
+      <eOperations name="hasRequestBeenResolved" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
+        <eParameters name="specialRequestId" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="setRequestResolved" ordered="false" lowerBound="1"/>
+      <eOperations name="setRequestResolved" ordered="false" lowerBound="1">
+        <eParameters name="SpecialRequestId" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eOperations name="deleteRequest" ordered="false" lowerBound="1">
         <eParameters name="specialRequestId" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="changeRequestDesc" ordered="false" lowerBound="1">
         <eParameters name="specialRequestId" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="searchRequests" ordered="false" lowerBound="1">
+      <eOperations name="searchRequests" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="specialRequestId" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="_" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getAllRequestIDs" ordered="false" lowerBound="1"/>
-      <eOperations name="setRequestDescription" ordered="false" lowerBound="1"/>
-      <eOperations name="addRequest" ordered="false" lowerBound="1"/>
+      <eOperations name="getAllRequestIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="setRequestDescription" ordered="false" lowerBound="1">
+        <eParameters name="specialRequestId" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="addRequest" ordered="false" lowerBound="1">
+        <eParameters name="specialRequestId" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RequestsManager" eSuperTypes="#//Requests/IRequests">
       <eStructuralFeatures xsi:type="ecore:EReference" name="specialRequest" ordered="false"

@@ -2,23 +2,22 @@
  */
 package Classes.Requests.impl;
 
+import Classes.InvalidIDException;
+import Classes.Bookables.impl.BookablesManagerImpl;
 import Classes.Requests.Request;
+import Classes.Requests.RequestsFactory;
 import Classes.Requests.RequestsManager;
 import Classes.Requests.RequestsPackage;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
-
 import java.util.Map;
-import java.util.Map.Entry;
 import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,6 +33,9 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * @generated
  */
 public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements RequestsManager {
+	
+	private final Logger logger = LoggerFactory.getLogger(BookablesManagerImpl.class);
+	
 	/**
 	 * The cached value of the '{@link #getSpecialRequest() <em>Special Request</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -42,7 +44,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 * @ordered
 	 */
-	private EList<Map.Entry<String, Request>> specialRequest;
+	private EMap<String, Request> specialRequest;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,9 +70,9 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EList<Map.Entry<String, Request>> getSpecialRequest() {
+	public EMap<String, Request> getSpecialRequest() {
 		if (specialRequest == null) {
-			specialRequest = new EObjectResolvingEList<Map.Entry<String, Request>>(Entry.class, this, RequestsPackage.REQUESTS_MANAGER__SPECIAL_REQUEST);
+			specialRequest = new EcoreEMap<String,Request>(Classes.ECoreMapEntries.ECoreMapEntriesPackage.Literals.STRING_TO_REQUEST_MAP, Classes.ECoreMapEntries.impl.StringToRequestMapImpl.class, this, RequestsPackage.REQUESTS_MANAGER__SPECIAL_REQUEST);
 		}
 		return specialRequest;
 	}
@@ -78,9 +80,90 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getRequestDescription(String specialRequestId) {
+		if(specialRequestId == null){
+			logger.warn("The id passed was null! Invalid argument!");
+			throw new IllegalArgumentException("The id was null!");
+		}
+		Request req = specialRequest.get(specialRequestId);
+		if(req == null){
+			logger.warn("The id do not beong to a special request!");
+			throw new IllegalArgumentException("The id was not found!");
+		}
+		return req.getDescription();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean hasRequestBeenResolved(String specialRequestId) {
+		if(specialRequestId == null){
+			logger.warn("The id passed was null! Invalid argument!");
+			throw new IllegalArgumentException("The id was null!");
+		}
+		Request req = specialRequest.get(specialRequestId);
+		if(req == null){
+			logger.warn("The id do not beong to a special request!");
+			throw new IllegalArgumentException("The id was not found!");
+		}
+		return req.isResolved();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void setRequestResolved(String specialRequestId) {
+		if(specialRequestId == null){
+			logger.warn("The id passed was null! Invalid argument!");
+			throw new IllegalArgumentException("The id was null!");
+		}
+		Request req = specialRequest.get(specialRequestId);
+		if(req == null){
+			logger.warn("The id do not beong to a special request!");
+			throw new IllegalArgumentException("The id was not found!");
+		}
+		req.setIsResolved(true);
+
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void deleteRequest(String specialRequestId) {
+		if(specialRequestId == null){
+			logger.warn("The id passed was null! Invalid argument!");
+			throw new IllegalArgumentException("The id was null!");
+		}
+		Request req = specialRequest.removeKey(specialRequestId);
+		if(req == null){
+			logger.warn("The bookable with ID {} could not be found. Invalid ID!", specialRequestId);
+			throw new InvalidIDException();
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void changeRequestDesc(String specialRequestId, String description) {
+		setRequestDescription(specialRequestId, description);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> searchRequests(String specialRequestId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -91,7 +174,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void hasRequestBeenResolved(boolean _) {
+	public EList<String> getAllRequestIDs() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -102,87 +185,39 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void getRequestDescription() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	private void setRequestDescription(String specialRequestId, String description) {
+		if(specialRequestId == null){
+			logger.warn("The id passed was null! Invalid argument!");
+			throw new IllegalArgumentException("The id was null!");
+		}
+		Request req = specialRequest.get(specialRequestId);
+		if(req == null){
+			logger.warn("The id do not beong to a special request!");
+			throw new IllegalArgumentException("The id was not found!");
+		}
+		req.setDescription(description);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void setRequestResolved() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void deleteRequest(String specialRequestId) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void changeRequestDesc(String specialRequestId) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void searchRequests(String specialRequestId, EList<String> _) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getAllRequestIDs() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRequestDescription() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void addRequest() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void addRequest(String specialRequestId, String description) {
+		if(specialRequestId == null){
+			logger.warn("The id passed was null! Invalid argument!");
+			throw new IllegalArgumentException("The id was null!");
+		}
+		if(description.length() > 0){
+			logger.warn("The description is to short! Invalid argument!");
+			throw new IllegalArgumentException("The description was to short!");
+		}
+		Request req = RequestsFactory.eINSTANCE.createRequest();
+		req.setDescription(description);
+		req.setId(specialRequestId);
+		req.setIsResolved(false);
+		
+		specialRequest.put(specialRequestId,req);
 	}
 
 	/**
@@ -256,29 +291,26 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 		switch (operationID) {
 			case RequestsPackage.REQUESTS_MANAGER___GET_REQUEST_DESCRIPTION__STRING:
 				return getRequestDescription((String)arguments.get(0));
-			case RequestsPackage.REQUESTS_MANAGER___HAS_REQUEST_BEEN_RESOLVED__BOOLEAN:
-				hasRequestBeenResolved((Boolean)arguments.get(0));
-				return null;
-			case RequestsPackage.REQUESTS_MANAGER___SET_REQUEST_RESOLVED:
-				setRequestResolved();
+			case RequestsPackage.REQUESTS_MANAGER___HAS_REQUEST_BEEN_RESOLVED__STRING:
+				return hasRequestBeenResolved((String)arguments.get(0));
+			case RequestsPackage.REQUESTS_MANAGER___SET_REQUEST_RESOLVED__STRING:
+				setRequestResolved((String)arguments.get(0));
 				return null;
 			case RequestsPackage.REQUESTS_MANAGER___DELETE_REQUEST__STRING:
 				deleteRequest((String)arguments.get(0));
 				return null;
-			case RequestsPackage.REQUESTS_MANAGER___CHANGE_REQUEST_DESC__STRING:
-				changeRequestDesc((String)arguments.get(0));
+			case RequestsPackage.REQUESTS_MANAGER___CHANGE_REQUEST_DESC__STRING_STRING:
+				changeRequestDesc((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case RequestsPackage.REQUESTS_MANAGER___SEARCH_REQUESTS__STRING_ELIST:
-				searchRequests((String)arguments.get(0), (EList<String>)arguments.get(1));
-				return null;
+			case RequestsPackage.REQUESTS_MANAGER___SEARCH_REQUESTS__STRING:
+				return searchRequests((String)arguments.get(0));
 			case RequestsPackage.REQUESTS_MANAGER___GET_ALL_REQUEST_IDS:
-				getAllRequestIDs();
+				return getAllRequestIDs();
+			case RequestsPackage.REQUESTS_MANAGER___SET_REQUEST_DESCRIPTION__STRING_STRING:
+				setRequestDescription((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case RequestsPackage.REQUESTS_MANAGER___SET_REQUEST_DESCRIPTION:
-				setRequestDescription();
-				return null;
-			case RequestsPackage.REQUESTS_MANAGER___ADD_REQUEST:
-				addRequest();
+			case RequestsPackage.REQUESTS_MANAGER___ADD_REQUEST__STRING_STRING:
+				addRequest((String)arguments.get(0), (String)arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

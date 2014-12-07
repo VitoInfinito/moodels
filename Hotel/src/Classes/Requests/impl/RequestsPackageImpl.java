@@ -203,7 +203,7 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRequests__HasRequestBeenResolved__boolean() {
+	public EOperation getIRequests__HasRequestBeenResolved__String() {
 		return iRequestsEClass.getEOperations().get(1);
 	}
 
@@ -212,7 +212,7 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRequests__SetRequestResolved() {
+	public EOperation getIRequests__SetRequestResolved__String() {
 		return iRequestsEClass.getEOperations().get(2);
 	}
 
@@ -230,7 +230,7 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRequests__ChangeRequestDesc__String() {
+	public EOperation getIRequests__ChangeRequestDesc__String_String() {
 		return iRequestsEClass.getEOperations().get(4);
 	}
 
@@ -239,7 +239,7 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRequests__SearchRequests__String_EList() {
+	public EOperation getIRequests__SearchRequests__String() {
 		return iRequestsEClass.getEOperations().get(5);
 	}
 
@@ -257,7 +257,7 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRequests__SetRequestDescription() {
+	public EOperation getIRequests__SetRequestDescription__String_String() {
 		return iRequestsEClass.getEOperations().get(7);
 	}
 
@@ -266,7 +266,7 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRequests__AddRequest() {
+	public EOperation getIRequests__AddRequest__String_String() {
 		return iRequestsEClass.getEOperations().get(8);
 	}
 
@@ -354,14 +354,14 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 		// Create classes and their features
 		iRequestsEClass = createEClass(IREQUESTS);
 		createEOperation(iRequestsEClass, IREQUESTS___GET_REQUEST_DESCRIPTION__STRING);
-		createEOperation(iRequestsEClass, IREQUESTS___HAS_REQUEST_BEEN_RESOLVED__BOOLEAN);
-		createEOperation(iRequestsEClass, IREQUESTS___SET_REQUEST_RESOLVED);
+		createEOperation(iRequestsEClass, IREQUESTS___HAS_REQUEST_BEEN_RESOLVED__STRING);
+		createEOperation(iRequestsEClass, IREQUESTS___SET_REQUEST_RESOLVED__STRING);
 		createEOperation(iRequestsEClass, IREQUESTS___DELETE_REQUEST__STRING);
-		createEOperation(iRequestsEClass, IREQUESTS___CHANGE_REQUEST_DESC__STRING);
-		createEOperation(iRequestsEClass, IREQUESTS___SEARCH_REQUESTS__STRING_ELIST);
+		createEOperation(iRequestsEClass, IREQUESTS___CHANGE_REQUEST_DESC__STRING_STRING);
+		createEOperation(iRequestsEClass, IREQUESTS___SEARCH_REQUESTS__STRING);
 		createEOperation(iRequestsEClass, IREQUESTS___GET_ALL_REQUEST_IDS);
-		createEOperation(iRequestsEClass, IREQUESTS___SET_REQUEST_DESCRIPTION);
-		createEOperation(iRequestsEClass, IREQUESTS___ADD_REQUEST);
+		createEOperation(iRequestsEClass, IREQUESTS___SET_REQUEST_DESCRIPTION__STRING_STRING);
+		createEOperation(iRequestsEClass, IREQUESTS___ADD_REQUEST__STRING_STRING);
 
 		requestsManagerEClass = createEClass(REQUESTS_MANAGER);
 		createEReference(requestsManagerEClass, REQUESTS_MANAGER__SPECIAL_REQUEST);
@@ -411,26 +411,31 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 		EOperation op = initEOperation(getIRequests__GetRequestDescription__String(), theTypesPackage.getString(), "getRequestDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "specialRequestId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIRequests__HasRequestBeenResolved__boolean(), null, "hasRequestBeenResolved", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getBoolean(), "_", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRequests__HasRequestBeenResolved__String(), theTypesPackage.getBoolean(), "hasRequestBeenResolved", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "specialRequestId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIRequests__SetRequestResolved(), null, "setRequestResolved", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRequests__SetRequestResolved__String(), null, "setRequestResolved", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SpecialRequestId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIRequests__DeleteRequest__String(), null, "deleteRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "specialRequestId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIRequests__ChangeRequestDesc__String(), null, "changeRequestDesc", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRequests__ChangeRequestDesc__String_String(), null, "changeRequestDesc", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "specialRequestId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIRequests__SearchRequests__String(), theTypesPackage.getString(), "searchRequests", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "specialRequestId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIRequests__SearchRequests__String_EList(), null, "searchRequests", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIRequests__GetAllRequestIDs(), theTypesPackage.getString(), "getAllRequestIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIRequests__SetRequestDescription__String_String(), null, "setRequestDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "specialRequestId", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "_", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIRequests__GetAllRequestIDs(), null, "getAllRequestIDs", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIRequests__SetRequestDescription(), null, "setRequestDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIRequests__AddRequest(), null, "addRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRequests__AddRequest__String_String(), null, "addRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "specialRequestId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(requestsManagerEClass, RequestsManager.class, "RequestsManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRequestsManager_SpecialRequest(), this.getRequest(), null, "specialRequest", null, 0, -1, RequestsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
