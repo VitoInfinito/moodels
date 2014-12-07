@@ -3,10 +3,6 @@
 package Classes.Requests.impl;
 
 import Classes.InvalidIDException;
-import Classes.RegexPatterns;
-import Classes.Bookables.Bookable;
-import Classes.Bookables.HotelRoom;
-import Classes.Bookables.RoomLocation;
 import Classes.Bookables.impl.BookablesManagerImpl;
 import Classes.Requests.Request;
 import Classes.Requests.RequestsFactory;
@@ -175,7 +171,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> searchRequests(String keyword) {
+	public List<String> searchRequests(String keyword) {
 		if (keyword == null) {
 			logger.warn("The keyword passed was null! Invalid argument!");
 			throw new IllegalArgumentException("The keyword was null!");
@@ -196,7 +192,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 			}
 		}
 
-		return new BasicEList<String>(searchResult);
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -204,9 +200,9 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EList<String> getAllRequestIDs() {
+	public List<String> getAllRequestIDs() {
 		Collection<Request> sReq = getSpecialRequest().values();
-		EList<String> tmp = new BasicEList<String>();
+		List<String> tmp = new ArrayList<String>();
 		for(Request sp: sReq){
 			tmp.add(sp.getId());
 		}
