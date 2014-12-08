@@ -692,7 +692,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 
 		initEOperation(getIGuests__GetGuestFirstName(), null, "getGuestFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		EOperation op = initEOperation(getIGuests__GetGuestLastName__String(), null, "getGuestLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__GetGuestLastName__String(), null, "getGuestLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIGuests__GetGuestTitle(), null, "getGuestTitle", 1, 1, IS_UNIQUE, !IS_ORDERED);
