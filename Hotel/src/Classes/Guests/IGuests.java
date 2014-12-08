@@ -82,10 +82,10 @@ public interface IGuests extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void getGuestLastName();
+	void getGuestLastName(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->

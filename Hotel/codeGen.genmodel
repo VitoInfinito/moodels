@@ -381,7 +381,9 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/changeGuestEmail"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/changeGuestPhone"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/getGuestFirstName"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/getGuestLastName"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/getGuestLastName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Guests/IGuests/getGuestLastName/SSID"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/getGuestTitle"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/getGuestEmail"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/getGuestPhone"/>

@@ -1310,7 +1310,11 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF-3psEeST-65JbGUt8g" name="changeGuestEmail"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF_HpsEeST-65JbGUt8g" name="changeGuestPhone"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF_XpsEeST-65JbGUt8g" name="getGuestFirstName"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF_npsEeST-65JbGUt8g" name="getGuestLastName"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF_npsEeST-65JbGUt8g" name="getGuestLastName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_CW10YH7rEeSJ05NId2K7cQ" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF_3psEeST-65JbGUt8g" name="getGuestTitle"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGAHpsEeST-65JbGUt8g" name="getGuestEmail"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGAXpsEeST-65JbGUt8g" name="getGuestPhone"/>

@@ -218,7 +218,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getGuestLastName() {
+	public void getGuestLastName(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -484,8 +484,8 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_FIRST_NAME:
 				getGuestFirstName();
 				return null;
-			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_LAST_NAME:
-				getGuestLastName();
+			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_LAST_NAME__STRING:
+				getGuestLastName((String)arguments.get(0));
 				return null;
 			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_TITLE:
 				getGuestTitle();

@@ -155,7 +155,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGUESTS___GET_GUEST_LAST_NAME = 8;
+	int IGUESTS___GET_GUEST_LAST_NAME__STRING = 8;
 
 	/**
 	 * The operation id for the '<em>Get Guest Title</em>' operation.
@@ -399,7 +399,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER___GET_GUEST_LAST_NAME = IGUESTS___GET_GUEST_LAST_NAME;
+	int GUESTS_MANAGER___GET_GUEST_LAST_NAME__STRING = IGUESTS___GET_GUEST_LAST_NAME__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Guest Title</em>' operation.
@@ -945,14 +945,14 @@ public interface GuestsPackage extends EPackage {
 	EOperation getIGuests__GetGuestFirstName();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestLastName() <em>Get Guest Last Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestLastName(java.lang.String) <em>Get Guest Last Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Guest Last Name</em>' operation.
-	 * @see Classes.Guests.IGuests#getGuestLastName()
+	 * @see Classes.Guests.IGuests#getGuestLastName(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIGuests__GetGuestLastName();
+	EOperation getIGuests__GetGuestLastName__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestTitle() <em>Get Guest Title</em>}' operation.
@@ -1327,7 +1327,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IGUESTS___GET_GUEST_LAST_NAME = eINSTANCE.getIGuests__GetGuestLastName();
+		EOperation IGUESTS___GET_GUEST_LAST_NAME__STRING = eINSTANCE.getIGuests__GetGuestLastName__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Guest Title</b></em>' operation.
