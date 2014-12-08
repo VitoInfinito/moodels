@@ -50,10 +50,10 @@ public interface IManageAccounts extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model usernameDataType="org.eclipse.uml2.types.String" usernameRequired="true" usernameOrdered="false"
 	 * @generated
 	 */
-	void getAccountPassword();
+	void getAccountPassword(String username);
 
 	/**
 	 * <!-- begin-user-doc -->

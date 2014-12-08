@@ -328,7 +328,7 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIManageAccounts__GetAccountPassword() {
+	public EOperation getIManageAccounts__GetAccountPassword__String() {
 		return iManageAccountsEClass.getEOperations().get(4);
 	}
 
@@ -404,7 +404,7 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___DELETE_ACCOUNT__STRING);
 		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___RENAME_ACCOUNT__STRING_STRING);
 		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___CHANGE_PASSWORD__STRING_STRING);
-		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD);
+		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD__STRING);
 		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___GET_ACCOUNTS);
 		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___SEARCH_ACCOUNTS);
 
@@ -482,7 +482,8 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 		addEParameter(op, theTypesPackage.getString(), "newPassword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "username", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIManageAccounts__GetAccountPassword(), null, "getAccountPassword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIManageAccounts__GetAccountPassword__String(), null, "getAccountPassword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "username", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIManageAccounts__GetAccounts(), null, "getAccounts", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

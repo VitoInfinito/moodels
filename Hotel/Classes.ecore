@@ -468,7 +468,9 @@
         <eParameters name="newPassword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="username" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getAccountPassword" ordered="false" lowerBound="1"/>
+      <eOperations name="getAccountPassword" ordered="false" lowerBound="1">
+        <eParameters name="username" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eOperations name="getAccounts" ordered="false" lowerBound="1"/>
       <eOperations name="searchAccounts" ordered="false" lowerBound="1"/>
     </eClassifiers>

@@ -434,7 +434,9 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Accounts/IManageAccounts/changePassword/newPassword"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Accounts/IManageAccounts/changePassword/username"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IManageAccounts/getAccountPassword"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IManageAccounts/getAccountPassword">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Accounts/IManageAccounts/getAccountPassword/username"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IManageAccounts/getAccounts"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IManageAccounts/searchAccounts"/>
       </genClasses>

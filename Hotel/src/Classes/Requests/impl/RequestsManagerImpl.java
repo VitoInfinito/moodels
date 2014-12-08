@@ -8,17 +8,11 @@ import Classes.Requests.Request;
 import Classes.Requests.RequestsFactory;
 import Classes.Requests.RequestsManager;
 import Classes.Requests.RequestsPackage;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.regex.Pattern;
-
-import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
@@ -171,28 +165,10 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public List<String> searchRequests(String keyword) {
-		if (keyword == null) {
-			logger.warn("The keyword passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The keyword was null!");
-		}
-		keyword = keyword.trim();
-		Set<String> searchResult = new LinkedHashSet<String>();
-		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
-		
-		// Exact ID match. First Order!
-		searchResult.add(specialRequest.get(keyword).getId());
-
-
-		// ID match somewhat. Second Order!
-		Collection<Request> tmpC = specialRequest.values();
-		for (Request sp : tmpC) {			
-			if (regexPattern.matcher(sp.getId()).matches()) {
-				searchResult.add(sp.getId());
-			}
-		}
-
-		return new ArrayList<String>(searchResult);
+	public EList<String> searchRequests(String keyword) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**

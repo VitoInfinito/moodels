@@ -175,7 +175,7 @@ public interface AccountsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD = 4;
+	int IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD__STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Get Accounts</em>' operation.
@@ -275,7 +275,7 @@ public interface AccountsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNTS_MANAGER___GET_ACCOUNT_PASSWORD = IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD;
+	int ACCOUNTS_MANAGER___GET_ACCOUNT_PASSWORD__STRING = IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Accounts</em>' operation.
@@ -524,14 +524,14 @@ public interface AccountsPackage extends EPackage {
 	EOperation getIManageAccounts__ChangePassword__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Accounts.IManageAccounts#getAccountPassword() <em>Get Account Password</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Accounts.IManageAccounts#getAccountPassword(java.lang.String) <em>Get Account Password</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Account Password</em>' operation.
-	 * @see Classes.Accounts.IManageAccounts#getAccountPassword()
+	 * @see Classes.Accounts.IManageAccounts#getAccountPassword(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIManageAccounts__GetAccountPassword();
+	EOperation getIManageAccounts__GetAccountPassword__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Accounts.IManageAccounts#getAccounts() <em>Get Accounts</em>}' operation.
@@ -712,7 +712,7 @@ public interface AccountsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD = eINSTANCE.getIManageAccounts__GetAccountPassword();
+		EOperation IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD__STRING = eINSTANCE.getIManageAccounts__GetAccountPassword__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Accounts</b></em>' operation.

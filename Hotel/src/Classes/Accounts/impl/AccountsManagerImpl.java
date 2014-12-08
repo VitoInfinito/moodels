@@ -123,7 +123,7 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAccountPassword() {
+	public void getAccountPassword(String username) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -284,8 +284,8 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 			case AccountsPackage.ACCOUNTS_MANAGER___CHANGE_PASSWORD__STRING_STRING:
 				changePassword((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case AccountsPackage.ACCOUNTS_MANAGER___GET_ACCOUNT_PASSWORD:
-				getAccountPassword();
+			case AccountsPackage.ACCOUNTS_MANAGER___GET_ACCOUNT_PASSWORD__STRING:
+				getAccountPassword((String)arguments.get(0));
 				return null;
 			case AccountsPackage.ACCOUNTS_MANAGER___GET_ACCOUNTS:
 				getAccounts();
