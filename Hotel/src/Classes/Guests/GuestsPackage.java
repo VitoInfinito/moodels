@@ -110,7 +110,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGUESTS___CHANGE_GUEST_LAST_NAME = 3;
+	int IGUESTS___CHANGE_GUEST_LAST_NAME__STRING_STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Change Guest Title</em>' operation.
@@ -354,7 +354,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER___CHANGE_GUEST_LAST_NAME = IGUESTS___CHANGE_GUEST_LAST_NAME;
+	int GUESTS_MANAGER___CHANGE_GUEST_LAST_NAME__STRING_STRING = IGUESTS___CHANGE_GUEST_LAST_NAME__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Guest Title</em>' operation.
@@ -895,14 +895,14 @@ public interface GuestsPackage extends EPackage {
 	EOperation getIGuests__ChangeGuestFirstName__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.IGuests#changeGuestLastName() <em>Change Guest Last Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.IGuests#changeGuestLastName(java.lang.String, java.lang.String) <em>Change Guest Last Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Guest Last Name</em>' operation.
-	 * @see Classes.Guests.IGuests#changeGuestLastName()
+	 * @see Classes.Guests.IGuests#changeGuestLastName(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIGuests__ChangeGuestLastName();
+	EOperation getIGuests__ChangeGuestLastName__String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Guests.IGuests#changeGuestTitle() <em>Change Guest Title</em>}' operation.
@@ -1287,7 +1287,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IGUESTS___CHANGE_GUEST_LAST_NAME = eINSTANCE.getIGuests__ChangeGuestLastName();
+		EOperation IGUESTS___CHANGE_GUEST_LAST_NAME__STRING_STRING = eINSTANCE.getIGuests__ChangeGuestLastName__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Guest Title</b></em>' operation.
