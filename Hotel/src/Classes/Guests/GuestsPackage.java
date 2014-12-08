@@ -101,7 +101,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGUESTS___CHANGE_GUEST_FIRST_NAME = 2;
+	int IGUESTS___CHANGE_GUEST_FIRST_NAME__STRING_STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Change Guest Last Name</em>' operation.
@@ -345,7 +345,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER___CHANGE_GUEST_FIRST_NAME = IGUESTS___CHANGE_GUEST_FIRST_NAME;
+	int GUESTS_MANAGER___CHANGE_GUEST_FIRST_NAME__STRING_STRING = IGUESTS___CHANGE_GUEST_FIRST_NAME__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Guest Last Name</em>' operation.
@@ -885,14 +885,14 @@ public interface GuestsPackage extends EPackage {
 	EOperation getIGuests__AddGuest();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.IGuests#changeGuestFirstName() <em>Change Guest First Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.IGuests#changeGuestFirstName(java.lang.String, java.lang.String) <em>Change Guest First Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Guest First Name</em>' operation.
-	 * @see Classes.Guests.IGuests#changeGuestFirstName()
+	 * @see Classes.Guests.IGuests#changeGuestFirstName(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIGuests__ChangeGuestFirstName();
+	EOperation getIGuests__ChangeGuestFirstName__String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Guests.IGuests#changeGuestLastName() <em>Change Guest Last Name</em>}' operation.
@@ -1279,7 +1279,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IGUESTS___CHANGE_GUEST_FIRST_NAME = eINSTANCE.getIGuests__ChangeGuestFirstName();
+		EOperation IGUESTS___CHANGE_GUEST_FIRST_NAME__STRING_STRING = eINSTANCE.getIGuests__ChangeGuestFirstName__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Guest Last Name</b></em>' operation.

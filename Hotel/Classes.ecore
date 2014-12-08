@@ -401,7 +401,10 @@
     <eClassifiers xsi:type="ecore:EClass" name="IGuests" abstract="true" interface="true">
       <eOperations name="getAllGuests" ordered="false" lowerBound="1"/>
       <eOperations name="addGuest" ordered="false" lowerBound="1"/>
-      <eOperations name="changeGuestFirstName" ordered="false" lowerBound="1"/>
+      <eOperations name="changeGuestFirstName" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eOperations name="changeGuestLastName" ordered="false" lowerBound="1"/>
       <eOperations name="changeGuestTitle" ordered="false" lowerBound="1"/>
       <eOperations name="changeGuestEmail" ordered="false" lowerBound="1"/>

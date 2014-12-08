@@ -369,7 +369,10 @@
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Guests/IGuests">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/getAllGuests"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/addGuest"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/changeGuestFirstName"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/changeGuestFirstName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Guests/IGuests/changeGuestFirstName/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Guests/IGuests/changeGuestFirstName/firstName"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/changeGuestLastName"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/changeGuestTitle"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/changeGuestEmail"/>

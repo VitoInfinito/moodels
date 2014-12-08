@@ -365,7 +365,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIGuests__ChangeGuestFirstName() {
+	public EOperation getIGuests__ChangeGuestFirstName__String_String() {
 		return iGuestsEClass.getEOperations().get(2);
 	}
 
@@ -590,7 +590,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 		iGuestsEClass = createEClass(IGUESTS);
 		createEOperation(iGuestsEClass, IGUESTS___GET_ALL_GUESTS);
 		createEOperation(iGuestsEClass, IGUESTS___ADD_GUEST);
-		createEOperation(iGuestsEClass, IGUESTS___CHANGE_GUEST_FIRST_NAME);
+		createEOperation(iGuestsEClass, IGUESTS___CHANGE_GUEST_FIRST_NAME__STRING_STRING);
 		createEOperation(iGuestsEClass, IGUESTS___CHANGE_GUEST_LAST_NAME);
 		createEOperation(iGuestsEClass, IGUESTS___CHANGE_GUEST_TITLE);
 		createEOperation(iGuestsEClass, IGUESTS___CHANGE_GUEST_EMAIL);
@@ -676,7 +676,9 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 
 		initEOperation(getIGuests__AddGuest(), null, "addGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIGuests__ChangeGuestFirstName(), null, "changeGuestFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getIGuests__ChangeGuestFirstName__String_String(), null, "changeGuestFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIGuests__ChangeGuestLastName(), null, "changeGuestLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
