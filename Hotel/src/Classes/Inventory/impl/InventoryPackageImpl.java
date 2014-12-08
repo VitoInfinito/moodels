@@ -229,7 +229,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIManageInventory__AddItem__String_int_int_int() {
+	public EOperation getIManageInventory__AddItem__int_String_int_int_int() {
 		return iManageInventoryEClass.getEOperations().get(3);
 	}
 
@@ -418,7 +418,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___CHANGE_ITEM_NAME__INT_STRING);
 		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___CHANGE_ITEM_PRICE__INT_INT);
 		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE__INT_INT);
-		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___ADD_ITEM__STRING_INT_INT_INT);
+		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___ADD_ITEM__INT_STRING_INT_INT_INT);
 		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___REMOVE_ITEM__INT);
 
 		iInventoryAccessEClass = createEClass(IINVENTORY_ACCESS);
@@ -490,7 +490,8 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		addEParameter(op, theTypesPackage.getInteger(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "expense", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIManageInventory__AddItem__String_int_int_int(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIManageInventory__AddItem__int_String_int_int_int(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "expense", 1, 1, IS_UNIQUE, !IS_ORDERED);
