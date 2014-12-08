@@ -421,7 +421,7 @@
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="phoneNr" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getGuestFirstName" ordered="false" lowerBound="1">
+      <eOperations name="getGuestFirstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="getGuestLastName" ordered="false" lowerBound="1">

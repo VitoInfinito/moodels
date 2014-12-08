@@ -207,7 +207,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getGuestFirstName(String SSID) {
+	public String getGuestFirstName(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -482,8 +482,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 				changeGuestPhone((String)arguments.get(0), (String)arguments.get(1));
 				return null;
 			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_FIRST_NAME__STRING:
-				getGuestFirstName((String)arguments.get(0));
-				return null;
+				return getGuestFirstName((String)arguments.get(0));
 			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_LAST_NAME__STRING:
 				getGuestLastName((String)arguments.get(0));
 				return null;
