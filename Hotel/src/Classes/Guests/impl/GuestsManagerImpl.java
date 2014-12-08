@@ -205,12 +205,15 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getGuestFirstName(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(guest.contains(SSID)) {
+			return guest.get(SSID).getFirstname();
+		} else {
+			// TODO: Fix better NotFound-handling
+			return "";
+		}
 	}
 
 	/**
