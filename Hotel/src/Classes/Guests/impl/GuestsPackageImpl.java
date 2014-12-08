@@ -699,16 +699,16 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 		op = initEOperation(getIGuests__GetGuestFirstName__String(), theTypesPackage.getString(), "getGuestFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIGuests__GetGuestLastName__String(), null, "getGuestLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__GetGuestLastName__String(), theTypesPackage.getString(), "getGuestLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIGuests__GetGuestTitle__String(), null, "getGuestTitle", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__GetGuestTitle__String(), theTypesPackage.getString(), "getGuestTitle", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIGuests__GetGuestEmail__String(), null, "getGuestEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__GetGuestEmail__String(), theTypesPackage.getString(), "getGuestEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIGuests__GetGuestPhone__String(), null, "getGuestPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__GetGuestPhone__String(), theTypesPackage.getString(), "getGuestPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIGuests__SearchGuests(), null, "searchGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);

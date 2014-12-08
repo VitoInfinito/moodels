@@ -1342,9 +1342,15 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_CW10YH7rEeSJ05NId2K7cQ" name="SSID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_RXfE4H7yEeS33va9t7PWGw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF_3psEeST-65JbGUt8g" name="getGuestTitle">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_SVDSoH7tEeS33va9t7PWGw" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_U2_RoH7yEeS33va9t7PWGw" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
@@ -1352,9 +1358,15 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Xv7m8H7tEeS33va9t7PWGw" name="SSID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_W8gzsH7yEeS33va9t7PWGw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGAXpsEeST-65JbGUt8g" name="getGuestPhone">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_dgkv4H7tEeS33va9t7PWGw" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_aKZsAH7yEeS33va9t7PWGw" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>

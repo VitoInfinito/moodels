@@ -218,7 +218,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getGuestLastName(String SSID) {
+	public String getGuestLastName(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -229,7 +229,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getGuestTitle(String SSID) {
+	public String getGuestTitle(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -240,7 +240,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getGuestEmail(String SSID) {
+	public String getGuestEmail(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -251,7 +251,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getGuestPhone(String SSID) {
+	public String getGuestPhone(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -484,17 +484,13 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_FIRST_NAME__STRING:
 				return getGuestFirstName((String)arguments.get(0));
 			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_LAST_NAME__STRING:
-				getGuestLastName((String)arguments.get(0));
-				return null;
+				return getGuestLastName((String)arguments.get(0));
 			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_TITLE__STRING:
-				getGuestTitle((String)arguments.get(0));
-				return null;
+				return getGuestTitle((String)arguments.get(0));
 			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_EMAIL__STRING:
-				getGuestEmail((String)arguments.get(0));
-				return null;
+				return getGuestEmail((String)arguments.get(0));
 			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_PHONE__STRING:
-				getGuestPhone((String)arguments.get(0));
-				return null;
+				return getGuestPhone((String)arguments.get(0));
 			case GuestsPackage.GUESTS_MANAGER___SEARCH_GUESTS:
 				searchGuests();
 				return null;

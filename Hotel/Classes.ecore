@@ -424,16 +424,16 @@
       <eOperations name="getGuestFirstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getGuestLastName" ordered="false" lowerBound="1">
+      <eOperations name="getGuestLastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getGuestTitle" ordered="false" lowerBound="1">
+      <eOperations name="getGuestTitle" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getGuestEmail" ordered="false" lowerBound="1">
+      <eOperations name="getGuestEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getGuestPhone" ordered="false" lowerBound="1">
+      <eOperations name="getGuestPhone" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="searchGuests" ordered="false" lowerBound="1"/>
