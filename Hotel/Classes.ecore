@@ -409,7 +409,10 @@
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="changeGuestTitle" ordered="false" lowerBound="1"/>
+      <eOperations name="changeGuestTitle" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="title" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eOperations name="changeGuestEmail" ordered="false" lowerBound="1"/>
       <eOperations name="changeGuestPhone" ordered="false" lowerBound="1"/>
       <eOperations name="getGuestFirstName" ordered="false" lowerBound="1"/>

@@ -50,10 +50,10 @@ public interface IGuests extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" titleDataType="org.eclipse.uml2.types.String" titleRequired="true" titleOrdered="false"
 	 * @generated
 	 */
-	void changeGuestTitle();
+	void changeGuestTitle(String SSID, String title);
 
 	/**
 	 * <!-- begin-user-doc -->
