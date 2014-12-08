@@ -128,7 +128,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGUESTS___CHANGE_GUEST_EMAIL = 5;
+	int IGUESTS___CHANGE_GUEST_EMAIL__STRING_STRING = 5;
 
 	/**
 	 * The operation id for the '<em>Change Guest Phone</em>' operation.
@@ -137,7 +137,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGUESTS___CHANGE_GUEST_PHONE = 6;
+	int IGUESTS___CHANGE_GUEST_PHONE__STRING_STRING = 6;
 
 	/**
 	 * The operation id for the '<em>Get Guest First Name</em>' operation.
@@ -146,7 +146,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGUESTS___GET_GUEST_FIRST_NAME = 7;
+	int IGUESTS___GET_GUEST_FIRST_NAME__STRING = 7;
 
 	/**
 	 * The operation id for the '<em>Get Guest Last Name</em>' operation.
@@ -164,7 +164,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGUESTS___GET_GUEST_TITLE = 9;
+	int IGUESTS___GET_GUEST_TITLE__STRING = 9;
 
 	/**
 	 * The operation id for the '<em>Get Guest Email</em>' operation.
@@ -173,7 +173,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGUESTS___GET_GUEST_EMAIL = 10;
+	int IGUESTS___GET_GUEST_EMAIL__STRING = 10;
 
 	/**
 	 * The operation id for the '<em>Get Guest Phone</em>' operation.
@@ -182,7 +182,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGUESTS___GET_GUEST_PHONE = 11;
+	int IGUESTS___GET_GUEST_PHONE__STRING = 11;
 
 	/**
 	 * The operation id for the '<em>Search Guests</em>' operation.
@@ -200,7 +200,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGUESTS___GET_GUEST_STAYS = 13;
+	int IGUESTS___GET_GUEST_STAYS__STRING = 13;
 
 	/**
 	 * The operation id for the '<em>Get Guest Requests</em>' operation.
@@ -209,7 +209,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGUESTS___GET_GUEST_REQUESTS = 14;
+	int IGUESTS___GET_GUEST_REQUESTS__STRING = 14;
 
 	/**
 	 * The operation id for the '<em>Remove Guest Stay</em>' operation.
@@ -245,7 +245,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGUESTS___GET_GUEST_ACCOUNT_USERNAME = 18;
+	int IGUESTS___GET_GUEST_ACCOUNT_USERNAME__STRING = 18;
 
 	/**
 	 * The operation id for the '<em>Get Guest Account Password</em>' operation.
@@ -254,7 +254,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGUESTS___GET_GUEST_ACCOUNT_PASSWORD = 19;
+	int IGUESTS___GET_GUEST_ACCOUNT_PASSWORD__STRING = 19;
 
 	/**
 	 * The operation id for the '<em>Generate Guest Account</em>' operation.
@@ -372,7 +372,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER___CHANGE_GUEST_EMAIL = IGUESTS___CHANGE_GUEST_EMAIL;
+	int GUESTS_MANAGER___CHANGE_GUEST_EMAIL__STRING_STRING = IGUESTS___CHANGE_GUEST_EMAIL__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Guest Phone</em>' operation.
@@ -381,7 +381,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER___CHANGE_GUEST_PHONE = IGUESTS___CHANGE_GUEST_PHONE;
+	int GUESTS_MANAGER___CHANGE_GUEST_PHONE__STRING_STRING = IGUESTS___CHANGE_GUEST_PHONE__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Get Guest First Name</em>' operation.
@@ -390,7 +390,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER___GET_GUEST_FIRST_NAME = IGUESTS___GET_GUEST_FIRST_NAME;
+	int GUESTS_MANAGER___GET_GUEST_FIRST_NAME__STRING = IGUESTS___GET_GUEST_FIRST_NAME__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Guest Last Name</em>' operation.
@@ -408,7 +408,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER___GET_GUEST_TITLE = IGUESTS___GET_GUEST_TITLE;
+	int GUESTS_MANAGER___GET_GUEST_TITLE__STRING = IGUESTS___GET_GUEST_TITLE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Guest Email</em>' operation.
@@ -417,7 +417,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER___GET_GUEST_EMAIL = IGUESTS___GET_GUEST_EMAIL;
+	int GUESTS_MANAGER___GET_GUEST_EMAIL__STRING = IGUESTS___GET_GUEST_EMAIL__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Guest Phone</em>' operation.
@@ -426,7 +426,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER___GET_GUEST_PHONE = IGUESTS___GET_GUEST_PHONE;
+	int GUESTS_MANAGER___GET_GUEST_PHONE__STRING = IGUESTS___GET_GUEST_PHONE__STRING;
 
 	/**
 	 * The operation id for the '<em>Search Guests</em>' operation.
@@ -444,7 +444,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER___GET_GUEST_STAYS = IGUESTS___GET_GUEST_STAYS;
+	int GUESTS_MANAGER___GET_GUEST_STAYS__STRING = IGUESTS___GET_GUEST_STAYS__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Guest Requests</em>' operation.
@@ -453,7 +453,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER___GET_GUEST_REQUESTS = IGUESTS___GET_GUEST_REQUESTS;
+	int GUESTS_MANAGER___GET_GUEST_REQUESTS__STRING = IGUESTS___GET_GUEST_REQUESTS__STRING;
 
 	/**
 	 * The operation id for the '<em>Remove Guest Stay</em>' operation.
@@ -489,7 +489,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER___GET_GUEST_ACCOUNT_USERNAME = IGUESTS___GET_GUEST_ACCOUNT_USERNAME;
+	int GUESTS_MANAGER___GET_GUEST_ACCOUNT_USERNAME__STRING = IGUESTS___GET_GUEST_ACCOUNT_USERNAME__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Guest Account Password</em>' operation.
@@ -498,7 +498,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER___GET_GUEST_ACCOUNT_PASSWORD = IGUESTS___GET_GUEST_ACCOUNT_PASSWORD;
+	int GUESTS_MANAGER___GET_GUEST_ACCOUNT_PASSWORD__STRING = IGUESTS___GET_GUEST_ACCOUNT_PASSWORD__STRING;
 
 	/**
 	 * The operation id for the '<em>Generate Guest Account</em>' operation.
@@ -915,34 +915,34 @@ public interface GuestsPackage extends EPackage {
 	EOperation getIGuests__ChangeGuestTitle__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.IGuests#changeGuestEmail() <em>Change Guest Email</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.IGuests#changeGuestEmail(java.lang.String, java.lang.String) <em>Change Guest Email</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Guest Email</em>' operation.
-	 * @see Classes.Guests.IGuests#changeGuestEmail()
+	 * @see Classes.Guests.IGuests#changeGuestEmail(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIGuests__ChangeGuestEmail();
+	EOperation getIGuests__ChangeGuestEmail__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.IGuests#changeGuestPhone() <em>Change Guest Phone</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.IGuests#changeGuestPhone(java.lang.String, java.lang.String) <em>Change Guest Phone</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Guest Phone</em>' operation.
-	 * @see Classes.Guests.IGuests#changeGuestPhone()
+	 * @see Classes.Guests.IGuests#changeGuestPhone(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIGuests__ChangeGuestPhone();
+	EOperation getIGuests__ChangeGuestPhone__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestFirstName() <em>Get Guest First Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestFirstName(java.lang.String) <em>Get Guest First Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Guest First Name</em>' operation.
-	 * @see Classes.Guests.IGuests#getGuestFirstName()
+	 * @see Classes.Guests.IGuests#getGuestFirstName(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIGuests__GetGuestFirstName();
+	EOperation getIGuests__GetGuestFirstName__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestLastName(java.lang.String) <em>Get Guest Last Name</em>}' operation.
@@ -955,34 +955,34 @@ public interface GuestsPackage extends EPackage {
 	EOperation getIGuests__GetGuestLastName__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestTitle() <em>Get Guest Title</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestTitle(java.lang.String) <em>Get Guest Title</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Guest Title</em>' operation.
-	 * @see Classes.Guests.IGuests#getGuestTitle()
+	 * @see Classes.Guests.IGuests#getGuestTitle(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIGuests__GetGuestTitle();
+	EOperation getIGuests__GetGuestTitle__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestEmail() <em>Get Guest Email</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestEmail(java.lang.String) <em>Get Guest Email</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Guest Email</em>' operation.
-	 * @see Classes.Guests.IGuests#getGuestEmail()
+	 * @see Classes.Guests.IGuests#getGuestEmail(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIGuests__GetGuestEmail();
+	EOperation getIGuests__GetGuestEmail__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestPhone() <em>Get Guest Phone</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestPhone(java.lang.String) <em>Get Guest Phone</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Guest Phone</em>' operation.
-	 * @see Classes.Guests.IGuests#getGuestPhone()
+	 * @see Classes.Guests.IGuests#getGuestPhone(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIGuests__GetGuestPhone();
+	EOperation getIGuests__GetGuestPhone__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Guests.IGuests#searchGuests() <em>Search Guests</em>}' operation.
@@ -995,24 +995,24 @@ public interface GuestsPackage extends EPackage {
 	EOperation getIGuests__SearchGuests();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestStays() <em>Get Guest Stays</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestStays(java.lang.String) <em>Get Guest Stays</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Guest Stays</em>' operation.
-	 * @see Classes.Guests.IGuests#getGuestStays()
+	 * @see Classes.Guests.IGuests#getGuestStays(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIGuests__GetGuestStays();
+	EOperation getIGuests__GetGuestStays__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestRequests() <em>Get Guest Requests</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestRequests(java.lang.String) <em>Get Guest Requests</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Guest Requests</em>' operation.
-	 * @see Classes.Guests.IGuests#getGuestRequests()
+	 * @see Classes.Guests.IGuests#getGuestRequests(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIGuests__GetGuestRequests();
+	EOperation getIGuests__GetGuestRequests__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Guests.IGuests#removeGuestStay() <em>Remove Guest Stay</em>}' operation.
@@ -1045,24 +1045,24 @@ public interface GuestsPackage extends EPackage {
 	EOperation getIGuests__RemoveGuestRequest();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestAccountUsername() <em>Get Guest Account Username</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestAccountUsername(java.lang.String) <em>Get Guest Account Username</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Guest Account Username</em>' operation.
-	 * @see Classes.Guests.IGuests#getGuestAccountUsername()
+	 * @see Classes.Guests.IGuests#getGuestAccountUsername(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIGuests__GetGuestAccountUsername();
+	EOperation getIGuests__GetGuestAccountUsername__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestAccountPassword() <em>Get Guest Account Password</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getGuestAccountPassword(java.lang.String) <em>Get Guest Account Password</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Guest Account Password</em>' operation.
-	 * @see Classes.Guests.IGuests#getGuestAccountPassword()
+	 * @see Classes.Guests.IGuests#getGuestAccountPassword(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIGuests__GetGuestAccountPassword();
+	EOperation getIGuests__GetGuestAccountPassword__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Guests.IGuests#generateGuestAccount() <em>Generate Guest Account</em>}' operation.
@@ -1303,7 +1303,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IGUESTS___CHANGE_GUEST_EMAIL = eINSTANCE.getIGuests__ChangeGuestEmail();
+		EOperation IGUESTS___CHANGE_GUEST_EMAIL__STRING_STRING = eINSTANCE.getIGuests__ChangeGuestEmail__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Guest Phone</b></em>' operation.
@@ -1311,7 +1311,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IGUESTS___CHANGE_GUEST_PHONE = eINSTANCE.getIGuests__ChangeGuestPhone();
+		EOperation IGUESTS___CHANGE_GUEST_PHONE__STRING_STRING = eINSTANCE.getIGuests__ChangeGuestPhone__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Guest First Name</b></em>' operation.
@@ -1319,7 +1319,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IGUESTS___GET_GUEST_FIRST_NAME = eINSTANCE.getIGuests__GetGuestFirstName();
+		EOperation IGUESTS___GET_GUEST_FIRST_NAME__STRING = eINSTANCE.getIGuests__GetGuestFirstName__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Guest Last Name</b></em>' operation.
@@ -1335,7 +1335,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IGUESTS___GET_GUEST_TITLE = eINSTANCE.getIGuests__GetGuestTitle();
+		EOperation IGUESTS___GET_GUEST_TITLE__STRING = eINSTANCE.getIGuests__GetGuestTitle__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Guest Email</b></em>' operation.
@@ -1343,7 +1343,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IGUESTS___GET_GUEST_EMAIL = eINSTANCE.getIGuests__GetGuestEmail();
+		EOperation IGUESTS___GET_GUEST_EMAIL__STRING = eINSTANCE.getIGuests__GetGuestEmail__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Guest Phone</b></em>' operation.
@@ -1351,7 +1351,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IGUESTS___GET_GUEST_PHONE = eINSTANCE.getIGuests__GetGuestPhone();
+		EOperation IGUESTS___GET_GUEST_PHONE__STRING = eINSTANCE.getIGuests__GetGuestPhone__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Search Guests</b></em>' operation.
@@ -1367,7 +1367,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IGUESTS___GET_GUEST_STAYS = eINSTANCE.getIGuests__GetGuestStays();
+		EOperation IGUESTS___GET_GUEST_STAYS__STRING = eINSTANCE.getIGuests__GetGuestStays__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Guest Requests</b></em>' operation.
@@ -1375,7 +1375,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IGUESTS___GET_GUEST_REQUESTS = eINSTANCE.getIGuests__GetGuestRequests();
+		EOperation IGUESTS___GET_GUEST_REQUESTS__STRING = eINSTANCE.getIGuests__GetGuestRequests__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Guest Stay</b></em>' operation.
@@ -1407,7 +1407,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IGUESTS___GET_GUEST_ACCOUNT_USERNAME = eINSTANCE.getIGuests__GetGuestAccountUsername();
+		EOperation IGUESTS___GET_GUEST_ACCOUNT_USERNAME__STRING = eINSTANCE.getIGuests__GetGuestAccountUsername__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Guest Account Password</b></em>' operation.
@@ -1415,7 +1415,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IGUESTS___GET_GUEST_ACCOUNT_PASSWORD = eINSTANCE.getIGuests__GetGuestAccountPassword();
+		EOperation IGUESTS___GET_GUEST_ACCOUNT_PASSWORD__STRING = eINSTANCE.getIGuests__GetGuestAccountPassword__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Generate Guest Account</b></em>' operation.

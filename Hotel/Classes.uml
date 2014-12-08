@@ -1314,25 +1314,71 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF-3psEeST-65JbGUt8g" name="changeGuestEmail"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF_HpsEeST-65JbGUt8g" name="changeGuestPhone"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF_XpsEeST-65JbGUt8g" name="getGuestFirstName"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF-3psEeST-65JbGUt8g" name="changeGuestEmail" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_BjFKQH7tEeS33va9t7PWGw" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_FhaBAH7tEeS33va9t7PWGw" name="eMail">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF_HpsEeST-65JbGUt8g" name="changeGuestPhone">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_J8xZEH7tEeS33va9t7PWGw" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MQ27kH7tEeS33va9t7PWGw" name="phoneNr">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF_XpsEeST-65JbGUt8g" name="getGuestFirstName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QFhgAH7tEeS33va9t7PWGw" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF_npsEeST-65JbGUt8g" name="getGuestLastName">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_CW10YH7rEeSJ05NId2K7cQ" name="SSID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF_3psEeST-65JbGUt8g" name="getGuestTitle"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGAHpsEeST-65JbGUt8g" name="getGuestEmail"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGAXpsEeST-65JbGUt8g" name="getGuestPhone"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF_3psEeST-65JbGUt8g" name="getGuestTitle">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SVDSoH7tEeS33va9t7PWGw" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGAHpsEeST-65JbGUt8g" name="getGuestEmail">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Xv7m8H7tEeS33va9t7PWGw" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGAXpsEeST-65JbGUt8g" name="getGuestPhone">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_dgkv4H7tEeS33va9t7PWGw" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGAnpsEeST-65JbGUt8g" name="searchGuests"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGA3psEeST-65JbGUt8g" name="getGuestStays"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGBHpsEeST-65JbGUt8g" name="getGuestRequests"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGA3psEeST-65JbGUt8g" name="getGuestStays">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ggdBYH7tEeS33va9t7PWGw" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGBHpsEeST-65JbGUt8g" name="getGuestRequests">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_jNi5wH7tEeS33va9t7PWGw" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGBXpsEeST-65JbGUt8g" name="removeGuestStay"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGBnpsEeST-65JbGUt8g" name="addGuestRequest"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGB3psEeST-65JbGUt8g" name="removeGuestRequest"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGCHpsEeST-65JbGUt8g" name="getGuestAccountUsername"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGCXpsEeST-65JbGUt8g" name="getGuestAccountPassword"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGCHpsEeST-65JbGUt8g" name="getGuestAccountUsername">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_lNVnQH7tEeS33va9t7PWGw" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGCXpsEeST-65JbGUt8g" name="getGuestAccountPassword">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_nTMggH7tEeS33va9t7PWGw" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGCnpsEeST-65JbGUt8g" name="generateGuestAccount"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGC3psEeST-65JbGUt8g" name="removeGuestAccount"/>
     </packagedElement>

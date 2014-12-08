@@ -392,7 +392,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIGuests__ChangeGuestEmail() {
+	public EOperation getIGuests__ChangeGuestEmail__String_String() {
 		return iGuestsEClass.getEOperations().get(5);
 	}
 
@@ -401,7 +401,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIGuests__ChangeGuestPhone() {
+	public EOperation getIGuests__ChangeGuestPhone__String_String() {
 		return iGuestsEClass.getEOperations().get(6);
 	}
 
@@ -410,7 +410,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIGuests__GetGuestFirstName() {
+	public EOperation getIGuests__GetGuestFirstName__String() {
 		return iGuestsEClass.getEOperations().get(7);
 	}
 
@@ -428,7 +428,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIGuests__GetGuestTitle() {
+	public EOperation getIGuests__GetGuestTitle__String() {
 		return iGuestsEClass.getEOperations().get(9);
 	}
 
@@ -437,7 +437,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIGuests__GetGuestEmail() {
+	public EOperation getIGuests__GetGuestEmail__String() {
 		return iGuestsEClass.getEOperations().get(10);
 	}
 
@@ -446,7 +446,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIGuests__GetGuestPhone() {
+	public EOperation getIGuests__GetGuestPhone__String() {
 		return iGuestsEClass.getEOperations().get(11);
 	}
 
@@ -464,7 +464,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIGuests__GetGuestStays() {
+	public EOperation getIGuests__GetGuestStays__String() {
 		return iGuestsEClass.getEOperations().get(13);
 	}
 
@@ -473,7 +473,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIGuests__GetGuestRequests() {
+	public EOperation getIGuests__GetGuestRequests__String() {
 		return iGuestsEClass.getEOperations().get(14);
 	}
 
@@ -509,7 +509,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIGuests__GetGuestAccountUsername() {
+	public EOperation getIGuests__GetGuestAccountUsername__String() {
 		return iGuestsEClass.getEOperations().get(18);
 	}
 
@@ -518,7 +518,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIGuests__GetGuestAccountPassword() {
+	public EOperation getIGuests__GetGuestAccountPassword__String() {
 		return iGuestsEClass.getEOperations().get(19);
 	}
 
@@ -593,21 +593,21 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 		createEOperation(iGuestsEClass, IGUESTS___CHANGE_GUEST_FIRST_NAME__STRING_STRING);
 		createEOperation(iGuestsEClass, IGUESTS___CHANGE_GUEST_LAST_NAME__STRING_STRING);
 		createEOperation(iGuestsEClass, IGUESTS___CHANGE_GUEST_TITLE__STRING_STRING);
-		createEOperation(iGuestsEClass, IGUESTS___CHANGE_GUEST_EMAIL);
-		createEOperation(iGuestsEClass, IGUESTS___CHANGE_GUEST_PHONE);
-		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_FIRST_NAME);
+		createEOperation(iGuestsEClass, IGUESTS___CHANGE_GUEST_EMAIL__STRING_STRING);
+		createEOperation(iGuestsEClass, IGUESTS___CHANGE_GUEST_PHONE__STRING_STRING);
+		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_FIRST_NAME__STRING);
 		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_LAST_NAME__STRING);
-		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_TITLE);
-		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_EMAIL);
-		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_PHONE);
+		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_TITLE__STRING);
+		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_EMAIL__STRING);
+		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_PHONE__STRING);
 		createEOperation(iGuestsEClass, IGUESTS___SEARCH_GUESTS);
-		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_STAYS);
-		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_REQUESTS);
+		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_STAYS__STRING);
+		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_REQUESTS__STRING);
 		createEOperation(iGuestsEClass, IGUESTS___REMOVE_GUEST_STAY);
 		createEOperation(iGuestsEClass, IGUESTS___ADD_GUEST_REQUEST);
 		createEOperation(iGuestsEClass, IGUESTS___REMOVE_GUEST_REQUEST);
-		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_ACCOUNT_USERNAME);
-		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_ACCOUNT_PASSWORD);
+		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_ACCOUNT_USERNAME__STRING);
+		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_ACCOUNT_PASSWORD__STRING);
 		createEOperation(iGuestsEClass, IGUESTS___GENERATE_GUEST_ACCOUNT);
 		createEOperation(iGuestsEClass, IGUESTS___REMOVE_GUEST_ACCOUNT);
 	}
@@ -688,26 +688,36 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "title", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIGuests__ChangeGuestEmail(), null, "changeGuestEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__ChangeGuestEmail__String_String(), null, "changeGuestEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "eMail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIGuests__ChangeGuestPhone(), null, "changeGuestPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__ChangeGuestPhone__String_String(), null, "changeGuestPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "phoneNr", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIGuests__GetGuestFirstName(), null, "getGuestFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__GetGuestFirstName__String(), null, "getGuestFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIGuests__GetGuestLastName__String(), null, "getGuestLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIGuests__GetGuestTitle(), null, "getGuestTitle", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__GetGuestTitle__String(), null, "getGuestTitle", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIGuests__GetGuestEmail(), null, "getGuestEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__GetGuestEmail__String(), null, "getGuestEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIGuests__GetGuestPhone(), null, "getGuestPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__GetGuestPhone__String(), null, "getGuestPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIGuests__SearchGuests(), null, "searchGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIGuests__GetGuestStays(), null, "getGuestStays", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__GetGuestStays__String(), null, "getGuestStays", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIGuests__GetGuestRequests(), null, "getGuestRequests", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__GetGuestRequests__String(), null, "getGuestRequests", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIGuests__RemoveGuestStay(), null, "removeGuestStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -715,9 +725,11 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 
 		initEOperation(getIGuests__RemoveGuestRequest(), null, "removeGuestRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIGuests__GetGuestAccountUsername(), null, "getGuestAccountUsername", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__GetGuestAccountUsername__String(), null, "getGuestAccountUsername", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIGuests__GetGuestAccountPassword(), null, "getGuestAccountPassword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__GetGuestAccountPassword__String(), null, "getGuestAccountPassword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIGuests__GenerateGuestAccount(), null, "generateGuestAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
