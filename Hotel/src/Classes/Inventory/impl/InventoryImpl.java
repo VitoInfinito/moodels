@@ -52,7 +52,6 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 */
 	protected InventoryImpl() {
 		super();
-		
 		itemType = (EMap<String, ItemType>) new HashMap<String, ItemType>();
 	}
 
@@ -80,9 +79,9 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changeItemStock(int id, int stock) {
-		if (itemType.containsKey(id + "")) {
-			itemType.get(id + "").setStock(stock);
+	public void changeItemStock(String id, int stock) {
+		if (itemType.containsKey(id)) {
+			itemType.get(id).setStock(stock);
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -94,9 +93,9 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int getItemPrice(int id) {
-		if (itemType.containsKey(id + "")) {
-			return itemType.get(id + "").getPrice();
+	public int getItemPrice(String id) {
+		if (itemType.containsKey(id)) {
+			return itemType.get(id).getPrice();
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -108,9 +107,9 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public String getItemName(int id) {
-		if (itemType.containsKey(id + "")) {
-			return itemType.get(id + "").getName();
+	public String getItemName(String id) {
+		if (itemType.containsKey(id)) {
+			return itemType.get(id).getName();
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -122,9 +121,9 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int getItemStock(int id) {
-		if (itemType.containsKey(id + "")) {
-			return itemType.get(id + "").getStock();
+	public int getItemStock(String id) {
+		if (itemType.containsKey(id)) {
+			return itemType.get(id).getStock();
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -136,9 +135,9 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int getItemExpense(int id) {
-		if (itemType.containsKey(id + "")) {
-			return itemType.get(id + "").getExpense();
+	public int getItemExpense(String id) {
+		if (itemType.containsKey(id)) {
+			return itemType.get(id).getExpense();
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -150,15 +149,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EList<Integer> getAllItemIDs() {
-		List<String> strList = new ArrayList<String>(getItemType().keySet());
-		List<Integer> intList = new ArrayList<Integer>();
-		
-		for(String s : strList) {
-			intList.add(Integer.valueOf(s));
-		}
-		
-		return (EList<Integer>) intList;
+	public List<String> getAllItemIDs() {
+		return new ArrayList<String>(getItemType().keySet());
 	}
 
 	/**
@@ -177,9 +169,9 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changeItemName(int id, String name) {
-		if (itemType.containsKey(id + "")) {
-			itemType.get(id + "").setName(name);
+	public void changeItemName(String id, String name) {
+		if (itemType.containsKey(id)) {
+			itemType.get(id).setName(name);
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -191,9 +183,9 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changeItemPrice(int id, int price) {
-		if (itemType.containsKey(id + "")) {
-			itemType.get(id + "").setPrice(price);
+	public void changeItemPrice(String id, int price) {
+		if (itemType.containsKey(id)) {
+			itemType.get(id).setPrice(price);
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -205,9 +197,9 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changeItemExpense(int id, int expense) {
-		if (itemType.containsKey(id + "")) {
-			itemType.get(id + "").setExpense(expense);
+	public void changeItemExpense(String id, int expense) {
+		if (itemType.containsKey(id)) {
+			itemType.get(id).setExpense(expense);
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -219,8 +211,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addItem(int id, String name, int price, int expense, int stock) {
-		if (!itemType.containsKey(id + "")) {
+	public void addItem(String id, String name, int price, int expense, int stock) {
+		if (!itemType.containsKey(id)) {
 			ItemTypeImpl item = new ItemTypeImpl();
 			
 			item.setId(id);
@@ -229,7 +221,7 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 			item.setExpense(expense);
 			item.setStock(stock);
 			
-			itemType.put(id + "", item);
+			itemType.put(id, item);
 		} else {
 			logger.warn("An ItemType with ID {} were already in the inventory.", id);
 			throw new InvalidIDException();
@@ -241,9 +233,9 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void removeItem(int id) {
-		if (itemType.containsKey(id + "")) {
-			itemType.remove(id + "");
+	public void removeItem(String id) {
+		if (itemType.containsKey(id)) {
+			itemType.remove(id);
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -319,35 +311,35 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case InventoryPackage.INVENTORY___CHANGE_ITEM_STOCK__INT_INT:
-				changeItemStock((Integer)arguments.get(0), (Integer)arguments.get(1));
+				changeItemStock((String)arguments.get(0), (Integer)arguments.get(1));
 				return null;
 			case InventoryPackage.INVENTORY___GET_ITEM_PRICE__INT:
-				return getItemPrice((Integer)arguments.get(0));
+				return getItemPrice((String)arguments.get(0));
 			case InventoryPackage.INVENTORY___GET_ITEM_NAME__INT:
-				return getItemName((Integer)arguments.get(0));
+				return getItemName((String)arguments.get(0));
 			case InventoryPackage.INVENTORY___GET_ITEM_STOCK__INT:
-				return getItemStock((Integer)arguments.get(0));
+				return getItemStock((String)arguments.get(0));
 			case InventoryPackage.INVENTORY___GET_ITEM_EXPENSE__INT:
-				return getItemExpense((Integer)arguments.get(0));
+				return getItemExpense((String)arguments.get(0));
 			case InventoryPackage.INVENTORY___GET_ALL_ITEM_IDS:
 				return getAllItemIDs();
 			case InventoryPackage.INVENTORY___SEARCH_ITEMS:
 				searchItems();
 				return null;
-			case InventoryPackage.INVENTORY___CHANGE_ITEM_NAME__INT_STRING:
-				changeItemName((Integer)arguments.get(0), (String)arguments.get(1));
+			case InventoryPackage.INVENTORY___CHANGE_ITEM_NAME__STRING_STRING:
+				changeItemName((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case InventoryPackage.INVENTORY___CHANGE_ITEM_PRICE__INT_INT:
-				changeItemPrice((Integer)arguments.get(0), (Integer)arguments.get(1));
+			case InventoryPackage.INVENTORY___CHANGE_ITEM_PRICE__STRING_INT:
+				changeItemPrice((String)arguments.get(0), (Integer)arguments.get(1));
 				return null;
-			case InventoryPackage.INVENTORY___CHANGE_ITEM_EXPENSE__INT_INT:
-				changeItemExpense((Integer)arguments.get(0), (Integer)arguments.get(1));
+			case InventoryPackage.INVENTORY___CHANGE_ITEM_EXPENSE__STRING_INT:
+				changeItemExpense((String)arguments.get(0), (Integer)arguments.get(1));
 				return null;
-			case InventoryPackage.INVENTORY___ADD_ITEM__INT_STRING_INT_INT_INT:
-				addItem((Integer)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4));
+			case InventoryPackage.INVENTORY___ADD_ITEM__STRING_STRING_INT_INT_INT:
+				addItem((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4));
 				return null;
-			case InventoryPackage.INVENTORY___REMOVE_ITEM__INT:
-				removeItem((Integer)arguments.get(0));
+			case InventoryPackage.INVENTORY___REMOVE_ITEM__STRING:
+				removeItem((String)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

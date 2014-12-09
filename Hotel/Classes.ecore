@@ -749,47 +749,47 @@
     <eClassifiers xsi:type="ecore:EClass" name="IManageInventory" abstract="true"
         interface="true" eSuperTypes="#//Inventory/IInventoryAccess">
       <eOperations name="changeItemName" ordered="false" lowerBound="1">
-        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="changeItemPrice" ordered="false" lowerBound="1">
-        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="changeItemExpense" ordered="false" lowerBound="1">
-        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="expense" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="addItem" ordered="false" lowerBound="1">
-        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="expense" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="stock" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="removeItem" ordered="false" lowerBound="1">
-        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IInventoryAccess" abstract="true"
         interface="true">
       <eOperations name="changeItemStock" ordered="false" lowerBound="1">
-        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="stock" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="getItemPrice" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
-        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="getItemName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
-        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="getItemStock" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
-        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="getItemExpense" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
-        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getAllItemIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eOperations name="getAllItemIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
       <eOperations name="searchItems" ordered="false" lowerBound="1"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Inventory" eSuperTypes="#//Inventory/IManageInventory">
@@ -806,7 +806,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="stock" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
-          eType="ecore:EDataType types.ecore#//Integer"/>
+          eType="ecore:EDataType types.ecore#//String"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="Restaurants" nsURI="http:///Classes/Restaurants.ecore" nsPrefix="Classes.Restaurants">

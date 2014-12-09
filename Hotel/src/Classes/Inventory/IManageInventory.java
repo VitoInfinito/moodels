@@ -17,41 +17,41 @@ public interface IManageInventory extends IInventoryAccess {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model idDataType="org.eclipse.uml2.types.Integer" idRequired="true" idOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
+	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
 	 * @generated
 	 */
-	void changeItemName(int id, String name);
+	void changeItemName(String id, String name);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model idDataType="org.eclipse.uml2.types.Integer" idRequired="true" idOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false"
+	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false"
 	 * @generated
 	 */
-	void changeItemPrice(int id, int price);
+	void changeItemPrice(String id, int price);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model idDataType="org.eclipse.uml2.types.Integer" idRequired="true" idOrdered="false" expenseDataType="org.eclipse.uml2.types.Integer" expenseRequired="true" expenseOrdered="false"
+	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" expenseDataType="org.eclipse.uml2.types.Integer" expenseRequired="true" expenseOrdered="false"
 	 * @generated
 	 */
-	void changeItemExpense(int id, int expense);
+	void changeItemExpense(String id, int expense);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model idDataType="org.eclipse.uml2.types.Integer" idRequired="true" idOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" expenseDataType="org.eclipse.uml2.types.Integer" expenseRequired="true" expenseOrdered="false" stockDataType="org.eclipse.uml2.types.Integer" stockRequired="true" stockOrdered="false"
+	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" expenseDataType="org.eclipse.uml2.types.Integer" expenseRequired="true" expenseOrdered="false" stockDataType="org.eclipse.uml2.types.Integer" stockRequired="true" stockOrdered="false"
 	 * @generated
 	 */
-	void addItem(int id, String name, int price, int expense, int stock);
+	void addItem(String id, String name, int price, int expense, int stock);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model idDataType="org.eclipse.uml2.types.Integer" idRequired="true" idOrdered="false"
+	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
 	 * @generated
 	 */
-	void removeItem(int id);
+	void removeItem(String id);
 
 } // IManageInventory

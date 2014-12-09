@@ -115,7 +115,7 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int ID_EDEFAULT = 0;
+	protected static final String ID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -125,7 +125,7 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 	 * @generated
 	 * @ordered
 	 */
-	protected int id = ID_EDEFAULT;
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -235,7 +235,7 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
@@ -244,8 +244,8 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setId(int newId) {
-		int oldId = id;
+	public void setId(String newId) {
+		String oldId = id;
 		id = newId;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, InventoryPackage.ITEM_TYPE__ID, oldId, id));
@@ -294,7 +294,7 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 				setStock((Integer)newValue);
 				return;
 			case InventoryPackage.ITEM_TYPE__ID:
-				setId((Integer)newValue);
+				setId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -344,7 +344,7 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 			case InventoryPackage.ITEM_TYPE__STOCK:
 				return stock != STOCK_EDEFAULT;
 			case InventoryPackage.ITEM_TYPE__ID:
-				return id != ID_EDEFAULT;
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}

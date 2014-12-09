@@ -4,8 +4,6 @@ package Classes.Accounts;
 
 import java.util.List;
 
-import org.eclipse.emf.common.util.EMap;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Manager</b></em>'.
