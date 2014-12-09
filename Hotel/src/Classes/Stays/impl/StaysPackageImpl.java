@@ -427,7 +427,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__CheckInGuest() {
+	public EOperation getIStays__CheckInGuest__String_String() {
 		return iStaysEClass.getEOperations().get(0);
 	}
 
@@ -436,7 +436,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__ChangeBookableOfStay() {
+	public EOperation getIStays__ChangeBookableOfStay__String_String() {
 		return iStaysEClass.getEOperations().get(1);
 	}
 
@@ -445,7 +445,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__AddNewStay() {
+	public EOperation getIStays__AddNewStay__String_String_Date_Date() {
 		return iStaysEClass.getEOperations().get(2);
 	}
 
@@ -454,7 +454,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__RemoveStay() {
+	public EOperation getIStays__RemoveStay__String() {
 		return iStaysEClass.getEOperations().get(3);
 	}
 
@@ -463,7 +463,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__AddBillToStay() {
+	public EOperation getIStays__AddBillToStay__String_String() {
 		return iStaysEClass.getEOperations().get(4);
 	}
 
@@ -472,7 +472,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__CheckOutGuest() {
+	public EOperation getIStays__CheckOutGuest__String_String() {
 		return iStaysEClass.getEOperations().get(5);
 	}
 
@@ -481,7 +481,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__AddResponsibleCreditCard() {
+	public EOperation getIStays__AddResponsibleCreditCard__String_String_String_int_int_String_String() {
 		return iStaysEClass.getEOperations().get(6);
 	}
 
@@ -490,7 +490,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__ChangeResponsibleCreditCard() {
+	public EOperation getIStays__ChangeResponsibleCreditCard__String_String_String_int_int_String_String() {
 		return iStaysEClass.getEOperations().get(7);
 	}
 
@@ -499,7 +499,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__GetGuestsOfHotelStay() {
+	public EOperation getIStays__GetGuestsOfHotelStay__String() {
 		return iStaysEClass.getEOperations().get(8);
 	}
 
@@ -517,7 +517,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__GetBookableOfHotelStay() {
+	public EOperation getIStays__GetBookableOfHotelStay__String() {
 		return iStaysEClass.getEOperations().get(10);
 	}
 
@@ -526,7 +526,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__GetBookingOfHotelStay() {
+	public EOperation getIStays__GetBookingOfHotelStay__String() {
 		return iStaysEClass.getEOperations().get(11);
 	}
 
@@ -544,7 +544,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__GetCheckedInGuestsOfHotelStay() {
+	public EOperation getIStays__GetCheckedInGuestsOfHotelStay__String() {
 		return iStaysEClass.getEOperations().get(13);
 	}
 
@@ -553,7 +553,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__GetCheckedOutGuestsOfHotelStay() {
+	public EOperation getIStays__GetCheckedOutGuestsOfHotelStay__String() {
 		return iStaysEClass.getEOperations().get(14);
 	}
 
@@ -562,7 +562,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__SearchHotelStays() {
+	public EOperation getIStays__SearchHotelStays__String() {
 		return iStaysEClass.getEOperations().get(15);
 	}
 
@@ -571,7 +571,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__SearchHotelStaysWithinPeriod() {
+	public EOperation getIStays__SearchHotelStaysWithinPeriod__String_Date_Date() {
 		return iStaysEClass.getEOperations().get(16);
 	}
 
@@ -580,7 +580,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__GetAllHotelStaysWithinPeriod() {
+	public EOperation getIStays__GetAllHotelStaysWithinPeriod__Date_Date() {
 		return iStaysEClass.getEOperations().get(17);
 	}
 
@@ -589,7 +589,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__GetAllUnpayedBillsOfHotelStay() {
+	public EOperation getIStays__GetAllUnpayedBillsOfHotelStay__String() {
 		return iStaysEClass.getEOperations().get(18);
 	}
 
@@ -598,7 +598,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__BillCreditCardWithAllUnpaidBillsOfHotelStay() {
+	public EOperation getIStays__BillCreditCardWithAllUnpaidBillsOfHotelStay__String() {
 		return iStaysEClass.getEOperations().get(19);
 	}
 
@@ -607,7 +607,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__IsResponsibleCreditCardAdded() {
+	public EOperation getIStays__IsResponsibleCreditCardAdded__String() {
 		return iStaysEClass.getEOperations().get(20);
 	}
 
@@ -616,7 +616,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__ChangePeriodOfStay() {
+	public EOperation getIStays__ChangePeriodOfStay__String_Date_Date() {
 		return iStaysEClass.getEOperations().get(21);
 	}
 
@@ -625,7 +625,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStays__RemoveBillFromStay() {
+	public EOperation getIStays__RemoveBillFromStay__String_String() {
 		return iStaysEClass.getEOperations().get(22);
 	}
 
@@ -686,29 +686,29 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 		createEReference(staysManagerEClass, STAYS_MANAGER__IGUESTS);
 
 		iStaysEClass = createEClass(ISTAYS);
-		createEOperation(iStaysEClass, ISTAYS___CHECK_IN_GUEST);
-		createEOperation(iStaysEClass, ISTAYS___CHANGE_BOOKABLE_OF_STAY);
-		createEOperation(iStaysEClass, ISTAYS___ADD_NEW_STAY);
-		createEOperation(iStaysEClass, ISTAYS___REMOVE_STAY);
-		createEOperation(iStaysEClass, ISTAYS___ADD_BILL_TO_STAY);
-		createEOperation(iStaysEClass, ISTAYS___CHECK_OUT_GUEST);
-		createEOperation(iStaysEClass, ISTAYS___ADD_RESPONSIBLE_CREDIT_CARD);
-		createEOperation(iStaysEClass, ISTAYS___CHANGE_RESPONSIBLE_CREDIT_CARD);
-		createEOperation(iStaysEClass, ISTAYS___GET_GUESTS_OF_HOTEL_STAY);
+		createEOperation(iStaysEClass, ISTAYS___CHECK_IN_GUEST__STRING_STRING);
+		createEOperation(iStaysEClass, ISTAYS___CHANGE_BOOKABLE_OF_STAY__STRING_STRING);
+		createEOperation(iStaysEClass, ISTAYS___ADD_NEW_STAY__STRING_STRING_DATE_DATE);
+		createEOperation(iStaysEClass, ISTAYS___REMOVE_STAY__STRING);
+		createEOperation(iStaysEClass, ISTAYS___ADD_BILL_TO_STAY__STRING_STRING);
+		createEOperation(iStaysEClass, ISTAYS___CHECK_OUT_GUEST__STRING_STRING);
+		createEOperation(iStaysEClass, ISTAYS___ADD_RESPONSIBLE_CREDIT_CARD__STRING_STRING_STRING_INT_INT_STRING_STRING);
+		createEOperation(iStaysEClass, ISTAYS___CHANGE_RESPONSIBLE_CREDIT_CARD__STRING_STRING_STRING_INT_INT_STRING_STRING);
+		createEOperation(iStaysEClass, ISTAYS___GET_GUESTS_OF_HOTEL_STAY__STRING);
 		createEOperation(iStaysEClass, ISTAYS___GET_BILLS_OF_HOTEL_STAY__STRING);
-		createEOperation(iStaysEClass, ISTAYS___GET_BOOKABLE_OF_HOTEL_STAY);
-		createEOperation(iStaysEClass, ISTAYS___GET_BOOKING_OF_HOTEL_STAY);
+		createEOperation(iStaysEClass, ISTAYS___GET_BOOKABLE_OF_HOTEL_STAY__STRING);
+		createEOperation(iStaysEClass, ISTAYS___GET_BOOKING_OF_HOTEL_STAY__STRING);
 		createEOperation(iStaysEClass, ISTAYS___GET_ALL_HOTEL_STAY_IDS);
-		createEOperation(iStaysEClass, ISTAYS___GET_CHECKED_IN_GUESTS_OF_HOTEL_STAY);
-		createEOperation(iStaysEClass, ISTAYS___GET_CHECKED_OUT_GUESTS_OF_HOTEL_STAY);
-		createEOperation(iStaysEClass, ISTAYS___SEARCH_HOTEL_STAYS);
-		createEOperation(iStaysEClass, ISTAYS___SEARCH_HOTEL_STAYS_WITHIN_PERIOD);
-		createEOperation(iStaysEClass, ISTAYS___GET_ALL_HOTEL_STAYS_WITHIN_PERIOD);
-		createEOperation(iStaysEClass, ISTAYS___GET_ALL_UNPAYED_BILLS_OF_HOTEL_STAY);
-		createEOperation(iStaysEClass, ISTAYS___BILL_CREDIT_CARD_WITH_ALL_UNPAID_BILLS_OF_HOTEL_STAY);
-		createEOperation(iStaysEClass, ISTAYS___IS_RESPONSIBLE_CREDIT_CARD_ADDED);
-		createEOperation(iStaysEClass, ISTAYS___CHANGE_PERIOD_OF_STAY);
-		createEOperation(iStaysEClass, ISTAYS___REMOVE_BILL_FROM_STAY);
+		createEOperation(iStaysEClass, ISTAYS___GET_CHECKED_IN_GUESTS_OF_HOTEL_STAY__STRING);
+		createEOperation(iStaysEClass, ISTAYS___GET_CHECKED_OUT_GUESTS_OF_HOTEL_STAY__STRING);
+		createEOperation(iStaysEClass, ISTAYS___SEARCH_HOTEL_STAYS__STRING);
+		createEOperation(iStaysEClass, ISTAYS___SEARCH_HOTEL_STAYS_WITHIN_PERIOD__STRING_DATE_DATE);
+		createEOperation(iStaysEClass, ISTAYS___GET_ALL_HOTEL_STAYS_WITHIN_PERIOD__DATE_DATE);
+		createEOperation(iStaysEClass, ISTAYS___GET_ALL_UNPAYED_BILLS_OF_HOTEL_STAY__STRING);
+		createEOperation(iStaysEClass, ISTAYS___BILL_CREDIT_CARD_WITH_ALL_UNPAID_BILLS_OF_HOTEL_STAY__STRING);
+		createEOperation(iStaysEClass, ISTAYS___IS_RESPONSIBLE_CREDIT_CARD_ADDED__STRING);
+		createEOperation(iStaysEClass, ISTAYS___CHANGE_PERIOD_OF_STAY__STRING_DATE_DATE);
+		createEOperation(iStaysEClass, ISTAYS___REMOVE_BILL_FROM_STAY__STRING_STRING);
 	}
 
 	/**
@@ -781,52 +781,98 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 
 		initEClass(iStaysEClass, IStays.class, "IStays", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getIStays__CheckInGuest(), null, "checkInGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getIStays__CheckInGuest__String_String(), null, "checkInGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "guestID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__ChangeBookableOfStay(), null, "changeBookableOfStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__ChangeBookableOfStay__String_String(), null, "changeBookableOfStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookableID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__AddNewStay(), null, "addNewStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__AddNewStay__String_String_Date_Date(), null, "addNewStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookableID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "fromDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "toDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__RemoveStay(), null, "removeStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIStays__AddBillToStay(), null, "addBillToStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIStays__CheckOutGuest(), null, "checkOutGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIStays__AddResponsibleCreditCard(), null, "addResponsibleCreditCard", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIStays__ChangeResponsibleCreditCard(), null, "changeResponsibleCreditCard", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIStays__GetGuestsOfHotelStay(), null, "getGuestsOfHotelStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		EOperation op = initEOperation(getIStays__GetBillsOfHotelStay__String(), null, "getBillsOfHotelStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__RemoveStay__String(), null, "removeStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__GetBookableOfHotelStay(), null, "getBookableOfHotelStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__AddBillToStay__String_String(), null, "addBillToStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__GetBookingOfHotelStay(), null, "getBookingOfHotelStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__CheckOutGuest__String_String(), null, "checkOutGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "guestID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__GetAllHotelStayIDs(), null, "getAllHotelStayIDs", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__AddResponsibleCreditCard__String_String_String_int_int_String_String(), null, "addResponsibleCreditCard", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__GetCheckedInGuestsOfHotelStay(), null, "getCheckedInGuestsOfHotelStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__ChangeResponsibleCreditCard__String_String_String_int_int_String_String(), null, "changeResponsibleCreditCard", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__GetCheckedOutGuestsOfHotelStay(), null, "getCheckedOutGuestsOfHotelStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__GetGuestsOfHotelStay__String(), theTypesPackage.getString(), "getGuestsOfHotelStay", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__SearchHotelStays(), null, "searchHotelStays", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__GetBillsOfHotelStay__String(), theTypesPackage.getString(), "getBillsOfHotelStay", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__SearchHotelStaysWithinPeriod(), null, "searchHotelStaysWithinPeriod", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__GetBookableOfHotelStay__String(), theTypesPackage.getString(), "getBookableOfHotelStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__GetAllHotelStaysWithinPeriod(), null, "getAllHotelStaysWithinPeriod", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__GetBookingOfHotelStay__String(), theTypesPackage.getString(), "getBookingOfHotelStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__GetAllUnpayedBillsOfHotelStay(), null, "getAllUnpayedBillsOfHotelStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIStays__GetAllHotelStayIDs(), theTypesPackage.getString(), "getAllHotelStayIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__BillCreditCardWithAllUnpaidBillsOfHotelStay(), null, "billCreditCardWithAllUnpaidBillsOfHotelStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__GetCheckedInGuestsOfHotelStay__String(), theTypesPackage.getString(), "getCheckedInGuestsOfHotelStay", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__IsResponsibleCreditCardAdded(), null, "isResponsibleCreditCardAdded", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__GetCheckedOutGuestsOfHotelStay__String(), theTypesPackage.getString(), "getCheckedOutGuestsOfHotelStay", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__ChangePeriodOfStay(), null, "changePeriodOfStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__SearchHotelStays__String(), theTypesPackage.getString(), "searchHotelStays", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStays__RemoveBillFromStay(), null, "removeBillFromStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__SearchHotelStaysWithinPeriod__String_Date_Date(), theTypesPackage.getString(), "searchHotelStaysWithinPeriod", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIStays__GetAllHotelStaysWithinPeriod__Date_Date(), theTypesPackage.getString(), "getAllHotelStaysWithinPeriod", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIStays__GetAllUnpayedBillsOfHotelStay__String(), theTypesPackage.getString(), "getAllUnpayedBillsOfHotelStay", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIStays__BillCreditCardWithAllUnpaidBillsOfHotelStay__String(), null, "billCreditCardWithAllUnpaidBillsOfHotelStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIStays__IsResponsibleCreditCardAdded__String(), theTypesPackage.getBoolean(), "isResponsibleCreditCardAdded", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIStays__ChangePeriodOfStay__String_Date_Date(), null, "changePeriodOfStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIStays__RemoveBillFromStay__String_String(), null, "removeBillFromStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

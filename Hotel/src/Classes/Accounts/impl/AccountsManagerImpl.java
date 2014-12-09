@@ -157,6 +157,28 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAccountName(String username) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> searchAccounts(String keyword) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public Account getAccount(String username) {
@@ -166,17 +188,6 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 			logger.warn("An account with username {} could not be found.", username);
 			throw new InvalidIDException();
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void searchAccounts() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -296,11 +307,10 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 				return null;
 			case AccountsPackage.ACCOUNTS_MANAGER___GET_ACCOUNT_PASSWORD__STRING:
 				return getAccountPassword((String)arguments.get(0));
-			case AccountsPackage.ACCOUNTS_MANAGER___GET_ACCOUNT__STRING:
-				return getAccount((String)arguments.get(0));
-			case AccountsPackage.ACCOUNTS_MANAGER___SEARCH_ACCOUNTS:
-				searchAccounts();
-				return null;
+			case AccountsPackage.ACCOUNTS_MANAGER___GET_ACCOUNT_NAME__STRING:
+				return getAccountName((String)arguments.get(0));
+			case AccountsPackage.ACCOUNTS_MANAGER___SEARCH_ACCOUNTS__STRING:
+				return searchAccounts((String)arguments.get(0));
 			case AccountsPackage.ACCOUNTS_MANAGER___VALIDATE_ACCOUNT__STRING_STRING:
 				return validateAccount((String)arguments.get(0), (String)arguments.get(1));
 			case AccountsPackage.ACCOUNTS_MANAGER___LOGIN__STRING_STRING:

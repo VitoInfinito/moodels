@@ -221,31 +221,98 @@
             propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Stays/StaysManager/iGuests"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Stays/IStays">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/checkInGuest"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/changeBookableOfStay"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/addNewStay"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/removeStay"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/addBillToStay"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/checkOutGuest"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/addResponsibleCreditCard"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/changeResponsibleCreditCard"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getGuestsOfHotelStay"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/checkInGuest">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/checkInGuest/stayID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/checkInGuest/guestID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/changeBookableOfStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/changeBookableOfStay/stayID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/changeBookableOfStay/bookableID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/addNewStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/addNewStay/bookableID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/addNewStay/bookingID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/addNewStay/fromDate"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/addNewStay/toDate"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/removeStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/removeStay/stayID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/addBillToStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/addBillToStay/stayID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/addBillToStay/billID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/checkOutGuest">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/checkOutGuest/stayID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/checkOutGuest/guestID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/addResponsibleCreditCard">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/addResponsibleCreditCard/stayID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/addResponsibleCreditCard/ccNumber"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/addResponsibleCreditCard/ccv"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/addResponsibleCreditCard/expiryMonth"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/addResponsibleCreditCard/expiryYear"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/addResponsibleCreditCard/firstName"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/addResponsibleCreditCard/lastName"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/changeResponsibleCreditCard">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/changeResponsibleCreditCard/stayID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/changeResponsibleCreditCard/ccNumber"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/changeResponsibleCreditCard/ccv"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/changeResponsibleCreditCard/expiryMonth"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/changeResponsibleCreditCard/expiryYear"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/changeResponsibleCreditCard/firstName"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/changeResponsibleCreditCard/lastName"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getGuestsOfHotelStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/getGuestsOfHotelStay/stayID"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getBillsOfHotelStay">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/getBillsOfHotelStay/stayID"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getBookableOfHotelStay"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getBookingOfHotelStay"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getBookableOfHotelStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/getBookableOfHotelStay/stayID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getBookingOfHotelStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/getBookingOfHotelStay/stayID"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getAllHotelStayIDs"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getCheckedInGuestsOfHotelStay"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getCheckedOutGuestsOfHotelStay"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/searchHotelStays"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/searchHotelStaysWithinPeriod"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getAllHotelStaysWithinPeriod"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getAllUnpayedBillsOfHotelStay"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/billCreditCardWithAllUnpaidBillsOfHotelStay"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/isResponsibleCreditCardAdded"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/changePeriodOfStay"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/removeBillFromStay"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getCheckedInGuestsOfHotelStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/getCheckedInGuestsOfHotelStay/stayID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getCheckedOutGuestsOfHotelStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/getCheckedOutGuestsOfHotelStay/stayID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/searchHotelStays">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/searchHotelStays/keyword"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/searchHotelStaysWithinPeriod">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/searchHotelStaysWithinPeriod/keyword"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/searchHotelStaysWithinPeriod/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/searchHotelStaysWithinPeriod/to"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getAllHotelStaysWithinPeriod">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/getAllHotelStaysWithinPeriod/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/getAllHotelStaysWithinPeriod/to"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/getAllUnpayedBillsOfHotelStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/getAllUnpayedBillsOfHotelStay/stayID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/billCreditCardWithAllUnpaidBillsOfHotelStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/billCreditCardWithAllUnpaidBillsOfHotelStay/stayID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/isResponsibleCreditCardAdded">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/isResponsibleCreditCardAdded/stayID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/changePeriodOfStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/changePeriodOfStay/stayID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/changePeriodOfStay/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/changePeriodOfStay/to"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/IStays/removeBillFromStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/removeBillFromStay/stayID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/IStays/removeBillFromStay/billID"/>
+        </genOperations>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Banking" basePackage="Classes"
@@ -530,10 +597,12 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IManageAccounts/getAccountPassword">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Accounts/IManageAccounts/getAccountPassword/username"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IManageAccounts/getAccount">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Accounts/IManageAccounts/getAccount/username"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IManageAccounts/getAccountName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Accounts/IManageAccounts/getAccountName/username"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IManageAccounts/searchAccounts"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IManageAccounts/searchAccounts">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Accounts/IManageAccounts/searchAccounts/keyword"/>
+        </genOperations>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Bookings" basePackage="Classes"

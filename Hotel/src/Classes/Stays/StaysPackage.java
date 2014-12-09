@@ -301,7 +301,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___CHECK_IN_GUEST = 0;
+	int ISTAYS___CHECK_IN_GUEST__STRING_STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Change Bookable Of Stay</em>' operation.
@@ -310,7 +310,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___CHANGE_BOOKABLE_OF_STAY = 1;
+	int ISTAYS___CHANGE_BOOKABLE_OF_STAY__STRING_STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Add New Stay</em>' operation.
@@ -319,7 +319,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___ADD_NEW_STAY = 2;
+	int ISTAYS___ADD_NEW_STAY__STRING_STRING_DATE_DATE = 2;
 
 	/**
 	 * The operation id for the '<em>Remove Stay</em>' operation.
@@ -328,7 +328,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___REMOVE_STAY = 3;
+	int ISTAYS___REMOVE_STAY__STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Add Bill To Stay</em>' operation.
@@ -337,7 +337,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___ADD_BILL_TO_STAY = 4;
+	int ISTAYS___ADD_BILL_TO_STAY__STRING_STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Check Out Guest</em>' operation.
@@ -346,7 +346,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___CHECK_OUT_GUEST = 5;
+	int ISTAYS___CHECK_OUT_GUEST__STRING_STRING = 5;
 
 	/**
 	 * The operation id for the '<em>Add Responsible Credit Card</em>' operation.
@@ -355,7 +355,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___ADD_RESPONSIBLE_CREDIT_CARD = 6;
+	int ISTAYS___ADD_RESPONSIBLE_CREDIT_CARD__STRING_STRING_STRING_INT_INT_STRING_STRING = 6;
 
 	/**
 	 * The operation id for the '<em>Change Responsible Credit Card</em>' operation.
@@ -364,7 +364,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___CHANGE_RESPONSIBLE_CREDIT_CARD = 7;
+	int ISTAYS___CHANGE_RESPONSIBLE_CREDIT_CARD__STRING_STRING_STRING_INT_INT_STRING_STRING = 7;
 
 	/**
 	 * The operation id for the '<em>Get Guests Of Hotel Stay</em>' operation.
@@ -373,7 +373,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___GET_GUESTS_OF_HOTEL_STAY = 8;
+	int ISTAYS___GET_GUESTS_OF_HOTEL_STAY__STRING = 8;
 
 	/**
 	 * The operation id for the '<em>Get Bills Of Hotel Stay</em>' operation.
@@ -391,7 +391,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___GET_BOOKABLE_OF_HOTEL_STAY = 10;
+	int ISTAYS___GET_BOOKABLE_OF_HOTEL_STAY__STRING = 10;
 
 	/**
 	 * The operation id for the '<em>Get Booking Of Hotel Stay</em>' operation.
@@ -400,7 +400,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___GET_BOOKING_OF_HOTEL_STAY = 11;
+	int ISTAYS___GET_BOOKING_OF_HOTEL_STAY__STRING = 11;
 
 	/**
 	 * The operation id for the '<em>Get All Hotel Stay IDs</em>' operation.
@@ -418,7 +418,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___GET_CHECKED_IN_GUESTS_OF_HOTEL_STAY = 13;
+	int ISTAYS___GET_CHECKED_IN_GUESTS_OF_HOTEL_STAY__STRING = 13;
 
 	/**
 	 * The operation id for the '<em>Get Checked Out Guests Of Hotel Stay</em>' operation.
@@ -427,7 +427,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___GET_CHECKED_OUT_GUESTS_OF_HOTEL_STAY = 14;
+	int ISTAYS___GET_CHECKED_OUT_GUESTS_OF_HOTEL_STAY__STRING = 14;
 
 	/**
 	 * The operation id for the '<em>Search Hotel Stays</em>' operation.
@@ -436,7 +436,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___SEARCH_HOTEL_STAYS = 15;
+	int ISTAYS___SEARCH_HOTEL_STAYS__STRING = 15;
 
 	/**
 	 * The operation id for the '<em>Search Hotel Stays Within Period</em>' operation.
@@ -445,7 +445,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___SEARCH_HOTEL_STAYS_WITHIN_PERIOD = 16;
+	int ISTAYS___SEARCH_HOTEL_STAYS_WITHIN_PERIOD__STRING_DATE_DATE = 16;
 
 	/**
 	 * The operation id for the '<em>Get All Hotel Stays Within Period</em>' operation.
@@ -454,7 +454,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___GET_ALL_HOTEL_STAYS_WITHIN_PERIOD = 17;
+	int ISTAYS___GET_ALL_HOTEL_STAYS_WITHIN_PERIOD__DATE_DATE = 17;
 
 	/**
 	 * The operation id for the '<em>Get All Unpayed Bills Of Hotel Stay</em>' operation.
@@ -463,7 +463,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___GET_ALL_UNPAYED_BILLS_OF_HOTEL_STAY = 18;
+	int ISTAYS___GET_ALL_UNPAYED_BILLS_OF_HOTEL_STAY__STRING = 18;
 
 	/**
 	 * The operation id for the '<em>Bill Credit Card With All Unpaid Bills Of Hotel Stay</em>' operation.
@@ -472,7 +472,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___BILL_CREDIT_CARD_WITH_ALL_UNPAID_BILLS_OF_HOTEL_STAY = 19;
+	int ISTAYS___BILL_CREDIT_CARD_WITH_ALL_UNPAID_BILLS_OF_HOTEL_STAY__STRING = 19;
 
 	/**
 	 * The operation id for the '<em>Is Responsible Credit Card Added</em>' operation.
@@ -481,7 +481,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___IS_RESPONSIBLE_CREDIT_CARD_ADDED = 20;
+	int ISTAYS___IS_RESPONSIBLE_CREDIT_CARD_ADDED__STRING = 20;
 
 	/**
 	 * The operation id for the '<em>Change Period Of Stay</em>' operation.
@@ -490,7 +490,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___CHANGE_PERIOD_OF_STAY = 21;
+	int ISTAYS___CHANGE_PERIOD_OF_STAY__STRING_DATE_DATE = 21;
 
 	/**
 	 * The operation id for the '<em>Remove Bill From Stay</em>' operation.
@@ -499,7 +499,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAYS___REMOVE_BILL_FROM_STAY = 22;
+	int ISTAYS___REMOVE_BILL_FROM_STAY__STRING_STRING = 22;
 
 	/**
 	 * The number of operations of the '<em>IStays</em>' class.
@@ -572,7 +572,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___CHECK_IN_GUEST = ISTAYS___CHECK_IN_GUEST;
+	int STAYS_MANAGER___CHECK_IN_GUEST__STRING_STRING = ISTAYS___CHECK_IN_GUEST__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Bookable Of Stay</em>' operation.
@@ -581,7 +581,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___CHANGE_BOOKABLE_OF_STAY = ISTAYS___CHANGE_BOOKABLE_OF_STAY;
+	int STAYS_MANAGER___CHANGE_BOOKABLE_OF_STAY__STRING_STRING = ISTAYS___CHANGE_BOOKABLE_OF_STAY__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Add New Stay</em>' operation.
@@ -590,7 +590,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___ADD_NEW_STAY = ISTAYS___ADD_NEW_STAY;
+	int STAYS_MANAGER___ADD_NEW_STAY__STRING_STRING_DATE_DATE = ISTAYS___ADD_NEW_STAY__STRING_STRING_DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Remove Stay</em>' operation.
@@ -599,7 +599,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___REMOVE_STAY = ISTAYS___REMOVE_STAY;
+	int STAYS_MANAGER___REMOVE_STAY__STRING = ISTAYS___REMOVE_STAY__STRING;
 
 	/**
 	 * The operation id for the '<em>Add Bill To Stay</em>' operation.
@@ -608,7 +608,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___ADD_BILL_TO_STAY = ISTAYS___ADD_BILL_TO_STAY;
+	int STAYS_MANAGER___ADD_BILL_TO_STAY__STRING_STRING = ISTAYS___ADD_BILL_TO_STAY__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Check Out Guest</em>' operation.
@@ -617,7 +617,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___CHECK_OUT_GUEST = ISTAYS___CHECK_OUT_GUEST;
+	int STAYS_MANAGER___CHECK_OUT_GUEST__STRING_STRING = ISTAYS___CHECK_OUT_GUEST__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Add Responsible Credit Card</em>' operation.
@@ -626,7 +626,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___ADD_RESPONSIBLE_CREDIT_CARD = ISTAYS___ADD_RESPONSIBLE_CREDIT_CARD;
+	int STAYS_MANAGER___ADD_RESPONSIBLE_CREDIT_CARD__STRING_STRING_STRING_INT_INT_STRING_STRING = ISTAYS___ADD_RESPONSIBLE_CREDIT_CARD__STRING_STRING_STRING_INT_INT_STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Responsible Credit Card</em>' operation.
@@ -635,7 +635,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___CHANGE_RESPONSIBLE_CREDIT_CARD = ISTAYS___CHANGE_RESPONSIBLE_CREDIT_CARD;
+	int STAYS_MANAGER___CHANGE_RESPONSIBLE_CREDIT_CARD__STRING_STRING_STRING_INT_INT_STRING_STRING = ISTAYS___CHANGE_RESPONSIBLE_CREDIT_CARD__STRING_STRING_STRING_INT_INT_STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Get Guests Of Hotel Stay</em>' operation.
@@ -644,7 +644,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___GET_GUESTS_OF_HOTEL_STAY = ISTAYS___GET_GUESTS_OF_HOTEL_STAY;
+	int STAYS_MANAGER___GET_GUESTS_OF_HOTEL_STAY__STRING = ISTAYS___GET_GUESTS_OF_HOTEL_STAY__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Bills Of Hotel Stay</em>' operation.
@@ -662,7 +662,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___GET_BOOKABLE_OF_HOTEL_STAY = ISTAYS___GET_BOOKABLE_OF_HOTEL_STAY;
+	int STAYS_MANAGER___GET_BOOKABLE_OF_HOTEL_STAY__STRING = ISTAYS___GET_BOOKABLE_OF_HOTEL_STAY__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Booking Of Hotel Stay</em>' operation.
@@ -671,7 +671,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___GET_BOOKING_OF_HOTEL_STAY = ISTAYS___GET_BOOKING_OF_HOTEL_STAY;
+	int STAYS_MANAGER___GET_BOOKING_OF_HOTEL_STAY__STRING = ISTAYS___GET_BOOKING_OF_HOTEL_STAY__STRING;
 
 	/**
 	 * The operation id for the '<em>Get All Hotel Stay IDs</em>' operation.
@@ -689,7 +689,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___GET_CHECKED_IN_GUESTS_OF_HOTEL_STAY = ISTAYS___GET_CHECKED_IN_GUESTS_OF_HOTEL_STAY;
+	int STAYS_MANAGER___GET_CHECKED_IN_GUESTS_OF_HOTEL_STAY__STRING = ISTAYS___GET_CHECKED_IN_GUESTS_OF_HOTEL_STAY__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Checked Out Guests Of Hotel Stay</em>' operation.
@@ -698,7 +698,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___GET_CHECKED_OUT_GUESTS_OF_HOTEL_STAY = ISTAYS___GET_CHECKED_OUT_GUESTS_OF_HOTEL_STAY;
+	int STAYS_MANAGER___GET_CHECKED_OUT_GUESTS_OF_HOTEL_STAY__STRING = ISTAYS___GET_CHECKED_OUT_GUESTS_OF_HOTEL_STAY__STRING;
 
 	/**
 	 * The operation id for the '<em>Search Hotel Stays</em>' operation.
@@ -707,7 +707,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___SEARCH_HOTEL_STAYS = ISTAYS___SEARCH_HOTEL_STAYS;
+	int STAYS_MANAGER___SEARCH_HOTEL_STAYS__STRING = ISTAYS___SEARCH_HOTEL_STAYS__STRING;
 
 	/**
 	 * The operation id for the '<em>Search Hotel Stays Within Period</em>' operation.
@@ -716,7 +716,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___SEARCH_HOTEL_STAYS_WITHIN_PERIOD = ISTAYS___SEARCH_HOTEL_STAYS_WITHIN_PERIOD;
+	int STAYS_MANAGER___SEARCH_HOTEL_STAYS_WITHIN_PERIOD__STRING_DATE_DATE = ISTAYS___SEARCH_HOTEL_STAYS_WITHIN_PERIOD__STRING_DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Get All Hotel Stays Within Period</em>' operation.
@@ -725,7 +725,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___GET_ALL_HOTEL_STAYS_WITHIN_PERIOD = ISTAYS___GET_ALL_HOTEL_STAYS_WITHIN_PERIOD;
+	int STAYS_MANAGER___GET_ALL_HOTEL_STAYS_WITHIN_PERIOD__DATE_DATE = ISTAYS___GET_ALL_HOTEL_STAYS_WITHIN_PERIOD__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Get All Unpayed Bills Of Hotel Stay</em>' operation.
@@ -734,7 +734,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___GET_ALL_UNPAYED_BILLS_OF_HOTEL_STAY = ISTAYS___GET_ALL_UNPAYED_BILLS_OF_HOTEL_STAY;
+	int STAYS_MANAGER___GET_ALL_UNPAYED_BILLS_OF_HOTEL_STAY__STRING = ISTAYS___GET_ALL_UNPAYED_BILLS_OF_HOTEL_STAY__STRING;
 
 	/**
 	 * The operation id for the '<em>Bill Credit Card With All Unpaid Bills Of Hotel Stay</em>' operation.
@@ -743,7 +743,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___BILL_CREDIT_CARD_WITH_ALL_UNPAID_BILLS_OF_HOTEL_STAY = ISTAYS___BILL_CREDIT_CARD_WITH_ALL_UNPAID_BILLS_OF_HOTEL_STAY;
+	int STAYS_MANAGER___BILL_CREDIT_CARD_WITH_ALL_UNPAID_BILLS_OF_HOTEL_STAY__STRING = ISTAYS___BILL_CREDIT_CARD_WITH_ALL_UNPAID_BILLS_OF_HOTEL_STAY__STRING;
 
 	/**
 	 * The operation id for the '<em>Is Responsible Credit Card Added</em>' operation.
@@ -752,7 +752,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___IS_RESPONSIBLE_CREDIT_CARD_ADDED = ISTAYS___IS_RESPONSIBLE_CREDIT_CARD_ADDED;
+	int STAYS_MANAGER___IS_RESPONSIBLE_CREDIT_CARD_ADDED__STRING = ISTAYS___IS_RESPONSIBLE_CREDIT_CARD_ADDED__STRING;
 
 	/**
 	 * The operation id for the '<em>Change Period Of Stay</em>' operation.
@@ -761,7 +761,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___CHANGE_PERIOD_OF_STAY = ISTAYS___CHANGE_PERIOD_OF_STAY;
+	int STAYS_MANAGER___CHANGE_PERIOD_OF_STAY__STRING_DATE_DATE = ISTAYS___CHANGE_PERIOD_OF_STAY__STRING_DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Remove Bill From Stay</em>' operation.
@@ -770,7 +770,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER___REMOVE_BILL_FROM_STAY = ISTAYS___REMOVE_BILL_FROM_STAY;
+	int STAYS_MANAGER___REMOVE_BILL_FROM_STAY__STRING_STRING = ISTAYS___REMOVE_BILL_FROM_STAY__STRING_STRING;
 
 	/**
 	 * The number of operations of the '<em>Manager</em>' class.
@@ -1062,94 +1062,94 @@ public interface StaysPackage extends EPackage {
 	EClass getIStays();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#checkInGuest() <em>Check In Guest</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#checkInGuest(java.lang.String, java.lang.String) <em>Check In Guest</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check In Guest</em>' operation.
-	 * @see Classes.Stays.IStays#checkInGuest()
+	 * @see Classes.Stays.IStays#checkInGuest(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__CheckInGuest();
+	EOperation getIStays__CheckInGuest__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#changeBookableOfStay() <em>Change Bookable Of Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#changeBookableOfStay(java.lang.String, java.lang.String) <em>Change Bookable Of Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Bookable Of Stay</em>' operation.
-	 * @see Classes.Stays.IStays#changeBookableOfStay()
+	 * @see Classes.Stays.IStays#changeBookableOfStay(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__ChangeBookableOfStay();
+	EOperation getIStays__ChangeBookableOfStay__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#addNewStay() <em>Add New Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#addNewStay(java.lang.String, java.lang.String, java.util.Date, java.util.Date) <em>Add New Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add New Stay</em>' operation.
-	 * @see Classes.Stays.IStays#addNewStay()
+	 * @see Classes.Stays.IStays#addNewStay(java.lang.String, java.lang.String, java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getIStays__AddNewStay();
+	EOperation getIStays__AddNewStay__String_String_Date_Date();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#removeStay() <em>Remove Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#removeStay(java.lang.String) <em>Remove Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Stay</em>' operation.
-	 * @see Classes.Stays.IStays#removeStay()
+	 * @see Classes.Stays.IStays#removeStay(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__RemoveStay();
+	EOperation getIStays__RemoveStay__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#addBillToStay() <em>Add Bill To Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#addBillToStay(java.lang.String, java.lang.String) <em>Add Bill To Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Bill To Stay</em>' operation.
-	 * @see Classes.Stays.IStays#addBillToStay()
+	 * @see Classes.Stays.IStays#addBillToStay(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__AddBillToStay();
+	EOperation getIStays__AddBillToStay__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#checkOutGuest() <em>Check Out Guest</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#checkOutGuest(java.lang.String, java.lang.String) <em>Check Out Guest</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Out Guest</em>' operation.
-	 * @see Classes.Stays.IStays#checkOutGuest()
+	 * @see Classes.Stays.IStays#checkOutGuest(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__CheckOutGuest();
+	EOperation getIStays__CheckOutGuest__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#addResponsibleCreditCard() <em>Add Responsible Credit Card</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#addResponsibleCreditCard(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Add Responsible Credit Card</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Responsible Credit Card</em>' operation.
-	 * @see Classes.Stays.IStays#addResponsibleCreditCard()
+	 * @see Classes.Stays.IStays#addResponsibleCreditCard(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__AddResponsibleCreditCard();
+	EOperation getIStays__AddResponsibleCreditCard__String_String_String_int_int_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#changeResponsibleCreditCard() <em>Change Responsible Credit Card</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#changeResponsibleCreditCard(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Change Responsible Credit Card</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Responsible Credit Card</em>' operation.
-	 * @see Classes.Stays.IStays#changeResponsibleCreditCard()
+	 * @see Classes.Stays.IStays#changeResponsibleCreditCard(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__ChangeResponsibleCreditCard();
+	EOperation getIStays__ChangeResponsibleCreditCard__String_String_String_int_int_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#getGuestsOfHotelStay() <em>Get Guests Of Hotel Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#getGuestsOfHotelStay(java.lang.String) <em>Get Guests Of Hotel Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Guests Of Hotel Stay</em>' operation.
-	 * @see Classes.Stays.IStays#getGuestsOfHotelStay()
+	 * @see Classes.Stays.IStays#getGuestsOfHotelStay(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__GetGuestsOfHotelStay();
+	EOperation getIStays__GetGuestsOfHotelStay__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Stays.IStays#getBillsOfHotelStay(java.lang.String) <em>Get Bills Of Hotel Stay</em>}' operation.
@@ -1162,24 +1162,24 @@ public interface StaysPackage extends EPackage {
 	EOperation getIStays__GetBillsOfHotelStay__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#getBookableOfHotelStay() <em>Get Bookable Of Hotel Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#getBookableOfHotelStay(java.lang.String) <em>Get Bookable Of Hotel Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Bookable Of Hotel Stay</em>' operation.
-	 * @see Classes.Stays.IStays#getBookableOfHotelStay()
+	 * @see Classes.Stays.IStays#getBookableOfHotelStay(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__GetBookableOfHotelStay();
+	EOperation getIStays__GetBookableOfHotelStay__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#getBookingOfHotelStay() <em>Get Booking Of Hotel Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#getBookingOfHotelStay(java.lang.String) <em>Get Booking Of Hotel Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Booking Of Hotel Stay</em>' operation.
-	 * @see Classes.Stays.IStays#getBookingOfHotelStay()
+	 * @see Classes.Stays.IStays#getBookingOfHotelStay(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__GetBookingOfHotelStay();
+	EOperation getIStays__GetBookingOfHotelStay__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Stays.IStays#getAllHotelStayIDs() <em>Get All Hotel Stay IDs</em>}' operation.
@@ -1192,104 +1192,104 @@ public interface StaysPackage extends EPackage {
 	EOperation getIStays__GetAllHotelStayIDs();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#getCheckedInGuestsOfHotelStay() <em>Get Checked In Guests Of Hotel Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#getCheckedInGuestsOfHotelStay(java.lang.String) <em>Get Checked In Guests Of Hotel Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Checked In Guests Of Hotel Stay</em>' operation.
-	 * @see Classes.Stays.IStays#getCheckedInGuestsOfHotelStay()
+	 * @see Classes.Stays.IStays#getCheckedInGuestsOfHotelStay(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__GetCheckedInGuestsOfHotelStay();
+	EOperation getIStays__GetCheckedInGuestsOfHotelStay__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#getCheckedOutGuestsOfHotelStay() <em>Get Checked Out Guests Of Hotel Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#getCheckedOutGuestsOfHotelStay(java.lang.String) <em>Get Checked Out Guests Of Hotel Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Checked Out Guests Of Hotel Stay</em>' operation.
-	 * @see Classes.Stays.IStays#getCheckedOutGuestsOfHotelStay()
+	 * @see Classes.Stays.IStays#getCheckedOutGuestsOfHotelStay(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__GetCheckedOutGuestsOfHotelStay();
+	EOperation getIStays__GetCheckedOutGuestsOfHotelStay__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#searchHotelStays() <em>Search Hotel Stays</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#searchHotelStays(java.lang.String) <em>Search Hotel Stays</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Hotel Stays</em>' operation.
-	 * @see Classes.Stays.IStays#searchHotelStays()
+	 * @see Classes.Stays.IStays#searchHotelStays(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__SearchHotelStays();
+	EOperation getIStays__SearchHotelStays__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#searchHotelStaysWithinPeriod() <em>Search Hotel Stays Within Period</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#searchHotelStaysWithinPeriod(java.lang.String, java.util.Date, java.util.Date) <em>Search Hotel Stays Within Period</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Hotel Stays Within Period</em>' operation.
-	 * @see Classes.Stays.IStays#searchHotelStaysWithinPeriod()
+	 * @see Classes.Stays.IStays#searchHotelStaysWithinPeriod(java.lang.String, java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getIStays__SearchHotelStaysWithinPeriod();
+	EOperation getIStays__SearchHotelStaysWithinPeriod__String_Date_Date();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#getAllHotelStaysWithinPeriod() <em>Get All Hotel Stays Within Period</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#getAllHotelStaysWithinPeriod(java.util.Date, java.util.Date) <em>Get All Hotel Stays Within Period</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get All Hotel Stays Within Period</em>' operation.
-	 * @see Classes.Stays.IStays#getAllHotelStaysWithinPeriod()
+	 * @see Classes.Stays.IStays#getAllHotelStaysWithinPeriod(java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getIStays__GetAllHotelStaysWithinPeriod();
+	EOperation getIStays__GetAllHotelStaysWithinPeriod__Date_Date();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#getAllUnpayedBillsOfHotelStay() <em>Get All Unpayed Bills Of Hotel Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#getAllUnpayedBillsOfHotelStay(java.lang.String) <em>Get All Unpayed Bills Of Hotel Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get All Unpayed Bills Of Hotel Stay</em>' operation.
-	 * @see Classes.Stays.IStays#getAllUnpayedBillsOfHotelStay()
+	 * @see Classes.Stays.IStays#getAllUnpayedBillsOfHotelStay(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__GetAllUnpayedBillsOfHotelStay();
+	EOperation getIStays__GetAllUnpayedBillsOfHotelStay__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#billCreditCardWithAllUnpaidBillsOfHotelStay() <em>Bill Credit Card With All Unpaid Bills Of Hotel Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#billCreditCardWithAllUnpaidBillsOfHotelStay(java.lang.String) <em>Bill Credit Card With All Unpaid Bills Of Hotel Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Bill Credit Card With All Unpaid Bills Of Hotel Stay</em>' operation.
-	 * @see Classes.Stays.IStays#billCreditCardWithAllUnpaidBillsOfHotelStay()
+	 * @see Classes.Stays.IStays#billCreditCardWithAllUnpaidBillsOfHotelStay(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__BillCreditCardWithAllUnpaidBillsOfHotelStay();
+	EOperation getIStays__BillCreditCardWithAllUnpaidBillsOfHotelStay__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#isResponsibleCreditCardAdded() <em>Is Responsible Credit Card Added</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#isResponsibleCreditCardAdded(java.lang.String) <em>Is Responsible Credit Card Added</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Responsible Credit Card Added</em>' operation.
-	 * @see Classes.Stays.IStays#isResponsibleCreditCardAdded()
+	 * @see Classes.Stays.IStays#isResponsibleCreditCardAdded(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__IsResponsibleCreditCardAdded();
+	EOperation getIStays__IsResponsibleCreditCardAdded__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#changePeriodOfStay() <em>Change Period Of Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#changePeriodOfStay(java.lang.String, java.util.Date, java.util.Date) <em>Change Period Of Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Period Of Stay</em>' operation.
-	 * @see Classes.Stays.IStays#changePeriodOfStay()
+	 * @see Classes.Stays.IStays#changePeriodOfStay(java.lang.String, java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getIStays__ChangePeriodOfStay();
+	EOperation getIStays__ChangePeriodOfStay__String_Date_Date();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.IStays#removeBillFromStay() <em>Remove Bill From Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.IStays#removeBillFromStay(java.lang.String, java.lang.String) <em>Remove Bill From Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Bill From Stay</em>' operation.
-	 * @see Classes.Stays.IStays#removeBillFromStay()
+	 * @see Classes.Stays.IStays#removeBillFromStay(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStays__RemoveBillFromStay();
+	EOperation getIStays__RemoveBillFromStay__String_String();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1536,7 +1536,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___CHECK_IN_GUEST = eINSTANCE.getIStays__CheckInGuest();
+		EOperation ISTAYS___CHECK_IN_GUEST__STRING_STRING = eINSTANCE.getIStays__CheckInGuest__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Bookable Of Stay</b></em>' operation.
@@ -1544,7 +1544,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___CHANGE_BOOKABLE_OF_STAY = eINSTANCE.getIStays__ChangeBookableOfStay();
+		EOperation ISTAYS___CHANGE_BOOKABLE_OF_STAY__STRING_STRING = eINSTANCE.getIStays__ChangeBookableOfStay__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Add New Stay</b></em>' operation.
@@ -1552,7 +1552,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___ADD_NEW_STAY = eINSTANCE.getIStays__AddNewStay();
+		EOperation ISTAYS___ADD_NEW_STAY__STRING_STRING_DATE_DATE = eINSTANCE.getIStays__AddNewStay__String_String_Date_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Stay</b></em>' operation.
@@ -1560,7 +1560,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___REMOVE_STAY = eINSTANCE.getIStays__RemoveStay();
+		EOperation ISTAYS___REMOVE_STAY__STRING = eINSTANCE.getIStays__RemoveStay__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Bill To Stay</b></em>' operation.
@@ -1568,7 +1568,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___ADD_BILL_TO_STAY = eINSTANCE.getIStays__AddBillToStay();
+		EOperation ISTAYS___ADD_BILL_TO_STAY__STRING_STRING = eINSTANCE.getIStays__AddBillToStay__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Out Guest</b></em>' operation.
@@ -1576,7 +1576,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___CHECK_OUT_GUEST = eINSTANCE.getIStays__CheckOutGuest();
+		EOperation ISTAYS___CHECK_OUT_GUEST__STRING_STRING = eINSTANCE.getIStays__CheckOutGuest__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Responsible Credit Card</b></em>' operation.
@@ -1584,7 +1584,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___ADD_RESPONSIBLE_CREDIT_CARD = eINSTANCE.getIStays__AddResponsibleCreditCard();
+		EOperation ISTAYS___ADD_RESPONSIBLE_CREDIT_CARD__STRING_STRING_STRING_INT_INT_STRING_STRING = eINSTANCE.getIStays__AddResponsibleCreditCard__String_String_String_int_int_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Responsible Credit Card</b></em>' operation.
@@ -1592,7 +1592,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___CHANGE_RESPONSIBLE_CREDIT_CARD = eINSTANCE.getIStays__ChangeResponsibleCreditCard();
+		EOperation ISTAYS___CHANGE_RESPONSIBLE_CREDIT_CARD__STRING_STRING_STRING_INT_INT_STRING_STRING = eINSTANCE.getIStays__ChangeResponsibleCreditCard__String_String_String_int_int_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Guests Of Hotel Stay</b></em>' operation.
@@ -1600,7 +1600,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___GET_GUESTS_OF_HOTEL_STAY = eINSTANCE.getIStays__GetGuestsOfHotelStay();
+		EOperation ISTAYS___GET_GUESTS_OF_HOTEL_STAY__STRING = eINSTANCE.getIStays__GetGuestsOfHotelStay__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Bills Of Hotel Stay</b></em>' operation.
@@ -1616,7 +1616,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___GET_BOOKABLE_OF_HOTEL_STAY = eINSTANCE.getIStays__GetBookableOfHotelStay();
+		EOperation ISTAYS___GET_BOOKABLE_OF_HOTEL_STAY__STRING = eINSTANCE.getIStays__GetBookableOfHotelStay__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Booking Of Hotel Stay</b></em>' operation.
@@ -1624,7 +1624,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___GET_BOOKING_OF_HOTEL_STAY = eINSTANCE.getIStays__GetBookingOfHotelStay();
+		EOperation ISTAYS___GET_BOOKING_OF_HOTEL_STAY__STRING = eINSTANCE.getIStays__GetBookingOfHotelStay__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get All Hotel Stay IDs</b></em>' operation.
@@ -1640,7 +1640,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___GET_CHECKED_IN_GUESTS_OF_HOTEL_STAY = eINSTANCE.getIStays__GetCheckedInGuestsOfHotelStay();
+		EOperation ISTAYS___GET_CHECKED_IN_GUESTS_OF_HOTEL_STAY__STRING = eINSTANCE.getIStays__GetCheckedInGuestsOfHotelStay__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Checked Out Guests Of Hotel Stay</b></em>' operation.
@@ -1648,7 +1648,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___GET_CHECKED_OUT_GUESTS_OF_HOTEL_STAY = eINSTANCE.getIStays__GetCheckedOutGuestsOfHotelStay();
+		EOperation ISTAYS___GET_CHECKED_OUT_GUESTS_OF_HOTEL_STAY__STRING = eINSTANCE.getIStays__GetCheckedOutGuestsOfHotelStay__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Search Hotel Stays</b></em>' operation.
@@ -1656,7 +1656,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___SEARCH_HOTEL_STAYS = eINSTANCE.getIStays__SearchHotelStays();
+		EOperation ISTAYS___SEARCH_HOTEL_STAYS__STRING = eINSTANCE.getIStays__SearchHotelStays__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Search Hotel Stays Within Period</b></em>' operation.
@@ -1664,7 +1664,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___SEARCH_HOTEL_STAYS_WITHIN_PERIOD = eINSTANCE.getIStays__SearchHotelStaysWithinPeriod();
+		EOperation ISTAYS___SEARCH_HOTEL_STAYS_WITHIN_PERIOD__STRING_DATE_DATE = eINSTANCE.getIStays__SearchHotelStaysWithinPeriod__String_Date_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Get All Hotel Stays Within Period</b></em>' operation.
@@ -1672,7 +1672,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___GET_ALL_HOTEL_STAYS_WITHIN_PERIOD = eINSTANCE.getIStays__GetAllHotelStaysWithinPeriod();
+		EOperation ISTAYS___GET_ALL_HOTEL_STAYS_WITHIN_PERIOD__DATE_DATE = eINSTANCE.getIStays__GetAllHotelStaysWithinPeriod__Date_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Get All Unpayed Bills Of Hotel Stay</b></em>' operation.
@@ -1680,7 +1680,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___GET_ALL_UNPAYED_BILLS_OF_HOTEL_STAY = eINSTANCE.getIStays__GetAllUnpayedBillsOfHotelStay();
+		EOperation ISTAYS___GET_ALL_UNPAYED_BILLS_OF_HOTEL_STAY__STRING = eINSTANCE.getIStays__GetAllUnpayedBillsOfHotelStay__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Bill Credit Card With All Unpaid Bills Of Hotel Stay</b></em>' operation.
@@ -1688,7 +1688,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___BILL_CREDIT_CARD_WITH_ALL_UNPAID_BILLS_OF_HOTEL_STAY = eINSTANCE.getIStays__BillCreditCardWithAllUnpaidBillsOfHotelStay();
+		EOperation ISTAYS___BILL_CREDIT_CARD_WITH_ALL_UNPAID_BILLS_OF_HOTEL_STAY__STRING = eINSTANCE.getIStays__BillCreditCardWithAllUnpaidBillsOfHotelStay__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Responsible Credit Card Added</b></em>' operation.
@@ -1696,7 +1696,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___IS_RESPONSIBLE_CREDIT_CARD_ADDED = eINSTANCE.getIStays__IsResponsibleCreditCardAdded();
+		EOperation ISTAYS___IS_RESPONSIBLE_CREDIT_CARD_ADDED__STRING = eINSTANCE.getIStays__IsResponsibleCreditCardAdded__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Period Of Stay</b></em>' operation.
@@ -1704,7 +1704,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___CHANGE_PERIOD_OF_STAY = eINSTANCE.getIStays__ChangePeriodOfStay();
+		EOperation ISTAYS___CHANGE_PERIOD_OF_STAY__STRING_DATE_DATE = eINSTANCE.getIStays__ChangePeriodOfStay__String_Date_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Bill From Stay</b></em>' operation.
@@ -1712,7 +1712,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAYS___REMOVE_BILL_FROM_STAY = eINSTANCE.getIStays__RemoveBillFromStay();
+		EOperation ISTAYS___REMOVE_BILL_FROM_STAY__STRING_STRING = eINSTANCE.getIStays__RemoveBillFromStay__String_String();
 
 	}
 

@@ -178,13 +178,13 @@ public interface AccountsPackage extends EPackage {
 	int IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD__STRING = 4;
 
 	/**
-	 * The operation id for the '<em>Get Account</em>' operation.
+	 * The operation id for the '<em>Get Account Name</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_ACCOUNTS___GET_ACCOUNT__STRING = 5;
+	int IMANAGE_ACCOUNTS___GET_ACCOUNT_NAME__STRING = 5;
 
 	/**
 	 * The operation id for the '<em>Search Accounts</em>' operation.
@@ -193,7 +193,7 @@ public interface AccountsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_ACCOUNTS___SEARCH_ACCOUNTS = 6;
+	int IMANAGE_ACCOUNTS___SEARCH_ACCOUNTS__STRING = 6;
 
 	/**
 	 * The number of operations of the '<em>IManage Accounts</em>' class.
@@ -278,13 +278,13 @@ public interface AccountsPackage extends EPackage {
 	int ACCOUNTS_MANAGER___GET_ACCOUNT_PASSWORD__STRING = IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD__STRING;
 
 	/**
-	 * The operation id for the '<em>Get Account</em>' operation.
+	 * The operation id for the '<em>Get Account Name</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNTS_MANAGER___GET_ACCOUNT__STRING = IMANAGE_ACCOUNTS___GET_ACCOUNT__STRING;
+	int ACCOUNTS_MANAGER___GET_ACCOUNT_NAME__STRING = IMANAGE_ACCOUNTS___GET_ACCOUNT_NAME__STRING;
 
 	/**
 	 * The operation id for the '<em>Search Accounts</em>' operation.
@@ -293,7 +293,7 @@ public interface AccountsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNTS_MANAGER___SEARCH_ACCOUNTS = IMANAGE_ACCOUNTS___SEARCH_ACCOUNTS;
+	int ACCOUNTS_MANAGER___SEARCH_ACCOUNTS__STRING = IMANAGE_ACCOUNTS___SEARCH_ACCOUNTS__STRING;
 
 	/**
 	 * The operation id for the '<em>Validate Account</em>' operation.
@@ -534,24 +534,24 @@ public interface AccountsPackage extends EPackage {
 	EOperation getIManageAccounts__GetAccountPassword__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Accounts.IManageAccounts#getAccount(java.lang.String) <em>Get Account</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Accounts.IManageAccounts#getAccountName(java.lang.String) <em>Get Account Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Account</em>' operation.
-	 * @see Classes.Accounts.IManageAccounts#getAccount(java.lang.String)
+	 * @return the meta object for the '<em>Get Account Name</em>' operation.
+	 * @see Classes.Accounts.IManageAccounts#getAccountName(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIManageAccounts__GetAccount__String();
+	EOperation getIManageAccounts__GetAccountName__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Accounts.IManageAccounts#searchAccounts() <em>Search Accounts</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Accounts.IManageAccounts#searchAccounts(java.lang.String) <em>Search Accounts</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Accounts</em>' operation.
-	 * @see Classes.Accounts.IManageAccounts#searchAccounts()
+	 * @see Classes.Accounts.IManageAccounts#searchAccounts(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIManageAccounts__SearchAccounts();
+	EOperation getIManageAccounts__SearchAccounts__String();
 
 	/**
 	 * Returns the meta object for enum '{@link Classes.Accounts.AccountType <em>Account Type</em>}'.
@@ -715,12 +715,12 @@ public interface AccountsPackage extends EPackage {
 		EOperation IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD__STRING = eINSTANCE.getIManageAccounts__GetAccountPassword__String();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Account</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Account Name</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMANAGE_ACCOUNTS___GET_ACCOUNT__STRING = eINSTANCE.getIManageAccounts__GetAccount__String();
+		EOperation IMANAGE_ACCOUNTS___GET_ACCOUNT_NAME__STRING = eINSTANCE.getIManageAccounts__GetAccountName__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Search Accounts</b></em>' operation.
@@ -728,7 +728,7 @@ public interface AccountsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMANAGE_ACCOUNTS___SEARCH_ACCOUNTS = eINSTANCE.getIManageAccounts__SearchAccounts();
+		EOperation IMANAGE_ACCOUNTS___SEARCH_ACCOUNTS__STRING = eINSTANCE.getIManageAccounts__SearchAccounts__String();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Accounts.AccountType <em>Account Type</em>}' enum.

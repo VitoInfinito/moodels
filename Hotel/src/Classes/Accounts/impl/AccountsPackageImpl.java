@@ -337,7 +337,7 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIManageAccounts__GetAccount__String() {
+	public EOperation getIManageAccounts__GetAccountName__String() {
 		return iManageAccountsEClass.getEOperations().get(5);
 	}
 
@@ -346,7 +346,7 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIManageAccounts__SearchAccounts() {
+	public EOperation getIManageAccounts__SearchAccounts__String() {
 		return iManageAccountsEClass.getEOperations().get(6);
 	}
 
@@ -405,8 +405,8 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___RENAME_ACCOUNT__STRING_STRING);
 		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___CHANGE_PASSWORD__STRING_STRING);
 		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD__STRING);
-		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___GET_ACCOUNT__STRING);
-		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___SEARCH_ACCOUNTS);
+		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___GET_ACCOUNT_NAME__STRING);
+		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___SEARCH_ACCOUNTS__STRING);
 
 		// Create enums
 		accountTypeEEnum = createEEnum(ACCOUNT_TYPE);
@@ -486,10 +486,11 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 		op = initEOperation(getIManageAccounts__GetAccountPassword__String(), theTypesPackage.getString(), "getAccountPassword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "username", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIManageAccounts__GetAccount__String(), this.getAccount(), "getAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIManageAccounts__GetAccountName__String(), theTypesPackage.getString(), "getAccountName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "username", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIManageAccounts__SearchAccounts(), null, "searchAccounts", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIManageAccounts__SearchAccounts__String(), theTypesPackage.getString(), "searchAccounts", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(accountTypeEEnum, AccountType.class, "AccountType");

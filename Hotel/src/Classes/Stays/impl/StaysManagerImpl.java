@@ -11,6 +11,7 @@ import Classes.Stays.Stay;
 import Classes.Stays.StaysManager;
 import Classes.Stays.StaysPackage;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -230,7 +231,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void checkInGuest() {
+	public void checkInGuest(String stayID, String guestID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -241,7 +242,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeBookableOfStay() {
+	public void changeBookableOfStay(String stayID, String bookableID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -252,7 +253,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addNewStay() {
+	public void addNewStay(String bookableID, String bookingID, Date fromDate, Date toDate) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -263,7 +264,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeStay() {
+	public void removeStay(String stayID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -274,7 +275,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addBillToStay() {
+	public void addBillToStay(String stayID, String billID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -285,7 +286,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void checkOutGuest() {
+	public void checkOutGuest(String stayID, String guestID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -296,7 +297,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addResponsibleCreditCard() {
+	public void addResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -307,7 +308,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeResponsibleCreditCard() {
+	public void changeResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -318,7 +319,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getGuestsOfHotelStay() {
+	public EList<String> getGuestsOfHotelStay(String stayID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -329,7 +330,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBillsOfHotelStay(String stayID) {
+	public EList<String> getBillsOfHotelStay(String stayID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -340,7 +341,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBookableOfHotelStay() {
+	public String getBookableOfHotelStay(String stayID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -351,7 +352,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBookingOfHotelStay() {
+	public String getBookingOfHotelStay(String stayID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -362,7 +363,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllHotelStayIDs() {
+	public EList<String> getAllHotelStayIDs() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -373,7 +374,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getCheckedInGuestsOfHotelStay() {
+	public EList<String> getCheckedInGuestsOfHotelStay(String stayID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -384,7 +385,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getCheckedOutGuestsOfHotelStay() {
+	public EList<String> getCheckedOutGuestsOfHotelStay(String stayID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -395,7 +396,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchHotelStays() {
+	public EList<String> searchHotelStays(String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -406,7 +407,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchHotelStaysWithinPeriod() {
+	public EList<String> searchHotelStaysWithinPeriod(String keyword, Date from, Date to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -417,7 +418,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllHotelStaysWithinPeriod() {
+	public EList<String> getAllHotelStaysWithinPeriod(Date from, Date to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -428,7 +429,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllUnpayedBillsOfHotelStay() {
+	public EList<String> getAllUnpayedBillsOfHotelStay(String stayID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -439,7 +440,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void billCreditCardWithAllUnpaidBillsOfHotelStay() {
+	public void billCreditCardWithAllUnpaidBillsOfHotelStay(String stayID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -450,7 +451,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void isResponsibleCreditCardAdded() {
+	public boolean isResponsibleCreditCardAdded(String stayID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -461,7 +462,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changePeriodOfStay() {
+	public void changePeriodOfStay(String stayID, Date from, Date to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -472,7 +473,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeBillFromStay() {
+	public void removeBillFromStay(String stayID, String billID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -593,74 +594,62 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case StaysPackage.STAYS_MANAGER___CHECK_IN_GUEST:
-				checkInGuest();
+			case StaysPackage.STAYS_MANAGER___CHECK_IN_GUEST__STRING_STRING:
+				checkInGuest((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case StaysPackage.STAYS_MANAGER___CHANGE_BOOKABLE_OF_STAY:
-				changeBookableOfStay();
+			case StaysPackage.STAYS_MANAGER___CHANGE_BOOKABLE_OF_STAY__STRING_STRING:
+				changeBookableOfStay((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case StaysPackage.STAYS_MANAGER___ADD_NEW_STAY:
-				addNewStay();
+			case StaysPackage.STAYS_MANAGER___ADD_NEW_STAY__STRING_STRING_DATE_DATE:
+				addNewStay((String)arguments.get(0), (String)arguments.get(1), (Date)arguments.get(2), (Date)arguments.get(3));
 				return null;
-			case StaysPackage.STAYS_MANAGER___REMOVE_STAY:
-				removeStay();
+			case StaysPackage.STAYS_MANAGER___REMOVE_STAY__STRING:
+				removeStay((String)arguments.get(0));
 				return null;
-			case StaysPackage.STAYS_MANAGER___ADD_BILL_TO_STAY:
-				addBillToStay();
+			case StaysPackage.STAYS_MANAGER___ADD_BILL_TO_STAY__STRING_STRING:
+				addBillToStay((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case StaysPackage.STAYS_MANAGER___CHECK_OUT_GUEST:
-				checkOutGuest();
+			case StaysPackage.STAYS_MANAGER___CHECK_OUT_GUEST__STRING_STRING:
+				checkOutGuest((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case StaysPackage.STAYS_MANAGER___ADD_RESPONSIBLE_CREDIT_CARD:
-				addResponsibleCreditCard();
+			case StaysPackage.STAYS_MANAGER___ADD_RESPONSIBLE_CREDIT_CARD__STRING_STRING_STRING_INT_INT_STRING_STRING:
+				addResponsibleCreditCard((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6));
 				return null;
-			case StaysPackage.STAYS_MANAGER___CHANGE_RESPONSIBLE_CREDIT_CARD:
-				changeResponsibleCreditCard();
+			case StaysPackage.STAYS_MANAGER___CHANGE_RESPONSIBLE_CREDIT_CARD__STRING_STRING_STRING_INT_INT_STRING_STRING:
+				changeResponsibleCreditCard((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6));
 				return null;
-			case StaysPackage.STAYS_MANAGER___GET_GUESTS_OF_HOTEL_STAY:
-				getGuestsOfHotelStay();
-				return null;
+			case StaysPackage.STAYS_MANAGER___GET_GUESTS_OF_HOTEL_STAY__STRING:
+				return getGuestsOfHotelStay((String)arguments.get(0));
 			case StaysPackage.STAYS_MANAGER___GET_BILLS_OF_HOTEL_STAY__STRING:
-				getBillsOfHotelStay((String)arguments.get(0));
-				return null;
-			case StaysPackage.STAYS_MANAGER___GET_BOOKABLE_OF_HOTEL_STAY:
-				getBookableOfHotelStay();
-				return null;
-			case StaysPackage.STAYS_MANAGER___GET_BOOKING_OF_HOTEL_STAY:
-				getBookingOfHotelStay();
-				return null;
+				return getBillsOfHotelStay((String)arguments.get(0));
+			case StaysPackage.STAYS_MANAGER___GET_BOOKABLE_OF_HOTEL_STAY__STRING:
+				return getBookableOfHotelStay((String)arguments.get(0));
+			case StaysPackage.STAYS_MANAGER___GET_BOOKING_OF_HOTEL_STAY__STRING:
+				return getBookingOfHotelStay((String)arguments.get(0));
 			case StaysPackage.STAYS_MANAGER___GET_ALL_HOTEL_STAY_IDS:
-				getAllHotelStayIDs();
+				return getAllHotelStayIDs();
+			case StaysPackage.STAYS_MANAGER___GET_CHECKED_IN_GUESTS_OF_HOTEL_STAY__STRING:
+				return getCheckedInGuestsOfHotelStay((String)arguments.get(0));
+			case StaysPackage.STAYS_MANAGER___GET_CHECKED_OUT_GUESTS_OF_HOTEL_STAY__STRING:
+				return getCheckedOutGuestsOfHotelStay((String)arguments.get(0));
+			case StaysPackage.STAYS_MANAGER___SEARCH_HOTEL_STAYS__STRING:
+				return searchHotelStays((String)arguments.get(0));
+			case StaysPackage.STAYS_MANAGER___SEARCH_HOTEL_STAYS_WITHIN_PERIOD__STRING_DATE_DATE:
+				return searchHotelStaysWithinPeriod((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
+			case StaysPackage.STAYS_MANAGER___GET_ALL_HOTEL_STAYS_WITHIN_PERIOD__DATE_DATE:
+				return getAllHotelStaysWithinPeriod((Date)arguments.get(0), (Date)arguments.get(1));
+			case StaysPackage.STAYS_MANAGER___GET_ALL_UNPAYED_BILLS_OF_HOTEL_STAY__STRING:
+				return getAllUnpayedBillsOfHotelStay((String)arguments.get(0));
+			case StaysPackage.STAYS_MANAGER___BILL_CREDIT_CARD_WITH_ALL_UNPAID_BILLS_OF_HOTEL_STAY__STRING:
+				billCreditCardWithAllUnpaidBillsOfHotelStay((String)arguments.get(0));
 				return null;
-			case StaysPackage.STAYS_MANAGER___GET_CHECKED_IN_GUESTS_OF_HOTEL_STAY:
-				getCheckedInGuestsOfHotelStay();
+			case StaysPackage.STAYS_MANAGER___IS_RESPONSIBLE_CREDIT_CARD_ADDED__STRING:
+				return isResponsibleCreditCardAdded((String)arguments.get(0));
+			case StaysPackage.STAYS_MANAGER___CHANGE_PERIOD_OF_STAY__STRING_DATE_DATE:
+				changePeriodOfStay((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
 				return null;
-			case StaysPackage.STAYS_MANAGER___GET_CHECKED_OUT_GUESTS_OF_HOTEL_STAY:
-				getCheckedOutGuestsOfHotelStay();
-				return null;
-			case StaysPackage.STAYS_MANAGER___SEARCH_HOTEL_STAYS:
-				searchHotelStays();
-				return null;
-			case StaysPackage.STAYS_MANAGER___SEARCH_HOTEL_STAYS_WITHIN_PERIOD:
-				searchHotelStaysWithinPeriod();
-				return null;
-			case StaysPackage.STAYS_MANAGER___GET_ALL_HOTEL_STAYS_WITHIN_PERIOD:
-				getAllHotelStaysWithinPeriod();
-				return null;
-			case StaysPackage.STAYS_MANAGER___GET_ALL_UNPAYED_BILLS_OF_HOTEL_STAY:
-				getAllUnpayedBillsOfHotelStay();
-				return null;
-			case StaysPackage.STAYS_MANAGER___BILL_CREDIT_CARD_WITH_ALL_UNPAID_BILLS_OF_HOTEL_STAY:
-				billCreditCardWithAllUnpaidBillsOfHotelStay();
-				return null;
-			case StaysPackage.STAYS_MANAGER___IS_RESPONSIBLE_CREDIT_CARD_ADDED:
-				isResponsibleCreditCardAdded();
-				return null;
-			case StaysPackage.STAYS_MANAGER___CHANGE_PERIOD_OF_STAY:
-				changePeriodOfStay();
-				return null;
-			case StaysPackage.STAYS_MANAGER___REMOVE_BILL_FROM_STAY:
-				removeBillFromStay();
+			case StaysPackage.STAYS_MANAGER___REMOVE_BILL_FROM_STAY__STRING_STRING:
+				removeBillFromStay((String)arguments.get(0), (String)arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
