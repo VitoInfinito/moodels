@@ -92,7 +92,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___ADD_CUSTOMER = 1;
+	int ICUSTOMERS___ADD_CUSTOMER__STRING_STRING_STRING_STRING_STRING_STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Change Customer First Name</em>' operation.
@@ -101,7 +101,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___CHANGE_CUSTOMER_FIRST_NAME = 2;
+	int ICUSTOMERS___CHANGE_CUSTOMER_FIRST_NAME__STRING_STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Change Customer Last Name</em>' operation.
@@ -110,7 +110,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___CHANGE_CUSTOMER_LAST_NAME = 3;
+	int ICUSTOMERS___CHANGE_CUSTOMER_LAST_NAME__STRING_STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Change Customer Title</em>' operation.
@@ -119,7 +119,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___CHANGE_CUSTOMER_TITLE = 4;
+	int ICUSTOMERS___CHANGE_CUSTOMER_TITLE__STRING_STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Change Customer Email</em>' operation.
@@ -128,7 +128,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___CHANGE_CUSTOMER_EMAIL = 5;
+	int ICUSTOMERS___CHANGE_CUSTOMER_EMAIL__STRING_STRING = 5;
 
 	/**
 	 * The operation id for the '<em>Change Customer Phone</em>' operation.
@@ -137,7 +137,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___CHANGE_CUSTOMER_PHONE = 6;
+	int ICUSTOMERS___CHANGE_CUSTOMER_PHONE__STRING_STRING = 6;
 
 	/**
 	 * The operation id for the '<em>Get Customer First Name</em>' operation.
@@ -146,7 +146,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___GET_CUSTOMER_FIRST_NAME = 7;
+	int ICUSTOMERS___GET_CUSTOMER_FIRST_NAME__STRING = 7;
 
 	/**
 	 * The operation id for the '<em>Get Customer Last Name</em>' operation.
@@ -155,7 +155,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___GET_CUSTOMER_LAST_NAME = 8;
+	int ICUSTOMERS___GET_CUSTOMER_LAST_NAME__STRING = 8;
 
 	/**
 	 * The operation id for the '<em>Get Customer Title</em>' operation.
@@ -164,7 +164,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___GET_CUSTOMER_TITLE = 9;
+	int ICUSTOMERS___GET_CUSTOMER_TITLE__STRING = 9;
 
 	/**
 	 * The operation id for the '<em>Get Customer Email</em>' operation.
@@ -173,7 +173,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___GET_CUSTOMER_EMAIL = 10;
+	int ICUSTOMERS___GET_CUSTOMER_EMAIL__STRING = 10;
 
 	/**
 	 * The operation id for the '<em>Get Customer Phone</em>' operation.
@@ -182,7 +182,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___GET_CUSTOMER_PHONE = 11;
+	int ICUSTOMERS___GET_CUSTOMER_PHONE__STRING = 11;
 
 	/**
 	 * The operation id for the '<em>Search Customers</em>' operation.
@@ -191,7 +191,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___SEARCH_CUSTOMERS = 12;
+	int ICUSTOMERS___SEARCH_CUSTOMERS__STRING = 12;
 
 	/**
 	 * The operation id for the '<em>Get Customer Bookings</em>' operation.
@@ -200,7 +200,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___GET_CUSTOMER_BOOKINGS = 13;
+	int ICUSTOMERS___GET_CUSTOMER_BOOKINGS__STRING = 13;
 
 	/**
 	 * The operation id for the '<em>Get Customer Requests</em>' operation.
@@ -209,7 +209,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___GET_CUSTOMER_REQUESTS = 14;
+	int ICUSTOMERS___GET_CUSTOMER_REQUESTS__STRING = 14;
 
 	/**
 	 * The operation id for the '<em>Add Customer Booking</em>' operation.
@@ -218,7 +218,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___ADD_CUSTOMER_BOOKING = 15;
+	int ICUSTOMERS___ADD_CUSTOMER_BOOKING__STRING_STRING = 15;
 
 	/**
 	 * The operation id for the '<em>Remove Customer Booking</em>' operation.
@@ -227,7 +227,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___REMOVE_CUSTOMER_BOOKING = 16;
+	int ICUSTOMERS___REMOVE_CUSTOMER_BOOKING__STRING_STRING = 16;
 
 	/**
 	 * The operation id for the '<em>Add Customer Request</em>' operation.
@@ -236,7 +236,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___ADD_CUSTOMER_REQUEST = 17;
+	int ICUSTOMERS___ADD_CUSTOMER_REQUEST__STRING_STRING = 17;
 
 	/**
 	 * The operation id for the '<em>Remove Customer Request</em>' operation.
@@ -245,7 +245,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICUSTOMERS___REMOVE_CUSTOMER_REQUEST = 18;
+	int ICUSTOMERS___REMOVE_CUSTOMER_REQUEST__STRING_STRING = 18;
 
 	/**
 	 * The number of operations of the '<em>ICustomers</em>' class.
@@ -300,7 +300,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___ADD_CUSTOMER = ICUSTOMERS___ADD_CUSTOMER;
+	int CUSTOMERS_MANAGER___ADD_CUSTOMER__STRING_STRING_STRING_STRING_STRING_STRING = ICUSTOMERS___ADD_CUSTOMER__STRING_STRING_STRING_STRING_STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Customer First Name</em>' operation.
@@ -309,7 +309,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___CHANGE_CUSTOMER_FIRST_NAME = ICUSTOMERS___CHANGE_CUSTOMER_FIRST_NAME;
+	int CUSTOMERS_MANAGER___CHANGE_CUSTOMER_FIRST_NAME__STRING_STRING = ICUSTOMERS___CHANGE_CUSTOMER_FIRST_NAME__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Customer Last Name</em>' operation.
@@ -318,7 +318,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___CHANGE_CUSTOMER_LAST_NAME = ICUSTOMERS___CHANGE_CUSTOMER_LAST_NAME;
+	int CUSTOMERS_MANAGER___CHANGE_CUSTOMER_LAST_NAME__STRING_STRING = ICUSTOMERS___CHANGE_CUSTOMER_LAST_NAME__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Customer Title</em>' operation.
@@ -327,7 +327,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___CHANGE_CUSTOMER_TITLE = ICUSTOMERS___CHANGE_CUSTOMER_TITLE;
+	int CUSTOMERS_MANAGER___CHANGE_CUSTOMER_TITLE__STRING_STRING = ICUSTOMERS___CHANGE_CUSTOMER_TITLE__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Customer Email</em>' operation.
@@ -336,7 +336,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___CHANGE_CUSTOMER_EMAIL = ICUSTOMERS___CHANGE_CUSTOMER_EMAIL;
+	int CUSTOMERS_MANAGER___CHANGE_CUSTOMER_EMAIL__STRING_STRING = ICUSTOMERS___CHANGE_CUSTOMER_EMAIL__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Customer Phone</em>' operation.
@@ -345,7 +345,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___CHANGE_CUSTOMER_PHONE = ICUSTOMERS___CHANGE_CUSTOMER_PHONE;
+	int CUSTOMERS_MANAGER___CHANGE_CUSTOMER_PHONE__STRING_STRING = ICUSTOMERS___CHANGE_CUSTOMER_PHONE__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Get Customer First Name</em>' operation.
@@ -354,7 +354,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___GET_CUSTOMER_FIRST_NAME = ICUSTOMERS___GET_CUSTOMER_FIRST_NAME;
+	int CUSTOMERS_MANAGER___GET_CUSTOMER_FIRST_NAME__STRING = ICUSTOMERS___GET_CUSTOMER_FIRST_NAME__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Customer Last Name</em>' operation.
@@ -363,7 +363,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___GET_CUSTOMER_LAST_NAME = ICUSTOMERS___GET_CUSTOMER_LAST_NAME;
+	int CUSTOMERS_MANAGER___GET_CUSTOMER_LAST_NAME__STRING = ICUSTOMERS___GET_CUSTOMER_LAST_NAME__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Customer Title</em>' operation.
@@ -372,7 +372,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___GET_CUSTOMER_TITLE = ICUSTOMERS___GET_CUSTOMER_TITLE;
+	int CUSTOMERS_MANAGER___GET_CUSTOMER_TITLE__STRING = ICUSTOMERS___GET_CUSTOMER_TITLE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Customer Email</em>' operation.
@@ -381,7 +381,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___GET_CUSTOMER_EMAIL = ICUSTOMERS___GET_CUSTOMER_EMAIL;
+	int CUSTOMERS_MANAGER___GET_CUSTOMER_EMAIL__STRING = ICUSTOMERS___GET_CUSTOMER_EMAIL__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Customer Phone</em>' operation.
@@ -390,7 +390,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___GET_CUSTOMER_PHONE = ICUSTOMERS___GET_CUSTOMER_PHONE;
+	int CUSTOMERS_MANAGER___GET_CUSTOMER_PHONE__STRING = ICUSTOMERS___GET_CUSTOMER_PHONE__STRING;
 
 	/**
 	 * The operation id for the '<em>Search Customers</em>' operation.
@@ -399,7 +399,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___SEARCH_CUSTOMERS = ICUSTOMERS___SEARCH_CUSTOMERS;
+	int CUSTOMERS_MANAGER___SEARCH_CUSTOMERS__STRING = ICUSTOMERS___SEARCH_CUSTOMERS__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Customer Bookings</em>' operation.
@@ -408,7 +408,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___GET_CUSTOMER_BOOKINGS = ICUSTOMERS___GET_CUSTOMER_BOOKINGS;
+	int CUSTOMERS_MANAGER___GET_CUSTOMER_BOOKINGS__STRING = ICUSTOMERS___GET_CUSTOMER_BOOKINGS__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Customer Requests</em>' operation.
@@ -417,7 +417,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___GET_CUSTOMER_REQUESTS = ICUSTOMERS___GET_CUSTOMER_REQUESTS;
+	int CUSTOMERS_MANAGER___GET_CUSTOMER_REQUESTS__STRING = ICUSTOMERS___GET_CUSTOMER_REQUESTS__STRING;
 
 	/**
 	 * The operation id for the '<em>Add Customer Booking</em>' operation.
@@ -426,7 +426,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___ADD_CUSTOMER_BOOKING = ICUSTOMERS___ADD_CUSTOMER_BOOKING;
+	int CUSTOMERS_MANAGER___ADD_CUSTOMER_BOOKING__STRING_STRING = ICUSTOMERS___ADD_CUSTOMER_BOOKING__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Remove Customer Booking</em>' operation.
@@ -435,7 +435,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___REMOVE_CUSTOMER_BOOKING = ICUSTOMERS___REMOVE_CUSTOMER_BOOKING;
+	int CUSTOMERS_MANAGER___REMOVE_CUSTOMER_BOOKING__STRING_STRING = ICUSTOMERS___REMOVE_CUSTOMER_BOOKING__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Add Customer Request</em>' operation.
@@ -444,7 +444,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___ADD_CUSTOMER_REQUEST = ICUSTOMERS___ADD_CUSTOMER_REQUEST;
+	int CUSTOMERS_MANAGER___ADD_CUSTOMER_REQUEST__STRING_STRING = ICUSTOMERS___ADD_CUSTOMER_REQUEST__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Remove Customer Request</em>' operation.
@@ -453,7 +453,7 @@ public interface CustomersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMERS_MANAGER___REMOVE_CUSTOMER_REQUEST = ICUSTOMERS___REMOVE_CUSTOMER_REQUEST;
+	int CUSTOMERS_MANAGER___REMOVE_CUSTOMER_REQUEST__STRING_STRING = ICUSTOMERS___REMOVE_CUSTOMER_REQUEST__STRING_STRING;
 
 	/**
 	 * The number of operations of the '<em>Manager</em>' class.
@@ -781,184 +781,184 @@ public interface CustomersPackage extends EPackage {
 	EOperation getICustomers__GetAllCustomers();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#addCustomer() <em>Add Customer</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Add Customer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Customer</em>' operation.
-	 * @see Classes.Customers.ICustomers#addCustomer()
+	 * @see Classes.Customers.ICustomers#addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__AddCustomer();
+	EOperation getICustomers__AddCustomer__String_String_String_String_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#changeCustomerFirstName() <em>Change Customer First Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#changeCustomerFirstName(java.lang.String, java.lang.String) <em>Change Customer First Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Customer First Name</em>' operation.
-	 * @see Classes.Customers.ICustomers#changeCustomerFirstName()
+	 * @see Classes.Customers.ICustomers#changeCustomerFirstName(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__ChangeCustomerFirstName();
+	EOperation getICustomers__ChangeCustomerFirstName__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#changeCustomerLastName() <em>Change Customer Last Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#changeCustomerLastName(java.lang.String, java.lang.String) <em>Change Customer Last Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Customer Last Name</em>' operation.
-	 * @see Classes.Customers.ICustomers#changeCustomerLastName()
+	 * @see Classes.Customers.ICustomers#changeCustomerLastName(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__ChangeCustomerLastName();
+	EOperation getICustomers__ChangeCustomerLastName__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#changeCustomerTitle() <em>Change Customer Title</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#changeCustomerTitle(java.lang.String, java.lang.String) <em>Change Customer Title</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Customer Title</em>' operation.
-	 * @see Classes.Customers.ICustomers#changeCustomerTitle()
+	 * @see Classes.Customers.ICustomers#changeCustomerTitle(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__ChangeCustomerTitle();
+	EOperation getICustomers__ChangeCustomerTitle__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#changeCustomerEmail() <em>Change Customer Email</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#changeCustomerEmail(java.lang.String, java.lang.String) <em>Change Customer Email</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Customer Email</em>' operation.
-	 * @see Classes.Customers.ICustomers#changeCustomerEmail()
+	 * @see Classes.Customers.ICustomers#changeCustomerEmail(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__ChangeCustomerEmail();
+	EOperation getICustomers__ChangeCustomerEmail__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#changeCustomerPhone() <em>Change Customer Phone</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#changeCustomerPhone(java.lang.String, java.lang.String) <em>Change Customer Phone</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Customer Phone</em>' operation.
-	 * @see Classes.Customers.ICustomers#changeCustomerPhone()
+	 * @see Classes.Customers.ICustomers#changeCustomerPhone(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__ChangeCustomerPhone();
+	EOperation getICustomers__ChangeCustomerPhone__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#getCustomerFirstName() <em>Get Customer First Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#getCustomerFirstName(java.lang.String) <em>Get Customer First Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Customer First Name</em>' operation.
-	 * @see Classes.Customers.ICustomers#getCustomerFirstName()
+	 * @see Classes.Customers.ICustomers#getCustomerFirstName(java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__GetCustomerFirstName();
+	EOperation getICustomers__GetCustomerFirstName__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#getCustomerLastName() <em>Get Customer Last Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#getCustomerLastName(java.lang.String) <em>Get Customer Last Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Customer Last Name</em>' operation.
-	 * @see Classes.Customers.ICustomers#getCustomerLastName()
+	 * @see Classes.Customers.ICustomers#getCustomerLastName(java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__GetCustomerLastName();
+	EOperation getICustomers__GetCustomerLastName__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#getCustomerTitle() <em>Get Customer Title</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#getCustomerTitle(java.lang.String) <em>Get Customer Title</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Customer Title</em>' operation.
-	 * @see Classes.Customers.ICustomers#getCustomerTitle()
+	 * @see Classes.Customers.ICustomers#getCustomerTitle(java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__GetCustomerTitle();
+	EOperation getICustomers__GetCustomerTitle__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#getCustomerEmail() <em>Get Customer Email</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#getCustomerEmail(java.lang.String) <em>Get Customer Email</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Customer Email</em>' operation.
-	 * @see Classes.Customers.ICustomers#getCustomerEmail()
+	 * @see Classes.Customers.ICustomers#getCustomerEmail(java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__GetCustomerEmail();
+	EOperation getICustomers__GetCustomerEmail__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#getCustomerPhone() <em>Get Customer Phone</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#getCustomerPhone(java.lang.String) <em>Get Customer Phone</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Customer Phone</em>' operation.
-	 * @see Classes.Customers.ICustomers#getCustomerPhone()
+	 * @see Classes.Customers.ICustomers#getCustomerPhone(java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__GetCustomerPhone();
+	EOperation getICustomers__GetCustomerPhone__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#searchCustomers() <em>Search Customers</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#searchCustomers(java.lang.String) <em>Search Customers</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Customers</em>' operation.
-	 * @see Classes.Customers.ICustomers#searchCustomers()
+	 * @see Classes.Customers.ICustomers#searchCustomers(java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__SearchCustomers();
+	EOperation getICustomers__SearchCustomers__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#getCustomerBookings() <em>Get Customer Bookings</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#getCustomerBookings(java.lang.String) <em>Get Customer Bookings</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Customer Bookings</em>' operation.
-	 * @see Classes.Customers.ICustomers#getCustomerBookings()
+	 * @see Classes.Customers.ICustomers#getCustomerBookings(java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__GetCustomerBookings();
+	EOperation getICustomers__GetCustomerBookings__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#getCustomerRequests() <em>Get Customer Requests</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#getCustomerRequests(java.lang.String) <em>Get Customer Requests</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Customer Requests</em>' operation.
-	 * @see Classes.Customers.ICustomers#getCustomerRequests()
+	 * @see Classes.Customers.ICustomers#getCustomerRequests(java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__GetCustomerRequests();
+	EOperation getICustomers__GetCustomerRequests__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#addCustomerBooking() <em>Add Customer Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#addCustomerBooking(java.lang.String, java.lang.String) <em>Add Customer Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Customer Booking</em>' operation.
-	 * @see Classes.Customers.ICustomers#addCustomerBooking()
+	 * @see Classes.Customers.ICustomers#addCustomerBooking(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__AddCustomerBooking();
+	EOperation getICustomers__AddCustomerBooking__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#removeCustomerBooking() <em>Remove Customer Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#removeCustomerBooking(java.lang.String, java.lang.String) <em>Remove Customer Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Customer Booking</em>' operation.
-	 * @see Classes.Customers.ICustomers#removeCustomerBooking()
+	 * @see Classes.Customers.ICustomers#removeCustomerBooking(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__RemoveCustomerBooking();
+	EOperation getICustomers__RemoveCustomerBooking__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#addCustomerRequest() <em>Add Customer Request</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#addCustomerRequest(java.lang.String, java.lang.String) <em>Add Customer Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Customer Request</em>' operation.
-	 * @see Classes.Customers.ICustomers#addCustomerRequest()
+	 * @see Classes.Customers.ICustomers#addCustomerRequest(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__AddCustomerRequest();
+	EOperation getICustomers__AddCustomerRequest__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#removeCustomerRequest() <em>Remove Customer Request</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Customers.ICustomers#removeCustomerRequest(java.lang.String, java.lang.String) <em>Remove Customer Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Customer Request</em>' operation.
-	 * @see Classes.Customers.ICustomers#removeCustomerRequest()
+	 * @see Classes.Customers.ICustomers#removeCustomerRequest(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getICustomers__RemoveCustomerRequest();
+	EOperation getICustomers__RemoveCustomerRequest__String_String();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1131,7 +1131,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___ADD_CUSTOMER = eINSTANCE.getICustomers__AddCustomer();
+		EOperation ICUSTOMERS___ADD_CUSTOMER__STRING_STRING_STRING_STRING_STRING_STRING = eINSTANCE.getICustomers__AddCustomer__String_String_String_String_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Customer First Name</b></em>' operation.
@@ -1139,7 +1139,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___CHANGE_CUSTOMER_FIRST_NAME = eINSTANCE.getICustomers__ChangeCustomerFirstName();
+		EOperation ICUSTOMERS___CHANGE_CUSTOMER_FIRST_NAME__STRING_STRING = eINSTANCE.getICustomers__ChangeCustomerFirstName__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Customer Last Name</b></em>' operation.
@@ -1147,7 +1147,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___CHANGE_CUSTOMER_LAST_NAME = eINSTANCE.getICustomers__ChangeCustomerLastName();
+		EOperation ICUSTOMERS___CHANGE_CUSTOMER_LAST_NAME__STRING_STRING = eINSTANCE.getICustomers__ChangeCustomerLastName__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Customer Title</b></em>' operation.
@@ -1155,7 +1155,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___CHANGE_CUSTOMER_TITLE = eINSTANCE.getICustomers__ChangeCustomerTitle();
+		EOperation ICUSTOMERS___CHANGE_CUSTOMER_TITLE__STRING_STRING = eINSTANCE.getICustomers__ChangeCustomerTitle__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Customer Email</b></em>' operation.
@@ -1163,7 +1163,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___CHANGE_CUSTOMER_EMAIL = eINSTANCE.getICustomers__ChangeCustomerEmail();
+		EOperation ICUSTOMERS___CHANGE_CUSTOMER_EMAIL__STRING_STRING = eINSTANCE.getICustomers__ChangeCustomerEmail__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Customer Phone</b></em>' operation.
@@ -1171,7 +1171,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___CHANGE_CUSTOMER_PHONE = eINSTANCE.getICustomers__ChangeCustomerPhone();
+		EOperation ICUSTOMERS___CHANGE_CUSTOMER_PHONE__STRING_STRING = eINSTANCE.getICustomers__ChangeCustomerPhone__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Customer First Name</b></em>' operation.
@@ -1179,7 +1179,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___GET_CUSTOMER_FIRST_NAME = eINSTANCE.getICustomers__GetCustomerFirstName();
+		EOperation ICUSTOMERS___GET_CUSTOMER_FIRST_NAME__STRING = eINSTANCE.getICustomers__GetCustomerFirstName__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Customer Last Name</b></em>' operation.
@@ -1187,7 +1187,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___GET_CUSTOMER_LAST_NAME = eINSTANCE.getICustomers__GetCustomerLastName();
+		EOperation ICUSTOMERS___GET_CUSTOMER_LAST_NAME__STRING = eINSTANCE.getICustomers__GetCustomerLastName__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Customer Title</b></em>' operation.
@@ -1195,7 +1195,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___GET_CUSTOMER_TITLE = eINSTANCE.getICustomers__GetCustomerTitle();
+		EOperation ICUSTOMERS___GET_CUSTOMER_TITLE__STRING = eINSTANCE.getICustomers__GetCustomerTitle__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Customer Email</b></em>' operation.
@@ -1203,7 +1203,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___GET_CUSTOMER_EMAIL = eINSTANCE.getICustomers__GetCustomerEmail();
+		EOperation ICUSTOMERS___GET_CUSTOMER_EMAIL__STRING = eINSTANCE.getICustomers__GetCustomerEmail__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Customer Phone</b></em>' operation.
@@ -1211,7 +1211,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___GET_CUSTOMER_PHONE = eINSTANCE.getICustomers__GetCustomerPhone();
+		EOperation ICUSTOMERS___GET_CUSTOMER_PHONE__STRING = eINSTANCE.getICustomers__GetCustomerPhone__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Search Customers</b></em>' operation.
@@ -1219,7 +1219,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___SEARCH_CUSTOMERS = eINSTANCE.getICustomers__SearchCustomers();
+		EOperation ICUSTOMERS___SEARCH_CUSTOMERS__STRING = eINSTANCE.getICustomers__SearchCustomers__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Customer Bookings</b></em>' operation.
@@ -1227,7 +1227,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___GET_CUSTOMER_BOOKINGS = eINSTANCE.getICustomers__GetCustomerBookings();
+		EOperation ICUSTOMERS___GET_CUSTOMER_BOOKINGS__STRING = eINSTANCE.getICustomers__GetCustomerBookings__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Customer Requests</b></em>' operation.
@@ -1235,7 +1235,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___GET_CUSTOMER_REQUESTS = eINSTANCE.getICustomers__GetCustomerRequests();
+		EOperation ICUSTOMERS___GET_CUSTOMER_REQUESTS__STRING = eINSTANCE.getICustomers__GetCustomerRequests__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Customer Booking</b></em>' operation.
@@ -1243,7 +1243,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___ADD_CUSTOMER_BOOKING = eINSTANCE.getICustomers__AddCustomerBooking();
+		EOperation ICUSTOMERS___ADD_CUSTOMER_BOOKING__STRING_STRING = eINSTANCE.getICustomers__AddCustomerBooking__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Customer Booking</b></em>' operation.
@@ -1251,7 +1251,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___REMOVE_CUSTOMER_BOOKING = eINSTANCE.getICustomers__RemoveCustomerBooking();
+		EOperation ICUSTOMERS___REMOVE_CUSTOMER_BOOKING__STRING_STRING = eINSTANCE.getICustomers__RemoveCustomerBooking__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Customer Request</b></em>' operation.
@@ -1259,7 +1259,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___ADD_CUSTOMER_REQUEST = eINSTANCE.getICustomers__AddCustomerRequest();
+		EOperation ICUSTOMERS___ADD_CUSTOMER_REQUEST__STRING_STRING = eINSTANCE.getICustomers__AddCustomerRequest__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Customer Request</b></em>' operation.
@@ -1267,7 +1267,7 @@ public interface CustomersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ICUSTOMERS___REMOVE_CUSTOMER_REQUEST = eINSTANCE.getICustomers__RemoveCustomerRequest();
+		EOperation ICUSTOMERS___REMOVE_CUSTOMER_REQUEST__STRING_STRING = eINSTANCE.getICustomers__RemoveCustomerRequest__String_String();
 
 	}
 

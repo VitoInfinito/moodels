@@ -836,25 +836,75 @@
           upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ICustomers" abstract="true" interface="true">
-      <eOperations name="getAllCustomers" ordered="false" lowerBound="1"/>
-      <eOperations name="addCustomer" ordered="false" lowerBound="1"/>
-      <eOperations name="changeCustomerFirstName" ordered="false" lowerBound="1"/>
-      <eOperations name="changeCustomerLastName" ordered="false" lowerBound="1"/>
-      <eOperations name="changeCustomerTitle" ordered="false" lowerBound="1"/>
-      <eOperations name="changeCustomerEmail" ordered="false" lowerBound="1"/>
-      <eOperations name="changeCustomerPhone" ordered="false" lowerBound="1"/>
-      <eOperations name="getCustomerFirstName" ordered="false" lowerBound="1"/>
-      <eOperations name="getCustomerLastName" ordered="false" lowerBound="1"/>
-      <eOperations name="getCustomerTitle" ordered="false" lowerBound="1"/>
-      <eOperations name="getCustomerEmail" ordered="false" lowerBound="1"/>
-      <eOperations name="getCustomerPhone" ordered="false" lowerBound="1"/>
-      <eOperations name="searchCustomers" ordered="false" lowerBound="1"/>
-      <eOperations name="getCustomerBookings" ordered="false" lowerBound="1"/>
-      <eOperations name="getCustomerRequests" ordered="false" lowerBound="1"/>
-      <eOperations name="addCustomerBooking" ordered="false" lowerBound="1"/>
-      <eOperations name="removeCustomerBooking" ordered="false" lowerBound="1"/>
-      <eOperations name="addCustomerRequest" ordered="false" lowerBound="1"/>
-      <eOperations name="removeCustomerRequest" ordered="false" lowerBound="1"/>
+      <eOperations name="getAllCustomers" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="addCustomer" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="firstname" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="lastname" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="title" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="phone" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="changeCustomerFirstName" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="changeCustomerLastName" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="changeCustomerTitle" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="title" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="changeCustomerEmail" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="eMail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="changeCustomerPhone" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="phoneNr" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getCustomerFirstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getCustomerLastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getCustomerTitle" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getCustomerEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getCustomerPhone" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="searchCustomers" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getCustomerBookings" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getCustomerRequests" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="addCustomerBooking" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="removeCustomerBooking" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="addCustomerRequest" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="requestID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="removeCustomerRequest" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="requestID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="Statistics" nsURI="http:///Classes/Statistics.ecore" nsPrefix="Classes.Statistics">

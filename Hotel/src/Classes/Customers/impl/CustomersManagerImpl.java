@@ -78,7 +78,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllCustomers() {
+	public EList<String> getAllCustomers() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -89,7 +89,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addCustomer() {
+	public void addCustomer(String SSID, String firstname, String lastname, String title, String email, String phone) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -100,7 +100,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeCustomerFirstName() {
+	public void changeCustomerFirstName(String SSID, String firstName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -111,7 +111,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeCustomerLastName() {
+	public void changeCustomerLastName(String SSID, String lastName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -122,7 +122,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeCustomerTitle() {
+	public void changeCustomerTitle(String SSID, String title) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -133,7 +133,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeCustomerEmail() {
+	public void changeCustomerEmail(String SSID, String eMail) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -144,7 +144,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeCustomerPhone() {
+	public void changeCustomerPhone(String SSID, String phoneNr) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -155,7 +155,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getCustomerFirstName() {
+	public String getCustomerFirstName(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -166,7 +166,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getCustomerLastName() {
+	public String getCustomerLastName(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -177,7 +177,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getCustomerTitle() {
+	public String getCustomerTitle(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -188,7 +188,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getCustomerEmail() {
+	public String getCustomerEmail(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -199,7 +199,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getCustomerPhone() {
+	public String getCustomerPhone(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -210,7 +210,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchCustomers() {
+	public EList<String> searchCustomers(String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -221,7 +221,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getCustomerBookings() {
+	public EList<String> getCustomerBookings(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -232,7 +232,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getCustomerRequests() {
+	public EList<String> getCustomerRequests(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -243,7 +243,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addCustomerBooking() {
+	public void addCustomerBooking(String SSID, String bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -254,7 +254,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeCustomerBooking() {
+	public void removeCustomerBooking(String SSID, String bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -265,7 +265,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addCustomerRequest() {
+	public void addCustomerRequest(String SSID, String requestID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -276,7 +276,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeCustomerRequest() {
+	public void removeCustomerRequest(String SSID, String requestID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -365,61 +365,52 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case CustomersPackage.CUSTOMERS_MANAGER___GET_ALL_CUSTOMERS:
-				getAllCustomers();
+				return getAllCustomers();
+			case CustomersPackage.CUSTOMERS_MANAGER___ADD_CUSTOMER__STRING_STRING_STRING_STRING_STRING_STRING:
+				addCustomer((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
 				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___ADD_CUSTOMER:
-				addCustomer();
+			case CustomersPackage.CUSTOMERS_MANAGER___CHANGE_CUSTOMER_FIRST_NAME__STRING_STRING:
+				changeCustomerFirstName((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___CHANGE_CUSTOMER_FIRST_NAME:
-				changeCustomerFirstName();
+			case CustomersPackage.CUSTOMERS_MANAGER___CHANGE_CUSTOMER_LAST_NAME__STRING_STRING:
+				changeCustomerLastName((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___CHANGE_CUSTOMER_LAST_NAME:
-				changeCustomerLastName();
+			case CustomersPackage.CUSTOMERS_MANAGER___CHANGE_CUSTOMER_TITLE__STRING_STRING:
+				changeCustomerTitle((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___CHANGE_CUSTOMER_TITLE:
-				changeCustomerTitle();
+			case CustomersPackage.CUSTOMERS_MANAGER___CHANGE_CUSTOMER_EMAIL__STRING_STRING:
+				changeCustomerEmail((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___CHANGE_CUSTOMER_EMAIL:
-				changeCustomerEmail();
+			case CustomersPackage.CUSTOMERS_MANAGER___CHANGE_CUSTOMER_PHONE__STRING_STRING:
+				changeCustomerPhone((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___CHANGE_CUSTOMER_PHONE:
-				changeCustomerPhone();
+			case CustomersPackage.CUSTOMERS_MANAGER___GET_CUSTOMER_FIRST_NAME__STRING:
+				return getCustomerFirstName((String)arguments.get(0));
+			case CustomersPackage.CUSTOMERS_MANAGER___GET_CUSTOMER_LAST_NAME__STRING:
+				return getCustomerLastName((String)arguments.get(0));
+			case CustomersPackage.CUSTOMERS_MANAGER___GET_CUSTOMER_TITLE__STRING:
+				return getCustomerTitle((String)arguments.get(0));
+			case CustomersPackage.CUSTOMERS_MANAGER___GET_CUSTOMER_EMAIL__STRING:
+				return getCustomerEmail((String)arguments.get(0));
+			case CustomersPackage.CUSTOMERS_MANAGER___GET_CUSTOMER_PHONE__STRING:
+				return getCustomerPhone((String)arguments.get(0));
+			case CustomersPackage.CUSTOMERS_MANAGER___SEARCH_CUSTOMERS__STRING:
+				return searchCustomers((String)arguments.get(0));
+			case CustomersPackage.CUSTOMERS_MANAGER___GET_CUSTOMER_BOOKINGS__STRING:
+				return getCustomerBookings((String)arguments.get(0));
+			case CustomersPackage.CUSTOMERS_MANAGER___GET_CUSTOMER_REQUESTS__STRING:
+				return getCustomerRequests((String)arguments.get(0));
+			case CustomersPackage.CUSTOMERS_MANAGER___ADD_CUSTOMER_BOOKING__STRING_STRING:
+				addCustomerBooking((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___GET_CUSTOMER_FIRST_NAME:
-				getCustomerFirstName();
+			case CustomersPackage.CUSTOMERS_MANAGER___REMOVE_CUSTOMER_BOOKING__STRING_STRING:
+				removeCustomerBooking((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___GET_CUSTOMER_LAST_NAME:
-				getCustomerLastName();
+			case CustomersPackage.CUSTOMERS_MANAGER___ADD_CUSTOMER_REQUEST__STRING_STRING:
+				addCustomerRequest((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___GET_CUSTOMER_TITLE:
-				getCustomerTitle();
-				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___GET_CUSTOMER_EMAIL:
-				getCustomerEmail();
-				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___GET_CUSTOMER_PHONE:
-				getCustomerPhone();
-				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___SEARCH_CUSTOMERS:
-				searchCustomers();
-				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___GET_CUSTOMER_BOOKINGS:
-				getCustomerBookings();
-				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___GET_CUSTOMER_REQUESTS:
-				getCustomerRequests();
-				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___ADD_CUSTOMER_BOOKING:
-				addCustomerBooking();
-				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___REMOVE_CUSTOMER_BOOKING:
-				removeCustomerBooking();
-				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___ADD_CUSTOMER_REQUEST:
-				addCustomerRequest();
-				return null;
-			case CustomersPackage.CUSTOMERS_MANAGER___REMOVE_CUSTOMER_REQUEST:
-				removeCustomerRequest();
+			case CustomersPackage.CUSTOMERS_MANAGER___REMOVE_CUSTOMER_REQUEST__STRING_STRING:
+				removeCustomerRequest((String)arguments.get(0), (String)arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

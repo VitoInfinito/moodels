@@ -338,7 +338,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__AddCustomer() {
+	public EOperation getICustomers__AddCustomer__String_String_String_String_String_String() {
 		return iCustomersEClass.getEOperations().get(1);
 	}
 
@@ -347,7 +347,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__ChangeCustomerFirstName() {
+	public EOperation getICustomers__ChangeCustomerFirstName__String_String() {
 		return iCustomersEClass.getEOperations().get(2);
 	}
 
@@ -356,7 +356,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__ChangeCustomerLastName() {
+	public EOperation getICustomers__ChangeCustomerLastName__String_String() {
 		return iCustomersEClass.getEOperations().get(3);
 	}
 
@@ -365,7 +365,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__ChangeCustomerTitle() {
+	public EOperation getICustomers__ChangeCustomerTitle__String_String() {
 		return iCustomersEClass.getEOperations().get(4);
 	}
 
@@ -374,7 +374,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__ChangeCustomerEmail() {
+	public EOperation getICustomers__ChangeCustomerEmail__String_String() {
 		return iCustomersEClass.getEOperations().get(5);
 	}
 
@@ -383,7 +383,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__ChangeCustomerPhone() {
+	public EOperation getICustomers__ChangeCustomerPhone__String_String() {
 		return iCustomersEClass.getEOperations().get(6);
 	}
 
@@ -392,7 +392,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__GetCustomerFirstName() {
+	public EOperation getICustomers__GetCustomerFirstName__String() {
 		return iCustomersEClass.getEOperations().get(7);
 	}
 
@@ -401,7 +401,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__GetCustomerLastName() {
+	public EOperation getICustomers__GetCustomerLastName__String() {
 		return iCustomersEClass.getEOperations().get(8);
 	}
 
@@ -410,7 +410,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__GetCustomerTitle() {
+	public EOperation getICustomers__GetCustomerTitle__String() {
 		return iCustomersEClass.getEOperations().get(9);
 	}
 
@@ -419,7 +419,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__GetCustomerEmail() {
+	public EOperation getICustomers__GetCustomerEmail__String() {
 		return iCustomersEClass.getEOperations().get(10);
 	}
 
@@ -428,7 +428,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__GetCustomerPhone() {
+	public EOperation getICustomers__GetCustomerPhone__String() {
 		return iCustomersEClass.getEOperations().get(11);
 	}
 
@@ -437,7 +437,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__SearchCustomers() {
+	public EOperation getICustomers__SearchCustomers__String() {
 		return iCustomersEClass.getEOperations().get(12);
 	}
 
@@ -446,7 +446,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__GetCustomerBookings() {
+	public EOperation getICustomers__GetCustomerBookings__String() {
 		return iCustomersEClass.getEOperations().get(13);
 	}
 
@@ -455,7 +455,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__GetCustomerRequests() {
+	public EOperation getICustomers__GetCustomerRequests__String() {
 		return iCustomersEClass.getEOperations().get(14);
 	}
 
@@ -464,7 +464,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__AddCustomerBooking() {
+	public EOperation getICustomers__AddCustomerBooking__String_String() {
 		return iCustomersEClass.getEOperations().get(15);
 	}
 
@@ -473,7 +473,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__RemoveCustomerBooking() {
+	public EOperation getICustomers__RemoveCustomerBooking__String_String() {
 		return iCustomersEClass.getEOperations().get(16);
 	}
 
@@ -482,7 +482,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__AddCustomerRequest() {
+	public EOperation getICustomers__AddCustomerRequest__String_String() {
 		return iCustomersEClass.getEOperations().get(17);
 	}
 
@@ -491,7 +491,7 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getICustomers__RemoveCustomerRequest() {
+	public EOperation getICustomers__RemoveCustomerRequest__String_String() {
 		return iCustomersEClass.getEOperations().get(18);
 	}
 
@@ -542,24 +542,24 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 
 		iCustomersEClass = createEClass(ICUSTOMERS);
 		createEOperation(iCustomersEClass, ICUSTOMERS___GET_ALL_CUSTOMERS);
-		createEOperation(iCustomersEClass, ICUSTOMERS___ADD_CUSTOMER);
-		createEOperation(iCustomersEClass, ICUSTOMERS___CHANGE_CUSTOMER_FIRST_NAME);
-		createEOperation(iCustomersEClass, ICUSTOMERS___CHANGE_CUSTOMER_LAST_NAME);
-		createEOperation(iCustomersEClass, ICUSTOMERS___CHANGE_CUSTOMER_TITLE);
-		createEOperation(iCustomersEClass, ICUSTOMERS___CHANGE_CUSTOMER_EMAIL);
-		createEOperation(iCustomersEClass, ICUSTOMERS___CHANGE_CUSTOMER_PHONE);
-		createEOperation(iCustomersEClass, ICUSTOMERS___GET_CUSTOMER_FIRST_NAME);
-		createEOperation(iCustomersEClass, ICUSTOMERS___GET_CUSTOMER_LAST_NAME);
-		createEOperation(iCustomersEClass, ICUSTOMERS___GET_CUSTOMER_TITLE);
-		createEOperation(iCustomersEClass, ICUSTOMERS___GET_CUSTOMER_EMAIL);
-		createEOperation(iCustomersEClass, ICUSTOMERS___GET_CUSTOMER_PHONE);
-		createEOperation(iCustomersEClass, ICUSTOMERS___SEARCH_CUSTOMERS);
-		createEOperation(iCustomersEClass, ICUSTOMERS___GET_CUSTOMER_BOOKINGS);
-		createEOperation(iCustomersEClass, ICUSTOMERS___GET_CUSTOMER_REQUESTS);
-		createEOperation(iCustomersEClass, ICUSTOMERS___ADD_CUSTOMER_BOOKING);
-		createEOperation(iCustomersEClass, ICUSTOMERS___REMOVE_CUSTOMER_BOOKING);
-		createEOperation(iCustomersEClass, ICUSTOMERS___ADD_CUSTOMER_REQUEST);
-		createEOperation(iCustomersEClass, ICUSTOMERS___REMOVE_CUSTOMER_REQUEST);
+		createEOperation(iCustomersEClass, ICUSTOMERS___ADD_CUSTOMER__STRING_STRING_STRING_STRING_STRING_STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___CHANGE_CUSTOMER_FIRST_NAME__STRING_STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___CHANGE_CUSTOMER_LAST_NAME__STRING_STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___CHANGE_CUSTOMER_TITLE__STRING_STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___CHANGE_CUSTOMER_EMAIL__STRING_STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___CHANGE_CUSTOMER_PHONE__STRING_STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___GET_CUSTOMER_FIRST_NAME__STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___GET_CUSTOMER_LAST_NAME__STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___GET_CUSTOMER_TITLE__STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___GET_CUSTOMER_EMAIL__STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___GET_CUSTOMER_PHONE__STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___SEARCH_CUSTOMERS__STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___GET_CUSTOMER_BOOKINGS__STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___GET_CUSTOMER_REQUESTS__STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___ADD_CUSTOMER_BOOKING__STRING_STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___REMOVE_CUSTOMER_BOOKING__STRING_STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___ADD_CUSTOMER_REQUEST__STRING_STRING);
+		createEOperation(iCustomersEClass, ICUSTOMERS___REMOVE_CUSTOMER_REQUEST__STRING_STRING);
 	}
 
 	/**
@@ -619,43 +619,75 @@ public class CustomersPackageImpl extends EPackageImpl implements CustomersPacka
 
 		initEClass(iCustomersEClass, ICustomers.class, "ICustomers", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getICustomers__GetAllCustomers(), null, "getAllCustomers", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getICustomers__GetAllCustomers(), theTypesPackage.getString(), "getAllCustomers", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__AddCustomer(), null, "addCustomer", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getICustomers__AddCustomer__String_String_String_String_String_String(), null, "addCustomer", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstname", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastname", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "title", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "phone", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__ChangeCustomerFirstName(), null, "changeCustomerFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__ChangeCustomerFirstName__String_String(), null, "changeCustomerFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__ChangeCustomerLastName(), null, "changeCustomerLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__ChangeCustomerLastName__String_String(), null, "changeCustomerLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__ChangeCustomerTitle(), null, "changeCustomerTitle", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__ChangeCustomerTitle__String_String(), null, "changeCustomerTitle", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "title", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__ChangeCustomerEmail(), null, "changeCustomerEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__ChangeCustomerEmail__String_String(), null, "changeCustomerEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "eMail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__ChangeCustomerPhone(), null, "changeCustomerPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__ChangeCustomerPhone__String_String(), null, "changeCustomerPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "phoneNr", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__GetCustomerFirstName(), null, "getCustomerFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__GetCustomerFirstName__String(), theTypesPackage.getString(), "getCustomerFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__GetCustomerLastName(), null, "getCustomerLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__GetCustomerLastName__String(), theTypesPackage.getString(), "getCustomerLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__GetCustomerTitle(), null, "getCustomerTitle", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__GetCustomerTitle__String(), theTypesPackage.getString(), "getCustomerTitle", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__GetCustomerEmail(), null, "getCustomerEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__GetCustomerEmail__String(), theTypesPackage.getString(), "getCustomerEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__GetCustomerPhone(), null, "getCustomerPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__GetCustomerPhone__String(), theTypesPackage.getString(), "getCustomerPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__SearchCustomers(), null, "searchCustomers", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__SearchCustomers__String(), theTypesPackage.getString(), "searchCustomers", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__GetCustomerBookings(), null, "getCustomerBookings", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__GetCustomerBookings__String(), theTypesPackage.getString(), "getCustomerBookings", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__GetCustomerRequests(), null, "getCustomerRequests", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__GetCustomerRequests__String(), theTypesPackage.getString(), "getCustomerRequests", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__AddCustomerBooking(), null, "addCustomerBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__AddCustomerBooking__String_String(), null, "addCustomerBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__RemoveCustomerBooking(), null, "removeCustomerBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__RemoveCustomerBooking__String_String(), null, "removeCustomerBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__AddCustomerRequest(), null, "addCustomerRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__AddCustomerRequest__String_String(), null, "addCustomerRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "requestID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getICustomers__RemoveCustomerRequest(), null, "removeCustomerRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getICustomers__RemoveCustomerRequest__String_String(), null, "removeCustomerRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "requestID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

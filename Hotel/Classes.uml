@@ -2336,25 +2336,175 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_w9PGP3psEeST-65JbGUt8g" name="Customers">
     <packagedElement xmi:type="uml:Interface" xmi:id="_w9PGQnpsEeST-65JbGUt8g" name="ICustomers">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGQ3psEeST-65JbGUt8g" name="getAllCustomers"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGRHpsEeST-65JbGUt8g" name="addCustomer"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGRXpsEeST-65JbGUt8g" name="changeCustomerFirstName"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGRnpsEeST-65JbGUt8g" name="changeCustomerLastName"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGR3psEeST-65JbGUt8g" name="changeCustomerTitle"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGSHpsEeST-65JbGUt8g" name="changeCustomerEmail"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGSXpsEeST-65JbGUt8g" name="changeCustomerPhone"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGSnpsEeST-65JbGUt8g" name="getCustomerFirstName"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGS3psEeST-65JbGUt8g" name="getCustomerLastName"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGTHpsEeST-65JbGUt8g" name="getCustomerTitle"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGTXpsEeST-65JbGUt8g" name="getCustomerEmail"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGTnpsEeST-65JbGUt8g" name="getCustomerPhone"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGT3psEeST-65JbGUt8g" name="searchCustomers"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGUHpsEeST-65JbGUt8g" name="getCustomerBookings"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGUXpsEeST-65JbGUt8g" name="getCustomerRequests"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGUnpsEeST-65JbGUt8g" name="addCustomerBooking"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGU3psEeST-65JbGUt8g" name="removeCustomerBooking"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGVHpsEeST-65JbGUt8g" name="addCustomerRequest"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGVXpsEeST-65JbGUt8g" name="removeCustomerRequest"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGQ3psEeST-65JbGUt8g" name="getAllCustomers">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__f3I4H_qEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__f3I4X_qEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__f3I4n_qEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGRHpsEeST-65JbGUt8g" name="addCustomer">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gKqLIH_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gKt1gH_rEeS5IpkkkJsVew" name="firstname">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gKvqsH_rEeS5IpkkkJsVew" name="lastname">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gKxf4H_rEeS5IpkkkJsVew" name="title">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gKyuAH_rEeS5IpkkkJsVew" name="email">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gK2YYH_rEeS5IpkkkJsVew" name="phone">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGRXpsEeST-65JbGUt8g" name="changeCustomerFirstName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_HJyHoH_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_HJyusH_rEeS5IpkkkJsVew" name="firstName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGRnpsEeST-65JbGUt8g" name="changeCustomerLastName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_I0ZPUH_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_I0Z2YH_rEeS5IpkkkJsVew" name="lastName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGR3psEeST-65JbGUt8g" name="changeCustomerTitle">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KAlVoH_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KAq1MH_rEeS5IpkkkJsVew" name="title">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGSHpsEeST-65JbGUt8g" name="changeCustomerEmail">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_L8Xs4H_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_L8Y7AH_rEeS5IpkkkJsVew" name="eMail">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGSXpsEeST-65JbGUt8g" name="changeCustomerPhone">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NTtTQH_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NTuhYH_rEeS5IpkkkJsVew" name="phoneNr">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGSnpsEeST-65JbGUt8g" name="getCustomerFirstName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DJkagH_rEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Oj0QQH_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGS3psEeST-65JbGUt8g" name="getCustomerLastName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DQStkH_rEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Orx5cH_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGTHpsEeST-65JbGUt8g" name="getCustomerTitle">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DY53AH_rEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_O3YsgH_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGTXpsEeST-65JbGUt8g" name="getCustomerEmail">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DmyiAH_rEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PINWwH_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGTnpsEeST-65JbGUt8g" name="getCustomerPhone">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DvVaAH_rEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PQLnAH_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGT3psEeST-65JbGUt8g" name="searchCustomers">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__-Eu4H_qEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__-Eu4X_qEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__-Eu4n_qEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Q6udQH_rEeS5IpkkkJsVew" name="keyword">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGUHpsEeST-65JbGUt8g" name="getCustomerBookings">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_AMlsAH_rEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AMlsAX_rEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AMlsAn_rEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SFJB8H_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGUXpsEeST-65JbGUt8g" name="getCustomerRequests">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_A_yDgH_rEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A_yqkH_rEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A_yqkX_rEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SUZl8H_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGUnpsEeST-65JbGUt8g" name="addCustomerBooking">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_S96dAH_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_VG7X8H_rEeS5IpkkkJsVew" name="bookingID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGU3psEeST-65JbGUt8g" name="removeCustomerBooking">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_W2U5AH_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_W2YjYH_rEeS5IpkkkJsVew" name="bookingID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGVHpsEeST-65JbGUt8g" name="addCustomerRequest">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_XUxvkH_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_XU1Z8H_rEeS5IpkkkJsVew" name="requestID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGVXpsEeST-65JbGUt8g" name="removeCustomerRequest">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_aa5zAH_rEeS5IpkkkJsVew" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_aa_SkH_rEeS5IpkkkJsVew" name="requestID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9PGVnpsEeST-65JbGUt8g" name="CustomersManager" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9PGV3psEeST-65JbGUt8g" name="customer" visibility="private" type="_w9PGW3psEeST-65JbGUt8g" association="_w9PGenpsEeST-65JbGUt8g">

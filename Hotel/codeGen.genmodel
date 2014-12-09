@@ -772,24 +772,74 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Customers/ICustomers">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/getAllCustomers"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/addCustomer"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/changeCustomerFirstName"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/changeCustomerLastName"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/changeCustomerTitle"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/changeCustomerEmail"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/changeCustomerPhone"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/getCustomerFirstName"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/getCustomerLastName"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/getCustomerTitle"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/getCustomerEmail"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/getCustomerPhone"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/searchCustomers"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/getCustomerBookings"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/getCustomerRequests"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/addCustomerBooking"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/removeCustomerBooking"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/addCustomerRequest"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/removeCustomerRequest"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/addCustomer">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/addCustomer/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/addCustomer/firstname"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/addCustomer/lastname"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/addCustomer/title"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/addCustomer/email"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/addCustomer/phone"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/changeCustomerFirstName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/changeCustomerFirstName/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/changeCustomerFirstName/firstName"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/changeCustomerLastName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/changeCustomerLastName/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/changeCustomerLastName/lastName"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/changeCustomerTitle">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/changeCustomerTitle/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/changeCustomerTitle/title"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/changeCustomerEmail">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/changeCustomerEmail/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/changeCustomerEmail/eMail"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/changeCustomerPhone">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/changeCustomerPhone/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/changeCustomerPhone/phoneNr"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/getCustomerFirstName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/getCustomerFirstName/SSID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/getCustomerLastName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/getCustomerLastName/SSID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/getCustomerTitle">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/getCustomerTitle/SSID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/getCustomerEmail">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/getCustomerEmail/SSID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/getCustomerPhone">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/getCustomerPhone/SSID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/searchCustomers">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/searchCustomers/keyword"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/getCustomerBookings">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/getCustomerBookings/SSID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/getCustomerRequests">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/getCustomerRequests/SSID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/addCustomerBooking">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/addCustomerBooking/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/addCustomerBooking/bookingID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/removeCustomerBooking">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/removeCustomerBooking/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/removeCustomerBooking/bookingID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/addCustomerRequest">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/addCustomerRequest/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/addCustomerRequest/requestID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/removeCustomerRequest">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/removeCustomerRequest/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/removeCustomerRequest/requestID"/>
+        </genOperations>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Statistics" basePackage="Classes"
