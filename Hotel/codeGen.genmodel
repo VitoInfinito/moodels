@@ -639,7 +639,9 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Staff/IStaff">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getAllStaff"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/searchStaff"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/searchStaff">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/searchStaff/keyword"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getStaffFirstName">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/getStaffFirstName/SSID"/>
         </genOperations>
@@ -681,7 +683,10 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/changeStaffSalaryContract/SSID"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/changeStaffSalaryContract/salaryContract"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/scheduleStaff"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/scheduleStaff">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/scheduleStaff/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/scheduleStaff/to"/>
+        </genOperations>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Inventory" basePackage="Classes"

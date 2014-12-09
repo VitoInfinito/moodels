@@ -889,41 +889,77 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_w9N3sHpsEeST-65JbGUt8g" name="Staff">
     <packagedElement xmi:type="uml:Interface" xmi:id="_w9N3snpsEeST-65JbGUt8g" name="IStaff">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3s3psEeST-65JbGUt8g" name="getAllStaff"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3tHpsEeST-65JbGUt8g" name="searchStaff"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3s3psEeST-65JbGUt8g" name="getAllStaff">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_eGjGsH_dEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fTzkAH_dEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fT0LEH_dEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3tHpsEeST-65JbGUt8g" name="searchStaff">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_geOvwH_dEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_geOvwX_dEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_geOvwn_dEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_igVxcH_dEeS5IpkkkJsVew" name="keyword">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3tXpsEeST-65JbGUt8g" name="getStaffFirstName">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_IyS3IHvFEeSLvtP7wKaE3g" name="SSID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_cupVEH_cEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3tnpsEeST-65JbGUt8g" name="getStaffLastName">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_hy08YHvFEeSLvtP7wKaE3g" name="SSID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_eU4TEH_cEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3t3psEeST-65JbGUt8g" name="getStaffJob">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_jZW1UHvFEeSLvtP7wKaE3g" name="SSID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hJV-wH_cEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3uHpsEeST-65JbGUt8g" name="getStaffPhone">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_kxJHoHvFEeSLvtP7wKaE3g" name="SSID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hRcK0H_cEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3uXpsEeST-65JbGUt8g" name="getStaffEmail">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_mfBlwHvFEeSLvtP7wKaE3g" name="SSID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hoNFAH_cEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3unpsEeST-65JbGUt8g" name="getStaffSalaryContractType">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_oI4fgHvFEeSLvtP7wKaE3g" name="SSID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_UtDAsH_dEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3u3psEeST-65JbGUt8g" name="getStaffSalary">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_pvw9wHvFEeSLvtP7wKaE3g" name="SSID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YjDB4H_dEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3vHpsEeST-65JbGUt8g" name="changeStaffFirstName">
@@ -966,7 +1002,19 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3wXpsEeST-65JbGUt8g" name="scheduleStaff"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3wXpsEeST-65JbGUt8g" name="scheduleStaff">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_yU52YH_dEeS5IpkkkJsVew" name="from">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_0NTicH_dEeS5IpkkkJsVew" name="to">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2ZjXkH_dEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4m5_8H_dEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4m6nAH_dEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9N3wnpsEeST-65JbGUt8g" name="StaffManager" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9N3w3psEeST-65JbGUt8g" name="staff" visibility="private" type="_w9N3ynpsEeST-65JbGUt8g" association="_w9N36npsEeST-65JbGUt8g">

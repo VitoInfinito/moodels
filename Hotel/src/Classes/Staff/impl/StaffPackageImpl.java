@@ -380,7 +380,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__SearchStaff() {
+	public EOperation getIStaff__SearchStaff__String() {
 		return iStaffEClass.getEOperations().get(1);
 	}
 
@@ -497,7 +497,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__ScheduleStaff() {
+	public EOperation getIStaff__ScheduleStaff__Date_Date() {
 		return iStaffEClass.getEOperations().get(14);
 	}
 
@@ -553,7 +553,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 
 		iStaffEClass = createEClass(ISTAFF);
 		createEOperation(iStaffEClass, ISTAFF___GET_ALL_STAFF);
-		createEOperation(iStaffEClass, ISTAFF___SEARCH_STAFF);
+		createEOperation(iStaffEClass, ISTAFF___SEARCH_STAFF__STRING);
 		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_FIRST_NAME__STRING);
 		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_LAST_NAME__STRING);
 		createEOperation(iStaffEClass, ISTAFF___GET_STAFF_JOB__STRING);
@@ -566,7 +566,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_JOB__STRING_STRING);
 		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_PHONE__STRING_STRING);
 		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING);
-		createEOperation(iStaffEClass, ISTAFF___SCHEDULE_STAFF);
+		createEOperation(iStaffEClass, ISTAFF___SCHEDULE_STAFF__DATE_DATE);
 	}
 
 	/**
@@ -631,29 +631,30 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 
 		initEClass(iStaffEClass, IStaff.class, "IStaff", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getIStaff__GetAllStaff(), null, "getAllStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIStaff__GetAllStaff(), theTypesPackage.getString(), "getAllStaff", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStaff__SearchStaff(), null, "searchStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getIStaff__SearchStaff__String(), theTypesPackage.getString(), "searchStaff", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		EOperation op = initEOperation(getIStaff__GetStaffFirstName__String(), null, "getStaffFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__GetStaffFirstName__String(), theTypesPackage.getString(), "getStaffFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIStaff__GetStaffLastName__String(), null, "getStaffLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__GetStaffLastName__String(), theTypesPackage.getString(), "getStaffLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIStaff__GetStaffJob__String(), null, "getStaffJob", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__GetStaffJob__String(), theTypesPackage.getString(), "getStaffJob", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIStaff__GetStaffPhone__String(), null, "getStaffPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__GetStaffPhone__String(), theTypesPackage.getString(), "getStaffPhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIStaff__GetStaffEmail__String(), null, "getStaffEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__GetStaffEmail__String(), theTypesPackage.getString(), "getStaffEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIStaff__GetStaffSalaryContractType__String(), null, "getStaffSalaryContractType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__GetStaffSalaryContractType__String(), theTypesPackage.getString(), "getStaffSalaryContractType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIStaff__GetStaffSalary__String(), null, "getStaffSalary", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__GetStaffSalary__String(), theTypesPackage.getReal(), "getStaffSalary", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIStaff__ChangeStaffFirstName__String_String(), null, "changeStaffFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -676,7 +677,9 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "salaryContract", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStaff__ScheduleStaff(), null, "scheduleStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__ScheduleStaff__Date_Date(), theTypesPackage.getString(), "scheduleStaff", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

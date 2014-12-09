@@ -924,6 +924,7 @@ Customer Service representative inherits the uses of Staff</body>
           </packagedElement>
           <packagedElement xmi:type="uml:Usage" xmi:id="_C1gEcHiXEeS9MsZyYSaWPA" name="Usage0" client="_uRE8oHT9EeSTN6KBMiF9rQ" supplier="_A-o9EHUAEeSTN6KBMiF9rQ"/>
           <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_k6XtcHiWEeS9MsZyYSaWPA" client="_uRE8oHT9EeSTN6KBMiF9rQ" supplier="_J5ePwHiSEeS9MsZyYSaWPA" contract="_J5ePwHiSEeS9MsZyYSaWPA"/>
+          <packagedElement xmi:type="uml:Enumeration" xmi:id="_-AyrMH_cEeS5IpkkkJsVew" name="ContractType"/>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_5CimAHT7EeSTN6KBMiF9rQ" name="Bills">

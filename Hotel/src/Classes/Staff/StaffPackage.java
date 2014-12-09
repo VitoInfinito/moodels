@@ -92,7 +92,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___SEARCH_STAFF = 1;
+	int ISTAFF___SEARCH_STAFF__STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Get Staff First Name</em>' operation.
@@ -209,7 +209,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___SCHEDULE_STAFF = 14;
+	int ISTAFF___SCHEDULE_STAFF__DATE_DATE = 14;
 
 	/**
 	 * The number of operations of the '<em>IStaff</em>' class.
@@ -273,7 +273,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___SEARCH_STAFF = ISTAFF___SEARCH_STAFF;
+	int STAFF_MANAGER___SEARCH_STAFF__STRING = ISTAFF___SEARCH_STAFF__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Staff First Name</em>' operation.
@@ -390,7 +390,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___SCHEDULE_STAFF = ISTAFF___SCHEDULE_STAFF;
+	int STAFF_MANAGER___SCHEDULE_STAFF__DATE_DATE = ISTAFF___SCHEDULE_STAFF__DATE_DATE;
 
 	/**
 	 * The number of operations of the '<em>Manager</em>' class.
@@ -824,14 +824,14 @@ public interface StaffPackage extends EPackage {
 	EOperation getIStaff__GetAllStaff();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#searchStaff() <em>Search Staff</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#searchStaff(java.lang.String) <em>Search Staff</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Staff</em>' operation.
-	 * @see Classes.Staff.IStaff#searchStaff()
+	 * @see Classes.Staff.IStaff#searchStaff(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIStaff__SearchStaff();
+	EOperation getIStaff__SearchStaff__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Staff.IStaff#getStaffFirstName(java.lang.String) <em>Get Staff First Name</em>}' operation.
@@ -954,14 +954,14 @@ public interface StaffPackage extends EPackage {
 	EOperation getIStaff__ChangeStaffSalaryContract__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#scheduleStaff() <em>Schedule Staff</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#scheduleStaff(java.util.Date, java.util.Date) <em>Schedule Staff</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Schedule Staff</em>' operation.
-	 * @see Classes.Staff.IStaff#scheduleStaff()
+	 * @see Classes.Staff.IStaff#scheduleStaff(java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getIStaff__ScheduleStaff();
+	EOperation getIStaff__ScheduleStaff__Date_Date();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1156,7 +1156,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___SEARCH_STAFF = eINSTANCE.getIStaff__SearchStaff();
+		EOperation ISTAFF___SEARCH_STAFF__STRING = eINSTANCE.getIStaff__SearchStaff__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Staff First Name</b></em>' operation.
@@ -1260,7 +1260,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___SCHEDULE_STAFF = eINSTANCE.getIStaff__ScheduleStaff();
+		EOperation ISTAFF___SCHEDULE_STAFF__DATE_DATE = eINSTANCE.getIStaff__ScheduleStaff__Date_Date();
 
 	}
 

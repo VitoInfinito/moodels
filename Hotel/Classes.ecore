@@ -699,27 +699,30 @@
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IStaff" abstract="true" interface="true">
-      <eOperations name="getAllStaff" ordered="false" lowerBound="1"/>
-      <eOperations name="searchStaff" ordered="false" lowerBound="1"/>
-      <eOperations name="getStaffFirstName" ordered="false" lowerBound="1">
+      <eOperations name="getAllStaff" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="searchStaff" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getStaffFirstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
-      <eOperations name="getStaffLastName" ordered="false" lowerBound="1">
+      <eOperations name="getStaffLastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
-      <eOperations name="getStaffJob" ordered="false" lowerBound="1">
+      <eOperations name="getStaffJob" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
-      <eOperations name="getStaffPhone" ordered="false" lowerBound="1">
+      <eOperations name="getStaffPhone" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
-      <eOperations name="getStaffEmail" ordered="false" lowerBound="1">
+      <eOperations name="getStaffEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
-      <eOperations name="getStaffSalaryContractType" ordered="false" lowerBound="1">
+      <eOperations name="getStaffSalaryContractType" ordered="false" lowerBound="1"
+          eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
-      <eOperations name="getStaffSalary" ordered="false" lowerBound="1">
+      <eOperations name="getStaffSalary" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Real">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
       <eOperations name="changeStaffFirstName" ordered="false" lowerBound="1">
@@ -742,7 +745,10 @@
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="salaryContract" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
-      <eOperations name="scheduleStaff" ordered="false" lowerBound="1"/>
+      <eOperations name="scheduleStaff" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eOperations>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="Inventory" nsURI="http:///Classes/Inventory.ecore" nsPrefix="Classes.Inventory">

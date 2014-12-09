@@ -2,6 +2,8 @@
  */
 package Classes.Staff;
 
+import java.util.Date;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,74 +20,74 @@ public interface IStaff extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
-	void getAllStaff();
+	EList<String> getAllStaff();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated
 	 */
-	void searchStaff();
+	EList<String> searchStaff(String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model SSIDRequired="true" SSIDOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void getStaffFirstName(String SSID);
+	String getStaffFirstName(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model SSIDRequired="true" SSIDOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void getStaffLastName(String SSID);
+	String getStaffLastName(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model SSIDRequired="true" SSIDOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void getStaffJob(String SSID);
+	String getStaffJob(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model SSIDRequired="true" SSIDOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void getStaffPhone(String SSID);
+	String getStaffPhone(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model SSIDRequired="true" SSIDOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void getStaffEmail(String SSID);
+	String getStaffEmail(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model SSIDRequired="true" SSIDOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void getStaffSalaryContractType(String SSID);
+	String getStaffSalaryContractType(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model SSIDRequired="true" SSIDOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Real" required="true" ordered="false" SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void getStaffSalary(String SSID);
+	double getStaffSalary(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -130,9 +132,9 @@ public interface IStaff extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	void scheduleStaff();
+	EList<String> scheduleStaff(Date from, Date to);
 
 } // IStaff
