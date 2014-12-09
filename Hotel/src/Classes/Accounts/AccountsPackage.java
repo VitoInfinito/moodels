@@ -139,7 +139,7 @@ public interface AccountsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_ACCOUNTS___ADD_ACCOUNT__STRING_STRING = 0;
+	int IMANAGE_ACCOUNTS___ADD_ACCOUNT__STRING_STRING_ACCOUNTTYPE = 0;
 
 	/**
 	 * The operation id for the '<em>Delete Account</em>' operation.
@@ -178,13 +178,13 @@ public interface AccountsPackage extends EPackage {
 	int IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD__STRING = 4;
 
 	/**
-	 * The operation id for the '<em>Get Accounts</em>' operation.
+	 * The operation id for the '<em>Get Account</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_ACCOUNTS___GET_ACCOUNTS = 5;
+	int IMANAGE_ACCOUNTS___GET_ACCOUNT__STRING = 5;
 
 	/**
 	 * The operation id for the '<em>Search Accounts</em>' operation.
@@ -215,13 +215,13 @@ public interface AccountsPackage extends EPackage {
 	int ACCOUNTS_MANAGER = 1;
 
 	/**
-	 * The feature id for the '<em><b>Account</b></em>' reference list.
+	 * The feature id for the '<em><b>Accounts</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNTS_MANAGER__ACCOUNT = IMANAGE_ACCOUNTS_FEATURE_COUNT + 0;
+	int ACCOUNTS_MANAGER__ACCOUNTS = IMANAGE_ACCOUNTS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Manager</em>' class.
@@ -239,7 +239,7 @@ public interface AccountsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNTS_MANAGER___ADD_ACCOUNT__STRING_STRING = IMANAGE_ACCOUNTS___ADD_ACCOUNT__STRING_STRING;
+	int ACCOUNTS_MANAGER___ADD_ACCOUNT__STRING_STRING_ACCOUNTTYPE = IMANAGE_ACCOUNTS___ADD_ACCOUNT__STRING_STRING_ACCOUNTTYPE;
 
 	/**
 	 * The operation id for the '<em>Delete Account</em>' operation.
@@ -278,13 +278,13 @@ public interface AccountsPackage extends EPackage {
 	int ACCOUNTS_MANAGER___GET_ACCOUNT_PASSWORD__STRING = IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD__STRING;
 
 	/**
-	 * The operation id for the '<em>Get Accounts</em>' operation.
+	 * The operation id for the '<em>Get Account</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNTS_MANAGER___GET_ACCOUNTS = IMANAGE_ACCOUNTS___GET_ACCOUNTS;
+	int ACCOUNTS_MANAGER___GET_ACCOUNT__STRING = IMANAGE_ACCOUNTS___GET_ACCOUNT__STRING;
 
 	/**
 	 * The operation id for the '<em>Search Accounts</em>' operation.
@@ -433,15 +433,15 @@ public interface AccountsPackage extends EPackage {
 	EClass getAccountsManager();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Classes.Accounts.AccountsManager#getAccount <em>Account</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Accounts.AccountsManager#getAccounts <em>Accounts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Account</em>'.
-	 * @see Classes.Accounts.AccountsManager#getAccount()
+	 * @return the meta object for the reference list '<em>Accounts</em>'.
+	 * @see Classes.Accounts.AccountsManager#getAccounts()
 	 * @see #getAccountsManager()
 	 * @generated
 	 */
-	EReference getAccountsManager_Account();
+	EReference getAccountsManager_Accounts();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Accounts.IAccountsAccess <em>IAccounts Access</em>}'.
@@ -484,14 +484,14 @@ public interface AccountsPackage extends EPackage {
 	EClass getIManageAccounts();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Accounts.IManageAccounts#addAccount(java.lang.String, java.lang.String) <em>Add Account</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Accounts.IManageAccounts#addAccount(java.lang.String, java.lang.String, Classes.Accounts.AccountType) <em>Add Account</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Account</em>' operation.
-	 * @see Classes.Accounts.IManageAccounts#addAccount(java.lang.String, java.lang.String)
+	 * @see Classes.Accounts.IManageAccounts#addAccount(java.lang.String, java.lang.String, Classes.Accounts.AccountType)
 	 * @generated
 	 */
-	EOperation getIManageAccounts__AddAccount__String_String();
+	EOperation getIManageAccounts__AddAccount__String_String_AccountType();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Accounts.IManageAccounts#deleteAccount(java.lang.String) <em>Delete Account</em>}' operation.
@@ -534,14 +534,14 @@ public interface AccountsPackage extends EPackage {
 	EOperation getIManageAccounts__GetAccountPassword__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Accounts.IManageAccounts#getAccounts() <em>Get Accounts</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Accounts.IManageAccounts#getAccount(java.lang.String) <em>Get Account</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Accounts</em>' operation.
-	 * @see Classes.Accounts.IManageAccounts#getAccounts()
+	 * @return the meta object for the '<em>Get Account</em>' operation.
+	 * @see Classes.Accounts.IManageAccounts#getAccount(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIManageAccounts__GetAccounts();
+	EOperation getIManageAccounts__GetAccount__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Accounts.IManageAccounts#searchAccounts() <em>Search Accounts</em>}' operation.
@@ -631,12 +631,12 @@ public interface AccountsPackage extends EPackage {
 		EClass ACCOUNTS_MANAGER = eINSTANCE.getAccountsManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Account</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Accounts</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACCOUNTS_MANAGER__ACCOUNT = eINSTANCE.getAccountsManager_Account();
+		EReference ACCOUNTS_MANAGER__ACCOUNTS = eINSTANCE.getAccountsManager_Accounts();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Accounts.IAccountsAccess <em>IAccounts Access</em>}' class.
@@ -680,7 +680,7 @@ public interface AccountsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMANAGE_ACCOUNTS___ADD_ACCOUNT__STRING_STRING = eINSTANCE.getIManageAccounts__AddAccount__String_String();
+		EOperation IMANAGE_ACCOUNTS___ADD_ACCOUNT__STRING_STRING_ACCOUNTTYPE = eINSTANCE.getIManageAccounts__AddAccount__String_String_AccountType();
 
 		/**
 		 * The meta object literal for the '<em><b>Delete Account</b></em>' operation.
@@ -715,12 +715,12 @@ public interface AccountsPackage extends EPackage {
 		EOperation IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD__STRING = eINSTANCE.getIManageAccounts__GetAccountPassword__String();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Accounts</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Account</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMANAGE_ACCOUNTS___GET_ACCOUNTS = eINSTANCE.getIManageAccounts__GetAccounts();
+		EOperation IMANAGE_ACCOUNTS___GET_ACCOUNT__STRING = eINSTANCE.getIManageAccounts__GetAccount__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Search Accounts</b></em>' operation.

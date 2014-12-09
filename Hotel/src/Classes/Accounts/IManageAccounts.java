@@ -18,10 +18,10 @@ public interface IManageAccounts extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model usernameDataType="org.eclipse.uml2.types.String" usernameRequired="true" usernameOrdered="false" passwordDataType="org.eclipse.uml2.types.String" passwordRequired="true" passwordOrdered="false"
+	 * @model usernameDataType="org.eclipse.uml2.types.String" usernameRequired="true" usernameOrdered="false" passwordDataType="org.eclipse.uml2.types.String" passwordRequired="true" passwordOrdered="false" typeRequired="true" typeOrdered="false"
 	 * @generated
 	 */
-	void addAccount(String username, String password);
+	void addAccount(String username, String password, AccountType type);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -50,18 +50,18 @@ public interface IManageAccounts extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model usernameDataType="org.eclipse.uml2.types.String" usernameRequired="true" usernameOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" usernameDataType="org.eclipse.uml2.types.String" usernameRequired="true" usernameOrdered="false"
 	 * @generated
 	 */
-	void getAccountPassword(String username);
+	String getAccountPassword(String username);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model required="true" ordered="false" usernameDataType="org.eclipse.uml2.types.String" usernameRequired="true" usernameOrdered="false"
 	 * @generated
 	 */
-	void getAccounts();
+	Account getAccount(String username);
 
 	/**
 	 * <!-- begin-user-doc -->

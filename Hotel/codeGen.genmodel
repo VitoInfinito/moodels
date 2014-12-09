@@ -439,7 +439,7 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Accounts/AccountsManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Accounts/AccountsManager/account"/>
+            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Accounts/AccountsManager/accounts"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Accounts/IAccountsAccess">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IAccountsAccess/validateAccount">
@@ -455,6 +455,7 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IManageAccounts/addAccount">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Accounts/IManageAccounts/addAccount/username"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Accounts/IManageAccounts/addAccount/password"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Accounts/IManageAccounts/addAccount/type"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IManageAccounts/deleteAccount">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Accounts/IManageAccounts/deleteAccount/username"/>
@@ -470,7 +471,9 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IManageAccounts/getAccountPassword">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Accounts/IManageAccounts/getAccountPassword/username"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IManageAccounts/getAccounts"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IManageAccounts/getAccount">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Accounts/IManageAccounts/getAccount/username"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Accounts/IManageAccounts/searchAccounts"/>
       </genClasses>
     </nestedGenPackages>

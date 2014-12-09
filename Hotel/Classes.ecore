@@ -472,7 +472,7 @@
       <eLiterals name="Staff" value="3"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AccountsManager" eSuperTypes="#//Accounts/IManageAccounts #//Accounts/IAccountsAccess">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="account" ordered="false"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="accounts" ordered="false"
           upperBound="-1" eType="#//Accounts/Account"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IAccountsAccess" abstract="true" interface="true">
@@ -489,6 +489,7 @@
       <eOperations name="addAccount" ordered="false" lowerBound="1">
         <eParameters name="username" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="password" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="type" ordered="false" lowerBound="1" eType="#//Accounts/AccountType"/>
       </eOperations>
       <eOperations name="deleteAccount" ordered="false" lowerBound="1">
         <eParameters name="username" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
@@ -501,10 +502,12 @@
         <eParameters name="newPassword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="username" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getAccountPassword" ordered="false" lowerBound="1">
+      <eOperations name="getAccountPassword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="username" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getAccounts" ordered="false" lowerBound="1"/>
+      <eOperations name="getAccount" ordered="false" lowerBound="1" eType="#//Accounts/Account">
+        <eParameters name="username" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eOperations name="searchAccounts" ordered="false" lowerBound="1"/>
     </eClassifiers>
   </eSubpackages>

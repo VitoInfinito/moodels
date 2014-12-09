@@ -247,7 +247,7 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAccountsManager_Account() {
+	public EReference getAccountsManager_Accounts() {
 		return (EReference)accountsManagerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -292,7 +292,7 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIManageAccounts__AddAccount__String_String() {
+	public EOperation getIManageAccounts__AddAccount__String_String_AccountType() {
 		return iManageAccountsEClass.getEOperations().get(0);
 	}
 
@@ -337,7 +337,7 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIManageAccounts__GetAccounts() {
+	public EOperation getIManageAccounts__GetAccount__String() {
 		return iManageAccountsEClass.getEOperations().get(5);
 	}
 
@@ -393,19 +393,19 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 		createEAttribute(accountEClass, ACCOUNT__PASSWORD);
 
 		accountsManagerEClass = createEClass(ACCOUNTS_MANAGER);
-		createEReference(accountsManagerEClass, ACCOUNTS_MANAGER__ACCOUNT);
+		createEReference(accountsManagerEClass, ACCOUNTS_MANAGER__ACCOUNTS);
 
 		iAccountsAccessEClass = createEClass(IACCOUNTS_ACCESS);
 		createEOperation(iAccountsAccessEClass, IACCOUNTS_ACCESS___VALIDATE_ACCOUNT__STRING_STRING);
 		createEOperation(iAccountsAccessEClass, IACCOUNTS_ACCESS___LOGIN__STRING_STRING);
 
 		iManageAccountsEClass = createEClass(IMANAGE_ACCOUNTS);
-		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___ADD_ACCOUNT__STRING_STRING);
+		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___ADD_ACCOUNT__STRING_STRING_ACCOUNTTYPE);
 		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___DELETE_ACCOUNT__STRING);
 		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___RENAME_ACCOUNT__STRING_STRING);
 		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___CHANGE_PASSWORD__STRING_STRING);
 		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___GET_ACCOUNT_PASSWORD__STRING);
-		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___GET_ACCOUNTS);
+		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___GET_ACCOUNT__STRING);
 		createEOperation(iManageAccountsEClass, IMANAGE_ACCOUNTS___SEARCH_ACCOUNTS);
 
 		// Create enums
@@ -453,7 +453,7 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 		initEAttribute(getAccount_Password(), theTypesPackage.getString(), "password", null, 1, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(accountsManagerEClass, AccountsManager.class, "AccountsManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAccountsManager_Account(), this.getAccount(), null, "account", null, 0, -1, AccountsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAccountsManager_Accounts(), this.getAccount(), null, "accounts", null, 0, -1, AccountsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(iAccountsAccessEClass, IAccountsAccess.class, "IAccountsAccess", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -467,9 +467,10 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 
 		initEClass(iManageAccountsEClass, IManageAccounts.class, "IManageAccounts", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getIManageAccounts__AddAccount__String_String(), null, "addAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIManageAccounts__AddAccount__String_String_AccountType(), null, "addAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "username", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getAccountType(), "type", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIManageAccounts__DeleteAccount__String(), null, "deleteAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "username", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -482,10 +483,11 @@ public class AccountsPackageImpl extends EPackageImpl implements AccountsPackage
 		addEParameter(op, theTypesPackage.getString(), "newPassword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "username", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIManageAccounts__GetAccountPassword__String(), null, "getAccountPassword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIManageAccounts__GetAccountPassword__String(), theTypesPackage.getString(), "getAccountPassword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "username", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIManageAccounts__GetAccounts(), null, "getAccounts", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIManageAccounts__GetAccount__String(), this.getAccount(), "getAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "username", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIManageAccounts__SearchAccounts(), null, "searchAccounts", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

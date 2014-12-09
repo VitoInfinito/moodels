@@ -2,6 +2,8 @@
  */
 package Classes.Accounts;
 
+import java.util.List;
+
 import org.eclipse.emf.common.util.EMap;
 
 /**
@@ -34,8 +36,8 @@ public interface AccountsManager extends IManageAccounts, IAccountsAccess {
 	 * @return the value of the '<em>Account</em>' map.
 	 * @see Classes.Accounts.AccountsPackage#getAccountsManager_Account()
 	 * @model mapType="Classes.ECoreMapEntries.StringToAccountMap<org.eclipse.uml2.types.String, Classes.Accounts.Account>" ordered="false"
-	 * @generated 
+	 * @generated NOT
 	 */
-	EMap<String, Account> getAccount();
+	List<Account> getAccounts();
 
 } // AccountsManager
