@@ -291,7 +291,7 @@ public class StatisticsPackageImpl extends EPackageImpl implements StatisticsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStatisticsGenerator__GetOccupancyStatistics() {
+	public EOperation getIStatisticsGenerator__GetOccupancyStatistics__Date_Date() {
 		return iStatisticsGeneratorEClass.getEOperations().get(0);
 	}
 
@@ -300,7 +300,7 @@ public class StatisticsPackageImpl extends EPackageImpl implements StatisticsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStatisticsGenerator__GetRevenueStatistics() {
+	public EOperation getIStatisticsGenerator__GetRevenueStatistics__Date_Date() {
 		return iStatisticsGeneratorEClass.getEOperations().get(1);
 	}
 
@@ -309,7 +309,7 @@ public class StatisticsPackageImpl extends EPackageImpl implements StatisticsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStatisticsGenerator__GetProfitStatistics() {
+	public EOperation getIStatisticsGenerator__GetProfitStatistics__Date_Date() {
 		return iStatisticsGeneratorEClass.getEOperations().get(2);
 	}
 
@@ -399,9 +399,9 @@ public class StatisticsPackageImpl extends EPackageImpl implements StatisticsPac
 		dateEClass = createEClass(DATE);
 
 		iStatisticsGeneratorEClass = createEClass(ISTATISTICS_GENERATOR);
-		createEOperation(iStatisticsGeneratorEClass, ISTATISTICS_GENERATOR___GET_OCCUPANCY_STATISTICS);
-		createEOperation(iStatisticsGeneratorEClass, ISTATISTICS_GENERATOR___GET_REVENUE_STATISTICS);
-		createEOperation(iStatisticsGeneratorEClass, ISTATISTICS_GENERATOR___GET_PROFIT_STATISTICS);
+		createEOperation(iStatisticsGeneratorEClass, ISTATISTICS_GENERATOR___GET_OCCUPANCY_STATISTICS__DATE_DATE);
+		createEOperation(iStatisticsGeneratorEClass, ISTATISTICS_GENERATOR___GET_REVENUE_STATISTICS__DATE_DATE);
+		createEOperation(iStatisticsGeneratorEClass, ISTATISTICS_GENERATOR___GET_PROFIT_STATISTICS__DATE_DATE);
 
 		statisticsGeneratorEClass = createEClass(STATISTICS_GENERATOR);
 		createEReference(statisticsGeneratorEClass, STATISTICS_GENERATOR__IBILLS_ACCESS);
@@ -461,11 +461,17 @@ public class StatisticsPackageImpl extends EPackageImpl implements StatisticsPac
 
 		initEClass(iStatisticsGeneratorEClass, IStatisticsGenerator.class, "IStatisticsGenerator", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getIStatisticsGenerator__GetOccupancyStatistics(), null, "getOccupancyStatistics", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getIStatisticsGenerator__GetOccupancyStatistics__Date_Date(), this.getStatistic(), "getOccupancyStatistics", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStatisticsGenerator__GetRevenueStatistics(), null, "getRevenueStatistics", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStatisticsGenerator__GetRevenueStatistics__Date_Date(), this.getStatistic(), "getRevenueStatistics", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIStatisticsGenerator__GetProfitStatistics(), null, "getProfitStatistics", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStatisticsGenerator__GetProfitStatistics__Date_Date(), this.getStatistic(), "getProfitStatistics", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(statisticsGeneratorEClass, StatisticsGenerator.class, "StatisticsGenerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStatisticsGenerator_IBillsAccess(), theBillsPackage.getIBills(), null, "iBillsAccess", null, 1, 1, StatisticsGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

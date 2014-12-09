@@ -8,11 +8,13 @@ import Classes.Bookings.IBookings;
 
 import Classes.Staff.IStaff;
 
+import Classes.Statistics.Statistic;
 import Classes.Statistics.StatisticsGenerator;
 import Classes.Statistics.StatisticsPackage;
 
 import java.lang.reflect.InvocationTargetException;
 
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
@@ -249,7 +251,7 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getOccupancyStatistics() {
+	public Statistic getOccupancyStatistics(Date from, Date to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -260,7 +262,7 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getRevenueStatistics() {
+	public Statistic getRevenueStatistics(Date from, Date to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -271,7 +273,7 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getProfitStatistics() {
+	public Statistic getProfitStatistics(Date from, Date to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -376,15 +378,12 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case StatisticsPackage.STATISTICS_GENERATOR___GET_OCCUPANCY_STATISTICS:
-				getOccupancyStatistics();
-				return null;
-			case StatisticsPackage.STATISTICS_GENERATOR___GET_REVENUE_STATISTICS:
-				getRevenueStatistics();
-				return null;
-			case StatisticsPackage.STATISTICS_GENERATOR___GET_PROFIT_STATISTICS:
-				getProfitStatistics();
-				return null;
+			case StatisticsPackage.STATISTICS_GENERATOR___GET_OCCUPANCY_STATISTICS__DATE_DATE:
+				return getOccupancyStatistics((Date)arguments.get(0), (Date)arguments.get(1));
+			case StatisticsPackage.STATISTICS_GENERATOR___GET_REVENUE_STATISTICS__DATE_DATE:
+				return getRevenueStatistics((Date)arguments.get(0), (Date)arguments.get(1));
+			case StatisticsPackage.STATISTICS_GENERATOR___GET_PROFIT_STATISTICS__DATE_DATE:
+				return getProfitStatistics((Date)arguments.get(0), (Date)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -684,9 +684,18 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Statistics/Date"/>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Statistics/IStatisticsGenerator">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Statistics/IStatisticsGenerator/getOccupancyStatistics"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Statistics/IStatisticsGenerator/getRevenueStatistics"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Statistics/IStatisticsGenerator/getProfitStatistics"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Statistics/IStatisticsGenerator/getOccupancyStatistics">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Statistics/IStatisticsGenerator/getOccupancyStatistics/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Statistics/IStatisticsGenerator/getOccupancyStatistics/to"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Statistics/IStatisticsGenerator/getRevenueStatistics">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Statistics/IStatisticsGenerator/getRevenueStatistics/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Statistics/IStatisticsGenerator/getRevenueStatistics/to"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Statistics/IStatisticsGenerator/getProfitStatistics">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Statistics/IStatisticsGenerator/getProfitStatistics/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Statistics/IStatisticsGenerator/getProfitStatistics/to"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Statistics/StatisticsGenerator">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

@@ -2,6 +2,7 @@
  */
 package Classes.Statistics;
 
+import java.util.Date;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,25 +19,25 @@ public interface IStatisticsGenerator extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model required="true" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	void getOccupancyStatistics();
+	Statistic getOccupancyStatistics(Date from, Date to);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model required="true" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	void getRevenueStatistics();
+	Statistic getRevenueStatistics(Date from, Date to);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model required="true" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	void getProfitStatistics();
+	Statistic getProfitStatistics(Date from, Date to);
 
 } // IStatisticsGenerator

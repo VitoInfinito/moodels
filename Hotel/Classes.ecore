@@ -750,9 +750,18 @@
     <eClassifiers xsi:type="ecore:EClass" name="Date"/>
     <eClassifiers xsi:type="ecore:EClass" name="IStatisticsGenerator" abstract="true"
         interface="true">
-      <eOperations name="getOccupancyStatistics" ordered="false" lowerBound="1"/>
-      <eOperations name="getRevenueStatistics" ordered="false" lowerBound="1"/>
-      <eOperations name="getProfitStatistics" ordered="false" lowerBound="1"/>
+      <eOperations name="getOccupancyStatistics" ordered="false" lowerBound="1" eType="#//Statistics/Statistic">
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eOperations>
+      <eOperations name="getRevenueStatistics" ordered="false" lowerBound="1" eType="#//Statistics/Statistic">
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eOperations>
+      <eOperations name="getProfitStatistics" ordered="false" lowerBound="1" eType="#//Statistics/Statistic">
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="StatisticsGenerator" eSuperTypes="#//Statistics/IStatisticsGenerator">
       <eStructuralFeatures xsi:type="ecore:EReference" name="iBillsAccess" ordered="false"

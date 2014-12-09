@@ -221,7 +221,7 @@ public interface StatisticsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTATISTICS_GENERATOR___GET_OCCUPANCY_STATISTICS = 0;
+	int ISTATISTICS_GENERATOR___GET_OCCUPANCY_STATISTICS__DATE_DATE = 0;
 
 	/**
 	 * The operation id for the '<em>Get Revenue Statistics</em>' operation.
@@ -230,7 +230,7 @@ public interface StatisticsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTATISTICS_GENERATOR___GET_REVENUE_STATISTICS = 1;
+	int ISTATISTICS_GENERATOR___GET_REVENUE_STATISTICS__DATE_DATE = 1;
 
 	/**
 	 * The operation id for the '<em>Get Profit Statistics</em>' operation.
@@ -239,7 +239,7 @@ public interface StatisticsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTATISTICS_GENERATOR___GET_PROFIT_STATISTICS = 2;
+	int ISTATISTICS_GENERATOR___GET_PROFIT_STATISTICS__DATE_DATE = 2;
 
 	/**
 	 * The number of operations of the '<em>IStatistics Generator</em>' class.
@@ -312,7 +312,7 @@ public interface StatisticsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATISTICS_GENERATOR___GET_OCCUPANCY_STATISTICS = ISTATISTICS_GENERATOR___GET_OCCUPANCY_STATISTICS;
+	int STATISTICS_GENERATOR___GET_OCCUPANCY_STATISTICS__DATE_DATE = ISTATISTICS_GENERATOR___GET_OCCUPANCY_STATISTICS__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Get Revenue Statistics</em>' operation.
@@ -321,7 +321,7 @@ public interface StatisticsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATISTICS_GENERATOR___GET_REVENUE_STATISTICS = ISTATISTICS_GENERATOR___GET_REVENUE_STATISTICS;
+	int STATISTICS_GENERATOR___GET_REVENUE_STATISTICS__DATE_DATE = ISTATISTICS_GENERATOR___GET_REVENUE_STATISTICS__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Get Profit Statistics</em>' operation.
@@ -330,7 +330,7 @@ public interface StatisticsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATISTICS_GENERATOR___GET_PROFIT_STATISTICS = ISTATISTICS_GENERATOR___GET_PROFIT_STATISTICS;
+	int STATISTICS_GENERATOR___GET_PROFIT_STATISTICS__DATE_DATE = ISTATISTICS_GENERATOR___GET_PROFIT_STATISTICS__DATE_DATE;
 
 	/**
 	 * The number of operations of the '<em>Generator</em>' class.
@@ -449,34 +449,34 @@ public interface StatisticsPackage extends EPackage {
 	EClass getIStatisticsGenerator();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Statistics.IStatisticsGenerator#getOccupancyStatistics() <em>Get Occupancy Statistics</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Statistics.IStatisticsGenerator#getOccupancyStatistics(java.util.Date, java.util.Date) <em>Get Occupancy Statistics</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Occupancy Statistics</em>' operation.
-	 * @see Classes.Statistics.IStatisticsGenerator#getOccupancyStatistics()
+	 * @see Classes.Statistics.IStatisticsGenerator#getOccupancyStatistics(java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getIStatisticsGenerator__GetOccupancyStatistics();
+	EOperation getIStatisticsGenerator__GetOccupancyStatistics__Date_Date();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Statistics.IStatisticsGenerator#getRevenueStatistics() <em>Get Revenue Statistics</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Statistics.IStatisticsGenerator#getRevenueStatistics(java.util.Date, java.util.Date) <em>Get Revenue Statistics</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Revenue Statistics</em>' operation.
-	 * @see Classes.Statistics.IStatisticsGenerator#getRevenueStatistics()
+	 * @see Classes.Statistics.IStatisticsGenerator#getRevenueStatistics(java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getIStatisticsGenerator__GetRevenueStatistics();
+	EOperation getIStatisticsGenerator__GetRevenueStatistics__Date_Date();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Statistics.IStatisticsGenerator#getProfitStatistics() <em>Get Profit Statistics</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Statistics.IStatisticsGenerator#getProfitStatistics(java.util.Date, java.util.Date) <em>Get Profit Statistics</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Profit Statistics</em>' operation.
-	 * @see Classes.Statistics.IStatisticsGenerator#getProfitStatistics()
+	 * @see Classes.Statistics.IStatisticsGenerator#getProfitStatistics(java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getIStatisticsGenerator__GetProfitStatistics();
+	EOperation getIStatisticsGenerator__GetProfitStatistics__Date_Date();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Statistics.StatisticsGenerator <em>Generator</em>}'.
@@ -649,7 +649,7 @@ public interface StatisticsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTATISTICS_GENERATOR___GET_OCCUPANCY_STATISTICS = eINSTANCE.getIStatisticsGenerator__GetOccupancyStatistics();
+		EOperation ISTATISTICS_GENERATOR___GET_OCCUPANCY_STATISTICS__DATE_DATE = eINSTANCE.getIStatisticsGenerator__GetOccupancyStatistics__Date_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Revenue Statistics</b></em>' operation.
@@ -657,7 +657,7 @@ public interface StatisticsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTATISTICS_GENERATOR___GET_REVENUE_STATISTICS = eINSTANCE.getIStatisticsGenerator__GetRevenueStatistics();
+		EOperation ISTATISTICS_GENERATOR___GET_REVENUE_STATISTICS__DATE_DATE = eINSTANCE.getIStatisticsGenerator__GetRevenueStatistics__Date_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Profit Statistics</b></em>' operation.
@@ -665,7 +665,7 @@ public interface StatisticsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTATISTICS_GENERATOR___GET_PROFIT_STATISTICS = eINSTANCE.getIStatisticsGenerator__GetProfitStatistics();
+		EOperation ISTATISTICS_GENERATOR___GET_PROFIT_STATISTICS__DATE_DATE = eINSTANCE.getIStatisticsGenerator__GetProfitStatistics__Date_Date();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Statistics.impl.StatisticsGeneratorImpl <em>Generator</em>}' class.

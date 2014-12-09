@@ -901,9 +901,33 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9MpyHpsEeST-65JbGUt8g" name="Date"/>
     <packagedElement xmi:type="uml:Interface" xmi:id="_w9MpyXpsEeST-65JbGUt8g" name="IStatisticsGenerator">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MpynpsEeST-65JbGUt8g" name="getOccupancyStatistics"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Mpy3psEeST-65JbGUt8g" name="getRevenueStatistics"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MpzHpsEeST-65JbGUt8g" name="getProfitStatistics"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MpynpsEeST-65JbGUt8g" name="getOccupancyStatistics">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PYbLwH_lEeS5IpkkkJsVew" type="_w9MpuHpsEeST-65JbGUt8g" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_TztEQH_lEeS5IpkkkJsVew" name="from">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_VTCJAH_lEeS5IpkkkJsVew" name="to">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Mpy3psEeST-65JbGUt8g" name="getRevenueStatistics">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QJHo4H_lEeS5IpkkkJsVew" type="_w9MpuHpsEeST-65JbGUt8g" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_W3JnIH_lEeS5IpkkkJsVew" name="from">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_W3K1QH_lEeS5IpkkkJsVew" name="to">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MpzHpsEeST-65JbGUt8g" name="getProfitStatistics">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QP6NYH_lEeS5IpkkkJsVew" type="_w9MpuHpsEeST-65JbGUt8g" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_XAuZ4H_lEeS5IpkkkJsVew" name="from">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_XAyEQH_lEeS5IpkkkJsVew" name="to">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9Mpz3psEeST-65JbGUt8g" name="StatisticsGenerator" visibility="package">
       <generalization xmi:type="uml:Generalization" xmi:id="_w9Mp0HpsEeST-65JbGUt8g" general="_w9MpyXpsEeST-65JbGUt8g"/>
