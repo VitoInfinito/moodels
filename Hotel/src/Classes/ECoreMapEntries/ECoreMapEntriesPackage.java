@@ -379,10 +379,10 @@ public interface ECoreMapEntriesPackage extends EPackage {
 	int STRING_TO_ACCOUNT_MAP_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link Classes.ECoreMapEntries.impl.StringToItemTypeMapImpl <em>String To Item Type Map</em>}' class.
+	 * The meta object id for the '{@link Classes.ECoreMapEntries.impl.StringToItemMapImpl <em>String To Item Type Map</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.ECoreMapEntries.impl.StringToItemTypeMapImpl
+	 * @see Classes.ECoreMapEntries.impl.StringToItemMapImpl
 	 * @see Classes.ECoreMapEntries.impl.ECoreMapEntriesPackageImpl#getStringToItemTypeMap()
 	 * @generated
 	 */
@@ -1543,10 +1543,10 @@ public interface ECoreMapEntriesPackage extends EPackage {
 		EReference STRING_TO_ACCOUNT_MAP__VALUE = eINSTANCE.getStringToAccountMap_Value();
 
 		/**
-		 * The meta object literal for the '{@link Classes.ECoreMapEntries.impl.StringToItemTypeMapImpl <em>String To Item Type Map</em>}' class.
+		 * The meta object literal for the '{@link Classes.ECoreMapEntries.impl.StringToItemMapImpl <em>String To Item Type Map</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see Classes.ECoreMapEntries.impl.StringToItemTypeMapImpl
+		 * @see Classes.ECoreMapEntries.impl.StringToItemMapImpl
 		 * @see Classes.ECoreMapEntries.impl.ECoreMapEntriesPackageImpl#getStringToItemTypeMap()
 		 * @generated
 		 */

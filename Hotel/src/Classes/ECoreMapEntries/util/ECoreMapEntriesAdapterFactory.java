@@ -18,7 +18,7 @@ import Classes.Feedback.Feedback;
 
 import Classes.Guests.Guest;
 
-import Classes.Inventory.ItemType;
+import Classes.Inventory.Item;
 
 import Classes.Requests.Request;
 
@@ -127,8 +127,8 @@ public class ECoreMapEntriesAdapterFactory extends AdapterFactoryImpl {
 				return createStringToAccountMapAdapter();
 			}
 			@Override
-			public Adapter caseStringToItemTypeMap(Map.Entry<String, ItemType> object) {
-				return createStringToItemTypeMapAdapter();
+			public Adapter caseStringToItemMap(Map.Entry<String, Item> object) {
+				return createStringToItemMapAdapter();
 			}
 			@Override
 			public Adapter caseStringToRequestMap(Map.Entry<String, Request> object) {
@@ -290,7 +290,7 @@ public class ECoreMapEntriesAdapterFactory extends AdapterFactoryImpl {
 	 * @see java.util.Map.Entry
 	 * @generated
 	 */
-	public Adapter createStringToItemTypeMapAdapter() {
+	public Adapter createStringToItemMapAdapter() {
 		return null;
 	}
 

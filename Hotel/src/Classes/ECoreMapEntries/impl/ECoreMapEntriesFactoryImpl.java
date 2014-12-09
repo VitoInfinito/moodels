@@ -2,46 +2,32 @@
  */
 package Classes.ECoreMapEntries.impl;
 
-import Classes.Accounts.Account;
-
-import Classes.Bills.Bill;
-
-import Classes.Bookables.Bookable;
-
-import Classes.Bookings.Booking;
-
-import Classes.Customers.Customer;
-
-import Classes.ECoreMapEntries.*;
-
-import Classes.Feedback.Feedback;
-
-import Classes.Guests.Guest;
-
-import Classes.Inventory.ItemType;
-
-import Classes.Requests.Request;
-
-import Classes.Restaurants.Reservation;
-import Classes.Restaurants.Restaurant;
-import Classes.Restaurants.RestaurantTable;
-
-import Classes.Services.RoomServiceOrder;
-import Classes.Services.Service;
-
-import Classes.Staff.Staff;
-
-import Classes.Stays.Stay;
-
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import Classes.Accounts.Account;
+import Classes.Bills.Bill;
+import Classes.Bookables.Bookable;
+import Classes.Bookings.Booking;
+import Classes.Customers.Customer;
+import Classes.ECoreMapEntries.ECoreMapEntriesFactory;
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.Feedback.Feedback;
+import Classes.Guests.Guest;
+import Classes.Inventory.Item;
+import Classes.Requests.Request;
+import Classes.Restaurants.Reservation;
+import Classes.Restaurants.Restaurant;
+import Classes.Restaurants.RestaurantTable;
+import Classes.Services.RoomServiceOrder;
+import Classes.Services.Service;
+import Classes.Staff.Staff;
+import Classes.Stays.Stay;
 
 /**
  * <!-- begin-user-doc -->
@@ -94,7 +80,7 @@ public class ECoreMapEntriesFactoryImpl extends EFactoryImpl implements ECoreMap
 			case ECoreMapEntriesPackage.STRING_TO_BILL_MAP: return (EObject)createStringToBillMap();
 			case ECoreMapEntriesPackage.STRING_TO_FEEDBACK_MAP: return (EObject)createStringToFeedbackMap();
 			case ECoreMapEntriesPackage.STRING_TO_ACCOUNT_MAP: return (EObject)createStringToAccountMap();
-			case ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP: return (EObject)createStringToItemTypeMap();
+			case ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP: return (EObject)createStringToItemMap();
 			case ECoreMapEntriesPackage.STRING_TO_REQUEST_MAP: return (EObject)createStringToRequestMap();
 			case ECoreMapEntriesPackage.STRING_TO_STAFF_MAP: return (EObject)createStringToStaffMap();
 			case ECoreMapEntriesPackage.STRING_TO_BOOKING_MAP: return (EObject)createStringToBookingMap();
@@ -183,9 +169,9 @@ public class ECoreMapEntriesFactoryImpl extends EFactoryImpl implements ECoreMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map.Entry<String, ItemType> createStringToItemTypeMap() {
-		StringToItemTypeMapImpl stringToItemTypeMap = new StringToItemTypeMapImpl();
-		return stringToItemTypeMap;
+	public Map.Entry<String, Item> createStringToItemMap() {
+		StringToItemMapImpl stringToItemMap = new StringToItemMapImpl();
+		return stringToItemMap;
 	}
 
 	/**

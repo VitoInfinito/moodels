@@ -4,7 +4,7 @@ package Classes.ECoreMapEntries.impl;
 
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 
-import Classes.Inventory.ItemType;
+import Classes.Inventory.Item;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -25,14 +25,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Classes.ECoreMapEntries.impl.StringToItemTypeMapImpl#getTypedKey <em>Key</em>}</li>
- *   <li>{@link Classes.ECoreMapEntries.impl.StringToItemTypeMapImpl#getTypedValue <em>Value</em>}</li>
+ *   <li>{@link Classes.ECoreMapEntries.impl.StringToItemMapImpl#getTypedKey <em>Key</em>}</li>
+ *   <li>{@link Classes.ECoreMapEntries.impl.StringToItemMapImpl#getTypedValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated NOT
  */
-public class StringToItemTypeMapImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,ItemType> {
+public class StringToItemMapImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,Item> {
 	/**
 	 * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -61,14 +61,14 @@ public class StringToItemTypeMapImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected ItemType value;
+	protected Item value;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StringToItemTypeMapImpl() {
+	protected StringToItemMapImpl() {
 		super();
 	}
 
@@ -108,10 +108,10 @@ public class StringToItemTypeMapImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ItemType getTypedValue() {
+	public Item getTypedValue() {
 		if (value != null && value.eIsProxy()) {
 			InternalEObject oldValue = (InternalEObject)value;
-			value = (ItemType)eResolveProxy(oldValue);
+			value = (Item)eResolveProxy(oldValue);
 			if (value != oldValue) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP__VALUE, oldValue, value));
@@ -125,7 +125,7 @@ public class StringToItemTypeMapImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ItemType basicGetTypedValue() {
+	public Item basicGetTypedValue() {
 		return value;
 	}
 
@@ -134,8 +134,8 @@ public class StringToItemTypeMapImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTypedValue(ItemType newValue) {
-		ItemType oldValue = value;
+	public void setTypedValue(Item newValue) {
+		Item oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP__VALUE, oldValue, value));
@@ -170,7 +170,7 @@ public class StringToItemTypeMapImpl extends MinimalEObjectImpl.Container implem
 				setTypedKey((String)newValue);
 				return;
 			case ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP__VALUE:
-				setTypedValue((ItemType)newValue);
+				setTypedValue((Item)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -188,7 +188,7 @@ public class StringToItemTypeMapImpl extends MinimalEObjectImpl.Container implem
 				setTypedKey(KEY_EDEFAULT);
 				return;
 			case ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP__VALUE:
-				setTypedValue((ItemType)null);
+				setTypedValue((Item)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -278,7 +278,7 @@ public class StringToItemTypeMapImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ItemType getValue() {
+	public Item getValue() {
 		return getTypedValue();
 	}
 
@@ -287,8 +287,8 @@ public class StringToItemTypeMapImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ItemType setValue(ItemType value) {
-		ItemType oldValue = getValue();
+	public Item setValue(Item value) {
+		Item oldValue = getValue();
 		setTypedValue(value);
 		return oldValue;
 	}
@@ -299,9 +299,9 @@ public class StringToItemTypeMapImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EMap<String, ItemType> getEMap() {
+	public EMap<String, Item> getEMap() {
 		EObject container = eContainer();
-		return container == null ? null : (EMap<String, ItemType>)container.eGet(eContainmentFeature());
+		return container == null ? null : (EMap<String, Item>)container.eGet(eContainmentFeature());
 	}
 
-} //StringToItemTypeMapImpl
+} //StringToItemMapImpl

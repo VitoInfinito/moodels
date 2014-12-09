@@ -18,7 +18,7 @@ import Classes.Feedback.Feedback;
 
 import Classes.Guests.Guest;
 
-import Classes.Inventory.ItemType;
+import Classes.Inventory.Item;
 
 import Classes.Requests.Request;
 
@@ -140,8 +140,8 @@ public class ECoreMapEntriesSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP: {
-				@SuppressWarnings("unchecked") Map.Entry<String, ItemType> stringToItemTypeMap = (Map.Entry<String, ItemType>)theEObject;
-				T result = caseStringToItemTypeMap(stringToItemTypeMap);
+				@SuppressWarnings("unchecked") Map.Entry<String, Item> stringToItemMap = (Map.Entry<String, Item>)theEObject;
+				T result = caseStringToItemMap(stringToItemMap);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -313,7 +313,7 @@ public class ECoreMapEntriesSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStringToItemTypeMap(Map.Entry<String, ItemType> object) {
+	public T caseStringToItemMap(Map.Entry<String, Item> object) {
 		return null;
 	}
 
