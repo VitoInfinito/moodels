@@ -146,7 +146,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IFEEDBACK___SEARCH_FEEDBACK = 7;
+	int IFEEDBACK___SEARCH_FEEDBACK__STRING = 7;
 
 	/**
 	 * The operation id for the '<em>Add Feedback</em>' operation.
@@ -264,7 +264,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEEDBACK_MANAGER___SEARCH_FEEDBACK = IFEEDBACK___SEARCH_FEEDBACK;
+	int FEEDBACK_MANAGER___SEARCH_FEEDBACK__STRING = IFEEDBACK___SEARCH_FEEDBACK__STRING;
 
 	/**
 	 * The operation id for the '<em>Add Feedback</em>' operation.
@@ -430,14 +430,14 @@ public interface FeedbackPackage extends EPackage {
 	EOperation getIFeedback__SetFeedbackIsNoted__String_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#searchFeedback() <em>Search Feedback</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#searchFeedback(java.lang.String) <em>Search Feedback</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Feedback</em>' operation.
-	 * @see Classes.Feedback.IFeedback#searchFeedback()
+	 * @see Classes.Feedback.IFeedback#searchFeedback(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIFeedback__SearchFeedback();
+	EOperation getIFeedback__SearchFeedback__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#addFeedback(java.lang.String, java.lang.String) <em>Add Feedback</em>}' operation.
@@ -619,7 +619,7 @@ public interface FeedbackPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IFEEDBACK___SEARCH_FEEDBACK = eINSTANCE.getIFeedback__SearchFeedback();
+		EOperation IFEEDBACK___SEARCH_FEEDBACK__STRING = eINSTANCE.getIFeedback__SearchFeedback__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Feedback</b></em>' operation.

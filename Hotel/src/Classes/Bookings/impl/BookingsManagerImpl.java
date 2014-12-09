@@ -381,7 +381,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void makeBooking() {
+	public void makeBooking(EList<String> bookables, String customerID, EList<String> guests, EList<String> requests, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -392,7 +392,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchBookings() {
+	public EList<String> searchBookings(String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -403,7 +403,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBookedStaysOfBooking() {
+	public EList<String> getBookedStaysOfBooking(String bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -414,7 +414,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getCustomerOfBooking() {
+	public String getCustomerOfBooking(String bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -425,7 +425,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getNbrGuestOfBooking() {
+	public int getNbrGuestOfBooking(String bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -436,7 +436,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void cancelBooking() {
+	public void cancelBooking(String bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -447,7 +447,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void cancelStayOfBooking() {
+	public void cancelStayOfBooking(String bookingID, String stayID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -458,7 +458,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addBookedStayToBooking() {
+	public void addBookedStayToBooking(String bookingID, String stayID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -469,7 +469,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeNbrGuestsOfBooking() {
+	public void changeNbrGuestsOfBooking(String bookingID, int nbrGuests) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -480,7 +480,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllBookings() {
+	public EList<String> getAllBookings() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -491,7 +491,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllBookingsWithinPeriod() {
+	public EList<String> getAllBookingsWithinPeriod(Date from, Date to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -502,7 +502,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllBookingsWithStaysInPeriod() {
+	public EList<String> getAllBookingsWithStaysInPeriod(Date from, Date to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -513,7 +513,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchBookingsMadeInPeriod() {
+	public EList<String> searchBookingsMadeInPeriod(String keyword, Date from, Date to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -524,7 +524,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchBookingsWithStaysInPeriod() {
+	public EList<String> searchBookingsWithStaysInPeriod(String keyword, Date from, Date to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -535,7 +535,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchForAvailableBookablesInPeriod(Date from, Date to) {
+	public EList<String> searchForAvailableBookablesInPeriod(Date from, Date to, String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -546,7 +546,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAvailableBookablesInPeriod() {
+	public EList<String> getAvailableBookablesInPeriod(Date from, Date to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -557,7 +557,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addBookingRequest() {
+	public void addBookingRequest(String bookingID, String requestID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -568,7 +568,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeBookingRequest() {
+	public void removeBookingRequest(String bookingID, String requestID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -579,7 +579,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBookingRequests() {
+	public EList<String> getBookingRequests(String bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -590,7 +590,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void payBookingBills() {
+	public void payBookingBills(String bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -601,7 +601,73 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void payStayBills() {
+	public void payStayBills(String bookingID, String stayID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> searchForAvailableHotelRoomsInPeriod(Date from, Date to, String keyword) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> searchForAvailableHostelBedsInPeriod(Date from, Date to, String keyword) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> searchForAvailableConferenceRoomsInPeriod(Date from, Date to, String keyword) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getAvailableHotelRoomsInPeriod(Date from, Date to) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getAvailableConferenceRoomsInPeriod(Date from, Date to) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getAvailableHostelBedsInPeriod(Date from, Date to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -753,71 +819,72 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BookingsPackage.BOOKINGS_MANAGER___MAKE_BOOKING:
-				makeBooking();
+			case BookingsPackage.BOOKINGS_MANAGER___MAKE_BOOKING__ELIST_STRING_ELIST_ELIST_STRING_STRING_INT_INT_STRING_STRING:
+				makeBooking((EList<String>)arguments.get(0), (String)arguments.get(1), (EList<String>)arguments.get(2), (EList<String>)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Integer)arguments.get(6), (Integer)arguments.get(7), (String)arguments.get(8), (String)arguments.get(9));
 				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_BOOKINGS:
-				searchBookings();
+			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_BOOKINGS__STRING:
+				return searchBookings((String)arguments.get(0));
+			case BookingsPackage.BOOKINGS_MANAGER___GET_BOOKED_STAYS_OF_BOOKING__STRING:
+				return getBookedStaysOfBooking((String)arguments.get(0));
+			case BookingsPackage.BOOKINGS_MANAGER___GET_CUSTOMER_OF_BOOKING__STRING:
+				return getCustomerOfBooking((String)arguments.get(0));
+			case BookingsPackage.BOOKINGS_MANAGER___GET_NBR_GUEST_OF_BOOKING__STRING:
+				return getNbrGuestOfBooking((String)arguments.get(0));
+			case BookingsPackage.BOOKINGS_MANAGER___CANCEL_BOOKING__STRING:
+				cancelBooking((String)arguments.get(0));
 				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___GET_BOOKED_STAYS_OF_BOOKING:
-				getBookedStaysOfBooking();
+			case BookingsPackage.BOOKINGS_MANAGER___CANCEL_STAY_OF_BOOKING__STRING_STRING:
+				cancelStayOfBooking((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___GET_CUSTOMER_OF_BOOKING:
-				getCustomerOfBooking();
+			case BookingsPackage.BOOKINGS_MANAGER___ADD_BOOKED_STAY_TO_BOOKING__STRING_STRING:
+				addBookedStayToBooking((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___GET_NBR_GUEST_OF_BOOKING:
-				getNbrGuestOfBooking();
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___CANCEL_BOOKING:
-				cancelBooking();
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___CANCEL_STAY_OF_BOOKING:
-				cancelStayOfBooking();
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___ADD_BOOKED_STAY_TO_BOOKING:
-				addBookedStayToBooking();
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___CHANGE_NBR_GUESTS_OF_BOOKING:
-				changeNbrGuestsOfBooking();
+			case BookingsPackage.BOOKINGS_MANAGER___CHANGE_NBR_GUESTS_OF_BOOKING__STRING_INT:
+				changeNbrGuestsOfBooking((String)arguments.get(0), (Integer)arguments.get(1));
 				return null;
 			case BookingsPackage.BOOKINGS_MANAGER___GET_ALL_BOOKINGS:
-				getAllBookings();
+				return getAllBookings();
+			case BookingsPackage.BOOKINGS_MANAGER___GET_ALL_BOOKINGS_WITHIN_PERIOD__DATE_DATE:
+				return getAllBookingsWithinPeriod((Date)arguments.get(0), (Date)arguments.get(1));
+			case BookingsPackage.BOOKINGS_MANAGER___GET_ALL_BOOKINGS_WITH_STAYS_IN_PERIOD__DATE_DATE:
+				return getAllBookingsWithStaysInPeriod((Date)arguments.get(0), (Date)arguments.get(1));
+			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_BOOKINGS_MADE_IN_PERIOD__STRING_DATE_DATE:
+				return searchBookingsMadeInPeriod((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
+			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_BOOKINGS_WITH_STAYS_IN_PERIOD__STRING_DATE_DATE:
+				return searchBookingsWithStaysInPeriod((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
+			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_FOR_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE_STRING:
+				return searchForAvailableBookablesInPeriod((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
+			case BookingsPackage.BOOKINGS_MANAGER___GET_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE:
+				return getAvailableBookablesInPeriod((Date)arguments.get(0), (Date)arguments.get(1));
+			case BookingsPackage.BOOKINGS_MANAGER___ADD_BOOKING_REQUEST__STRING_STRING:
+				addBookingRequest((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___GET_ALL_BOOKINGS_WITHIN_PERIOD:
-				getAllBookingsWithinPeriod();
+			case BookingsPackage.BOOKINGS_MANAGER___REMOVE_BOOKING_REQUEST__STRING_STRING:
+				removeBookingRequest((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___GET_ALL_BOOKINGS_WITH_STAYS_IN_PERIOD:
-				getAllBookingsWithStaysInPeriod();
+			case BookingsPackage.BOOKINGS_MANAGER___GET_BOOKING_REQUESTS__STRING:
+				return getBookingRequests((String)arguments.get(0));
+			case BookingsPackage.BOOKINGS_MANAGER___PAY_BOOKING_BILLS__STRING:
+				payBookingBills((String)arguments.get(0));
 				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_BOOKINGS_MADE_IN_PERIOD:
-				searchBookingsMadeInPeriod();
+			case BookingsPackage.BOOKINGS_MANAGER___PAY_STAY_BILLS__STRING_STRING:
+				payStayBills((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_BOOKINGS_WITH_STAYS_IN_PERIOD:
-				searchBookingsWithStaysInPeriod();
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_FOR_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE:
-				searchForAvailableBookablesInPeriod((Date)arguments.get(0), (Date)arguments.get(1));
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___GET_AVAILABLE_BOOKABLES_IN_PERIOD:
-				getAvailableBookablesInPeriod();
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___ADD_BOOKING_REQUEST:
-				addBookingRequest();
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___REMOVE_BOOKING_REQUEST:
-				removeBookingRequest();
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___GET_BOOKING_REQUESTS:
-				getBookingRequests();
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___PAY_BOOKING_BILLS:
-				payBookingBills();
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___PAY_STAY_BILLS:
-				payStayBills();
-				return null;
+			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_FOR_AVAILABLE_HOTEL_ROOMS_IN_PERIOD__DATE_DATE_STRING:
+				return searchForAvailableHotelRoomsInPeriod((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
+			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_FOR_AVAILABLE_HOSTEL_BEDS_IN_PERIOD__DATE_DATE_STRING:
+				return searchForAvailableHostelBedsInPeriod((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
+			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_FOR_AVAILABLE_CONFERENCE_ROOMS_IN_PERIOD__DATE_DATE_STRING:
+				return searchForAvailableConferenceRoomsInPeriod((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
+			case BookingsPackage.BOOKINGS_MANAGER___GET_AVAILABLE_HOTEL_ROOMS_IN_PERIOD__DATE_DATE:
+				return getAvailableHotelRoomsInPeriod((Date)arguments.get(0), (Date)arguments.get(1));
+			case BookingsPackage.BOOKINGS_MANAGER___GET_AVAILABLE_CONFERENCE_ROOMS_IN_PERIOD__DATE_DATE:
+				return getAvailableConferenceRoomsInPeriod((Date)arguments.get(0), (Date)arguments.get(1));
+			case BookingsPackage.BOOKINGS_MANAGER___GET_AVAILABLE_HOSTEL_BEDS_IN_PERIOD__DATE_DATE:
+				return getAvailableHostelBedsInPeriod((Date)arguments.get(0), (Date)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

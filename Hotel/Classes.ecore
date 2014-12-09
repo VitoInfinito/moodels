@@ -547,30 +547,131 @@
           lowerBound="1" eType="#//Bills/IBills"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IBookings" abstract="true" interface="true">
-      <eOperations name="makeBooking" ordered="false" lowerBound="1"/>
-      <eOperations name="searchBookings" ordered="false" lowerBound="1"/>
-      <eOperations name="getBookedStaysOfBooking" ordered="false" lowerBound="1"/>
-      <eOperations name="getCustomerOfBooking" ordered="false" lowerBound="1"/>
-      <eOperations name="getNbrGuestOfBooking" ordered="false" lowerBound="1"/>
-      <eOperations name="cancelBooking" ordered="false" lowerBound="1"/>
-      <eOperations name="cancelStayOfBooking" ordered="false" lowerBound="1"/>
-      <eOperations name="addBookedStayToBooking" ordered="false" lowerBound="1"/>
-      <eOperations name="changeNbrGuestsOfBooking" ordered="false" lowerBound="1"/>
-      <eOperations name="getAllBookings" ordered="false" lowerBound="1"/>
-      <eOperations name="getAllBookingsWithinPeriod" ordered="false" lowerBound="1"/>
-      <eOperations name="getAllBookingsWithStaysInPeriod" ordered="false" lowerBound="1"/>
-      <eOperations name="searchBookingsMadeInPeriod" ordered="false" lowerBound="1"/>
-      <eOperations name="searchBookingsWithStaysInPeriod" ordered="false" lowerBound="1"/>
-      <eOperations name="searchForAvailableBookablesInPeriod" ordered="false" lowerBound="1">
+      <eOperations name="makeBooking" ordered="false" lowerBound="1">
+        <eParameters name="bookables" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="customerID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="guests" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="requests" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="ccNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="ccv" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="expiryMonth" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eParameters name="expiryYear" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="searchBookings" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getBookedStaysOfBooking" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getCustomerOfBooking" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getNbrGuestOfBooking" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="cancelBooking" ordered="false" lowerBound="1">
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="cancelStayOfBooking" ordered="false" lowerBound="1">
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="stayID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="addBookedStayToBooking" ordered="false" lowerBound="1">
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="stayID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="changeNbrGuestsOfBooking" ordered="false" lowerBound="1">
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="nbrGuests" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      </eOperations>
+      <eOperations name="getAllBookings" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="getAllBookingsWithinPeriod" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
         <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
         <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
       </eOperations>
-      <eOperations name="getAvailableBookablesInPeriod" ordered="false" lowerBound="1"/>
-      <eOperations name="addBookingRequest" ordered="false" lowerBound="1"/>
-      <eOperations name="removeBookingRequest" ordered="false" lowerBound="1"/>
-      <eOperations name="getBookingRequests" ordered="false" lowerBound="1"/>
-      <eOperations name="payBookingBills" ordered="false" lowerBound="1"/>
-      <eOperations name="payStayBills" ordered="false" lowerBound="1"/>
+      <eOperations name="getAllBookingsWithStaysInPeriod" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eOperations>
+      <eOperations name="searchBookingsMadeInPeriod" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eOperations>
+      <eOperations name="searchBookingsWithStaysInPeriod" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eOperations>
+      <eOperations name="searchForAvailableBookablesInPeriod" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getAvailableBookablesInPeriod" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eOperations>
+      <eOperations name="addBookingRequest" ordered="false" lowerBound="1">
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="requestID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="removeBookingRequest" ordered="false" lowerBound="1">
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="requestID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getBookingRequests" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="payBookingBills" ordered="false" lowerBound="1">
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="payStayBills" ordered="false" lowerBound="1">
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="stayID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="searchForAvailableHotelRoomsInPeriod" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="searchForAvailableHostelBedsInPeriod" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="searchForAvailableConferenceRoomsInPeriod" ordered="false"
+          upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getAvailableHotelRoomsInPeriod" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eOperations>
+      <eOperations name="getAvailableConferenceRoomsInPeriod" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eOperations>
+      <eOperations name="getAvailableHostelBedsInPeriod" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eOperations>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="Customers" nsURI="http:///Classes/Customers.ecore" nsPrefix="Classes.Customers">
@@ -1062,7 +1163,9 @@
         <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="status" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
       </eOperations>
-      <eOperations name="searchFeedback" ordered="false" lowerBound="1"/>
+      <eOperations name="searchFeedback" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eOperations name="addFeedback" ordered="false" lowerBound="1">
         <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="desc" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>

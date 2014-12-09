@@ -192,7 +192,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___MAKE_BOOKING = 0;
+	int IBOOKINGS___MAKE_BOOKING__ELIST_STRING_ELIST_ELIST_STRING_STRING_INT_INT_STRING_STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Search Bookings</em>' operation.
@@ -201,7 +201,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___SEARCH_BOOKINGS = 1;
+	int IBOOKINGS___SEARCH_BOOKINGS__STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Get Booked Stays Of Booking</em>' operation.
@@ -210,7 +210,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___GET_BOOKED_STAYS_OF_BOOKING = 2;
+	int IBOOKINGS___GET_BOOKED_STAYS_OF_BOOKING__STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Get Customer Of Booking</em>' operation.
@@ -219,7 +219,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___GET_CUSTOMER_OF_BOOKING = 3;
+	int IBOOKINGS___GET_CUSTOMER_OF_BOOKING__STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Get Nbr Guest Of Booking</em>' operation.
@@ -228,7 +228,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___GET_NBR_GUEST_OF_BOOKING = 4;
+	int IBOOKINGS___GET_NBR_GUEST_OF_BOOKING__STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Cancel Booking</em>' operation.
@@ -237,7 +237,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___CANCEL_BOOKING = 5;
+	int IBOOKINGS___CANCEL_BOOKING__STRING = 5;
 
 	/**
 	 * The operation id for the '<em>Cancel Stay Of Booking</em>' operation.
@@ -246,7 +246,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___CANCEL_STAY_OF_BOOKING = 6;
+	int IBOOKINGS___CANCEL_STAY_OF_BOOKING__STRING_STRING = 6;
 
 	/**
 	 * The operation id for the '<em>Add Booked Stay To Booking</em>' operation.
@@ -255,7 +255,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___ADD_BOOKED_STAY_TO_BOOKING = 7;
+	int IBOOKINGS___ADD_BOOKED_STAY_TO_BOOKING__STRING_STRING = 7;
 
 	/**
 	 * The operation id for the '<em>Change Nbr Guests Of Booking</em>' operation.
@@ -264,7 +264,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___CHANGE_NBR_GUESTS_OF_BOOKING = 8;
+	int IBOOKINGS___CHANGE_NBR_GUESTS_OF_BOOKING__STRING_INT = 8;
 
 	/**
 	 * The operation id for the '<em>Get All Bookings</em>' operation.
@@ -282,7 +282,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___GET_ALL_BOOKINGS_WITHIN_PERIOD = 10;
+	int IBOOKINGS___GET_ALL_BOOKINGS_WITHIN_PERIOD__DATE_DATE = 10;
 
 	/**
 	 * The operation id for the '<em>Get All Bookings With Stays In Period</em>' operation.
@@ -291,7 +291,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___GET_ALL_BOOKINGS_WITH_STAYS_IN_PERIOD = 11;
+	int IBOOKINGS___GET_ALL_BOOKINGS_WITH_STAYS_IN_PERIOD__DATE_DATE = 11;
 
 	/**
 	 * The operation id for the '<em>Search Bookings Made In Period</em>' operation.
@@ -300,7 +300,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___SEARCH_BOOKINGS_MADE_IN_PERIOD = 12;
+	int IBOOKINGS___SEARCH_BOOKINGS_MADE_IN_PERIOD__STRING_DATE_DATE = 12;
 
 	/**
 	 * The operation id for the '<em>Search Bookings With Stays In Period</em>' operation.
@@ -309,7 +309,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___SEARCH_BOOKINGS_WITH_STAYS_IN_PERIOD = 13;
+	int IBOOKINGS___SEARCH_BOOKINGS_WITH_STAYS_IN_PERIOD__STRING_DATE_DATE = 13;
 
 	/**
 	 * The operation id for the '<em>Search For Available Bookables In Period</em>' operation.
@@ -318,7 +318,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___SEARCH_FOR_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE = 14;
+	int IBOOKINGS___SEARCH_FOR_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE_STRING = 14;
 
 	/**
 	 * The operation id for the '<em>Get Available Bookables In Period</em>' operation.
@@ -327,7 +327,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___GET_AVAILABLE_BOOKABLES_IN_PERIOD = 15;
+	int IBOOKINGS___GET_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE = 15;
 
 	/**
 	 * The operation id for the '<em>Add Booking Request</em>' operation.
@@ -336,7 +336,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___ADD_BOOKING_REQUEST = 16;
+	int IBOOKINGS___ADD_BOOKING_REQUEST__STRING_STRING = 16;
 
 	/**
 	 * The operation id for the '<em>Remove Booking Request</em>' operation.
@@ -345,7 +345,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___REMOVE_BOOKING_REQUEST = 17;
+	int IBOOKINGS___REMOVE_BOOKING_REQUEST__STRING_STRING = 17;
 
 	/**
 	 * The operation id for the '<em>Get Booking Requests</em>' operation.
@@ -354,7 +354,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___GET_BOOKING_REQUESTS = 18;
+	int IBOOKINGS___GET_BOOKING_REQUESTS__STRING = 18;
 
 	/**
 	 * The operation id for the '<em>Pay Booking Bills</em>' operation.
@@ -363,7 +363,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___PAY_BOOKING_BILLS = 19;
+	int IBOOKINGS___PAY_BOOKING_BILLS__STRING = 19;
 
 	/**
 	 * The operation id for the '<em>Pay Stay Bills</em>' operation.
@@ -372,7 +372,61 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS___PAY_STAY_BILLS = 20;
+	int IBOOKINGS___PAY_STAY_BILLS__STRING_STRING = 20;
+
+	/**
+	 * The operation id for the '<em>Search For Available Hotel Rooms In Period</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKINGS___SEARCH_FOR_AVAILABLE_HOTEL_ROOMS_IN_PERIOD__DATE_DATE_STRING = 21;
+
+	/**
+	 * The operation id for the '<em>Search For Available Hostel Beds In Period</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKINGS___SEARCH_FOR_AVAILABLE_HOSTEL_BEDS_IN_PERIOD__DATE_DATE_STRING = 22;
+
+	/**
+	 * The operation id for the '<em>Search For Available Conference Rooms In Period</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKINGS___SEARCH_FOR_AVAILABLE_CONFERENCE_ROOMS_IN_PERIOD__DATE_DATE_STRING = 23;
+
+	/**
+	 * The operation id for the '<em>Get Available Hotel Rooms In Period</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKINGS___GET_AVAILABLE_HOTEL_ROOMS_IN_PERIOD__DATE_DATE = 24;
+
+	/**
+	 * The operation id for the '<em>Get Available Conference Rooms In Period</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKINGS___GET_AVAILABLE_CONFERENCE_ROOMS_IN_PERIOD__DATE_DATE = 25;
+
+	/**
+	 * The operation id for the '<em>Get Available Hostel Beds In Period</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKINGS___GET_AVAILABLE_HOSTEL_BEDS_IN_PERIOD__DATE_DATE = 26;
 
 	/**
 	 * The number of operations of the '<em>IBookings</em>' class.
@@ -381,7 +435,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKINGS_OPERATION_COUNT = 21;
+	int IBOOKINGS_OPERATION_COUNT = 27;
 
 	/**
 	 * The meta object id for the '{@link Classes.Bookings.impl.BookingsManagerImpl <em>Manager</em>}' class.
@@ -472,7 +526,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___MAKE_BOOKING = IBOOKINGS___MAKE_BOOKING;
+	int BOOKINGS_MANAGER___MAKE_BOOKING__ELIST_STRING_ELIST_ELIST_STRING_STRING_INT_INT_STRING_STRING = IBOOKINGS___MAKE_BOOKING__ELIST_STRING_ELIST_ELIST_STRING_STRING_INT_INT_STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Search Bookings</em>' operation.
@@ -481,7 +535,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___SEARCH_BOOKINGS = IBOOKINGS___SEARCH_BOOKINGS;
+	int BOOKINGS_MANAGER___SEARCH_BOOKINGS__STRING = IBOOKINGS___SEARCH_BOOKINGS__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Booked Stays Of Booking</em>' operation.
@@ -490,7 +544,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___GET_BOOKED_STAYS_OF_BOOKING = IBOOKINGS___GET_BOOKED_STAYS_OF_BOOKING;
+	int BOOKINGS_MANAGER___GET_BOOKED_STAYS_OF_BOOKING__STRING = IBOOKINGS___GET_BOOKED_STAYS_OF_BOOKING__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Customer Of Booking</em>' operation.
@@ -499,7 +553,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___GET_CUSTOMER_OF_BOOKING = IBOOKINGS___GET_CUSTOMER_OF_BOOKING;
+	int BOOKINGS_MANAGER___GET_CUSTOMER_OF_BOOKING__STRING = IBOOKINGS___GET_CUSTOMER_OF_BOOKING__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Nbr Guest Of Booking</em>' operation.
@@ -508,7 +562,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___GET_NBR_GUEST_OF_BOOKING = IBOOKINGS___GET_NBR_GUEST_OF_BOOKING;
+	int BOOKINGS_MANAGER___GET_NBR_GUEST_OF_BOOKING__STRING = IBOOKINGS___GET_NBR_GUEST_OF_BOOKING__STRING;
 
 	/**
 	 * The operation id for the '<em>Cancel Booking</em>' operation.
@@ -517,7 +571,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___CANCEL_BOOKING = IBOOKINGS___CANCEL_BOOKING;
+	int BOOKINGS_MANAGER___CANCEL_BOOKING__STRING = IBOOKINGS___CANCEL_BOOKING__STRING;
 
 	/**
 	 * The operation id for the '<em>Cancel Stay Of Booking</em>' operation.
@@ -526,7 +580,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___CANCEL_STAY_OF_BOOKING = IBOOKINGS___CANCEL_STAY_OF_BOOKING;
+	int BOOKINGS_MANAGER___CANCEL_STAY_OF_BOOKING__STRING_STRING = IBOOKINGS___CANCEL_STAY_OF_BOOKING__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Add Booked Stay To Booking</em>' operation.
@@ -535,7 +589,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___ADD_BOOKED_STAY_TO_BOOKING = IBOOKINGS___ADD_BOOKED_STAY_TO_BOOKING;
+	int BOOKINGS_MANAGER___ADD_BOOKED_STAY_TO_BOOKING__STRING_STRING = IBOOKINGS___ADD_BOOKED_STAY_TO_BOOKING__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Nbr Guests Of Booking</em>' operation.
@@ -544,7 +598,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___CHANGE_NBR_GUESTS_OF_BOOKING = IBOOKINGS___CHANGE_NBR_GUESTS_OF_BOOKING;
+	int BOOKINGS_MANAGER___CHANGE_NBR_GUESTS_OF_BOOKING__STRING_INT = IBOOKINGS___CHANGE_NBR_GUESTS_OF_BOOKING__STRING_INT;
 
 	/**
 	 * The operation id for the '<em>Get All Bookings</em>' operation.
@@ -562,7 +616,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___GET_ALL_BOOKINGS_WITHIN_PERIOD = IBOOKINGS___GET_ALL_BOOKINGS_WITHIN_PERIOD;
+	int BOOKINGS_MANAGER___GET_ALL_BOOKINGS_WITHIN_PERIOD__DATE_DATE = IBOOKINGS___GET_ALL_BOOKINGS_WITHIN_PERIOD__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Get All Bookings With Stays In Period</em>' operation.
@@ -571,7 +625,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___GET_ALL_BOOKINGS_WITH_STAYS_IN_PERIOD = IBOOKINGS___GET_ALL_BOOKINGS_WITH_STAYS_IN_PERIOD;
+	int BOOKINGS_MANAGER___GET_ALL_BOOKINGS_WITH_STAYS_IN_PERIOD__DATE_DATE = IBOOKINGS___GET_ALL_BOOKINGS_WITH_STAYS_IN_PERIOD__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Search Bookings Made In Period</em>' operation.
@@ -580,7 +634,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___SEARCH_BOOKINGS_MADE_IN_PERIOD = IBOOKINGS___SEARCH_BOOKINGS_MADE_IN_PERIOD;
+	int BOOKINGS_MANAGER___SEARCH_BOOKINGS_MADE_IN_PERIOD__STRING_DATE_DATE = IBOOKINGS___SEARCH_BOOKINGS_MADE_IN_PERIOD__STRING_DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Search Bookings With Stays In Period</em>' operation.
@@ -589,7 +643,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___SEARCH_BOOKINGS_WITH_STAYS_IN_PERIOD = IBOOKINGS___SEARCH_BOOKINGS_WITH_STAYS_IN_PERIOD;
+	int BOOKINGS_MANAGER___SEARCH_BOOKINGS_WITH_STAYS_IN_PERIOD__STRING_DATE_DATE = IBOOKINGS___SEARCH_BOOKINGS_WITH_STAYS_IN_PERIOD__STRING_DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Search For Available Bookables In Period</em>' operation.
@@ -598,7 +652,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___SEARCH_FOR_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE = IBOOKINGS___SEARCH_FOR_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE;
+	int BOOKINGS_MANAGER___SEARCH_FOR_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE_STRING = IBOOKINGS___SEARCH_FOR_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE_STRING;
 
 	/**
 	 * The operation id for the '<em>Get Available Bookables In Period</em>' operation.
@@ -607,7 +661,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___GET_AVAILABLE_BOOKABLES_IN_PERIOD = IBOOKINGS___GET_AVAILABLE_BOOKABLES_IN_PERIOD;
+	int BOOKINGS_MANAGER___GET_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE = IBOOKINGS___GET_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Add Booking Request</em>' operation.
@@ -616,7 +670,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___ADD_BOOKING_REQUEST = IBOOKINGS___ADD_BOOKING_REQUEST;
+	int BOOKINGS_MANAGER___ADD_BOOKING_REQUEST__STRING_STRING = IBOOKINGS___ADD_BOOKING_REQUEST__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Remove Booking Request</em>' operation.
@@ -625,7 +679,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___REMOVE_BOOKING_REQUEST = IBOOKINGS___REMOVE_BOOKING_REQUEST;
+	int BOOKINGS_MANAGER___REMOVE_BOOKING_REQUEST__STRING_STRING = IBOOKINGS___REMOVE_BOOKING_REQUEST__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Get Booking Requests</em>' operation.
@@ -634,7 +688,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___GET_BOOKING_REQUESTS = IBOOKINGS___GET_BOOKING_REQUESTS;
+	int BOOKINGS_MANAGER___GET_BOOKING_REQUESTS__STRING = IBOOKINGS___GET_BOOKING_REQUESTS__STRING;
 
 	/**
 	 * The operation id for the '<em>Pay Booking Bills</em>' operation.
@@ -643,7 +697,7 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___PAY_BOOKING_BILLS = IBOOKINGS___PAY_BOOKING_BILLS;
+	int BOOKINGS_MANAGER___PAY_BOOKING_BILLS__STRING = IBOOKINGS___PAY_BOOKING_BILLS__STRING;
 
 	/**
 	 * The operation id for the '<em>Pay Stay Bills</em>' operation.
@@ -652,7 +706,61 @@ public interface BookingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKINGS_MANAGER___PAY_STAY_BILLS = IBOOKINGS___PAY_STAY_BILLS;
+	int BOOKINGS_MANAGER___PAY_STAY_BILLS__STRING_STRING = IBOOKINGS___PAY_STAY_BILLS__STRING_STRING;
+
+	/**
+	 * The operation id for the '<em>Search For Available Hotel Rooms In Period</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKINGS_MANAGER___SEARCH_FOR_AVAILABLE_HOTEL_ROOMS_IN_PERIOD__DATE_DATE_STRING = IBOOKINGS___SEARCH_FOR_AVAILABLE_HOTEL_ROOMS_IN_PERIOD__DATE_DATE_STRING;
+
+	/**
+	 * The operation id for the '<em>Search For Available Hostel Beds In Period</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKINGS_MANAGER___SEARCH_FOR_AVAILABLE_HOSTEL_BEDS_IN_PERIOD__DATE_DATE_STRING = IBOOKINGS___SEARCH_FOR_AVAILABLE_HOSTEL_BEDS_IN_PERIOD__DATE_DATE_STRING;
+
+	/**
+	 * The operation id for the '<em>Search For Available Conference Rooms In Period</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKINGS_MANAGER___SEARCH_FOR_AVAILABLE_CONFERENCE_ROOMS_IN_PERIOD__DATE_DATE_STRING = IBOOKINGS___SEARCH_FOR_AVAILABLE_CONFERENCE_ROOMS_IN_PERIOD__DATE_DATE_STRING;
+
+	/**
+	 * The operation id for the '<em>Get Available Hotel Rooms In Period</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKINGS_MANAGER___GET_AVAILABLE_HOTEL_ROOMS_IN_PERIOD__DATE_DATE = IBOOKINGS___GET_AVAILABLE_HOTEL_ROOMS_IN_PERIOD__DATE_DATE;
+
+	/**
+	 * The operation id for the '<em>Get Available Conference Rooms In Period</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKINGS_MANAGER___GET_AVAILABLE_CONFERENCE_ROOMS_IN_PERIOD__DATE_DATE = IBOOKINGS___GET_AVAILABLE_CONFERENCE_ROOMS_IN_PERIOD__DATE_DATE;
+
+	/**
+	 * The operation id for the '<em>Get Available Hostel Beds In Period</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKINGS_MANAGER___GET_AVAILABLE_HOSTEL_BEDS_IN_PERIOD__DATE_DATE = IBOOKINGS___GET_AVAILABLE_HOSTEL_BEDS_IN_PERIOD__DATE_DATE;
 
 	/**
 	 * The number of operations of the '<em>Manager</em>' class.
@@ -869,94 +977,94 @@ public interface BookingsPackage extends EPackage {
 	EClass getIBookings();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#makeBooking() <em>Make Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#makeBooking(org.eclipse.emf.common.util.EList, java.lang.String, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Make Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Make Booking</em>' operation.
-	 * @see Classes.Bookings.IBookings#makeBooking()
+	 * @see Classes.Bookings.IBookings#makeBooking(org.eclipse.emf.common.util.EList, java.lang.String, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookings__MakeBooking();
+	EOperation getIBookings__MakeBooking__EList_String_EList_EList_String_String_int_int_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#searchBookings() <em>Search Bookings</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#searchBookings(java.lang.String) <em>Search Bookings</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Bookings</em>' operation.
-	 * @see Classes.Bookings.IBookings#searchBookings()
+	 * @see Classes.Bookings.IBookings#searchBookings(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookings__SearchBookings();
+	EOperation getIBookings__SearchBookings__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getBookedStaysOfBooking() <em>Get Booked Stays Of Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getBookedStaysOfBooking(java.lang.String) <em>Get Booked Stays Of Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Booked Stays Of Booking</em>' operation.
-	 * @see Classes.Bookings.IBookings#getBookedStaysOfBooking()
+	 * @see Classes.Bookings.IBookings#getBookedStaysOfBooking(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookings__GetBookedStaysOfBooking();
+	EOperation getIBookings__GetBookedStaysOfBooking__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getCustomerOfBooking() <em>Get Customer Of Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getCustomerOfBooking(java.lang.String) <em>Get Customer Of Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Customer Of Booking</em>' operation.
-	 * @see Classes.Bookings.IBookings#getCustomerOfBooking()
+	 * @see Classes.Bookings.IBookings#getCustomerOfBooking(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookings__GetCustomerOfBooking();
+	EOperation getIBookings__GetCustomerOfBooking__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getNbrGuestOfBooking() <em>Get Nbr Guest Of Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getNbrGuestOfBooking(java.lang.String) <em>Get Nbr Guest Of Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Nbr Guest Of Booking</em>' operation.
-	 * @see Classes.Bookings.IBookings#getNbrGuestOfBooking()
+	 * @see Classes.Bookings.IBookings#getNbrGuestOfBooking(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookings__GetNbrGuestOfBooking();
+	EOperation getIBookings__GetNbrGuestOfBooking__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#cancelBooking() <em>Cancel Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#cancelBooking(java.lang.String) <em>Cancel Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Cancel Booking</em>' operation.
-	 * @see Classes.Bookings.IBookings#cancelBooking()
+	 * @see Classes.Bookings.IBookings#cancelBooking(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookings__CancelBooking();
+	EOperation getIBookings__CancelBooking__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#cancelStayOfBooking() <em>Cancel Stay Of Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#cancelStayOfBooking(java.lang.String, java.lang.String) <em>Cancel Stay Of Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Cancel Stay Of Booking</em>' operation.
-	 * @see Classes.Bookings.IBookings#cancelStayOfBooking()
+	 * @see Classes.Bookings.IBookings#cancelStayOfBooking(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookings__CancelStayOfBooking();
+	EOperation getIBookings__CancelStayOfBooking__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#addBookedStayToBooking() <em>Add Booked Stay To Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#addBookedStayToBooking(java.lang.String, java.lang.String) <em>Add Booked Stay To Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Booked Stay To Booking</em>' operation.
-	 * @see Classes.Bookings.IBookings#addBookedStayToBooking()
+	 * @see Classes.Bookings.IBookings#addBookedStayToBooking(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookings__AddBookedStayToBooking();
+	EOperation getIBookings__AddBookedStayToBooking__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#changeNbrGuestsOfBooking() <em>Change Nbr Guests Of Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#changeNbrGuestsOfBooking(java.lang.String, int) <em>Change Nbr Guests Of Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Nbr Guests Of Booking</em>' operation.
-	 * @see Classes.Bookings.IBookings#changeNbrGuestsOfBooking()
+	 * @see Classes.Bookings.IBookings#changeNbrGuestsOfBooking(java.lang.String, int)
 	 * @generated
 	 */
-	EOperation getIBookings__ChangeNbrGuestsOfBooking();
+	EOperation getIBookings__ChangeNbrGuestsOfBooking__String_int();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getAllBookings() <em>Get All Bookings</em>}' operation.
@@ -969,114 +1077,174 @@ public interface BookingsPackage extends EPackage {
 	EOperation getIBookings__GetAllBookings();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getAllBookingsWithinPeriod() <em>Get All Bookings Within Period</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getAllBookingsWithinPeriod(java.util.Date, java.util.Date) <em>Get All Bookings Within Period</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get All Bookings Within Period</em>' operation.
-	 * @see Classes.Bookings.IBookings#getAllBookingsWithinPeriod()
+	 * @see Classes.Bookings.IBookings#getAllBookingsWithinPeriod(java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getIBookings__GetAllBookingsWithinPeriod();
+	EOperation getIBookings__GetAllBookingsWithinPeriod__Date_Date();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getAllBookingsWithStaysInPeriod() <em>Get All Bookings With Stays In Period</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getAllBookingsWithStaysInPeriod(java.util.Date, java.util.Date) <em>Get All Bookings With Stays In Period</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get All Bookings With Stays In Period</em>' operation.
-	 * @see Classes.Bookings.IBookings#getAllBookingsWithStaysInPeriod()
+	 * @see Classes.Bookings.IBookings#getAllBookingsWithStaysInPeriod(java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getIBookings__GetAllBookingsWithStaysInPeriod();
+	EOperation getIBookings__GetAllBookingsWithStaysInPeriod__Date_Date();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#searchBookingsMadeInPeriod() <em>Search Bookings Made In Period</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#searchBookingsMadeInPeriod(java.lang.String, java.util.Date, java.util.Date) <em>Search Bookings Made In Period</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Bookings Made In Period</em>' operation.
-	 * @see Classes.Bookings.IBookings#searchBookingsMadeInPeriod()
+	 * @see Classes.Bookings.IBookings#searchBookingsMadeInPeriod(java.lang.String, java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getIBookings__SearchBookingsMadeInPeriod();
+	EOperation getIBookings__SearchBookingsMadeInPeriod__String_Date_Date();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#searchBookingsWithStaysInPeriod() <em>Search Bookings With Stays In Period</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#searchBookingsWithStaysInPeriod(java.lang.String, java.util.Date, java.util.Date) <em>Search Bookings With Stays In Period</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Bookings With Stays In Period</em>' operation.
-	 * @see Classes.Bookings.IBookings#searchBookingsWithStaysInPeriod()
+	 * @see Classes.Bookings.IBookings#searchBookingsWithStaysInPeriod(java.lang.String, java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getIBookings__SearchBookingsWithStaysInPeriod();
+	EOperation getIBookings__SearchBookingsWithStaysInPeriod__String_Date_Date();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#searchForAvailableBookablesInPeriod(java.util.Date, java.util.Date) <em>Search For Available Bookables In Period</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#searchForAvailableBookablesInPeriod(java.util.Date, java.util.Date, java.lang.String) <em>Search For Available Bookables In Period</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search For Available Bookables In Period</em>' operation.
-	 * @see Classes.Bookings.IBookings#searchForAvailableBookablesInPeriod(java.util.Date, java.util.Date)
+	 * @see Classes.Bookings.IBookings#searchForAvailableBookablesInPeriod(java.util.Date, java.util.Date, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookings__SearchForAvailableBookablesInPeriod__Date_Date();
+	EOperation getIBookings__SearchForAvailableBookablesInPeriod__Date_Date_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getAvailableBookablesInPeriod() <em>Get Available Bookables In Period</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getAvailableBookablesInPeriod(java.util.Date, java.util.Date) <em>Get Available Bookables In Period</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Available Bookables In Period</em>' operation.
-	 * @see Classes.Bookings.IBookings#getAvailableBookablesInPeriod()
+	 * @see Classes.Bookings.IBookings#getAvailableBookablesInPeriod(java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getIBookings__GetAvailableBookablesInPeriod();
+	EOperation getIBookings__GetAvailableBookablesInPeriod__Date_Date();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#addBookingRequest() <em>Add Booking Request</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#addBookingRequest(java.lang.String, java.lang.String) <em>Add Booking Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Booking Request</em>' operation.
-	 * @see Classes.Bookings.IBookings#addBookingRequest()
+	 * @see Classes.Bookings.IBookings#addBookingRequest(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookings__AddBookingRequest();
+	EOperation getIBookings__AddBookingRequest__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#removeBookingRequest() <em>Remove Booking Request</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#removeBookingRequest(java.lang.String, java.lang.String) <em>Remove Booking Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Booking Request</em>' operation.
-	 * @see Classes.Bookings.IBookings#removeBookingRequest()
+	 * @see Classes.Bookings.IBookings#removeBookingRequest(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookings__RemoveBookingRequest();
+	EOperation getIBookings__RemoveBookingRequest__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getBookingRequests() <em>Get Booking Requests</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getBookingRequests(java.lang.String) <em>Get Booking Requests</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Booking Requests</em>' operation.
-	 * @see Classes.Bookings.IBookings#getBookingRequests()
+	 * @see Classes.Bookings.IBookings#getBookingRequests(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookings__GetBookingRequests();
+	EOperation getIBookings__GetBookingRequests__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#payBookingBills() <em>Pay Booking Bills</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#payBookingBills(java.lang.String) <em>Pay Booking Bills</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Pay Booking Bills</em>' operation.
-	 * @see Classes.Bookings.IBookings#payBookingBills()
+	 * @see Classes.Bookings.IBookings#payBookingBills(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookings__PayBookingBills();
+	EOperation getIBookings__PayBookingBills__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#payStayBills() <em>Pay Stay Bills</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#payStayBills(java.lang.String, java.lang.String) <em>Pay Stay Bills</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Pay Stay Bills</em>' operation.
-	 * @see Classes.Bookings.IBookings#payStayBills()
+	 * @see Classes.Bookings.IBookings#payStayBills(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookings__PayStayBills();
+	EOperation getIBookings__PayStayBills__String_String();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#searchForAvailableHotelRoomsInPeriod(java.util.Date, java.util.Date, java.lang.String) <em>Search For Available Hotel Rooms In Period</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Search For Available Hotel Rooms In Period</em>' operation.
+	 * @see Classes.Bookings.IBookings#searchForAvailableHotelRoomsInPeriod(java.util.Date, java.util.Date, java.lang.String)
+	 * @generated
+	 */
+	EOperation getIBookings__SearchForAvailableHotelRoomsInPeriod__Date_Date_String();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#searchForAvailableHostelBedsInPeriod(java.util.Date, java.util.Date, java.lang.String) <em>Search For Available Hostel Beds In Period</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Search For Available Hostel Beds In Period</em>' operation.
+	 * @see Classes.Bookings.IBookings#searchForAvailableHostelBedsInPeriod(java.util.Date, java.util.Date, java.lang.String)
+	 * @generated
+	 */
+	EOperation getIBookings__SearchForAvailableHostelBedsInPeriod__Date_Date_String();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#searchForAvailableConferenceRoomsInPeriod(java.util.Date, java.util.Date, java.lang.String) <em>Search For Available Conference Rooms In Period</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Search For Available Conference Rooms In Period</em>' operation.
+	 * @see Classes.Bookings.IBookings#searchForAvailableConferenceRoomsInPeriod(java.util.Date, java.util.Date, java.lang.String)
+	 * @generated
+	 */
+	EOperation getIBookings__SearchForAvailableConferenceRoomsInPeriod__Date_Date_String();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getAvailableHotelRoomsInPeriod(java.util.Date, java.util.Date) <em>Get Available Hotel Rooms In Period</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Available Hotel Rooms In Period</em>' operation.
+	 * @see Classes.Bookings.IBookings#getAvailableHotelRoomsInPeriod(java.util.Date, java.util.Date)
+	 * @generated
+	 */
+	EOperation getIBookings__GetAvailableHotelRoomsInPeriod__Date_Date();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getAvailableConferenceRoomsInPeriod(java.util.Date, java.util.Date) <em>Get Available Conference Rooms In Period</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Available Conference Rooms In Period</em>' operation.
+	 * @see Classes.Bookings.IBookings#getAvailableConferenceRoomsInPeriod(java.util.Date, java.util.Date)
+	 * @generated
+	 */
+	EOperation getIBookings__GetAvailableConferenceRoomsInPeriod__Date_Date();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Bookings.IBookings#getAvailableHostelBedsInPeriod(java.util.Date, java.util.Date) <em>Get Available Hostel Beds In Period</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Available Hostel Beds In Period</em>' operation.
+	 * @see Classes.Bookings.IBookings#getAvailableHostelBedsInPeriod(java.util.Date, java.util.Date)
+	 * @generated
+	 */
+	EOperation getIBookings__GetAvailableHostelBedsInPeriod__Date_Date();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1265,7 +1433,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___MAKE_BOOKING = eINSTANCE.getIBookings__MakeBooking();
+		EOperation IBOOKINGS___MAKE_BOOKING__ELIST_STRING_ELIST_ELIST_STRING_STRING_INT_INT_STRING_STRING = eINSTANCE.getIBookings__MakeBooking__EList_String_EList_EList_String_String_int_int_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Search Bookings</b></em>' operation.
@@ -1273,7 +1441,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___SEARCH_BOOKINGS = eINSTANCE.getIBookings__SearchBookings();
+		EOperation IBOOKINGS___SEARCH_BOOKINGS__STRING = eINSTANCE.getIBookings__SearchBookings__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Booked Stays Of Booking</b></em>' operation.
@@ -1281,7 +1449,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___GET_BOOKED_STAYS_OF_BOOKING = eINSTANCE.getIBookings__GetBookedStaysOfBooking();
+		EOperation IBOOKINGS___GET_BOOKED_STAYS_OF_BOOKING__STRING = eINSTANCE.getIBookings__GetBookedStaysOfBooking__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Customer Of Booking</b></em>' operation.
@@ -1289,7 +1457,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___GET_CUSTOMER_OF_BOOKING = eINSTANCE.getIBookings__GetCustomerOfBooking();
+		EOperation IBOOKINGS___GET_CUSTOMER_OF_BOOKING__STRING = eINSTANCE.getIBookings__GetCustomerOfBooking__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Nbr Guest Of Booking</b></em>' operation.
@@ -1297,7 +1465,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___GET_NBR_GUEST_OF_BOOKING = eINSTANCE.getIBookings__GetNbrGuestOfBooking();
+		EOperation IBOOKINGS___GET_NBR_GUEST_OF_BOOKING__STRING = eINSTANCE.getIBookings__GetNbrGuestOfBooking__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Cancel Booking</b></em>' operation.
@@ -1305,7 +1473,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___CANCEL_BOOKING = eINSTANCE.getIBookings__CancelBooking();
+		EOperation IBOOKINGS___CANCEL_BOOKING__STRING = eINSTANCE.getIBookings__CancelBooking__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Cancel Stay Of Booking</b></em>' operation.
@@ -1313,7 +1481,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___CANCEL_STAY_OF_BOOKING = eINSTANCE.getIBookings__CancelStayOfBooking();
+		EOperation IBOOKINGS___CANCEL_STAY_OF_BOOKING__STRING_STRING = eINSTANCE.getIBookings__CancelStayOfBooking__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Booked Stay To Booking</b></em>' operation.
@@ -1321,7 +1489,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___ADD_BOOKED_STAY_TO_BOOKING = eINSTANCE.getIBookings__AddBookedStayToBooking();
+		EOperation IBOOKINGS___ADD_BOOKED_STAY_TO_BOOKING__STRING_STRING = eINSTANCE.getIBookings__AddBookedStayToBooking__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Nbr Guests Of Booking</b></em>' operation.
@@ -1329,7 +1497,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___CHANGE_NBR_GUESTS_OF_BOOKING = eINSTANCE.getIBookings__ChangeNbrGuestsOfBooking();
+		EOperation IBOOKINGS___CHANGE_NBR_GUESTS_OF_BOOKING__STRING_INT = eINSTANCE.getIBookings__ChangeNbrGuestsOfBooking__String_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Get All Bookings</b></em>' operation.
@@ -1345,7 +1513,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___GET_ALL_BOOKINGS_WITHIN_PERIOD = eINSTANCE.getIBookings__GetAllBookingsWithinPeriod();
+		EOperation IBOOKINGS___GET_ALL_BOOKINGS_WITHIN_PERIOD__DATE_DATE = eINSTANCE.getIBookings__GetAllBookingsWithinPeriod__Date_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Get All Bookings With Stays In Period</b></em>' operation.
@@ -1353,7 +1521,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___GET_ALL_BOOKINGS_WITH_STAYS_IN_PERIOD = eINSTANCE.getIBookings__GetAllBookingsWithStaysInPeriod();
+		EOperation IBOOKINGS___GET_ALL_BOOKINGS_WITH_STAYS_IN_PERIOD__DATE_DATE = eINSTANCE.getIBookings__GetAllBookingsWithStaysInPeriod__Date_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Search Bookings Made In Period</b></em>' operation.
@@ -1361,7 +1529,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___SEARCH_BOOKINGS_MADE_IN_PERIOD = eINSTANCE.getIBookings__SearchBookingsMadeInPeriod();
+		EOperation IBOOKINGS___SEARCH_BOOKINGS_MADE_IN_PERIOD__STRING_DATE_DATE = eINSTANCE.getIBookings__SearchBookingsMadeInPeriod__String_Date_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Search Bookings With Stays In Period</b></em>' operation.
@@ -1369,7 +1537,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___SEARCH_BOOKINGS_WITH_STAYS_IN_PERIOD = eINSTANCE.getIBookings__SearchBookingsWithStaysInPeriod();
+		EOperation IBOOKINGS___SEARCH_BOOKINGS_WITH_STAYS_IN_PERIOD__STRING_DATE_DATE = eINSTANCE.getIBookings__SearchBookingsWithStaysInPeriod__String_Date_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Search For Available Bookables In Period</b></em>' operation.
@@ -1377,7 +1545,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___SEARCH_FOR_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE = eINSTANCE.getIBookings__SearchForAvailableBookablesInPeriod__Date_Date();
+		EOperation IBOOKINGS___SEARCH_FOR_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE_STRING = eINSTANCE.getIBookings__SearchForAvailableBookablesInPeriod__Date_Date_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Available Bookables In Period</b></em>' operation.
@@ -1385,7 +1553,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___GET_AVAILABLE_BOOKABLES_IN_PERIOD = eINSTANCE.getIBookings__GetAvailableBookablesInPeriod();
+		EOperation IBOOKINGS___GET_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE = eINSTANCE.getIBookings__GetAvailableBookablesInPeriod__Date_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Booking Request</b></em>' operation.
@@ -1393,7 +1561,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___ADD_BOOKING_REQUEST = eINSTANCE.getIBookings__AddBookingRequest();
+		EOperation IBOOKINGS___ADD_BOOKING_REQUEST__STRING_STRING = eINSTANCE.getIBookings__AddBookingRequest__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Booking Request</b></em>' operation.
@@ -1401,7 +1569,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___REMOVE_BOOKING_REQUEST = eINSTANCE.getIBookings__RemoveBookingRequest();
+		EOperation IBOOKINGS___REMOVE_BOOKING_REQUEST__STRING_STRING = eINSTANCE.getIBookings__RemoveBookingRequest__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Booking Requests</b></em>' operation.
@@ -1409,7 +1577,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___GET_BOOKING_REQUESTS = eINSTANCE.getIBookings__GetBookingRequests();
+		EOperation IBOOKINGS___GET_BOOKING_REQUESTS__STRING = eINSTANCE.getIBookings__GetBookingRequests__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Pay Booking Bills</b></em>' operation.
@@ -1417,7 +1585,7 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___PAY_BOOKING_BILLS = eINSTANCE.getIBookings__PayBookingBills();
+		EOperation IBOOKINGS___PAY_BOOKING_BILLS__STRING = eINSTANCE.getIBookings__PayBookingBills__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Pay Stay Bills</b></em>' operation.
@@ -1425,7 +1593,55 @@ public interface BookingsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKINGS___PAY_STAY_BILLS = eINSTANCE.getIBookings__PayStayBills();
+		EOperation IBOOKINGS___PAY_STAY_BILLS__STRING_STRING = eINSTANCE.getIBookings__PayStayBills__String_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Search For Available Hotel Rooms In Period</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKINGS___SEARCH_FOR_AVAILABLE_HOTEL_ROOMS_IN_PERIOD__DATE_DATE_STRING = eINSTANCE.getIBookings__SearchForAvailableHotelRoomsInPeriod__Date_Date_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Search For Available Hostel Beds In Period</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKINGS___SEARCH_FOR_AVAILABLE_HOSTEL_BEDS_IN_PERIOD__DATE_DATE_STRING = eINSTANCE.getIBookings__SearchForAvailableHostelBedsInPeriod__Date_Date_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Search For Available Conference Rooms In Period</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKINGS___SEARCH_FOR_AVAILABLE_CONFERENCE_ROOMS_IN_PERIOD__DATE_DATE_STRING = eINSTANCE.getIBookings__SearchForAvailableConferenceRoomsInPeriod__Date_Date_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Available Hotel Rooms In Period</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKINGS___GET_AVAILABLE_HOTEL_ROOMS_IN_PERIOD__DATE_DATE = eINSTANCE.getIBookings__GetAvailableHotelRoomsInPeriod__Date_Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Available Conference Rooms In Period</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKINGS___GET_AVAILABLE_CONFERENCE_ROOMS_IN_PERIOD__DATE_DATE = eINSTANCE.getIBookings__GetAvailableConferenceRoomsInPeriod__Date_Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Available Hostel Beds In Period</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKINGS___GET_AVAILABLE_HOSTEL_BEDS_IN_PERIOD__DATE_DATE = eINSTANCE.getIBookings__GetAvailableHostelBedsInPeriod__Date_Date();
 
 	}
 

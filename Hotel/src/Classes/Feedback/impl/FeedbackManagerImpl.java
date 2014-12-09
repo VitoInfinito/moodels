@@ -188,7 +188,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchFeedback() {
+	public EList<String> searchFeedback(String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -312,9 +312,8 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 			case FeedbackPackage.FEEDBACK_MANAGER___SET_FEEDBACK_IS_NOTED__STRING_BOOLEAN:
 				setFeedbackIsNoted((String)arguments.get(0), (Boolean)arguments.get(1));
 				return null;
-			case FeedbackPackage.FEEDBACK_MANAGER___SEARCH_FEEDBACK:
-				searchFeedback();
-				return null;
+			case FeedbackPackage.FEEDBACK_MANAGER___SEARCH_FEEDBACK__STRING:
+				return searchFeedback((String)arguments.get(0));
 			case FeedbackPackage.FEEDBACK_MANAGER___ADD_FEEDBACK__STRING_STRING:
 				addFeedback((String)arguments.get(0), (String)arguments.get(1));
 				return null;

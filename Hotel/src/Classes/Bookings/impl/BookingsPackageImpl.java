@@ -356,7 +356,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__MakeBooking() {
+	public EOperation getIBookings__MakeBooking__EList_String_EList_EList_String_String_int_int_String_String() {
 		return iBookingsEClass.getEOperations().get(0);
 	}
 
@@ -365,7 +365,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__SearchBookings() {
+	public EOperation getIBookings__SearchBookings__String() {
 		return iBookingsEClass.getEOperations().get(1);
 	}
 
@@ -374,7 +374,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__GetBookedStaysOfBooking() {
+	public EOperation getIBookings__GetBookedStaysOfBooking__String() {
 		return iBookingsEClass.getEOperations().get(2);
 	}
 
@@ -383,7 +383,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__GetCustomerOfBooking() {
+	public EOperation getIBookings__GetCustomerOfBooking__String() {
 		return iBookingsEClass.getEOperations().get(3);
 	}
 
@@ -392,7 +392,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__GetNbrGuestOfBooking() {
+	public EOperation getIBookings__GetNbrGuestOfBooking__String() {
 		return iBookingsEClass.getEOperations().get(4);
 	}
 
@@ -401,7 +401,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__CancelBooking() {
+	public EOperation getIBookings__CancelBooking__String() {
 		return iBookingsEClass.getEOperations().get(5);
 	}
 
@@ -410,7 +410,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__CancelStayOfBooking() {
+	public EOperation getIBookings__CancelStayOfBooking__String_String() {
 		return iBookingsEClass.getEOperations().get(6);
 	}
 
@@ -419,7 +419,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__AddBookedStayToBooking() {
+	public EOperation getIBookings__AddBookedStayToBooking__String_String() {
 		return iBookingsEClass.getEOperations().get(7);
 	}
 
@@ -428,7 +428,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__ChangeNbrGuestsOfBooking() {
+	public EOperation getIBookings__ChangeNbrGuestsOfBooking__String_int() {
 		return iBookingsEClass.getEOperations().get(8);
 	}
 
@@ -446,7 +446,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__GetAllBookingsWithinPeriod() {
+	public EOperation getIBookings__GetAllBookingsWithinPeriod__Date_Date() {
 		return iBookingsEClass.getEOperations().get(10);
 	}
 
@@ -455,7 +455,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__GetAllBookingsWithStaysInPeriod() {
+	public EOperation getIBookings__GetAllBookingsWithStaysInPeriod__Date_Date() {
 		return iBookingsEClass.getEOperations().get(11);
 	}
 
@@ -464,7 +464,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__SearchBookingsMadeInPeriod() {
+	public EOperation getIBookings__SearchBookingsMadeInPeriod__String_Date_Date() {
 		return iBookingsEClass.getEOperations().get(12);
 	}
 
@@ -473,7 +473,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__SearchBookingsWithStaysInPeriod() {
+	public EOperation getIBookings__SearchBookingsWithStaysInPeriod__String_Date_Date() {
 		return iBookingsEClass.getEOperations().get(13);
 	}
 
@@ -482,7 +482,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__SearchForAvailableBookablesInPeriod__Date_Date() {
+	public EOperation getIBookings__SearchForAvailableBookablesInPeriod__Date_Date_String() {
 		return iBookingsEClass.getEOperations().get(14);
 	}
 
@@ -491,7 +491,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__GetAvailableBookablesInPeriod() {
+	public EOperation getIBookings__GetAvailableBookablesInPeriod__Date_Date() {
 		return iBookingsEClass.getEOperations().get(15);
 	}
 
@@ -500,7 +500,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__AddBookingRequest() {
+	public EOperation getIBookings__AddBookingRequest__String_String() {
 		return iBookingsEClass.getEOperations().get(16);
 	}
 
@@ -509,7 +509,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__RemoveBookingRequest() {
+	public EOperation getIBookings__RemoveBookingRequest__String_String() {
 		return iBookingsEClass.getEOperations().get(17);
 	}
 
@@ -518,7 +518,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__GetBookingRequests() {
+	public EOperation getIBookings__GetBookingRequests__String() {
 		return iBookingsEClass.getEOperations().get(18);
 	}
 
@@ -527,7 +527,7 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__PayBookingBills() {
+	public EOperation getIBookings__PayBookingBills__String() {
 		return iBookingsEClass.getEOperations().get(19);
 	}
 
@@ -536,8 +536,62 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookings__PayStayBills() {
+	public EOperation getIBookings__PayStayBills__String_String() {
 		return iBookingsEClass.getEOperations().get(20);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBookings__SearchForAvailableHotelRoomsInPeriod__Date_Date_String() {
+		return iBookingsEClass.getEOperations().get(21);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBookings__SearchForAvailableHostelBedsInPeriod__Date_Date_String() {
+		return iBookingsEClass.getEOperations().get(22);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBookings__SearchForAvailableConferenceRoomsInPeriod__Date_Date_String() {
+		return iBookingsEClass.getEOperations().get(23);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBookings__GetAvailableHotelRoomsInPeriod__Date_Date() {
+		return iBookingsEClass.getEOperations().get(24);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBookings__GetAvailableConferenceRoomsInPeriod__Date_Date() {
+		return iBookingsEClass.getEOperations().get(25);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBookings__GetAvailableHostelBedsInPeriod__Date_Date() {
+		return iBookingsEClass.getEOperations().get(26);
 	}
 
 	/**
@@ -589,27 +643,33 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 		createEReference(bookingsManagerEClass, BOOKINGS_MANAGER__IBILLS);
 
 		iBookingsEClass = createEClass(IBOOKINGS);
-		createEOperation(iBookingsEClass, IBOOKINGS___MAKE_BOOKING);
-		createEOperation(iBookingsEClass, IBOOKINGS___SEARCH_BOOKINGS);
-		createEOperation(iBookingsEClass, IBOOKINGS___GET_BOOKED_STAYS_OF_BOOKING);
-		createEOperation(iBookingsEClass, IBOOKINGS___GET_CUSTOMER_OF_BOOKING);
-		createEOperation(iBookingsEClass, IBOOKINGS___GET_NBR_GUEST_OF_BOOKING);
-		createEOperation(iBookingsEClass, IBOOKINGS___CANCEL_BOOKING);
-		createEOperation(iBookingsEClass, IBOOKINGS___CANCEL_STAY_OF_BOOKING);
-		createEOperation(iBookingsEClass, IBOOKINGS___ADD_BOOKED_STAY_TO_BOOKING);
-		createEOperation(iBookingsEClass, IBOOKINGS___CHANGE_NBR_GUESTS_OF_BOOKING);
+		createEOperation(iBookingsEClass, IBOOKINGS___MAKE_BOOKING__ELIST_STRING_ELIST_ELIST_STRING_STRING_INT_INT_STRING_STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___SEARCH_BOOKINGS__STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___GET_BOOKED_STAYS_OF_BOOKING__STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___GET_CUSTOMER_OF_BOOKING__STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___GET_NBR_GUEST_OF_BOOKING__STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___CANCEL_BOOKING__STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___CANCEL_STAY_OF_BOOKING__STRING_STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___ADD_BOOKED_STAY_TO_BOOKING__STRING_STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___CHANGE_NBR_GUESTS_OF_BOOKING__STRING_INT);
 		createEOperation(iBookingsEClass, IBOOKINGS___GET_ALL_BOOKINGS);
-		createEOperation(iBookingsEClass, IBOOKINGS___GET_ALL_BOOKINGS_WITHIN_PERIOD);
-		createEOperation(iBookingsEClass, IBOOKINGS___GET_ALL_BOOKINGS_WITH_STAYS_IN_PERIOD);
-		createEOperation(iBookingsEClass, IBOOKINGS___SEARCH_BOOKINGS_MADE_IN_PERIOD);
-		createEOperation(iBookingsEClass, IBOOKINGS___SEARCH_BOOKINGS_WITH_STAYS_IN_PERIOD);
-		createEOperation(iBookingsEClass, IBOOKINGS___SEARCH_FOR_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE);
-		createEOperation(iBookingsEClass, IBOOKINGS___GET_AVAILABLE_BOOKABLES_IN_PERIOD);
-		createEOperation(iBookingsEClass, IBOOKINGS___ADD_BOOKING_REQUEST);
-		createEOperation(iBookingsEClass, IBOOKINGS___REMOVE_BOOKING_REQUEST);
-		createEOperation(iBookingsEClass, IBOOKINGS___GET_BOOKING_REQUESTS);
-		createEOperation(iBookingsEClass, IBOOKINGS___PAY_BOOKING_BILLS);
-		createEOperation(iBookingsEClass, IBOOKINGS___PAY_STAY_BILLS);
+		createEOperation(iBookingsEClass, IBOOKINGS___GET_ALL_BOOKINGS_WITHIN_PERIOD__DATE_DATE);
+		createEOperation(iBookingsEClass, IBOOKINGS___GET_ALL_BOOKINGS_WITH_STAYS_IN_PERIOD__DATE_DATE);
+		createEOperation(iBookingsEClass, IBOOKINGS___SEARCH_BOOKINGS_MADE_IN_PERIOD__STRING_DATE_DATE);
+		createEOperation(iBookingsEClass, IBOOKINGS___SEARCH_BOOKINGS_WITH_STAYS_IN_PERIOD__STRING_DATE_DATE);
+		createEOperation(iBookingsEClass, IBOOKINGS___SEARCH_FOR_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE_STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___GET_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE);
+		createEOperation(iBookingsEClass, IBOOKINGS___ADD_BOOKING_REQUEST__STRING_STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___REMOVE_BOOKING_REQUEST__STRING_STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___GET_BOOKING_REQUESTS__STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___PAY_BOOKING_BILLS__STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___PAY_STAY_BILLS__STRING_STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___SEARCH_FOR_AVAILABLE_HOTEL_ROOMS_IN_PERIOD__DATE_DATE_STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___SEARCH_FOR_AVAILABLE_HOSTEL_BEDS_IN_PERIOD__DATE_DATE_STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___SEARCH_FOR_AVAILABLE_CONFERENCE_ROOMS_IN_PERIOD__DATE_DATE_STRING);
+		createEOperation(iBookingsEClass, IBOOKINGS___GET_AVAILABLE_HOTEL_ROOMS_IN_PERIOD__DATE_DATE);
+		createEOperation(iBookingsEClass, IBOOKINGS___GET_AVAILABLE_CONFERENCE_ROOMS_IN_PERIOD__DATE_DATE);
+		createEOperation(iBookingsEClass, IBOOKINGS___GET_AVAILABLE_HOSTEL_BEDS_IN_PERIOD__DATE_DATE);
 	}
 
 	/**
@@ -676,49 +736,118 @@ public class BookingsPackageImpl extends EPackageImpl implements BookingsPackage
 
 		initEClass(iBookingsEClass, IBookings.class, "IBookings", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getIBookings__MakeBooking(), null, "makeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getIBookings__MakeBooking__EList_String_EList_EList_String_String_int_int_String_String(), null, "makeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookables", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "customerID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "guests", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "requests", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__SearchBookings(), null, "searchBookings", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookings__SearchBookings__String(), theTypesPackage.getString(), "searchBookings", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__GetBookedStaysOfBooking(), null, "getBookedStaysOfBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookings__GetBookedStaysOfBooking__String(), theTypesPackage.getString(), "getBookedStaysOfBooking", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__GetCustomerOfBooking(), null, "getCustomerOfBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookings__GetCustomerOfBooking__String(), theTypesPackage.getString(), "getCustomerOfBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__GetNbrGuestOfBooking(), null, "getNbrGuestOfBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookings__GetNbrGuestOfBooking__String(), theTypesPackage.getInteger(), "getNbrGuestOfBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__CancelBooking(), null, "cancelBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookings__CancelBooking__String(), null, "cancelBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__CancelStayOfBooking(), null, "cancelStayOfBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookings__CancelStayOfBooking__String_String(), null, "cancelStayOfBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__AddBookedStayToBooking(), null, "addBookedStayToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookings__AddBookedStayToBooking__String_String(), null, "addBookedStayToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__ChangeNbrGuestsOfBooking(), null, "changeNbrGuestsOfBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookings__ChangeNbrGuestsOfBooking__String_int(), null, "changeNbrGuestsOfBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "nbrGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__GetAllBookings(), null, "getAllBookings", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIBookings__GetAllBookings(), theTypesPackage.getString(), "getAllBookings", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__GetAllBookingsWithinPeriod(), null, "getAllBookingsWithinPeriod", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIBookings__GetAllBookingsWithStaysInPeriod(), null, "getAllBookingsWithStaysInPeriod", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIBookings__SearchBookingsMadeInPeriod(), null, "searchBookingsMadeInPeriod", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIBookings__SearchBookingsWithStaysInPeriod(), null, "searchBookingsWithStaysInPeriod", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		EOperation op = initEOperation(getIBookings__SearchForAvailableBookablesInPeriod__Date_Date(), null, "searchForAvailableBookablesInPeriod", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookings__GetAllBookingsWithinPeriod__Date_Date(), theTypesPackage.getString(), "getAllBookingsWithinPeriod", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__GetAvailableBookablesInPeriod(), null, "getAvailableBookablesInPeriod", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookings__GetAllBookingsWithStaysInPeriod__Date_Date(), theTypesPackage.getString(), "getAllBookingsWithStaysInPeriod", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__AddBookingRequest(), null, "addBookingRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookings__SearchBookingsMadeInPeriod__String_Date_Date(), theTypesPackage.getString(), "searchBookingsMadeInPeriod", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__RemoveBookingRequest(), null, "removeBookingRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookings__SearchBookingsWithStaysInPeriod__String_Date_Date(), theTypesPackage.getString(), "searchBookingsWithStaysInPeriod", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__GetBookingRequests(), null, "getBookingRequests", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookings__SearchForAvailableBookablesInPeriod__Date_Date_String(), theTypesPackage.getString(), "searchForAvailableBookablesInPeriod", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__PayBookingBills(), null, "payBookingBills", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookings__GetAvailableBookablesInPeriod__Date_Date(), theTypesPackage.getString(), "getAvailableBookablesInPeriod", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBookings__PayStayBills(), null, "payStayBills", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookings__AddBookingRequest__String_String(), null, "addBookingRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "requestID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookings__RemoveBookingRequest__String_String(), null, "removeBookingRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "requestID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookings__GetBookingRequests__String(), theTypesPackage.getString(), "getBookingRequests", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookings__PayBookingBills__String(), null, "payBookingBills", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookings__PayStayBills__String_String(), null, "payStayBills", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookings__SearchForAvailableHotelRoomsInPeriod__Date_Date_String(), theTypesPackage.getString(), "searchForAvailableHotelRoomsInPeriod", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookings__SearchForAvailableHostelBedsInPeriod__Date_Date_String(), theTypesPackage.getString(), "searchForAvailableHostelBedsInPeriod", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookings__SearchForAvailableConferenceRoomsInPeriod__Date_Date_String(), theTypesPackage.getString(), "searchForAvailableConferenceRoomsInPeriod", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookings__GetAvailableHotelRoomsInPeriod__Date_Date(), theTypesPackage.getString(), "getAvailableHotelRoomsInPeriod", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookings__GetAvailableConferenceRoomsInPeriod__Date_Date(), theTypesPackage.getString(), "getAvailableConferenceRoomsInPeriod", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookings__GetAvailableHostelBedsInPeriod__Date_Date(), theTypesPackage.getString(), "getAvailableHostelBedsInPeriod", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

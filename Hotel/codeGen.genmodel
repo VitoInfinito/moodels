@@ -508,30 +508,118 @@
             propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Bookings/BookingsManager/iBills"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Bookings/IBookings">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/makeBooking"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/searchBookings"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getBookedStaysOfBooking"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getCustomerOfBooking"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getNbrGuestOfBooking"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/cancelBooking"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/cancelStayOfBooking"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/addBookedStayToBooking"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/changeNbrGuestsOfBooking"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/makeBooking">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/makeBooking/bookables"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/makeBooking/customerID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/makeBooking/guests"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/makeBooking/requests"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/makeBooking/ccNumber"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/makeBooking/ccv"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/makeBooking/expiryMonth"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/makeBooking/expiryYear"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/makeBooking/firstName"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/makeBooking/lastName"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/searchBookings">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchBookings/keyword"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getBookedStaysOfBooking">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getBookedStaysOfBooking/bookingID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getCustomerOfBooking">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getCustomerOfBooking/bookingID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getNbrGuestOfBooking">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getNbrGuestOfBooking/bookingID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/cancelBooking">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/cancelBooking/bookingID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/cancelStayOfBooking">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/cancelStayOfBooking/bookingID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/cancelStayOfBooking/stayID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/addBookedStayToBooking">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/addBookedStayToBooking/bookingID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/addBookedStayToBooking/stayID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/changeNbrGuestsOfBooking">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/changeNbrGuestsOfBooking/bookingID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/changeNbrGuestsOfBooking/nbrGuests"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getAllBookings"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getAllBookingsWithinPeriod"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getAllBookingsWithStaysInPeriod"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/searchBookingsMadeInPeriod"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/searchBookingsWithStaysInPeriod"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getAllBookingsWithinPeriod">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getAllBookingsWithinPeriod/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getAllBookingsWithinPeriod/to"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getAllBookingsWithStaysInPeriod">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getAllBookingsWithStaysInPeriod/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getAllBookingsWithStaysInPeriod/to"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/searchBookingsMadeInPeriod">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchBookingsMadeInPeriod/keyword"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchBookingsMadeInPeriod/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchBookingsMadeInPeriod/to"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/searchBookingsWithStaysInPeriod">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchBookingsWithStaysInPeriod/keyword"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchBookingsWithStaysInPeriod/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchBookingsWithStaysInPeriod/to"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/searchForAvailableBookablesInPeriod">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchForAvailableBookablesInPeriod/from"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchForAvailableBookablesInPeriod/to"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchForAvailableBookablesInPeriod/keyword"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getAvailableBookablesInPeriod"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/addBookingRequest"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/removeBookingRequest"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getBookingRequests"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/payBookingBills"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/payStayBills"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getAvailableBookablesInPeriod">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getAvailableBookablesInPeriod/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getAvailableBookablesInPeriod/to"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/addBookingRequest">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/addBookingRequest/bookingID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/addBookingRequest/requestID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/removeBookingRequest">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/removeBookingRequest/bookingID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/removeBookingRequest/requestID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getBookingRequests">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getBookingRequests/bookingID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/payBookingBills">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/payBookingBills/bookingID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/payStayBills">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/payStayBills/bookingID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/payStayBills/stayID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/searchForAvailableHotelRoomsInPeriod">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchForAvailableHotelRoomsInPeriod/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchForAvailableHotelRoomsInPeriod/to"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchForAvailableHotelRoomsInPeriod/keyword"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/searchForAvailableHostelBedsInPeriod">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchForAvailableHostelBedsInPeriod/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchForAvailableHostelBedsInPeriod/to"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchForAvailableHostelBedsInPeriod/keyword"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/searchForAvailableConferenceRoomsInPeriod">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchForAvailableConferenceRoomsInPeriod/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchForAvailableConferenceRoomsInPeriod/to"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/searchForAvailableConferenceRoomsInPeriod/keyword"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getAvailableHotelRoomsInPeriod">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getAvailableHotelRoomsInPeriod/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getAvailableHotelRoomsInPeriod/to"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getAvailableConferenceRoomsInPeriod">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getAvailableConferenceRoomsInPeriod/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getAvailableConferenceRoomsInPeriod/to"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/IBookings/getAvailableHostelBedsInPeriod">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getAvailableHostelBedsInPeriod/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/IBookings/getAvailableHostelBedsInPeriod/to"/>
+        </genOperations>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Customers" basePackage="Classes"
@@ -970,7 +1058,9 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/setFeedbackIsNoted/id"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/setFeedbackIsNoted/status"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/searchFeedback"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/searchFeedback">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/searchFeedback/keyword"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/addFeedback">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/addFeedback/id"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/addFeedback/desc"/>
