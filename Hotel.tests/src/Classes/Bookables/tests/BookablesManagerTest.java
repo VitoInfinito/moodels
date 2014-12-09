@@ -40,9 +40,9 @@ import junit.textui.TestRunner;
  *   <li>{@link Classes.Bookables.IBookablesManage#changeConferenceRoomCategory(java.lang.String, Classes.Bookables.ConferenceRoomCategory) <em>Change Conference Room Category</em>}</li>
  *   <li>{@link Classes.Bookables.IBookablesManage#changeBookableBasePrice(java.lang.String, double) <em>Change Bookable Base Price</em>}</li>
  *   <li>{@link Classes.Bookables.IBookablesManage#changeBookableDescription(java.lang.String, java.lang.String) <em>Change Bookable Description</em>}</li>
- *   <li>{@link Classes.Bookables.IBookablesManage#addHotelRoom(double, java.lang.String, int, java.lang.String, Classes.Bookables.HotelRoomCategory, int) <em>Add Hotel Room</em>}</li>
- *   <li>{@link Classes.Bookables.IBookablesManage#addHostelBed(double, java.lang.String, java.lang.String) <em>Add Hostel Bed</em>}</li>
- *   <li>{@link Classes.Bookables.IBookablesManage#addConferenceRoom(double, java.lang.String, int, java.lang.String, Classes.Bookables.ConferenceRoomCategory, int) <em>Add Conference Room</em>}</li>
+ *   <li>{@link Classes.Bookables.IBookablesManage#addHotelRoom(java.lang.String, double, java.lang.String, int, java.lang.String, Classes.Bookables.HotelRoomCategory, int) <em>Add Hotel Room</em>}</li>
+ *   <li>{@link Classes.Bookables.IBookablesManage#addHostelBed(java.lang.String, double, java.lang.String, java.lang.String) <em>Add Hostel Bed</em>}</li>
+ *   <li>{@link Classes.Bookables.IBookablesManage#addConferenceRoom(java.lang.String, double, java.lang.String, int, java.lang.String, Classes.Bookables.ConferenceRoomCategory, int) <em>Add Conference Room</em>}</li>
  *   <li>{@link Classes.Bookables.IBookablesManage#changeHotelRoomNumberBeds(java.lang.String, int) <em>Change Hotel Room Number Beds</em>}</li>
  *   <li>{@link Classes.Bookables.IBookablesManage#changeConferenceRoomCapacity(java.lang.String, int) <em>Change Conference Room Capacity</em>}</li>
  * </ul>
@@ -433,39 +433,39 @@ public class BookablesManagerTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Bookables.IBookablesManage#addHotelRoom(double, java.lang.String, int, java.lang.String, Classes.Bookables.HotelRoomCategory, int) <em>Add Hotel Room</em>}' operation.
+	 * Tests the '{@link Classes.Bookables.IBookablesManage#addHotelRoom(java.lang.String, double, java.lang.String, int, java.lang.String, Classes.Bookables.HotelRoomCategory, int) <em>Add Hotel Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Bookables.IBookablesManage#addHotelRoom(double, java.lang.String, int, java.lang.String, Classes.Bookables.HotelRoomCategory, int)
+	 * @see Classes.Bookables.IBookablesManage#addHotelRoom(java.lang.String, double, java.lang.String, int, java.lang.String, Classes.Bookables.HotelRoomCategory, int)
 	 * @generated
 	 */
-	public void testAddHotelRoom__double_String_int_String_HotelRoomCategory_int() {
+	public void testAddHotelRoom__String_double_String_int_String_HotelRoomCategory_int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Bookables.IBookablesManage#addHostelBed(double, java.lang.String, java.lang.String) <em>Add Hostel Bed</em>}' operation.
+	 * Tests the '{@link Classes.Bookables.IBookablesManage#addHostelBed(java.lang.String, double, java.lang.String, java.lang.String) <em>Add Hostel Bed</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Bookables.IBookablesManage#addHostelBed(double, java.lang.String, java.lang.String)
+	 * @see Classes.Bookables.IBookablesManage#addHostelBed(java.lang.String, double, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testAddHostelBed__double_String_String() {
+	public void testAddHostelBed__String_double_String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Bookables.IBookablesManage#addConferenceRoom(double, java.lang.String, int, java.lang.String, Classes.Bookables.ConferenceRoomCategory, int) <em>Add Conference Room</em>}' operation.
+	 * Tests the '{@link Classes.Bookables.IBookablesManage#addConferenceRoom(java.lang.String, double, java.lang.String, int, java.lang.String, Classes.Bookables.ConferenceRoomCategory, int) <em>Add Conference Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Bookables.IBookablesManage#addConferenceRoom(double, java.lang.String, int, java.lang.String, Classes.Bookables.ConferenceRoomCategory, int)
+	 * @see Classes.Bookables.IBookablesManage#addConferenceRoom(java.lang.String, double, java.lang.String, int, java.lang.String, Classes.Bookables.ConferenceRoomCategory, int)
 	 * @generated
 	 */
-	public void testAddConferenceRoom__double_String_int_String_ConferenceRoomCategory_int() {
+	public void testAddConferenceRoom__String_double_String_int_String_ConferenceRoomCategory_int() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

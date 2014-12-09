@@ -13,12 +13,12 @@ import junit.framework.TestCase;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link Classes.Accounts.IManageAccounts#addAccount(java.lang.String, java.lang.String) <em>Add Account</em>}</li>
+ *   <li>{@link Classes.Accounts.IManageAccounts#addAccount(java.lang.String, java.lang.String, Classes.Accounts.AccountType) <em>Add Account</em>}</li>
  *   <li>{@link Classes.Accounts.IManageAccounts#deleteAccount(java.lang.String) <em>Delete Account</em>}</li>
  *   <li>{@link Classes.Accounts.IManageAccounts#renameAccount(java.lang.String, java.lang.String) <em>Rename Account</em>}</li>
  *   <li>{@link Classes.Accounts.IManageAccounts#changePassword(java.lang.String, java.lang.String) <em>Change Password</em>}</li>
- *   <li>{@link Classes.Accounts.IManageAccounts#getAccountPassword() <em>Get Account Password</em>}</li>
- *   <li>{@link Classes.Accounts.IManageAccounts#getAccounts() <em>Get Accounts</em>}</li>
+ *   <li>{@link Classes.Accounts.IManageAccounts#getAccountPassword(java.lang.String) <em>Get Account Password</em>}</li>
+ *   <li>{@link Classes.Accounts.IManageAccounts#getAccount(java.lang.String) <em>Get Account</em>}</li>
  *   <li>{@link Classes.Accounts.IManageAccounts#searchAccounts() <em>Search Accounts</em>}</li>
  * </ul>
  * </p>
@@ -65,13 +65,13 @@ public abstract class IManageAccountsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Accounts.IManageAccounts#addAccount(java.lang.String, java.lang.String) <em>Add Account</em>}' operation.
+	 * Tests the '{@link Classes.Accounts.IManageAccounts#addAccount(java.lang.String, java.lang.String, Classes.Accounts.AccountType) <em>Add Account</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Accounts.IManageAccounts#addAccount(java.lang.String, java.lang.String)
+	 * @see Classes.Accounts.IManageAccounts#addAccount(java.lang.String, java.lang.String, Classes.Accounts.AccountType)
 	 * @generated
 	 */
-	public void testAddAccount__String_String() {
+	public void testAddAccount__String_String_AccountType() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -117,26 +117,26 @@ public abstract class IManageAccountsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Accounts.IManageAccounts#getAccountPassword() <em>Get Account Password</em>}' operation.
+	 * Tests the '{@link Classes.Accounts.IManageAccounts#getAccountPassword(java.lang.String) <em>Get Account Password</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Accounts.IManageAccounts#getAccountPassword()
+	 * @see Classes.Accounts.IManageAccounts#getAccountPassword(java.lang.String)
 	 * @generated
 	 */
-	public void testGetAccountPassword() {
+	public void testGetAccountPassword__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Accounts.IManageAccounts#getAccounts() <em>Get Accounts</em>}' operation.
+	 * Tests the '{@link Classes.Accounts.IManageAccounts#getAccount(java.lang.String) <em>Get Account</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Accounts.IManageAccounts#getAccounts()
+	 * @see Classes.Accounts.IManageAccounts#getAccount(java.lang.String)
 	 * @generated
 	 */
-	public void testGetAccounts() {
+	public void testGetAccount__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

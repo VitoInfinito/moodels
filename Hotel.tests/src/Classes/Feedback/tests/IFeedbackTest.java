@@ -14,14 +14,14 @@ import junit.framework.TestCase;
  * The following operations are tested:
  * <ul>
  *   <li>{@link Classes.Feedback.IFeedback#getAllFeedbackIDs() <em>Get All Feedback IDs</em>}</li>
- *   <li>{@link Classes.Feedback.IFeedback#getFeedbackDescription() <em>Get Feedback Description</em>}</li>
- *   <li>{@link Classes.Feedback.IFeedback#getFeedbackIsResolved() <em>Get Feedback Is Resolved</em>}</li>
- *   <li>{@link Classes.Feedback.IFeedback#getFeedbackIsNoted() <em>Get Feedback Is Noted</em>}</li>
- *   <li>{@link Classes.Feedback.IFeedback#setFeedbackDescription() <em>Set Feedback Description</em>}</li>
- *   <li>{@link Classes.Feedback.IFeedback#setFeedbackIsResolved() <em>Set Feedback Is Resolved</em>}</li>
- *   <li>{@link Classes.Feedback.IFeedback#setFeedbackIsNoted() <em>Set Feedback Is Noted</em>}</li>
+ *   <li>{@link Classes.Feedback.IFeedback#getFeedbackDescription(java.lang.String) <em>Get Feedback Description</em>}</li>
+ *   <li>{@link Classes.Feedback.IFeedback#getFeedbackIsResolved(java.lang.String) <em>Get Feedback Is Resolved</em>}</li>
+ *   <li>{@link Classes.Feedback.IFeedback#getFeedbackIsNoted(java.lang.String) <em>Get Feedback Is Noted</em>}</li>
+ *   <li>{@link Classes.Feedback.IFeedback#setFeedbackDescription(java.lang.String, java.lang.String) <em>Set Feedback Description</em>}</li>
+ *   <li>{@link Classes.Feedback.IFeedback#setFeedbackIsResolved(java.lang.String, boolean) <em>Set Feedback Is Resolved</em>}</li>
+ *   <li>{@link Classes.Feedback.IFeedback#setFeedbackIsNoted(java.lang.String, boolean) <em>Set Feedback Is Noted</em>}</li>
  *   <li>{@link Classes.Feedback.IFeedback#searchFeedback() <em>Search Feedback</em>}</li>
- *   <li>{@link Classes.Feedback.IFeedback#addFeedback() <em>Add Feedback</em>}</li>
+ *   <li>{@link Classes.Feedback.IFeedback#addFeedback(java.lang.String, java.lang.String) <em>Add Feedback</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -80,78 +80,78 @@ public abstract class IFeedbackTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Feedback.IFeedback#getFeedbackDescription() <em>Get Feedback Description</em>}' operation.
+	 * Tests the '{@link Classes.Feedback.IFeedback#getFeedbackDescription(java.lang.String) <em>Get Feedback Description</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Feedback.IFeedback#getFeedbackDescription()
+	 * @see Classes.Feedback.IFeedback#getFeedbackDescription(java.lang.String)
 	 * @generated
 	 */
-	public void testGetFeedbackDescription() {
+	public void testGetFeedbackDescription__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Feedback.IFeedback#getFeedbackIsResolved() <em>Get Feedback Is Resolved</em>}' operation.
+	 * Tests the '{@link Classes.Feedback.IFeedback#getFeedbackIsResolved(java.lang.String) <em>Get Feedback Is Resolved</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Feedback.IFeedback#getFeedbackIsResolved()
+	 * @see Classes.Feedback.IFeedback#getFeedbackIsResolved(java.lang.String)
 	 * @generated
 	 */
-	public void testGetFeedbackIsResolved() {
+	public void testGetFeedbackIsResolved__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Feedback.IFeedback#getFeedbackIsNoted() <em>Get Feedback Is Noted</em>}' operation.
+	 * Tests the '{@link Classes.Feedback.IFeedback#getFeedbackIsNoted(java.lang.String) <em>Get Feedback Is Noted</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Feedback.IFeedback#getFeedbackIsNoted()
+	 * @see Classes.Feedback.IFeedback#getFeedbackIsNoted(java.lang.String)
 	 * @generated
 	 */
-	public void testGetFeedbackIsNoted() {
+	public void testGetFeedbackIsNoted__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Feedback.IFeedback#setFeedbackDescription() <em>Set Feedback Description</em>}' operation.
+	 * Tests the '{@link Classes.Feedback.IFeedback#setFeedbackDescription(java.lang.String, java.lang.String) <em>Set Feedback Description</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Feedback.IFeedback#setFeedbackDescription()
+	 * @see Classes.Feedback.IFeedback#setFeedbackDescription(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testSetFeedbackDescription() {
+	public void testSetFeedbackDescription__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Feedback.IFeedback#setFeedbackIsResolved() <em>Set Feedback Is Resolved</em>}' operation.
+	 * Tests the '{@link Classes.Feedback.IFeedback#setFeedbackIsResolved(java.lang.String, boolean) <em>Set Feedback Is Resolved</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Feedback.IFeedback#setFeedbackIsResolved()
+	 * @see Classes.Feedback.IFeedback#setFeedbackIsResolved(java.lang.String, boolean)
 	 * @generated
 	 */
-	public void testSetFeedbackIsResolved() {
+	public void testSetFeedbackIsResolved__String_boolean() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Feedback.IFeedback#setFeedbackIsNoted() <em>Set Feedback Is Noted</em>}' operation.
+	 * Tests the '{@link Classes.Feedback.IFeedback#setFeedbackIsNoted(java.lang.String, boolean) <em>Set Feedback Is Noted</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Feedback.IFeedback#setFeedbackIsNoted()
+	 * @see Classes.Feedback.IFeedback#setFeedbackIsNoted(java.lang.String, boolean)
 	 * @generated
 	 */
-	public void testSetFeedbackIsNoted() {
+	public void testSetFeedbackIsNoted__String_boolean() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -171,13 +171,13 @@ public abstract class IFeedbackTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Feedback.IFeedback#addFeedback() <em>Add Feedback</em>}' operation.
+	 * Tests the '{@link Classes.Feedback.IFeedback#addFeedback(java.lang.String, java.lang.String) <em>Add Feedback</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Feedback.IFeedback#addFeedback()
+	 * @see Classes.Feedback.IFeedback#addFeedback(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testAddFeedback() {
+	public void testAddFeedback__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

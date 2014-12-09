@@ -17,14 +17,14 @@ import junit.textui.TestRunner;
  * The following operations are tested:
  * <ul>
  *   <li>{@link Classes.Requests.IRequests#getRequestDescription(java.lang.String) <em>Get Request Description</em>}</li>
- *   <li>{@link Classes.Requests.IRequests#hasRequestBeenResolved(boolean) <em>Has Request Been Resolved</em>}</li>
- *   <li>{@link Classes.Requests.IRequests#setRequestResolved() <em>Set Request Resolved</em>}</li>
+ *   <li>{@link Classes.Requests.IRequests#hasRequestBeenResolved(java.lang.String) <em>Has Request Been Resolved</em>}</li>
+ *   <li>{@link Classes.Requests.IRequests#setRequestResolved(java.lang.String) <em>Set Request Resolved</em>}</li>
  *   <li>{@link Classes.Requests.IRequests#deleteRequest(java.lang.String) <em>Delete Request</em>}</li>
- *   <li>{@link Classes.Requests.IRequests#changeRequestDesc(java.lang.String) <em>Change Request Desc</em>}</li>
- *   <li>{@link Classes.Requests.IRequests#searchRequests(java.lang.String, org.eclipse.emf.common.util.EList) <em>Search Requests</em>}</li>
+ *   <li>{@link Classes.Requests.IRequests#changeRequestDesc(java.lang.String, java.lang.String) <em>Change Request Desc</em>}</li>
+ *   <li>{@link Classes.Requests.IRequests#searchRequests(java.lang.String) <em>Search Requests</em>}</li>
  *   <li>{@link Classes.Requests.IRequests#getAllRequestIDs() <em>Get All Request IDs</em>}</li>
- *   <li>{@link Classes.Requests.IRequests#setRequestDescription() <em>Set Request Description</em>}</li>
- *   <li>{@link Classes.Requests.IRequests#addRequest() <em>Add Request</em>}</li>
+ *   <li>{@link Classes.Requests.IRequests#setRequestDescription(java.lang.String, java.lang.String) <em>Set Request Description</em>}</li>
+ *   <li>{@link Classes.Requests.IRequests#addRequest(java.lang.String, java.lang.String) <em>Add Request</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -114,26 +114,26 @@ public class RequestsManagerTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Requests.IRequests#hasRequestBeenResolved(boolean) <em>Has Request Been Resolved</em>}' operation.
+	 * Tests the '{@link Classes.Requests.IRequests#hasRequestBeenResolved(java.lang.String) <em>Has Request Been Resolved</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Requests.IRequests#hasRequestBeenResolved(boolean)
+	 * @see Classes.Requests.IRequests#hasRequestBeenResolved(java.lang.String)
 	 * @generated
 	 */
-	public void testHasRequestBeenResolved__boolean() {
+	public void testHasRequestBeenResolved__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Requests.IRequests#setRequestResolved() <em>Set Request Resolved</em>}' operation.
+	 * Tests the '{@link Classes.Requests.IRequests#setRequestResolved(java.lang.String) <em>Set Request Resolved</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Requests.IRequests#setRequestResolved()
+	 * @see Classes.Requests.IRequests#setRequestResolved(java.lang.String)
 	 * @generated
 	 */
-	public void testSetRequestResolved() {
+	public void testSetRequestResolved__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -153,26 +153,26 @@ public class RequestsManagerTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Requests.IRequests#changeRequestDesc(java.lang.String) <em>Change Request Desc</em>}' operation.
+	 * Tests the '{@link Classes.Requests.IRequests#changeRequestDesc(java.lang.String, java.lang.String) <em>Change Request Desc</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Requests.IRequests#changeRequestDesc(java.lang.String)
+	 * @see Classes.Requests.IRequests#changeRequestDesc(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testChangeRequestDesc__String() {
+	public void testChangeRequestDesc__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Requests.IRequests#searchRequests(java.lang.String, org.eclipse.emf.common.util.EList) <em>Search Requests</em>}' operation.
+	 * Tests the '{@link Classes.Requests.IRequests#searchRequests(java.lang.String) <em>Search Requests</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Requests.IRequests#searchRequests(java.lang.String, org.eclipse.emf.common.util.EList)
+	 * @see Classes.Requests.IRequests#searchRequests(java.lang.String)
 	 * @generated
 	 */
-	public void testSearchRequests__String_EList() {
+	public void testSearchRequests__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -192,26 +192,26 @@ public class RequestsManagerTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Requests.IRequests#setRequestDescription() <em>Set Request Description</em>}' operation.
+	 * Tests the '{@link Classes.Requests.IRequests#setRequestDescription(java.lang.String, java.lang.String) <em>Set Request Description</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Requests.IRequests#setRequestDescription()
+	 * @see Classes.Requests.IRequests#setRequestDescription(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testSetRequestDescription() {
+	public void testSetRequestDescription__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Requests.IRequests#addRequest() <em>Add Request</em>}' operation.
+	 * Tests the '{@link Classes.Requests.IRequests#addRequest(java.lang.String, java.lang.String) <em>Add Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Requests.IRequests#addRequest()
+	 * @see Classes.Requests.IRequests#addRequest(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testAddRequest() {
+	public void testAddRequest__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
