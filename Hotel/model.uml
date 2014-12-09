@@ -627,16 +627,16 @@ Customer Service representative inherits the uses of Staff</body>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_4QrI0HbrEeSWb_3hJA4u-g" name="price" visibility="private">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_6KlQwHbrEeSWb_3hJA4u-g" name="expense" visibility="private">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_7zu_4HbrEeSWb_3hJA4u-g" name="stock" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_nSySEHbwEeSWb_3hJA4u-g" name="id" visibility="private">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedAttribute>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_DoVkoHbsEeSWb_3hJA4u-g" name="getName" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_FIYbEHbsEeSWb_3hJA4u-g" name="setName" visibility="package"/>
@@ -722,8 +722,8 @@ Customer Service representative inherits the uses of Staff</body>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SnkBYncKEeS8a9tzu_DvHw" value="*"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_fYG7sHcKEeS8a9tzu_DvHw" name="restaurantTable" type="_WRKlUHcKEeS8a9tzu_DvHw" association="_fYG7s3cKEeS8a9tzu_DvHw">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fYG7sXcKEeS8a9tzu_DvHw" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fYG7sncKEeS8a9tzu_DvHw" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fYG7sXcKEeS8a9tzu_DvHw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fYG7sncKEeS8a9tzu_DvHw" value="*"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_EtI4cHcLEeS8a9tzu_DvHw" name="menu" type="_CsHb4HcLEeS8a9tzu_DvHw" association="_EtO_EHcLEeS8a9tzu_DvHw">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EtI4cXcLEeS8a9tzu_DvHw" value="1"/>
@@ -738,7 +738,7 @@ Customer Service representative inherits the uses of Staff</body>
           </nestedClassifier>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_NizuEHcKEeS8a9tzu_DvHw" name="Reservation" visibility="package">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_cPKfgHbjEeSwu4_phSkYgQ" name="id" visibility="private">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_6_8OoHbvEeSWb_3hJA4u-g" name="reservedBy" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -761,7 +761,7 @@ Customer Service representative inherits the uses of Staff</body>
           </nestedClassifier>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_WRKlUHcKEeS8a9tzu_DvHw" name="RestaurantTable" visibility="package">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_hQ3e0HbjEeSwu4_phSkYgQ" name="tableNumber" visibility="private">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_miSVIHbjEeSwu4_phSkYgQ" name="numberOfSeats" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>

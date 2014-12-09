@@ -8,6 +8,7 @@ import Classes.Restaurants.Restaurant;
 import Classes.Restaurants.RestaurantsManager;
 import Classes.Restaurants.RestaurantsPackage;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Date;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -29,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </ul>
  * </p>
  *
- * @generated NOT
+ * @generated
  */
 public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container implements RestaurantsManager {
 	/**
@@ -78,7 +79,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getReservationId() {
+	public EList<String> getRestaurantReservations(String restaurantID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -89,7 +90,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllReservationIds() {
+	public EList<String> getRestaurantTables(String restaurantID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -100,7 +101,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getEmptyTables() {
+	public int getRestaurantTableNumberOfSeats(String restaurantID, String tableNbr) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -111,7 +112,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getEmptySeats() {
+	public EList<String> getAvailableTables(Date to, Date from) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -122,7 +123,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getEmptyTablesWithNbrOfSeats() {
+	public String getReservationGuest(String restaurantID, String reservationID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -133,7 +134,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getReservationIdByGuestName() {
+	public String getRestaurantMenuName(String restaurantID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -144,7 +145,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getMenuInformation() {
+	public EList<String> getAllRestaurantNames() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -155,7 +156,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllRestaurantNames() {
+	public EList<String> searchRestaurants(String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -166,7 +167,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchRestaurants() {
+	public EList<String> searchRestaurantReservations(String restaurantID, String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -177,7 +178,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchRestaurantReservations() {
+	public EList<String> searchRestaurantTables(String restaurantID, String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -188,7 +189,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchRestaurantTables() {
+	public void makeReservation(String restaurantID, EList<String> tables, String guestID, Date to, Date from) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -199,7 +200,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getMenuName() {
+	public void cancelReservation(String restaurantID, String reservationID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -210,7 +211,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void makeReservation() {
+	public void changeReservedTables(String restaurantID, String reservationID, EList<String> tables) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -221,7 +222,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeReservation() {
+	public EList<String> getAvailableTablesByNbrGuests(Date to, Date from, int nbrGuests) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -232,7 +233,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeReservationTables() {
+	public EList<String> getRestaurantMenuItems(String restaurantID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -243,7 +244,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addRestaurant() {
+	public Date getReservationFromTime(String restaurantID, String reservationID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -254,7 +255,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeRestaurant() {
+	public Date getReservationToTime(String restaurantID, String reservationID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -265,7 +266,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addRestaurantTable() {
+	public void addRestaurant(String name) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -276,7 +277,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeRestaurantTable() {
+	public void removeRestaurant(String restaurantID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -287,7 +288,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeRestaurantName() {
+	public void addRestaurantTable(String restaurantID, int nbrSeats, String tableNbr) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -298,7 +299,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeTableInformation() {
+	public void removeRestaurantTable(String restaurantID, String tableNbr) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -309,7 +310,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addMenuItem() {
+	public void changeRestaurantName(String restaurantID, String name) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -320,7 +321,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeMenuItem() {
+	public void changeTableNumberOfSeats(String restaurantID, String tableNbr, int nbrSeats) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -331,7 +332,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeMenuItem() {
+	public void addMenuItem(String restaurantID, String itemID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -342,7 +343,29 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeMenuName() {
+	public void removeMenuItem(String restaurantID, String itemID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void changeMenuName(String restaurantID, String name) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void changeTableNumber(String restaurantID, String oldTableNbr, String newTableNbr) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -428,82 +451,75 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESERVATION_ID:
-				getReservationId();
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_ALL_RESERVATION_IDS:
-				getAllReservationIds();
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_EMPTY_TABLES:
-				getEmptyTables();
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_EMPTY_SEATS:
-				getEmptySeats();
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_EMPTY_TABLES_WITH_NBR_OF_SEATS:
-				getEmptyTablesWithNbrOfSeats();
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESERVATION_ID_BY_GUEST_NAME:
-				getReservationIdByGuestName();
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_MENU_INFORMATION:
-				getMenuInformation();
-				return null;
+			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESTAURANT_RESERVATIONS__STRING:
+				return getRestaurantReservations((String)arguments.get(0));
+			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESTAURANT_TABLES__STRING:
+				return getRestaurantTables((String)arguments.get(0));
+			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESTAURANT_TABLE_NUMBER_OF_SEATS__STRING_STRING:
+				return getRestaurantTableNumberOfSeats((String)arguments.get(0), (String)arguments.get(1));
+			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_AVAILABLE_TABLES__DATE_DATE:
+				return getAvailableTables((Date)arguments.get(0), (Date)arguments.get(1));
+			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESERVATION_GUEST__STRING_STRING:
+				return getReservationGuest((String)arguments.get(0), (String)arguments.get(1));
+			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESTAURANT_MENU_NAME__STRING:
+				return getRestaurantMenuName((String)arguments.get(0));
 			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_ALL_RESTAURANT_NAMES:
-				getAllRestaurantNames();
+				return getAllRestaurantNames();
+			case RestaurantsPackage.RESTAURANTS_MANAGER___SEARCH_RESTAURANTS__STRING:
+				return searchRestaurants((String)arguments.get(0));
+			case RestaurantsPackage.RESTAURANTS_MANAGER___SEARCH_RESTAURANT_RESERVATIONS__STRING_STRING:
+				return searchRestaurantReservations((String)arguments.get(0), (String)arguments.get(1));
+			case RestaurantsPackage.RESTAURANTS_MANAGER___SEARCH_RESTAURANT_TABLES__STRING_STRING:
+				return searchRestaurantTables((String)arguments.get(0), (String)arguments.get(1));
+			case RestaurantsPackage.RESTAURANTS_MANAGER___MAKE_RESERVATION__STRING_ELIST_STRING_DATE_DATE:
+				makeReservation((String)arguments.get(0), (EList<String>)arguments.get(1), (String)arguments.get(2), (Date)arguments.get(3), (Date)arguments.get(4));
 				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___SEARCH_RESTAURANTS:
-				searchRestaurants();
+			case RestaurantsPackage.RESTAURANTS_MANAGER___CANCEL_RESERVATION__STRING_STRING:
+				cancelReservation((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___SEARCH_RESTAURANT_RESERVATIONS:
-				searchRestaurantReservations();
+			case RestaurantsPackage.RESTAURANTS_MANAGER___CHANGE_RESERVED_TABLES__STRING_STRING_ELIST:
+				changeReservedTables((String)arguments.get(0), (String)arguments.get(1), (EList<String>)arguments.get(2));
 				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___SEARCH_RESTAURANT_TABLES:
-				searchRestaurantTables();
+			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_AVAILABLE_TABLES_BY_NBR_GUESTS__DATE_DATE_INT:
+				return getAvailableTablesByNbrGuests((Date)arguments.get(0), (Date)arguments.get(1), (Integer)arguments.get(2));
+			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESTAURANT_MENU_ITEMS__STRING:
+				return getRestaurantMenuItems((String)arguments.get(0));
+			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESERVATION_FROM_TIME__STRING_STRING:
+				return getReservationFromTime((String)arguments.get(0), (String)arguments.get(1));
+			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESERVATION_TO_TIME__STRING_STRING:
+				return getReservationToTime((String)arguments.get(0), (String)arguments.get(1));
+			case RestaurantsPackage.RESTAURANTS_MANAGER___ADD_RESTAURANT__STRING:
+				addRestaurant((String)arguments.get(0));
 				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_MENU_NAME:
-				getMenuName();
+			case RestaurantsPackage.RESTAURANTS_MANAGER___REMOVE_RESTAURANT__STRING:
+				removeRestaurant((String)arguments.get(0));
 				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___MAKE_RESERVATION:
-				makeReservation();
+			case RestaurantsPackage.RESTAURANTS_MANAGER___ADD_RESTAURANT_TABLE__STRING_INT_STRING:
+				addRestaurantTable((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2));
 				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___REMOVE_RESERVATION:
-				removeReservation();
+			case RestaurantsPackage.RESTAURANTS_MANAGER___REMOVE_RESTAURANT_TABLE__STRING_STRING:
+				removeRestaurantTable((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___CHANGE_RESERVATION_TABLES:
-				changeReservationTables();
+			case RestaurantsPackage.RESTAURANTS_MANAGER___CHANGE_RESTAURANT_NAME__STRING_STRING:
+				changeRestaurantName((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___ADD_RESTAURANT:
-				addRestaurant();
+			case RestaurantsPackage.RESTAURANTS_MANAGER___CHANGE_TABLE_NUMBER_OF_SEATS__STRING_STRING_INT:
+				changeTableNumberOfSeats((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___REMOVE_RESTAURANT:
-				removeRestaurant();
+			case RestaurantsPackage.RESTAURANTS_MANAGER___ADD_MENU_ITEM__STRING_STRING:
+				addMenuItem((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___ADD_RESTAURANT_TABLE:
-				addRestaurantTable();
+			case RestaurantsPackage.RESTAURANTS_MANAGER___REMOVE_MENU_ITEM__STRING_STRING:
+				removeMenuItem((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___REMOVE_RESTAURANT_TABLE:
-				removeRestaurantTable();
+			case RestaurantsPackage.RESTAURANTS_MANAGER___CHANGE_MENU_NAME__STRING_STRING:
+				changeMenuName((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___CHANGE_RESTAURANT_NAME:
-				changeRestaurantName();
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___CHANGE_TABLE_INFORMATION:
-				changeTableInformation();
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___ADD_MENU_ITEM:
-				addMenuItem();
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___REMOVE_MENU_ITEM:
-				removeMenuItem();
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___CHANGE_MENU_ITEM:
-				changeMenuItem();
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___CHANGE_MENU_NAME:
-				changeMenuName();
+			case RestaurantsPackage.RESTAURANTS_MANAGER___CHANGE_TABLE_NUMBER__STRING_STRING_STRING:
+				changeTableNumber((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

@@ -31,12 +31,12 @@ public interface RestaurantTable extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Table Number</em>' attribute.
-	 * @see #setTableNumber(int)
+	 * @see #setTableNumber(String)
 	 * @see Classes.Restaurants.RestaurantsPackage#getRestaurantTable_TableNumber()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	int getTableNumber();
+	String getTableNumber();
 
 	/**
 	 * Sets the value of the '{@link Classes.Restaurants.RestaurantTable#getTableNumber <em>Table Number</em>}' attribute.
@@ -46,7 +46,7 @@ public interface RestaurantTable extends EObject {
 	 * @see #getTableNumber()
 	 * @generated
 	 */
-	void setTableNumber(int value);
+	void setTableNumber(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Number Of Seats</b></em>' attribute.

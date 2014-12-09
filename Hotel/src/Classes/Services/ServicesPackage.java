@@ -101,7 +101,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_SERVICE_MENU___ADD_ITEM = 0;
+	int ROOM_SERVICE_MENU___ADD_ITEM__STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Remove Item</em>' operation.
@@ -110,7 +110,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_SERVICE_MENU___REMOVE_ITEM = 1;
+	int ROOM_SERVICE_MENU___REMOVE_ITEM__STRING = 1;
 
 	/**
 	 * The number of operations of the '<em>Room Service Menu</em>' class.
@@ -1096,24 +1096,24 @@ public interface ServicesPackage extends EPackage {
 	EAttribute getRoomServiceMenu_Items();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.RoomServiceMenu#addItem() <em>Add Item</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.RoomServiceMenu#addItem(java.lang.String) <em>Add Item</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Item</em>' operation.
-	 * @see Classes.Services.RoomServiceMenu#addItem()
+	 * @see Classes.Services.RoomServiceMenu#addItem(java.lang.String)
 	 * @generated
 	 */
-	EOperation getRoomServiceMenu__AddItem();
+	EOperation getRoomServiceMenu__AddItem__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.RoomServiceMenu#removeItem() <em>Remove Item</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.RoomServiceMenu#removeItem(java.lang.String) <em>Remove Item</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Item</em>' operation.
-	 * @see Classes.Services.RoomServiceMenu#removeItem()
+	 * @see Classes.Services.RoomServiceMenu#removeItem(java.lang.String)
 	 * @generated
 	 */
-	EOperation getRoomServiceMenu__RemoveItem();
+	EOperation getRoomServiceMenu__RemoveItem__String();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Services.IServicesAccess <em>IServices Access</em>}'.
@@ -1674,7 +1674,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ROOM_SERVICE_MENU___ADD_ITEM = eINSTANCE.getRoomServiceMenu__AddItem();
+		EOperation ROOM_SERVICE_MENU___ADD_ITEM__STRING = eINSTANCE.getRoomServiceMenu__AddItem__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Item</b></em>' operation.
@@ -1682,7 +1682,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ROOM_SERVICE_MENU___REMOVE_ITEM = eINSTANCE.getRoomServiceMenu__RemoveItem();
+		EOperation ROOM_SERVICE_MENU___REMOVE_ITEM__STRING = eINSTANCE.getRoomServiceMenu__RemoveItem__String();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Services.IServicesAccess <em>IServices Access</em>}' class.

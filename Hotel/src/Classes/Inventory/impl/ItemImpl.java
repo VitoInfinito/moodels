@@ -58,7 +58,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int PRICE_EDEFAULT = 0;
+	protected static final double PRICE_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getPrice() <em>Price</em>}' attribute.
@@ -68,7 +68,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * @generated
 	 * @ordered
 	 */
-	protected int price = PRICE_EDEFAULT;
+	protected double price = PRICE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getExpense() <em>Expense</em>}' attribute.
@@ -78,7 +78,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int EXPENSE_EDEFAULT = 0;
+	protected static final double EXPENSE_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getExpense() <em>Expense</em>}' attribute.
@@ -88,7 +88,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * @generated
 	 * @ordered
 	 */
-	protected int expense = EXPENSE_EDEFAULT;
+	protected double expense = EXPENSE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getStock() <em>Stock</em>}' attribute.
@@ -175,7 +175,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
@@ -184,8 +184,8 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrice(int newPrice) {
-		int oldPrice = price;
+	public void setPrice(double newPrice) {
+		double oldPrice = price;
 		price = newPrice;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, InventoryPackage.ITEM__PRICE, oldPrice, price));
@@ -196,7 +196,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getExpense() {
+	public double getExpense() {
 		return expense;
 	}
 
@@ -205,8 +205,8 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExpense(int newExpense) {
-		int oldExpense = expense;
+	public void setExpense(double newExpense) {
+		double oldExpense = expense;
 		expense = newExpense;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, InventoryPackage.ITEM__EXPENSE, oldExpense, expense));
@@ -288,10 +288,10 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 				setName((String)newValue);
 				return;
 			case InventoryPackage.ITEM__PRICE:
-				setPrice((Integer)newValue);
+				setPrice((Double)newValue);
 				return;
 			case InventoryPackage.ITEM__EXPENSE:
-				setExpense((Integer)newValue);
+				setExpense((Double)newValue);
 				return;
 			case InventoryPackage.ITEM__STOCK:
 				setStock((Integer)newValue);

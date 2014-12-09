@@ -25,18 +25,18 @@ public interface IManageInventory extends IInventoryAccess {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false"
+	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" priceRequired="true" priceOrdered="false"
 	 * @generated
 	 */
-	void changeItemPrice(String id, int price);
+	void changeItemPrice(String id, double price);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" expenseDataType="org.eclipse.uml2.types.Integer" expenseRequired="true" expenseOrdered="false"
+	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" expenseRequired="true" expenseOrdered="false"
 	 * @generated
 	 */
-	void changeItemExpense(String id, int expense);
+	void changeItemExpense(String id, double expense);
 
 	/**
 	 * <!-- begin-user-doc -->

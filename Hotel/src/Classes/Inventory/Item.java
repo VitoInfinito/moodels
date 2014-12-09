@@ -60,12 +60,12 @@ public interface Item extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Price</em>' attribute.
-	 * @see #setPrice(int)
+	 * @see #setPrice(double)
 	 * @see Classes.Inventory.InventoryPackage#getItem_Price()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	int getPrice();
+	double getPrice();
 
 	/**
 	 * Sets the value of the '{@link Classes.Inventory.Item#getPrice <em>Price</em>}' attribute.
@@ -75,7 +75,7 @@ public interface Item extends EObject {
 	 * @see #getPrice()
 	 * @generated
 	 */
-	void setPrice(int value);
+	void setPrice(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Expense</b></em>' attribute.
@@ -86,12 +86,12 @@ public interface Item extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expense</em>' attribute.
-	 * @see #setExpense(int)
+	 * @see #setExpense(double)
 	 * @see Classes.Inventory.InventoryPackage#getItem_Expense()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	int getExpense();
+	double getExpense();
 
 	/**
 	 * Sets the value of the '{@link Classes.Inventory.Item#getExpense <em>Expense</em>}' attribute.
@@ -101,7 +101,7 @@ public interface Item extends EObject {
 	 * @see #getExpense()
 	 * @generated
 	 */
-	void setExpense(int value);
+	void setExpense(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Stock</b></em>' attribute.

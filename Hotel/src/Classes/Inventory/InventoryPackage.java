@@ -246,7 +246,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_INVENTORY___CHANGE_ITEM_PRICE__STRING_INT = IINVENTORY_ACCESS_OPERATION_COUNT + 1;
+	int IMANAGE_INVENTORY___CHANGE_ITEM_PRICE__STRING_DOUBLE = IINVENTORY_ACCESS_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Change Item Expense</em>' operation.
@@ -255,7 +255,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE__STRING_INT = IINVENTORY_ACCESS_OPERATION_COUNT + 2;
+	int IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE__STRING_DOUBLE = IINVENTORY_ACCESS_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Add Item</em>' operation.
@@ -391,7 +391,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVENTORY_MANAGER___CHANGE_ITEM_PRICE__STRING_INT = IMANAGE_INVENTORY___CHANGE_ITEM_PRICE__STRING_INT;
+	int INVENTORY_MANAGER___CHANGE_ITEM_PRICE__STRING_DOUBLE = IMANAGE_INVENTORY___CHANGE_ITEM_PRICE__STRING_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Change Item Expense</em>' operation.
@@ -400,7 +400,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVENTORY_MANAGER___CHANGE_ITEM_EXPENSE__STRING_INT = IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE__STRING_INT;
+	int INVENTORY_MANAGER___CHANGE_ITEM_EXPENSE__STRING_DOUBLE = IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE__STRING_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Add Item</em>' operation.
@@ -523,24 +523,24 @@ public interface InventoryPackage extends EPackage {
 	EOperation getIManageInventory__ChangeItemName__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#changeItemPrice(java.lang.String, int) <em>Change Item Price</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#changeItemPrice(java.lang.String, double) <em>Change Item Price</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Item Price</em>' operation.
-	 * @see Classes.Inventory.IManageInventory#changeItemPrice(java.lang.String, int)
+	 * @see Classes.Inventory.IManageInventory#changeItemPrice(java.lang.String, double)
 	 * @generated
 	 */
-	EOperation getIManageInventory__ChangeItemPrice__String_int();
+	EOperation getIManageInventory__ChangeItemPrice__String_double();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#changeItemExpense(java.lang.String, int) <em>Change Item Expense</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#changeItemExpense(java.lang.String, double) <em>Change Item Expense</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Item Expense</em>' operation.
-	 * @see Classes.Inventory.IManageInventory#changeItemExpense(java.lang.String, int)
+	 * @see Classes.Inventory.IManageInventory#changeItemExpense(java.lang.String, double)
 	 * @generated
 	 */
-	EOperation getIManageInventory__ChangeItemExpense__String_int();
+	EOperation getIManageInventory__ChangeItemExpense__String_double();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#addItem(java.lang.String, java.lang.String, int, int, int) <em>Add Item</em>}' operation.
@@ -775,7 +775,7 @@ public interface InventoryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMANAGE_INVENTORY___CHANGE_ITEM_PRICE__STRING_INT = eINSTANCE.getIManageInventory__ChangeItemPrice__String_int();
+		EOperation IMANAGE_INVENTORY___CHANGE_ITEM_PRICE__STRING_DOUBLE = eINSTANCE.getIManageInventory__ChangeItemPrice__String_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Item Expense</b></em>' operation.
@@ -783,7 +783,7 @@ public interface InventoryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE__STRING_INT = eINSTANCE.getIManageInventory__ChangeItemExpense__String_int();
+		EOperation IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE__STRING_DOUBLE = eINSTANCE.getIManageInventory__ChangeItemExpense__String_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Item</b></em>' operation.

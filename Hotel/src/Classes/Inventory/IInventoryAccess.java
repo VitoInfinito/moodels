@@ -28,10 +28,10 @@ public interface IInventoryAccess extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
+	 * @model required="true" ordered="false" idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
 	 * @generated
 	 */
-	int getItemPrice(String id);
+	double getItemPrice(String id);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -52,10 +52,10 @@ public interface IInventoryAccess extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
+	 * @model required="true" ordered="false" idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
 	 * @generated
 	 */
-	int getItemExpense(String id);
+	double getItemExpense(String id);
 
 	/**
 	 * <!-- begin-user-doc -->

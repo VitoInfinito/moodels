@@ -1064,11 +1064,11 @@
       </eOperations>
       <eOperations name="changeItemPrice" ordered="false" lowerBound="1">
         <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </eOperations>
       <eOperations name="changeItemExpense" ordered="false" lowerBound="1">
         <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="expense" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="expense" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </eOperations>
       <eOperations name="addItem" ordered="false" lowerBound="1">
         <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
@@ -1087,7 +1087,7 @@
         <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="stock" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
-      <eOperations name="getItemPrice" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eOperations name="getItemPrice" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
         <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="getItemName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
@@ -1096,7 +1096,7 @@
       <eOperations name="getItemStock" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
         <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getItemExpense" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eOperations name="getItemExpense" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
         <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="getAllItemIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
@@ -1112,9 +1112,9 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
-          lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="expense" ordered="false"
-          lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="stock" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
@@ -1124,34 +1124,119 @@
   <eSubpackages name="Restaurants" nsURI="http:///Classes/Restaurants.ecore" nsPrefix="Classes.Restaurants">
     <eClassifiers xsi:type="ecore:EClass" name="IRestaurantsManage" abstract="true"
         interface="true" eSuperTypes="#//Restaurants/IRestaurantsAccess">
-      <eOperations name="addRestaurant" ordered="false" lowerBound="1"/>
-      <eOperations name="removeRestaurant" ordered="false" lowerBound="1"/>
-      <eOperations name="addRestaurantTable" ordered="false" lowerBound="1"/>
-      <eOperations name="removeRestaurantTable" ordered="false" lowerBound="1"/>
-      <eOperations name="changeRestaurantName" ordered="false" lowerBound="1"/>
-      <eOperations name="changeTableInformation" ordered="false" lowerBound="1"/>
-      <eOperations name="addMenuItem" ordered="false" lowerBound="1"/>
-      <eOperations name="removeMenuItem" ordered="false" lowerBound="1"/>
-      <eOperations name="changeMenuItem" ordered="false" lowerBound="1"/>
-      <eOperations name="changeMenuName" ordered="false" lowerBound="1"/>
+      <eOperations name="addRestaurant" ordered="false" lowerBound="1">
+        <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="removeRestaurant" ordered="false" lowerBound="1">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="addRestaurantTable" ordered="false" lowerBound="1">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="nbrSeats" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="tableNbr" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="removeRestaurantTable" ordered="false" lowerBound="1">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="tableNbr" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="changeRestaurantName" ordered="false" lowerBound="1">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="changeTableNumberOfSeats" ordered="false" lowerBound="1">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="tableNbr" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="nbrSeats" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      </eOperations>
+      <eOperations name="addMenuItem" ordered="false" lowerBound="1">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="itemID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="removeMenuItem" ordered="false" lowerBound="1">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="itemID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="changeMenuName" ordered="false" lowerBound="1">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="changeTableNumber" ordered="false" lowerBound="1">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="oldTableNbr" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="newTableNbr" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IRestaurantsAccess" abstract="true"
         interface="true">
-      <eOperations name="getReservationId" ordered="false" lowerBound="1"/>
-      <eOperations name="getAllReservationIds" ordered="false" lowerBound="1"/>
-      <eOperations name="getEmptyTables" ordered="false" lowerBound="1"/>
-      <eOperations name="getEmptySeats" ordered="false" lowerBound="1"/>
-      <eOperations name="getEmptyTablesWithNbrOfSeats" ordered="false" lowerBound="1"/>
-      <eOperations name="getReservationIdByGuestName" ordered="false" lowerBound="1"/>
-      <eOperations name="getMenuInformation" ordered="false" lowerBound="1"/>
-      <eOperations name="getAllRestaurantNames" ordered="false" lowerBound="1"/>
-      <eOperations name="searchRestaurants" ordered="false" lowerBound="1"/>
-      <eOperations name="searchRestaurantReservations" ordered="false" lowerBound="1"/>
-      <eOperations name="searchRestaurantTables" ordered="false" lowerBound="1"/>
-      <eOperations name="getMenuName" ordered="false" lowerBound="1"/>
-      <eOperations name="makeReservation" ordered="false" lowerBound="1"/>
-      <eOperations name="removeReservation" ordered="false" lowerBound="1"/>
-      <eOperations name="changeReservationTables" ordered="false" lowerBound="1"/>
+      <eOperations name="getRestaurantReservations" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getRestaurantTables" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getRestaurantTableNumberOfSeats" ordered="false" lowerBound="1"
+          eType="ecore:EDataType types.ecore#//Integer">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="tableNbr" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getAvailableTables" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eOperations>
+      <eOperations name="getReservationGuest" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="reservationID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getRestaurantMenuName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getAllRestaurantNames" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="searchRestaurants" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="searchRestaurantReservations" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="searchRestaurantTables" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="makeReservation" ordered="false" lowerBound="1">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="tables" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="guestID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eOperations>
+      <eOperations name="cancelReservation" ordered="false" lowerBound="1">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="reservationID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="changeReservedTables" ordered="false" lowerBound="1">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="reservationID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="tables" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getAvailableTablesByNbrGuests" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="nbrGuests" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      </eOperations>
+      <eOperations name="getRestaurantMenuItems" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getReservationFromTime" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="reservationID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getReservationToTime" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="reservationID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RestaurantsManager" eSuperTypes="#//Restaurants/IRestaurantsManage">
       <eStructuralFeatures xsi:type="ecore:EReference" name="restaurant" ordered="false"
@@ -1170,7 +1255,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Reservation">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
-          eType="ecore:EDataType types.ecore#//Integer"/>
+          eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="reservedBy" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="restaurantTable" ordered="false"
@@ -1182,7 +1267,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RestaurantTable">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="tableNumber" ordered="false"
-          lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+          lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSeats" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
     </eClassifiers>
@@ -1197,8 +1282,12 @@
   </eSubpackages>
   <eSubpackages name="Services" nsURI="http:///Classes/Services.ecore" nsPrefix="Classes.Services">
     <eClassifiers xsi:type="ecore:EClass" name="RoomServiceMenu">
-      <eOperations name="addItem" ordered="false" lowerBound="1"/>
-      <eOperations name="removeItem" ordered="false" lowerBound="1"/>
+      <eOperations name="addItem" ordered="false" lowerBound="1">
+        <eParameters name="itemID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="removeItem" ordered="false" lowerBound="1">
+        <eParameters name="itemID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="items" ordered="false"

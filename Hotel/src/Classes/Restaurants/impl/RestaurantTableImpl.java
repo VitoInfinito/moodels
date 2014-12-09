@@ -32,7 +32,7 @@ public class RestaurantTableImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int TABLE_NUMBER_EDEFAULT = 0;
+	protected static final String TABLE_NUMBER_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getTableNumber() <em>Table Number</em>}' attribute.
@@ -42,7 +42,7 @@ public class RestaurantTableImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected int tableNumber = TABLE_NUMBER_EDEFAULT;
+	protected String tableNumber = TABLE_NUMBER_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getNumberOfSeats() <em>Number Of Seats</em>}' attribute.
@@ -88,7 +88,7 @@ public class RestaurantTableImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getTableNumber() {
+	public String getTableNumber() {
 		return tableNumber;
 	}
 
@@ -97,8 +97,8 @@ public class RestaurantTableImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTableNumber(int newTableNumber) {
-		int oldTableNumber = tableNumber;
+	public void setTableNumber(String newTableNumber) {
+		String oldTableNumber = tableNumber;
 		tableNumber = newTableNumber;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, RestaurantsPackage.RESTAURANT_TABLE__TABLE_NUMBER, oldTableNumber, tableNumber));
@@ -150,7 +150,7 @@ public class RestaurantTableImpl extends MinimalEObjectImpl.Container implements
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case RestaurantsPackage.RESTAURANT_TABLE__TABLE_NUMBER:
-				setTableNumber((Integer)newValue);
+				setTableNumber((String)newValue);
 				return;
 			case RestaurantsPackage.RESTAURANT_TABLE__NUMBER_OF_SEATS:
 				setNumberOfSeats((Integer)newValue);
@@ -186,7 +186,7 @@ public class RestaurantTableImpl extends MinimalEObjectImpl.Container implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case RestaurantsPackage.RESTAURANT_TABLE__TABLE_NUMBER:
-				return tableNumber != TABLE_NUMBER_EDEFAULT;
+				return TABLE_NUMBER_EDEFAULT == null ? tableNumber != null : !TABLE_NUMBER_EDEFAULT.equals(tableNumber);
 			case RestaurantsPackage.RESTAURANT_TABLE__NUMBER_OF_SEATS:
 				return numberOfSeats != NUMBER_OF_SEATS_EDEFAULT;
 		}

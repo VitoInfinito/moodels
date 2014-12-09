@@ -1037,33 +1037,114 @@
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Restaurants" basePackage="Classes"
         disposableProviderFactory="true" ecorePackage="Classes.ecore#//Restaurants">
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Restaurants/IRestaurantsManage">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/addRestaurant"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/removeRestaurant"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/addRestaurantTable"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/removeRestaurantTable"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/changeRestaurantName"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/changeTableInformation"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/addMenuItem"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/removeMenuItem"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/changeMenuItem"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/changeMenuName"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/addRestaurant">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/addRestaurant/name"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/removeRestaurant">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/removeRestaurant/restaurantID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/addRestaurantTable">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/addRestaurantTable/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/addRestaurantTable/nbrSeats"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/addRestaurantTable/tableNbr"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/removeRestaurantTable">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/removeRestaurantTable/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/removeRestaurantTable/tableNbr"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/changeRestaurantName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/changeRestaurantName/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/changeRestaurantName/name"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/changeTableNumberOfSeats">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/changeTableNumberOfSeats/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/changeTableNumberOfSeats/tableNbr"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/changeTableNumberOfSeats/nbrSeats"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/addMenuItem">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/addMenuItem/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/addMenuItem/itemID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/removeMenuItem">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/removeMenuItem/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/removeMenuItem/itemID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/changeMenuName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/changeMenuName/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/changeMenuName/name"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsManage/changeTableNumber">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/changeTableNumber/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/changeTableNumber/oldTableNbr"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsManage/changeTableNumber/newTableNbr"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Restaurants/IRestaurantsAccess">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getReservationId"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getAllReservationIds"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getEmptyTables"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getEmptySeats"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getEmptyTablesWithNbrOfSeats"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getReservationIdByGuestName"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getMenuInformation"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getRestaurantReservations">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getRestaurantReservations/restaurantID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getRestaurantTables">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getRestaurantTables/restaurantID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getRestaurantTableNumberOfSeats">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getRestaurantTableNumberOfSeats/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getRestaurantTableNumberOfSeats/tableNbr"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getAvailableTables">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getAvailableTables/to"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getAvailableTables/from"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getReservationGuest">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getReservationGuest/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getReservationGuest/reservationID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getRestaurantMenuName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getRestaurantMenuName/restaurantID"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getAllRestaurantNames"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurants"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurantReservations"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurantTables"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getMenuName"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/makeReservation"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/removeReservation"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/changeReservationTables"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurants">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurants/keyword"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurantReservations">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurantReservations/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurantReservations/keyword"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurantTables">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurantTables/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurantTables/keyword"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/makeReservation">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/makeReservation/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/makeReservation/tables"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/makeReservation/guestID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/makeReservation/to"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/makeReservation/from"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/cancelReservation">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/cancelReservation/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/cancelReservation/reservationID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/changeReservedTables">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/changeReservedTables/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/changeReservedTables/reservationID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/changeReservedTables/tables"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getAvailableTablesByNbrGuests">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getAvailableTablesByNbrGuests/to"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getAvailableTablesByNbrGuests/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getAvailableTablesByNbrGuests/nbrGuests"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getRestaurantMenuItems">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getRestaurantMenuItems/restaurantID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getReservationFromTime">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getReservationFromTime/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getReservationFromTime/reservationID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getReservationToTime">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getReservationToTime/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getReservationToTime/reservationID"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Restaurants/RestaurantsManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -1103,8 +1184,12 @@
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Services/RoomServiceMenu">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Services/RoomServiceMenu/name"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Services/RoomServiceMenu/items"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/RoomServiceMenu/addItem"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/RoomServiceMenu/removeItem"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/RoomServiceMenu/addItem">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/RoomServiceMenu/addItem/itemID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/RoomServiceMenu/removeItem">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/RoomServiceMenu/removeItem/itemID"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Services/IServicesAccess">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getAllServiceIDs"/>

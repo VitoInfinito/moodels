@@ -236,7 +236,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomServiceMenu__AddItem() {
+	public EOperation getRoomServiceMenu__AddItem__String() {
 		return roomServiceMenuEClass.getEOperations().get(0);
 	}
 
@@ -245,7 +245,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomServiceMenu__RemoveItem() {
+	public EOperation getRoomServiceMenu__RemoveItem__String() {
 		return roomServiceMenuEClass.getEOperations().get(1);
 	}
 
@@ -721,8 +721,8 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		roomServiceMenuEClass = createEClass(ROOM_SERVICE_MENU);
 		createEAttribute(roomServiceMenuEClass, ROOM_SERVICE_MENU__NAME);
 		createEAttribute(roomServiceMenuEClass, ROOM_SERVICE_MENU__ITEMS);
-		createEOperation(roomServiceMenuEClass, ROOM_SERVICE_MENU___ADD_ITEM);
-		createEOperation(roomServiceMenuEClass, ROOM_SERVICE_MENU___REMOVE_ITEM);
+		createEOperation(roomServiceMenuEClass, ROOM_SERVICE_MENU___ADD_ITEM__STRING);
+		createEOperation(roomServiceMenuEClass, ROOM_SERVICE_MENU___REMOVE_ITEM__STRING);
 
 		iServicesAccessEClass = createEClass(ISERVICES_ACCESS);
 		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_ALL_SERVICE_IDS);
@@ -818,9 +818,11 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		initEAttribute(getRoomServiceMenu_Name(), theTypesPackage.getString(), "name", null, 1, 1, RoomServiceMenu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomServiceMenu_Items(), theTypesPackage.getString(), "items", null, 0, -1, RoomServiceMenu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getRoomServiceMenu__AddItem(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getRoomServiceMenu__AddItem__String(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "itemID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getRoomServiceMenu__RemoveItem(), null, "removeItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getRoomServiceMenu__RemoveItem__String(), null, "removeItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "itemID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iServicesAccessEClass, IServicesAccess.class, "IServicesAccess", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -828,7 +830,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 
 		initEOperation(getIServicesAccess__GetAllRoomServiceOrderIDs(), theTypesPackage.getString(), "getAllRoomServiceOrderIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		EOperation op = initEOperation(getIServicesAccess__SearchServices__String(), theTypesPackage.getString(), "searchServices", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesAccess__SearchServices__String(), theTypesPackage.getString(), "searchServices", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIServicesAccess__SearchRoomServiceOrders__String(), theTypesPackage.getString(), "searchRoomServiceOrders", 0, -1, IS_UNIQUE, !IS_ORDERED);

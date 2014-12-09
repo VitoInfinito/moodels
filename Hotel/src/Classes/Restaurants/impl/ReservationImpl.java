@@ -40,7 +40,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int ID_EDEFAULT = 0;
+	protected static final String ID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -50,7 +50,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 * @ordered
 	 */
-	protected int id = ID_EDEFAULT;
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getReservedBy() <em>Reserved By</em>}' attribute.
@@ -146,7 +146,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
@@ -155,8 +155,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setId(int newId) {
-		int oldId = id;
+	public void setId(String newId) {
+		String oldId = id;
 		id = newId;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, RestaurantsPackage.RESERVATION__ID, oldId, id));
@@ -269,7 +269,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case RestaurantsPackage.RESERVATION__ID:
-				setId((Integer)newValue);
+				setId((String)newValue);
 				return;
 			case RestaurantsPackage.RESERVATION__RESERVED_BY:
 				setReservedBy((String)newValue);
@@ -324,7 +324,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case RestaurantsPackage.RESERVATION__ID:
-				return id != ID_EDEFAULT;
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case RestaurantsPackage.RESERVATION__RESERVED_BY:
 				return RESERVED_BY_EDEFAULT == null ? reservedBy != null : !RESERVED_BY_EDEFAULT.equals(reservedBy);
 			case RestaurantsPackage.RESERVATION__RESTAURANT_TABLE:

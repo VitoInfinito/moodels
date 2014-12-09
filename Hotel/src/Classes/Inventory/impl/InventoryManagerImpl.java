@@ -92,7 +92,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int getItemPrice(String id) {
+	public double getItemPrice(String id) {
 		if (items.containsKey(id)) {
 			return items.get(id).getPrice();
 		} else {
@@ -134,7 +134,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int getItemExpense(String id) {
+	public double getItemExpense(String id) {
 		if (items.containsKey(id)) {
 			return items.get(id).getExpense();
 		} else {
@@ -175,6 +175,28 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void changeItemPrice(String id, double price) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void changeItemExpense(String id, double expense) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -327,11 +349,11 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 			case InventoryPackage.INVENTORY_MANAGER___CHANGE_ITEM_NAME__STRING_STRING:
 				changeItemName((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case InventoryPackage.INVENTORY_MANAGER___CHANGE_ITEM_PRICE__STRING_INT:
-				changeItemPrice((String)arguments.get(0), (Integer)arguments.get(1));
+			case InventoryPackage.INVENTORY_MANAGER___CHANGE_ITEM_PRICE__STRING_DOUBLE:
+				changeItemPrice((String)arguments.get(0), (Double)arguments.get(1));
 				return null;
-			case InventoryPackage.INVENTORY_MANAGER___CHANGE_ITEM_EXPENSE__STRING_INT:
-				changeItemExpense((String)arguments.get(0), (Integer)arguments.get(1));
+			case InventoryPackage.INVENTORY_MANAGER___CHANGE_ITEM_EXPENSE__STRING_DOUBLE:
+				changeItemExpense((String)arguments.get(0), (Double)arguments.get(1));
 				return null;
 			case InventoryPackage.INVENTORY_MANAGER___ADD_ITEM__STRING_STRING_INT_INT_INT:
 				addItem((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4));
