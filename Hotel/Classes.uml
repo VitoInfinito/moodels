@@ -1251,6 +1251,8 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF03psEeST-65JbGUt8g" name="getAllFeedbackIDs">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_868H8H-QEeS07sUWsjEnow" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8TQ1MH-WEeS07sUWsjEnow"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8TRcQH-WEeS07sUWsjEnow" value="*"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF1HpsEeST-65JbGUt8g" name="getFeedbackDescription">

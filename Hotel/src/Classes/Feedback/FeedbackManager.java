@@ -2,7 +2,7 @@
  */
 package Classes.Feedback;
 
-import org.eclipse.emf.common.util.EMap;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,8 +34,8 @@ public interface FeedbackManager extends IFeedback {
 	 * @return the value of the '<em>Feedback</em>' map.
 	 * @see Classes.Feedback.FeedbackPackage#getFeedbackManager_Feedback()
 	 * @model mapType="Classes.ECoreMapEntries.StringToFeedbackMap<org.eclipse.uml2.types.String, Classes.Feedback.Feedback>" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EMap<String, Feedback> getFeedback();
+	List<Feedback> getFeedbacks();
 
 } // FeedbackManager

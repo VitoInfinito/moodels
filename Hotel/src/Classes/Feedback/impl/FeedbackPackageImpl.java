@@ -418,7 +418,7 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 		// Initialize classes, features, and operations; add parameters
 		initEClass(iFeedbackEClass, IFeedback.class, "IFeedback", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getIFeedback__GetAllFeedbackIDs(), theTypesPackage.getString(), "getAllFeedbackIDs", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIFeedback__GetAllFeedbackIDs(), theTypesPackage.getString(), "getAllFeedbackIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		EOperation op = initEOperation(getIFeedback__GetFeedbackDescription__String(), theTypesPackage.getString(), "getFeedbackDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);

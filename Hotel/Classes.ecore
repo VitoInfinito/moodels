@@ -965,7 +965,7 @@
   </eSubpackages>
   <eSubpackages name="Feedback" nsURI="http:///Classes/Feedback.ecore" nsPrefix="Classes.Feedback">
     <eClassifiers xsi:type="ecore:EClass" name="IFeedback" abstract="true" interface="true">
-      <eOperations name="getAllFeedbackIDs" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="getAllFeedbackIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
       <eOperations name="getFeedbackDescription" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>

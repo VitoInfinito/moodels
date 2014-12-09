@@ -2,6 +2,9 @@
  */
 package Classes.Feedback;
 
+import java.util.List;
+
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,10 +21,10 @@ public interface IFeedback extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
+	 * @generated NOT
 	 */
-	String getAllFeedbackIDs();
+	List<String> getAllFeedbackIDs();
 
 	/**
 	 * <!-- begin-user-doc -->

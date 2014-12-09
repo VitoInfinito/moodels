@@ -2,23 +2,26 @@
  */
 package Classes.Feedback.impl;
 
-import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
-import Classes.ECoreMapEntries.impl.StringToFeedbackMapImpl;
-import Classes.Feedback.Feedback;
-import Classes.Feedback.FeedbackManager;
-import Classes.Feedback.FeedbackPackage;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import Classes.InvalidIDException;
+import Classes.Feedback.Feedback;
+import Classes.Feedback.FeedbackManager;
+import Classes.Feedback.FeedbackPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,6 +37,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements FeedbackManager {
+	private final Logger logger = LoggerFactory.getLogger(FeedbackManagerImpl.class);
+	
 	/**
 	 * The cached value of the '{@link #getFeedback() <em>Feedback</em>}' map.
 	 * <!-- begin-user-doc -->
@@ -67,13 +72,33 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Feedback> getFeedbacks() {
-		if (feedbacks == null) {
-			feedbacks = new EObjectResolvingEList<Feedback>(Feedback.class, this, FeedbackPackage.FEEDBACK_MANAGER__FEEDBACKS);
+	public List<Feedback> getFeedbacks() {
+		return (List<Feedback>) feedbacks.values();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public Feedback getFeedback(String id) {
+		if (feedbacks.containsKey(id)) {
+			return feedbacks.get(id);
+		} else {
+			logger.warn("A feedback with id {} could not be found.", id);
+			throw new InvalidIDException();
 		}
-		return feedbacks;
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public List<String> getAllFeedbackIDs() {
+		return new ArrayList<String>(feedbacks.keySet());
 	}
 
 	/**
@@ -81,88 +106,83 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EMap<String, Feedback> getFeedback() {
-		if (feedback == null) {
-			feedback = new EcoreEMap<String,Feedback>(ECoreMapEntriesPackage.Literals.STRING_TO_FEEDBACK_MAP, StringToFeedbackMapImpl.class, this, FeedbackPackage.FEEDBACK_MANAGER__FEEDBACK);
-		}
-		return feedback;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getAllFeedbackIDs() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getFeedbackDescription(String id) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (feedbacks.containsKey(id)) {
+			return feedbacks.get(id).getDescription();
+		} else {
+			logger.warn("A feedback with id {} could not be found.", id);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean getFeedbackIsResolved(String id) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (feedbacks.containsKey(id)) {
+			return feedbacks.get(id).isResolved();
+		} else {
+			logger.warn("A feedback with id {} could not be found.", id);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean getFeedbackIsNoted(String id) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (feedbacks.containsKey(id)) {
+			return feedbacks.get(id).isNoted();
+		} else {
+			logger.warn("A feedback with id {} could not be found.", id);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setFeedbackDescription(String id, String desc) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (feedbacks.containsKey(id)) {
+			feedbacks.get(id).setDescription(desc);
+		} else {
+			logger.warn("A feedback with id {} could not be found.", id);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setFeedbackIsResolved(String id, boolean status) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (feedbacks.containsKey(id)) {
+			feedbacks.get(id).setIsResolved(status);
+		} else {
+			logger.warn("A feedback with id {} could not be found.", id);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setFeedbackIsNoted(String id, boolean status) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (feedbacks.containsKey(id)) {
+			feedbacks.get(id).setIsNoted(status);
+		} else {
+			logger.warn("A feedback with id {} could not be found.", id);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -179,12 +199,20 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addFeedback(String id, String desc) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (!feedbacks.containsKey(id)) {
+			Feedback feedback = new FeedbackImpl();
+			
+			feedback.setId(id);
+			feedback.setDescription(desc);
+			
+			feedbacks.put(id, feedback);
+		} else {
+			logger.warn("A feedback with ID {} already exists.", id);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -195,8 +223,8 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACK:
-				return ((InternalEList<?>)getFeedback()).basicRemove(otherEnd, msgs);
+			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACKS:
+				return ((InternalEList<?>)getFeedbacks()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -209,9 +237,8 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACK:
-				if (coreType) return getFeedback();
-				else return getFeedback().map();
+			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACKS:
+				return getFeedbacks();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -225,8 +252,9 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACK:
-				((EStructuralFeature.Setting)getFeedback()).set(newValue);
+			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACKS:
+				getFeedbacks().clear();
+				getFeedbacks().addAll((Collection<? extends Feedback>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -240,8 +268,8 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACK:
-				getFeedback().clear();
+			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACKS:
+				getFeedbacks().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -255,8 +283,8 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACK:
-				return feedback != null && !feedback.isEmpty();
+			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACKS:
+				return feedbacks != null && !feedbacks.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
