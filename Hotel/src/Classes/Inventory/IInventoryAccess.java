@@ -3,6 +3,7 @@
 package Classes.Inventory;
 
 import java.util.List;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -67,9 +68,9 @@ public interface IInventoryAccess extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated
 	 */
-	void searchItems();
+	EList<String> searchItems(String keyword);
 
 } // IInventoryAccess

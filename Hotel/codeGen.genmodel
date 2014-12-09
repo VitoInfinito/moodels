@@ -325,22 +325,59 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Bills/Bill/totalAmount"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Bills/IBills">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getIsBillPaid"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getIsBillPaid">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/getIsBillPaid/billID"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getAllBillsNotPaid"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getBillPaymentDate"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getBillPaymentDate">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/getBillPaymentDate/billID"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getAllBillIDs"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/searchBills"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/searchBills">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/searchBills/keyword"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getAllPayedBills"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/addBill"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/payBillsWithCreditCard"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getBillItems"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getBillBookable"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getBillServices"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getBillIssueDate"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getBillPaymentType"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/payBillsWithCash"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/sendInvoice"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/removeBill"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/addBill">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/addBill/items"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/addBill/services"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/addBill/bookable"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/payBillsWithCreditCard">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/payBillsWithCreditCard/ccNumber"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/payBillsWithCreditCard/ccv"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/payBillsWithCreditCard/expiryMonth"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/payBillsWithCreditCard/expiryYear"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/payBillsWithCreditCard/firstName"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/payBillsWithCreditCard/lastName"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getBillItems">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/getBillItems/billID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getBillBookable">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/getBillBookable/billID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getBillServices">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/getBillServices/billID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getBillIssueDate">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/getBillIssueDate/billID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getBillPaymentType">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/getBillPaymentType/billID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/payBillsWithCash">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/payBillsWithCash/bills"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/sendInvoice">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/sendInvoice/billID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/sendInvoice/email"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/removeBill">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/removeBill/billID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getBillTotalAmount">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/getBillTotalAmount/billID"/>
+        </genOperations>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Guests" basePackage="Classes"
@@ -840,7 +877,9 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IInventoryAccess/getItemExpense/id"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/getAllItemIDs"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/searchItems"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/searchItems">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Inventory/IInventoryAccess/searchItems/keyword"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Inventory/InventoryManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

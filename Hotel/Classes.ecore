@@ -349,22 +349,59 @@
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IBills" abstract="true" interface="true">
-      <eOperations name="getIsBillPaid" ordered="false" lowerBound="1"/>
-      <eOperations name="getAllBillsNotPaid" ordered="false" lowerBound="1"/>
-      <eOperations name="getBillPaymentDate" ordered="false" lowerBound="1"/>
-      <eOperations name="getAllBillIDs" ordered="false" lowerBound="1"/>
-      <eOperations name="searchBills" ordered="false" lowerBound="1"/>
-      <eOperations name="getAllPayedBills" ordered="false" lowerBound="1"/>
-      <eOperations name="addBill" ordered="false" lowerBound="1"/>
-      <eOperations name="payBillsWithCreditCard" ordered="false" lowerBound="1"/>
-      <eOperations name="getBillItems" ordered="false" lowerBound="1"/>
-      <eOperations name="getBillBookable" ordered="false" lowerBound="1"/>
-      <eOperations name="getBillServices" ordered="false" lowerBound="1"/>
-      <eOperations name="getBillIssueDate" ordered="false" lowerBound="1"/>
-      <eOperations name="getBillPaymentType" ordered="false" lowerBound="1"/>
-      <eOperations name="payBillsWithCash" ordered="false" lowerBound="1"/>
-      <eOperations name="sendInvoice" ordered="false" lowerBound="1"/>
-      <eOperations name="removeBill" ordered="false" lowerBound="1"/>
+      <eOperations name="getIsBillPaid" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
+        <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getAllBillsNotPaid" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="getBillPaymentDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
+        <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getAllBillIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="searchBills" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getAllPayedBills" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="addBill" ordered="false" lowerBound="1">
+        <eParameters name="items" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="services" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="bookable" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="payBillsWithCreditCard" ordered="false" lowerBound="1">
+        <eParameters name="ccNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="ccv" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="expiryMonth" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eParameters name="expiryYear" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getBillItems" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getBillBookable" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getBillServices" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getBillIssueDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
+        <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getBillPaymentType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="payBillsWithCash" ordered="false" lowerBound="1">
+        <eParameters name="bills" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="sendInvoice" ordered="false" lowerBound="1">
+        <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="removeBill" ordered="false" lowerBound="1">
+        <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getBillTotalAmount" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+        <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="Guests" nsURI="http:///Classes/Guests.ecore" nsPrefix="Classes.Guests">
@@ -916,7 +953,9 @@
         <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="getAllItemIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
-      <eOperations name="searchItems" ordered="false" lowerBound="1"/>
+      <eOperations name="searchItems" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="InventoryManager" eSuperTypes="#//Inventory/IManageInventory">
       <eStructuralFeatures xsi:type="ecore:EReference" name="items" ordered="false"

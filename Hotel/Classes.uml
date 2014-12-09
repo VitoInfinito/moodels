@@ -1070,7 +1070,16 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vJhC8HvAEeSpkKm-v6P6Dw" value="*"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQxXpsEeST-65JbGUt8g" name="searchItems"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQxXpsEeST-65JbGUt8g" name="searchItems">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MfHm4H_mEeS5IpkkkJsVew" name="keyword">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NRAW0H_mEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NRAW0X_mEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NRAW0n_mEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9NQx3psEeST-65JbGUt8g" name="items" visibility="private" memberEnd="_w9NQyHpsEeST-65JbGUt8g _w9NQq3psEeST-65JbGUt8g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9NQyHpsEeST-65JbGUt8g" name="inventory" type="_w9NQqnpsEeST-65JbGUt8g" association="_w9NQx3psEeST-65JbGUt8g">
@@ -1436,22 +1445,160 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_w9OewHpsEeST-65JbGUt8g" name="Bills">
     <packagedElement xmi:type="uml:Interface" xmi:id="_w9OezHpsEeST-65JbGUt8g" name="IBills">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OezXpsEeST-65JbGUt8g" name="getIsBillPaid"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OeznpsEeST-65JbGUt8g" name="getAllBillsNotPaid"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oez3psEeST-65JbGUt8g" name="getBillPaymentDate"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe0HpsEeST-65JbGUt8g" name="getAllBillIDs"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe0XpsEeST-65JbGUt8g" name="searchBills"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe0npsEeST-65JbGUt8g" name="getAllPayedBills"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe03psEeST-65JbGUt8g" name="addBill"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe1HpsEeST-65JbGUt8g" name="payBillsWithCreditCard"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe1XpsEeST-65JbGUt8g" name="getBillItems"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe1npsEeST-65JbGUt8g" name="getBillBookable"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe13psEeST-65JbGUt8g" name="getBillServices"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe2HpsEeST-65JbGUt8g" name="getBillIssueDate"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe2XpsEeST-65JbGUt8g" name="getBillPaymentType"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe2npsEeST-65JbGUt8g" name="payBillsWithCash"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe23psEeST-65JbGUt8g" name="sendInvoice"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe3HpsEeST-65JbGUt8g" name="removeBill"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OezXpsEeST-65JbGUt8g" name="getIsBillPaid">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SzDqIH_mEeS5IpkkkJsVew" name="billID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_a-L4gH_mEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9OeznpsEeST-65JbGUt8g" name="getAllBillsNotPaid">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_enVwgH_mEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fTFcMH_mEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fTFcMX_mEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oez3psEeST-65JbGUt8g" name="getBillPaymentDate">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_T0stUH_mEeS5IpkkkJsVew" name="billID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4ZsUQH_mEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe0HpsEeST-65JbGUt8g" name="getAllBillIDs">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gvQfQH_mEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gvRGUH_mEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gvRGUX_mEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe0XpsEeST-65JbGUt8g" name="searchBills">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_g8wIsH_mEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_g8wIsX_mEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_g8wIsn_mEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5zh1AH_mEeS5IpkkkJsVew" name="keyword">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe0npsEeST-65JbGUt8g" name="getAllPayedBills">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hJHwwH_mEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hJHwwX_mEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hJHwwn_mEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe03psEeST-65JbGUt8g" name="addBill">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_HEkNQH_nEeS5IpkkkJsVew" name="items">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ixdz8H_nEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ixdz8X_nEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LHkIoH_nEeS5IpkkkJsVew" name="services">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L6hPkH_nEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_L6h2oH_nEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NymLgH_nEeS5IpkkkJsVew" name="bookable">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe1HpsEeST-65JbGUt8g" name="payBillsWithCreditCard">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Adr_4H_nEeS5IpkkkJsVew" name="ccNumber">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_AdvDMH_nEeS5IpkkkJsVew" name="ccv">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_AdwRUH_nEeS5IpkkkJsVew" name="expiryMonth">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_AdxfcH_nEeS5IpkkkJsVew" name="expiryYear">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_AdytkH_nEeS5IpkkkJsVew" name="firstName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ad1w4H_nEeS5IpkkkJsVew" name="lastName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe1XpsEeST-65JbGUt8g" name="getBillItems">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_VKmwUH_mEeS5IpkkkJsVew" name="billID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_h8GF0H_mEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_h8GF0X_mEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_h8GF0n_mEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe1npsEeST-65JbGUt8g" name="getBillBookable">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_VdvuwH_mEeS5IpkkkJsVew" name="billID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_j3A6YH_mEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe13psEeST-65JbGUt8g" name="getBillServices">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_VmcXwH_mEeS5IpkkkJsVew" name="billID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ijrqQH_mEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ijrqQX_mEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ijrqQn_mEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe2HpsEeST-65JbGUt8g" name="getBillIssueDate">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_WlKCwH_mEeS5IpkkkJsVew" name="billID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_mztVAH_mEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe2XpsEeST-65JbGUt8g" name="getBillPaymentType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Wz0J0H_mEeS5IpkkkJsVew" name="billID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pX2swH_mEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe2npsEeST-65JbGUt8g" name="payBillsWithCash">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ztJsoH_mEeS5IpkkkJsVew" name="bills">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0Sz-cH_mEeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0Sz-cX_mEeS5IpkkkJsVew" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe23psEeST-65JbGUt8g" name="sendInvoice">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_X7N2wH_mEeS5IpkkkJsVew" name="billID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xmKyAH_mEeS5IpkkkJsVew" name="email">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe3HpsEeST-65JbGUt8g" name="removeBill">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YVnTwH_mEeS5IpkkkJsVew" name="billID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_W63XkH_nEeS5IpkkkJsVew" name="getBillTotalAmount">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_agwgMH_nEeS5IpkkkJsVew" name="billID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_cr47AH_nEeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9Oe3XpsEeST-65JbGUt8g" name="BillsManager" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9Oe3npsEeST-65JbGUt8g" name="bill" visibility="private" type="_w9Oe6HpsEeST-65JbGUt8g" association="_w9OewnpsEeST-65JbGUt8g">

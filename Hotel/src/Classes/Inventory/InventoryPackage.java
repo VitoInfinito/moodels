@@ -137,7 +137,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IINVENTORY_ACCESS___SEARCH_ITEMS = 6;
+	int IINVENTORY_ACCESS___SEARCH_ITEMS__STRING = 6;
 
 	/**
 	 * The number of operations of the '<em>IInventory Access</em>' class.
@@ -228,7 +228,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_INVENTORY___SEARCH_ITEMS = IINVENTORY_ACCESS___SEARCH_ITEMS;
+	int IMANAGE_INVENTORY___SEARCH_ITEMS__STRING = IINVENTORY_ACCESS___SEARCH_ITEMS__STRING;
 
 	/**
 	 * The operation id for the '<em>Change Item Name</em>' operation.
@@ -373,7 +373,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVENTORY_MANAGER___SEARCH_ITEMS = IMANAGE_INVENTORY___SEARCH_ITEMS;
+	int INVENTORY_MANAGER___SEARCH_ITEMS__STRING = IMANAGE_INVENTORY___SEARCH_ITEMS__STRING;
 
 	/**
 	 * The operation id for the '<em>Change Item Name</em>' operation.
@@ -633,14 +633,14 @@ public interface InventoryPackage extends EPackage {
 	EOperation getIInventoryAccess__GetAllItemIDs();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.IInventoryAccess#searchItems() <em>Search Items</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Inventory.IInventoryAccess#searchItems(java.lang.String) <em>Search Items</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Items</em>' operation.
-	 * @see Classes.Inventory.IInventoryAccess#searchItems()
+	 * @see Classes.Inventory.IInventoryAccess#searchItems(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIInventoryAccess__SearchItems();
+	EOperation getIInventoryAccess__SearchItems__String();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Inventory.InventoryManager <em>Manager</em>}'.
@@ -865,7 +865,7 @@ public interface InventoryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IINVENTORY_ACCESS___SEARCH_ITEMS = eINSTANCE.getIInventoryAccess__SearchItems();
+		EOperation IINVENTORY_ACCESS___SEARCH_ITEMS__STRING = eINSTANCE.getIInventoryAccess__SearchItems__String();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Inventory.impl.InventoryManagerImpl <em>Manager</em>}' class.

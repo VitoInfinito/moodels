@@ -1006,6 +1006,9 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_rGLBMHi-EeS9MsZyYSaWPA" name="paymentDate" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
             </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_VdokkH_nEeS5IpkkkJsVew" name="totalAmount" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+            </ownedAttribute>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_7s9OMHcGEeS8a9tzu_DvHw" name="getIsPaid" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_8IFrAHcGEeS8a9tzu_DvHw" name="setIsPaid" visibility="package"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_8qX4sHcGEeS8a9tzu_DvHw" name="getPaymentType" visibility="package"/>

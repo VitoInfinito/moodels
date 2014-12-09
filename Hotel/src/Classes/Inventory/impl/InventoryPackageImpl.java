@@ -310,7 +310,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIInventoryAccess__SearchItems() {
+	public EOperation getIInventoryAccess__SearchItems__String() {
 		return iInventoryAccessEClass.getEOperations().get(6);
 	}
 
@@ -428,7 +428,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_STOCK__STRING);
 		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_EXPENSE__STRING);
 		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ALL_ITEM_IDS);
-		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___SEARCH_ITEMS);
+		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___SEARCH_ITEMS__STRING);
 
 		inventoryManagerEClass = createEClass(INVENTORY_MANAGER);
 		createEReference(inventoryManagerEClass, INVENTORY_MANAGER__ITEMS);
@@ -520,7 +520,8 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 
 		initEOperation(getIInventoryAccess__GetAllItemIDs(), theTypesPackage.getString(), "getAllItemIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIInventoryAccess__SearchItems(), null, "searchItems", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIInventoryAccess__SearchItems__String(), theTypesPackage.getString(), "searchItems", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(inventoryManagerEClass, InventoryManager.class, "InventoryManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInventoryManager_Items(), this.getItem(), null, "items", null, 0, -1, InventoryManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

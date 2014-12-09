@@ -311,7 +311,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBills__GetIsBillPaid() {
+	public EOperation getIBills__GetIsBillPaid__String() {
 		return iBillsEClass.getEOperations().get(0);
 	}
 
@@ -329,7 +329,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBills__GetBillPaymentDate() {
+	public EOperation getIBills__GetBillPaymentDate__String() {
 		return iBillsEClass.getEOperations().get(2);
 	}
 
@@ -347,7 +347,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBills__SearchBills() {
+	public EOperation getIBills__SearchBills__String() {
 		return iBillsEClass.getEOperations().get(4);
 	}
 
@@ -365,7 +365,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBills__AddBill() {
+	public EOperation getIBills__AddBill__EList_EList_String() {
 		return iBillsEClass.getEOperations().get(6);
 	}
 
@@ -374,7 +374,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBills__PayBillsWithCreditCard() {
+	public EOperation getIBills__PayBillsWithCreditCard__String_String_int_int_String_String() {
 		return iBillsEClass.getEOperations().get(7);
 	}
 
@@ -383,7 +383,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBills__GetBillItems() {
+	public EOperation getIBills__GetBillItems__String() {
 		return iBillsEClass.getEOperations().get(8);
 	}
 
@@ -392,7 +392,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBills__GetBillBookable() {
+	public EOperation getIBills__GetBillBookable__String() {
 		return iBillsEClass.getEOperations().get(9);
 	}
 
@@ -401,7 +401,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBills__GetBillServices() {
+	public EOperation getIBills__GetBillServices__String() {
 		return iBillsEClass.getEOperations().get(10);
 	}
 
@@ -410,7 +410,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBills__GetBillIssueDate() {
+	public EOperation getIBills__GetBillIssueDate__String() {
 		return iBillsEClass.getEOperations().get(11);
 	}
 
@@ -419,7 +419,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBills__GetBillPaymentType() {
+	public EOperation getIBills__GetBillPaymentType__String() {
 		return iBillsEClass.getEOperations().get(12);
 	}
 
@@ -428,7 +428,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBills__PayBillsWithCash() {
+	public EOperation getIBills__PayBillsWithCash__EList() {
 		return iBillsEClass.getEOperations().get(13);
 	}
 
@@ -437,7 +437,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBills__SendInvoice() {
+	public EOperation getIBills__SendInvoice__String_String() {
 		return iBillsEClass.getEOperations().get(14);
 	}
 
@@ -446,8 +446,17 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBills__RemoveBill() {
+	public EOperation getIBills__RemoveBill__String() {
 		return iBillsEClass.getEOperations().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBills__GetBillTotalAmount__String() {
+		return iBillsEClass.getEOperations().get(16);
 	}
 
 	/**
@@ -494,22 +503,23 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 		createEAttribute(billEClass, BILL__TOTAL_AMOUNT);
 
 		iBillsEClass = createEClass(IBILLS);
-		createEOperation(iBillsEClass, IBILLS___GET_IS_BILL_PAID);
+		createEOperation(iBillsEClass, IBILLS___GET_IS_BILL_PAID__STRING);
 		createEOperation(iBillsEClass, IBILLS___GET_ALL_BILLS_NOT_PAID);
-		createEOperation(iBillsEClass, IBILLS___GET_BILL_PAYMENT_DATE);
+		createEOperation(iBillsEClass, IBILLS___GET_BILL_PAYMENT_DATE__STRING);
 		createEOperation(iBillsEClass, IBILLS___GET_ALL_BILL_IDS);
-		createEOperation(iBillsEClass, IBILLS___SEARCH_BILLS);
+		createEOperation(iBillsEClass, IBILLS___SEARCH_BILLS__STRING);
 		createEOperation(iBillsEClass, IBILLS___GET_ALL_PAYED_BILLS);
-		createEOperation(iBillsEClass, IBILLS___ADD_BILL);
-		createEOperation(iBillsEClass, IBILLS___PAY_BILLS_WITH_CREDIT_CARD);
-		createEOperation(iBillsEClass, IBILLS___GET_BILL_ITEMS);
-		createEOperation(iBillsEClass, IBILLS___GET_BILL_BOOKABLE);
-		createEOperation(iBillsEClass, IBILLS___GET_BILL_SERVICES);
-		createEOperation(iBillsEClass, IBILLS___GET_BILL_ISSUE_DATE);
-		createEOperation(iBillsEClass, IBILLS___GET_BILL_PAYMENT_TYPE);
-		createEOperation(iBillsEClass, IBILLS___PAY_BILLS_WITH_CASH);
-		createEOperation(iBillsEClass, IBILLS___SEND_INVOICE);
-		createEOperation(iBillsEClass, IBILLS___REMOVE_BILL);
+		createEOperation(iBillsEClass, IBILLS___ADD_BILL__ELIST_ELIST_STRING);
+		createEOperation(iBillsEClass, IBILLS___PAY_BILLS_WITH_CREDIT_CARD__STRING_STRING_INT_INT_STRING_STRING);
+		createEOperation(iBillsEClass, IBILLS___GET_BILL_ITEMS__STRING);
+		createEOperation(iBillsEClass, IBILLS___GET_BILL_BOOKABLE__STRING);
+		createEOperation(iBillsEClass, IBILLS___GET_BILL_SERVICES__STRING);
+		createEOperation(iBillsEClass, IBILLS___GET_BILL_ISSUE_DATE__STRING);
+		createEOperation(iBillsEClass, IBILLS___GET_BILL_PAYMENT_TYPE__STRING);
+		createEOperation(iBillsEClass, IBILLS___PAY_BILLS_WITH_CASH__ELIST);
+		createEOperation(iBillsEClass, IBILLS___SEND_INVOICE__STRING_STRING);
+		createEOperation(iBillsEClass, IBILLS___REMOVE_BILL__STRING);
+		createEOperation(iBillsEClass, IBILLS___GET_BILL_TOTAL_AMOUNT__STRING);
 	}
 
 	/**
@@ -564,37 +574,61 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 
 		initEClass(iBillsEClass, IBills.class, "IBills", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getIBills__GetIsBillPaid(), null, "getIsBillPaid", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getIBills__GetIsBillPaid__String(), theTypesPackage.getBoolean(), "getIsBillPaid", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBills__GetAllBillsNotPaid(), null, "getAllBillsNotPaid", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIBills__GetAllBillsNotPaid(), theTypesPackage.getString(), "getAllBillsNotPaid", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBills__GetBillPaymentDate(), null, "getBillPaymentDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBills__GetBillPaymentDate__String(), ecorePackage.getEDate(), "getBillPaymentDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBills__GetAllBillIDs(), null, "getAllBillIDs", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIBills__GetAllBillIDs(), theTypesPackage.getString(), "getAllBillIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBills__SearchBills(), null, "searchBills", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBills__SearchBills__String(), theTypesPackage.getString(), "searchBills", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBills__GetAllPayedBills(), null, "getAllPayedBills", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIBills__GetAllPayedBills(), theTypesPackage.getString(), "getAllPayedBills", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBills__AddBill(), null, "addBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBills__AddBill__EList_EList_String(), null, "addBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "items", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "services", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBills__PayBillsWithCreditCard(), null, "payBillsWithCreditCard", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBills__PayBillsWithCreditCard__String_String_int_int_String_String(), null, "payBillsWithCreditCard", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBills__GetBillItems(), null, "getBillItems", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBills__GetBillItems__String(), theTypesPackage.getString(), "getBillItems", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBills__GetBillBookable(), null, "getBillBookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBills__GetBillBookable__String(), theTypesPackage.getString(), "getBillBookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBills__GetBillServices(), null, "getBillServices", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBills__GetBillServices__String(), theTypesPackage.getString(), "getBillServices", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBills__GetBillIssueDate(), null, "getBillIssueDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBills__GetBillIssueDate__String(), ecorePackage.getEDate(), "getBillIssueDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBills__GetBillPaymentType(), null, "getBillPaymentType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBills__GetBillPaymentType__String(), theTypesPackage.getString(), "getBillPaymentType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBills__PayBillsWithCash(), null, "payBillsWithCash", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBills__PayBillsWithCash__EList(), null, "payBillsWithCash", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bills", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBills__SendInvoice(), null, "sendInvoice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBills__SendInvoice__String_String(), null, "sendInvoice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIBills__RemoveBill(), null, "removeBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBills__RemoveBill__String(), null, "removeBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBills__GetBillTotalAmount__String(), ecorePackage.getEDouble(), "getBillTotalAmount", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

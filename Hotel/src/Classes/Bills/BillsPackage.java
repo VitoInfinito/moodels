@@ -83,7 +83,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBILLS___GET_IS_BILL_PAID = 0;
+	int IBILLS___GET_IS_BILL_PAID__STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Get All Bills Not Paid</em>' operation.
@@ -101,7 +101,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBILLS___GET_BILL_PAYMENT_DATE = 2;
+	int IBILLS___GET_BILL_PAYMENT_DATE__STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Get All Bill IDs</em>' operation.
@@ -119,7 +119,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBILLS___SEARCH_BILLS = 4;
+	int IBILLS___SEARCH_BILLS__STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Get All Payed Bills</em>' operation.
@@ -137,7 +137,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBILLS___ADD_BILL = 6;
+	int IBILLS___ADD_BILL__ELIST_ELIST_STRING = 6;
 
 	/**
 	 * The operation id for the '<em>Pay Bills With Credit Card</em>' operation.
@@ -146,7 +146,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBILLS___PAY_BILLS_WITH_CREDIT_CARD = 7;
+	int IBILLS___PAY_BILLS_WITH_CREDIT_CARD__STRING_STRING_INT_INT_STRING_STRING = 7;
 
 	/**
 	 * The operation id for the '<em>Get Bill Items</em>' operation.
@@ -155,7 +155,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBILLS___GET_BILL_ITEMS = 8;
+	int IBILLS___GET_BILL_ITEMS__STRING = 8;
 
 	/**
 	 * The operation id for the '<em>Get Bill Bookable</em>' operation.
@@ -164,7 +164,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBILLS___GET_BILL_BOOKABLE = 9;
+	int IBILLS___GET_BILL_BOOKABLE__STRING = 9;
 
 	/**
 	 * The operation id for the '<em>Get Bill Services</em>' operation.
@@ -173,7 +173,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBILLS___GET_BILL_SERVICES = 10;
+	int IBILLS___GET_BILL_SERVICES__STRING = 10;
 
 	/**
 	 * The operation id for the '<em>Get Bill Issue Date</em>' operation.
@@ -182,7 +182,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBILLS___GET_BILL_ISSUE_DATE = 11;
+	int IBILLS___GET_BILL_ISSUE_DATE__STRING = 11;
 
 	/**
 	 * The operation id for the '<em>Get Bill Payment Type</em>' operation.
@@ -191,7 +191,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBILLS___GET_BILL_PAYMENT_TYPE = 12;
+	int IBILLS___GET_BILL_PAYMENT_TYPE__STRING = 12;
 
 	/**
 	 * The operation id for the '<em>Pay Bills With Cash</em>' operation.
@@ -200,7 +200,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBILLS___PAY_BILLS_WITH_CASH = 13;
+	int IBILLS___PAY_BILLS_WITH_CASH__ELIST = 13;
 
 	/**
 	 * The operation id for the '<em>Send Invoice</em>' operation.
@@ -209,7 +209,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBILLS___SEND_INVOICE = 14;
+	int IBILLS___SEND_INVOICE__STRING_STRING = 14;
 
 	/**
 	 * The operation id for the '<em>Remove Bill</em>' operation.
@@ -218,7 +218,16 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBILLS___REMOVE_BILL = 15;
+	int IBILLS___REMOVE_BILL__STRING = 15;
+
+	/**
+	 * The operation id for the '<em>Get Bill Total Amount</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBILLS___GET_BILL_TOTAL_AMOUNT__STRING = 16;
 
 	/**
 	 * The number of operations of the '<em>IBills</em>' class.
@@ -227,7 +236,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBILLS_OPERATION_COUNT = 16;
+	int IBILLS_OPERATION_COUNT = 17;
 
 	/**
 	 * The meta object id for the '{@link Classes.Bills.impl.BillsManagerImpl <em>Manager</em>}' class.
@@ -273,7 +282,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER___GET_IS_BILL_PAID = IBILLS___GET_IS_BILL_PAID;
+	int BILLS_MANAGER___GET_IS_BILL_PAID__STRING = IBILLS___GET_IS_BILL_PAID__STRING;
 
 	/**
 	 * The operation id for the '<em>Get All Bills Not Paid</em>' operation.
@@ -291,7 +300,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER___GET_BILL_PAYMENT_DATE = IBILLS___GET_BILL_PAYMENT_DATE;
+	int BILLS_MANAGER___GET_BILL_PAYMENT_DATE__STRING = IBILLS___GET_BILL_PAYMENT_DATE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get All Bill IDs</em>' operation.
@@ -309,7 +318,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER___SEARCH_BILLS = IBILLS___SEARCH_BILLS;
+	int BILLS_MANAGER___SEARCH_BILLS__STRING = IBILLS___SEARCH_BILLS__STRING;
 
 	/**
 	 * The operation id for the '<em>Get All Payed Bills</em>' operation.
@@ -327,7 +336,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER___ADD_BILL = IBILLS___ADD_BILL;
+	int BILLS_MANAGER___ADD_BILL__ELIST_ELIST_STRING = IBILLS___ADD_BILL__ELIST_ELIST_STRING;
 
 	/**
 	 * The operation id for the '<em>Pay Bills With Credit Card</em>' operation.
@@ -336,7 +345,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER___PAY_BILLS_WITH_CREDIT_CARD = IBILLS___PAY_BILLS_WITH_CREDIT_CARD;
+	int BILLS_MANAGER___PAY_BILLS_WITH_CREDIT_CARD__STRING_STRING_INT_INT_STRING_STRING = IBILLS___PAY_BILLS_WITH_CREDIT_CARD__STRING_STRING_INT_INT_STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Get Bill Items</em>' operation.
@@ -345,7 +354,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER___GET_BILL_ITEMS = IBILLS___GET_BILL_ITEMS;
+	int BILLS_MANAGER___GET_BILL_ITEMS__STRING = IBILLS___GET_BILL_ITEMS__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Bill Bookable</em>' operation.
@@ -354,7 +363,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER___GET_BILL_BOOKABLE = IBILLS___GET_BILL_BOOKABLE;
+	int BILLS_MANAGER___GET_BILL_BOOKABLE__STRING = IBILLS___GET_BILL_BOOKABLE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Bill Services</em>' operation.
@@ -363,7 +372,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER___GET_BILL_SERVICES = IBILLS___GET_BILL_SERVICES;
+	int BILLS_MANAGER___GET_BILL_SERVICES__STRING = IBILLS___GET_BILL_SERVICES__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Bill Issue Date</em>' operation.
@@ -372,7 +381,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER___GET_BILL_ISSUE_DATE = IBILLS___GET_BILL_ISSUE_DATE;
+	int BILLS_MANAGER___GET_BILL_ISSUE_DATE__STRING = IBILLS___GET_BILL_ISSUE_DATE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Bill Payment Type</em>' operation.
@@ -381,7 +390,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER___GET_BILL_PAYMENT_TYPE = IBILLS___GET_BILL_PAYMENT_TYPE;
+	int BILLS_MANAGER___GET_BILL_PAYMENT_TYPE__STRING = IBILLS___GET_BILL_PAYMENT_TYPE__STRING;
 
 	/**
 	 * The operation id for the '<em>Pay Bills With Cash</em>' operation.
@@ -390,7 +399,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER___PAY_BILLS_WITH_CASH = IBILLS___PAY_BILLS_WITH_CASH;
+	int BILLS_MANAGER___PAY_BILLS_WITH_CASH__ELIST = IBILLS___PAY_BILLS_WITH_CASH__ELIST;
 
 	/**
 	 * The operation id for the '<em>Send Invoice</em>' operation.
@@ -399,7 +408,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER___SEND_INVOICE = IBILLS___SEND_INVOICE;
+	int BILLS_MANAGER___SEND_INVOICE__STRING_STRING = IBILLS___SEND_INVOICE__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Remove Bill</em>' operation.
@@ -408,7 +417,16 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER___REMOVE_BILL = IBILLS___REMOVE_BILL;
+	int BILLS_MANAGER___REMOVE_BILL__STRING = IBILLS___REMOVE_BILL__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Bill Total Amount</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILLS_MANAGER___GET_BILL_TOTAL_AMOUNT__STRING = IBILLS___GET_BILL_TOTAL_AMOUNT__STRING;
 
 	/**
 	 * The number of operations of the '<em>Manager</em>' class.
@@ -681,14 +699,14 @@ public interface BillsPackage extends EPackage {
 	EClass getIBills();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bills.IBills#getIsBillPaid() <em>Get Is Bill Paid</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bills.IBills#getIsBillPaid(java.lang.String) <em>Get Is Bill Paid</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Is Bill Paid</em>' operation.
-	 * @see Classes.Bills.IBills#getIsBillPaid()
+	 * @see Classes.Bills.IBills#getIsBillPaid(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBills__GetIsBillPaid();
+	EOperation getIBills__GetIsBillPaid__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Bills.IBills#getAllBillsNotPaid() <em>Get All Bills Not Paid</em>}' operation.
@@ -701,14 +719,14 @@ public interface BillsPackage extends EPackage {
 	EOperation getIBills__GetAllBillsNotPaid();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bills.IBills#getBillPaymentDate() <em>Get Bill Payment Date</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bills.IBills#getBillPaymentDate(java.lang.String) <em>Get Bill Payment Date</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Bill Payment Date</em>' operation.
-	 * @see Classes.Bills.IBills#getBillPaymentDate()
+	 * @see Classes.Bills.IBills#getBillPaymentDate(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBills__GetBillPaymentDate();
+	EOperation getIBills__GetBillPaymentDate__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Bills.IBills#getAllBillIDs() <em>Get All Bill IDs</em>}' operation.
@@ -721,14 +739,14 @@ public interface BillsPackage extends EPackage {
 	EOperation getIBills__GetAllBillIDs();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bills.IBills#searchBills() <em>Search Bills</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bills.IBills#searchBills(java.lang.String) <em>Search Bills</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Bills</em>' operation.
-	 * @see Classes.Bills.IBills#searchBills()
+	 * @see Classes.Bills.IBills#searchBills(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBills__SearchBills();
+	EOperation getIBills__SearchBills__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Bills.IBills#getAllPayedBills() <em>Get All Payed Bills</em>}' operation.
@@ -741,104 +759,114 @@ public interface BillsPackage extends EPackage {
 	EOperation getIBills__GetAllPayedBills();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bills.IBills#addBill() <em>Add Bill</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bills.IBills#addBill(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, java.lang.String) <em>Add Bill</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Bill</em>' operation.
-	 * @see Classes.Bills.IBills#addBill()
+	 * @see Classes.Bills.IBills#addBill(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBills__AddBill();
+	EOperation getIBills__AddBill__EList_EList_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bills.IBills#payBillsWithCreditCard() <em>Pay Bills With Credit Card</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bills.IBills#payBillsWithCreditCard(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Pay Bills With Credit Card</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Pay Bills With Credit Card</em>' operation.
-	 * @see Classes.Bills.IBills#payBillsWithCreditCard()
+	 * @see Classes.Bills.IBills#payBillsWithCreditCard(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBills__PayBillsWithCreditCard();
+	EOperation getIBills__PayBillsWithCreditCard__String_String_int_int_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bills.IBills#getBillItems() <em>Get Bill Items</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bills.IBills#getBillItems(java.lang.String) <em>Get Bill Items</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Bill Items</em>' operation.
-	 * @see Classes.Bills.IBills#getBillItems()
+	 * @see Classes.Bills.IBills#getBillItems(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBills__GetBillItems();
+	EOperation getIBills__GetBillItems__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bills.IBills#getBillBookable() <em>Get Bill Bookable</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bills.IBills#getBillBookable(java.lang.String) <em>Get Bill Bookable</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Bill Bookable</em>' operation.
-	 * @see Classes.Bills.IBills#getBillBookable()
+	 * @see Classes.Bills.IBills#getBillBookable(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBills__GetBillBookable();
+	EOperation getIBills__GetBillBookable__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bills.IBills#getBillServices() <em>Get Bill Services</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bills.IBills#getBillServices(java.lang.String) <em>Get Bill Services</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Bill Services</em>' operation.
-	 * @see Classes.Bills.IBills#getBillServices()
+	 * @see Classes.Bills.IBills#getBillServices(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBills__GetBillServices();
+	EOperation getIBills__GetBillServices__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bills.IBills#getBillIssueDate() <em>Get Bill Issue Date</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bills.IBills#getBillIssueDate(java.lang.String) <em>Get Bill Issue Date</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Bill Issue Date</em>' operation.
-	 * @see Classes.Bills.IBills#getBillIssueDate()
+	 * @see Classes.Bills.IBills#getBillIssueDate(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBills__GetBillIssueDate();
+	EOperation getIBills__GetBillIssueDate__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bills.IBills#getBillPaymentType() <em>Get Bill Payment Type</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bills.IBills#getBillPaymentType(java.lang.String) <em>Get Bill Payment Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Bill Payment Type</em>' operation.
-	 * @see Classes.Bills.IBills#getBillPaymentType()
+	 * @see Classes.Bills.IBills#getBillPaymentType(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBills__GetBillPaymentType();
+	EOperation getIBills__GetBillPaymentType__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bills.IBills#payBillsWithCash() <em>Pay Bills With Cash</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bills.IBills#payBillsWithCash(org.eclipse.emf.common.util.EList) <em>Pay Bills With Cash</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Pay Bills With Cash</em>' operation.
-	 * @see Classes.Bills.IBills#payBillsWithCash()
+	 * @see Classes.Bills.IBills#payBillsWithCash(org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getIBills__PayBillsWithCash();
+	EOperation getIBills__PayBillsWithCash__EList();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bills.IBills#sendInvoice() <em>Send Invoice</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bills.IBills#sendInvoice(java.lang.String, java.lang.String) <em>Send Invoice</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Send Invoice</em>' operation.
-	 * @see Classes.Bills.IBills#sendInvoice()
+	 * @see Classes.Bills.IBills#sendInvoice(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBills__SendInvoice();
+	EOperation getIBills__SendInvoice__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bills.IBills#removeBill() <em>Remove Bill</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bills.IBills#removeBill(java.lang.String) <em>Remove Bill</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Bill</em>' operation.
-	 * @see Classes.Bills.IBills#removeBill()
+	 * @see Classes.Bills.IBills#removeBill(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBills__RemoveBill();
+	EOperation getIBills__RemoveBill__String();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Bills.IBills#getBillTotalAmount(java.lang.String) <em>Get Bill Total Amount</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Bill Total Amount</em>' operation.
+	 * @see Classes.Bills.IBills#getBillTotalAmount(java.lang.String)
+	 * @generated
+	 */
+	EOperation getIBills__GetBillTotalAmount__String();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -987,7 +1015,7 @@ public interface BillsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBILLS___GET_IS_BILL_PAID = eINSTANCE.getIBills__GetIsBillPaid();
+		EOperation IBILLS___GET_IS_BILL_PAID__STRING = eINSTANCE.getIBills__GetIsBillPaid__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get All Bills Not Paid</b></em>' operation.
@@ -1003,7 +1031,7 @@ public interface BillsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBILLS___GET_BILL_PAYMENT_DATE = eINSTANCE.getIBills__GetBillPaymentDate();
+		EOperation IBILLS___GET_BILL_PAYMENT_DATE__STRING = eINSTANCE.getIBills__GetBillPaymentDate__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get All Bill IDs</b></em>' operation.
@@ -1019,7 +1047,7 @@ public interface BillsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBILLS___SEARCH_BILLS = eINSTANCE.getIBills__SearchBills();
+		EOperation IBILLS___SEARCH_BILLS__STRING = eINSTANCE.getIBills__SearchBills__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get All Payed Bills</b></em>' operation.
@@ -1035,7 +1063,7 @@ public interface BillsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBILLS___ADD_BILL = eINSTANCE.getIBills__AddBill();
+		EOperation IBILLS___ADD_BILL__ELIST_ELIST_STRING = eINSTANCE.getIBills__AddBill__EList_EList_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Pay Bills With Credit Card</b></em>' operation.
@@ -1043,7 +1071,7 @@ public interface BillsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBILLS___PAY_BILLS_WITH_CREDIT_CARD = eINSTANCE.getIBills__PayBillsWithCreditCard();
+		EOperation IBILLS___PAY_BILLS_WITH_CREDIT_CARD__STRING_STRING_INT_INT_STRING_STRING = eINSTANCE.getIBills__PayBillsWithCreditCard__String_String_int_int_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Bill Items</b></em>' operation.
@@ -1051,7 +1079,7 @@ public interface BillsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBILLS___GET_BILL_ITEMS = eINSTANCE.getIBills__GetBillItems();
+		EOperation IBILLS___GET_BILL_ITEMS__STRING = eINSTANCE.getIBills__GetBillItems__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Bill Bookable</b></em>' operation.
@@ -1059,7 +1087,7 @@ public interface BillsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBILLS___GET_BILL_BOOKABLE = eINSTANCE.getIBills__GetBillBookable();
+		EOperation IBILLS___GET_BILL_BOOKABLE__STRING = eINSTANCE.getIBills__GetBillBookable__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Bill Services</b></em>' operation.
@@ -1067,7 +1095,7 @@ public interface BillsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBILLS___GET_BILL_SERVICES = eINSTANCE.getIBills__GetBillServices();
+		EOperation IBILLS___GET_BILL_SERVICES__STRING = eINSTANCE.getIBills__GetBillServices__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Bill Issue Date</b></em>' operation.
@@ -1075,7 +1103,7 @@ public interface BillsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBILLS___GET_BILL_ISSUE_DATE = eINSTANCE.getIBills__GetBillIssueDate();
+		EOperation IBILLS___GET_BILL_ISSUE_DATE__STRING = eINSTANCE.getIBills__GetBillIssueDate__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Bill Payment Type</b></em>' operation.
@@ -1083,7 +1111,7 @@ public interface BillsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBILLS___GET_BILL_PAYMENT_TYPE = eINSTANCE.getIBills__GetBillPaymentType();
+		EOperation IBILLS___GET_BILL_PAYMENT_TYPE__STRING = eINSTANCE.getIBills__GetBillPaymentType__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Pay Bills With Cash</b></em>' operation.
@@ -1091,7 +1119,7 @@ public interface BillsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBILLS___PAY_BILLS_WITH_CASH = eINSTANCE.getIBills__PayBillsWithCash();
+		EOperation IBILLS___PAY_BILLS_WITH_CASH__ELIST = eINSTANCE.getIBills__PayBillsWithCash__EList();
 
 		/**
 		 * The meta object literal for the '<em><b>Send Invoice</b></em>' operation.
@@ -1099,7 +1127,7 @@ public interface BillsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBILLS___SEND_INVOICE = eINSTANCE.getIBills__SendInvoice();
+		EOperation IBILLS___SEND_INVOICE__STRING_STRING = eINSTANCE.getIBills__SendInvoice__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Bill</b></em>' operation.
@@ -1107,7 +1135,15 @@ public interface BillsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBILLS___REMOVE_BILL = eINSTANCE.getIBills__RemoveBill();
+		EOperation IBILLS___REMOVE_BILL__STRING = eINSTANCE.getIBills__RemoveBill__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Bill Total Amount</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBILLS___GET_BILL_TOTAL_AMOUNT__STRING = eINSTANCE.getIBills__GetBillTotalAmount__String();
 
 	}
 

@@ -6153,6 +6153,10 @@
           <element xmi:type="uml:Property" href="model.uml#_rGLBMHi-EeS9MsZyYSaWPA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_rGLBMni-EeS9MsZyYSaWPA"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_Vd5DQH_nEeS5IpkkkJsVew" type="3012">
+          <element xmi:type="uml:Property" href="model.uml#_VdokkH_nEeS5IpkkkJsVew"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Vd5DQX_nEeS5IpkkkJsVew"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_n3SERHcGEeS8a9tzu_DvHw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_n3SERXcGEeS8a9tzu_DvHw"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_n3SERncGEeS8a9tzu_DvHw"/>

@@ -9,6 +9,7 @@ import Classes.Bills.BillsPackage;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToBillMapImpl;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -130,7 +131,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getIsBillPaid() {
+	public boolean getIsBillPaid(String billID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -141,7 +142,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllBillsNotPaid() {
+	public EList<String> getAllBillsNotPaid() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -152,7 +153,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBillPaymentDate() {
+	public Date getBillPaymentDate(String billID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -163,7 +164,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllBillIDs() {
+	public EList<String> getAllBillIDs() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -174,7 +175,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchBills() {
+	public EList<String> searchBills(String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -185,7 +186,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllPayedBills() {
+	public EList<String> getAllPayedBills() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -196,7 +197,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addBill() {
+	public void addBill(EList<String> items, EList<String> services, String bookable) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -207,7 +208,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void payBillsWithCreditCard() {
+	public void payBillsWithCreditCard(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -218,7 +219,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBillItems() {
+	public EList<String> getBillItems(String billID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -229,7 +230,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBillBookable() {
+	public String getBillBookable(String billID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -240,7 +241,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBillServices() {
+	public EList<String> getBillServices(String billID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -251,7 +252,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBillIssueDate() {
+	public Date getBillIssueDate(String billID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -262,7 +263,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBillPaymentType() {
+	public String getBillPaymentType(String billID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -273,7 +274,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void payBillsWithCash() {
+	public void payBillsWithCash(EList<String> bills) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -284,7 +285,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void sendInvoice() {
+	public void sendInvoice(String billID, String email) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -295,7 +296,18 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeBill() {
+	public void removeBill(String billID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public double getBillTotalAmount(String billID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -392,56 +404,48 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BillsPackage.BILLS_MANAGER___GET_IS_BILL_PAID:
-				getIsBillPaid();
-				return null;
+			case BillsPackage.BILLS_MANAGER___GET_IS_BILL_PAID__STRING:
+				return getIsBillPaid((String)arguments.get(0));
 			case BillsPackage.BILLS_MANAGER___GET_ALL_BILLS_NOT_PAID:
-				getAllBillsNotPaid();
-				return null;
-			case BillsPackage.BILLS_MANAGER___GET_BILL_PAYMENT_DATE:
-				getBillPaymentDate();
-				return null;
+				return getAllBillsNotPaid();
+			case BillsPackage.BILLS_MANAGER___GET_BILL_PAYMENT_DATE__STRING:
+				return getBillPaymentDate((String)arguments.get(0));
 			case BillsPackage.BILLS_MANAGER___GET_ALL_BILL_IDS:
-				getAllBillIDs();
-				return null;
-			case BillsPackage.BILLS_MANAGER___SEARCH_BILLS:
-				searchBills();
-				return null;
+				return getAllBillIDs();
+			case BillsPackage.BILLS_MANAGER___SEARCH_BILLS__STRING:
+				return searchBills((String)arguments.get(0));
 			case BillsPackage.BILLS_MANAGER___GET_ALL_PAYED_BILLS:
-				getAllPayedBills();
+				return getAllPayedBills();
+			case BillsPackage.BILLS_MANAGER___ADD_BILL__ELIST_ELIST_STRING:
+				addBill((EList<String>)arguments.get(0), (EList<String>)arguments.get(1), (String)arguments.get(2));
 				return null;
-			case BillsPackage.BILLS_MANAGER___ADD_BILL:
-				addBill();
+			case BillsPackage.BILLS_MANAGER___PAY_BILLS_WITH_CREDIT_CARD__STRING_STRING_INT_INT_STRING_STRING:
+				payBillsWithCreditCard((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
 				return null;
-			case BillsPackage.BILLS_MANAGER___PAY_BILLS_WITH_CREDIT_CARD:
-				payBillsWithCreditCard();
+			case BillsPackage.BILLS_MANAGER___GET_BILL_ITEMS__STRING:
+				return getBillItems((String)arguments.get(0));
+			case BillsPackage.BILLS_MANAGER___GET_BILL_BOOKABLE__STRING:
+				return getBillBookable((String)arguments.get(0));
+			case BillsPackage.BILLS_MANAGER___GET_BILL_SERVICES__STRING:
+				return getBillServices((String)arguments.get(0));
+			case BillsPackage.BILLS_MANAGER___GET_BILL_ISSUE_DATE__STRING:
+				return getBillIssueDate((String)arguments.get(0));
+			case BillsPackage.BILLS_MANAGER___GET_BILL_PAYMENT_TYPE__STRING:
+				return getBillPaymentType((String)arguments.get(0));
+			case BillsPackage.BILLS_MANAGER___PAY_BILLS_WITH_CASH__ELIST:
+				payBillsWithCash((EList<String>)arguments.get(0));
 				return null;
-			case BillsPackage.BILLS_MANAGER___GET_BILL_ITEMS:
-				getBillItems();
+			case BillsPackage.BILLS_MANAGER___SEND_INVOICE__STRING_STRING:
+				sendInvoice((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case BillsPackage.BILLS_MANAGER___GET_BILL_BOOKABLE:
-				getBillBookable();
+			case BillsPackage.BILLS_MANAGER___REMOVE_BILL__STRING:
+				removeBill((String)arguments.get(0));
 				return null;
-			case BillsPackage.BILLS_MANAGER___GET_BILL_SERVICES:
-				getBillServices();
-				return null;
-			case BillsPackage.BILLS_MANAGER___GET_BILL_ISSUE_DATE:
-				getBillIssueDate();
-				return null;
-			case BillsPackage.BILLS_MANAGER___GET_BILL_PAYMENT_TYPE:
-				getBillPaymentType();
-				return null;
-			case BillsPackage.BILLS_MANAGER___PAY_BILLS_WITH_CASH:
-				payBillsWithCash();
-				return null;
-			case BillsPackage.BILLS_MANAGER___SEND_INVOICE:
-				sendInvoice();
-				return null;
-			case BillsPackage.BILLS_MANAGER___REMOVE_BILL:
-				removeBill();
-				return null;
+			case BillsPackage.BILLS_MANAGER___GET_BILL_TOTAL_AMOUNT__STRING:
+				return getBillTotalAmount((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

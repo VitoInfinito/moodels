@@ -157,7 +157,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchItems() {
+	public EList<String> searchItems(String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -322,9 +322,8 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 				return getItemExpense((String)arguments.get(0));
 			case InventoryPackage.INVENTORY_MANAGER___GET_ALL_ITEM_IDS:
 				return getAllItemIDs();
-			case InventoryPackage.INVENTORY_MANAGER___SEARCH_ITEMS:
-				searchItems();
-				return null;
+			case InventoryPackage.INVENTORY_MANAGER___SEARCH_ITEMS__STRING:
+				return searchItems((String)arguments.get(0));
 			case InventoryPackage.INVENTORY_MANAGER___CHANGE_ITEM_NAME__STRING_STRING:
 				changeItemName((String)arguments.get(0), (String)arguments.get(1));
 				return null;
