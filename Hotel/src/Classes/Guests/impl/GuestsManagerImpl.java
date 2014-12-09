@@ -130,7 +130,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllGuests() {
+	public EList<String> getAllGuests() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -141,7 +141,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addGuest() {
+	public void addGuest(String SSID, String firstname, String lastname, String title, String email, String phone) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -265,7 +265,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchGuests() {
+	public EList<String> searchGuests(String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -276,7 +276,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getGuestStays(String SSID) {
+	public EList<String> getGuestStays(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -287,7 +287,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getGuestRequests(String SSID) {
+	public EList<String> getGuestRequests(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -298,7 +298,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeGuestStay() {
+	public void removeGuestStay(String SSID, String stayID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -309,7 +309,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addGuestRequest() {
+	public void addGuestRequest(String SSID, String requestID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -320,7 +320,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeGuestRequest() {
+	public void removeGuestRequest(String SSID, String requestID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -331,7 +331,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getGuestAccountUsername(String SSID) {
+	public String getGuestAccountUsername(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -342,7 +342,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getGuestAccountPassword(String SSID) {
+	public String getGuestAccountPassword(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -353,7 +353,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void generateGuestAccount() {
+	public void generateGuestAccount(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -364,7 +364,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeGuestAccount() {
+	public void removeGuestAccount(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -464,10 +464,9 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case GuestsPackage.GUESTS_MANAGER___GET_ALL_GUESTS:
-				getAllGuests();
-				return null;
-			case GuestsPackage.GUESTS_MANAGER___ADD_GUEST:
-				addGuest();
+				return getAllGuests();
+			case GuestsPackage.GUESTS_MANAGER___ADD_GUEST__STRING_STRING_STRING_STRING_STRING_STRING:
+				addGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
 				return null;
 			case GuestsPackage.GUESTS_MANAGER___CHANGE_GUEST_FIRST_NAME__STRING_STRING:
 				changeGuestFirstName((String)arguments.get(0), (String)arguments.get(1));
@@ -494,35 +493,30 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 				return getGuestEmail((String)arguments.get(0));
 			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_PHONE__STRING:
 				return getGuestPhone((String)arguments.get(0));
-			case GuestsPackage.GUESTS_MANAGER___SEARCH_GUESTS:
-				searchGuests();
-				return null;
+			case GuestsPackage.GUESTS_MANAGER___SEARCH_GUESTS__STRING:
+				return searchGuests((String)arguments.get(0));
 			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_STAYS__STRING:
-				getGuestStays((String)arguments.get(0));
-				return null;
+				return getGuestStays((String)arguments.get(0));
 			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_REQUESTS__STRING:
-				getGuestRequests((String)arguments.get(0));
+				return getGuestRequests((String)arguments.get(0));
+			case GuestsPackage.GUESTS_MANAGER___REMOVE_GUEST_STAY__STRING_STRING:
+				removeGuestStay((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case GuestsPackage.GUESTS_MANAGER___REMOVE_GUEST_STAY:
-				removeGuestStay();
+			case GuestsPackage.GUESTS_MANAGER___ADD_GUEST_REQUEST__STRING_STRING:
+				addGuestRequest((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case GuestsPackage.GUESTS_MANAGER___ADD_GUEST_REQUEST:
-				addGuestRequest();
-				return null;
-			case GuestsPackage.GUESTS_MANAGER___REMOVE_GUEST_REQUEST:
-				removeGuestRequest();
+			case GuestsPackage.GUESTS_MANAGER___REMOVE_GUEST_REQUEST__STRING_STRING:
+				removeGuestRequest((String)arguments.get(0), (String)arguments.get(1));
 				return null;
 			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_ACCOUNT_USERNAME__STRING:
-				getGuestAccountUsername((String)arguments.get(0));
-				return null;
+				return getGuestAccountUsername((String)arguments.get(0));
 			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_ACCOUNT_PASSWORD__STRING:
-				getGuestAccountPassword((String)arguments.get(0));
+				return getGuestAccountPassword((String)arguments.get(0));
+			case GuestsPackage.GUESTS_MANAGER___GENERATE_GUEST_ACCOUNT__STRING:
+				generateGuestAccount((String)arguments.get(0));
 				return null;
-			case GuestsPackage.GUESTS_MANAGER___GENERATE_GUEST_ACCOUNT:
-				generateGuestAccount();
-				return null;
-			case GuestsPackage.GUESTS_MANAGER___REMOVE_GUEST_ACCOUNT:
-				removeGuestAccount();
+			case GuestsPackage.GUESTS_MANAGER___REMOVE_GUEST_ACCOUNT__STRING:
+				removeGuestAccount((String)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

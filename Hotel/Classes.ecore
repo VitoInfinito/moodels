@@ -436,8 +436,15 @@
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IGuests" abstract="true" interface="true">
-      <eOperations name="getAllGuests" ordered="false" lowerBound="1"/>
-      <eOperations name="addGuest" ordered="false" lowerBound="1"/>
+      <eOperations name="getAllGuests" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="addGuest" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="firstname" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="lastname" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="title" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="phone" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eOperations name="changeGuestFirstName" ordered="false" lowerBound="1">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
@@ -473,24 +480,39 @@
       <eOperations name="getGuestPhone" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="searchGuests" ordered="false" lowerBound="1"/>
-      <eOperations name="getGuestStays" ordered="false" lowerBound="1">
+      <eOperations name="searchGuests" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getGuestStays" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getGuestRequests" ordered="false" lowerBound="1">
+      <eOperations name="getGuestRequests" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="removeGuestStay" ordered="false" lowerBound="1"/>
-      <eOperations name="addGuestRequest" ordered="false" lowerBound="1"/>
-      <eOperations name="removeGuestRequest" ordered="false" lowerBound="1"/>
-      <eOperations name="getGuestAccountUsername" ordered="false" lowerBound="1">
+      <eOperations name="removeGuestStay" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="stayID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="addGuestRequest" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="requestID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="removeGuestRequest" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="requestID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="getGuestAccountUsername" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="getGuestAccountPassword" ordered="false" lowerBound="1">
+      <eOperations name="getGuestAccountPassword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="generateGuestAccount" ordered="false" lowerBound="1"/>
-      <eOperations name="removeGuestAccount" ordered="false" lowerBound="1"/>
+      <eOperations name="generateGuestAccount" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="removeGuestAccount" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="Accounts" nsURI="http:///Classes/Accounts.ecore" nsPrefix="Classes.Accounts">
