@@ -11,6 +11,7 @@ import Classes.Services.Service;
 import Classes.Services.ServiceManager;
 import Classes.Services.ServicesPackage;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -36,7 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </ul>
  * </p>
  *
- * @generated NOT
+ * @generated
  */
 public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements ServiceManager {
 	/**
@@ -155,7 +156,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllServiceIDs() {
+	public EList<String> getAllServiceIDs() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -166,7 +167,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllRoomServiceOrderIDs() {
+	public EList<String> getAllRoomServiceOrderIDs() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -177,7 +178,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchServices() {
+	public EList<String> searchServices(String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -188,7 +189,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchRoomServiceOrders() {
+	public EList<String> searchRoomServiceOrders(String keyword) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -199,7 +200,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getServiceName() {
+	public String getServiceName(String serviceID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -210,7 +211,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getServicePrice() {
+	public double getServicePrice(String serviceID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -221,7 +222,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getServiceExpense() {
+	public double getServiceExpense(String serviceID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -232,7 +233,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void isRSODelivered() {
+	public boolean isRSODelivered(String orderID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -243,7 +244,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getRSODeliveryDate() {
+	public Date getRSODeliveryDate(String orderID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -254,7 +255,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getRSOBookable() {
+	public String getRSOBookable(String orderID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -265,7 +266,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getRSOItems() {
+	public EList<String> getRSOItems(String orderID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -276,7 +277,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getRSOServices() {
+	public EList<String> getRSOServices(String orderID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -287,7 +288,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeRSOISDelivered() {
+	public void changeRSOISDelivered(String orderID, boolean isDelivered) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -298,7 +299,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeRSODeliveryDate() {
+	public void changeRSODeliveryDate(String orderID, Date date) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -309,7 +310,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getRoomServiceMenuName() {
+	public String getRoomServiceMenuName() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -320,7 +321,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getRoomServiceMenuItems() {
+	public EList<String> getRoomServiceMenuItems() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -331,7 +332,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getRoomServiceMenuInformation() {
+	public void setRSOBill(String orderID, String billID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -342,7 +343,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRSOBill() {
+	public String getRSOBill(String orderID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -353,7 +354,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getRSOBill() {
+	public void makeRoomServiceOrder(EList<String> items, EList<String> services, String bill, String bookable, Date deliveryDate, boolean isDelivered) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -364,7 +365,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void makeRoomServiceOrder() {
+	public void changeServiceName(String serviceID, String name) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -375,7 +376,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeServiceName() {
+	public void changeServicePrice(String serviceID, double price) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -386,7 +387,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeServicePrice() {
+	public void changeServiceExpense(String serviceID, double expense) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -397,7 +398,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeServiceExpense() {
+	public void addRoomServiceMenuItem(String itemID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -408,7 +409,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addRoomServiceMenuItem() {
+	public void removeRoomServiceMenuItem(String itemID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -419,7 +420,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeRoomServiceMenuItem() {
+	public void changeRoomServiceMenuName(String name) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -430,18 +431,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeRoomServiceMenuItem() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void changeRoomServiceMenuName() {
+	public void addService(String name, double price, double expense) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -551,88 +541,71 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case ServicesPackage.SERVICE_MANAGER___GET_ALL_SERVICE_IDS:
-				getAllServiceIDs();
-				return null;
+				return getAllServiceIDs();
 			case ServicesPackage.SERVICE_MANAGER___GET_ALL_ROOM_SERVICE_ORDER_IDS:
-				getAllRoomServiceOrderIDs();
+				return getAllRoomServiceOrderIDs();
+			case ServicesPackage.SERVICE_MANAGER___SEARCH_SERVICES__STRING:
+				return searchServices((String)arguments.get(0));
+			case ServicesPackage.SERVICE_MANAGER___SEARCH_ROOM_SERVICE_ORDERS__STRING:
+				return searchRoomServiceOrders((String)arguments.get(0));
+			case ServicesPackage.SERVICE_MANAGER___GET_SERVICE_NAME__STRING:
+				return getServiceName((String)arguments.get(0));
+			case ServicesPackage.SERVICE_MANAGER___GET_SERVICE_PRICE__STRING:
+				return getServicePrice((String)arguments.get(0));
+			case ServicesPackage.SERVICE_MANAGER___GET_SERVICE_EXPENSE__STRING:
+				return getServiceExpense((String)arguments.get(0));
+			case ServicesPackage.SERVICE_MANAGER___IS_RSO_DELIVERED__STRING:
+				return isRSODelivered((String)arguments.get(0));
+			case ServicesPackage.SERVICE_MANAGER___GET_RSO_DELIVERY_DATE__STRING:
+				return getRSODeliveryDate((String)arguments.get(0));
+			case ServicesPackage.SERVICE_MANAGER___GET_RSO_BOOKABLE__STRING:
+				return getRSOBookable((String)arguments.get(0));
+			case ServicesPackage.SERVICE_MANAGER___GET_RSO_ITEMS__STRING:
+				return getRSOItems((String)arguments.get(0));
+			case ServicesPackage.SERVICE_MANAGER___GET_RSO_SERVICES__STRING:
+				return getRSOServices((String)arguments.get(0));
+			case ServicesPackage.SERVICE_MANAGER___CHANGE_RSOIS_DELIVERED__STRING_BOOLEAN:
+				changeRSOISDelivered((String)arguments.get(0), (Boolean)arguments.get(1));
 				return null;
-			case ServicesPackage.SERVICE_MANAGER___SEARCH_SERVICES:
-				searchServices();
-				return null;
-			case ServicesPackage.SERVICE_MANAGER___SEARCH_ROOM_SERVICE_ORDERS:
-				searchRoomServiceOrders();
-				return null;
-			case ServicesPackage.SERVICE_MANAGER___GET_SERVICE_NAME:
-				getServiceName();
-				return null;
-			case ServicesPackage.SERVICE_MANAGER___GET_SERVICE_PRICE:
-				getServicePrice();
-				return null;
-			case ServicesPackage.SERVICE_MANAGER___GET_SERVICE_EXPENSE:
-				getServiceExpense();
-				return null;
-			case ServicesPackage.SERVICE_MANAGER___IS_RSO_DELIVERED:
-				isRSODelivered();
-				return null;
-			case ServicesPackage.SERVICE_MANAGER___GET_RSO_DELIVERY_DATE:
-				getRSODeliveryDate();
-				return null;
-			case ServicesPackage.SERVICE_MANAGER___GET_RSO_BOOKABLE:
-				getRSOBookable();
-				return null;
-			case ServicesPackage.SERVICE_MANAGER___GET_RSO_ITEMS:
-				getRSOItems();
-				return null;
-			case ServicesPackage.SERVICE_MANAGER___GET_RSO_SERVICES:
-				getRSOServices();
-				return null;
-			case ServicesPackage.SERVICE_MANAGER___CHANGE_RSOIS_DELIVERED:
-				changeRSOISDelivered();
-				return null;
-			case ServicesPackage.SERVICE_MANAGER___CHANGE_RSO_DELIVERY_DATE:
-				changeRSODeliveryDate();
+			case ServicesPackage.SERVICE_MANAGER___CHANGE_RSO_DELIVERY_DATE__STRING_DATE:
+				changeRSODeliveryDate((String)arguments.get(0), (Date)arguments.get(1));
 				return null;
 			case ServicesPackage.SERVICE_MANAGER___GET_ROOM_SERVICE_MENU_NAME:
-				getRoomServiceMenuName();
-				return null;
+				return getRoomServiceMenuName();
 			case ServicesPackage.SERVICE_MANAGER___GET_ROOM_SERVICE_MENU_ITEMS:
-				getRoomServiceMenuItems();
+				return getRoomServiceMenuItems();
+			case ServicesPackage.SERVICE_MANAGER___SET_RSO_BILL__STRING_STRING:
+				setRSOBill((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case ServicesPackage.SERVICE_MANAGER___GET_ROOM_SERVICE_MENU_INFORMATION:
-				getRoomServiceMenuInformation();
+			case ServicesPackage.SERVICE_MANAGER___GET_RSO_BILL__STRING:
+				return getRSOBill((String)arguments.get(0));
+			case ServicesPackage.SERVICE_MANAGER___MAKE_ROOM_SERVICE_ORDER__ELIST_ELIST_STRING_STRING_DATE_BOOLEAN:
+				makeRoomServiceOrder((EList<String>)arguments.get(0), (EList<String>)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Date)arguments.get(4), (Boolean)arguments.get(5));
 				return null;
-			case ServicesPackage.SERVICE_MANAGER___SET_RSO_BILL:
-				setRSOBill();
+			case ServicesPackage.SERVICE_MANAGER___CHANGE_SERVICE_NAME__STRING_STRING:
+				changeServiceName((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case ServicesPackage.SERVICE_MANAGER___GET_RSO_BILL:
-				getRSOBill();
+			case ServicesPackage.SERVICE_MANAGER___CHANGE_SERVICE_PRICE__STRING_DOUBLE:
+				changeServicePrice((String)arguments.get(0), (Double)arguments.get(1));
 				return null;
-			case ServicesPackage.SERVICE_MANAGER___MAKE_ROOM_SERVICE_ORDER:
-				makeRoomServiceOrder();
+			case ServicesPackage.SERVICE_MANAGER___CHANGE_SERVICE_EXPENSE__STRING_DOUBLE:
+				changeServiceExpense((String)arguments.get(0), (Double)arguments.get(1));
 				return null;
-			case ServicesPackage.SERVICE_MANAGER___CHANGE_SERVICE_NAME:
-				changeServiceName();
+			case ServicesPackage.SERVICE_MANAGER___ADD_ROOM_SERVICE_MENU_ITEM__STRING:
+				addRoomServiceMenuItem((String)arguments.get(0));
 				return null;
-			case ServicesPackage.SERVICE_MANAGER___CHANGE_SERVICE_PRICE:
-				changeServicePrice();
+			case ServicesPackage.SERVICE_MANAGER___REMOVE_ROOM_SERVICE_MENU_ITEM__STRING:
+				removeRoomServiceMenuItem((String)arguments.get(0));
 				return null;
-			case ServicesPackage.SERVICE_MANAGER___CHANGE_SERVICE_EXPENSE:
-				changeServiceExpense();
+			case ServicesPackage.SERVICE_MANAGER___CHANGE_ROOM_SERVICE_MENU_NAME__STRING:
+				changeRoomServiceMenuName((String)arguments.get(0));
 				return null;
-			case ServicesPackage.SERVICE_MANAGER___ADD_ROOM_SERVICE_MENU_ITEM:
-				addRoomServiceMenuItem();
-				return null;
-			case ServicesPackage.SERVICE_MANAGER___REMOVE_ROOM_SERVICE_MENU_ITEM:
-				removeRoomServiceMenuItem();
-				return null;
-			case ServicesPackage.SERVICE_MANAGER___CHANGE_ROOM_SERVICE_MENU_ITEM:
-				changeRoomServiceMenuItem();
-				return null;
-			case ServicesPackage.SERVICE_MANAGER___CHANGE_ROOM_SERVICE_MENU_NAME:
-				changeRoomServiceMenuName();
+			case ServicesPackage.SERVICE_MANAGER___ADD_SERVICE__STRING_DOUBLE_DOUBLE:
+				addService((String)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

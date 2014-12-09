@@ -687,6 +687,16 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/scheduleStaff/from"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/scheduleStaff/to"/>
         </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/addEmployee">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/addEmployee/firstname"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/addEmployee/lastname"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/addEmployee/job"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/addEmployee/phone"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/addEmployee/email"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/addEmployee/SSID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/addEmployee/salaryContractType"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/IStaff/addEmployee/salary"/>
+        </genOperations>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Inventory" basePackage="Classes"
@@ -822,24 +832,61 @@
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Services/IServicesAccess">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getAllServiceIDs"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getAllRoomServiceOrderIDs"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/searchServices"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/searchRoomServiceOrders"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getServiceName"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getServicePrice"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getServiceExpense"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/isRSODelivered"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getRSODeliveryDate"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getRSOBookable"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getRSOItems"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getRSOServices"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/changeRSOISDelivered"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/changeRSODeliveryDate"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/searchServices">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/searchServices/keyword"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/searchRoomServiceOrders">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/searchRoomServiceOrders/keyword"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getServiceName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/getServiceName/serviceID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getServicePrice">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/getServicePrice/serviceID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getServiceExpense">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/getServiceExpense/serviceID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/isRSODelivered">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/isRSODelivered/orderID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getRSODeliveryDate">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/getRSODeliveryDate/orderID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getRSOBookable">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/getRSOBookable/orderID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getRSOItems">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/getRSOItems/orderID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getRSOServices">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/getRSOServices/orderID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/changeRSOISDelivered">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/changeRSOISDelivered/orderID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/changeRSOISDelivered/isDelivered"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/changeRSODeliveryDate">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/changeRSODeliveryDate/orderID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/changeRSODeliveryDate/date"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getRoomServiceMenuName"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getRoomServiceMenuItems"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getRoomServiceMenuInformation"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/setRSOBill"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getRSOBill"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/makeRoomServiceOrder"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/setRSOBill">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/setRSOBill/orderID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/setRSOBill/billID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/getRSOBill">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/getRSOBill/orderID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesAccess/makeRoomServiceOrder">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/makeRoomServiceOrder/items"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/makeRoomServiceOrder/services"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/makeRoomServiceOrder/bill"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/makeRoomServiceOrder/bookable"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/makeRoomServiceOrder/deliveryDate"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesAccess/makeRoomServiceOrder/isDelivered"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Services/ServiceManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -870,13 +917,32 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/RoomServiceOrder/removeService"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Services/IServicesManage">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesManage/changeServiceName"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesManage/changeServicePrice"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesManage/changeServiceExpense"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesManage/addRoomServiceMenuItem"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesManage/removeRoomServiceMenuItem"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesManage/changeRoomServiceMenuItem"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesManage/changeRoomServiceMenuName"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesManage/changeServiceName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesManage/changeServiceName/serviceID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesManage/changeServiceName/name"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesManage/changeServicePrice">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesManage/changeServicePrice/serviceID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesManage/changeServicePrice/price"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesManage/changeServiceExpense">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesManage/changeServiceExpense/serviceID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesManage/changeServiceExpense/expense"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesManage/addRoomServiceMenuItem">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesManage/addRoomServiceMenuItem/itemID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesManage/removeRoomServiceMenuItem">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesManage/removeRoomServiceMenuItem/itemID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesManage/changeRoomServiceMenuName">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesManage/changeRoomServiceMenuName/name"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Services/IServicesManage/addService">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesManage/addService/name"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesManage/addService/price"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Services/IServicesManage/addService/expense"/>
+        </genOperations>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Feedback" basePackage="Classes"

@@ -281,7 +281,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesAccess__SearchServices() {
+	public EOperation getIServicesAccess__SearchServices__String() {
 		return iServicesAccessEClass.getEOperations().get(2);
 	}
 
@@ -290,7 +290,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesAccess__SearchRoomServiceOrders() {
+	public EOperation getIServicesAccess__SearchRoomServiceOrders__String() {
 		return iServicesAccessEClass.getEOperations().get(3);
 	}
 
@@ -299,7 +299,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesAccess__GetServiceName() {
+	public EOperation getIServicesAccess__GetServiceName__String() {
 		return iServicesAccessEClass.getEOperations().get(4);
 	}
 
@@ -308,7 +308,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesAccess__GetServicePrice() {
+	public EOperation getIServicesAccess__GetServicePrice__String() {
 		return iServicesAccessEClass.getEOperations().get(5);
 	}
 
@@ -317,7 +317,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesAccess__GetServiceExpense() {
+	public EOperation getIServicesAccess__GetServiceExpense__String() {
 		return iServicesAccessEClass.getEOperations().get(6);
 	}
 
@@ -326,7 +326,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesAccess__IsRSODelivered() {
+	public EOperation getIServicesAccess__IsRSODelivered__String() {
 		return iServicesAccessEClass.getEOperations().get(7);
 	}
 
@@ -335,7 +335,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesAccess__GetRSODeliveryDate() {
+	public EOperation getIServicesAccess__GetRSODeliveryDate__String() {
 		return iServicesAccessEClass.getEOperations().get(8);
 	}
 
@@ -344,7 +344,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesAccess__GetRSOBookable() {
+	public EOperation getIServicesAccess__GetRSOBookable__String() {
 		return iServicesAccessEClass.getEOperations().get(9);
 	}
 
@@ -353,7 +353,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesAccess__GetRSOItems() {
+	public EOperation getIServicesAccess__GetRSOItems__String() {
 		return iServicesAccessEClass.getEOperations().get(10);
 	}
 
@@ -362,7 +362,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesAccess__GetRSOServices() {
+	public EOperation getIServicesAccess__GetRSOServices__String() {
 		return iServicesAccessEClass.getEOperations().get(11);
 	}
 
@@ -371,7 +371,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesAccess__ChangeRSOISDelivered() {
+	public EOperation getIServicesAccess__ChangeRSOISDelivered__String_boolean() {
 		return iServicesAccessEClass.getEOperations().get(12);
 	}
 
@@ -380,7 +380,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesAccess__ChangeRSODeliveryDate() {
+	public EOperation getIServicesAccess__ChangeRSODeliveryDate__String_Date() {
 		return iServicesAccessEClass.getEOperations().get(13);
 	}
 
@@ -407,7 +407,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesAccess__GetRoomServiceMenuInformation() {
+	public EOperation getIServicesAccess__SetRSOBill__String_String() {
 		return iServicesAccessEClass.getEOperations().get(16);
 	}
 
@@ -416,7 +416,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesAccess__SetRSOBill() {
+	public EOperation getIServicesAccess__GetRSOBill__String() {
 		return iServicesAccessEClass.getEOperations().get(17);
 	}
 
@@ -425,17 +425,8 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesAccess__GetRSOBill() {
+	public EOperation getIServicesAccess__MakeRoomServiceOrder__EList_EList_String_String_Date_boolean() {
 		return iServicesAccessEClass.getEOperations().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIServicesAccess__MakeRoomServiceOrder() {
-		return iServicesAccessEClass.getEOperations().get(19);
 	}
 
 	/**
@@ -641,7 +632,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesManage__ChangeServiceName() {
+	public EOperation getIServicesManage__ChangeServiceName__String_String() {
 		return iServicesManageEClass.getEOperations().get(0);
 	}
 
@@ -650,7 +641,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesManage__ChangeServicePrice() {
+	public EOperation getIServicesManage__ChangeServicePrice__String_double() {
 		return iServicesManageEClass.getEOperations().get(1);
 	}
 
@@ -659,7 +650,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesManage__ChangeServiceExpense() {
+	public EOperation getIServicesManage__ChangeServiceExpense__String_double() {
 		return iServicesManageEClass.getEOperations().get(2);
 	}
 
@@ -668,7 +659,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesManage__AddRoomServiceMenuItem() {
+	public EOperation getIServicesManage__AddRoomServiceMenuItem__String() {
 		return iServicesManageEClass.getEOperations().get(3);
 	}
 
@@ -677,7 +668,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesManage__RemoveRoomServiceMenuItem() {
+	public EOperation getIServicesManage__RemoveRoomServiceMenuItem__String() {
 		return iServicesManageEClass.getEOperations().get(4);
 	}
 
@@ -686,7 +677,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesManage__ChangeRoomServiceMenuItem() {
+	public EOperation getIServicesManage__ChangeRoomServiceMenuName__String() {
 		return iServicesManageEClass.getEOperations().get(5);
 	}
 
@@ -695,7 +686,7 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIServicesManage__ChangeRoomServiceMenuName() {
+	public EOperation getIServicesManage__AddService__String_double_double() {
 		return iServicesManageEClass.getEOperations().get(6);
 	}
 
@@ -736,24 +727,23 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		iServicesAccessEClass = createEClass(ISERVICES_ACCESS);
 		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_ALL_SERVICE_IDS);
 		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_ALL_ROOM_SERVICE_ORDER_IDS);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___SEARCH_SERVICES);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___SEARCH_ROOM_SERVICE_ORDERS);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_SERVICE_NAME);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_SERVICE_PRICE);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_SERVICE_EXPENSE);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___IS_RSO_DELIVERED);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_DELIVERY_DATE);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_BOOKABLE);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_ITEMS);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_SERVICES);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___CHANGE_RSOIS_DELIVERED);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___CHANGE_RSO_DELIVERY_DATE);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___SEARCH_SERVICES__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___SEARCH_ROOM_SERVICE_ORDERS__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_SERVICE_NAME__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_SERVICE_PRICE__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_SERVICE_EXPENSE__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___IS_RSO_DELIVERED__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_DELIVERY_DATE__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_BOOKABLE__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_ITEMS__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_SERVICES__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___CHANGE_RSOIS_DELIVERED__STRING_BOOLEAN);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___CHANGE_RSO_DELIVERY_DATE__STRING_DATE);
 		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_ROOM_SERVICE_MENU_NAME);
 		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_ROOM_SERVICE_MENU_ITEMS);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_ROOM_SERVICE_MENU_INFORMATION);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___SET_RSO_BILL);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_BILL);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___MAKE_ROOM_SERVICE_ORDER);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___SET_RSO_BILL__STRING_STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_BILL__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___MAKE_ROOM_SERVICE_ORDER__ELIST_ELIST_STRING_STRING_DATE_BOOLEAN);
 
 		serviceManagerEClass = createEClass(SERVICE_MANAGER);
 		createEReference(serviceManagerEClass, SERVICE_MANAGER__SERVICE);
@@ -780,13 +770,13 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		createEOperation(roomServiceOrderEClass, ROOM_SERVICE_ORDER___REMOVE_SERVICE);
 
 		iServicesManageEClass = createEClass(ISERVICES_MANAGE);
-		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___CHANGE_SERVICE_NAME);
-		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___CHANGE_SERVICE_PRICE);
-		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___CHANGE_SERVICE_EXPENSE);
-		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___ADD_ROOM_SERVICE_MENU_ITEM);
-		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___REMOVE_ROOM_SERVICE_MENU_ITEM);
-		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___CHANGE_ROOM_SERVICE_MENU_ITEM);
-		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___CHANGE_ROOM_SERVICE_MENU_NAME);
+		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___CHANGE_SERVICE_NAME__STRING_STRING);
+		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___CHANGE_SERVICE_PRICE__STRING_DOUBLE);
+		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___CHANGE_SERVICE_EXPENSE__STRING_DOUBLE);
+		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___ADD_ROOM_SERVICE_MENU_ITEM__STRING);
+		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___REMOVE_ROOM_SERVICE_MENU_ITEM__STRING);
+		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___CHANGE_ROOM_SERVICE_MENU_NAME__STRING);
+		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___ADD_SERVICE__STRING_DOUBLE_DOUBLE);
 	}
 
 	/**
@@ -834,45 +824,66 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 
 		initEClass(iServicesAccessEClass, IServicesAccess.class, "IServicesAccess", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getIServicesAccess__GetAllServiceIDs(), null, "getAllServiceIDs", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIServicesAccess__GetAllServiceIDs(), theTypesPackage.getString(), "getAllServiceIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__GetAllRoomServiceOrderIDs(), null, "getAllRoomServiceOrderIDs", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIServicesAccess__GetAllRoomServiceOrderIDs(), theTypesPackage.getString(), "getAllRoomServiceOrderIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__SearchServices(), null, "searchServices", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getIServicesAccess__SearchServices__String(), theTypesPackage.getString(), "searchServices", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__SearchRoomServiceOrders(), null, "searchRoomServiceOrders", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesAccess__SearchRoomServiceOrders__String(), theTypesPackage.getString(), "searchRoomServiceOrders", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__GetServiceName(), null, "getServiceName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesAccess__GetServiceName__String(), theTypesPackage.getString(), "getServiceName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "serviceID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__GetServicePrice(), null, "getServicePrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesAccess__GetServicePrice__String(), ecorePackage.getEDouble(), "getServicePrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "serviceID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__GetServiceExpense(), null, "getServiceExpense", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesAccess__GetServiceExpense__String(), ecorePackage.getEDouble(), "getServiceExpense", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "serviceID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__IsRSODelivered(), null, "isRSODelivered", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesAccess__IsRSODelivered__String(), theTypesPackage.getBoolean(), "isRSODelivered", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "orderID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__GetRSODeliveryDate(), null, "getRSODeliveryDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesAccess__GetRSODeliveryDate__String(), ecorePackage.getEDate(), "getRSODeliveryDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "orderID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__GetRSOBookable(), null, "getRSOBookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesAccess__GetRSOBookable__String(), theTypesPackage.getString(), "getRSOBookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "orderID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__GetRSOItems(), null, "getRSOItems", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesAccess__GetRSOItems__String(), theTypesPackage.getString(), "getRSOItems", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "orderID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__GetRSOServices(), null, "getRSOServices", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesAccess__GetRSOServices__String(), theTypesPackage.getString(), "getRSOServices", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "orderID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__ChangeRSOISDelivered(), null, "changeRSOISDelivered", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesAccess__ChangeRSOISDelivered__String_boolean(), null, "changeRSOISDelivered", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "orderID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getBoolean(), "isDelivered", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__ChangeRSODeliveryDate(), null, "changeRSODeliveryDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesAccess__ChangeRSODeliveryDate__String_Date(), null, "changeRSODeliveryDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "orderID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "date", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__GetRoomServiceMenuName(), null, "getRoomServiceMenuName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIServicesAccess__GetRoomServiceMenuName(), theTypesPackage.getString(), "getRoomServiceMenuName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__GetRoomServiceMenuItems(), null, "getRoomServiceMenuItems", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIServicesAccess__GetRoomServiceMenuItems(), theTypesPackage.getString(), "getRoomServiceMenuItems", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__GetRoomServiceMenuInformation(), null, "getRoomServiceMenuInformation", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesAccess__SetRSOBill__String_String(), null, "setRSOBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "orderID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__SetRSOBill(), null, "setRSOBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesAccess__GetRSOBill__String(), theTypesPackage.getString(), "getRSOBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "orderID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesAccess__GetRSOBill(), null, "getRSOBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIServicesAccess__MakeRoomServiceOrder(), null, "makeRoomServiceOrder", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesAccess__MakeRoomServiceOrder__EList_EList_String_String_Date_boolean(), null, "makeRoomServiceOrder", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "items", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "services", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bill", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "deliveryDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getBoolean(), "isDelivered", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(serviceManagerEClass, ServiceManager.class, "ServiceManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getServiceManager_Service(), this.getService(), null, "service", null, 0, -1, ServiceManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -904,19 +915,31 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 
 		initEClass(iServicesManageEClass, IServicesManage.class, "IServicesManage", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getIServicesManage__ChangeServiceName(), null, "changeServiceName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesManage__ChangeServiceName__String_String(), null, "changeServiceName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "serviceID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesManage__ChangeServicePrice(), null, "changeServicePrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesManage__ChangeServicePrice__String_double(), null, "changeServicePrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "serviceID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesManage__ChangeServiceExpense(), null, "changeServiceExpense", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesManage__ChangeServiceExpense__String_double(), null, "changeServiceExpense", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "serviceID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "expense", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesManage__AddRoomServiceMenuItem(), null, "addRoomServiceMenuItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesManage__AddRoomServiceMenuItem__String(), null, "addRoomServiceMenuItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "itemID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesManage__RemoveRoomServiceMenuItem(), null, "removeRoomServiceMenuItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesManage__RemoveRoomServiceMenuItem__String(), null, "removeRoomServiceMenuItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "itemID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesManage__ChangeRoomServiceMenuItem(), null, "changeRoomServiceMenuItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesManage__ChangeRoomServiceMenuName__String(), null, "changeRoomServiceMenuName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIServicesManage__ChangeRoomServiceMenuName(), null, "changeRoomServiceMenuName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIServicesManage__AddService__String_double_double(), null, "addService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "expense", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

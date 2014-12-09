@@ -294,6 +294,17 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void addEmployee(String firstname, String lastname, String job, String phone, String email, String SSID, String salaryContractType, double salary) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
@@ -419,6 +430,9 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 				return null;
 			case StaffPackage.STAFF_MANAGER___SCHEDULE_STAFF__DATE_DATE:
 				return scheduleStaff((Date)arguments.get(0), (Date)arguments.get(1));
+			case StaffPackage.STAFF_MANAGER___ADD_EMPLOYEE__STRING_STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE:
+				addEmployee((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (Double)arguments.get(7));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

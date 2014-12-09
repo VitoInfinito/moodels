@@ -212,13 +212,22 @@ public interface StaffPackage extends EPackage {
 	int ISTAFF___SCHEDULE_STAFF__DATE_DATE = 14;
 
 	/**
+	 * The operation id for the '<em>Add Employee</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ISTAFF___ADD_EMPLOYEE__STRING_STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = 15;
+
+	/**
 	 * The number of operations of the '<em>IStaff</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF_OPERATION_COUNT = 15;
+	int ISTAFF_OPERATION_COUNT = 16;
 
 	/**
 	 * The meta object id for the '{@link Classes.Staff.impl.StaffManagerImpl <em>Manager</em>}' class.
@@ -391,6 +400,15 @@ public interface StaffPackage extends EPackage {
 	 * @ordered
 	 */
 	int STAFF_MANAGER___SCHEDULE_STAFF__DATE_DATE = ISTAFF___SCHEDULE_STAFF__DATE_DATE;
+
+	/**
+	 * The operation id for the '<em>Add Employee</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_MANAGER___ADD_EMPLOYEE__STRING_STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = ISTAFF___ADD_EMPLOYEE__STRING_STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE;
 
 	/**
 	 * The number of operations of the '<em>Manager</em>' class.
@@ -964,6 +982,16 @@ public interface StaffPackage extends EPackage {
 	EOperation getIStaff__ScheduleStaff__Date_Date();
 
 	/**
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double) <em>Add Employee</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Employee</em>' operation.
+	 * @see Classes.Staff.IStaff#addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double)
+	 * @generated
+	 */
+	EOperation getIStaff__AddEmployee__String_String_String_String_String_String_String_double();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1261,6 +1289,14 @@ public interface StaffPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ISTAFF___SCHEDULE_STAFF__DATE_DATE = eINSTANCE.getIStaff__ScheduleStaff__Date_Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Employee</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ISTAFF___ADD_EMPLOYEE__STRING_STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = eINSTANCE.getIStaff__AddEmployee__String_String_String_String_String_String_String_double();
 
 	}
 

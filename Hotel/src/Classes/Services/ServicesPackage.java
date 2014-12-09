@@ -165,7 +165,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS___SEARCH_SERVICES = 2;
+	int ISERVICES_ACCESS___SEARCH_SERVICES__STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Search Room Service Orders</em>' operation.
@@ -174,7 +174,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS___SEARCH_ROOM_SERVICE_ORDERS = 3;
+	int ISERVICES_ACCESS___SEARCH_ROOM_SERVICE_ORDERS__STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Get Service Name</em>' operation.
@@ -183,7 +183,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS___GET_SERVICE_NAME = 4;
+	int ISERVICES_ACCESS___GET_SERVICE_NAME__STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Get Service Price</em>' operation.
@@ -192,7 +192,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS___GET_SERVICE_PRICE = 5;
+	int ISERVICES_ACCESS___GET_SERVICE_PRICE__STRING = 5;
 
 	/**
 	 * The operation id for the '<em>Get Service Expense</em>' operation.
@@ -201,7 +201,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS___GET_SERVICE_EXPENSE = 6;
+	int ISERVICES_ACCESS___GET_SERVICE_EXPENSE__STRING = 6;
 
 	/**
 	 * The operation id for the '<em>Is RSO Delivered</em>' operation.
@@ -210,7 +210,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS___IS_RSO_DELIVERED = 7;
+	int ISERVICES_ACCESS___IS_RSO_DELIVERED__STRING = 7;
 
 	/**
 	 * The operation id for the '<em>Get RSO Delivery Date</em>' operation.
@@ -219,7 +219,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS___GET_RSO_DELIVERY_DATE = 8;
+	int ISERVICES_ACCESS___GET_RSO_DELIVERY_DATE__STRING = 8;
 
 	/**
 	 * The operation id for the '<em>Get RSO Bookable</em>' operation.
@@ -228,7 +228,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS___GET_RSO_BOOKABLE = 9;
+	int ISERVICES_ACCESS___GET_RSO_BOOKABLE__STRING = 9;
 
 	/**
 	 * The operation id for the '<em>Get RSO Items</em>' operation.
@@ -237,7 +237,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS___GET_RSO_ITEMS = 10;
+	int ISERVICES_ACCESS___GET_RSO_ITEMS__STRING = 10;
 
 	/**
 	 * The operation id for the '<em>Get RSO Services</em>' operation.
@@ -246,7 +246,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS___GET_RSO_SERVICES = 11;
+	int ISERVICES_ACCESS___GET_RSO_SERVICES__STRING = 11;
 
 	/**
 	 * The operation id for the '<em>Change RSOIS Delivered</em>' operation.
@@ -255,7 +255,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS___CHANGE_RSOIS_DELIVERED = 12;
+	int ISERVICES_ACCESS___CHANGE_RSOIS_DELIVERED__STRING_BOOLEAN = 12;
 
 	/**
 	 * The operation id for the '<em>Change RSO Delivery Date</em>' operation.
@@ -264,7 +264,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS___CHANGE_RSO_DELIVERY_DATE = 13;
+	int ISERVICES_ACCESS___CHANGE_RSO_DELIVERY_DATE__STRING_DATE = 13;
 
 	/**
 	 * The operation id for the '<em>Get Room Service Menu Name</em>' operation.
@@ -285,22 +285,13 @@ public interface ServicesPackage extends EPackage {
 	int ISERVICES_ACCESS___GET_ROOM_SERVICE_MENU_ITEMS = 15;
 
 	/**
-	 * The operation id for the '<em>Get Room Service Menu Information</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ISERVICES_ACCESS___GET_ROOM_SERVICE_MENU_INFORMATION = 16;
-
-	/**
 	 * The operation id for the '<em>Set RSO Bill</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS___SET_RSO_BILL = 17;
+	int ISERVICES_ACCESS___SET_RSO_BILL__STRING_STRING = 16;
 
 	/**
 	 * The operation id for the '<em>Get RSO Bill</em>' operation.
@@ -309,7 +300,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS___GET_RSO_BILL = 18;
+	int ISERVICES_ACCESS___GET_RSO_BILL__STRING = 17;
 
 	/**
 	 * The operation id for the '<em>Make Room Service Order</em>' operation.
@@ -318,7 +309,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS___MAKE_ROOM_SERVICE_ORDER = 19;
+	int ISERVICES_ACCESS___MAKE_ROOM_SERVICE_ORDER__ELIST_ELIST_STRING_STRING_DATE_BOOLEAN = 18;
 
 	/**
 	 * The number of operations of the '<em>IServices Access</em>' class.
@@ -327,7 +318,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_ACCESS_OPERATION_COUNT = 20;
+	int ISERVICES_ACCESS_OPERATION_COUNT = 19;
 
 	/**
 	 * The meta object id for the '{@link Classes.Services.IServicesManage <em>IServices Manage</em>}' class.
@@ -373,7 +364,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___SEARCH_SERVICES = ISERVICES_ACCESS___SEARCH_SERVICES;
+	int ISERVICES_MANAGE___SEARCH_SERVICES__STRING = ISERVICES_ACCESS___SEARCH_SERVICES__STRING;
 
 	/**
 	 * The operation id for the '<em>Search Room Service Orders</em>' operation.
@@ -382,7 +373,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___SEARCH_ROOM_SERVICE_ORDERS = ISERVICES_ACCESS___SEARCH_ROOM_SERVICE_ORDERS;
+	int ISERVICES_MANAGE___SEARCH_ROOM_SERVICE_ORDERS__STRING = ISERVICES_ACCESS___SEARCH_ROOM_SERVICE_ORDERS__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Service Name</em>' operation.
@@ -391,7 +382,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___GET_SERVICE_NAME = ISERVICES_ACCESS___GET_SERVICE_NAME;
+	int ISERVICES_MANAGE___GET_SERVICE_NAME__STRING = ISERVICES_ACCESS___GET_SERVICE_NAME__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Service Price</em>' operation.
@@ -400,7 +391,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___GET_SERVICE_PRICE = ISERVICES_ACCESS___GET_SERVICE_PRICE;
+	int ISERVICES_MANAGE___GET_SERVICE_PRICE__STRING = ISERVICES_ACCESS___GET_SERVICE_PRICE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Service Expense</em>' operation.
@@ -409,7 +400,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___GET_SERVICE_EXPENSE = ISERVICES_ACCESS___GET_SERVICE_EXPENSE;
+	int ISERVICES_MANAGE___GET_SERVICE_EXPENSE__STRING = ISERVICES_ACCESS___GET_SERVICE_EXPENSE__STRING;
 
 	/**
 	 * The operation id for the '<em>Is RSO Delivered</em>' operation.
@@ -418,7 +409,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___IS_RSO_DELIVERED = ISERVICES_ACCESS___IS_RSO_DELIVERED;
+	int ISERVICES_MANAGE___IS_RSO_DELIVERED__STRING = ISERVICES_ACCESS___IS_RSO_DELIVERED__STRING;
 
 	/**
 	 * The operation id for the '<em>Get RSO Delivery Date</em>' operation.
@@ -427,7 +418,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___GET_RSO_DELIVERY_DATE = ISERVICES_ACCESS___GET_RSO_DELIVERY_DATE;
+	int ISERVICES_MANAGE___GET_RSO_DELIVERY_DATE__STRING = ISERVICES_ACCESS___GET_RSO_DELIVERY_DATE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get RSO Bookable</em>' operation.
@@ -436,7 +427,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___GET_RSO_BOOKABLE = ISERVICES_ACCESS___GET_RSO_BOOKABLE;
+	int ISERVICES_MANAGE___GET_RSO_BOOKABLE__STRING = ISERVICES_ACCESS___GET_RSO_BOOKABLE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get RSO Items</em>' operation.
@@ -445,7 +436,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___GET_RSO_ITEMS = ISERVICES_ACCESS___GET_RSO_ITEMS;
+	int ISERVICES_MANAGE___GET_RSO_ITEMS__STRING = ISERVICES_ACCESS___GET_RSO_ITEMS__STRING;
 
 	/**
 	 * The operation id for the '<em>Get RSO Services</em>' operation.
@@ -454,7 +445,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___GET_RSO_SERVICES = ISERVICES_ACCESS___GET_RSO_SERVICES;
+	int ISERVICES_MANAGE___GET_RSO_SERVICES__STRING = ISERVICES_ACCESS___GET_RSO_SERVICES__STRING;
 
 	/**
 	 * The operation id for the '<em>Change RSOIS Delivered</em>' operation.
@@ -463,7 +454,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___CHANGE_RSOIS_DELIVERED = ISERVICES_ACCESS___CHANGE_RSOIS_DELIVERED;
+	int ISERVICES_MANAGE___CHANGE_RSOIS_DELIVERED__STRING_BOOLEAN = ISERVICES_ACCESS___CHANGE_RSOIS_DELIVERED__STRING_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Change RSO Delivery Date</em>' operation.
@@ -472,7 +463,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___CHANGE_RSO_DELIVERY_DATE = ISERVICES_ACCESS___CHANGE_RSO_DELIVERY_DATE;
+	int ISERVICES_MANAGE___CHANGE_RSO_DELIVERY_DATE__STRING_DATE = ISERVICES_ACCESS___CHANGE_RSO_DELIVERY_DATE__STRING_DATE;
 
 	/**
 	 * The operation id for the '<em>Get Room Service Menu Name</em>' operation.
@@ -493,22 +484,13 @@ public interface ServicesPackage extends EPackage {
 	int ISERVICES_MANAGE___GET_ROOM_SERVICE_MENU_ITEMS = ISERVICES_ACCESS___GET_ROOM_SERVICE_MENU_ITEMS;
 
 	/**
-	 * The operation id for the '<em>Get Room Service Menu Information</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ISERVICES_MANAGE___GET_ROOM_SERVICE_MENU_INFORMATION = ISERVICES_ACCESS___GET_ROOM_SERVICE_MENU_INFORMATION;
-
-	/**
 	 * The operation id for the '<em>Set RSO Bill</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___SET_RSO_BILL = ISERVICES_ACCESS___SET_RSO_BILL;
+	int ISERVICES_MANAGE___SET_RSO_BILL__STRING_STRING = ISERVICES_ACCESS___SET_RSO_BILL__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Get RSO Bill</em>' operation.
@@ -517,7 +499,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___GET_RSO_BILL = ISERVICES_ACCESS___GET_RSO_BILL;
+	int ISERVICES_MANAGE___GET_RSO_BILL__STRING = ISERVICES_ACCESS___GET_RSO_BILL__STRING;
 
 	/**
 	 * The operation id for the '<em>Make Room Service Order</em>' operation.
@@ -526,7 +508,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___MAKE_ROOM_SERVICE_ORDER = ISERVICES_ACCESS___MAKE_ROOM_SERVICE_ORDER;
+	int ISERVICES_MANAGE___MAKE_ROOM_SERVICE_ORDER__ELIST_ELIST_STRING_STRING_DATE_BOOLEAN = ISERVICES_ACCESS___MAKE_ROOM_SERVICE_ORDER__ELIST_ELIST_STRING_STRING_DATE_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Change Service Name</em>' operation.
@@ -535,7 +517,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___CHANGE_SERVICE_NAME = ISERVICES_ACCESS_OPERATION_COUNT + 0;
+	int ISERVICES_MANAGE___CHANGE_SERVICE_NAME__STRING_STRING = ISERVICES_ACCESS_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Change Service Price</em>' operation.
@@ -544,7 +526,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___CHANGE_SERVICE_PRICE = ISERVICES_ACCESS_OPERATION_COUNT + 1;
+	int ISERVICES_MANAGE___CHANGE_SERVICE_PRICE__STRING_DOUBLE = ISERVICES_ACCESS_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Change Service Expense</em>' operation.
@@ -553,7 +535,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___CHANGE_SERVICE_EXPENSE = ISERVICES_ACCESS_OPERATION_COUNT + 2;
+	int ISERVICES_MANAGE___CHANGE_SERVICE_EXPENSE__STRING_DOUBLE = ISERVICES_ACCESS_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Add Room Service Menu Item</em>' operation.
@@ -562,7 +544,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___ADD_ROOM_SERVICE_MENU_ITEM = ISERVICES_ACCESS_OPERATION_COUNT + 3;
+	int ISERVICES_MANAGE___ADD_ROOM_SERVICE_MENU_ITEM__STRING = ISERVICES_ACCESS_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Remove Room Service Menu Item</em>' operation.
@@ -571,16 +553,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___REMOVE_ROOM_SERVICE_MENU_ITEM = ISERVICES_ACCESS_OPERATION_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>Change Room Service Menu Item</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ISERVICES_MANAGE___CHANGE_ROOM_SERVICE_MENU_ITEM = ISERVICES_ACCESS_OPERATION_COUNT + 5;
+	int ISERVICES_MANAGE___REMOVE_ROOM_SERVICE_MENU_ITEM__STRING = ISERVICES_ACCESS_OPERATION_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Change Room Service Menu Name</em>' operation.
@@ -589,7 +562,16 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISERVICES_MANAGE___CHANGE_ROOM_SERVICE_MENU_NAME = ISERVICES_ACCESS_OPERATION_COUNT + 6;
+	int ISERVICES_MANAGE___CHANGE_ROOM_SERVICE_MENU_NAME__STRING = ISERVICES_ACCESS_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Add Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ISERVICES_MANAGE___ADD_SERVICE__STRING_DOUBLE_DOUBLE = ISERVICES_ACCESS_OPERATION_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>IServices Manage</em>' class.
@@ -671,7 +653,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___SEARCH_SERVICES = ISERVICES_MANAGE___SEARCH_SERVICES;
+	int SERVICE_MANAGER___SEARCH_SERVICES__STRING = ISERVICES_MANAGE___SEARCH_SERVICES__STRING;
 
 	/**
 	 * The operation id for the '<em>Search Room Service Orders</em>' operation.
@@ -680,7 +662,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___SEARCH_ROOM_SERVICE_ORDERS = ISERVICES_MANAGE___SEARCH_ROOM_SERVICE_ORDERS;
+	int SERVICE_MANAGER___SEARCH_ROOM_SERVICE_ORDERS__STRING = ISERVICES_MANAGE___SEARCH_ROOM_SERVICE_ORDERS__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Service Name</em>' operation.
@@ -689,7 +671,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___GET_SERVICE_NAME = ISERVICES_MANAGE___GET_SERVICE_NAME;
+	int SERVICE_MANAGER___GET_SERVICE_NAME__STRING = ISERVICES_MANAGE___GET_SERVICE_NAME__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Service Price</em>' operation.
@@ -698,7 +680,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___GET_SERVICE_PRICE = ISERVICES_MANAGE___GET_SERVICE_PRICE;
+	int SERVICE_MANAGER___GET_SERVICE_PRICE__STRING = ISERVICES_MANAGE___GET_SERVICE_PRICE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Service Expense</em>' operation.
@@ -707,7 +689,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___GET_SERVICE_EXPENSE = ISERVICES_MANAGE___GET_SERVICE_EXPENSE;
+	int SERVICE_MANAGER___GET_SERVICE_EXPENSE__STRING = ISERVICES_MANAGE___GET_SERVICE_EXPENSE__STRING;
 
 	/**
 	 * The operation id for the '<em>Is RSO Delivered</em>' operation.
@@ -716,7 +698,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___IS_RSO_DELIVERED = ISERVICES_MANAGE___IS_RSO_DELIVERED;
+	int SERVICE_MANAGER___IS_RSO_DELIVERED__STRING = ISERVICES_MANAGE___IS_RSO_DELIVERED__STRING;
 
 	/**
 	 * The operation id for the '<em>Get RSO Delivery Date</em>' operation.
@@ -725,7 +707,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___GET_RSO_DELIVERY_DATE = ISERVICES_MANAGE___GET_RSO_DELIVERY_DATE;
+	int SERVICE_MANAGER___GET_RSO_DELIVERY_DATE__STRING = ISERVICES_MANAGE___GET_RSO_DELIVERY_DATE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get RSO Bookable</em>' operation.
@@ -734,7 +716,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___GET_RSO_BOOKABLE = ISERVICES_MANAGE___GET_RSO_BOOKABLE;
+	int SERVICE_MANAGER___GET_RSO_BOOKABLE__STRING = ISERVICES_MANAGE___GET_RSO_BOOKABLE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get RSO Items</em>' operation.
@@ -743,7 +725,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___GET_RSO_ITEMS = ISERVICES_MANAGE___GET_RSO_ITEMS;
+	int SERVICE_MANAGER___GET_RSO_ITEMS__STRING = ISERVICES_MANAGE___GET_RSO_ITEMS__STRING;
 
 	/**
 	 * The operation id for the '<em>Get RSO Services</em>' operation.
@@ -752,7 +734,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___GET_RSO_SERVICES = ISERVICES_MANAGE___GET_RSO_SERVICES;
+	int SERVICE_MANAGER___GET_RSO_SERVICES__STRING = ISERVICES_MANAGE___GET_RSO_SERVICES__STRING;
 
 	/**
 	 * The operation id for the '<em>Change RSOIS Delivered</em>' operation.
@@ -761,7 +743,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___CHANGE_RSOIS_DELIVERED = ISERVICES_MANAGE___CHANGE_RSOIS_DELIVERED;
+	int SERVICE_MANAGER___CHANGE_RSOIS_DELIVERED__STRING_BOOLEAN = ISERVICES_MANAGE___CHANGE_RSOIS_DELIVERED__STRING_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Change RSO Delivery Date</em>' operation.
@@ -770,7 +752,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___CHANGE_RSO_DELIVERY_DATE = ISERVICES_MANAGE___CHANGE_RSO_DELIVERY_DATE;
+	int SERVICE_MANAGER___CHANGE_RSO_DELIVERY_DATE__STRING_DATE = ISERVICES_MANAGE___CHANGE_RSO_DELIVERY_DATE__STRING_DATE;
 
 	/**
 	 * The operation id for the '<em>Get Room Service Menu Name</em>' operation.
@@ -791,22 +773,13 @@ public interface ServicesPackage extends EPackage {
 	int SERVICE_MANAGER___GET_ROOM_SERVICE_MENU_ITEMS = ISERVICES_MANAGE___GET_ROOM_SERVICE_MENU_ITEMS;
 
 	/**
-	 * The operation id for the '<em>Get Room Service Menu Information</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_MANAGER___GET_ROOM_SERVICE_MENU_INFORMATION = ISERVICES_MANAGE___GET_ROOM_SERVICE_MENU_INFORMATION;
-
-	/**
 	 * The operation id for the '<em>Set RSO Bill</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___SET_RSO_BILL = ISERVICES_MANAGE___SET_RSO_BILL;
+	int SERVICE_MANAGER___SET_RSO_BILL__STRING_STRING = ISERVICES_MANAGE___SET_RSO_BILL__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Get RSO Bill</em>' operation.
@@ -815,7 +788,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___GET_RSO_BILL = ISERVICES_MANAGE___GET_RSO_BILL;
+	int SERVICE_MANAGER___GET_RSO_BILL__STRING = ISERVICES_MANAGE___GET_RSO_BILL__STRING;
 
 	/**
 	 * The operation id for the '<em>Make Room Service Order</em>' operation.
@@ -824,7 +797,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___MAKE_ROOM_SERVICE_ORDER = ISERVICES_MANAGE___MAKE_ROOM_SERVICE_ORDER;
+	int SERVICE_MANAGER___MAKE_ROOM_SERVICE_ORDER__ELIST_ELIST_STRING_STRING_DATE_BOOLEAN = ISERVICES_MANAGE___MAKE_ROOM_SERVICE_ORDER__ELIST_ELIST_STRING_STRING_DATE_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Change Service Name</em>' operation.
@@ -833,7 +806,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___CHANGE_SERVICE_NAME = ISERVICES_MANAGE___CHANGE_SERVICE_NAME;
+	int SERVICE_MANAGER___CHANGE_SERVICE_NAME__STRING_STRING = ISERVICES_MANAGE___CHANGE_SERVICE_NAME__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Change Service Price</em>' operation.
@@ -842,7 +815,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___CHANGE_SERVICE_PRICE = ISERVICES_MANAGE___CHANGE_SERVICE_PRICE;
+	int SERVICE_MANAGER___CHANGE_SERVICE_PRICE__STRING_DOUBLE = ISERVICES_MANAGE___CHANGE_SERVICE_PRICE__STRING_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Change Service Expense</em>' operation.
@@ -851,7 +824,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___CHANGE_SERVICE_EXPENSE = ISERVICES_MANAGE___CHANGE_SERVICE_EXPENSE;
+	int SERVICE_MANAGER___CHANGE_SERVICE_EXPENSE__STRING_DOUBLE = ISERVICES_MANAGE___CHANGE_SERVICE_EXPENSE__STRING_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Add Room Service Menu Item</em>' operation.
@@ -860,7 +833,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___ADD_ROOM_SERVICE_MENU_ITEM = ISERVICES_MANAGE___ADD_ROOM_SERVICE_MENU_ITEM;
+	int SERVICE_MANAGER___ADD_ROOM_SERVICE_MENU_ITEM__STRING = ISERVICES_MANAGE___ADD_ROOM_SERVICE_MENU_ITEM__STRING;
 
 	/**
 	 * The operation id for the '<em>Remove Room Service Menu Item</em>' operation.
@@ -869,16 +842,7 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___REMOVE_ROOM_SERVICE_MENU_ITEM = ISERVICES_MANAGE___REMOVE_ROOM_SERVICE_MENU_ITEM;
-
-	/**
-	 * The operation id for the '<em>Change Room Service Menu Item</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_MANAGER___CHANGE_ROOM_SERVICE_MENU_ITEM = ISERVICES_MANAGE___CHANGE_ROOM_SERVICE_MENU_ITEM;
+	int SERVICE_MANAGER___REMOVE_ROOM_SERVICE_MENU_ITEM__STRING = ISERVICES_MANAGE___REMOVE_ROOM_SERVICE_MENU_ITEM__STRING;
 
 	/**
 	 * The operation id for the '<em>Change Room Service Menu Name</em>' operation.
@@ -887,7 +851,16 @@ public interface ServicesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_MANAGER___CHANGE_ROOM_SERVICE_MENU_NAME = ISERVICES_MANAGE___CHANGE_ROOM_SERVICE_MENU_NAME;
+	int SERVICE_MANAGER___CHANGE_ROOM_SERVICE_MENU_NAME__STRING = ISERVICES_MANAGE___CHANGE_ROOM_SERVICE_MENU_NAME__STRING;
+
+	/**
+	 * The operation id for the '<em>Add Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_MANAGER___ADD_SERVICE__STRING_DOUBLE_DOUBLE = ISERVICES_MANAGE___ADD_SERVICE__STRING_DOUBLE_DOUBLE;
 
 	/**
 	 * The number of operations of the '<em>Service Manager</em>' class.
@@ -1173,124 +1146,124 @@ public interface ServicesPackage extends EPackage {
 	EOperation getIServicesAccess__GetAllRoomServiceOrderIDs();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#searchServices() <em>Search Services</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#searchServices(java.lang.String) <em>Search Services</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Services</em>' operation.
-	 * @see Classes.Services.IServicesAccess#searchServices()
+	 * @see Classes.Services.IServicesAccess#searchServices(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesAccess__SearchServices();
+	EOperation getIServicesAccess__SearchServices__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#searchRoomServiceOrders() <em>Search Room Service Orders</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#searchRoomServiceOrders(java.lang.String) <em>Search Room Service Orders</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Search Room Service Orders</em>' operation.
-	 * @see Classes.Services.IServicesAccess#searchRoomServiceOrders()
+	 * @see Classes.Services.IServicesAccess#searchRoomServiceOrders(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesAccess__SearchRoomServiceOrders();
+	EOperation getIServicesAccess__SearchRoomServiceOrders__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getServiceName() <em>Get Service Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getServiceName(java.lang.String) <em>Get Service Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Service Name</em>' operation.
-	 * @see Classes.Services.IServicesAccess#getServiceName()
+	 * @see Classes.Services.IServicesAccess#getServiceName(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesAccess__GetServiceName();
+	EOperation getIServicesAccess__GetServiceName__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getServicePrice() <em>Get Service Price</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getServicePrice(java.lang.String) <em>Get Service Price</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Service Price</em>' operation.
-	 * @see Classes.Services.IServicesAccess#getServicePrice()
+	 * @see Classes.Services.IServicesAccess#getServicePrice(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesAccess__GetServicePrice();
+	EOperation getIServicesAccess__GetServicePrice__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getServiceExpense() <em>Get Service Expense</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getServiceExpense(java.lang.String) <em>Get Service Expense</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Service Expense</em>' operation.
-	 * @see Classes.Services.IServicesAccess#getServiceExpense()
+	 * @see Classes.Services.IServicesAccess#getServiceExpense(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesAccess__GetServiceExpense();
+	EOperation getIServicesAccess__GetServiceExpense__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#isRSODelivered() <em>Is RSO Delivered</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#isRSODelivered(java.lang.String) <em>Is RSO Delivered</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is RSO Delivered</em>' operation.
-	 * @see Classes.Services.IServicesAccess#isRSODelivered()
+	 * @see Classes.Services.IServicesAccess#isRSODelivered(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesAccess__IsRSODelivered();
+	EOperation getIServicesAccess__IsRSODelivered__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getRSODeliveryDate() <em>Get RSO Delivery Date</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getRSODeliveryDate(java.lang.String) <em>Get RSO Delivery Date</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get RSO Delivery Date</em>' operation.
-	 * @see Classes.Services.IServicesAccess#getRSODeliveryDate()
+	 * @see Classes.Services.IServicesAccess#getRSODeliveryDate(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesAccess__GetRSODeliveryDate();
+	EOperation getIServicesAccess__GetRSODeliveryDate__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getRSOBookable() <em>Get RSO Bookable</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getRSOBookable(java.lang.String) <em>Get RSO Bookable</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get RSO Bookable</em>' operation.
-	 * @see Classes.Services.IServicesAccess#getRSOBookable()
+	 * @see Classes.Services.IServicesAccess#getRSOBookable(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesAccess__GetRSOBookable();
+	EOperation getIServicesAccess__GetRSOBookable__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getRSOItems() <em>Get RSO Items</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getRSOItems(java.lang.String) <em>Get RSO Items</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get RSO Items</em>' operation.
-	 * @see Classes.Services.IServicesAccess#getRSOItems()
+	 * @see Classes.Services.IServicesAccess#getRSOItems(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesAccess__GetRSOItems();
+	EOperation getIServicesAccess__GetRSOItems__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getRSOServices() <em>Get RSO Services</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getRSOServices(java.lang.String) <em>Get RSO Services</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get RSO Services</em>' operation.
-	 * @see Classes.Services.IServicesAccess#getRSOServices()
+	 * @see Classes.Services.IServicesAccess#getRSOServices(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesAccess__GetRSOServices();
+	EOperation getIServicesAccess__GetRSOServices__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#changeRSOISDelivered() <em>Change RSOIS Delivered</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#changeRSOISDelivered(java.lang.String, boolean) <em>Change RSOIS Delivered</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change RSOIS Delivered</em>' operation.
-	 * @see Classes.Services.IServicesAccess#changeRSOISDelivered()
+	 * @see Classes.Services.IServicesAccess#changeRSOISDelivered(java.lang.String, boolean)
 	 * @generated
 	 */
-	EOperation getIServicesAccess__ChangeRSOISDelivered();
+	EOperation getIServicesAccess__ChangeRSOISDelivered__String_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#changeRSODeliveryDate() <em>Change RSO Delivery Date</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#changeRSODeliveryDate(java.lang.String, java.util.Date) <em>Change RSO Delivery Date</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change RSO Delivery Date</em>' operation.
-	 * @see Classes.Services.IServicesAccess#changeRSODeliveryDate()
+	 * @see Classes.Services.IServicesAccess#changeRSODeliveryDate(java.lang.String, java.util.Date)
 	 * @generated
 	 */
-	EOperation getIServicesAccess__ChangeRSODeliveryDate();
+	EOperation getIServicesAccess__ChangeRSODeliveryDate__String_Date();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getRoomServiceMenuName() <em>Get Room Service Menu Name</em>}' operation.
@@ -1313,44 +1286,34 @@ public interface ServicesPackage extends EPackage {
 	EOperation getIServicesAccess__GetRoomServiceMenuItems();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getRoomServiceMenuInformation() <em>Get Room Service Menu Information</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Room Service Menu Information</em>' operation.
-	 * @see Classes.Services.IServicesAccess#getRoomServiceMenuInformation()
-	 * @generated
-	 */
-	EOperation getIServicesAccess__GetRoomServiceMenuInformation();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#setRSOBill() <em>Set RSO Bill</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#setRSOBill(java.lang.String, java.lang.String) <em>Set RSO Bill</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Set RSO Bill</em>' operation.
-	 * @see Classes.Services.IServicesAccess#setRSOBill()
+	 * @see Classes.Services.IServicesAccess#setRSOBill(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesAccess__SetRSOBill();
+	EOperation getIServicesAccess__SetRSOBill__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getRSOBill() <em>Get RSO Bill</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#getRSOBill(java.lang.String) <em>Get RSO Bill</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get RSO Bill</em>' operation.
-	 * @see Classes.Services.IServicesAccess#getRSOBill()
+	 * @see Classes.Services.IServicesAccess#getRSOBill(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesAccess__GetRSOBill();
+	EOperation getIServicesAccess__GetRSOBill__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#makeRoomServiceOrder() <em>Make Room Service Order</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesAccess#makeRoomServiceOrder(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String, java.util.Date, boolean) <em>Make Room Service Order</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Make Room Service Order</em>' operation.
-	 * @see Classes.Services.IServicesAccess#makeRoomServiceOrder()
+	 * @see Classes.Services.IServicesAccess#makeRoomServiceOrder(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String, java.util.Date, boolean)
 	 * @generated
 	 */
-	EOperation getIServicesAccess__MakeRoomServiceOrder();
+	EOperation getIServicesAccess__MakeRoomServiceOrder__EList_EList_String_String_Date_boolean();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Services.ServiceManager <em>Service Manager</em>}'.
@@ -1587,74 +1550,74 @@ public interface ServicesPackage extends EPackage {
 	EClass getIServicesManage();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesManage#changeServiceName() <em>Change Service Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesManage#changeServiceName(java.lang.String, java.lang.String) <em>Change Service Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Service Name</em>' operation.
-	 * @see Classes.Services.IServicesManage#changeServiceName()
+	 * @see Classes.Services.IServicesManage#changeServiceName(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesManage__ChangeServiceName();
+	EOperation getIServicesManage__ChangeServiceName__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesManage#changeServicePrice() <em>Change Service Price</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesManage#changeServicePrice(java.lang.String, double) <em>Change Service Price</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Service Price</em>' operation.
-	 * @see Classes.Services.IServicesManage#changeServicePrice()
+	 * @see Classes.Services.IServicesManage#changeServicePrice(java.lang.String, double)
 	 * @generated
 	 */
-	EOperation getIServicesManage__ChangeServicePrice();
+	EOperation getIServicesManage__ChangeServicePrice__String_double();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesManage#changeServiceExpense() <em>Change Service Expense</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesManage#changeServiceExpense(java.lang.String, double) <em>Change Service Expense</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Service Expense</em>' operation.
-	 * @see Classes.Services.IServicesManage#changeServiceExpense()
+	 * @see Classes.Services.IServicesManage#changeServiceExpense(java.lang.String, double)
 	 * @generated
 	 */
-	EOperation getIServicesManage__ChangeServiceExpense();
+	EOperation getIServicesManage__ChangeServiceExpense__String_double();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesManage#addRoomServiceMenuItem() <em>Add Room Service Menu Item</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesManage#addRoomServiceMenuItem(java.lang.String) <em>Add Room Service Menu Item</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Room Service Menu Item</em>' operation.
-	 * @see Classes.Services.IServicesManage#addRoomServiceMenuItem()
+	 * @see Classes.Services.IServicesManage#addRoomServiceMenuItem(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesManage__AddRoomServiceMenuItem();
+	EOperation getIServicesManage__AddRoomServiceMenuItem__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesManage#removeRoomServiceMenuItem() <em>Remove Room Service Menu Item</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesManage#removeRoomServiceMenuItem(java.lang.String) <em>Remove Room Service Menu Item</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Room Service Menu Item</em>' operation.
-	 * @see Classes.Services.IServicesManage#removeRoomServiceMenuItem()
+	 * @see Classes.Services.IServicesManage#removeRoomServiceMenuItem(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesManage__RemoveRoomServiceMenuItem();
+	EOperation getIServicesManage__RemoveRoomServiceMenuItem__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesManage#changeRoomServiceMenuItem() <em>Change Room Service Menu Item</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Change Room Service Menu Item</em>' operation.
-	 * @see Classes.Services.IServicesManage#changeRoomServiceMenuItem()
-	 * @generated
-	 */
-	EOperation getIServicesManage__ChangeRoomServiceMenuItem();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Services.IServicesManage#changeRoomServiceMenuName() <em>Change Room Service Menu Name</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Services.IServicesManage#changeRoomServiceMenuName(java.lang.String) <em>Change Room Service Menu Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Room Service Menu Name</em>' operation.
-	 * @see Classes.Services.IServicesManage#changeRoomServiceMenuName()
+	 * @see Classes.Services.IServicesManage#changeRoomServiceMenuName(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIServicesManage__ChangeRoomServiceMenuName();
+	EOperation getIServicesManage__ChangeRoomServiceMenuName__String();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Services.IServicesManage#addService(java.lang.String, double, double) <em>Add Service</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Service</em>' operation.
+	 * @see Classes.Services.IServicesManage#addService(java.lang.String, double, double)
+	 * @generated
+	 */
+	EOperation getIServicesManage__AddService__String_double_double();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1753,7 +1716,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_ACCESS___SEARCH_SERVICES = eINSTANCE.getIServicesAccess__SearchServices();
+		EOperation ISERVICES_ACCESS___SEARCH_SERVICES__STRING = eINSTANCE.getIServicesAccess__SearchServices__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Search Room Service Orders</b></em>' operation.
@@ -1761,7 +1724,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_ACCESS___SEARCH_ROOM_SERVICE_ORDERS = eINSTANCE.getIServicesAccess__SearchRoomServiceOrders();
+		EOperation ISERVICES_ACCESS___SEARCH_ROOM_SERVICE_ORDERS__STRING = eINSTANCE.getIServicesAccess__SearchRoomServiceOrders__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Service Name</b></em>' operation.
@@ -1769,7 +1732,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_ACCESS___GET_SERVICE_NAME = eINSTANCE.getIServicesAccess__GetServiceName();
+		EOperation ISERVICES_ACCESS___GET_SERVICE_NAME__STRING = eINSTANCE.getIServicesAccess__GetServiceName__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Service Price</b></em>' operation.
@@ -1777,7 +1740,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_ACCESS___GET_SERVICE_PRICE = eINSTANCE.getIServicesAccess__GetServicePrice();
+		EOperation ISERVICES_ACCESS___GET_SERVICE_PRICE__STRING = eINSTANCE.getIServicesAccess__GetServicePrice__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Service Expense</b></em>' operation.
@@ -1785,7 +1748,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_ACCESS___GET_SERVICE_EXPENSE = eINSTANCE.getIServicesAccess__GetServiceExpense();
+		EOperation ISERVICES_ACCESS___GET_SERVICE_EXPENSE__STRING = eINSTANCE.getIServicesAccess__GetServiceExpense__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Is RSO Delivered</b></em>' operation.
@@ -1793,7 +1756,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_ACCESS___IS_RSO_DELIVERED = eINSTANCE.getIServicesAccess__IsRSODelivered();
+		EOperation ISERVICES_ACCESS___IS_RSO_DELIVERED__STRING = eINSTANCE.getIServicesAccess__IsRSODelivered__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get RSO Delivery Date</b></em>' operation.
@@ -1801,7 +1764,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_ACCESS___GET_RSO_DELIVERY_DATE = eINSTANCE.getIServicesAccess__GetRSODeliveryDate();
+		EOperation ISERVICES_ACCESS___GET_RSO_DELIVERY_DATE__STRING = eINSTANCE.getIServicesAccess__GetRSODeliveryDate__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get RSO Bookable</b></em>' operation.
@@ -1809,7 +1772,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_ACCESS___GET_RSO_BOOKABLE = eINSTANCE.getIServicesAccess__GetRSOBookable();
+		EOperation ISERVICES_ACCESS___GET_RSO_BOOKABLE__STRING = eINSTANCE.getIServicesAccess__GetRSOBookable__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get RSO Items</b></em>' operation.
@@ -1817,7 +1780,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_ACCESS___GET_RSO_ITEMS = eINSTANCE.getIServicesAccess__GetRSOItems();
+		EOperation ISERVICES_ACCESS___GET_RSO_ITEMS__STRING = eINSTANCE.getIServicesAccess__GetRSOItems__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get RSO Services</b></em>' operation.
@@ -1825,7 +1788,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_ACCESS___GET_RSO_SERVICES = eINSTANCE.getIServicesAccess__GetRSOServices();
+		EOperation ISERVICES_ACCESS___GET_RSO_SERVICES__STRING = eINSTANCE.getIServicesAccess__GetRSOServices__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change RSOIS Delivered</b></em>' operation.
@@ -1833,7 +1796,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_ACCESS___CHANGE_RSOIS_DELIVERED = eINSTANCE.getIServicesAccess__ChangeRSOISDelivered();
+		EOperation ISERVICES_ACCESS___CHANGE_RSOIS_DELIVERED__STRING_BOOLEAN = eINSTANCE.getIServicesAccess__ChangeRSOISDelivered__String_boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Change RSO Delivery Date</b></em>' operation.
@@ -1841,7 +1804,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_ACCESS___CHANGE_RSO_DELIVERY_DATE = eINSTANCE.getIServicesAccess__ChangeRSODeliveryDate();
+		EOperation ISERVICES_ACCESS___CHANGE_RSO_DELIVERY_DATE__STRING_DATE = eINSTANCE.getIServicesAccess__ChangeRSODeliveryDate__String_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Room Service Menu Name</b></em>' operation.
@@ -1860,20 +1823,12 @@ public interface ServicesPackage extends EPackage {
 		EOperation ISERVICES_ACCESS___GET_ROOM_SERVICE_MENU_ITEMS = eINSTANCE.getIServicesAccess__GetRoomServiceMenuItems();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Room Service Menu Information</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ISERVICES_ACCESS___GET_ROOM_SERVICE_MENU_INFORMATION = eINSTANCE.getIServicesAccess__GetRoomServiceMenuInformation();
-
-		/**
 		 * The meta object literal for the '<em><b>Set RSO Bill</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_ACCESS___SET_RSO_BILL = eINSTANCE.getIServicesAccess__SetRSOBill();
+		EOperation ISERVICES_ACCESS___SET_RSO_BILL__STRING_STRING = eINSTANCE.getIServicesAccess__SetRSOBill__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get RSO Bill</b></em>' operation.
@@ -1881,7 +1836,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_ACCESS___GET_RSO_BILL = eINSTANCE.getIServicesAccess__GetRSOBill();
+		EOperation ISERVICES_ACCESS___GET_RSO_BILL__STRING = eINSTANCE.getIServicesAccess__GetRSOBill__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Make Room Service Order</b></em>' operation.
@@ -1889,7 +1844,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_ACCESS___MAKE_ROOM_SERVICE_ORDER = eINSTANCE.getIServicesAccess__MakeRoomServiceOrder();
+		EOperation ISERVICES_ACCESS___MAKE_ROOM_SERVICE_ORDER__ELIST_ELIST_STRING_STRING_DATE_BOOLEAN = eINSTANCE.getIServicesAccess__MakeRoomServiceOrder__EList_EList_String_String_Date_boolean();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Services.impl.ServiceManagerImpl <em>Service Manager</em>}' class.
@@ -2081,7 +2036,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_MANAGE___CHANGE_SERVICE_NAME = eINSTANCE.getIServicesManage__ChangeServiceName();
+		EOperation ISERVICES_MANAGE___CHANGE_SERVICE_NAME__STRING_STRING = eINSTANCE.getIServicesManage__ChangeServiceName__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Service Price</b></em>' operation.
@@ -2089,7 +2044,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_MANAGE___CHANGE_SERVICE_PRICE = eINSTANCE.getIServicesManage__ChangeServicePrice();
+		EOperation ISERVICES_MANAGE___CHANGE_SERVICE_PRICE__STRING_DOUBLE = eINSTANCE.getIServicesManage__ChangeServicePrice__String_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Service Expense</b></em>' operation.
@@ -2097,7 +2052,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_MANAGE___CHANGE_SERVICE_EXPENSE = eINSTANCE.getIServicesManage__ChangeServiceExpense();
+		EOperation ISERVICES_MANAGE___CHANGE_SERVICE_EXPENSE__STRING_DOUBLE = eINSTANCE.getIServicesManage__ChangeServiceExpense__String_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Room Service Menu Item</b></em>' operation.
@@ -2105,7 +2060,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_MANAGE___ADD_ROOM_SERVICE_MENU_ITEM = eINSTANCE.getIServicesManage__AddRoomServiceMenuItem();
+		EOperation ISERVICES_MANAGE___ADD_ROOM_SERVICE_MENU_ITEM__STRING = eINSTANCE.getIServicesManage__AddRoomServiceMenuItem__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Room Service Menu Item</b></em>' operation.
@@ -2113,15 +2068,7 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_MANAGE___REMOVE_ROOM_SERVICE_MENU_ITEM = eINSTANCE.getIServicesManage__RemoveRoomServiceMenuItem();
-
-		/**
-		 * The meta object literal for the '<em><b>Change Room Service Menu Item</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ISERVICES_MANAGE___CHANGE_ROOM_SERVICE_MENU_ITEM = eINSTANCE.getIServicesManage__ChangeRoomServiceMenuItem();
+		EOperation ISERVICES_MANAGE___REMOVE_ROOM_SERVICE_MENU_ITEM__STRING = eINSTANCE.getIServicesManage__RemoveRoomServiceMenuItem__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Room Service Menu Name</b></em>' operation.
@@ -2129,7 +2076,15 @@ public interface ServicesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISERVICES_MANAGE___CHANGE_ROOM_SERVICE_MENU_NAME = eINSTANCE.getIServicesManage__ChangeRoomServiceMenuName();
+		EOperation ISERVICES_MANAGE___CHANGE_ROOM_SERVICE_MENU_NAME__STRING = eINSTANCE.getIServicesManage__ChangeRoomServiceMenuName__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Service</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ISERVICES_MANAGE___ADD_SERVICE__STRING_DOUBLE_DOUBLE = eINSTANCE.getIServicesManage__AddService__String_double_double();
 
 	}
 

@@ -506,6 +506,15 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getIStaff__AddEmployee__String_String_String_String_String_String_String_double() {
+		return iStaffEClass.getEOperations().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public StaffFactory getStaffFactory() {
 		return (StaffFactory)getEFactoryInstance();
 	}
@@ -567,6 +576,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_PHONE__STRING_STRING);
 		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING);
 		createEOperation(iStaffEClass, ISTAFF___SCHEDULE_STAFF__DATE_DATE);
+		createEOperation(iStaffEClass, ISTAFF___ADD_EMPLOYEE__STRING_STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE);
 	}
 
 	/**
@@ -680,6 +690,16 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 		op = initEOperation(getIStaff__ScheduleStaff__Date_Date(), theTypesPackage.getString(), "scheduleStaff", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIStaff__AddEmployee__String_String_String_String_String_String_String_double(), null, "addEmployee", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstname", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastname", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "job", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "phone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "salaryContractType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "salary", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
