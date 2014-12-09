@@ -92,7 +92,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IFEEDBACK___GET_FEEDBACK_DESCRIPTION = 1;
+	int IFEEDBACK___GET_FEEDBACK_DESCRIPTION__STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Get Feedback Is Resolved</em>' operation.
@@ -101,7 +101,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IFEEDBACK___GET_FEEDBACK_IS_RESOLVED = 2;
+	int IFEEDBACK___GET_FEEDBACK_IS_RESOLVED__STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Get Feedback Is Noted</em>' operation.
@@ -110,7 +110,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IFEEDBACK___GET_FEEDBACK_IS_NOTED = 3;
+	int IFEEDBACK___GET_FEEDBACK_IS_NOTED__STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Set Feedback Description</em>' operation.
@@ -119,7 +119,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IFEEDBACK___SET_FEEDBACK_DESCRIPTION = 4;
+	int IFEEDBACK___SET_FEEDBACK_DESCRIPTION__STRING_STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Set Feedback Is Resolved</em>' operation.
@@ -128,7 +128,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IFEEDBACK___SET_FEEDBACK_IS_RESOLVED = 5;
+	int IFEEDBACK___SET_FEEDBACK_IS_RESOLVED__STRING_BOOLEAN = 5;
 
 	/**
 	 * The operation id for the '<em>Set Feedback Is Noted</em>' operation.
@@ -137,7 +137,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IFEEDBACK___SET_FEEDBACK_IS_NOTED = 6;
+	int IFEEDBACK___SET_FEEDBACK_IS_NOTED__STRING_BOOLEAN = 6;
 
 	/**
 	 * The operation id for the '<em>Search Feedback</em>' operation.
@@ -155,7 +155,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IFEEDBACK___ADD_FEEDBACK = 8;
+	int IFEEDBACK___ADD_FEEDBACK__STRING_STRING = 8;
 
 	/**
 	 * The number of operations of the '<em>IFeedback</em>' class.
@@ -177,13 +177,13 @@ public interface FeedbackPackage extends EPackage {
 	int FEEDBACK_MANAGER = 1;
 
 	/**
-	 * The feature id for the '<em><b>Feedback</b></em>' reference list.
+	 * The feature id for the '<em><b>Feedbacks</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEEDBACK_MANAGER__FEEDBACK = IFEEDBACK_FEATURE_COUNT + 0;
+	int FEEDBACK_MANAGER__FEEDBACKS = IFEEDBACK_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Manager</em>' class.
@@ -210,7 +210,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEEDBACK_MANAGER___GET_FEEDBACK_DESCRIPTION = IFEEDBACK___GET_FEEDBACK_DESCRIPTION;
+	int FEEDBACK_MANAGER___GET_FEEDBACK_DESCRIPTION__STRING = IFEEDBACK___GET_FEEDBACK_DESCRIPTION__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Feedback Is Resolved</em>' operation.
@@ -219,7 +219,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEEDBACK_MANAGER___GET_FEEDBACK_IS_RESOLVED = IFEEDBACK___GET_FEEDBACK_IS_RESOLVED;
+	int FEEDBACK_MANAGER___GET_FEEDBACK_IS_RESOLVED__STRING = IFEEDBACK___GET_FEEDBACK_IS_RESOLVED__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Feedback Is Noted</em>' operation.
@@ -228,7 +228,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEEDBACK_MANAGER___GET_FEEDBACK_IS_NOTED = IFEEDBACK___GET_FEEDBACK_IS_NOTED;
+	int FEEDBACK_MANAGER___GET_FEEDBACK_IS_NOTED__STRING = IFEEDBACK___GET_FEEDBACK_IS_NOTED__STRING;
 
 	/**
 	 * The operation id for the '<em>Set Feedback Description</em>' operation.
@@ -237,7 +237,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEEDBACK_MANAGER___SET_FEEDBACK_DESCRIPTION = IFEEDBACK___SET_FEEDBACK_DESCRIPTION;
+	int FEEDBACK_MANAGER___SET_FEEDBACK_DESCRIPTION__STRING_STRING = IFEEDBACK___SET_FEEDBACK_DESCRIPTION__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Set Feedback Is Resolved</em>' operation.
@@ -246,7 +246,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEEDBACK_MANAGER___SET_FEEDBACK_IS_RESOLVED = IFEEDBACK___SET_FEEDBACK_IS_RESOLVED;
+	int FEEDBACK_MANAGER___SET_FEEDBACK_IS_RESOLVED__STRING_BOOLEAN = IFEEDBACK___SET_FEEDBACK_IS_RESOLVED__STRING_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Set Feedback Is Noted</em>' operation.
@@ -255,7 +255,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEEDBACK_MANAGER___SET_FEEDBACK_IS_NOTED = IFEEDBACK___SET_FEEDBACK_IS_NOTED;
+	int FEEDBACK_MANAGER___SET_FEEDBACK_IS_NOTED__STRING_BOOLEAN = IFEEDBACK___SET_FEEDBACK_IS_NOTED__STRING_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Search Feedback</em>' operation.
@@ -273,7 +273,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEEDBACK_MANAGER___ADD_FEEDBACK = IFEEDBACK___ADD_FEEDBACK;
+	int FEEDBACK_MANAGER___ADD_FEEDBACK__STRING_STRING = IFEEDBACK___ADD_FEEDBACK__STRING_STRING;
 
 	/**
 	 * The number of operations of the '<em>Manager</em>' class.
@@ -370,64 +370,64 @@ public interface FeedbackPackage extends EPackage {
 	EOperation getIFeedback__GetAllFeedbackIDs();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#getFeedbackDescription() <em>Get Feedback Description</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#getFeedbackDescription(java.lang.String) <em>Get Feedback Description</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Feedback Description</em>' operation.
-	 * @see Classes.Feedback.IFeedback#getFeedbackDescription()
+	 * @see Classes.Feedback.IFeedback#getFeedbackDescription(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIFeedback__GetFeedbackDescription();
+	EOperation getIFeedback__GetFeedbackDescription__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#getFeedbackIsResolved() <em>Get Feedback Is Resolved</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#getFeedbackIsResolved(java.lang.String) <em>Get Feedback Is Resolved</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Feedback Is Resolved</em>' operation.
-	 * @see Classes.Feedback.IFeedback#getFeedbackIsResolved()
+	 * @see Classes.Feedback.IFeedback#getFeedbackIsResolved(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIFeedback__GetFeedbackIsResolved();
+	EOperation getIFeedback__GetFeedbackIsResolved__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#getFeedbackIsNoted() <em>Get Feedback Is Noted</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#getFeedbackIsNoted(java.lang.String) <em>Get Feedback Is Noted</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Feedback Is Noted</em>' operation.
-	 * @see Classes.Feedback.IFeedback#getFeedbackIsNoted()
+	 * @see Classes.Feedback.IFeedback#getFeedbackIsNoted(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIFeedback__GetFeedbackIsNoted();
+	EOperation getIFeedback__GetFeedbackIsNoted__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#setFeedbackDescription() <em>Set Feedback Description</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#setFeedbackDescription(java.lang.String, java.lang.String) <em>Set Feedback Description</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Set Feedback Description</em>' operation.
-	 * @see Classes.Feedback.IFeedback#setFeedbackDescription()
+	 * @see Classes.Feedback.IFeedback#setFeedbackDescription(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIFeedback__SetFeedbackDescription();
+	EOperation getIFeedback__SetFeedbackDescription__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#setFeedbackIsResolved() <em>Set Feedback Is Resolved</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#setFeedbackIsResolved(java.lang.String, boolean) <em>Set Feedback Is Resolved</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Set Feedback Is Resolved</em>' operation.
-	 * @see Classes.Feedback.IFeedback#setFeedbackIsResolved()
+	 * @see Classes.Feedback.IFeedback#setFeedbackIsResolved(java.lang.String, boolean)
 	 * @generated
 	 */
-	EOperation getIFeedback__SetFeedbackIsResolved();
+	EOperation getIFeedback__SetFeedbackIsResolved__String_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#setFeedbackIsNoted() <em>Set Feedback Is Noted</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#setFeedbackIsNoted(java.lang.String, boolean) <em>Set Feedback Is Noted</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Set Feedback Is Noted</em>' operation.
-	 * @see Classes.Feedback.IFeedback#setFeedbackIsNoted()
+	 * @see Classes.Feedback.IFeedback#setFeedbackIsNoted(java.lang.String, boolean)
 	 * @generated
 	 */
-	EOperation getIFeedback__SetFeedbackIsNoted();
+	EOperation getIFeedback__SetFeedbackIsNoted__String_boolean();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#searchFeedback() <em>Search Feedback</em>}' operation.
@@ -440,14 +440,14 @@ public interface FeedbackPackage extends EPackage {
 	EOperation getIFeedback__SearchFeedback();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#addFeedback() <em>Add Feedback</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#addFeedback(java.lang.String, java.lang.String) <em>Add Feedback</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Feedback</em>' operation.
-	 * @see Classes.Feedback.IFeedback#addFeedback()
+	 * @see Classes.Feedback.IFeedback#addFeedback(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIFeedback__AddFeedback();
+	EOperation getIFeedback__AddFeedback__String_String();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Feedback.FeedbackManager <em>Manager</em>}'.
@@ -460,15 +460,15 @@ public interface FeedbackPackage extends EPackage {
 	EClass getFeedbackManager();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Classes.Feedback.FeedbackManager#getFeedback <em>Feedback</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Feedback.FeedbackManager#getFeedbacks <em>Feedbacks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Feedback</em>'.
-	 * @see Classes.Feedback.FeedbackManager#getFeedback()
+	 * @return the meta object for the reference list '<em>Feedbacks</em>'.
+	 * @see Classes.Feedback.FeedbackManager#getFeedbacks()
 	 * @see #getFeedbackManager()
 	 * @generated
 	 */
-	EReference getFeedbackManager_Feedback();
+	EReference getFeedbackManager_Feedbacks();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Feedback.Feedback <em>Feedback</em>}'.
@@ -571,7 +571,7 @@ public interface FeedbackPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IFEEDBACK___GET_FEEDBACK_DESCRIPTION = eINSTANCE.getIFeedback__GetFeedbackDescription();
+		EOperation IFEEDBACK___GET_FEEDBACK_DESCRIPTION__STRING = eINSTANCE.getIFeedback__GetFeedbackDescription__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Feedback Is Resolved</b></em>' operation.
@@ -579,7 +579,7 @@ public interface FeedbackPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IFEEDBACK___GET_FEEDBACK_IS_RESOLVED = eINSTANCE.getIFeedback__GetFeedbackIsResolved();
+		EOperation IFEEDBACK___GET_FEEDBACK_IS_RESOLVED__STRING = eINSTANCE.getIFeedback__GetFeedbackIsResolved__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Feedback Is Noted</b></em>' operation.
@@ -587,7 +587,7 @@ public interface FeedbackPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IFEEDBACK___GET_FEEDBACK_IS_NOTED = eINSTANCE.getIFeedback__GetFeedbackIsNoted();
+		EOperation IFEEDBACK___GET_FEEDBACK_IS_NOTED__STRING = eINSTANCE.getIFeedback__GetFeedbackIsNoted__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Set Feedback Description</b></em>' operation.
@@ -595,7 +595,7 @@ public interface FeedbackPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IFEEDBACK___SET_FEEDBACK_DESCRIPTION = eINSTANCE.getIFeedback__SetFeedbackDescription();
+		EOperation IFEEDBACK___SET_FEEDBACK_DESCRIPTION__STRING_STRING = eINSTANCE.getIFeedback__SetFeedbackDescription__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Set Feedback Is Resolved</b></em>' operation.
@@ -603,7 +603,7 @@ public interface FeedbackPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IFEEDBACK___SET_FEEDBACK_IS_RESOLVED = eINSTANCE.getIFeedback__SetFeedbackIsResolved();
+		EOperation IFEEDBACK___SET_FEEDBACK_IS_RESOLVED__STRING_BOOLEAN = eINSTANCE.getIFeedback__SetFeedbackIsResolved__String_boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Set Feedback Is Noted</b></em>' operation.
@@ -611,7 +611,7 @@ public interface FeedbackPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IFEEDBACK___SET_FEEDBACK_IS_NOTED = eINSTANCE.getIFeedback__SetFeedbackIsNoted();
+		EOperation IFEEDBACK___SET_FEEDBACK_IS_NOTED__STRING_BOOLEAN = eINSTANCE.getIFeedback__SetFeedbackIsNoted__String_boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Search Feedback</b></em>' operation.
@@ -627,7 +627,7 @@ public interface FeedbackPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IFEEDBACK___ADD_FEEDBACK = eINSTANCE.getIFeedback__AddFeedback();
+		EOperation IFEEDBACK___ADD_FEEDBACK__STRING_STRING = eINSTANCE.getIFeedback__AddFeedback__String_String();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Feedback.impl.FeedbackManagerImpl <em>Manager</em>}' class.
@@ -640,12 +640,12 @@ public interface FeedbackPackage extends EPackage {
 		EClass FEEDBACK_MANAGER = eINSTANCE.getFeedbackManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Feedback</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Feedbacks</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FEEDBACK_MANAGER__FEEDBACK = eINSTANCE.getFeedbackManager_Feedback();
+		EReference FEEDBACK_MANAGER__FEEDBACKS = eINSTANCE.getFeedbackManager_Feedbacks();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Feedback.impl.FeedbackImpl <em>Feedback</em>}' class.

@@ -18,58 +18,58 @@ public interface IFeedback extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	void getAllFeedbackIDs();
+	String getAllFeedbackIDs();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
 	 * @generated
 	 */
-	void getFeedbackDescription();
+	String getFeedbackDescription(String id);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
 	 * @generated
 	 */
-	void getFeedbackIsResolved();
+	boolean getFeedbackIsResolved(String id);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
 	 * @generated
 	 */
-	void getFeedbackIsNoted();
+	boolean getFeedbackIsNoted(String id);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" descDataType="org.eclipse.uml2.types.String" descRequired="true" descOrdered="false"
 	 * @generated
 	 */
-	void setFeedbackDescription();
+	void setFeedbackDescription(String id, String desc);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" statusDataType="org.eclipse.uml2.types.Boolean" statusRequired="true" statusOrdered="false"
 	 * @generated
 	 */
-	void setFeedbackIsResolved();
+	void setFeedbackIsResolved(String id, boolean status);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" statusDataType="org.eclipse.uml2.types.Boolean" statusRequired="true" statusOrdered="false"
 	 * @generated
 	 */
-	void setFeedbackIsNoted();
+	void setFeedbackIsNoted(String id, boolean status);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -82,9 +82,9 @@ public interface IFeedback extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" descDataType="org.eclipse.uml2.types.String" descRequired="true" descOrdered="false"
 	 * @generated
 	 */
-	void addFeedback();
+	void addFeedback(String id, String desc);
 
 } // IFeedback

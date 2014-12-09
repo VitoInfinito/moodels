@@ -4,6 +4,7 @@ package Classes.Accounts.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -17,7 +18,6 @@ import Classes.Accounts.AccountType;
 import Classes.Accounts.AccountsManager;
 import Classes.Accounts.AccountsPackage;
 import Classes.Accounts.IAccountsAccess;
-import Classes.Inventory.impl.ItemTypeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +33,7 @@ import Classes.Inventory.impl.ItemTypeImpl;
  * @generated
  */
 public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements AccountsManager {
-	private final Logger logger = LoggerFactory.getLogger(ItemTypeImpl.class);
+	private final Logger logger = LoggerFactory.getLogger(AccountsManagerImpl.class);
 	
 	/**
 	 * The cached value of the '{@link #getAccounts() <em>Accounts</em>}' reference list.
@@ -48,10 +48,11 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected AccountsManagerImpl() {
 		super();
+		accounts = (EMap<String, Account>) new HashMap<String, Account>();
 	}
 
 	/**

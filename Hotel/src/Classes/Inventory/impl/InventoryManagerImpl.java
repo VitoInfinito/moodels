@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map.Entry;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
@@ -15,44 +14,44 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import Classes.InvalidIDException;
-import Classes.Inventory.Inventory;
+import Classes.Inventory.InventoryManager;
 import Classes.Inventory.InventoryPackage;
-import Classes.Inventory.ItemType;
+import Classes.Inventory.Item;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Inventory</b></em>'.
+ * An implementation of the model object '<em><b>Manager</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Classes.Inventory.impl.InventoryImpl#getItemType <em>Item Type</em>}</li>
+ *   <li>{@link Classes.Inventory.impl.InventoryManagerImpl#getItems <em>Items</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class InventoryImpl extends MinimalEObjectImpl.Container implements Inventory {
-	private final Logger logger = LoggerFactory.getLogger(ItemTypeImpl.class);
+public class InventoryManagerImpl extends MinimalEObjectImpl.Container implements InventoryManager {
+	private final Logger logger = LoggerFactory.getLogger(InventoryManagerImpl.class);
 	
 	/**
 	 * The cached value of the '{@link #getItemType() <em>Item Type</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getItemType()
+	 * @see #getItems()
 	 * @generated NOT
 	 * @ordered
 	 */
-	private EMap<String, ItemType> itemType;
+	private EMap<String, Item> items;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	protected InventoryImpl() {
+	protected InventoryManagerImpl() {
 		super();
-		itemType = (EMap<String, ItemType>) new HashMap<String, ItemType>();
+		items = (EMap<String, Item>) new HashMap<String, Item>();
 	}
 
 	/**
@@ -62,7 +61,7 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return InventoryPackage.Literals.INVENTORY;
+		return InventoryPackage.Literals.INVENTORY_MANAGER;
 	}
 
 	/**
@@ -70,8 +69,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EMap<String, ItemType> getItemType() {
-		return itemType;
+	public List<Item> getItems() {
+		return (List<Item>) items.values();
 	}
 
 	/**
@@ -80,8 +79,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * @generated NOT
 	 */
 	public void changeItemStock(String id, int stock) {
-		if (itemType.containsKey(id)) {
-			itemType.get(id).setStock(stock);
+		if (items.containsKey(id)) {
+			items.get(id).setStock(stock);
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -94,8 +93,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * @generated NOT
 	 */
 	public int getItemPrice(String id) {
-		if (itemType.containsKey(id)) {
-			return itemType.get(id).getPrice();
+		if (items.containsKey(id)) {
+			return items.get(id).getPrice();
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -108,8 +107,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * @generated NOT
 	 */
 	public String getItemName(String id) {
-		if (itemType.containsKey(id)) {
-			return itemType.get(id).getName();
+		if (items.containsKey(id)) {
+			return items.get(id).getName();
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -122,8 +121,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * @generated NOT
 	 */
 	public int getItemStock(String id) {
-		if (itemType.containsKey(id)) {
-			return itemType.get(id).getStock();
+		if (items.containsKey(id)) {
+			return items.get(id).getStock();
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -136,8 +135,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * @generated NOT
 	 */
 	public int getItemExpense(String id) {
-		if (itemType.containsKey(id)) {
-			return itemType.get(id).getExpense();
+		if (items.containsKey(id)) {
+			return items.get(id).getExpense();
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -150,7 +149,7 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * @generated NOT
 	 */
 	public List<String> getAllItemIDs() {
-		return new ArrayList<String>(getItemType().keySet());
+		return new ArrayList<String>(items.keySet());
 	}
 
 	/**
@@ -170,8 +169,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * @generated NOT
 	 */
 	public void changeItemName(String id, String name) {
-		if (itemType.containsKey(id)) {
-			itemType.get(id).setName(name);
+		if (items.containsKey(id)) {
+			items.get(id).setName(name);
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -184,8 +183,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * @generated NOT
 	 */
 	public void changeItemPrice(String id, int price) {
-		if (itemType.containsKey(id)) {
-			itemType.get(id).setPrice(price);
+		if (items.containsKey(id)) {
+			items.get(id).setPrice(price);
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -198,8 +197,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * @generated NOT
 	 */
 	public void changeItemExpense(String id, int expense) {
-		if (itemType.containsKey(id)) {
-			itemType.get(id).setExpense(expense);
+		if (items.containsKey(id)) {
+			items.get(id).setExpense(expense);
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -212,8 +211,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * @generated NOT
 	 */
 	public void addItem(String id, String name, int price, int expense, int stock) {
-		if (!itemType.containsKey(id)) {
-			ItemTypeImpl item = new ItemTypeImpl();
+		if (!items.containsKey(id)) {
+			Item item = new ItemImpl();
 			
 			item.setId(id);
 			item.setName(name);
@@ -221,7 +220,7 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 			item.setExpense(expense);
 			item.setStock(stock);
 			
-			itemType.put(id, item);
+			items.put(id, item);
 		} else {
 			logger.warn("An ItemType with ID {} were already in the inventory.", id);
 			throw new InvalidIDException();
@@ -234,8 +233,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	 * @generated NOT
 	 */
 	public void removeItem(String id) {
-		if (itemType.containsKey(id)) {
-			itemType.remove(id);
+		if (items.containsKey(id)) {
+			items.remove(id);
 		} else {
 			logger.warn("The ItemType with ID {} could not be found.", id);
 			throw new InvalidIDException();
@@ -250,8 +249,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case InventoryPackage.INVENTORY__ITEM_TYPE:
-				return getItemType();
+			case InventoryPackage.INVENTORY_MANAGER__ITEMS:
+				return getItems();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -259,15 +258,15 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case InventoryPackage.INVENTORY__ITEM_TYPE:
-				getItemType().clear();
-				getItemType().addAll((Collection<? extends Entry<String, ItemType>>)newValue);
+			case InventoryPackage.INVENTORY_MANAGER__ITEMS:
+				getItems().clear();
+				getItems().addAll((Collection<? extends Item>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -281,8 +280,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case InventoryPackage.INVENTORY__ITEM_TYPE:
-				getItemType().clear();
+			case InventoryPackage.INVENTORY_MANAGER__ITEMS:
+				getItems().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -296,8 +295,8 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case InventoryPackage.INVENTORY__ITEM_TYPE:
-				return itemType != null && !itemType.isEmpty();
+			case InventoryPackage.INVENTORY_MANAGER__ITEMS:
+				return items != null && !items.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -310,39 +309,39 @@ public class InventoryImpl extends MinimalEObjectImpl.Container implements Inven
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case InventoryPackage.INVENTORY___CHANGE_ITEM_STOCK__INT_INT:
+			case InventoryPackage.INVENTORY_MANAGER___CHANGE_ITEM_STOCK__STRING_INT:
 				changeItemStock((String)arguments.get(0), (Integer)arguments.get(1));
 				return null;
-			case InventoryPackage.INVENTORY___GET_ITEM_PRICE__INT:
+			case InventoryPackage.INVENTORY_MANAGER___GET_ITEM_PRICE__STRING:
 				return getItemPrice((String)arguments.get(0));
-			case InventoryPackage.INVENTORY___GET_ITEM_NAME__INT:
+			case InventoryPackage.INVENTORY_MANAGER___GET_ITEM_NAME__STRING:
 				return getItemName((String)arguments.get(0));
-			case InventoryPackage.INVENTORY___GET_ITEM_STOCK__INT:
+			case InventoryPackage.INVENTORY_MANAGER___GET_ITEM_STOCK__STRING:
 				return getItemStock((String)arguments.get(0));
-			case InventoryPackage.INVENTORY___GET_ITEM_EXPENSE__INT:
+			case InventoryPackage.INVENTORY_MANAGER___GET_ITEM_EXPENSE__STRING:
 				return getItemExpense((String)arguments.get(0));
-			case InventoryPackage.INVENTORY___GET_ALL_ITEM_IDS:
+			case InventoryPackage.INVENTORY_MANAGER___GET_ALL_ITEM_IDS:
 				return getAllItemIDs();
-			case InventoryPackage.INVENTORY___SEARCH_ITEMS:
+			case InventoryPackage.INVENTORY_MANAGER___SEARCH_ITEMS:
 				searchItems();
 				return null;
-			case InventoryPackage.INVENTORY___CHANGE_ITEM_NAME__STRING_STRING:
+			case InventoryPackage.INVENTORY_MANAGER___CHANGE_ITEM_NAME__STRING_STRING:
 				changeItemName((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case InventoryPackage.INVENTORY___CHANGE_ITEM_PRICE__STRING_INT:
+			case InventoryPackage.INVENTORY_MANAGER___CHANGE_ITEM_PRICE__STRING_INT:
 				changeItemPrice((String)arguments.get(0), (Integer)arguments.get(1));
 				return null;
-			case InventoryPackage.INVENTORY___CHANGE_ITEM_EXPENSE__STRING_INT:
+			case InventoryPackage.INVENTORY_MANAGER___CHANGE_ITEM_EXPENSE__STRING_INT:
 				changeItemExpense((String)arguments.get(0), (Integer)arguments.get(1));
 				return null;
-			case InventoryPackage.INVENTORY___ADD_ITEM__STRING_STRING_INT_INT_INT:
+			case InventoryPackage.INVENTORY_MANAGER___ADD_ITEM__STRING_STRING_INT_INT_INT:
 				addItem((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4));
 				return null;
-			case InventoryPackage.INVENTORY___REMOVE_ITEM__STRING:
+			case InventoryPackage.INVENTORY_MANAGER___REMOVE_ITEM__STRING:
 				removeItem((String)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //InventoryImpl
+} //InventoryManagerImpl

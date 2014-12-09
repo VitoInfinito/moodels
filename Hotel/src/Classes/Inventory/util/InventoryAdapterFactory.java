@@ -76,12 +76,12 @@ public class InventoryAdapterFactory extends AdapterFactoryImpl {
 				return createIInventoryAccessAdapter();
 			}
 			@Override
-			public Adapter caseInventory(Inventory object) {
-				return createInventoryAdapter();
+			public Adapter caseInventoryManager(InventoryManager object) {
+				return createInventoryManagerAdapter();
 			}
 			@Override
-			public Adapter caseItemType(ItemType object) {
-				return createItemTypeAdapter();
+			public Adapter caseItem(Item object) {
+				return createItemAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -132,30 +132,30 @@ public class InventoryAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Classes.Inventory.Inventory <em>Inventory</em>}'.
+	 * Creates a new adapter for an object of class '{@link Classes.Inventory.InventoryManager <em>Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Classes.Inventory.Inventory
+	 * @see Classes.Inventory.InventoryManager
 	 * @generated
 	 */
-	public Adapter createInventoryAdapter() {
+	public Adapter createInventoryManagerAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Classes.Inventory.ItemType <em>Item Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link Classes.Inventory.Item <em>Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Classes.Inventory.ItemType
+	 * @see Classes.Inventory.Item
 	 * @generated
 	 */
-	public Adapter createItemTypeAdapter() {
+	public Adapter createItemAdapter() {
 		return null;
 	}
 

@@ -679,14 +679,14 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_w9NQqnpsEeST-65JbGUt8g" name="Inventory" visibility="package">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9NQq3psEeST-65JbGUt8g" name="itemType" visibility="private" type="_w9NQr3psEeST-65JbGUt8g" association="_w9NQx3psEeST-65JbGUt8g">
+    <packagedElement xmi:type="uml:Class" xmi:id="_w9NQqnpsEeST-65JbGUt8g" name="InventoryManager" visibility="package">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9NQq3psEeST-65JbGUt8g" name="items" visibility="private" type="_w9NQr3psEeST-65JbGUt8g" association="_w9NQx3psEeST-65JbGUt8g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9NQrHpsEeST-65JbGUt8g"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9NQrXpsEeST-65JbGUt8g" value="*"/>
       </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_w9NQrnpsEeST-65JbGUt8g" client="_w9NQqnpsEeST-65JbGUt8g" supplier="_w9NQonpsEeST-65JbGUt8g" contract="_w9NQonpsEeST-65JbGUt8g"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_w9NQr3psEeST-65JbGUt8g" name="ItemType" visibility="package">
+    <packagedElement xmi:type="uml:Class" xmi:id="_w9NQr3psEeST-65JbGUt8g" name="Item" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9NQsHpsEeST-65JbGUt8g" name="name" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
@@ -1248,18 +1248,71 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_w9PF0HpsEeST-65JbGUt8g" name="Feedback">
     <packagedElement xmi:type="uml:Interface" xmi:id="_w9PF0npsEeST-65JbGUt8g" name="IFeedback">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF03psEeST-65JbGUt8g" name="getAllFeedbackIDs"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF1HpsEeST-65JbGUt8g" name="getFeedbackDescription"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF1XpsEeST-65JbGUt8g" name="getFeedbackIsResolved"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF1npsEeST-65JbGUt8g" name="getFeedbackIsNoted"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF13psEeST-65JbGUt8g" name="setFeedbackDescription"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF2HpsEeST-65JbGUt8g" name="setFeedbackIsResolved"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF2XpsEeST-65JbGUt8g" name="setFeedbackIsNoted"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF03psEeST-65JbGUt8g" name="getAllFeedbackIDs">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_868H8H-QEeS07sUWsjEnow" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF1HpsEeST-65JbGUt8g" name="getFeedbackDescription">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_AkK4cH-REeS07sUWsjEnow" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_EWJVQH-REeS07sUWsjEnow" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF1XpsEeST-65JbGUt8g" name="getFeedbackIsResolved">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_HWqf8H-REeS07sUWsjEnow" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MsCCIH-REeS07sUWsjEnow" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF1npsEeST-65JbGUt8g" name="getFeedbackIsNoted">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PDxVkH-REeS07sUWsjEnow" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QhVfwH-REeS07sUWsjEnow" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF13psEeST-65JbGUt8g" name="setFeedbackDescription">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SPZkEH-REeS07sUWsjEnow" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_TVozYH-REeS07sUWsjEnow" name="desc">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF2HpsEeST-65JbGUt8g" name="setFeedbackIsResolved">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_U2XmUH-REeS07sUWsjEnow" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_WODyAH-REeS07sUWsjEnow" name="status">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF2XpsEeST-65JbGUt8g" name="setFeedbackIsNoted">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_XexzAH-REeS07sUWsjEnow" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Yx19YH-REeS07sUWsjEnow" name="status">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF2npsEeST-65JbGUt8g" name="searchFeedback"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF23psEeST-65JbGUt8g" name="addFeedback"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF23psEeST-65JbGUt8g" name="addFeedback">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_b1X_0H-REeS07sUWsjEnow" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_eXG8wH-REeS07sUWsjEnow" name="desc">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9PF3HpsEeST-65JbGUt8g" name="FeedbackManager" visibility="package">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9PF3XpsEeST-65JbGUt8g" name="feedback" visibility="private" type="_w9PF4XpsEeST-65JbGUt8g" association="_w9PF7npsEeST-65JbGUt8g">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9PF3XpsEeST-65JbGUt8g" name="feedbacks" visibility="private" type="_w9PF4XpsEeST-65JbGUt8g" association="_w9PF7npsEeST-65JbGUt8g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9PF3npsEeST-65JbGUt8g"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9PF33psEeST-65JbGUt8g" value="*"/>
       </ownedAttribute>

@@ -730,16 +730,16 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/getAllItemIDs"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Inventory/IInventoryAccess/searchItems"/>
       </genClasses>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Inventory/Inventory">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Inventory/InventoryManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Inventory/Inventory/itemType"/>
+            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Inventory/InventoryManager/items"/>
       </genClasses>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Inventory/ItemType">
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Inventory/ItemType/name"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Inventory/ItemType/price"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Inventory/ItemType/expense"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Inventory/ItemType/stock"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Inventory/ItemType/id"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Inventory/Item">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Inventory/Item/name"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Inventory/Item/price"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Inventory/Item/expense"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Inventory/Item/stock"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Inventory/Item/id"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Restaurants" basePackage="Classes"
@@ -878,18 +878,36 @@
         disposableProviderFactory="true" ecorePackage="Classes.ecore#//Feedback">
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Feedback/IFeedback">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/getAllFeedbackIDs"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/getFeedbackDescription"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/getFeedbackIsResolved"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/getFeedbackIsNoted"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/setFeedbackDescription"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/setFeedbackIsResolved"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/setFeedbackIsNoted"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/getFeedbackDescription">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/getFeedbackDescription/id"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/getFeedbackIsResolved">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/getFeedbackIsResolved/id"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/getFeedbackIsNoted">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/getFeedbackIsNoted/id"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/setFeedbackDescription">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/setFeedbackDescription/id"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/setFeedbackDescription/desc"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/setFeedbackIsResolved">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/setFeedbackIsResolved/id"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/setFeedbackIsResolved/status"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/setFeedbackIsNoted">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/setFeedbackIsNoted/id"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/setFeedbackIsNoted/status"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/searchFeedback"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/addFeedback"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Feedback/IFeedback/addFeedback">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/addFeedback/id"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Feedback/IFeedback/addFeedback/desc"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Feedback/FeedbackManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Feedback/FeedbackManager/feedback"/>
+            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Feedback/FeedbackManager/feedbacks"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Feedback/Feedback">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Feedback/Feedback/description"/>

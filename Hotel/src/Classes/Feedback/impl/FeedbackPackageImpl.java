@@ -203,7 +203,7 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIFeedback__GetFeedbackDescription() {
+	public EOperation getIFeedback__GetFeedbackDescription__String() {
 		return iFeedbackEClass.getEOperations().get(1);
 	}
 
@@ -212,7 +212,7 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIFeedback__GetFeedbackIsResolved() {
+	public EOperation getIFeedback__GetFeedbackIsResolved__String() {
 		return iFeedbackEClass.getEOperations().get(2);
 	}
 
@@ -221,7 +221,7 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIFeedback__GetFeedbackIsNoted() {
+	public EOperation getIFeedback__GetFeedbackIsNoted__String() {
 		return iFeedbackEClass.getEOperations().get(3);
 	}
 
@@ -230,7 +230,7 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIFeedback__SetFeedbackDescription() {
+	public EOperation getIFeedback__SetFeedbackDescription__String_String() {
 		return iFeedbackEClass.getEOperations().get(4);
 	}
 
@@ -239,7 +239,7 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIFeedback__SetFeedbackIsResolved() {
+	public EOperation getIFeedback__SetFeedbackIsResolved__String_boolean() {
 		return iFeedbackEClass.getEOperations().get(5);
 	}
 
@@ -248,7 +248,7 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIFeedback__SetFeedbackIsNoted() {
+	public EOperation getIFeedback__SetFeedbackIsNoted__String_boolean() {
 		return iFeedbackEClass.getEOperations().get(6);
 	}
 
@@ -266,7 +266,7 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIFeedback__AddFeedback() {
+	public EOperation getIFeedback__AddFeedback__String_String() {
 		return iFeedbackEClass.getEOperations().get(8);
 	}
 
@@ -284,7 +284,7 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFeedbackManager_Feedback() {
+	public EReference getFeedbackManager_Feedbacks() {
 		return (EReference)feedbackManagerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -363,17 +363,17 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 		// Create classes and their features
 		iFeedbackEClass = createEClass(IFEEDBACK);
 		createEOperation(iFeedbackEClass, IFEEDBACK___GET_ALL_FEEDBACK_IDS);
-		createEOperation(iFeedbackEClass, IFEEDBACK___GET_FEEDBACK_DESCRIPTION);
-		createEOperation(iFeedbackEClass, IFEEDBACK___GET_FEEDBACK_IS_RESOLVED);
-		createEOperation(iFeedbackEClass, IFEEDBACK___GET_FEEDBACK_IS_NOTED);
-		createEOperation(iFeedbackEClass, IFEEDBACK___SET_FEEDBACK_DESCRIPTION);
-		createEOperation(iFeedbackEClass, IFEEDBACK___SET_FEEDBACK_IS_RESOLVED);
-		createEOperation(iFeedbackEClass, IFEEDBACK___SET_FEEDBACK_IS_NOTED);
+		createEOperation(iFeedbackEClass, IFEEDBACK___GET_FEEDBACK_DESCRIPTION__STRING);
+		createEOperation(iFeedbackEClass, IFEEDBACK___GET_FEEDBACK_IS_RESOLVED__STRING);
+		createEOperation(iFeedbackEClass, IFEEDBACK___GET_FEEDBACK_IS_NOTED__STRING);
+		createEOperation(iFeedbackEClass, IFEEDBACK___SET_FEEDBACK_DESCRIPTION__STRING_STRING);
+		createEOperation(iFeedbackEClass, IFEEDBACK___SET_FEEDBACK_IS_RESOLVED__STRING_BOOLEAN);
+		createEOperation(iFeedbackEClass, IFEEDBACK___SET_FEEDBACK_IS_NOTED__STRING_BOOLEAN);
 		createEOperation(iFeedbackEClass, IFEEDBACK___SEARCH_FEEDBACK);
-		createEOperation(iFeedbackEClass, IFEEDBACK___ADD_FEEDBACK);
+		createEOperation(iFeedbackEClass, IFEEDBACK___ADD_FEEDBACK__STRING_STRING);
 
 		feedbackManagerEClass = createEClass(FEEDBACK_MANAGER);
-		createEReference(feedbackManagerEClass, FEEDBACK_MANAGER__FEEDBACK);
+		createEReference(feedbackManagerEClass, FEEDBACK_MANAGER__FEEDBACKS);
 
 		feedbackEClass = createEClass(FEEDBACK);
 		createEAttribute(feedbackEClass, FEEDBACK__DESCRIPTION);
@@ -418,26 +418,37 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 		// Initialize classes, features, and operations; add parameters
 		initEClass(iFeedbackEClass, IFeedback.class, "IFeedback", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getIFeedback__GetAllFeedbackIDs(), null, "getAllFeedbackIDs", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIFeedback__GetAllFeedbackIDs(), theTypesPackage.getString(), "getAllFeedbackIDs", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIFeedback__GetFeedbackDescription(), null, "getFeedbackDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getIFeedback__GetFeedbackDescription__String(), theTypesPackage.getString(), "getFeedbackDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIFeedback__GetFeedbackIsResolved(), null, "getFeedbackIsResolved", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIFeedback__GetFeedbackIsResolved__String(), theTypesPackage.getBoolean(), "getFeedbackIsResolved", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIFeedback__GetFeedbackIsNoted(), null, "getFeedbackIsNoted", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIFeedback__GetFeedbackIsNoted__String(), theTypesPackage.getBoolean(), "getFeedbackIsNoted", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIFeedback__SetFeedbackDescription(), null, "setFeedbackDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIFeedback__SetFeedbackDescription__String_String(), null, "setFeedbackDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "desc", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIFeedback__SetFeedbackIsResolved(), null, "setFeedbackIsResolved", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIFeedback__SetFeedbackIsResolved__String_boolean(), null, "setFeedbackIsResolved", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getBoolean(), "status", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIFeedback__SetFeedbackIsNoted(), null, "setFeedbackIsNoted", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIFeedback__SetFeedbackIsNoted__String_boolean(), null, "setFeedbackIsNoted", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getBoolean(), "status", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIFeedback__SearchFeedback(), null, "searchFeedback", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIFeedback__AddFeedback(), null, "addFeedback", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIFeedback__AddFeedback__String_String(), null, "addFeedback", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "desc", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(feedbackManagerEClass, FeedbackManager.class, "FeedbackManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFeedbackManager_Feedback(), this.getFeedback(), null, "feedback", null, 0, -1, FeedbackManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getFeedbackManager_Feedbacks(), this.getFeedback(), null, "feedbacks", null, 0, -1, FeedbackManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(feedbackEClass, Feedback.class, "Feedback", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFeedback_Description(), theTypesPackage.getString(), "description", null, 1, 1, Feedback.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

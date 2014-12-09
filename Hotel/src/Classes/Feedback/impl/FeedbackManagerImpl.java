@@ -8,6 +8,7 @@ import Classes.Feedback.Feedback;
 import Classes.Feedback.FeedbackManager;
 import Classes.Feedback.FeedbackPackage;
 import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -15,6 +16,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -25,7 +27,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Classes.Feedback.impl.FeedbackManagerImpl#getFeedback <em>Feedback</em>}</li>
+ *   <li>{@link Classes.Feedback.impl.FeedbackManagerImpl#getFeedbacks <em>Feedbacks</em>}</li>
  * </ul>
  * </p>
  *
@@ -40,15 +42,16 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 * @ordered
 	 */
-	private EMap<String, Feedback> feedback;
+	private EMap<String, Feedback> feedbacks;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected FeedbackManagerImpl() {
 		super();
+		feedbacks = (EMap<String, Feedback>) new HashMap<String, Feedback>();
 	}
 
 	/**
@@ -59,6 +62,18 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	protected EClass eStaticClass() {
 		return FeedbackPackage.Literals.FEEDBACK_MANAGER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Feedback> getFeedbacks() {
+		if (feedbacks == null) {
+			feedbacks = new EObjectResolvingEList<Feedback>(Feedback.class, this, FeedbackPackage.FEEDBACK_MANAGER__FEEDBACKS);
+		}
+		return feedbacks;
 	}
 
 	/**
@@ -78,7 +93,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllFeedbackIDs() {
+	public String getAllFeedbackIDs() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -89,7 +104,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getFeedbackDescription() {
+	public String getFeedbackDescription(String id) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -100,7 +115,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getFeedbackIsResolved() {
+	public boolean getFeedbackIsResolved(String id) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -111,7 +126,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getFeedbackIsNoted() {
+	public boolean getFeedbackIsNoted(String id) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -122,7 +137,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFeedbackDescription() {
+	public void setFeedbackDescription(String id, String desc) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -133,7 +148,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFeedbackIsResolved() {
+	public void setFeedbackIsResolved(String id, boolean status) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -144,7 +159,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFeedbackIsNoted() {
+	public void setFeedbackIsNoted(String id, boolean status) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -166,7 +181,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addFeedback() {
+	public void addFeedback(String id, String desc) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -255,31 +270,27 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case FeedbackPackage.FEEDBACK_MANAGER___GET_ALL_FEEDBACK_IDS:
-				getAllFeedbackIDs();
+				return getAllFeedbackIDs();
+			case FeedbackPackage.FEEDBACK_MANAGER___GET_FEEDBACK_DESCRIPTION__STRING:
+				return getFeedbackDescription((String)arguments.get(0));
+			case FeedbackPackage.FEEDBACK_MANAGER___GET_FEEDBACK_IS_RESOLVED__STRING:
+				return getFeedbackIsResolved((String)arguments.get(0));
+			case FeedbackPackage.FEEDBACK_MANAGER___GET_FEEDBACK_IS_NOTED__STRING:
+				return getFeedbackIsNoted((String)arguments.get(0));
+			case FeedbackPackage.FEEDBACK_MANAGER___SET_FEEDBACK_DESCRIPTION__STRING_STRING:
+				setFeedbackDescription((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case FeedbackPackage.FEEDBACK_MANAGER___GET_FEEDBACK_DESCRIPTION:
-				getFeedbackDescription();
+			case FeedbackPackage.FEEDBACK_MANAGER___SET_FEEDBACK_IS_RESOLVED__STRING_BOOLEAN:
+				setFeedbackIsResolved((String)arguments.get(0), (Boolean)arguments.get(1));
 				return null;
-			case FeedbackPackage.FEEDBACK_MANAGER___GET_FEEDBACK_IS_RESOLVED:
-				getFeedbackIsResolved();
-				return null;
-			case FeedbackPackage.FEEDBACK_MANAGER___GET_FEEDBACK_IS_NOTED:
-				getFeedbackIsNoted();
-				return null;
-			case FeedbackPackage.FEEDBACK_MANAGER___SET_FEEDBACK_DESCRIPTION:
-				setFeedbackDescription();
-				return null;
-			case FeedbackPackage.FEEDBACK_MANAGER___SET_FEEDBACK_IS_RESOLVED:
-				setFeedbackIsResolved();
-				return null;
-			case FeedbackPackage.FEEDBACK_MANAGER___SET_FEEDBACK_IS_NOTED:
-				setFeedbackIsNoted();
+			case FeedbackPackage.FEEDBACK_MANAGER___SET_FEEDBACK_IS_NOTED__STRING_BOOLEAN:
+				setFeedbackIsNoted((String)arguments.get(0), (Boolean)arguments.get(1));
 				return null;
 			case FeedbackPackage.FEEDBACK_MANAGER___SEARCH_FEEDBACK:
 				searchFeedback();
 				return null;
-			case FeedbackPackage.FEEDBACK_MANAGER___ADD_FEEDBACK:
-				addFeedback();
+			case FeedbackPackage.FEEDBACK_MANAGER___ADD_FEEDBACK__STRING_STRING:
+				addFeedback((String)arguments.get(0), (String)arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

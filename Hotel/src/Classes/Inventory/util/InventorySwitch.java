@@ -79,17 +79,17 @@ public class InventorySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case InventoryPackage.INVENTORY: {
-				Inventory inventory = (Inventory)theEObject;
-				T result = caseInventory(inventory);
-				if (result == null) result = caseIManageInventory(inventory);
-				if (result == null) result = caseIInventoryAccess(inventory);
+			case InventoryPackage.INVENTORY_MANAGER: {
+				InventoryManager inventoryManager = (InventoryManager)theEObject;
+				T result = caseInventoryManager(inventoryManager);
+				if (result == null) result = caseIManageInventory(inventoryManager);
+				if (result == null) result = caseIInventoryAccess(inventoryManager);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case InventoryPackage.ITEM_TYPE: {
-				ItemType itemType = (ItemType)theEObject;
-				T result = caseItemType(itemType);
+			case InventoryPackage.ITEM: {
+				Item item = (Item)theEObject;
+				T result = caseItem(item);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -128,32 +128,32 @@ public class InventorySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Inventory</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Manager</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Inventory</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Manager</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInventory(Inventory object) {
+	public T caseInventoryManager(InventoryManager object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Item Type</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Item Type</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Item</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseItemType(ItemType object) {
+	public T caseItem(Item object) {
 		return null;
 	}
 

@@ -3,30 +3,33 @@
 package Classes.Inventory.impl;
 
 import Classes.Inventory.InventoryPackage;
-import Classes.Inventory.ItemType;
+import Classes.Inventory.Item;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Item Type</b></em>'.
+ * An implementation of the model object '<em><b>Item</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Classes.Inventory.impl.ItemTypeImpl#getName <em>Name</em>}</li>
- *   <li>{@link Classes.Inventory.impl.ItemTypeImpl#getPrice <em>Price</em>}</li>
- *   <li>{@link Classes.Inventory.impl.ItemTypeImpl#getExpense <em>Expense</em>}</li>
- *   <li>{@link Classes.Inventory.impl.ItemTypeImpl#getStock <em>Stock</em>}</li>
- *   <li>{@link Classes.Inventory.impl.ItemTypeImpl#getId <em>Id</em>}</li>
+ *   <li>{@link Classes.Inventory.impl.ItemImpl#getName <em>Name</em>}</li>
+ *   <li>{@link Classes.Inventory.impl.ItemImpl#getPrice <em>Price</em>}</li>
+ *   <li>{@link Classes.Inventory.impl.ItemImpl#getExpense <em>Expense</em>}</li>
+ *   <li>{@link Classes.Inventory.impl.ItemImpl#getStock <em>Stock</em>}</li>
+ *   <li>{@link Classes.Inventory.impl.ItemImpl#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemType {
+public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -132,7 +135,7 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ItemTypeImpl() {
+	protected ItemImpl() {
 		super();
 	}
 
@@ -143,7 +146,7 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return InventoryPackage.Literals.ITEM_TYPE;
+		return InventoryPackage.Literals.ITEM;
 	}
 
 	/**
@@ -164,7 +167,7 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, InventoryPackage.ITEM_TYPE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, InventoryPackage.ITEM__NAME, oldName, name));
 	}
 
 	/**
@@ -185,7 +188,7 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 		int oldPrice = price;
 		price = newPrice;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, InventoryPackage.ITEM_TYPE__PRICE, oldPrice, price));
+			eNotify(new ENotificationImpl(this, Notification.SET, InventoryPackage.ITEM__PRICE, oldPrice, price));
 	}
 
 	/**
@@ -206,7 +209,7 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 		int oldExpense = expense;
 		expense = newExpense;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, InventoryPackage.ITEM_TYPE__EXPENSE, oldExpense, expense));
+			eNotify(new ENotificationImpl(this, Notification.SET, InventoryPackage.ITEM__EXPENSE, oldExpense, expense));
 	}
 
 	/**
@@ -227,7 +230,7 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 		int oldStock = stock;
 		stock = newStock;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, InventoryPackage.ITEM_TYPE__STOCK, oldStock, stock));
+			eNotify(new ENotificationImpl(this, Notification.SET, InventoryPackage.ITEM__STOCK, oldStock, stock));
 	}
 
 	/**
@@ -248,7 +251,7 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 		String oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, InventoryPackage.ITEM_TYPE__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, InventoryPackage.ITEM__ID, oldId, id));
 	}
 
 	/**
@@ -259,15 +262,15 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case InventoryPackage.ITEM_TYPE__NAME:
+			case InventoryPackage.ITEM__NAME:
 				return getName();
-			case InventoryPackage.ITEM_TYPE__PRICE:
+			case InventoryPackage.ITEM__PRICE:
 				return getPrice();
-			case InventoryPackage.ITEM_TYPE__EXPENSE:
+			case InventoryPackage.ITEM__EXPENSE:
 				return getExpense();
-			case InventoryPackage.ITEM_TYPE__STOCK:
+			case InventoryPackage.ITEM__STOCK:
 				return getStock();
-			case InventoryPackage.ITEM_TYPE__ID:
+			case InventoryPackage.ITEM__ID:
 				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -281,19 +284,19 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case InventoryPackage.ITEM_TYPE__NAME:
+			case InventoryPackage.ITEM__NAME:
 				setName((String)newValue);
 				return;
-			case InventoryPackage.ITEM_TYPE__PRICE:
+			case InventoryPackage.ITEM__PRICE:
 				setPrice((Integer)newValue);
 				return;
-			case InventoryPackage.ITEM_TYPE__EXPENSE:
+			case InventoryPackage.ITEM__EXPENSE:
 				setExpense((Integer)newValue);
 				return;
-			case InventoryPackage.ITEM_TYPE__STOCK:
+			case InventoryPackage.ITEM__STOCK:
 				setStock((Integer)newValue);
 				return;
-			case InventoryPackage.ITEM_TYPE__ID:
+			case InventoryPackage.ITEM__ID:
 				setId((String)newValue);
 				return;
 		}
@@ -308,19 +311,19 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case InventoryPackage.ITEM_TYPE__NAME:
+			case InventoryPackage.ITEM__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case InventoryPackage.ITEM_TYPE__PRICE:
+			case InventoryPackage.ITEM__PRICE:
 				setPrice(PRICE_EDEFAULT);
 				return;
-			case InventoryPackage.ITEM_TYPE__EXPENSE:
+			case InventoryPackage.ITEM__EXPENSE:
 				setExpense(EXPENSE_EDEFAULT);
 				return;
-			case InventoryPackage.ITEM_TYPE__STOCK:
+			case InventoryPackage.ITEM__STOCK:
 				setStock(STOCK_EDEFAULT);
 				return;
-			case InventoryPackage.ITEM_TYPE__ID:
+			case InventoryPackage.ITEM__ID:
 				setId(ID_EDEFAULT);
 				return;
 		}
@@ -335,15 +338,15 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case InventoryPackage.ITEM_TYPE__NAME:
+			case InventoryPackage.ITEM__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case InventoryPackage.ITEM_TYPE__PRICE:
+			case InventoryPackage.ITEM__PRICE:
 				return price != PRICE_EDEFAULT;
-			case InventoryPackage.ITEM_TYPE__EXPENSE:
+			case InventoryPackage.ITEM__EXPENSE:
 				return expense != EXPENSE_EDEFAULT;
-			case InventoryPackage.ITEM_TYPE__STOCK:
+			case InventoryPackage.ITEM__STOCK:
 				return stock != STOCK_EDEFAULT;
-			case InventoryPackage.ITEM_TYPE__ID:
+			case InventoryPackage.ITEM__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
@@ -373,4 +376,4 @@ public class ItemTypeImpl extends MinimalEObjectImpl.Container implements ItemTy
 		return result.toString();
 	}
 
-} //ItemTypeImpl
+} //ItemImpl

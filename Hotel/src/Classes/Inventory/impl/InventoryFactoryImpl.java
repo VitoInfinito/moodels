@@ -56,8 +56,8 @@ public class InventoryFactoryImpl extends EFactoryImpl implements InventoryFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case InventoryPackage.INVENTORY: return createInventory();
-			case InventoryPackage.ITEM_TYPE: return createItemType();
+			case InventoryPackage.INVENTORY_MANAGER: return createInventoryManager();
+			case InventoryPackage.ITEM: return createItem();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -68,9 +68,9 @@ public class InventoryFactoryImpl extends EFactoryImpl implements InventoryFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Inventory createInventory() {
-		InventoryImpl inventory = new InventoryImpl();
-		return inventory;
+	public InventoryManager createInventoryManager() {
+		InventoryManagerImpl inventoryManager = new InventoryManagerImpl();
+		return inventoryManager;
 	}
 
 	/**
@@ -78,9 +78,9 @@ public class InventoryFactoryImpl extends EFactoryImpl implements InventoryFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ItemType createItemType() {
-		ItemTypeImpl itemType = new ItemTypeImpl();
-		return itemType;
+	public Item createItem() {
+		ItemImpl item = new ItemImpl();
+		return item;
 	}
 
 	/**
