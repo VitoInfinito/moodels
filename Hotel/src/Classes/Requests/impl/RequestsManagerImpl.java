@@ -4,18 +4,14 @@ package Classes.Requests.impl;
 
 import Classes.InvalidIDException;
 import Classes.Bookables.impl.BookablesManagerImpl;
-import Classes.Guests.impl.GuestsManagerImpl;
 import Classes.Requests.Request;
 import Classes.Requests.RequestsFactory;
 import Classes.Requests.RequestsManager;
 import Classes.Requests.RequestsPackage;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.Map;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;

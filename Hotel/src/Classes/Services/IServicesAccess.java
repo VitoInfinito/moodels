@@ -17,6 +17,9 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface IServicesAccess extends EObject {
+	
+	IServicesAccess INSTANCE = Classes.Services.impl.ServiceManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

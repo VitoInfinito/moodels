@@ -2,7 +2,6 @@
  */
 package Classes.Inventory;
 
-import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +17,7 @@ import java.util.List;
  *
  * @see Classes.Inventory.InventoryPackage#getInventoryManager()
  * @model
- * @generated
+ * @generated NOT
  */
 public interface InventoryManager extends IManageInventory {
 

@@ -2,7 +2,6 @@
  */
 package Classes.Restaurants;
 
-import Classes.Guests.IGuests;
 
 
 /**

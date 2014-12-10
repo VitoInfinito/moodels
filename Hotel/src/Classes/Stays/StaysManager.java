@@ -2,10 +2,6 @@
  */
 package Classes.Stays;
 
-import Classes.Banking.CustomerProvides;
-import Classes.Bills.IBills;
-import Classes.Guests.IGuests;
-import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->

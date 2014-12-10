@@ -4,26 +4,21 @@ package Classes.Staff.impl;
 
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToStaffMapImpl;
-import Classes.Guests.impl.GuestsManagerImpl;
 import Classes.Staff.Staff;
 import Classes.Staff.StaffManager;
 import Classes.Staff.StaffPackage;
 import Classes.Statistics.IStatisticsGenerator;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
-import org.eclipse.emf.ecore.util.InternalEList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -73,6 +68,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	private StaffManagerImpl() {
 		super();
 		staff = new EcoreEMap<String,Staff>(ECoreMapEntriesPackage.Literals.STRING_TO_STAFF_MAP, StringToStaffMapImpl.class, this, StaffPackage.STAFF_MANAGER__STAFF);
+		iStatisticsGenerator = IStatisticsGenerator.INSTANCE;
 	}
 
 	/**

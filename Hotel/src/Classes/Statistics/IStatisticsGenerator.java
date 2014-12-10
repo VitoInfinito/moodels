@@ -3,10 +3,7 @@
 package Classes.Statistics;
 
 import java.util.Date;
-
 import org.eclipse.emf.ecore.EObject;
-
-import Classes.Guests.IGuests;
 
 /**
  * <!-- begin-user-doc -->

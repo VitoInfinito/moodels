@@ -12,12 +12,9 @@ import Classes.Customers.ICustomers;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToBookingMapImpl;
 import Classes.Guests.IGuests;
-import Classes.Guests.impl.GuestsManagerImpl;
 import Classes.Stays.IStays;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -133,6 +130,12 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	private BookingsManagerImpl() {
 		super();
 		booking = new EcoreEMap<String,Booking>(ECoreMapEntriesPackage.Literals.STRING_TO_BOOKING_MAP, StringToBookingMapImpl.class, this, BookingsPackage.BOOKINGS_MANAGER__BOOKING);
+		iBookableAccess = IBookablesAccess.INSTANCE;
+		iHotelStayManager = IStays.INSTANCE;
+		// TODO fetch bank
+		iGuest = IGuests.INSTANCE;
+		iCustomer = ICustomers.INSTANCE;
+		iBills = IBills.INSTANCE;
 	}
 
 	/**

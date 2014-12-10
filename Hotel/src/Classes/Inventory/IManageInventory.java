@@ -2,7 +2,6 @@
  */
 package Classes.Inventory;
 
-import Classes.Guests.IGuests;
 
 
 /**

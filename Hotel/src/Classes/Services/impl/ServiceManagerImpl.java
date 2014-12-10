@@ -11,21 +11,17 @@ import Classes.Services.RoomServiceOrder;
 import Classes.Services.Service;
 import Classes.Services.ServiceManager;
 import Classes.Services.ServicesPackage;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
-import org.eclipse.emf.ecore.util.InternalEList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

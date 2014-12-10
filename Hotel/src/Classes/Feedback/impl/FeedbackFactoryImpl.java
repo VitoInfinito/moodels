@@ -66,7 +66,7 @@ public class FeedbackFactoryImpl extends EFactoryImpl implements FeedbackFactory
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public FeedbackManager createFeedbackManager() {
 		return FeedbackManagerImpl.INSTANCE;

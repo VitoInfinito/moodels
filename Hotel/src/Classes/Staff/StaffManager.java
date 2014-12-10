@@ -2,8 +2,6 @@
  */
 package Classes.Staff;
 
-import Classes.Statistics.IStatisticsGenerator;
-import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->

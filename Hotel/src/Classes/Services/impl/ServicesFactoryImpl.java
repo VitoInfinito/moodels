@@ -78,7 +78,7 @@ public class ServicesFactoryImpl extends EFactoryImpl implements ServicesFactory
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public ServiceManager createServiceManager() {
 		return ServiceManagerImpl.INSTANCE;

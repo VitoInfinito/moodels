@@ -66,7 +66,7 @@ public class RequestsFactoryImpl extends EFactoryImpl implements RequestsFactory
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public RequestsManager createRequestsManager() {
 		return RequestsManagerImpl.INSTANCE;

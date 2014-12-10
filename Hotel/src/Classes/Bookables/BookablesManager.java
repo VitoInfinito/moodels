@@ -2,8 +2,6 @@
  */
 package Classes.Bookables;
 
-import Classes.Stays.IStays;
-import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->

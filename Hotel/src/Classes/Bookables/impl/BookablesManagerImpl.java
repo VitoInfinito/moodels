@@ -15,9 +15,7 @@ import Classes.Bookables.HotelRoom;
 import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.Room;
 import Classes.Bookables.RoomLocation;
-import Classes.Guests.impl.GuestsManagerImpl;
 import Classes.Stays.IStays;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,7 +23,6 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -73,10 +70,10 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIHotelStayManager()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected IStays iHotelStayManager;
+	private IStays iHotelStayManager;
 
 
 	/**
@@ -87,6 +84,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	private BookablesManagerImpl() {
 		super();
 		bookables = new EcoreEMap<String,Bookable>(Classes.ECoreMapEntries.ECoreMapEntriesPackage.Literals.STRING_TO_BOOKABLE_MAP, Classes.ECoreMapEntries.impl.StringToBookableMapImpl.class, this, BookablesPackage.BOOKABLES_MANAGER__BOOKABLES);
+		iHotelStayManager = IStays.INSTANCE;
 	}
 
 	/**

@@ -7,10 +7,7 @@ import Classes.Customers.CustomersManager;
 import Classes.Customers.CustomersPackage;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToCustomerMapImpl;
-import Classes.Guests.impl.GuestsManagerImpl;
-
 import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;

@@ -2,13 +2,6 @@
  */
 package Classes.Bookings;
 
-import Classes.Banking.CustomerProvides;
-import Classes.Bills.IBills;
-import Classes.Bookables.IBookablesAccess;
-import Classes.Customers.ICustomers;
-import Classes.Guests.IGuests;
-import Classes.Stays.IStays;
-import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->

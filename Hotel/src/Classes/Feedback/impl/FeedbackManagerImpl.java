@@ -4,10 +4,7 @@ package Classes.Feedback.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -19,17 +16,12 @@ import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import Classes.InvalidIDException;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToFeedbackMapImpl;
-import Classes.ECoreMapEntries.impl.StringToGuestMapImpl;
 import Classes.Feedback.Feedback;
 import Classes.Feedback.FeedbackManager;
 import Classes.Feedback.FeedbackPackage;
-import Classes.Guests.Guest;
-import Classes.Guests.GuestsPackage;
-import Classes.Guests.impl.GuestsManagerImpl;
 
 /**
  * <!-- begin-user-doc -->

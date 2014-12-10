@@ -2,11 +2,6 @@
  */
 package Classes.Statistics;
 
-import Classes.Bills.IBills;
-
-import Classes.Bookings.IBookings;
-
-import Classes.Staff.IStaff;
 
 /**
  * <!-- begin-user-doc -->

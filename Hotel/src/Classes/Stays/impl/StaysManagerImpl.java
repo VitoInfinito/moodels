@@ -7,25 +7,18 @@ import Classes.Bills.IBills;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToStayMapImpl;
 import Classes.Guests.IGuests;
-import Classes.Guests.impl.GuestsManagerImpl;
 import Classes.Stays.Stay;
 import Classes.Stays.StaysManager;
 import Classes.Stays.StaysPackage;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
-import org.eclipse.emf.ecore.util.InternalEList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -97,6 +90,9 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	private StaysManagerImpl() {
 		super();
 		stay = new EcoreEMap<String,Stay>(ECoreMapEntriesPackage.Literals.STRING_TO_STAY_MAP, StringToStayMapImpl.class, this, StaysPackage.STAYS_MANAGER__STAY);
+		iBills = IBills.INSTANCE;
+		iGuests = IGuests.INSTANCE;
+		// TODO fetch bank
 	}
 
 	/**

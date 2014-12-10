@@ -3,11 +3,8 @@
 package Classes.Feedback;
 
 import java.util.List;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-
-import Classes.Guests.IGuests;
 
 /**
  * <!-- begin-user-doc -->

@@ -2,9 +2,6 @@
  */
 package Classes.Feedback;
 
-import java.util.List;
-
-import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->

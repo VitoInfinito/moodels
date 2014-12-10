@@ -60,7 +60,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * @generated
 	 * @ordered
 	 */
-	private CustomerProvides customerProvides;
+	protected CustomerProvides customerProvides;
 
 	/**
 	 * <!-- begin-user-doc -->

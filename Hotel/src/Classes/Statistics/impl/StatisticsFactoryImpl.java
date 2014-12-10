@@ -98,7 +98,7 @@ public class StatisticsFactoryImpl extends EFactoryImpl implements StatisticsFac
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public StatisticsGenerator createStatisticsGenerator() {
 		return StatisticsGeneratorImpl.INSTANCE;

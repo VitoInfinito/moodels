@@ -107,7 +107,7 @@ public class AccountsFactoryImpl extends EFactoryImpl implements AccountsFactory
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public AccountsManager createAccountsManager() {
 		return AccountsManagerImpl.INSTANCE;
