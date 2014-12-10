@@ -5,6 +5,7 @@ package Classes.Feedback.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -16,6 +17,7 @@ import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToFeedbackMapImpl;
@@ -75,12 +77,12 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Do not change. This is not visible to the client. Only EMF shit.
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public EMap<String, Feedback> getFeedbacks() {
-		return feedbacks;
+		throw new UnsupportedOperationException();
 	}
 	
 	/**
@@ -224,109 +226,68 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACKS:
-				return ((InternalEList<?>)getFeedbacks()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACKS:
-				return getFeedbacks();
-		}
-		return super.eGet(featureID, resolve, coreType);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACKS:
-				((EStructuralFeature.Setting)getFeedbacks()).set(newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACKS:
-				getFeedbacks().clear();
-				return;
-		}
-		super.eUnset(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACKS:
-				return feedbacks != null && !feedbacks.isEmpty();
-		}
-		return super.eIsSet(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case FeedbackPackage.FEEDBACK_MANAGER___GET_ALL_FEEDBACK_IDS:
-				return getAllFeedbackIDs();
-			case FeedbackPackage.FEEDBACK_MANAGER___GET_FEEDBACK_DESCRIPTION__STRING:
-				return getFeedbackDescription((String)arguments.get(0));
-			case FeedbackPackage.FEEDBACK_MANAGER___GET_FEEDBACK_IS_RESOLVED__STRING:
-				return getFeedbackIsResolved((String)arguments.get(0));
-			case FeedbackPackage.FEEDBACK_MANAGER___GET_FEEDBACK_IS_NOTED__STRING:
-				return getFeedbackIsNoted((String)arguments.get(0));
-			case FeedbackPackage.FEEDBACK_MANAGER___SET_FEEDBACK_DESCRIPTION__STRING_STRING:
-				setFeedbackDescription((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case FeedbackPackage.FEEDBACK_MANAGER___SET_FEEDBACK_IS_RESOLVED__STRING_BOOLEAN:
-				setFeedbackIsResolved((String)arguments.get(0), (Boolean)arguments.get(1));
-				return null;
-			case FeedbackPackage.FEEDBACK_MANAGER___SET_FEEDBACK_IS_NOTED__STRING_BOOLEAN:
-				setFeedbackIsNoted((String)arguments.get(0), (Boolean)arguments.get(1));
-				return null;
-			case FeedbackPackage.FEEDBACK_MANAGER___SEARCH_FEEDBACK__STRING:
-				return searchFeedback((String)arguments.get(0));
-			case FeedbackPackage.FEEDBACK_MANAGER___ADD_FEEDBACK__STRING:
-				addFeedback((String)arguments.get(0));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
+		throw new UnsupportedOperationException();
 	}
-
 } //FeedbackManagerImpl

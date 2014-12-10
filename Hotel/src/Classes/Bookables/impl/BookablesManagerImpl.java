@@ -16,6 +16,7 @@ import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.Room;
 import Classes.Bookables.RoomLocation;
 import Classes.Stays.IStays;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -23,6 +24,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -99,49 +101,42 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public EMap<String, Bookable> getBookables() {
-		return bookables;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IStays getIHotelStayManager() {
-		if (iHotelStayManager != null && iHotelStayManager.eIsProxy()) {
-			InternalEObject oldIHotelStayManager = (InternalEObject)iHotelStayManager;
-			iHotelStayManager = (IStays)eResolveProxy(oldIHotelStayManager);
-			if (iHotelStayManager != oldIHotelStayManager) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookablesPackage.BOOKABLES_MANAGER__IHOTEL_STAY_MANAGER, oldIHotelStayManager, iHotelStayManager));
-			}
-		}
-		return iHotelStayManager;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IStays basicGetIHotelStayManager() {
-		return iHotelStayManager;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setIHotelStayManager(IStays newIHotelStayManager) {
-		IStays oldIHotelStayManager = iHotelStayManager;
-		iHotelStayManager = newIHotelStayManager;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BookablesPackage.BOOKABLES_MANAGER__IHOTEL_STAY_MANAGER, oldIHotelStayManager, iHotelStayManager));
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -946,166 +941,69 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case BookablesPackage.BOOKABLES_MANAGER__BOOKABLES:
-				return ((InternalEList<?>)getBookables()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case BookablesPackage.BOOKABLES_MANAGER__BOOKABLES:
-				if (coreType) return getBookables();
-				else return getBookables().map();
-			case BookablesPackage.BOOKABLES_MANAGER__IHOTEL_STAY_MANAGER:
-				if (resolve) return getIHotelStayManager();
-				return basicGetIHotelStayManager();
-		}
-		return super.eGet(featureID, resolve, coreType);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case BookablesPackage.BOOKABLES_MANAGER__BOOKABLES:
-				((EStructuralFeature.Setting)getBookables()).set(newValue);
-				return;
-			case BookablesPackage.BOOKABLES_MANAGER__IHOTEL_STAY_MANAGER:
-				setIHotelStayManager((IStays)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case BookablesPackage.BOOKABLES_MANAGER__BOOKABLES:
-				getBookables().clear();
-				return;
-			case BookablesPackage.BOOKABLES_MANAGER__IHOTEL_STAY_MANAGER:
-				setIHotelStayManager((IStays)null);
-				return;
-		}
-		super.eUnset(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case BookablesPackage.BOOKABLES_MANAGER__BOOKABLES:
-				return bookables != null && !bookables.isEmpty();
-			case BookablesPackage.BOOKABLES_MANAGER__IHOTEL_STAY_MANAGER:
-				return iHotelStayManager != null;
-		}
-		return super.eIsSet(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case BookablesPackage.BOOKABLES_MANAGER___GET_BOOKABLE_BASE_PRICE__STRING:
-				return getBookableBasePrice((String)arguments.get(0));
-			case BookablesPackage.BOOKABLES_MANAGER___GET_ROOM_LOCATION_INFO__STRING:
-				return getRoomLocationInfo((String)arguments.get(0));
-			case BookablesPackage.BOOKABLES_MANAGER___GET_BOOKABLE_DESCRIPTION__STRING:
-				return getBookableDescription((String)arguments.get(0));
-			case BookablesPackage.BOOKABLES_MANAGER___GET_ALL_BOOKABLE_IDS:
-				return getAllBookableIDs();
-			case BookablesPackage.BOOKABLES_MANAGER___GET_ROOM_OF_HOSTEL_BED__STRING:
-				return getRoomOfHostelBed((String)arguments.get(0));
-			case BookablesPackage.BOOKABLES_MANAGER___GET_HOTEL_ROOM_CATEGORY__STRING:
-				return getHotelRoomCategory((String)arguments.get(0));
-			case BookablesPackage.BOOKABLES_MANAGER___GET_CONFERENCE_ROOM_CAPACITY__STRING:
-				return getConferenceRoomCapacity((String)arguments.get(0));
-			case BookablesPackage.BOOKABLES_MANAGER___GET_HOTEL_ROOM_NBR_BEDS__STRING:
-				return getHotelRoomNbrBeds((String)arguments.get(0));
-			case BookablesPackage.BOOKABLES_MANAGER___SEARCH_FOR_BOOKABLE__STRING:
-				return searchForBookable((String)arguments.get(0));
-			case BookablesPackage.BOOKABLES_MANAGER___GET_ROOM_LOCATION_FLOOR__STRING:
-				return getRoomLocationFloor((String)arguments.get(0));
-			case BookablesPackage.BOOKABLES_MANAGER___GET_ALL_HOTEL_ROOM_IDS:
-				return getAllHotelRoomIDs();
-			case BookablesPackage.BOOKABLES_MANAGER___GET_ALL_CONFERENCE_ROOM_IDS:
-				return getAllConferenceRoomIDs();
-			case BookablesPackage.BOOKABLES_MANAGER___GET_ALL_HOSTEL_BED_IDS:
-				return getAllHostelBedIDs();
-			case BookablesPackage.BOOKABLES_MANAGER___GET_CONFERENCE_ROOM_CATEGORY__STRING:
-				return getConferenceRoomCategory((String)arguments.get(0));
-			case BookablesPackage.BOOKABLES_MANAGER___SEARCH_HOTEL_ROOMS__STRING_HOTELROOMCATEGORY:
-				return searchHotelRooms((String)arguments.get(0), (HotelRoomCategory)arguments.get(1));
-			case BookablesPackage.BOOKABLES_MANAGER___SEARCH_HOSTEL_BEDS__STRING:
-				return searchHostelBeds((String)arguments.get(0));
-			case BookablesPackage.BOOKABLES_MANAGER___SEARCH_CONFERENCE_ROOMS__STRING_CONFERENCEROOMCATEGORY:
-				return searchConferenceRooms((String)arguments.get(0), (ConferenceRoomCategory)arguments.get(1));
-			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_HOSTEL_BED_ROOM__STRING_STRING:
-				changeHostelBedRoom((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___DELETE_BOOKABLE__STRING:
-				deleteBookable((String)arguments.get(0));
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_ROOM_LOCATION__STRING_INT_STRING:
-				changeRoomLocation((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2));
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_HOTEL_ROOM_CATEGORY__STRING_HOTELROOMCATEGORY:
-				changeHotelRoomCategory((String)arguments.get(0), (HotelRoomCategory)arguments.get(1));
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_CONFERENCE_ROOM_CATEGORY__STRING_CONFERENCEROOMCATEGORY:
-				changeConferenceRoomCategory((String)arguments.get(0), (ConferenceRoomCategory)arguments.get(1));
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_BOOKABLE_BASE_PRICE__STRING_DOUBLE:
-				changeBookableBasePrice((String)arguments.get(0), (Double)arguments.get(1));
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_BOOKABLE_DESCRIPTION__STRING_STRING:
-				changeBookableDescription((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___ADD_HOTEL_ROOM__STRING_DOUBLE_STRING_INT_STRING_HOTELROOMCATEGORY_INT:
-				return addHotelRoom((String)arguments.get(0), (Double)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (HotelRoomCategory)arguments.get(5), (Integer)arguments.get(6));
-			case BookablesPackage.BOOKABLES_MANAGER___ADD_HOSTEL_BED__STRING_DOUBLE_STRING_STRING:
-				return addHostelBed((String)arguments.get(0), (Double)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-			case BookablesPackage.BOOKABLES_MANAGER___ADD_CONFERENCE_ROOM__STRING_DOUBLE_STRING_INT_STRING_CONFERENCEROOMCATEGORY_INT:
-				return addConferenceRoom((String)arguments.get(0), (Double)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (ConferenceRoomCategory)arguments.get(5), (Integer)arguments.get(6));
-			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_HOTEL_ROOM_NUMBER_BEDS__STRING_INT:
-				changeHotelRoomNumberBeds((String)arguments.get(0), (Integer)arguments.get(1));
-				return null;
-			case BookablesPackage.BOOKABLES_MANAGER___CHANGE_CONFERENCE_ROOM_CAPACITY__STRING_INT:
-				changeConferenceRoomCapacity((String)arguments.get(0), (Integer)arguments.get(1));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
+		throw new UnsupportedOperationException();
 	}
 
 } //BookablesManagerImpl

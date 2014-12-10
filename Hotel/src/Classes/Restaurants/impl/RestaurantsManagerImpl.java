@@ -86,7 +86,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * returns restaurant belonging to restaurantID
 	 */
 	private Restaurant getRestaurantByID(String restaurantID) {
-		return getRestaurant().get(restaurantID);
+		return restaurant.get(restaurantID);
 	}
 
 	/**

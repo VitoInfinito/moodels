@@ -10,9 +10,12 @@ import Classes.Services.RoomServiceMenu;
 import Classes.Services.RoomServiceOrder;
 import Classes.Services.Service;
 import Classes.Services.ServiceManager;
+import Classes.Services.ServicesFactory;
 import Classes.Services.ServicesPackage;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -69,10 +72,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRoomServiceMenu()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected RoomServiceMenu roomServiceMenu;
+	private RoomServiceMenu roomServiceMenu;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -83,6 +86,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 		super();
 		service = new EcoreEMap<String,Service>(ECoreMapEntriesPackage.Literals.STRING_TO_SERVICE_MAP, StringToServiceMapImpl.class, this, ServicesPackage.SERVICE_MANAGER__SERVICE);
 		roomServiceOrder = new EcoreEMap<String,RoomServiceOrder>(ECoreMapEntriesPackage.Literals.STRING_TO_ROOM_SERVICE_ORDER_MAP, StringToRoomServiceOrderMapImpl.class, this, ServicesPackage.SERVICE_MANAGER__ROOM_SERVICE_ORDER);
+		roomServiceMenu = ServicesFactory.eINSTANCE.createRoomServiceMenu();
 	}
 
 	/**
@@ -117,40 +121,32 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public RoomServiceMenu getRoomServiceMenu() {
-		if (roomServiceMenu != null && roomServiceMenu.eIsProxy()) {
-			InternalEObject oldRoomServiceMenu = (InternalEObject)roomServiceMenu;
-			roomServiceMenu = (RoomServiceMenu)eResolveProxy(oldRoomServiceMenu);
-			if (roomServiceMenu != oldRoomServiceMenu) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ServicesPackage.SERVICE_MANAGER__ROOM_SERVICE_MENU, oldRoomServiceMenu, roomServiceMenu));
-			}
-		}
-		return roomServiceMenu;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public RoomServiceMenu basicGetRoomServiceMenu() {
-		return roomServiceMenu;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setRoomServiceMenu(RoomServiceMenu newRoomServiceMenu) {
-		RoomServiceMenu oldRoomServiceMenu = roomServiceMenu;
-		roomServiceMenu = newRoomServiceMenu;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ServicesPackage.SERVICE_MANAGER__ROOM_SERVICE_MENU, oldRoomServiceMenu, roomServiceMenu));
+		throw new UnsupportedOperationException();
 	}
 
 	/**

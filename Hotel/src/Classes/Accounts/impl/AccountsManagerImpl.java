@@ -3,6 +3,7 @@
 package Classes.Accounts.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -14,6 +15,7 @@ import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
 import Classes.Accounts.Account;
 import Classes.Accounts.AccountType;
@@ -73,11 +75,12 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public EMap<String, Account> getAccounts() {
-		return accounts;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -216,127 +219,68 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AccountsPackage.ACCOUNTS_MANAGER__ACCOUNTS:
-				return ((InternalEList<?>)getAccounts()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case AccountsPackage.ACCOUNTS_MANAGER__ACCOUNTS:
-				if (coreType) return getAccounts();
-				else return getAccounts().map();
-		}
-		return super.eGet(featureID, resolve, coreType);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case AccountsPackage.ACCOUNTS_MANAGER__ACCOUNTS:
-				((EStructuralFeature.Setting)getAccounts()).set(newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case AccountsPackage.ACCOUNTS_MANAGER__ACCOUNTS:
-				getAccounts().clear();
-				return;
-		}
-		super.eUnset(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case AccountsPackage.ACCOUNTS_MANAGER__ACCOUNTS:
-				return accounts != null && !accounts.isEmpty();
-		}
-		return super.eIsSet(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
-	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == IAccountsAccess.class) {
-			switch (baseOperationID) {
-				case AccountsPackage.IACCOUNTS_ACCESS___VALIDATE_ACCOUNT__STRING_STRING: return AccountsPackage.ACCOUNTS_MANAGER___VALIDATE_ACCOUNT__STRING_STRING;
-				case AccountsPackage.IACCOUNTS_ACCESS___LOGIN__STRING_STRING: return AccountsPackage.ACCOUNTS_MANAGER___LOGIN__STRING_STRING;
-				default: return -1;
-			}
-		}
-		return super.eDerivedOperationID(baseOperationID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case AccountsPackage.ACCOUNTS_MANAGER___ADD_ACCOUNT__STRING_STRING_ACCOUNTTYPE:
-				addAccount((String)arguments.get(0), (String)arguments.get(1), (AccountType)arguments.get(2));
-				return null;
-			case AccountsPackage.ACCOUNTS_MANAGER___DELETE_ACCOUNT__STRING:
-				deleteAccount((String)arguments.get(0));
-				return null;
-			case AccountsPackage.ACCOUNTS_MANAGER___RENAME_ACCOUNT__STRING_STRING:
-				renameAccount((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case AccountsPackage.ACCOUNTS_MANAGER___CHANGE_PASSWORD__STRING_STRING:
-				changePassword((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case AccountsPackage.ACCOUNTS_MANAGER___GET_ACCOUNT_PASSWORD__STRING:
-				return getAccountPassword((String)arguments.get(0));
-			case AccountsPackage.ACCOUNTS_MANAGER___GET_ACCOUNT_NAME__STRING:
-				return getAccountName((String)arguments.get(0));
-			case AccountsPackage.ACCOUNTS_MANAGER___SEARCH_ACCOUNTS__STRING:
-				return searchAccounts((String)arguments.get(0));
-			case AccountsPackage.ACCOUNTS_MANAGER___VALIDATE_ACCOUNT__STRING_STRING:
-				return validateAccount((String)arguments.get(0), (String)arguments.get(1));
-			case AccountsPackage.ACCOUNTS_MANAGER___LOGIN__STRING_STRING:
-				return login((String)arguments.get(0), (String)arguments.get(1));
-		}
-		return super.eInvoke(operationID, arguments);
+		throw new UnsupportedOperationException();
 	}
-
 } //AccountsManagerImpl

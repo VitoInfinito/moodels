@@ -96,40 +96,32 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IManageAccounts getIManageAccounts() {
-		if (iManageAccounts != null && iManageAccounts.eIsProxy()) {
-			InternalEObject oldIManageAccounts = (InternalEObject)iManageAccounts;
-			iManageAccounts = (IManageAccounts)eResolveProxy(oldIManageAccounts);
-			if (iManageAccounts != oldIManageAccounts) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GuestsPackage.GUESTS_MANAGER__IMANAGE_ACCOUNTS, oldIManageAccounts, iManageAccounts));
-			}
-		}
-		return iManageAccounts;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IManageAccounts basicGetIManageAccounts() {
-		return iManageAccounts;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setIManageAccounts(IManageAccounts newIManageAccounts) {
-		IManageAccounts oldIManageAccounts = iManageAccounts;
-		iManageAccounts = newIManageAccounts;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GuestsPackage.GUESTS_MANAGER__IMANAGE_ACCOUNTS, oldIManageAccounts, iManageAccounts));
+		throw new UnsupportedOperationException();
 	}
 
 	/**

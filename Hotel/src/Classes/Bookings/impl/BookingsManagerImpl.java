@@ -13,8 +13,10 @@ import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToBookingMapImpl;
 import Classes.Guests.IGuests;
 import Classes.Stays.IStays;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -150,239 +152,192 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public EMap<String, Booking> getBooking() {
-		return booking;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IBookablesAccess getIBookableAccess() {
-		if (iBookableAccess != null && iBookableAccess.eIsProxy()) {
-			InternalEObject oldIBookableAccess = (InternalEObject)iBookableAccess;
-			iBookableAccess = (IBookablesAccess)eResolveProxy(oldIBookableAccess);
-			if (iBookableAccess != oldIBookableAccess) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookingsPackage.BOOKINGS_MANAGER__IBOOKABLE_ACCESS, oldIBookableAccess, iBookableAccess));
-			}
-		}
-		return iBookableAccess;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IBookablesAccess basicGetIBookableAccess() {
-		return iBookableAccess;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setIBookableAccess(IBookablesAccess newIBookableAccess) {
-		IBookablesAccess oldIBookableAccess = iBookableAccess;
-		iBookableAccess = newIBookableAccess;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BookingsPackage.BOOKINGS_MANAGER__IBOOKABLE_ACCESS, oldIBookableAccess, iBookableAccess));
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IStays getIHotelStayManager() {
-		if (iHotelStayManager != null && iHotelStayManager.eIsProxy()) {
-			InternalEObject oldIHotelStayManager = (InternalEObject)iHotelStayManager;
-			iHotelStayManager = (IStays)eResolveProxy(oldIHotelStayManager);
-			if (iHotelStayManager != oldIHotelStayManager) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookingsPackage.BOOKINGS_MANAGER__IHOTEL_STAY_MANAGER, oldIHotelStayManager, iHotelStayManager));
-			}
-		}
-		return iHotelStayManager;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IStays basicGetIHotelStayManager() {
-		return iHotelStayManager;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setIHotelStayManager(IStays newIHotelStayManager) {
-		IStays oldIHotelStayManager = iHotelStayManager;
-		iHotelStayManager = newIHotelStayManager;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BookingsPackage.BOOKINGS_MANAGER__IHOTEL_STAY_MANAGER, oldIHotelStayManager, iHotelStayManager));
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public CustomerProvides getBank() {
-		if (bank != null && bank.eIsProxy()) {
-			InternalEObject oldBank = (InternalEObject)bank;
-			bank = (CustomerProvides)eResolveProxy(oldBank);
-			if (bank != oldBank) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookingsPackage.BOOKINGS_MANAGER__BANK, oldBank, bank));
-			}
-		}
-		return bank;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public CustomerProvides basicGetBank() {
-		return bank;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setBank(CustomerProvides newBank) {
-		CustomerProvides oldBank = bank;
-		bank = newBank;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BookingsPackage.BOOKINGS_MANAGER__BANK, oldBank, bank));
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IGuests getIGuest() {
-		if (iGuest != null && iGuest.eIsProxy()) {
-			InternalEObject oldIGuest = (InternalEObject)iGuest;
-			iGuest = (IGuests)eResolveProxy(oldIGuest);
-			if (iGuest != oldIGuest) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookingsPackage.BOOKINGS_MANAGER__IGUEST, oldIGuest, iGuest));
-			}
-		}
-		return iGuest;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IGuests basicGetIGuest() {
-		return iGuest;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setIGuest(IGuests newIGuest) {
-		IGuests oldIGuest = iGuest;
-		iGuest = newIGuest;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BookingsPackage.BOOKINGS_MANAGER__IGUEST, oldIGuest, iGuest));
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public ICustomers getICustomer() {
-		if (iCustomer != null && iCustomer.eIsProxy()) {
-			InternalEObject oldICustomer = (InternalEObject)iCustomer;
-			iCustomer = (ICustomers)eResolveProxy(oldICustomer);
-			if (iCustomer != oldICustomer) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookingsPackage.BOOKINGS_MANAGER__ICUSTOMER, oldICustomer, iCustomer));
-			}
-		}
-		return iCustomer;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public ICustomers basicGetICustomer() {
-		return iCustomer;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setICustomer(ICustomers newICustomer) {
-		ICustomers oldICustomer = iCustomer;
-		iCustomer = newICustomer;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BookingsPackage.BOOKINGS_MANAGER__ICUSTOMER, oldICustomer, iCustomer));
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IBills getIBills() {
-		if (iBills != null && iBills.eIsProxy()) {
-			InternalEObject oldIBills = (InternalEObject)iBills;
-			iBills = (IBills)eResolveProxy(oldIBills);
-			if (iBills != oldIBills) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookingsPackage.BOOKINGS_MANAGER__IBILLS, oldIBills, iBills));
-			}
-		}
-		return iBills;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IBills basicGetIBills() {
-		return iBills;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setIBills(IBills newIBills) {
-		IBills oldIBills = iBills;
-		iBills = newIBills;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BookingsPackage.BOOKINGS_MANAGER__IBILLS, oldIBills, iBills));
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -684,218 +639,69 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case BookingsPackage.BOOKINGS_MANAGER__BOOKING:
-				return ((InternalEList<?>)getBooking()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case BookingsPackage.BOOKINGS_MANAGER__BOOKING:
-				if (coreType) return getBooking();
-				else return getBooking().map();
-			case BookingsPackage.BOOKINGS_MANAGER__IBOOKABLE_ACCESS:
-				if (resolve) return getIBookableAccess();
-				return basicGetIBookableAccess();
-			case BookingsPackage.BOOKINGS_MANAGER__IHOTEL_STAY_MANAGER:
-				if (resolve) return getIHotelStayManager();
-				return basicGetIHotelStayManager();
-			case BookingsPackage.BOOKINGS_MANAGER__BANK:
-				if (resolve) return getBank();
-				return basicGetBank();
-			case BookingsPackage.BOOKINGS_MANAGER__IGUEST:
-				if (resolve) return getIGuest();
-				return basicGetIGuest();
-			case BookingsPackage.BOOKINGS_MANAGER__ICUSTOMER:
-				if (resolve) return getICustomer();
-				return basicGetICustomer();
-			case BookingsPackage.BOOKINGS_MANAGER__IBILLS:
-				if (resolve) return getIBills();
-				return basicGetIBills();
-		}
-		return super.eGet(featureID, resolve, coreType);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case BookingsPackage.BOOKINGS_MANAGER__BOOKING:
-				((EStructuralFeature.Setting)getBooking()).set(newValue);
-				return;
-			case BookingsPackage.BOOKINGS_MANAGER__IBOOKABLE_ACCESS:
-				setIBookableAccess((IBookablesAccess)newValue);
-				return;
-			case BookingsPackage.BOOKINGS_MANAGER__IHOTEL_STAY_MANAGER:
-				setIHotelStayManager((IStays)newValue);
-				return;
-			case BookingsPackage.BOOKINGS_MANAGER__BANK:
-				setBank((CustomerProvides)newValue);
-				return;
-			case BookingsPackage.BOOKINGS_MANAGER__IGUEST:
-				setIGuest((IGuests)newValue);
-				return;
-			case BookingsPackage.BOOKINGS_MANAGER__ICUSTOMER:
-				setICustomer((ICustomers)newValue);
-				return;
-			case BookingsPackage.BOOKINGS_MANAGER__IBILLS:
-				setIBills((IBills)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case BookingsPackage.BOOKINGS_MANAGER__BOOKING:
-				getBooking().clear();
-				return;
-			case BookingsPackage.BOOKINGS_MANAGER__IBOOKABLE_ACCESS:
-				setIBookableAccess((IBookablesAccess)null);
-				return;
-			case BookingsPackage.BOOKINGS_MANAGER__IHOTEL_STAY_MANAGER:
-				setIHotelStayManager((IStays)null);
-				return;
-			case BookingsPackage.BOOKINGS_MANAGER__BANK:
-				setBank((CustomerProvides)null);
-				return;
-			case BookingsPackage.BOOKINGS_MANAGER__IGUEST:
-				setIGuest((IGuests)null);
-				return;
-			case BookingsPackage.BOOKINGS_MANAGER__ICUSTOMER:
-				setICustomer((ICustomers)null);
-				return;
-			case BookingsPackage.BOOKINGS_MANAGER__IBILLS:
-				setIBills((IBills)null);
-				return;
-		}
-		super.eUnset(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case BookingsPackage.BOOKINGS_MANAGER__BOOKING:
-				return booking != null && !booking.isEmpty();
-			case BookingsPackage.BOOKINGS_MANAGER__IBOOKABLE_ACCESS:
-				return iBookableAccess != null;
-			case BookingsPackage.BOOKINGS_MANAGER__IHOTEL_STAY_MANAGER:
-				return iHotelStayManager != null;
-			case BookingsPackage.BOOKINGS_MANAGER__BANK:
-				return bank != null;
-			case BookingsPackage.BOOKINGS_MANAGER__IGUEST:
-				return iGuest != null;
-			case BookingsPackage.BOOKINGS_MANAGER__ICUSTOMER:
-				return iCustomer != null;
-			case BookingsPackage.BOOKINGS_MANAGER__IBILLS:
-				return iBills != null;
-		}
-		return super.eIsSet(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
-	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case BookingsPackage.BOOKINGS_MANAGER___MAKE_BOOKING__ELIST_STRING_ELIST_ELIST_STRING_STRING_INT_INT_STRING_STRING:
-				makeBooking((EList<String>)arguments.get(0), (String)arguments.get(1), (EList<String>)arguments.get(2), (EList<String>)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Integer)arguments.get(6), (Integer)arguments.get(7), (String)arguments.get(8), (String)arguments.get(9));
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_BOOKINGS__STRING:
-				return searchBookings((String)arguments.get(0));
-			case BookingsPackage.BOOKINGS_MANAGER___GET_BOOKED_STAYS_OF_BOOKING__STRING:
-				return getBookedStaysOfBooking((String)arguments.get(0));
-			case BookingsPackage.BOOKINGS_MANAGER___GET_CUSTOMER_OF_BOOKING__STRING:
-				return getCustomerOfBooking((String)arguments.get(0));
-			case BookingsPackage.BOOKINGS_MANAGER___GET_NBR_GUEST_OF_BOOKING__STRING:
-				return getNbrGuestOfBooking((String)arguments.get(0));
-			case BookingsPackage.BOOKINGS_MANAGER___CANCEL_BOOKING__STRING:
-				cancelBooking((String)arguments.get(0));
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___CANCEL_STAY_OF_BOOKING__STRING_STRING:
-				cancelStayOfBooking((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___ADD_BOOKED_STAY_TO_BOOKING__STRING_STRING:
-				addBookedStayToBooking((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___CHANGE_NBR_GUESTS_OF_BOOKING__STRING_INT:
-				changeNbrGuestsOfBooking((String)arguments.get(0), (Integer)arguments.get(1));
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___GET_ALL_BOOKINGS:
-				return getAllBookings();
-			case BookingsPackage.BOOKINGS_MANAGER___GET_ALL_BOOKINGS_WITHIN_PERIOD__DATE_DATE:
-				return getAllBookingsWithinPeriod((Date)arguments.get(0), (Date)arguments.get(1));
-			case BookingsPackage.BOOKINGS_MANAGER___GET_ALL_BOOKINGS_WITH_STAYS_IN_PERIOD__DATE_DATE:
-				return getAllBookingsWithStaysInPeriod((Date)arguments.get(0), (Date)arguments.get(1));
-			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_BOOKINGS_MADE_IN_PERIOD__STRING_DATE_DATE:
-				return searchBookingsMadeInPeriod((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
-			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_BOOKINGS_WITH_STAYS_IN_PERIOD__STRING_DATE_DATE:
-				return searchBookingsWithStaysInPeriod((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
-			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_FOR_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE_STRING:
-				return searchForAvailableBookablesInPeriod((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
-			case BookingsPackage.BOOKINGS_MANAGER___GET_AVAILABLE_BOOKABLES_IN_PERIOD__DATE_DATE:
-				return getAvailableBookablesInPeriod((Date)arguments.get(0), (Date)arguments.get(1));
-			case BookingsPackage.BOOKINGS_MANAGER___ADD_BOOKING_REQUEST__STRING_STRING:
-				addBookingRequest((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___REMOVE_BOOKING_REQUEST__STRING_STRING:
-				removeBookingRequest((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___GET_BOOKING_REQUESTS__STRING:
-				return getBookingRequests((String)arguments.get(0));
-			case BookingsPackage.BOOKINGS_MANAGER___PAY_BOOKING_BILLS__STRING:
-				payBookingBills((String)arguments.get(0));
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___PAY_STAY_BILLS__STRING_STRING:
-				payStayBills((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_FOR_AVAILABLE_HOTEL_ROOMS_IN_PERIOD__DATE_DATE_STRING:
-				return searchForAvailableHotelRoomsInPeriod((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
-			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_FOR_AVAILABLE_HOSTEL_BEDS_IN_PERIOD__DATE_DATE_STRING:
-				return searchForAvailableHostelBedsInPeriod((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
-			case BookingsPackage.BOOKINGS_MANAGER___SEARCH_FOR_AVAILABLE_CONFERENCE_ROOMS_IN_PERIOD__DATE_DATE_STRING:
-				return searchForAvailableConferenceRoomsInPeriod((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
-			case BookingsPackage.BOOKINGS_MANAGER___GET_AVAILABLE_HOTEL_ROOMS_IN_PERIOD__DATE_DATE:
-				return getAvailableHotelRoomsInPeriod((Date)arguments.get(0), (Date)arguments.get(1));
-			case BookingsPackage.BOOKINGS_MANAGER___GET_AVAILABLE_CONFERENCE_ROOMS_IN_PERIOD__DATE_DATE:
-				return getAvailableConferenceRoomsInPeriod((Date)arguments.get(0), (Date)arguments.get(1));
-			case BookingsPackage.BOOKINGS_MANAGER___GET_AVAILABLE_HOSTEL_BEDS_IN_PERIOD__DATE_DATE:
-				return getAvailableHostelBedsInPeriod((Date)arguments.get(0), (Date)arguments.get(1));
-		}
-		return super.eInvoke(operationID, arguments);
+		throw new UnsupportedOperationException();
 	}
 
 } //BookingsManagerImpl

@@ -93,40 +93,32 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IStatisticsGenerator getIStatisticsGenerator() {
-		if (iStatisticsGenerator != null && iStatisticsGenerator.eIsProxy()) {
-			InternalEObject oldIStatisticsGenerator = (InternalEObject)iStatisticsGenerator;
-			iStatisticsGenerator = (IStatisticsGenerator)eResolveProxy(oldIStatisticsGenerator);
-			if (iStatisticsGenerator != oldIStatisticsGenerator) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StaffPackage.STAFF_MANAGER__ISTATISTICS_GENERATOR, oldIStatisticsGenerator, iStatisticsGenerator));
-			}
-		}
-		return iStatisticsGenerator;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IStatisticsGenerator basicGetIStatisticsGenerator() {
-		return iStatisticsGenerator;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setIStatisticsGenerator(IStatisticsGenerator newIStatisticsGenerator) {
-		IStatisticsGenerator oldIStatisticsGenerator = iStatisticsGenerator;
-		iStatisticsGenerator = newIStatisticsGenerator;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StaffPackage.STAFF_MANAGER__ISTATISTICS_GENERATOR, oldIStatisticsGenerator, iStatisticsGenerator));
+		throw new UnsupportedOperationException();
 	}
 
 	/**
