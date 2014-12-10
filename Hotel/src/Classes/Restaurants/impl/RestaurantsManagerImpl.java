@@ -6,6 +6,7 @@ import Classes.Bookables.impl.BookablesManagerImpl;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToRestaurantMapImpl;
 import Classes.Restaurants.Restaurant;
+import Classes.Restaurants.RestaurantTable;
 import Classes.Restaurants.RestaurantsManager;
 import Classes.Restaurants.RestaurantsPackage;
 
@@ -95,42 +96,37 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getRestaurantReservations(String restaurantID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getRestaurantReservations(String restaurantID) {
+		return restaurantID != null ? new ArrayList<String>(getRestaurantByID(restaurantID).getReservation().keySet()) : new ArrayList<String>();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getRestaurantTables(String restaurantID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getRestaurantTables(String restaurantID) {
+		return new ArrayList<String>(getRestaurantByID(restaurantID).getRestaurantTable().keySet());
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public int getRestaurantTableNumberOfSeats(String restaurantID, String tableNbr) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public int getRestaurantTableNumberOfSeats(String restaurantID, String tableNbr) {		
+		return getRestaurantByID(restaurantID).getRestaurantTable().get(tableNbr).getNumberOfSeats();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<String> getAvailableTables(Date to, Date from) {
+		// TODO Perhaps change returntype to EMap? Discuss asap
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -139,12 +135,16 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getReservationGuest(String restaurantID, String reservationID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		
+		
+		
+		return null;
 	}
 
 	/**
