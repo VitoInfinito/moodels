@@ -16,6 +16,9 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface ICustomers extends EObject {
+	
+	ICustomers INSTANCE = Classes.Customers.impl.CustomersManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

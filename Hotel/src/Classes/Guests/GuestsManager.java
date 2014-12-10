@@ -21,4 +21,6 @@ package Classes.Guests;
  * @generated NOT
  */
 public interface GuestsManager extends IGuests {
+	
+	
 } // GuestsManager

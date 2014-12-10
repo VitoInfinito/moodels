@@ -22,11 +22,10 @@ public interface StaffFactory extends EFactory {
 	StaffFactory eINSTANCE = Classes.Staff.impl.StaffFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Manager</em>'.
 	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Manager</em>'.
-	 * @generated
+	 * @generated NOT
 	 */
 	StaffManager createStaffManager();
 
@@ -58,11 +57,10 @@ public interface StaffFactory extends EFactory {
 	HourlySalaryContract createHourlySalaryContract();
 
 	/**
-	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
 	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
+	 * @generated NOT
 	 */
 	StaffPackage getStaffPackage();
 

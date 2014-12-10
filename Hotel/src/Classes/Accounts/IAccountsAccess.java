@@ -4,6 +4,7 @@ package Classes.Accounts;
 
 import org.eclipse.emf.ecore.EObject;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>IAccounts Access</b></em>'.
@@ -15,6 +16,9 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface IAccountsAccess extends EObject {
+	
+	IAccountsAccess INSTANCE = Classes.Accounts.impl.AccountsManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

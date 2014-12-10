@@ -66,11 +66,10 @@ public class CustomersFactoryImpl extends EFactoryImpl implements CustomersFacto
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public CustomersManager createCustomersManager() {
-		CustomersManagerImpl customersManager = new CustomersManagerImpl();
-		return customersManager;
+		return CustomersManagerImpl.INSTANCE;
 	}
 
 	/**

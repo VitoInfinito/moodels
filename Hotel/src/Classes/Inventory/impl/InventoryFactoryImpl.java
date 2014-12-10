@@ -69,8 +69,7 @@ public class InventoryFactoryImpl extends EFactoryImpl implements InventoryFacto
 	 * @generated
 	 */
 	public InventoryManager createInventoryManager() {
-		InventoryManagerImpl inventoryManager = new InventoryManagerImpl();
-		return inventoryManager;
+		return InventoryManagerImpl.INSTANCE;
 	}
 
 	/**

@@ -3,10 +3,8 @@
 package Classes.Feedback.util;
 
 import Classes.Feedback.*;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
 
 /**
@@ -22,7 +20,8 @@ import org.eclipse.emf.ecore.util.Switch;
  * @see Classes.Feedback.FeedbackPackage
  * @generated
  */
-public class FeedbackSwitch<T> extends Switch<T> {
+ public class FeedbackSwitch<T> extends Switch<T> {
+
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -149,5 +148,4 @@ public class FeedbackSwitch<T> extends Switch<T> {
 	public T defaultCase(EObject object) {
 		return null;
 	}
-
 } //FeedbackSwitch

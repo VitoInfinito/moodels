@@ -21,6 +21,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,6 +39,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class BillsManagerImpl extends MinimalEObjectImpl.Container implements BillsManager {
+	private final Logger logger = LoggerFactory.getLogger(BillsManagerImpl.class);
+	public static BillsManagerImpl INSTANCE = new BillsManagerImpl();
+	
 	/**
 	 * The cached value of the '{@link #getBill() <em>Bill</em>}' map.
 	 * <!-- begin-user-doc -->
@@ -55,15 +60,17 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * @generated
 	 * @ordered
 	 */
-	protected CustomerProvides customerProvides;
+	private CustomerProvides customerProvides;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	protected BillsManagerImpl() {
+	private BillsManagerImpl() {
 		super();
+		bill = new EcoreEMap<String,Bill>(ECoreMapEntriesPackage.Literals.STRING_TO_BILL_MAP, StringToBillMapImpl.class, this, BillsPackage.BILLS_MANAGER__BILL);
+		// TODO fetch customer provides
 	}
 
 	/**
@@ -82,9 +89,6 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * @generated NOT
 	 */
 	public EMap<String, Bill> getBill() {
-		if (bill == null) {
-			bill = new EcoreEMap<String,Bill>(ECoreMapEntriesPackage.Literals.STRING_TO_BILL_MAP, StringToBillMapImpl.class, this, BillsPackage.BILLS_MANAGER__BILL);
-		}
 		return bill;
 	}
 

@@ -3,6 +3,7 @@
 package Classes.Inventory;
 
 import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -17,6 +18,9 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface IInventoryAccess extends EObject {
+	
+	IInventoryAccess INSTANCE = Classes.Inventory.impl.InventoryManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

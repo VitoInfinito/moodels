@@ -17,6 +17,9 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface IBills extends EObject {
+	
+	IBills INSTANCE = Classes.Bills.impl.BillsManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

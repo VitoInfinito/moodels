@@ -15,7 +15,9 @@ import Classes.Bookables.HotelRoom;
 import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.Room;
 import Classes.Bookables.RoomLocation;
+import Classes.Guests.impl.GuestsManagerImpl;
 import Classes.Stays.IStays;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -23,6 +25,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -52,8 +55,8 @@ import org.slf4j.LoggerFactory;
  * @generated
  */
 public class BookablesManagerImpl extends MinimalEObjectImpl.Container implements BookablesManager {
-	
 	private final Logger logger = LoggerFactory.getLogger(BookablesManagerImpl.class);
+	public static BookablesManagerImpl INSTANCE = new BookablesManagerImpl();
 
 	/**
 	 * The cached value of the '{@link #getBookables() <em>Bookables</em>}' map.
@@ -81,8 +84,9 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	protected BookablesManagerImpl() {
+	private BookablesManagerImpl() {
 		super();
+		bookables = new EcoreEMap<String,Bookable>(Classes.ECoreMapEntries.ECoreMapEntriesPackage.Literals.STRING_TO_BOOKABLE_MAP, Classes.ECoreMapEntries.impl.StringToBookableMapImpl.class, this, BookablesPackage.BOOKABLES_MANAGER__BOOKABLES);
 	}
 
 	/**
@@ -101,9 +105,6 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated NOT
 	 */
 	public EMap<String, Bookable> getBookables() {
-		if (bookables == null) {
-			bookables = new EcoreEMap<String,Bookable>(Classes.ECoreMapEntries.ECoreMapEntriesPackage.Literals.STRING_TO_BOOKABLE_MAP, Classes.ECoreMapEntries.impl.StringToBookableMapImpl.class, this, BookablesPackage.BOOKABLES_MANAGER__BOOKABLES);
-		}
 		return bookables;
 	}
 

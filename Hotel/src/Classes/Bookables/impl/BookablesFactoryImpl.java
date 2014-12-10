@@ -144,11 +144,10 @@ public class BookablesFactoryImpl extends EFactoryImpl implements BookablesFacto
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public BookablesManager createBookablesManager() {
-		BookablesManagerImpl bookablesManager = new BookablesManagerImpl();
-		return bookablesManager;
+		return BookablesManagerImpl.INSTANCE;
 	}
 
 	/**

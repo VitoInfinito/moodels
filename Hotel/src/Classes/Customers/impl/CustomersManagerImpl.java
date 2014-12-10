@@ -7,7 +7,10 @@ import Classes.Customers.CustomersManager;
 import Classes.Customers.CustomersPackage;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToCustomerMapImpl;
+import Classes.Guests.impl.GuestsManagerImpl;
+
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -17,6 +20,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,6 +37,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class CustomersManagerImpl extends MinimalEObjectImpl.Container implements CustomersManager {
+	private final Logger logger = LoggerFactory.getLogger(CustomersManagerImpl.class);
+	public static CustomersManagerImpl INSTANCE = new CustomersManagerImpl();
+	
 	/**
 	 * The cached value of the '{@link #getCustomer() <em>Customer</em>}' map.
 	 * <!-- begin-user-doc -->
@@ -47,8 +55,9 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CustomersManagerImpl() {
+	private CustomersManagerImpl() {
 		super();
+		customer = new EcoreEMap<String,Customer>(ECoreMapEntriesPackage.Literals.STRING_TO_CUSTOMER_MAP, StringToCustomerMapImpl.class, this, CustomersPackage.CUSTOMERS_MANAGER__CUSTOMER);
 	}
 
 	/**
@@ -67,9 +76,6 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated NOT
 	 */
 	public EMap<String, Customer> getCustomer() {
-		if (customer == null) {
-			customer = new EcoreEMap<String,Customer>(ECoreMapEntriesPackage.Literals.STRING_TO_CUSTOMER_MAP, StringToCustomerMapImpl.class, this, CustomersPackage.CUSTOMERS_MANAGER__CUSTOMER);
-		}
 		return customer;
 	}
 

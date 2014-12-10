@@ -3,13 +3,15 @@
 package Classes.Accounts.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import Classes.InvalidIDException;
@@ -18,6 +20,8 @@ import Classes.Accounts.AccountType;
 import Classes.Accounts.AccountsManager;
 import Classes.Accounts.AccountsPackage;
 import Classes.Accounts.IAccountsAccess;
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToAccountMapImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,6 +38,8 @@ import Classes.Accounts.IAccountsAccess;
  */
 public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements AccountsManager {
 	private final Logger logger = LoggerFactory.getLogger(AccountsManagerImpl.class);
+	public static AccountsManagerImpl INSTANCE = new AccountsManagerImpl();
+	
 	
 	/**
 	 * The cached value of the '{@link #getAccounts() <em>Accounts</em>}' reference list.
@@ -52,7 +58,7 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	 */
 	protected AccountsManagerImpl() {
 		super();
-		accounts = (EMap<String, Account>) new HashMap<String, Account>();
+		accounts = new EcoreEMap<String,Account>(ECoreMapEntriesPackage.Literals.STRING_TO_ACCOUNT_MAP, StringToAccountMapImpl.class, this, AccountsPackage.ACCOUNTS_MANAGER__ACCOUNTS);
 	}
 
 	/**
@@ -70,8 +76,8 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<Account> getAccounts() {
-		return (List<Account>) accounts.values();
+	public EMap<String, Account> getAccounts() {
+		return accounts;
 	}
 
 	/**
@@ -207,17 +213,32 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	public boolean login(String username, String password) {
 		return validateAccount(username, password);
 	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case AccountsPackage.ACCOUNTS_MANAGER__ACCOUNTS:
+				return ((InternalEList<?>)getAccounts()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case AccountsPackage.ACCOUNTS_MANAGER__ACCOUNTS:
-				return getAccounts();
+				if (coreType) return getAccounts();
+				else return getAccounts().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -225,15 +246,14 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case AccountsPackage.ACCOUNTS_MANAGER__ACCOUNTS:
-				getAccounts().clear();
-				getAccounts().addAll((Collection<? extends Account>)newValue);
+				((EStructuralFeature.Setting)getAccounts()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -242,7 +262,7 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
@@ -257,7 +277,7 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
@@ -271,7 +291,7 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {

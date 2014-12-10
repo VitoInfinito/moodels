@@ -91,9 +91,6 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated NOT
 	 */
 	public EMap<String, Guest> getGuests() {
-		if (guests == null) {
-			guests = new EcoreEMap<String,Guest>(ECoreMapEntriesPackage.Literals.STRING_TO_GUEST_MAP, StringToGuestMapImpl.class, this, GuestsPackage.GUESTS_MANAGER__GUESTS);
-		}
 		return guests;
 	}
 

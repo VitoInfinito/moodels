@@ -16,6 +16,9 @@ import Classes.InvalidIDException;
  * @generated
  */
 public interface IBookablesManage extends IBookablesAccess {
+	
+	IBookablesManage INSTANCE = Classes.Bookables.impl.BookablesManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

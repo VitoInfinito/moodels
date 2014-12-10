@@ -18,6 +18,9 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface IBookings extends EObject {
+	
+	IBookings INSTANCE = Classes.Bookings.impl.BookingsManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

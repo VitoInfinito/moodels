@@ -22,11 +22,10 @@ public interface FeedbackFactory extends EFactory {
 	FeedbackFactory eINSTANCE = Classes.Feedback.impl.FeedbackFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Manager</em>'.
 	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Manager</em>'.
-	 * @generated
+	 * @generated NOT
 	 */
 	FeedbackManager createFeedbackManager();
 
@@ -40,11 +39,10 @@ public interface FeedbackFactory extends EFactory {
 	Feedback createFeedback();
 
 	/**
-	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
 	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
+	 * @generated NOT
 	 */
 	FeedbackPackage getFeedbackPackage();
 

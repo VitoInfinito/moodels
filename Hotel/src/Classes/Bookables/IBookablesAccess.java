@@ -3,8 +3,11 @@
 package Classes.Bookables;
 
 import java.util.List;
+
 import org.eclipse.emf.ecore.EObject;
+
 import Classes.InvalidIDException;
+import Classes.Guests.IGuests;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,6 +20,9 @@ import Classes.InvalidIDException;
  * @generated
  */
 public interface IBookablesAccess extends EObject {
+	
+	IBookablesAccess INSTANCE = Classes.Bookables.impl.BookablesManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

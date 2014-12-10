@@ -3,8 +3,11 @@
 package Classes.Feedback;
 
 import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+
+import Classes.Guests.IGuests;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,6 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface IFeedback extends EObject {
+	IFeedback INSTANCE = Classes.Feedback.impl.FeedbackManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -58,20 +58,18 @@ public interface BookablesFactory extends EFactory {
 	HotelRoom createHotelRoom();
 
 	/**
-	 * Returns a new object of class '<em>Manager</em>'.
 	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Manager</em>'.
-	 * @generated
+	 * @generated NOT
 	 */
 	BookablesManager createBookablesManager();
 
 	/**
-	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
 	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
+	 * @generated NOT
 	 */
 	BookablesPackage getBookablesPackage();
 

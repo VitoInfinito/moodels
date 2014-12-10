@@ -2,6 +2,8 @@
  */
 package Classes.Inventory;
 
+import Classes.Guests.IGuests;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +16,9 @@ package Classes.Inventory;
  * @generated
  */
 public interface IManageInventory extends IInventoryAccess {
+	
+	IManageInventory INSTANCE = Classes.Inventory.impl.InventoryManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

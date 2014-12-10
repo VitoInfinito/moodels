@@ -12,9 +12,12 @@ import Classes.Customers.ICustomers;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToBookingMapImpl;
 import Classes.Guests.IGuests;
+import Classes.Guests.impl.GuestsManagerImpl;
 import Classes.Stays.IStays;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -26,6 +29,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,6 +52,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements BookingsManager {
+	private final Logger logger = LoggerFactory.getLogger(BookingsManagerImpl.class);
+	public static BookingsManagerImpl INSTANCE = new BookingsManagerImpl();
+	
 	/**
 	 * The cached value of the '{@link #getBooking() <em>Booking</em>}' map.
 	 * <!-- begin-user-doc -->
@@ -120,10 +128,11 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	protected BookingsManagerImpl() {
+	private BookingsManagerImpl() {
 		super();
+		booking = new EcoreEMap<String,Booking>(ECoreMapEntriesPackage.Literals.STRING_TO_BOOKING_MAP, StringToBookingMapImpl.class, this, BookingsPackage.BOOKINGS_MANAGER__BOOKING);
 	}
 
 	/**
@@ -142,9 +151,6 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public EMap<String, Booking> getBooking() {
-		if (booking == null) {
-			booking = new EcoreEMap<String,Booking>(ECoreMapEntriesPackage.Literals.STRING_TO_BOOKING_MAP, StringToBookingMapImpl.class, this, BookingsPackage.BOOKINGS_MANAGER__BOOKING);
-		}
 		return booking;
 	}
 

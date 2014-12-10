@@ -4,16 +4,19 @@ package Classes.Inventory.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToItemMapImpl;
 import Classes.Inventory.InventoryManager;
 import Classes.Inventory.InventoryPackage;
 import Classes.Inventory.Item;
@@ -33,6 +36,7 @@ import Classes.Inventory.Item;
  */
 public class InventoryManagerImpl extends MinimalEObjectImpl.Container implements InventoryManager {
 	private final Logger logger = LoggerFactory.getLogger(InventoryManagerImpl.class);
+	public static InventoryManagerImpl INSTANCE = new InventoryManagerImpl();
 	
 	private static int IDCounter = 0;
 	
@@ -51,9 +55,9 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	protected InventoryManagerImpl() {
+	private InventoryManagerImpl() {
 		super();
-		items = (EMap<String, Item>) new HashMap<String, Item>();
+		items = new EcoreEMap<String,Item>(ECoreMapEntriesPackage.Literals.STRING_TO_ITEM_TYPE_MAP, StringToItemMapImpl.class, this, InventoryPackage.INVENTORY_MANAGER__ITEMS);
 	}
 
 	/**
@@ -68,11 +72,12 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<Item> getItems() {
-		return (List<Item>) items.values();
+	public EMap<String, Item> getItems() {
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -242,104 +247,58 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case InventoryPackage.INVENTORY_MANAGER__ITEMS:
-				return getItems();
-		}
-		return super.eGet(featureID, resolve, coreType);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case InventoryPackage.INVENTORY_MANAGER__ITEMS:
-				getItems().clear();
-				getItems().addAll((Collection<? extends Item>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case InventoryPackage.INVENTORY_MANAGER__ITEMS:
-				getItems().clear();
-				return;
-		}
-		super.eUnset(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case InventoryPackage.INVENTORY_MANAGER__ITEMS:
-				return items != null && !items.isEmpty();
-		}
-		return super.eIsSet(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case InventoryPackage.INVENTORY_MANAGER___CHANGE_ITEM_STOCK__STRING_INT:
-				changeItemStock((String)arguments.get(0), (Integer)arguments.get(1));
-				return null;
-			case InventoryPackage.INVENTORY_MANAGER___GET_ITEM_PRICE__STRING:
-				return getItemPrice((String)arguments.get(0));
-			case InventoryPackage.INVENTORY_MANAGER___GET_ITEM_NAME__STRING:
-				return getItemName((String)arguments.get(0));
-			case InventoryPackage.INVENTORY_MANAGER___GET_ITEM_STOCK__STRING:
-				return getItemStock((String)arguments.get(0));
-			case InventoryPackage.INVENTORY_MANAGER___GET_ITEM_EXPENSE__STRING:
-				return getItemExpense((String)arguments.get(0));
-			case InventoryPackage.INVENTORY_MANAGER___GET_ALL_ITEM_IDS:
-				return getAllItemIDs();
-			case InventoryPackage.INVENTORY_MANAGER___SEARCH_ITEMS__STRING:
-				return searchItems((String)arguments.get(0));
-			case InventoryPackage.INVENTORY_MANAGER___CHANGE_ITEM_NAME__STRING_STRING:
-				changeItemName((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case InventoryPackage.INVENTORY_MANAGER___CHANGE_ITEM_PRICE__STRING_DOUBLE:
-				changeItemPrice((String)arguments.get(0), (Double)arguments.get(1));
-				return null;
-			case InventoryPackage.INVENTORY_MANAGER___CHANGE_ITEM_EXPENSE__STRING_DOUBLE:
-				changeItemExpense((String)arguments.get(0), (Double)arguments.get(1));
-				return null;
-			case InventoryPackage.INVENTORY_MANAGER___ADD_ITEM__STRING_DOUBLE_DOUBLE_INT:
-				addItem((String)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Integer)arguments.get(3));
-				return null;
-			case InventoryPackage.INVENTORY_MANAGER___REMOVE_ITEM__STRING:
-				removeItem((String)arguments.get(0));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
+		throw new UnsupportedOperationException();
 	}
 
 } //InventoryManagerImpl

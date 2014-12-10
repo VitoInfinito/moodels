@@ -16,6 +16,9 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface IManageAccounts extends EObject {
+	
+	IManageAccounts INSTANCE = Classes.Accounts.impl.AccountsManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -7,9 +7,7 @@ import Classes.Bills.*;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -42,9 +40,9 @@ public class BillsFactoryImpl extends EFactoryImpl implements BillsFactory {
 	 * Creates an instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public BillsFactoryImpl() {
+	private BillsFactoryImpl() {
 		super();
 	}
 
@@ -66,11 +64,10 @@ public class BillsFactoryImpl extends EFactoryImpl implements BillsFactory {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public BillsManager createBillsManager() {
-		BillsManagerImpl billsManager = new BillsManagerImpl();
-		return billsManager;
+		return BillsManagerImpl.INSTANCE;
 	}
 
 	/**

@@ -7,19 +7,29 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToFeedbackMapImpl;
+import Classes.ECoreMapEntries.impl.StringToGuestMapImpl;
 import Classes.Feedback.Feedback;
 import Classes.Feedback.FeedbackManager;
 import Classes.Feedback.FeedbackPackage;
+import Classes.Guests.Guest;
+import Classes.Guests.GuestsPackage;
+import Classes.Guests.impl.GuestsManagerImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,6 +46,8 @@ import Classes.Feedback.FeedbackPackage;
  */
 public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements FeedbackManager {
 	private final Logger logger = LoggerFactory.getLogger(FeedbackManagerImpl.class);
+	public static FeedbackManagerImpl INSTANCE = new FeedbackManagerImpl();
+	
 	
 	private static int IDCounter = 0;
 	
@@ -54,9 +66,9 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	protected FeedbackManagerImpl() {
+	private FeedbackManagerImpl() {
 		super();
-		feedbacks = (EMap<String, Feedback>) new HashMap<String, Feedback>();
+		feedbacks = new EcoreEMap<String,Feedback>(ECoreMapEntriesPackage.Literals.STRING_TO_FEEDBACK_MAP, StringToFeedbackMapImpl.class, this, FeedbackPackage.FEEDBACK_MANAGER__FEEDBACKS);
 	}
 
 	/**
@@ -71,11 +83,12 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Do not change. This is not visible to the client. Only EMF shit.
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<Feedback> getFeedbacks() {
-		return (List<Feedback>) feedbacks.values();
+	public EMap<String, Feedback> getFeedbacks() {
+		return feedbacks;
 	}
 	
 	/**
@@ -255,8 +268,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case FeedbackPackage.FEEDBACK_MANAGER__FEEDBACKS:
-				getFeedbacks().clear();
-				getFeedbacks().addAll((Collection<? extends Feedback>)newValue);
+				((EStructuralFeature.Setting)getFeedbacks()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

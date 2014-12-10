@@ -76,11 +76,10 @@ public class BookingsFactoryImpl extends EFactoryImpl implements BookingsFactory
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public BookingsManager createBookingsManager() {
-		BookingsManagerImpl bookingsManager = new BookingsManagerImpl();
-		return bookingsManager;
+		return BookingsManagerImpl.INSTANCE;
 	}
 
 	/**

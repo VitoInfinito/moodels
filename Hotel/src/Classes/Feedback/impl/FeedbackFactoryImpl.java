@@ -69,8 +69,7 @@ public class FeedbackFactoryImpl extends EFactoryImpl implements FeedbackFactory
 	 * @generated
 	 */
 	public FeedbackManager createFeedbackManager() {
-		FeedbackManagerImpl feedbackManager = new FeedbackManagerImpl();
-		return feedbackManager;
+		return FeedbackManagerImpl.INSTANCE;
 	}
 
 	/**
