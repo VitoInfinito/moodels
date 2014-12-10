@@ -2,10 +2,13 @@
  */
 package Classes.Restaurants.impl;
 
+import Classes.InvalidIDException;
 import Classes.Bookables.impl.BookablesManagerImpl;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToRestaurantMapImpl;
+import Classes.Restaurants.Reservation;
 import Classes.Restaurants.Restaurant;
+import Classes.Restaurants.RestaurantMenu;
 import Classes.Restaurants.RestaurantTable;
 import Classes.Restaurants.RestaurantsManager;
 import Classes.Restaurants.RestaurantsPackage;
@@ -123,39 +126,53 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public EList<String> getAvailableTables(Date to, Date from) {
-		// TODO Perhaps change returntype to EMap? Discuss asap
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String getReservationGuest(String restaurantID, String reservationID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		//throw new UnsupportedOperationException();
-		
-		
-		
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRestaurantMenuName(String restaurantID) {
+	public EList<String> getAvailableTables(Date to, Date from) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String getReservationGuest(String restaurantID, String reservationID) throws IllegalArgumentException, InvalidIDException{
+		if(restaurantID == null || reservationID == null) {
+			logger.warn("The id of one or more parameters were null");
+			throw new IllegalArgumentException("ID was null");
+		}
+		
+		Reservation reservation = getRestaurantByID(restaurantID).getReservation().get(reservationID);
+		if(reservation == null) {
+			logger.warn("Reservation with ID {} could not be found. Invalid ID", reservationID);
+			throw new InvalidIDException();
+		}
+		
+		return reservation.getReservedBy();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String getRestaurantMenuName(String restaurantID) {
+		if(restaurantID == null) {
+			logger.warn("The id of restaurant was null");
+			throw new IllegalArgumentException("ID was null");
+		}
+		
+		RestaurantMenu restaurantMenu = getRestaurantByID(restaurantID).getMenu();
+		
+		if(restaurantMenu == null) {
+			logger.warn("Menu belonging to Restaurant with ID {} could not be found. Invalid ID", restaurantID);
+			throw new InvalidIDException();
+		}
+		
+		return restaurantMenu.getName();
 	}
 
 	/**
