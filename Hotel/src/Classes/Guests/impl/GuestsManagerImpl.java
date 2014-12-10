@@ -2,13 +2,17 @@
  */
 package Classes.Guests.impl;
 
+import Classes.InvalidIDException;
 import Classes.Accounts.IManageAccounts;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToGuestMapImpl;
 import Classes.Guests.Guest;
 import Classes.Guests.GuestsManager;
 import Classes.Guests.GuestsPackage;
+import Classes.Inventory.impl.InventoryManagerImpl;
+
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -20,6 +24,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,6 +42,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements GuestsManager {
+	private final Logger logger = LoggerFactory.getLogger(GuestsManagerImpl.class);
+	
 	/**
 	 * The cached value of the '{@link #getGuest() <em>Guest</em>}' map.
 	 * <!-- begin-user-doc -->
@@ -150,56 +158,71 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void changeGuestFirstName(String SSID, String firstName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(guest.contains(SSID)) {
+			guest.get(SSID).setFirstname(firstName);
+		} else {
+			logger.warn("A guest with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void changeGuestLastName(String SSID, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(guest.contains(SSID)) {
+			guest.get(SSID).setLastname(lastName);
+		} else {
+			logger.warn("A guest with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void changeGuestTitle(String SSID, String title) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(guest.contains(SSID)) {
+			guest.get(SSID).setTitle(title);
+		} else {
+			logger.warn("A guest with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void changeGuestEmail(String SSID, String eMail) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(guest.contains(SSID)) {
+			guest.get(SSID).setEmail(eMail);
+		} else {
+			logger.warn("A guest with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void changeGuestPhone(String SSID, String phoneNr) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(guest.contains(SSID)) {
+			guest.get(SSID).setPhone(phoneNr);
+		} else {
+			logger.warn("A guest with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -211,53 +234,65 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 		if(guest.contains(SSID)) {
 			return guest.get(SSID).getFirstname();
 		} else {
-			// TODO: Fix better NotFound-handling
-			return "";
+			logger.warn("A guest with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
 		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getGuestLastName(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(guest.contains(SSID)) {
+			return guest.get(SSID).getLastname();
+		} else {
+			logger.warn("A guest with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getGuestTitle(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(guest.contains(SSID)) {
+			return guest.get(SSID).getTitle();
+		} else {
+			logger.warn("A guest with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getGuestEmail(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(guest.contains(SSID)) {
+			return guest.get(SSID).getEmail();
+		} else {
+			logger.warn("A guest with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getGuestPhone(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(guest.contains(SSID)) {
+			return guest.get(SSID).getPhone();
+		} else {
+			logger.warn("A guest with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
