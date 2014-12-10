@@ -451,7 +451,7 @@
         disposableProviderFactory="true" ecorePackage="Classes.ecore#//Guests">
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Guests/GuestsManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Guests/GuestsManager/guest"/>
+            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Guests/GuestsManager/guests"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Guests/GuestsManager/iManageAccounts"/>
       </genClasses>

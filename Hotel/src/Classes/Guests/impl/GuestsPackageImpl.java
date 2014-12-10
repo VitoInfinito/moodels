@@ -194,7 +194,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGuestsManager_Guest() {
+	public EReference getGuestsManager_Guests() {
 		return (EReference)guestsManagerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -569,7 +569,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 
 		// Create classes and their features
 		guestsManagerEClass = createEClass(GUESTS_MANAGER);
-		createEReference(guestsManagerEClass, GUESTS_MANAGER__GUEST);
+		createEReference(guestsManagerEClass, GUESTS_MANAGER__GUESTS);
 		createEReference(guestsManagerEClass, GUESTS_MANAGER__IMANAGE_ACCOUNTS);
 
 		guestEClass = createEClass(GUEST);
@@ -648,7 +648,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(guestsManagerEClass, GuestsManager.class, "GuestsManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGuestsManager_Guest(), this.getGuest(), null, "guest", null, 0, -1, GuestsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getGuestsManager_Guests(), this.getGuest(), null, "guests", null, 0, -1, GuestsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getGuestsManager_IManageAccounts(), theAccountsPackage.getIManageAccounts(), null, "iManageAccounts", null, 1, 1, GuestsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(guestEClass, Guest.class, "Guest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -672,7 +672,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 
 		initEClass(iGuestsEClass, IGuests.class, "IGuests", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getIGuests__GetAllGuests(), theTypesPackage.getString(), "getAllGuests", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIGuests__GetAllGuests(), this.getGuest(), "getAllGuests", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		EOperation op = initEOperation(getIGuests__AddGuest__String_String_String_String_String_String(), null, "addGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);

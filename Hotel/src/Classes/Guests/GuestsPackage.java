@@ -294,13 +294,13 @@ public interface GuestsPackage extends EPackage {
 	int GUESTS_MANAGER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Guest</b></em>' reference list.
+	 * The feature id for the '<em><b>Guests</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER__GUEST = IGUESTS_FEATURE_COUNT + 0;
+	int GUESTS_MANAGER__GUESTS = IGUESTS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>IManage Accounts</b></em>' reference.
@@ -684,15 +684,15 @@ public interface GuestsPackage extends EPackage {
 	EClass getGuestsManager();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Classes.Guests.GuestsManager#getGuest <em>Guest</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Guests.GuestsManager#getGuests <em>Guests</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Guest</em>'.
-	 * @see Classes.Guests.GuestsManager#getGuest()
+	 * @return the meta object for the reference list '<em>Guests</em>'.
+	 * @see Classes.Guests.GuestsManager#getGuests()
 	 * @see #getGuestsManager()
 	 * @generated
 	 */
-	EReference getGuestsManager_Guest();
+	EReference getGuestsManager_Guests();
 
 	/**
 	 * Returns the meta object for the reference '{@link Classes.Guests.GuestsManager#getIManageAccounts <em>IManage Accounts</em>}'.
@@ -1118,12 +1118,12 @@ public interface GuestsPackage extends EPackage {
 		EClass GUESTS_MANAGER = eINSTANCE.getGuestsManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Guest</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Guests</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GUESTS_MANAGER__GUEST = eINSTANCE.getGuestsManager_Guest();
+		EReference GUESTS_MANAGER__GUESTS = eINSTANCE.getGuestsManager_Guests();
 
 		/**
 		 * The meta object literal for the '<em><b>IManage Accounts</b></em>' reference feature.

@@ -36,9 +36,9 @@ public interface GuestsManager extends IGuests {
 	 * @return the value of the '<em>Guest</em>' map.
 	 * @see Classes.Guests.GuestsPackage#getGuestsManager_Guest()
 	 * @model mapType="Classes.ECoreMapEntries.StringToGuestMap<org.eclipse.uml2.types.String, Classes.Guests.Guest>" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EMap<String, Guest> getGuest();
+	EMap<String, Guest> getGuests();
 
 	/**
 	 * Returns the value of the '<em><b>IManage Accounts</b></em>' reference.

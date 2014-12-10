@@ -479,7 +479,7 @@
   </eSubpackages>
   <eSubpackages name="Guests" nsURI="http:///Classes/Guests.ecore" nsPrefix="Classes.Guests">
     <eClassifiers xsi:type="ecore:EClass" name="GuestsManager" eSuperTypes="#//Guests/IGuests">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="guest" ordered="false"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="guests" ordered="false"
           upperBound="-1" eType="#//Guests/Guest"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="iManageAccounts" ordered="false"
           lowerBound="1" eType="#//Accounts/IManageAccounts"/>
@@ -509,7 +509,7 @@
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IGuests" abstract="true" interface="true">
-      <eOperations name="getAllGuests" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eOperations name="getAllGuests" ordered="false" upperBound="-1" eType="#//Guests/Guest"/>
       <eOperations name="addGuest" ordered="false" lowerBound="1">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="firstname" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>

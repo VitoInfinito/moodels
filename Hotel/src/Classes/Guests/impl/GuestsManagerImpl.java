@@ -2,17 +2,8 @@
  */
 package Classes.Guests.impl;
 
-import Classes.InvalidIDException;
-import Classes.Accounts.IManageAccounts;
-import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
-import Classes.ECoreMapEntries.impl.StringToGuestMapImpl;
-import Classes.Guests.Guest;
-import Classes.Guests.GuestsManager;
-import Classes.Guests.GuestsPackage;
-import Classes.Inventory.impl.InventoryManagerImpl;
-
 import java.lang.reflect.InvocationTargetException;
-
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -26,6 +17,13 @@ import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import Classes.InvalidIDException;
+import Classes.Accounts.IManageAccounts;
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToGuestMapImpl;
+import Classes.Guests.Guest;
+import Classes.Guests.GuestsManager;
+import Classes.Guests.GuestsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +32,7 @@ import org.slf4j.LoggerFactory;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Classes.Guests.impl.GuestsManagerImpl#getGuest <em>Guest</em>}</li>
+ *   <li>{@link Classes.Guests.impl.GuestsManagerImpl#getGuests <em>Guests</em>}</li>
  *   <li>{@link Classes.Guests.impl.GuestsManagerImpl#getIManageAccounts <em>IManage Accounts</em>}</li>
  * </ul>
  * </p>
@@ -45,14 +43,14 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	private final Logger logger = LoggerFactory.getLogger(GuestsManagerImpl.class);
 	
 	/**
-	 * The cached value of the '{@link #getGuest() <em>Guest</em>}' map.
+	 * The cached value of the '{@link #getGuests() <em>Guest</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGuest()
+	 * @see #getGuests()
 	 * @generated NOT
 	 * @ordered
 	 */
-	private EMap<String, Guest> guest;
+	private EMap<String, Guest> guests;
 
 	/**
 	 * The cached value of the '{@link #getIManageAccounts() <em>IManage Accounts</em>}' reference.
@@ -82,17 +80,17 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	protected EClass eStaticClass() {
 		return GuestsPackage.Literals.GUESTS_MANAGER;
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EMap<String, Guest> getGuest() {
-		if (guest == null) {
-			guest = new EcoreEMap<String,Guest>(ECoreMapEntriesPackage.Literals.STRING_TO_GUEST_MAP, StringToGuestMapImpl.class, this, GuestsPackage.GUESTS_MANAGER__GUEST);
+	public EMap<String, Guest> getGuests() {
+		if (guests == null) {
+			guests = new EcoreEMap<String,Guest>(ECoreMapEntriesPackage.Literals.STRING_TO_GUEST_MAP, StringToGuestMapImpl.class, this, GuestsPackage.GUESTS_MANAGER__GUESTS);
 		}
-		return guest;
+		return guests;
 	}
 
 	/**
@@ -136,12 +134,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllGuests() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<Guest> getAllGuests() {
+		return (List<Guest>) guests.values();
 	}
 
 	/**
@@ -161,8 +157,8 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated NOT
 	 */
 	public void changeGuestFirstName(String SSID, String firstName) {
-		if(guest.contains(SSID)) {
-			guest.get(SSID).setFirstname(firstName);
+		if(guests.contains(SSID)) {
+			guests.get(SSID).setFirstname(firstName);
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -175,8 +171,8 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated NOT
 	 */
 	public void changeGuestLastName(String SSID, String lastName) {
-		if(guest.contains(SSID)) {
-			guest.get(SSID).setLastname(lastName);
+		if(guests.contains(SSID)) {
+			guests.get(SSID).setLastname(lastName);
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -189,8 +185,8 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated NOT
 	 */
 	public void changeGuestTitle(String SSID, String title) {
-		if(guest.contains(SSID)) {
-			guest.get(SSID).setTitle(title);
+		if(guests.contains(SSID)) {
+			guests.get(SSID).setTitle(title);
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -203,8 +199,8 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated NOT
 	 */
 	public void changeGuestEmail(String SSID, String eMail) {
-		if(guest.contains(SSID)) {
-			guest.get(SSID).setEmail(eMail);
+		if(guests.contains(SSID)) {
+			guests.get(SSID).setEmail(eMail);
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -217,8 +213,8 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated NOT
 	 */
 	public void changeGuestPhone(String SSID, String phoneNr) {
-		if(guest.contains(SSID)) {
-			guest.get(SSID).setPhone(phoneNr);
+		if(guests.contains(SSID)) {
+			guests.get(SSID).setPhone(phoneNr);
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -231,8 +227,8 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated NOT
 	 */
 	public String getGuestFirstName(String SSID) {
-		if(guest.contains(SSID)) {
-			return guest.get(SSID).getFirstname();
+		if(guests.contains(SSID)) {
+			return guests.get(SSID).getFirstname();
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -245,8 +241,8 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated NOT
 	 */
 	public String getGuestLastName(String SSID) {
-		if(guest.contains(SSID)) {
-			return guest.get(SSID).getLastname();
+		if(guests.contains(SSID)) {
+			return guests.get(SSID).getLastname();
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -259,8 +255,8 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated NOT
 	 */
 	public String getGuestTitle(String SSID) {
-		if(guest.contains(SSID)) {
-			return guest.get(SSID).getTitle();
+		if(guests.contains(SSID)) {
+			return guests.get(SSID).getTitle();
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -273,8 +269,8 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated NOT
 	 */
 	public String getGuestEmail(String SSID) {
-		if(guest.contains(SSID)) {
-			return guest.get(SSID).getEmail();
+		if(guests.contains(SSID)) {
+			return guests.get(SSID).getEmail();
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -287,8 +283,8 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated NOT
 	 */
 	public String getGuestPhone(String SSID) {
-		if(guest.contains(SSID)) {
-			return guest.get(SSID).getPhone();
+		if(guests.contains(SSID)) {
+			return guests.get(SSID).getPhone();
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -309,23 +305,29 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<String> getGuestStays(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(guests.contains(SSID)) {
+			return guests.get(SSID).getStays();
+		} else {
+			logger.warn("A guest with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<String> getGuestRequests(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(guests.contains(SSID)) {
+			return guests.get(SSID).getRequests();
+		} else {
+			logger.warn("A guest with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -413,8 +415,8 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case GuestsPackage.GUESTS_MANAGER__GUEST:
-				return ((InternalEList<?>)getGuest()).basicRemove(otherEnd, msgs);
+			case GuestsPackage.GUESTS_MANAGER__GUESTS:
+				return ((InternalEList<?>)getGuests()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -427,9 +429,9 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GuestsPackage.GUESTS_MANAGER__GUEST:
-				if (coreType) return getGuest();
-				else return getGuest().map();
+			case GuestsPackage.GUESTS_MANAGER__GUESTS:
+				if (coreType) return getGuests();
+				else return getGuests().map();
 			case GuestsPackage.GUESTS_MANAGER__IMANAGE_ACCOUNTS:
 				if (resolve) return getIManageAccounts();
 				return basicGetIManageAccounts();
@@ -446,8 +448,8 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GuestsPackage.GUESTS_MANAGER__GUEST:
-				((EStructuralFeature.Setting)getGuest()).set(newValue);
+			case GuestsPackage.GUESTS_MANAGER__GUESTS:
+				((EStructuralFeature.Setting)getGuests()).set(newValue);
 				return;
 			case GuestsPackage.GUESTS_MANAGER__IMANAGE_ACCOUNTS:
 				setIManageAccounts((IManageAccounts)newValue);
@@ -464,8 +466,8 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GuestsPackage.GUESTS_MANAGER__GUEST:
-				getGuest().clear();
+			case GuestsPackage.GUESTS_MANAGER__GUESTS:
+				getGuests().clear();
 				return;
 			case GuestsPackage.GUESTS_MANAGER__IMANAGE_ACCOUNTS:
 				setIManageAccounts((IManageAccounts)null);
@@ -482,8 +484,8 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GuestsPackage.GUESTS_MANAGER__GUEST:
-				return guest != null && !guest.isEmpty();
+			case GuestsPackage.GUESTS_MANAGER__GUESTS:
+				return guests != null && !guests.isEmpty();
 			case GuestsPackage.GUESTS_MANAGER__IMANAGE_ACCOUNTS:
 				return iManageAccounts != null;
 		}

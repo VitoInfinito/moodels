@@ -2,6 +2,8 @@
  */
 package Classes.Guests;
 
+import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -19,10 +21,10 @@ public interface IGuests extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
+	 * @model kind="operation" ordered="false"
+	 * @generated NOT
 	 */
-	EList<String> getAllGuests();
+	List<Guest> getAllGuests();
 
 	/**
 	 * <!-- begin-user-doc -->
