@@ -2,13 +2,18 @@
  */
 package Classes.Restaurants.impl;
 
+import Classes.Bookables.impl.BookablesManagerImpl;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToRestaurantMapImpl;
 import Classes.Restaurants.Restaurant;
 import Classes.Restaurants.RestaurantsManager;
 import Classes.Restaurants.RestaurantsPackage;
+
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -18,6 +23,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,6 +40,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container implements RestaurantsManager {
+	private final Logger logger = LoggerFactory.getLogger(RestaurantsManagerImpl.class);
+
+	
 	/**
 	 * The cached value of the '{@link #getRestaurant() <em>Restaurant</em>}' map.
 	 * <!-- begin-user-doc -->
@@ -72,6 +82,14 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 			restaurant = new EcoreEMap<String,Restaurant>(ECoreMapEntriesPackage.Literals.STRING_TO_RESTAURANT_MAP, StringToRestaurantMapImpl.class, this, RestaurantsPackage.RESTAURANTS_MANAGER__RESTAURANT);
 		}
 		return restaurant;
+	}
+	
+	/**
+	 * Helper method to get a restaurant
+	 * returns restaurant belonging to restaurantID
+	 */
+	private Restaurant getRestaurantByID(String restaurantID) {
+		return getRestaurant().get(restaurantID);
 	}
 
 	/**
@@ -143,12 +161,10 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllRestaurantNames() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAllRestaurantNames() {
+		return new ArrayList<String>(getRestaurant().keySet());
 	}
 
 	/**
