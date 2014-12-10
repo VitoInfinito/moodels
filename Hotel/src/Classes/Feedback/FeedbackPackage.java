@@ -155,7 +155,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IFEEDBACK___ADD_FEEDBACK__STRING_STRING = 8;
+	int IFEEDBACK___ADD_FEEDBACK__STRING = 8;
 
 	/**
 	 * The number of operations of the '<em>IFeedback</em>' class.
@@ -273,7 +273,7 @@ public interface FeedbackPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEEDBACK_MANAGER___ADD_FEEDBACK__STRING_STRING = IFEEDBACK___ADD_FEEDBACK__STRING_STRING;
+	int FEEDBACK_MANAGER___ADD_FEEDBACK__STRING = IFEEDBACK___ADD_FEEDBACK__STRING;
 
 	/**
 	 * The number of operations of the '<em>Manager</em>' class.
@@ -440,14 +440,14 @@ public interface FeedbackPackage extends EPackage {
 	EOperation getIFeedback__SearchFeedback__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#addFeedback(java.lang.String, java.lang.String) <em>Add Feedback</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Feedback.IFeedback#addFeedback(java.lang.String) <em>Add Feedback</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Feedback</em>' operation.
-	 * @see Classes.Feedback.IFeedback#addFeedback(java.lang.String, java.lang.String)
+	 * @see Classes.Feedback.IFeedback#addFeedback(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIFeedback__AddFeedback__String_String();
+	EOperation getIFeedback__AddFeedback__String();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Feedback.FeedbackManager <em>Manager</em>}'.
@@ -627,7 +627,7 @@ public interface FeedbackPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IFEEDBACK___ADD_FEEDBACK__STRING_STRING = eINSTANCE.getIFeedback__AddFeedback__String_String();
+		EOperation IFEEDBACK___ADD_FEEDBACK__STRING = eINSTANCE.getIFeedback__AddFeedback__String();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Feedback.impl.FeedbackManagerImpl <em>Manager</em>}' class.

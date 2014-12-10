@@ -229,7 +229,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIManageInventory__AddItem__String_String_int_int_int() {
+	public EOperation getIManageInventory__AddItem__String_double_double_int() {
 		return iManageInventoryEClass.getEOperations().get(3);
 	}
 
@@ -418,7 +418,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___CHANGE_ITEM_NAME__STRING_STRING);
 		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___CHANGE_ITEM_PRICE__STRING_DOUBLE);
 		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___CHANGE_ITEM_EXPENSE__STRING_DOUBLE);
-		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___ADD_ITEM__STRING_STRING_INT_INT_INT);
+		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___ADD_ITEM__STRING_DOUBLE_DOUBLE_INT);
 		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___REMOVE_ITEM__STRING);
 
 		iInventoryAccessEClass = createEClass(IINVENTORY_ACCESS);
@@ -490,11 +490,10 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		addEParameter(op, theTypesPackage.getString(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDouble(), "expense", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIManageInventory__AddItem__String_String_int_int_int(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIManageInventory__AddItem__String_double_double_int(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "expense", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "expense", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "stock", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIManageInventory__RemoveItem__String(), null, "removeItem", 1, 1, IS_UNIQUE, !IS_ORDERED);

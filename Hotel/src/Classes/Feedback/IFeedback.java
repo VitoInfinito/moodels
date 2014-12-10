@@ -84,9 +84,9 @@ public interface IFeedback extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" descDataType="org.eclipse.uml2.types.String" descRequired="true" descOrdered="false"
+	 * @model descDataType="org.eclipse.uml2.types.String" descRequired="true" descOrdered="false"
 	 * @generated
 	 */
-	void addFeedback(String id, String desc);
+	void addFeedback(String desc);
 
 } // IFeedback

@@ -264,7 +264,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMANAGE_INVENTORY___ADD_ITEM__STRING_STRING_INT_INT_INT = IINVENTORY_ACCESS_OPERATION_COUNT + 3;
+	int IMANAGE_INVENTORY___ADD_ITEM__STRING_DOUBLE_DOUBLE_INT = IINVENTORY_ACCESS_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Remove Item</em>' operation.
@@ -409,7 +409,7 @@ public interface InventoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INVENTORY_MANAGER___ADD_ITEM__STRING_STRING_INT_INT_INT = IMANAGE_INVENTORY___ADD_ITEM__STRING_STRING_INT_INT_INT;
+	int INVENTORY_MANAGER___ADD_ITEM__STRING_DOUBLE_DOUBLE_INT = IMANAGE_INVENTORY___ADD_ITEM__STRING_DOUBLE_DOUBLE_INT;
 
 	/**
 	 * The operation id for the '<em>Remove Item</em>' operation.
@@ -543,14 +543,14 @@ public interface InventoryPackage extends EPackage {
 	EOperation getIManageInventory__ChangeItemExpense__String_double();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#addItem(java.lang.String, java.lang.String, int, int, int) <em>Add Item</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#addItem(java.lang.String, double, double, int) <em>Add Item</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Item</em>' operation.
-	 * @see Classes.Inventory.IManageInventory#addItem(java.lang.String, java.lang.String, int, int, int)
+	 * @see Classes.Inventory.IManageInventory#addItem(java.lang.String, double, double, int)
 	 * @generated
 	 */
-	EOperation getIManageInventory__AddItem__String_String_int_int_int();
+	EOperation getIManageInventory__AddItem__String_double_double_int();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Inventory.IManageInventory#removeItem(java.lang.String) <em>Remove Item</em>}' operation.
@@ -791,7 +791,7 @@ public interface InventoryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMANAGE_INVENTORY___ADD_ITEM__STRING_STRING_INT_INT_INT = eINSTANCE.getIManageInventory__AddItem__String_String_int_int_int();
+		EOperation IMANAGE_INVENTORY___ADD_ITEM__STRING_DOUBLE_DOUBLE_INT = eINSTANCE.getIManageInventory__AddItem__String_double_double_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Item</b></em>' operation.

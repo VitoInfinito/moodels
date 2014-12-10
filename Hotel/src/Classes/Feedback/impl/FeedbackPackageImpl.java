@@ -266,7 +266,7 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIFeedback__AddFeedback__String_String() {
+	public EOperation getIFeedback__AddFeedback__String() {
 		return iFeedbackEClass.getEOperations().get(8);
 	}
 
@@ -370,7 +370,7 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 		createEOperation(iFeedbackEClass, IFEEDBACK___SET_FEEDBACK_IS_RESOLVED__STRING_BOOLEAN);
 		createEOperation(iFeedbackEClass, IFEEDBACK___SET_FEEDBACK_IS_NOTED__STRING_BOOLEAN);
 		createEOperation(iFeedbackEClass, IFEEDBACK___SEARCH_FEEDBACK__STRING);
-		createEOperation(iFeedbackEClass, IFEEDBACK___ADD_FEEDBACK__STRING_STRING);
+		createEOperation(iFeedbackEClass, IFEEDBACK___ADD_FEEDBACK__STRING);
 
 		feedbackManagerEClass = createEClass(FEEDBACK_MANAGER);
 		createEReference(feedbackManagerEClass, FEEDBACK_MANAGER__FEEDBACKS);
@@ -444,8 +444,7 @@ public class FeedbackPackageImpl extends EPackageImpl implements FeedbackPackage
 		op = initEOperation(getIFeedback__SearchFeedback__String(), theTypesPackage.getString(), "searchFeedback", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIFeedback__AddFeedback__String_String(), null, "addFeedback", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIFeedback__AddFeedback__String(), null, "addFeedback", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "desc", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(feedbackManagerEClass, FeedbackManager.class, "FeedbackManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

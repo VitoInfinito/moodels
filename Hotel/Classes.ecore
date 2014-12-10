@@ -1071,10 +1071,9 @@
         <eParameters name="expense" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </eOperations>
       <eOperations name="addItem" ordered="false" lowerBound="1">
-        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="expense" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="expense" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
         <eParameters name="stock" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="removeItem" ordered="false" lowerBound="1">
@@ -1451,7 +1450,6 @@
         <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="addFeedback" ordered="false" lowerBound="1">
-        <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="desc" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
     </eClassifiers>

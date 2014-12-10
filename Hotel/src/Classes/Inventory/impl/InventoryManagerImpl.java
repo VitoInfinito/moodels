@@ -34,6 +34,8 @@ import Classes.Inventory.Item;
 public class InventoryManagerImpl extends MinimalEObjectImpl.Container implements InventoryManager {
 	private final Logger logger = LoggerFactory.getLogger(InventoryManagerImpl.class);
 	
+	private static int IDCounter = 0;
+	
 	/**
 	 * The cached value of the '{@link #getItemType() <em>Item Type</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -180,31 +182,9 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void changeItemPrice(String id, double price) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void changeItemExpense(String id, double expense) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changeItemPrice(String id, int price) {
+	public void changeItemPrice(String id, double price) {
 		if (items.containsKey(id)) {
 			items.get(id).setPrice(price);
 		} else {
@@ -218,7 +198,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changeItemExpense(String id, int expense) {
+	public void changeItemExpense(String id, double expense) {
 		if (items.containsKey(id)) {
 			items.get(id).setExpense(expense);
 		} else {
@@ -232,21 +212,18 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addItem(String id, String name, int price, int expense, int stock) {
-		if (!items.containsKey(id)) {
-			Item item = new ItemImpl();
+	public void addItem(String name, double price, double expense, int stock) {
+		String id = IDCounter++ + "";
+		
+		Item item = new ItemImpl();
 			
-			item.setId(id);
-			item.setName(name);
-			item.setPrice(price);
-			item.setExpense(expense);
-			item.setStock(stock);
-			
-			items.put(id, item);
-		} else {
-			logger.warn("An ItemType with ID {} were already in the inventory.", id);
-			throw new InvalidIDException();
-		}
+		item.setId(id);
+		item.setName(name);
+		item.setPrice(price);
+		item.setExpense(expense);
+		item.setStock(stock);
+		
+		items.put(id, item);
 	}
 
 	/**
@@ -355,8 +332,8 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 			case InventoryPackage.INVENTORY_MANAGER___CHANGE_ITEM_EXPENSE__STRING_DOUBLE:
 				changeItemExpense((String)arguments.get(0), (Double)arguments.get(1));
 				return null;
-			case InventoryPackage.INVENTORY_MANAGER___ADD_ITEM__STRING_STRING_INT_INT_INT:
-				addItem((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4));
+			case InventoryPackage.INVENTORY_MANAGER___ADD_ITEM__STRING_DOUBLE_DOUBLE_INT:
+				addItem((String)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Integer)arguments.get(3));
 				return null;
 			case InventoryPackage.INVENTORY_MANAGER___REMOVE_ITEM__STRING:
 				removeItem((String)arguments.get(0));

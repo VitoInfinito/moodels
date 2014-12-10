@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -16,6 +17,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
 import Classes.Feedback.Feedback;
 import Classes.Feedback.FeedbackManager;
@@ -36,6 +38,8 @@ import Classes.Feedback.FeedbackPackage;
  */
 public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements FeedbackManager {
 	private final Logger logger = LoggerFactory.getLogger(FeedbackManagerImpl.class);
+	
+	private static int IDCounter = 0;
 	
 	/**
 	 * The cached value of the '{@link #getFeedback() <em>Feedback</em>}' map.
@@ -199,7 +203,9 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addFeedback(String id, String desc) {
+	public void addFeedback(String desc) {
+		String id = IDCounter++ + "";
+		
 		if (!feedbacks.containsKey(id)) {
 			Feedback feedback = new FeedbackImpl();
 			
@@ -314,8 +320,8 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 				return null;
 			case FeedbackPackage.FEEDBACK_MANAGER___SEARCH_FEEDBACK__STRING:
 				return searchFeedback((String)arguments.get(0));
-			case FeedbackPackage.FEEDBACK_MANAGER___ADD_FEEDBACK__STRING_STRING:
-				addFeedback((String)arguments.get(0), (String)arguments.get(1));
+			case FeedbackPackage.FEEDBACK_MANAGER___ADD_FEEDBACK__STRING:
+				addFeedback((String)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

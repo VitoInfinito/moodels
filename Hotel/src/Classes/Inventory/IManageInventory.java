@@ -41,10 +41,10 @@ public interface IManageInventory extends IInventoryAccess {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" expenseDataType="org.eclipse.uml2.types.Integer" expenseRequired="true" expenseOrdered="false" stockDataType="org.eclipse.uml2.types.Integer" stockRequired="true" stockOrdered="false"
+	 * @model nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" priceRequired="true" priceOrdered="false" expenseRequired="true" expenseOrdered="false" stockDataType="org.eclipse.uml2.types.Integer" stockRequired="true" stockOrdered="false"
 	 * @generated
 	 */
-	void addItem(String id, String name, int price, int expense, int stock);
+	void addItem(String name, double price, double expense, int stock);
 
 	/**
 	 * <!-- begin-user-doc -->
