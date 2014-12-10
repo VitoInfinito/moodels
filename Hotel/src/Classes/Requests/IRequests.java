@@ -3,7 +3,10 @@
 package Classes.Requests;
 
 import java.util.List;
+
 import org.eclipse.emf.ecore.EObject;
+
+import Classes.Guests.IGuests;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,6 +19,9 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface IRequests extends EObject {
+	
+	IRequests INSTANCE = Classes.Requests.impl.RequestsManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

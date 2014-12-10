@@ -3,8 +3,11 @@
 package Classes.Stays;
 
 import java.util.Date;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+
+import Classes.Guests.IGuests;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,6 +20,9 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface IStays extends EObject {
+	
+	IStays INSTANCE = Classes.Stays.impl.StaysManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

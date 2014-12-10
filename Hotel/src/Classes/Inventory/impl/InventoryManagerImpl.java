@@ -6,9 +6,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
@@ -252,6 +254,17 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated NOT
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		throw new UnsupportedOperationException();
 	}
@@ -300,5 +313,4 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		throw new UnsupportedOperationException();
 	}
-
 } //InventoryManagerImpl

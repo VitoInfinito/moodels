@@ -5,15 +5,18 @@ package Classes.Restaurants.impl;
 import Classes.InvalidIDException;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToRestaurantMapImpl;
+import Classes.Guests.impl.GuestsManagerImpl;
 import Classes.Restaurants.Reservation;
 import Classes.Restaurants.Restaurant;
 import Classes.Restaurants.RestaurantMenu;
 import Classes.Restaurants.RestaurantsManager;
 import Classes.Restaurants.RestaurantsPackage;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -41,7 +44,7 @@ import org.slf4j.LoggerFactory;
  */
 public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container implements RestaurantsManager {
 	private final Logger logger = LoggerFactory.getLogger(RestaurantsManagerImpl.class);
-
+	public static RestaurantsManagerImpl INSTANCE = new RestaurantsManagerImpl();
 	
 	/**
 	 * The cached value of the '{@link #getRestaurant() <em>Restaurant</em>}' map.
@@ -56,10 +59,11 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	protected RestaurantsManagerImpl() {
+	private RestaurantsManagerImpl() {
 		super();
+		restaurant = new EcoreEMap<String,Restaurant>(ECoreMapEntriesPackage.Literals.STRING_TO_RESTAURANT_MAP, StringToRestaurantMapImpl.class, this, RestaurantsPackage.RESTAURANTS_MANAGER__RESTAURANT);
 	}
 
 	/**
@@ -74,14 +78,12 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public EMap<String, Restaurant> getRestaurant() {
-		if (restaurant == null) {
-			restaurant = new EcoreEMap<String,Restaurant>(ECoreMapEntriesPackage.Literals.STRING_TO_RESTAURANT_MAP, StringToRestaurantMapImpl.class, this, RestaurantsPackage.RESTAURANTS_MANAGER__RESTAURANT);
-		}
-		return restaurant;
+		throw new UnsupportedOperationException();
 	}
 	
 	/**
@@ -402,156 +404,69 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RestaurantsPackage.RESTAURANTS_MANAGER__RESTAURANT:
-				return ((InternalEList<?>)getRestaurant()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case RestaurantsPackage.RESTAURANTS_MANAGER__RESTAURANT:
-				if (coreType) return getRestaurant();
-				else return getRestaurant().map();
-		}
-		return super.eGet(featureID, resolve, coreType);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case RestaurantsPackage.RESTAURANTS_MANAGER__RESTAURANT:
-				((EStructuralFeature.Setting)getRestaurant()).set(newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case RestaurantsPackage.RESTAURANTS_MANAGER__RESTAURANT:
-				getRestaurant().clear();
-				return;
-		}
-		super.eUnset(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case RestaurantsPackage.RESTAURANTS_MANAGER__RESTAURANT:
-				return restaurant != null && !restaurant.isEmpty();
-		}
-		return super.eIsSet(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
-	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESTAURANT_RESERVATIONS__STRING:
-				return getRestaurantReservations((String)arguments.get(0));
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESTAURANT_TABLES__STRING:
-				return getRestaurantTables((String)arguments.get(0));
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESTAURANT_TABLE_NUMBER_OF_SEATS__STRING_STRING:
-				return getRestaurantTableNumberOfSeats((String)arguments.get(0), (String)arguments.get(1));
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_AVAILABLE_TABLES__DATE_DATE:
-				return getAvailableTables((Date)arguments.get(0), (Date)arguments.get(1));
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESERVATION_GUEST__STRING_STRING:
-				return getReservationGuest((String)arguments.get(0), (String)arguments.get(1));
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESTAURANT_MENU_NAME__STRING:
-				return getRestaurantMenuName((String)arguments.get(0));
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_ALL_RESTAURANT_NAMES:
-				return getAllRestaurantNames();
-			case RestaurantsPackage.RESTAURANTS_MANAGER___SEARCH_RESTAURANTS__STRING:
-				return searchRestaurants((String)arguments.get(0));
-			case RestaurantsPackage.RESTAURANTS_MANAGER___SEARCH_RESTAURANT_RESERVATIONS__STRING_STRING:
-				return searchRestaurantReservations((String)arguments.get(0), (String)arguments.get(1));
-			case RestaurantsPackage.RESTAURANTS_MANAGER___SEARCH_RESTAURANT_TABLES__STRING_STRING:
-				return searchRestaurantTables((String)arguments.get(0), (String)arguments.get(1));
-			case RestaurantsPackage.RESTAURANTS_MANAGER___MAKE_RESERVATION__STRING_ELIST_STRING_DATE_DATE:
-				makeReservation((String)arguments.get(0), (EList<String>)arguments.get(1), (String)arguments.get(2), (Date)arguments.get(3), (Date)arguments.get(4));
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___CANCEL_RESERVATION__STRING_STRING:
-				cancelReservation((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___CHANGE_RESERVED_TABLES__STRING_STRING_ELIST:
-				changeReservedTables((String)arguments.get(0), (String)arguments.get(1), (EList<String>)arguments.get(2));
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_AVAILABLE_TABLES_BY_NBR_GUESTS__DATE_DATE_INT:
-				return getAvailableTablesByNbrGuests((Date)arguments.get(0), (Date)arguments.get(1), (Integer)arguments.get(2));
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESTAURANT_MENU_ITEMS__STRING:
-				return getRestaurantMenuItems((String)arguments.get(0));
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESERVATION_FROM_TIME__STRING_STRING:
-				return getReservationFromTime((String)arguments.get(0), (String)arguments.get(1));
-			case RestaurantsPackage.RESTAURANTS_MANAGER___GET_RESERVATION_TO_TIME__STRING_STRING:
-				return getReservationToTime((String)arguments.get(0), (String)arguments.get(1));
-			case RestaurantsPackage.RESTAURANTS_MANAGER___ADD_RESTAURANT__STRING:
-				addRestaurant((String)arguments.get(0));
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___REMOVE_RESTAURANT__STRING:
-				removeRestaurant((String)arguments.get(0));
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___ADD_RESTAURANT_TABLE__STRING_INT_STRING:
-				addRestaurantTable((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2));
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___REMOVE_RESTAURANT_TABLE__STRING_STRING:
-				removeRestaurantTable((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___CHANGE_RESTAURANT_NAME__STRING_STRING:
-				changeRestaurantName((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___CHANGE_TABLE_NUMBER_OF_SEATS__STRING_STRING_INT:
-				changeTableNumberOfSeats((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___ADD_MENU_ITEM__STRING_STRING:
-				addMenuItem((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___REMOVE_MENU_ITEM__STRING_STRING:
-				removeMenuItem((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___CHANGE_MENU_NAME__STRING_STRING:
-				changeMenuName((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case RestaurantsPackage.RESTAURANTS_MANAGER___CHANGE_TABLE_NUMBER__STRING_STRING_STRING:
-				changeTableNumber((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
+		throw new UnsupportedOperationException();
 	}
 
 } //RestaurantsManagerImpl

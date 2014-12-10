@@ -2,6 +2,8 @@
  */
 package Classes.Restaurants;
 
+import Classes.Guests.IGuests;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +16,9 @@ package Classes.Restaurants;
  * @generated
  */
 public interface IRestaurantsManage extends IRestaurantsAccess {
+	
+	IRestaurantsManage INSTANCE = Classes.Restaurants.impl.RestaurantsManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

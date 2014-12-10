@@ -53,7 +53,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	private CustomersManagerImpl() {
 		super();

@@ -4,18 +4,23 @@ package Classes.Requests.impl;
 
 import Classes.InvalidIDException;
 import Classes.Bookables.impl.BookablesManagerImpl;
+import Classes.Guests.impl.GuestsManagerImpl;
 import Classes.Requests.Request;
 import Classes.Requests.RequestsFactory;
 import Classes.Requests.RequestsManager;
 import Classes.Requests.RequestsPackage;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
@@ -35,8 +40,8 @@ import org.slf4j.LoggerFactory;
  * @generated
  */
 public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements RequestsManager {
-	
 	private final Logger logger = LoggerFactory.getLogger(BookablesManagerImpl.class);
+	public static RequestsManagerImpl INSTANCE = new RequestsManagerImpl();
 	
 	/**
 	 * The cached value of the '{@link #getSpecialRequest() <em>Special Request</em>}' reference list.
@@ -51,10 +56,11 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	protected RequestsManagerImpl() {
+	private RequestsManagerImpl() {
 		super();
+		specialRequest = new EcoreEMap<String,Request>(Classes.ECoreMapEntries.ECoreMapEntriesPackage.Literals.STRING_TO_REQUEST_MAP, Classes.ECoreMapEntries.impl.StringToRequestMapImpl.class, this, RequestsPackage.REQUESTS_MANAGER__SPECIAL_REQUEST);
 	}
 
 	/**
@@ -69,14 +75,12 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public EMap<String, Request> getSpecialRequest() {
-		if (specialRequest == null) {
-			specialRequest = new EcoreEMap<String,Request>(Classes.ECoreMapEntries.ECoreMapEntriesPackage.Literals.STRING_TO_REQUEST_MAP, Classes.ECoreMapEntries.impl.StringToRequestMapImpl.class, this, RequestsPackage.REQUESTS_MANAGER__SPECIAL_REQUEST);
-		}
-		return specialRequest;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -227,98 +231,69 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case RequestsPackage.REQUESTS_MANAGER__SPECIAL_REQUEST:
-				return getSpecialRequest();
-		}
-		return super.eGet(featureID, resolve, coreType);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case RequestsPackage.REQUESTS_MANAGER__SPECIAL_REQUEST:
-				getSpecialRequest().clear();
-				getSpecialRequest().addAll((Collection<? extends Map.Entry<String, Request>>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case RequestsPackage.REQUESTS_MANAGER__SPECIAL_REQUEST:
-				getSpecialRequest().clear();
-				return;
-		}
-		super.eUnset(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case RequestsPackage.REQUESTS_MANAGER__SPECIAL_REQUEST:
-				return specialRequest != null && !specialRequest.isEmpty();
-		}
-		return super.eIsSet(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
-	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case RequestsPackage.REQUESTS_MANAGER___GET_REQUEST_DESCRIPTION__STRING:
-				return getRequestDescription((String)arguments.get(0));
-			case RequestsPackage.REQUESTS_MANAGER___HAS_REQUEST_BEEN_RESOLVED__STRING:
-				return hasRequestBeenResolved((String)arguments.get(0));
-			case RequestsPackage.REQUESTS_MANAGER___SET_REQUEST_RESOLVED__STRING:
-				setRequestResolved((String)arguments.get(0));
-				return null;
-			case RequestsPackage.REQUESTS_MANAGER___DELETE_REQUEST__STRING:
-				deleteRequest((String)arguments.get(0));
-				return null;
-			case RequestsPackage.REQUESTS_MANAGER___CHANGE_REQUEST_DESC__STRING_STRING:
-				changeRequestDesc((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case RequestsPackage.REQUESTS_MANAGER___SEARCH_REQUESTS__STRING:
-				return searchRequests((String)arguments.get(0));
-			case RequestsPackage.REQUESTS_MANAGER___GET_ALL_REQUEST_IDS:
-				return getAllRequestIDs();
-			case RequestsPackage.REQUESTS_MANAGER___SET_REQUEST_DESCRIPTION__STRING_STRING:
-				setRequestDescription((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case RequestsPackage.REQUESTS_MANAGER___ADD_REQUEST__STRING_STRING:
-				addRequest((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
+		throw new UnsupportedOperationException();
 	}
 
 } //RequestsManagerImpl

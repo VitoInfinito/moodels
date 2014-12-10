@@ -14,6 +14,9 @@ package Classes.Services;
  * @generated
  */
 public interface IServicesManage extends IServicesAccess {
+	
+	IServicesManage INSTANCE = Classes.Services.impl.ServiceManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

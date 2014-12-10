@@ -68,11 +68,10 @@ public class StaffFactoryImpl extends EFactoryImpl implements StaffFactory {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public StaffManager createStaffManager() {
-		StaffManagerImpl staffManager = new StaffManagerImpl();
-		return staffManager;
+		return StaffManagerImpl.INSTANCE;
 	}
 
 	/**

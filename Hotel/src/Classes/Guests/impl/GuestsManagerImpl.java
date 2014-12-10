@@ -5,6 +5,7 @@ package Classes.Guests.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -18,6 +19,7 @@ import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
 import Classes.Accounts.IManageAccounts;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
@@ -87,11 +89,12 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public EMap<String, Guest> getGuests() {
-		return guests;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -447,153 +450,68 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case GuestsPackage.GUESTS_MANAGER__GUESTS:
-				return ((InternalEList<?>)getGuests()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case GuestsPackage.GUESTS_MANAGER__GUESTS:
-				if (coreType) return getGuests();
-				else return getGuests().map();
-			case GuestsPackage.GUESTS_MANAGER__IMANAGE_ACCOUNTS:
-				if (resolve) return getIManageAccounts();
-				return basicGetIManageAccounts();
-		}
-		return super.eGet(featureID, resolve, coreType);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case GuestsPackage.GUESTS_MANAGER__GUESTS:
-				((EStructuralFeature.Setting)getGuests()).set(newValue);
-				return;
-			case GuestsPackage.GUESTS_MANAGER__IMANAGE_ACCOUNTS:
-				setIManageAccounts((IManageAccounts)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case GuestsPackage.GUESTS_MANAGER__GUESTS:
-				getGuests().clear();
-				return;
-			case GuestsPackage.GUESTS_MANAGER__IMANAGE_ACCOUNTS:
-				setIManageAccounts((IManageAccounts)null);
-				return;
-		}
-		super.eUnset(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case GuestsPackage.GUESTS_MANAGER__GUESTS:
-				return guests != null && !guests.isEmpty();
-			case GuestsPackage.GUESTS_MANAGER__IMANAGE_ACCOUNTS:
-				return iManageAccounts != null;
-		}
-		return super.eIsSet(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case GuestsPackage.GUESTS_MANAGER___GET_ALL_GUEST_IDS:
-				return getAllGuestIDs();
-			case GuestsPackage.GUESTS_MANAGER___ADD_GUEST__STRING_STRING_STRING_STRING_STRING_STRING:
-				addGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
-				return null;
-			case GuestsPackage.GUESTS_MANAGER___CHANGE_GUEST_FIRST_NAME__STRING_STRING:
-				changeGuestFirstName((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case GuestsPackage.GUESTS_MANAGER___CHANGE_GUEST_LAST_NAME__STRING_STRING:
-				changeGuestLastName((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case GuestsPackage.GUESTS_MANAGER___CHANGE_GUEST_TITLE__STRING_STRING:
-				changeGuestTitle((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case GuestsPackage.GUESTS_MANAGER___CHANGE_GUEST_EMAIL__STRING_STRING:
-				changeGuestEmail((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case GuestsPackage.GUESTS_MANAGER___CHANGE_GUEST_PHONE__STRING_STRING:
-				changeGuestPhone((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_FIRST_NAME__STRING:
-				return getGuestFirstName((String)arguments.get(0));
-			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_LAST_NAME__STRING:
-				return getGuestLastName((String)arguments.get(0));
-			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_TITLE__STRING:
-				return getGuestTitle((String)arguments.get(0));
-			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_EMAIL__STRING:
-				return getGuestEmail((String)arguments.get(0));
-			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_PHONE__STRING:
-				return getGuestPhone((String)arguments.get(0));
-			case GuestsPackage.GUESTS_MANAGER___SEARCH_GUESTS__STRING:
-				return searchGuests((String)arguments.get(0));
-			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_STAYS__STRING:
-				return getGuestStays((String)arguments.get(0));
-			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_REQUESTS__STRING:
-				return getGuestRequests((String)arguments.get(0));
-			case GuestsPackage.GUESTS_MANAGER___REMOVE_GUEST_STAY__STRING_STRING:
-				removeGuestStay((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case GuestsPackage.GUESTS_MANAGER___ADD_GUEST_REQUEST__STRING_STRING:
-				addGuestRequest((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case GuestsPackage.GUESTS_MANAGER___REMOVE_GUEST_REQUEST__STRING_STRING:
-				removeGuestRequest((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_ACCOUNT_USERNAME__STRING:
-				return getGuestAccountUsername((String)arguments.get(0));
-			case GuestsPackage.GUESTS_MANAGER___GET_GUEST_ACCOUNT_PASSWORD__STRING:
-				return getGuestAccountPassword((String)arguments.get(0));
-			case GuestsPackage.GUESTS_MANAGER___GENERATE_GUEST_ACCOUNT__STRING:
-				generateGuestAccount((String)arguments.get(0));
-				return null;
-			case GuestsPackage.GUESTS_MANAGER___REMOVE_GUEST_ACCOUNT__STRING:
-				removeGuestAccount((String)arguments.get(0));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
+		throw new UnsupportedOperationException();
 	}
 } //GuestsManagerImpl

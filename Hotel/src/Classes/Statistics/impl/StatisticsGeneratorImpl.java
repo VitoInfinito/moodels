@@ -3,27 +3,25 @@
 package Classes.Statistics.impl;
 
 import Classes.Bills.IBills;
-
 import Classes.Bookings.IBookings;
-
+import Classes.Guests.impl.GuestsManagerImpl;
 import Classes.Staff.IStaff;
-
 import Classes.Statistics.Statistic;
 import Classes.Statistics.StatisticsGenerator;
 import Classes.Statistics.StatisticsPackage;
 
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,6 +40,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implements StatisticsGenerator {
+	private final Logger logger = LoggerFactory.getLogger(StatisticsGeneratorImpl.class);
+	public static StatisticsGeneratorImpl INSTANCE = new StatisticsGeneratorImpl();
+	
+	
 	/**
 	 * The cached value of the '{@link #getIBillsAccess() <em>IBills Access</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -95,9 +97,9 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	protected StatisticsGeneratorImpl() {
+	private StatisticsGeneratorImpl() {
 		super();
 	}
 
@@ -113,116 +115,92 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IBills getIBillsAccess() {
-		if (iBillsAccess != null && iBillsAccess.eIsProxy()) {
-			InternalEObject oldIBillsAccess = (InternalEObject)iBillsAccess;
-			iBillsAccess = (IBills)eResolveProxy(oldIBillsAccess);
-			if (iBillsAccess != oldIBillsAccess) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatisticsPackage.STATISTICS_GENERATOR__IBILLS_ACCESS, oldIBillsAccess, iBillsAccess));
-			}
-		}
-		return iBillsAccess;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IBills basicGetIBillsAccess() {
-		return iBillsAccess;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setIBillsAccess(IBills newIBillsAccess) {
-		IBills oldIBillsAccess = iBillsAccess;
-		iBillsAccess = newIBillsAccess;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatisticsPackage.STATISTICS_GENERATOR__IBILLS_ACCESS, oldIBillsAccess, iBillsAccess));
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IBookings getIBooking() {
-		if (iBooking != null && iBooking.eIsProxy()) {
-			InternalEObject oldIBooking = (InternalEObject)iBooking;
-			iBooking = (IBookings)eResolveProxy(oldIBooking);
-			if (iBooking != oldIBooking) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatisticsPackage.STATISTICS_GENERATOR__IBOOKING, oldIBooking, iBooking));
-			}
-		}
-		return iBooking;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IBookings basicGetIBooking() {
-		return iBooking;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setIBooking(IBookings newIBooking) {
-		IBookings oldIBooking = iBooking;
-		iBooking = newIBooking;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatisticsPackage.STATISTICS_GENERATOR__IBOOKING, oldIBooking, iBooking));
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IStaff getIStaff() {
-		if (iStaff != null && iStaff.eIsProxy()) {
-			InternalEObject oldIStaff = (InternalEObject)iStaff;
-			iStaff = (IStaff)eResolveProxy(oldIStaff);
-			if (iStaff != oldIStaff) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatisticsPackage.STATISTICS_GENERATOR__ISTAFF, oldIStaff, iStaff));
-			}
-		}
-		return iStaff;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public IStaff basicGetIStaff() {
-		return iStaff;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setIStaff(IStaff newIStaff) {
-		IStaff oldIStaff = iStaff;
-		iStaff = newIStaff;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatisticsPackage.STATISTICS_GENERATOR__ISTAFF, oldIStaff, iStaff));
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -281,111 +259,58 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case StatisticsPackage.STATISTICS_GENERATOR__IBILLS_ACCESS:
-				if (resolve) return getIBillsAccess();
-				return basicGetIBillsAccess();
-			case StatisticsPackage.STATISTICS_GENERATOR__IBOOKING:
-				if (resolve) return getIBooking();
-				return basicGetIBooking();
-			case StatisticsPackage.STATISTICS_GENERATOR__ISTAFF:
-				if (resolve) return getIStaff();
-				return basicGetIStaff();
-			case StatisticsPackage.STATISTICS_GENERATOR__STATIC_EXPENSES:
-				return getStaticExpenses();
-		}
-		return super.eGet(featureID, resolve, coreType);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case StatisticsPackage.STATISTICS_GENERATOR__IBILLS_ACCESS:
-				setIBillsAccess((IBills)newValue);
-				return;
-			case StatisticsPackage.STATISTICS_GENERATOR__IBOOKING:
-				setIBooking((IBookings)newValue);
-				return;
-			case StatisticsPackage.STATISTICS_GENERATOR__ISTAFF:
-				setIStaff((IStaff)newValue);
-				return;
-			case StatisticsPackage.STATISTICS_GENERATOR__STATIC_EXPENSES:
-				setStaticExpenses((Double)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case StatisticsPackage.STATISTICS_GENERATOR__IBILLS_ACCESS:
-				setIBillsAccess((IBills)null);
-				return;
-			case StatisticsPackage.STATISTICS_GENERATOR__IBOOKING:
-				setIBooking((IBookings)null);
-				return;
-			case StatisticsPackage.STATISTICS_GENERATOR__ISTAFF:
-				setIStaff((IStaff)null);
-				return;
-			case StatisticsPackage.STATISTICS_GENERATOR__STATIC_EXPENSES:
-				setStaticExpenses(STATIC_EXPENSES_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case StatisticsPackage.STATISTICS_GENERATOR__IBILLS_ACCESS:
-				return iBillsAccess != null;
-			case StatisticsPackage.STATISTICS_GENERATOR__IBOOKING:
-				return iBooking != null;
-			case StatisticsPackage.STATISTICS_GENERATOR__ISTAFF:
-				return iStaff != null;
-			case StatisticsPackage.STATISTICS_GENERATOR__STATIC_EXPENSES:
-				return staticExpenses != STATIC_EXPENSES_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case StatisticsPackage.STATISTICS_GENERATOR___GET_OCCUPANCY_STATISTICS__DATE_DATE:
-				return getOccupancyStatistics((Date)arguments.get(0), (Date)arguments.get(1));
-			case StatisticsPackage.STATISTICS_GENERATOR___GET_REVENUE_STATISTICS__DATE_DATE:
-				return getRevenueStatistics((Date)arguments.get(0), (Date)arguments.get(1));
-			case StatisticsPackage.STATISTICS_GENERATOR___GET_PROFIT_STATISTICS__DATE_DATE:
-				return getProfitStatistics((Date)arguments.get(0), (Date)arguments.get(1));
-		}
-		return super.eInvoke(operationID, arguments);
+		throw new UnsupportedOperationException();
 	}
 
 	/**

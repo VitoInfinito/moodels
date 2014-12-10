@@ -101,8 +101,7 @@ public class StatisticsFactoryImpl extends EFactoryImpl implements StatisticsFac
 	 * @generated
 	 */
 	public StatisticsGenerator createStatisticsGenerator() {
-		StatisticsGeneratorImpl statisticsGenerator = new StatisticsGeneratorImpl();
-		return statisticsGenerator;
+		return StatisticsGeneratorImpl.INSTANCE;
 	}
 
 	/**

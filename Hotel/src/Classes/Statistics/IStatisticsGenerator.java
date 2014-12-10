@@ -3,7 +3,10 @@
 package Classes.Statistics;
 
 import java.util.Date;
+
 import org.eclipse.emf.ecore.EObject;
+
+import Classes.Guests.IGuests;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,6 +19,9 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface IStatisticsGenerator extends EObject {
+	
+	IStatisticsGenerator INSTANCE = Classes.Statistics.impl.StatisticsGeneratorImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

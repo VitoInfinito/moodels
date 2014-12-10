@@ -110,8 +110,7 @@ public class AccountsFactoryImpl extends EFactoryImpl implements AccountsFactory
 	 * @generated
 	 */
 	public AccountsManager createAccountsManager() {
-		AccountsManagerImpl accountsManager = new AccountsManagerImpl();
-		return accountsManager;
+		return AccountsManagerImpl.INSTANCE;
 	}
 
 	/**

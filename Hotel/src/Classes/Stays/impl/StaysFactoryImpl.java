@@ -87,11 +87,10 @@ public class StaysFactoryImpl extends EFactoryImpl implements StaysFactory {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public StaysManager createStaysManager() {
-		StaysManagerImpl staysManager = new StaysManagerImpl();
-		return staysManager;
+		return StaysManagerImpl.INSTANCE;
 	}
 
 	/**

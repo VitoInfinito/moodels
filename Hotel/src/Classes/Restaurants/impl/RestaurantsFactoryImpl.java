@@ -69,11 +69,10 @@ public class RestaurantsFactoryImpl extends EFactoryImpl implements RestaurantsF
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public RestaurantsManager createRestaurantsManager() {
-		RestaurantsManagerImpl restaurantsManager = new RestaurantsManagerImpl();
-		return restaurantsManager;
+		return RestaurantsManagerImpl.INSTANCE;
 	}
 
 	/**
