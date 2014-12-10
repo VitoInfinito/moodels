@@ -25,7 +25,7 @@ public interface IRestaurantsAccess extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false"
 	 * @generated NNOT
 	 */
-	List<String> getRestaurantReservations(String restaurantID);
+	EList<String> getRestaurantReservations(String restaurantID);
 
 	/**
 	 * <!-- begin-user-doc -->

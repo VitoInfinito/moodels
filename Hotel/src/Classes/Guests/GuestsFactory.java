@@ -22,11 +22,10 @@ public interface GuestsFactory extends EFactory {
 	GuestsFactory eINSTANCE = Classes.Guests.impl.GuestsFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Manager</em>'.
 	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Manager</em>'.
-	 * @generated
+	 * @generated NOT
 	 */
 	GuestsManager createGuestsManager();
 
@@ -40,11 +39,10 @@ public interface GuestsFactory extends EFactory {
 	Guest createGuest();
 
 	/**
-	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
 	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
+	 * @generated NOT
 	 */
 	GuestsPackage getGuestsPackage();
 

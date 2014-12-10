@@ -471,7 +471,7 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/Guest/removeRequest"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Guests/IGuests">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/getAllGuests"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/getAllGuestIDs"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/addGuest">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Guests/IGuests/addGuest/SSID"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Guests/IGuests/addGuest/firstname"/>

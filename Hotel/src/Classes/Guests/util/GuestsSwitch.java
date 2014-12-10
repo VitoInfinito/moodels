@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.util.Switch;
  * which is the result of the switch.
  * <!-- end-user-doc -->
  * @see Classes.Guests.GuestsPackage
- * @generated
+ * @generated 
  */
 public class GuestsSwitch<T> extends Switch<T> {
 	/**

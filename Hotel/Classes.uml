@@ -2339,10 +2339,11 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_w9PF8npsEeST-65JbGUt8g" name="Guests">
     <packagedElement xmi:type="uml:Interface" xmi:id="_w9PF9XpsEeST-65JbGUt8g" name="IGuests">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF9npsEeST-65JbGUt8g" name="getAllGuests">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9nxGMH_nEeS5IpkkkJsVew" type="_w9PGFHpsEeST-65JbGUt8g" direction="return">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9nxtQH_nEeS5IpkkkJsVew"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9nxtQX_nEeS5IpkkkJsVew" value="*"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF9npsEeST-65JbGUt8g" name="getAllGuestIDs">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_zBVo4IB9EeS5IpkkkJsVew" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zBWP8IB9EeS5IpkkkJsVew"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zBWP8YB9EeS5IpkkkJsVew" value="*"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PF93psEeST-65JbGUt8g" name="addGuest">

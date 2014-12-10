@@ -4,7 +4,6 @@ package Classes.Guests;
 
 import java.util.List;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,13 +17,16 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface IGuests extends EObject {
+	
+	IGuests INSTANCE = Classes.Guests.impl.GuestsManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" ordered="false"
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
 	 */
-	List<Guest> getAllGuests();
+	List<String> getAllGuestIDs();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,25 +120,25 @@ public interface IGuests extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchGuests(String keyword);
+	List<String> searchGuests(String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getGuestStays(String SSID);
+	List<String> getGuestStays(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getGuestRequests(String SSID);
+	List<String> getGuestRequests(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->

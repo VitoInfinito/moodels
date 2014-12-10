@@ -3,21 +3,17 @@
 package Classes.Restaurants.impl;
 
 import Classes.InvalidIDException;
-import Classes.Bookables.impl.BookablesManagerImpl;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToRestaurantMapImpl;
 import Classes.Restaurants.Reservation;
 import Classes.Restaurants.Restaurant;
 import Classes.Restaurants.RestaurantMenu;
-import Classes.Restaurants.RestaurantTable;
 import Classes.Restaurants.RestaurantsManager;
 import Classes.Restaurants.RestaurantsPackage;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;

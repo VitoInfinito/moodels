@@ -509,7 +509,7 @@
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IGuests" abstract="true" interface="true">
-      <eOperations name="getAllGuests" ordered="false" upperBound="-1" eType="#//Guests/Guest"/>
+      <eOperations name="getAllGuestIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
       <eOperations name="addGuest" ordered="false" lowerBound="1">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="firstname" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>

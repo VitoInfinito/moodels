@@ -7,9 +7,7 @@ import Classes.Guests.*;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -42,35 +40,33 @@ public class GuestsFactoryImpl extends EFactoryImpl implements GuestsFactory {
 	 * Creates an instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public GuestsFactoryImpl() {
+	private GuestsFactoryImpl() {
 		super();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case GuestsPackage.GUESTS_MANAGER: return createGuestsManager();
-			case GuestsPackage.GUEST: return createGuest();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
+		// NOT USED
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public GuestsManager createGuestsManager() {
-		GuestsManagerImpl guestsManager = new GuestsManagerImpl();
-		return guestsManager;
+		// NOT USED
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -85,22 +81,25 @@ public class GuestsFactoryImpl extends EFactoryImpl implements GuestsFactory {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public GuestsPackage getGuestsPackage() {
-		return (GuestsPackage)getEPackage();
+		// NOT USED
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
 	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
+	 * @generated NOT
 	 */
 	@Deprecated
 	public static GuestsPackage getPackage() {
-		return GuestsPackage.eINSTANCE;
+		// NOT USED
+		throw new UnsupportedOperationException();
 	}
 
 } //GuestsFactoryImpl

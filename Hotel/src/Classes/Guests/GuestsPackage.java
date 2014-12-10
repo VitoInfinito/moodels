@@ -77,13 +77,13 @@ public interface GuestsPackage extends EPackage {
 	int IGUESTS_FEATURE_COUNT = 0;
 
 	/**
-	 * The operation id for the '<em>Get All Guests</em>' operation.
+	 * The operation id for the '<em>Get All Guest IDs</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IGUESTS___GET_ALL_GUESTS = 0;
+	int IGUESTS___GET_ALL_GUEST_IDS = 0;
 
 	/**
 	 * The operation id for the '<em>Add Guest</em>' operation.
@@ -321,13 +321,13 @@ public interface GuestsPackage extends EPackage {
 	int GUESTS_MANAGER_FEATURE_COUNT = IGUESTS_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Get All Guests</em>' operation.
+	 * The operation id for the '<em>Get All Guest IDs</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER___GET_ALL_GUESTS = IGUESTS___GET_ALL_GUESTS;
+	int GUESTS_MANAGER___GET_ALL_GUEST_IDS = IGUESTS___GET_ALL_GUEST_IDS;
 
 	/**
 	 * The operation id for the '<em>Add Guest</em>' operation.
@@ -865,14 +865,14 @@ public interface GuestsPackage extends EPackage {
 	EClass getIGuests();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getAllGuests() <em>Get All Guests</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.IGuests#getAllGuestIDs() <em>Get All Guest IDs</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get All Guests</em>' operation.
-	 * @see Classes.Guests.IGuests#getAllGuests()
+	 * @return the meta object for the '<em>Get All Guest IDs</em>' operation.
+	 * @see Classes.Guests.IGuests#getAllGuestIDs()
 	 * @generated
 	 */
-	EOperation getIGuests__GetAllGuests();
+	EOperation getIGuests__GetAllGuestIDs();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Guests.IGuests#addGuest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Add Guest</em>}' operation.
@@ -1258,12 +1258,12 @@ public interface GuestsPackage extends EPackage {
 		EClass IGUESTS = eINSTANCE.getIGuests();
 
 		/**
-		 * The meta object literal for the '<em><b>Get All Guests</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get All Guest IDs</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IGUESTS___GET_ALL_GUESTS = eINSTANCE.getIGuests__GetAllGuests();
+		EOperation IGUESTS___GET_ALL_GUEST_IDS = eINSTANCE.getIGuests__GetAllGuestIDs();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Guest</b></em>' operation.
