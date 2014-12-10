@@ -5,21 +5,18 @@ package Classes.Guests.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
-import org.eclipse.emf.ecore.util.InternalEList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import Classes.InvalidIDException;
 import Classes.Accounts.IManageAccounts;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
@@ -79,10 +76,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	@Override
 	protected EClass eStaticClass() {
 		// NOT USED
 		throw new UnsupportedOperationException();
@@ -94,7 +91,40 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	public EList<Guest> getGuests() {
+		// NOT USED
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public IManageAccounts getIManageAccounts() {
+		// NOT USED
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	public IManageAccounts basicGetIManageAccounts() {
+		// NOT USED
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * // NOT USED, throws UnsupportedOperationException
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void setIManageAccounts(IManageAccounts newIManageAccounts) {
 		// NOT USED
 		throw new UnsupportedOperationException();
 	}
