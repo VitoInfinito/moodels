@@ -1092,6 +1092,7 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getAvailableTables">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getAvailableTables/to"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getAvailableTables/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getAvailableTables/restaurantID"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/getReservationGuest">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getReservationGuest/restaurantID"/>

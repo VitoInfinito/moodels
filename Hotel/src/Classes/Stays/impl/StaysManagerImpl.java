@@ -4,7 +4,6 @@ package Classes.Stays.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -14,7 +13,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import Classes.Banking.CustomerProvides;
 import Classes.Bills.IBills;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
