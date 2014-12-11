@@ -668,7 +668,7 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRestaurantMenu__AddItem() {
+	public EOperation getRestaurantMenu__AddItem__String() {
 		return restaurantMenuEClass.getEOperations().get(0);
 	}
 
@@ -677,7 +677,7 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRestaurantMenu__RemoveItem() {
+	public EOperation getRestaurantMenu__RemoveItem__String() {
 		return restaurantMenuEClass.getEOperations().get(1);
 	}
 
@@ -765,8 +765,8 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 		restaurantMenuEClass = createEClass(RESTAURANT_MENU);
 		createEAttribute(restaurantMenuEClass, RESTAURANT_MENU__NAME);
 		createEAttribute(restaurantMenuEClass, RESTAURANT_MENU__ITEMS);
-		createEOperation(restaurantMenuEClass, RESTAURANT_MENU___ADD_ITEM);
-		createEOperation(restaurantMenuEClass, RESTAURANT_MENU___REMOVE_ITEM);
+		createEOperation(restaurantMenuEClass, RESTAURANT_MENU___ADD_ITEM__STRING);
+		createEOperation(restaurantMenuEClass, RESTAURANT_MENU___REMOVE_ITEM__STRING);
 	}
 
 	/**
@@ -949,9 +949,11 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 		initEAttribute(getRestaurantMenu_Name(), theTypesPackage.getString(), "name", null, 1, 1, RestaurantMenu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRestaurantMenu_Items(), theTypesPackage.getString(), "items", null, 0, -1, RestaurantMenu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getRestaurantMenu__AddItem(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getRestaurantMenu__AddItem__String(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "itemID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getRestaurantMenu__RemoveItem(), null, "removeItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getRestaurantMenu__RemoveItem__String(), null, "removeItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "itemID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

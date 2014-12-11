@@ -1052,7 +1052,7 @@ public interface RestaurantsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTAURANT_MENU___ADD_ITEM = 0;
+	int RESTAURANT_MENU___ADD_ITEM__STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Remove Item</em>' operation.
@@ -1061,7 +1061,7 @@ public interface RestaurantsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTAURANT_MENU___REMOVE_ITEM = 1;
+	int RESTAURANT_MENU___REMOVE_ITEM__STRING = 1;
 
 	/**
 	 * The number of operations of the '<em>Restaurant Menu</em>' class.
@@ -1588,24 +1588,24 @@ public interface RestaurantsPackage extends EPackage {
 	EAttribute getRestaurantMenu_Items();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.RestaurantMenu#addItem() <em>Add Item</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Restaurants.RestaurantMenu#addItem(java.lang.String) <em>Add Item</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Item</em>' operation.
-	 * @see Classes.Restaurants.RestaurantMenu#addItem()
+	 * @see Classes.Restaurants.RestaurantMenu#addItem(java.lang.String)
 	 * @generated
 	 */
-	EOperation getRestaurantMenu__AddItem();
+	EOperation getRestaurantMenu__AddItem__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.RestaurantMenu#removeItem() <em>Remove Item</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Restaurants.RestaurantMenu#removeItem(java.lang.String) <em>Remove Item</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Item</em>' operation.
-	 * @see Classes.Restaurants.RestaurantMenu#removeItem()
+	 * @see Classes.Restaurants.RestaurantMenu#removeItem(java.lang.String)
 	 * @generated
 	 */
-	EOperation getRestaurantMenu__RemoveItem();
+	EOperation getRestaurantMenu__RemoveItem__String();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2050,7 +2050,7 @@ public interface RestaurantsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation RESTAURANT_MENU___ADD_ITEM = eINSTANCE.getRestaurantMenu__AddItem();
+		EOperation RESTAURANT_MENU___ADD_ITEM__STRING = eINSTANCE.getRestaurantMenu__AddItem__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Item</b></em>' operation.
@@ -2058,7 +2058,7 @@ public interface RestaurantsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation RESTAURANT_MENU___REMOVE_ITEM = eINSTANCE.getRestaurantMenu__RemoveItem();
+		EOperation RESTAURANT_MENU___REMOVE_ITEM__STRING = eINSTANCE.getRestaurantMenu__RemoveItem__String();
 
 	}
 

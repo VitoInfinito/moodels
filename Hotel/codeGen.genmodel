@@ -1203,8 +1203,12 @@
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Restaurants/RestaurantMenu">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Restaurants/RestaurantMenu/name"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Restaurants/RestaurantMenu/items"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/RestaurantMenu/addItem"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/RestaurantMenu/removeItem"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/RestaurantMenu/addItem">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/RestaurantMenu/addItem/itemID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/RestaurantMenu/removeItem">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/RestaurantMenu/removeItem/itemID"/>
+        </genOperations>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Services" basePackage="Classes"

@@ -1303,8 +1303,12 @@
           lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RestaurantMenu">
-      <eOperations name="addItem" ordered="false" lowerBound="1"/>
-      <eOperations name="removeItem" ordered="false" lowerBound="1"/>
+      <eOperations name="addItem" ordered="false" lowerBound="1">
+        <eParameters name="itemID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="removeItem" ordered="false" lowerBound="1">
+        <eParameters name="itemID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="items" ordered="false"

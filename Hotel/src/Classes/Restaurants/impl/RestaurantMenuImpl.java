@@ -117,7 +117,7 @@ public class RestaurantMenuImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addItem() {
+	public void addItem(String itemID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -128,7 +128,7 @@ public class RestaurantMenuImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeItem() {
+	public void removeItem(String itemID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -212,11 +212,11 @@ public class RestaurantMenuImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case RestaurantsPackage.RESTAURANT_MENU___ADD_ITEM:
-				addItem();
+			case RestaurantsPackage.RESTAURANT_MENU___ADD_ITEM__STRING:
+				addItem((String)arguments.get(0));
 				return null;
-			case RestaurantsPackage.RESTAURANT_MENU___REMOVE_ITEM:
-				removeItem();
+			case RestaurantsPackage.RESTAURANT_MENU___REMOVE_ITEM__STRING:
+				removeItem((String)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

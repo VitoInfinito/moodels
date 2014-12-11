@@ -1455,8 +1455,16 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9NRHHpsEeST-65JbGUt8g"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9NRHXpsEeST-65JbGUt8g" value="*"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRIXpsEeST-65JbGUt8g" name="addItem" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRInpsEeST-65JbGUt8g" name="removeItem" visibility="package"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRIXpsEeST-65JbGUt8g" name="addItem" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NCKx0IFgEeSRHohs3wWePg" name="itemID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRInpsEeST-65JbGUt8g" name="removeItem" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_RheOsIFgEeSRHohs3wWePg" name="itemID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9NRJHpsEeST-65JbGUt8g" name="restaurants" visibility="private" memberEnd="_w9NRJXpsEeST-65JbGUt8g _w9NQ7npsEeST-65JbGUt8g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9NRJXpsEeST-65JbGUt8g" name="restaurantManager" type="_w9NQ6npsEeST-65JbGUt8g" association="_w9NRJHpsEeST-65JbGUt8g">

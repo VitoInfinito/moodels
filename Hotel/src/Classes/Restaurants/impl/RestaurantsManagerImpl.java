@@ -10,23 +10,18 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import Classes.InvalidIDException;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToRestaurantMapImpl;
-import Classes.Inventory.InventoryFactory;
-import Classes.Inventory.Item;
 import Classes.Restaurants.Reservation;
 import Classes.Restaurants.Restaurant;
 import Classes.Restaurants.RestaurantMenu;
@@ -378,6 +373,17 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void makeReservation(String restaurantID, EList<String> tables, String guestID, Date to, Date from) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void makeReservation(String restaurantID, List<String> tables, String guestID, Date to, Date from) {
@@ -567,15 +573,9 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	public void addRestaurantTable(String restaurantID, int nbrSeats, String tableNbr) throws InvalidIDException{
-		Restaurant rest = getRestaurantByID(restaurantID);
-		if(rest.getRestaurantTable().get(tableNbr) != null) {
-			logger.warn("The restaurant table already exists");
-			throw new InvalidIDException("Table number already exists");
-		}
-		RestaurantTable table = RestaurantsFactory.eINSTANCE.createRestaurantTable();
-		
-		table.setNumberOfSeats(nbrSeats);
-		rest.getRestaurantTable().put(tableNbr, table);
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
