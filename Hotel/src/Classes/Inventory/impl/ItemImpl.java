@@ -2,15 +2,13 @@
  */
 package Classes.Inventory.impl;
 
-import Classes.Inventory.InventoryPackage;
-import Classes.Inventory.Item;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import Classes.Inventory.InventoryPackage;
+import Classes.Inventory.Item;
 
 /**
  * <!-- begin-user-doc -->

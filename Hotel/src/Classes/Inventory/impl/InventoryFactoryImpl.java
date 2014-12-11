@@ -2,15 +2,16 @@
  */
 package Classes.Inventory.impl;
 
-import Classes.Inventory.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import Classes.Inventory.InventoryFactory;
+import Classes.Inventory.InventoryManager;
+import Classes.Inventory.InventoryPackage;
+import Classes.Inventory.Item;
 
 /**
  * <!-- begin-user-doc -->

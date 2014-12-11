@@ -3,6 +3,7 @@
 package Classes.Accounts;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jdt.annotation.NonNullByDefault;
 
 
 /**
@@ -15,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
+@NonNullByDefault
 public interface IAccountsAccess extends EObject {
 	
 	IAccountsAccess INSTANCE = Classes.Accounts.impl.AccountsManagerImpl.INSTANCE;

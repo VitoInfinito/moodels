@@ -4,6 +4,7 @@ package Classes.Accounts;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
+@NonNullByDefault
 public interface IManageAccounts extends EObject {
 	
 	IManageAccounts INSTANCE = Classes.Accounts.impl.AccountsManagerImpl.INSTANCE;

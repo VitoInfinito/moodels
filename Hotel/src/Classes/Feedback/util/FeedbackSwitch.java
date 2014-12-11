@@ -2,7 +2,6 @@
  */
 package Classes.Feedback.util;
 
-import Classes.Feedback.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -18,134 +17,14 @@ import org.eclipse.emf.ecore.util.Switch;
  * which is the result of the switch.
  * <!-- end-user-doc -->
  * @see Classes.Feedback.FeedbackPackage
- * @generated
+ * @generated NOT
  */
- public class FeedbackSwitch<T> extends Switch<T> {
+  class FeedbackSwitch<T> extends Switch<T> {
 
-	/**
-	 * The cached model package
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected static FeedbackPackage modelPackage;
-
-	/**
-	 * Creates an instance of the switch.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FeedbackSwitch() {
-		if (modelPackage == null) {
-			modelPackage = FeedbackPackage.eINSTANCE;
-		}
-	}
-
-	/**
-	 * Checks whether this is a switch for the given package.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
-	 * @return whether this is a switch for the given package.
-	 * @generated
-	 */
 	@Override
 	protected boolean isSwitchFor(EPackage ePackage) {
-		return ePackage == modelPackage;
+		// TODO Auto-generated method stub
+		return false;
 	}
 
-	/**
-	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the first non-null result returned by a <code>caseXXX</code> call.
-	 * @generated
-	 */
-	@Override
-	protected T doSwitch(int classifierID, EObject theEObject) {
-		switch (classifierID) {
-			case FeedbackPackage.IFEEDBACK: {
-				IFeedback iFeedback = (IFeedback)theEObject;
-				T result = caseIFeedback(iFeedback);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case FeedbackPackage.FEEDBACK_MANAGER: {
-				FeedbackManager feedbackManager = (FeedbackManager)theEObject;
-				T result = caseFeedbackManager(feedbackManager);
-				if (result == null) result = caseIFeedback(feedbackManager);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case FeedbackPackage.FEEDBACK: {
-				Feedback feedback = (Feedback)theEObject;
-				T result = caseFeedback(feedback);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			default: return defaultCase(theEObject);
-		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IFeedback</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IFeedback</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIFeedback(IFeedback object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFeedbackManager(FeedbackManager object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Feedback</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Feedback</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFeedback(Feedback object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch, but this is the last case anyway.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject)
-	 * @generated
-	 */
-	@Override
-	public T defaultCase(EObject object) {
-		return null;
-	}
 } //FeedbackSwitch

@@ -2,16 +2,18 @@
  */
 package Classes.Accounts.impl;
 
-import Classes.Accounts.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import Classes.Accounts.Account;
+import Classes.Accounts.AccountType;
+import Classes.Accounts.AccountsFactory;
+import Classes.Accounts.AccountsManager;
+import Classes.Accounts.AccountsPackage;
 
 /**
  * <!-- begin-user-doc -->

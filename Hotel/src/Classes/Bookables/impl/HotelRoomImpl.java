@@ -2,12 +2,13 @@
  */
 package Classes.Bookables.impl;
 
-import Classes.Bookables.BookablesPackage;
-import Classes.Bookables.HotelRoom;
-import Classes.Bookables.HotelRoomCategory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import Classes.Bookables.BookablesPackage;
+import Classes.Bookables.HotelRoom;
+import Classes.Bookables.HotelRoomCategory;
 
 /**
  * <!-- begin-user-doc -->

@@ -2,15 +2,19 @@
  */
 package Classes.Restaurants.impl;
 
-import Classes.Restaurants.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import Classes.Restaurants.Reservation;
+import Classes.Restaurants.Restaurant;
+import Classes.Restaurants.RestaurantMenu;
+import Classes.Restaurants.RestaurantTable;
+import Classes.Restaurants.RestaurantsFactory;
+import Classes.Restaurants.RestaurantsManager;
+import Classes.Restaurants.RestaurantsPackage;
 
 /**
  * <!-- begin-user-doc -->

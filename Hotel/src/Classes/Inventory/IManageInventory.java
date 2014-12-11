@@ -2,6 +2,8 @@
  */
 package Classes.Inventory;
 
+import org.eclipse.jdt.annotation.NonNullByDefault;
+
 
 
 /**
@@ -14,6 +16,7 @@ package Classes.Inventory;
  * @model interface="true" abstract="true"
  * @generated
  */
+@NonNullByDefault
 public interface IManageInventory extends IInventoryAccess {
 	
 	IManageInventory INSTANCE = Classes.Inventory.impl.InventoryManagerImpl.INSTANCE;

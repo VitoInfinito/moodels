@@ -2,15 +2,18 @@
  */
 package Classes.Services.impl;
 
-import Classes.Services.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import Classes.Services.RoomServiceMenu;
+import Classes.Services.RoomServiceOrder;
+import Classes.Services.Service;
+import Classes.Services.ServiceManager;
+import Classes.Services.ServicesFactory;
+import Classes.Services.ServicesPackage;
 
 /**
  * <!-- begin-user-doc -->

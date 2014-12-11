@@ -3,8 +3,10 @@
 package Classes.Stays;
 
 import java.util.Date;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
+@NonNullByDefault
 public interface IStays extends EObject {
 	
 	IStays INSTANCE = Classes.Stays.impl.StaysManagerImpl.INSTANCE;

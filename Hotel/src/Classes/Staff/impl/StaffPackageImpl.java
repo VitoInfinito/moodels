@@ -2,6 +2,15 @@
  */
 package Classes.Staff.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.uml2.types.TypesPackage;
+import org.eclipse.uml2.types.impl.TypesPackageImpl;
+
 import Classes.Accounts.AccountsPackage;
 import Classes.Accounts.impl.AccountsPackageImpl;
 import Classes.Banking.BankingPackage;
@@ -38,14 +47,6 @@ import Classes.Statistics.StatisticsPackage;
 import Classes.Statistics.impl.StatisticsPackageImpl;
 import Classes.Stays.StaysPackage;
 import Classes.Stays.impl.StaysPackageImpl;
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.uml2.types.TypesPackage;
-import org.eclipse.uml2.types.impl.TypesPackageImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -3,7 +3,9 @@
 package Classes.Requests;
 
 import java.util.List;
+
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
+@NonNullByDefault
 public interface IRequests extends EObject {
 	
 	IRequests INSTANCE = Classes.Requests.impl.RequestsManagerImpl.INSTANCE;

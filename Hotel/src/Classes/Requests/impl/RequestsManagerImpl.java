@@ -2,16 +2,11 @@
  */
 package Classes.Requests.impl;
 
-import Classes.InvalidIDException;
-import Classes.Bookables.impl.BookablesManagerImpl;
-import Classes.Requests.Request;
-import Classes.Requests.RequestsFactory;
-import Classes.Requests.RequestsManager;
-import Classes.Requests.RequestsPackage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -21,6 +16,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import Classes.InvalidIDException;
+import Classes.Bookables.impl.BookablesManagerImpl;
+import Classes.Requests.Request;
+import Classes.Requests.RequestsFactory;
+import Classes.Requests.RequestsManager;
+import Classes.Requests.RequestsPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -2,8 +2,11 @@
  */
 package Classes.Customers;
 
+import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
+@NonNullByDefault
 public interface ICustomers extends EObject {
 	
 	ICustomers INSTANCE = Classes.Customers.impl.CustomersManagerImpl.INSTANCE;
@@ -23,9 +27,9 @@ public interface ICustomers extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getAllCustomers();
+	List<String> getAllCustomers();
 
 	/**
 	 * <!-- begin-user-doc -->

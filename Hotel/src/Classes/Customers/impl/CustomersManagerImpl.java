@@ -2,25 +2,28 @@
  */
 package Classes.Customers.impl;
 
-import Classes.Customers.Customer;
-import Classes.Customers.CustomersManager;
-import Classes.Customers.CustomersPackage;
-import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
-import Classes.ECoreMapEntries.impl.StringToCustomerMapImpl;
-
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import Classes.InvalidIDException;
+import Classes.Customers.Customer;
+import Classes.Customers.CustomersFactory;
+import Classes.Customers.CustomersManager;
+import Classes.Customers.CustomersPackage;
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToCustomerMapImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -81,13 +84,43 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		Nothing
+	 * Ensures:
+	 * 		A list containing all customer ID:s is returned.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllCustomers() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	@NonNullByDefault
+	public List<String> getAllCustomers() {
+		return new ArrayList<String>(customer.keySet());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		
+	 * Ensures:
+	 *		
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@NonNullByDefault
+	 public void addCustomer(String SSID, String firstname, String lastname, String title, String email, String phone) {
+		if (customer.containsKey(SSID)) {
+			logger.warn("There is already a customer added with the SSID {}. The SSID can not be used as a unique ID!", SSID);
+			throw new InvalidIDException("There is already a customer added with the SSID " + SSID + ". The SSID can not be used as a unique ID!");
+		}
+		
+		Customer cus = CustomersFactory.eINSTANCE.createCustomer();
+		
+		cus.setSsid(SSID);
+		cus.setFirstname(firstname);
+		cus.setLastname(lastname);
+		cus.setPhone(phone);
+		cus.setTitle(title);
+		
+		customer.put(SSID, cus);
 	}
 
 	/**
@@ -95,17 +128,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addCustomer(String SSID, String firstname, String lastname, String title, String email, String phone) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@NonNullByDefault
 	public void changeCustomerFirstName(String SSID, String firstName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -117,6 +140,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@NonNullByDefault
 	public void changeCustomerLastName(String SSID, String lastName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -128,6 +152,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@NonNullByDefault
 	public void changeCustomerTitle(String SSID, String title) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -139,6 +164,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@NonNullByDefault
 	public void changeCustomerEmail(String SSID, String eMail) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -150,6 +176,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@NonNullByDefault
 	public void changeCustomerPhone(String SSID, String phoneNr) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -161,6 +188,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@NonNullByDefault
 	public String getCustomerFirstName(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -172,6 +200,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@NonNullByDefault
 	public String getCustomerLastName(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -183,6 +212,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@NonNullByDefault
 	public String getCustomerTitle(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT

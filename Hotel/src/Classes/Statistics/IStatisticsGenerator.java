@@ -3,7 +3,9 @@
 package Classes.Statistics;
 
 import java.util.Date;
+
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
+@NonNullByDefault
 public interface IStatisticsGenerator extends EObject {
 	
 	IStatisticsGenerator INSTANCE = Classes.Statistics.impl.StatisticsGeneratorImpl.INSTANCE;

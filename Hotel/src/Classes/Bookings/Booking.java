@@ -2,13 +2,12 @@
  */
 package Classes.Bookings;
 
-import Classes.Stays.CreditCard;
-
 import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
+
+import Classes.Stays.CreditCard;
 
 /**
  * <!-- begin-user-doc -->

@@ -2,6 +2,8 @@
  */
 package Classes.Restaurants;
 
+import org.eclipse.jdt.annotation.NonNullByDefault;
+
 
 
 /**
@@ -14,6 +16,7 @@ package Classes.Restaurants;
  * @model interface="true" abstract="true"
  * @generated
  */
+@NonNullByDefault
 public interface IRestaurantsManage extends IRestaurantsAccess {
 	
 	IRestaurantsManage INSTANCE = Classes.Restaurants.impl.RestaurantsManagerImpl.INSTANCE;

@@ -3,7 +3,11 @@
 package Classes.Bookables;
 
 import java.util.List;
+
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jdt.annotation.NonNullByDefault;
+import org.eclipse.jdt.annotation.Nullable;
+
 import Classes.InvalidIDException;
 
 /**
@@ -16,6 +20,7 @@ import Classes.InvalidIDException;
  * @model interface="true" abstract="true"
  * @generated
  */
+@NonNullByDefault
 public interface IBookablesAccess extends EObject {
 	
 	IBookablesAccess INSTANCE = Classes.Bookables.impl.BookablesManagerImpl.INSTANCE;
@@ -139,7 +144,7 @@ public interface IBookablesAccess extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
 	 */
-	List<String> searchHotelRooms(String keyword, HotelRoomCategory category);
+	List<String> searchHotelRooms(String keyword, @Nullable HotelRoomCategory category);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -156,6 +161,6 @@ public interface IBookablesAccess extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
 	 */
-	List<String> searchConferenceRooms(String keyword, ConferenceRoomCategory category);
+	List<String> searchConferenceRooms(String keyword, @Nullable ConferenceRoomCategory category);
 
 } // IBookablesAccess

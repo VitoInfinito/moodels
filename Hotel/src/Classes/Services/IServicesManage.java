@@ -2,6 +2,8 @@
  */
 package Classes.Services;
 
+import org.eclipse.jdt.annotation.NonNullByDefault;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +15,7 @@ package Classes.Services;
  * @model interface="true" abstract="true"
  * @generated
  */
+@NonNullByDefault
 public interface IServicesManage extends IServicesAccess {
 	
 	IServicesManage INSTANCE = Classes.Services.impl.ServiceManagerImpl.INSTANCE;

@@ -2,6 +2,25 @@
  */
 package Classes.Bookables.impl;
 
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.regex.Pattern;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.jdt.annotation.Nullable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
 import Classes.RegexPatterns;
 import Classes.Bookables.Bookable;
@@ -16,28 +35,6 @@ import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.Room;
 import Classes.Bookables.RoomLocation;
 import Classes.Stays.IStays;
-
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.regex.Pattern;
-
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.EMap;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EcoreEMap;
-import org.eclipse.emf.ecore.util.InternalEList;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -440,7 +437,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<String> searchHotelRooms(String keyword, HotelRoomCategory category) throws IllegalArgumentException {
+	public List<String> searchHotelRooms(String keyword, @Nullable HotelRoomCategory category) throws IllegalArgumentException {
 		if (keyword == null) {
 			logger.warn("The keyword passed was null! Invalid argument!");
 			throw new IllegalArgumentException("The keyword was null!");
@@ -555,7 +552,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<String> searchConferenceRooms(String keyword, ConferenceRoomCategory category) throws IllegalArgumentException {
+	public List<String> searchConferenceRooms(String keyword, @Nullable ConferenceRoomCategory category) throws IllegalArgumentException {
 		if (keyword == null) {
 			logger.warn("The keyword passed was null! Invalid argument!");
 			throw new IllegalArgumentException("The keyword was null!");

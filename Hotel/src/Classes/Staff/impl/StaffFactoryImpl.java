@@ -2,15 +2,18 @@
  */
 package Classes.Staff.impl;
 
-import Classes.Staff.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import Classes.Staff.HourlySalaryContract;
+import Classes.Staff.MonthlySalaryContract;
+import Classes.Staff.Staff;
+import Classes.Staff.StaffFactory;
+import Classes.Staff.StaffManager;
+import Classes.Staff.StaffPackage;
 
 /**
  * <!-- begin-user-doc -->

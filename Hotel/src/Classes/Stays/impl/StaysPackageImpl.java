@@ -2,6 +2,15 @@
  */
 package Classes.Stays.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.uml2.types.TypesPackage;
+import org.eclipse.uml2.types.impl.TypesPackageImpl;
+
 import Classes.Accounts.AccountsPackage;
 import Classes.Accounts.impl.AccountsPackageImpl;
 import Classes.Banking.BankingPackage;
@@ -36,14 +45,6 @@ import Classes.Stays.Stay;
 import Classes.Stays.StaysFactory;
 import Classes.Stays.StaysManager;
 import Classes.Stays.StaysPackage;
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.uml2.types.TypesPackage;
-import org.eclipse.uml2.types.impl.TypesPackageImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -2,12 +2,13 @@
  */
 package Classes.Stays.impl;
 
-import Classes.Stays.CreditCard;
-import Classes.Stays.StaysPackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import Classes.Stays.CreditCard;
+import Classes.Stays.StaysPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="lib/slf4j-api-1.7.7-sources.jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-simple-1.7.7-sources.jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-simple-1.7.7.jar" sourcepath="lib/slf4j-simple-1.7.7-sources.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.jdt.annotation_1.1.0.v20140129-1625.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -2,12 +2,13 @@
  */
 package Classes.Services.impl;
 
-import Classes.Services.Service;
-import Classes.Services.ServicesPackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import Classes.Services.Service;
+import Classes.Services.ServicesPackage;
 
 /**
  * <!-- begin-user-doc -->

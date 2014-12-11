@@ -2,81 +2,48 @@
  */
 package Classes.ECoreMapEntries.impl;
 
-import Classes.Accounts.AccountsPackage;
-
-import Classes.Accounts.impl.AccountsPackageImpl;
-
-import Classes.Banking.BankingPackage;
-
-import Classes.Banking.impl.BankingPackageImpl;
-
-import Classes.Bills.BillsPackage;
-
-import Classes.Bills.impl.BillsPackageImpl;
-
-import Classes.Bookables.BookablesPackage;
-
-import Classes.Bookables.impl.BookablesPackageImpl;
-
-import Classes.Bookings.BookingsPackage;
-
-import Classes.Bookings.impl.BookingsPackageImpl;
-
-import Classes.Customers.CustomersPackage;
-
-import Classes.Customers.impl.CustomersPackageImpl;
-
-import Classes.ECoreMapEntries.ECoreMapEntriesFactory;
-import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
-
-import Classes.Feedback.FeedbackPackage;
-
-import Classes.Feedback.impl.FeedbackPackageImpl;
-
-import Classes.Guests.GuestsPackage;
-
-import Classes.Guests.impl.GuestsPackageImpl;
-
-import Classes.Inventory.InventoryPackage;
-
-import Classes.Inventory.impl.InventoryPackageImpl;
-
-import Classes.Requests.RequestsPackage;
-
-import Classes.Requests.impl.RequestsPackageImpl;
-
-import Classes.Restaurants.RestaurantsPackage;
-
-import Classes.Restaurants.impl.RestaurantsPackageImpl;
-
-import Classes.Services.ServicesPackage;
-
-import Classes.Services.impl.ServicesPackageImpl;
-
-import Classes.Staff.StaffPackage;
-
-import Classes.Staff.impl.StaffPackageImpl;
-
-import Classes.Statistics.StatisticsPackage;
-
-import Classes.Statistics.impl.StatisticsPackageImpl;
-
-import Classes.Stays.StaysPackage;
-
-import Classes.Stays.impl.StaysPackageImpl;
-
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.uml2.types.TypesPackage;
-
 import org.eclipse.uml2.types.impl.TypesPackageImpl;
+
+import Classes.Accounts.AccountsPackage;
+import Classes.Accounts.impl.AccountsPackageImpl;
+import Classes.Banking.BankingPackage;
+import Classes.Banking.impl.BankingPackageImpl;
+import Classes.Bills.BillsPackage;
+import Classes.Bills.impl.BillsPackageImpl;
+import Classes.Bookables.BookablesPackage;
+import Classes.Bookables.impl.BookablesPackageImpl;
+import Classes.Bookings.BookingsPackage;
+import Classes.Bookings.impl.BookingsPackageImpl;
+import Classes.Customers.CustomersPackage;
+import Classes.Customers.impl.CustomersPackageImpl;
+import Classes.ECoreMapEntries.ECoreMapEntriesFactory;
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.Feedback.FeedbackPackage;
+import Classes.Feedback.impl.FeedbackPackageImpl;
+import Classes.Guests.GuestsPackage;
+import Classes.Guests.impl.GuestsPackageImpl;
+import Classes.Inventory.InventoryPackage;
+import Classes.Inventory.impl.InventoryPackageImpl;
+import Classes.Requests.RequestsPackage;
+import Classes.Requests.impl.RequestsPackageImpl;
+import Classes.Restaurants.RestaurantsPackage;
+import Classes.Restaurants.impl.RestaurantsPackageImpl;
+import Classes.Services.ServicesPackage;
+import Classes.Services.impl.ServicesPackageImpl;
+import Classes.Staff.StaffPackage;
+import Classes.Staff.impl.StaffPackageImpl;
+import Classes.Statistics.StatisticsPackage;
+import Classes.Statistics.impl.StatisticsPackageImpl;
+import Classes.Stays.StaysPackage;
+import Classes.Stays.impl.StaysPackageImpl;
 
 /**
  * <!-- begin-user-doc -->

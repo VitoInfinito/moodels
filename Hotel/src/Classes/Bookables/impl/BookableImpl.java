@@ -2,12 +2,13 @@
  */
 package Classes.Bookables.impl;
 
-import Classes.Bookables.Bookable;
-import Classes.Bookables.BookablesPackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import Classes.Bookables.Bookable;
+import Classes.Bookables.BookablesPackage;
 
 /**
  * <!-- begin-user-doc -->

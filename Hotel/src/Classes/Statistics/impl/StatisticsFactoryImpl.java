@@ -2,15 +2,18 @@
  */
 package Classes.Statistics.impl;
 
-import Classes.Statistics.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import Classes.Statistics.Date;
+import Classes.Statistics.Statistic;
+import Classes.Statistics.StatisticEntry;
+import Classes.Statistics.StatisticsFactory;
+import Classes.Statistics.StatisticsGenerator;
+import Classes.Statistics.StatisticsPackage;
 
 /**
  * <!-- begin-user-doc -->

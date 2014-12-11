@@ -2,15 +2,8 @@
  */
 package Classes.Restaurants.impl;
 
-import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
-import Classes.ECoreMapEntries.impl.StringToReservationMapImpl;
-import Classes.ECoreMapEntries.impl.StringToRestaurantTableMapImpl;
-import Classes.Restaurants.Reservation;
-import Classes.Restaurants.Restaurant;
-import Classes.Restaurants.RestaurantMenu;
-import Classes.Restaurants.RestaurantTable;
-import Classes.Restaurants.RestaurantsPackage;
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -22,6 +15,15 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
+import Classes.ECoreMapEntries.impl.StringToReservationMapImpl;
+import Classes.ECoreMapEntries.impl.StringToRestaurantTableMapImpl;
+import Classes.Restaurants.Reservation;
+import Classes.Restaurants.Restaurant;
+import Classes.Restaurants.RestaurantMenu;
+import Classes.Restaurants.RestaurantTable;
+import Classes.Restaurants.RestaurantsPackage;
 
 /**
  * <!-- begin-user-doc -->
