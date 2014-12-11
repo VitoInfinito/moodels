@@ -284,7 +284,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStay__AddBill() {
+	public EOperation getStay__AddBill__String() {
 		return stayEClass.getEOperations().get(0);
 	}
 
@@ -668,7 +668,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 		createEAttribute(stayEClass, STAY__FROM_DATE);
 		createEAttribute(stayEClass, STAY__TO_DATE);
 		createEReference(stayEClass, STAY__CREDIT_CARD);
-		createEOperation(stayEClass, STAY___ADD_BILL);
+		createEOperation(stayEClass, STAY___ADD_BILL__STRING);
 		createEOperation(stayEClass, STAY___ADD_CHECKED_IN_GUEST);
 		createEOperation(stayEClass, STAY___CHECK_OUT_GUEST);
 
@@ -760,7 +760,8 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 		initEAttribute(getStay_ToDate(), ecorePackage.getEDate(), "toDate", null, 1, 1, Stay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getStay_CreditCard(), this.getCreditCard(), null, "creditCard", null, 1, 1, Stay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getStay__AddBill(), null, "addBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getStay__AddBill__String(), null, "addBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getStay__AddCheckedInGuest(), null, "addCheckedInGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -782,7 +783,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 
 		initEClass(iStaysEClass, IStays.class, "IStays", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getIStays__CheckInGuest__String_String(), null, "checkInGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStays__CheckInGuest__String_String(), null, "checkInGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "guestID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

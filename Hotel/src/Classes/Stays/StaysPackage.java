@@ -164,7 +164,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAY___ADD_BILL = 0;
+	int STAY___ADD_BILL__STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Add Checked In Guest</em>' operation.
@@ -892,14 +892,14 @@ public interface StaysPackage extends EPackage {
 	EReference getStay_CreditCard();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.Stay#addBill() <em>Add Bill</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.Stay#addBill(java.lang.String) <em>Add Bill</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Bill</em>' operation.
-	 * @see Classes.Stays.Stay#addBill()
+	 * @see Classes.Stays.Stay#addBill(java.lang.String)
 	 * @generated
 	 */
-	EOperation getStay__AddBill();
+	EOperation getStay__AddBill__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Stays.Stay#addCheckedInGuest() <em>Add Checked In Guest</em>}' operation.
@@ -1402,7 +1402,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation STAY___ADD_BILL = eINSTANCE.getStay__AddBill();
+		EOperation STAY___ADD_BILL__STRING = eINSTANCE.getStay__AddBill__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Checked In Guest</b></em>' operation.
