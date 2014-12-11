@@ -83,10 +83,10 @@ public interface IBills extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
-	 * @generated
+	 * @model billsDataType="org.eclipse.uml2.types.String" billsMany="true" billsOrdered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
+	 * @generated NOT
 	 */
-	void payBillsWithCreditCard(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName);
+	void payBillsWithCreditCard(List<String> bills, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName);
 
 	/**
 	 * <!-- begin-user-doc -->

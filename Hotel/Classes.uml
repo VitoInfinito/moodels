@@ -1804,6 +1804,11 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe1HpsEeST-65JbGUt8g" name="payBillsWithCreditCard">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_84_-wIFzEeSFKZZHOpdzQg" name="bills">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_84_-wYFzEeSFKZZHOpdzQg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_84_-woFzEeSFKZZHOpdzQg" value="*"/>
+        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Adr_4H_nEeS5IpkkkJsVew" name="ccNumber">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>

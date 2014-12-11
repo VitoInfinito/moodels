@@ -6,7 +6,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
 import javax.xml.soap.SOAPException;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -16,6 +18,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
 import Classes.InvalidCreditCardException;
 import Classes.InvalidIDException;
@@ -508,9 +511,8 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	public void billCreditCardWithAllUnpaidBillsOfHotelStay(String stayID) {
 		if (stays.contains(stayID)) {
 			CreditCard creditCard = stays.get(stayID).getCreditCard();
-			
 			if (creditCard != null) {
-				iBills.payBillsWithCreditCard(getAllUnpayedBillsOfHotelStay(stayID), creditCard);
+				iBills.payBillsWithCreditCard(getAllUnpayedBillsOfHotelStay(stayID), creditCard.getCcNumber(), creditCard.getCcv(), creditCard.getExpiryMonth(), creditCard.getExpiryYear(), creditCard.getFirstName(), creditCard.getLastName());
 			} else {
 				logger.warn("A credit card is not registered with the stay.");
 				throw new InvalidIDException();

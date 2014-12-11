@@ -146,7 +146,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBILLS___PAY_BILLS_WITH_CREDIT_CARD__STRING_STRING_INT_INT_STRING_STRING = 7;
+	int IBILLS___PAY_BILLS_WITH_CREDIT_CARD__ELIST_STRING_STRING_INT_INT_STRING_STRING = 7;
 
 	/**
 	 * The operation id for the '<em>Get Bill Items</em>' operation.
@@ -345,7 +345,7 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER___PAY_BILLS_WITH_CREDIT_CARD__STRING_STRING_INT_INT_STRING_STRING = IBILLS___PAY_BILLS_WITH_CREDIT_CARD__STRING_STRING_INT_INT_STRING_STRING;
+	int BILLS_MANAGER___PAY_BILLS_WITH_CREDIT_CARD__ELIST_STRING_STRING_INT_INT_STRING_STRING = IBILLS___PAY_BILLS_WITH_CREDIT_CARD__ELIST_STRING_STRING_INT_INT_STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Get Bill Items</em>' operation.
@@ -769,14 +769,14 @@ public interface BillsPackage extends EPackage {
 	EOperation getIBills__AddBill__EList_EList_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Bills.IBills#payBillsWithCreditCard(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Pay Bills With Credit Card</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Bills.IBills#payBillsWithCreditCard(org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Pay Bills With Credit Card</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Pay Bills With Credit Card</em>' operation.
-	 * @see Classes.Bills.IBills#payBillsWithCreditCard(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
+	 * @see Classes.Bills.IBills#payBillsWithCreditCard(org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBills__PayBillsWithCreditCard__String_String_int_int_String_String();
+	EOperation getIBills__PayBillsWithCreditCard__EList_String_String_int_int_String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Bills.IBills#getBillItems(java.lang.String) <em>Get Bill Items</em>}' operation.
@@ -1071,7 +1071,7 @@ public interface BillsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBILLS___PAY_BILLS_WITH_CREDIT_CARD__STRING_STRING_INT_INT_STRING_STRING = eINSTANCE.getIBills__PayBillsWithCreditCard__String_String_int_int_String_String();
+		EOperation IBILLS___PAY_BILLS_WITH_CREDIT_CARD__ELIST_STRING_STRING_INT_INT_STRING_STRING = eINSTANCE.getIBills__PayBillsWithCreditCard__EList_String_String_int_int_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Bill Items</b></em>' operation.

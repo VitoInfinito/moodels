@@ -444,6 +444,7 @@
         <eParameters name="bookable" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="payBillsWithCreditCard" ordered="false" lowerBound="1">
+        <eParameters name="bills" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="ccNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="ccv" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="expiryMonth" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

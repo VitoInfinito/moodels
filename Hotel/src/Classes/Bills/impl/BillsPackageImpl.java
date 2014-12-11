@@ -375,7 +375,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBills__PayBillsWithCreditCard__String_String_int_int_String_String() {
+	public EOperation getIBills__PayBillsWithCreditCard__EList_String_String_int_int_String_String() {
 		return iBillsEClass.getEOperations().get(7);
 	}
 
@@ -511,7 +511,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 		createEOperation(iBillsEClass, IBILLS___SEARCH_BILLS__STRING);
 		createEOperation(iBillsEClass, IBILLS___GET_ALL_PAYED_BILLS);
 		createEOperation(iBillsEClass, IBILLS___ADD_BILL__ELIST_ELIST_STRING);
-		createEOperation(iBillsEClass, IBILLS___PAY_BILLS_WITH_CREDIT_CARD__STRING_STRING_INT_INT_STRING_STRING);
+		createEOperation(iBillsEClass, IBILLS___PAY_BILLS_WITH_CREDIT_CARD__ELIST_STRING_STRING_INT_INT_STRING_STRING);
 		createEOperation(iBillsEClass, IBILLS___GET_BILL_ITEMS__STRING);
 		createEOperation(iBillsEClass, IBILLS___GET_BILL_BOOKABLE__STRING);
 		createEOperation(iBillsEClass, IBILLS___GET_BILL_SERVICES__STRING);
@@ -595,7 +595,8 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 		addEParameter(op, theTypesPackage.getString(), "services", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBills__PayBillsWithCreditCard__String_String_int_int_String_String(), null, "payBillsWithCreditCard", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBills__PayBillsWithCreditCard__EList_String_String_int_int_String_String(), null, "payBillsWithCreditCard", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bills", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);

@@ -414,6 +414,7 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/addBill/bookable"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/payBillsWithCreditCard">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/payBillsWithCreditCard/bills"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/payBillsWithCreditCard/ccNumber"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/payBillsWithCreditCard/ccv"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/IBills/payBillsWithCreditCard/expiryMonth"/>
