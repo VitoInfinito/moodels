@@ -521,13 +521,13 @@ public interface StaysPackage extends EPackage {
 	int STAYS_MANAGER = 2;
 
 	/**
-	 * The feature id for the '<em><b>Stay</b></em>' reference list.
+	 * The feature id for the '<em><b>Stays</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER__STAY = ISTAYS_FEATURE_COUNT + 0;
+	int STAYS_MANAGER__STAYS = ISTAYS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Customer Provides</b></em>' reference.
@@ -1008,15 +1008,15 @@ public interface StaysPackage extends EPackage {
 	EClass getStaysManager();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Classes.Stays.StaysManager#getStay <em>Stay</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Stays.StaysManager#getStays <em>Stays</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Stay</em>'.
-	 * @see Classes.Stays.StaysManager#getStay()
+	 * @return the meta object for the reference list '<em>Stays</em>'.
+	 * @see Classes.Stays.StaysManager#getStays()
 	 * @see #getStaysManager()
 	 * @generated
 	 */
-	EReference getStaysManager_Stay();
+	EReference getStaysManager_Stays();
 
 	/**
 	 * Returns the meta object for the reference '{@link Classes.Stays.StaysManager#getCustomerProvides <em>Customer Provides</em>}'.
@@ -1489,12 +1489,12 @@ public interface StaysPackage extends EPackage {
 		EClass STAYS_MANAGER = eINSTANCE.getStaysManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Stay</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Stays</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STAYS_MANAGER__STAY = eINSTANCE.getStaysManager_Stay();
+		EReference STAYS_MANAGER__STAYS = eINSTANCE.getStaysManager_Stays();
 
 		/**
 		 * The meta object literal for the '<em><b>Customer Provides</b></em>' reference feature.

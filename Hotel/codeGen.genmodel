@@ -212,7 +212,7 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Stays/StaysManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Stays/StaysManager/stay"/>
+            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Stays/StaysManager/stays"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Stays/StaysManager/customerProvides"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

@@ -225,7 +225,7 @@
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="StaysManager" eSuperTypes="#//Stays/IStays">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="stay" ordered="false"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="stays" ordered="false"
           upperBound="-1" eType="#//Stays/Stay"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="customerProvides" ordered="false"
           lowerBound="1" eType="#//Banking/CustomerProvides"/>

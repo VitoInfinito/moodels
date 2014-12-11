@@ -383,7 +383,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStaysManager_Stay() {
+	public EReference getStaysManager_Stays() {
 		return (EReference)staysManagerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -681,7 +681,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 		createEAttribute(creditCardEClass, CREDIT_CARD__LAST_NAME);
 
 		staysManagerEClass = createEClass(STAYS_MANAGER);
-		createEReference(staysManagerEClass, STAYS_MANAGER__STAY);
+		createEReference(staysManagerEClass, STAYS_MANAGER__STAYS);
 		createEReference(staysManagerEClass, STAYS_MANAGER__CUSTOMER_PROVIDES);
 		createEReference(staysManagerEClass, STAYS_MANAGER__IBILLS);
 		createEReference(staysManagerEClass, STAYS_MANAGER__IGUESTS);
@@ -775,7 +775,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 		initEAttribute(getCreditCard_LastName(), theTypesPackage.getString(), "lastName", null, 1, 1, CreditCard.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(staysManagerEClass, StaysManager.class, "StaysManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getStaysManager_Stay(), this.getStay(), null, "stay", null, 0, -1, StaysManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getStaysManager_Stays(), this.getStay(), null, "stays", null, 0, -1, StaysManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getStaysManager_CustomerProvides(), theBankingPackage.getCustomerProvides(), null, "customerProvides", null, 1, 1, StaysManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getStaysManager_IBills(), theBillsPackage.getIBills(), null, "iBills", null, 1, 1, StaysManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getStaysManager_IGuests(), theGuestsPackage.getIGuests(), null, "iGuests", null, 1, 1, StaysManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
