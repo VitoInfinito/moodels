@@ -2,8 +2,8 @@
  */
 package Classes.Restaurants.impl;
 
+import java.time.LocalDateTime;
 import java.util.Collection;
-import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -89,40 +89,40 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFrom()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected static final Date FROM_EDEFAULT = null;
+	protected static final LocalDateTime FROM_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getFrom() <em>From</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFrom()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected Date from = FROM_EDEFAULT;
+	protected LocalDateTime from = FROM_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTo() <em>To</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTo()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected static final Date TO_EDEFAULT = null;
+	protected static final LocalDateTime TO_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getTo() <em>To</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTo()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected Date to = TO_EDEFAULT;
+	protected LocalDateTime to = TO_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -200,19 +200,19 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public Date getFrom() {
+	public LocalDateTime getFrom() {
 		return from;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void setFrom(Date newFrom) {
-		Date oldFrom = from;
+	public void setFrom(LocalDateTime newFrom) {
+		LocalDateTime oldFrom = from;
 		from = newFrom;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, RestaurantsPackage.RESERVATION__FROM, oldFrom, from));
@@ -221,19 +221,19 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public Date getTo() {
+	public LocalDateTime getTo() {
 		return to;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void setTo(Date newTo) {
-		Date oldTo = to;
+	public void setTo(LocalDateTime newTo) {
+		LocalDateTime oldTo = to;
 		to = newTo;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, RestaurantsPackage.RESERVATION__TO, oldTo, to));
@@ -264,7 +264,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
@@ -281,10 +281,10 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 				getRestaurantTable().addAll((Collection<? extends RestaurantTable>)newValue);
 				return;
 			case RestaurantsPackage.RESERVATION__FROM:
-				setFrom((Date)newValue);
+				setFrom((LocalDateTime)newValue);
 				return;
 			case RestaurantsPackage.RESERVATION__TO:
-				setTo((Date)newValue);
+				setTo((LocalDateTime)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -293,7 +293,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {

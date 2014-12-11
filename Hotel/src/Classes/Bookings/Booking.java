@@ -2,7 +2,7 @@
  */
 package Classes.Bookings;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -135,12 +135,12 @@ public interface Booking extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Issue Date</em>' attribute.
-	 * @see #setIssueDate(Date)
+	 * @see #setIssueDate(LocalDateTime)
 	 * @see Classes.Bookings.BookingsPackage#getBooking_IssueDate()
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	Date getIssueDate();
+	LocalDateTime getIssueDate();
 
 	/**
 	 * Sets the value of the '{@link Classes.Bookings.Booking#getIssueDate <em>Issue Date</em>}' attribute.
@@ -148,9 +148,9 @@ public interface Booking extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Issue Date</em>' attribute.
 	 * @see #getIssueDate()
-	 * @generated
+	 * @generated NOT
 	 */
-	void setIssueDate(Date value);
+	void setIssueDate(LocalDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>Credit Card</b></em>' reference.

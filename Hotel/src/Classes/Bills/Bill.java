@@ -2,7 +2,7 @@
  */
 package Classes.Bills;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -180,9 +180,9 @@ public interface Bill extends EObject {
 	 * @see #setIssueDate(Date)
 	 * @see Classes.Bills.BillsPackage#getBill_IssueDate()
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	Date getIssueDate();
+	LocalDateTime getIssueDate();
 
 	/**
 	 * Sets the value of the '{@link Classes.Bills.Bill#getIssueDate <em>Issue Date</em>}' attribute.
@@ -190,9 +190,9 @@ public interface Bill extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Issue Date</em>' attribute.
 	 * @see #getIssueDate()
-	 * @generated
+	 * @generated NOT
 	 */
-	void setIssueDate(Date value);
+	void setIssueDate(LocalDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>Payment Date</b></em>' attribute.
@@ -206,9 +206,9 @@ public interface Bill extends EObject {
 	 * @see #setPaymentDate(Date)
 	 * @see Classes.Bills.BillsPackage#getBill_PaymentDate()
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	Date getPaymentDate();
+	LocalDateTime getPaymentDate();
 
 	/**
 	 * Sets the value of the '{@link Classes.Bills.Bill#getPaymentDate <em>Payment Date</em>}' attribute.
@@ -216,9 +216,9 @@ public interface Bill extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Payment Date</em>' attribute.
 	 * @see #getPaymentDate()
-	 * @generated
+	 * @generated NOT
 	 */
-	void setPaymentDate(Date value);
+	void setPaymentDate(LocalDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>Total Amount</b></em>' attribute.

@@ -2,7 +2,7 @@
  */
 package Classes.Bookings;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
@@ -108,49 +108,49 @@ public interface IBookings extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getAllBookingsWithinPeriod(Date from, Date to);
+	List<String> getAllBookingsWithinPeriod(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getAllBookingsWithStaysInPeriod(Date from, Date to);
+	List<String> getAllBookingsWithStaysInPeriod(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchBookingsMadeInPeriod(String keyword, Date from, Date to);
+	List<String> searchBookingsMadeInPeriod(String keyword, LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchBookingsWithStaysInPeriod(String keyword, Date from, Date to);
+	List<String> searchBookingsWithStaysInPeriod(String keyword, LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchForAvailableBookablesInPeriod(Date from, Date to, String keyword);
+	List<String> searchForAvailableBookablesInPeriod(LocalDateTime from, LocalDateTime to, String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getAvailableBookablesInPeriod(Date from, Date to);
+	List<String> getAvailableBookablesInPeriod(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -196,48 +196,48 @@ public interface IBookings extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchForAvailableHotelRoomsInPeriod(Date from, Date to, String keyword);
+	List<String> searchForAvailableHotelRoomsInPeriod(LocalDateTime from, LocalDateTime to, String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchForAvailableHostelBedsInPeriod(Date from, Date to, String keyword);
+	List<String> searchForAvailableHostelBedsInPeriod(LocalDateTime from, LocalDateTime to, String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchForAvailableConferenceRoomsInPeriod(Date from, Date to, String keyword);
+	List<String> searchForAvailableConferenceRoomsInPeriod(LocalDateTime from, LocalDateTime to, String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getAvailableHotelRoomsInPeriod(Date from, Date to);
+	List<String> getAvailableHotelRoomsInPeriod(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getAvailableConferenceRoomsInPeriod(Date from, Date to);
+	List<String> getAvailableConferenceRoomsInPeriod(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getAvailableHostelBedsInPeriod(Date from, Date to);
+	List<String> getAvailableHostelBedsInPeriod(LocalDateTime from, LocalDateTime to);
 
 } // IBookings

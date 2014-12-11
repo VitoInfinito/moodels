@@ -2,7 +2,8 @@
  */
 package Classes.Guests;
 
-import java.util.Date;
+import java.time.LocalDateTime;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -249,9 +250,9 @@ public interface Guest extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false" bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false" fromDateRequired="true" fromDateOrdered="false" toDateRequired="true" toDateOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void addStay(String bookableID, String bookingID, Date fromDate, Date toDate);
+	void addStay(String bookableID, String bookingID, LocalDateTime fromDate, LocalDateTime toDate);
 
 	/**
 	 * <!-- begin-user-doc -->

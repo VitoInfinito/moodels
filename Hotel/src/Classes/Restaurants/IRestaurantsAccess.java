@@ -2,7 +2,7 @@
  */
 package Classes.Restaurants;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
@@ -54,7 +54,7 @@ public interface IRestaurantsAccess extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false"
 	 * @generated NOT
 	 */
-	List<String> getAvailableTables(Date to, Date from, String restaurantID);
+	List<String> getAvailableTables(LocalDateTime to, LocalDateTime from, String restaurantID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -108,9 +108,9 @@ public interface IRestaurantsAccess extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" tablesDataType="org.eclipse.uml2.types.String" tablesMany="true" tablesOrdered="false" guestIDDataType="org.eclipse.uml2.types.String" guestIDRequired="true" guestIDOrdered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void makeReservation(String restaurantID, EList<String> tables, String guestID, Date to, Date from);
+	void makeReservation(String restaurantID, EList<String> tables, String guestID, LocalDateTime to, LocalDateTime from);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,7 +118,7 @@ public interface IRestaurantsAccess extends EObject {
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" tablesDataType="org.eclipse.uml2.types.String" tablesMany="true" tablesOrdered="false" guestIDDataType="org.eclipse.uml2.types.String" guestIDRequired="true" guestIDOrdered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false"
 	 * @generated NOT
 	 */
-	void makeReservation(String restaurantID, List<String> tables, String guestID, Date to, Date from);
+	void makeReservation(String restaurantID, List<String> tables, String guestID, LocalDateTime to, LocalDateTime from);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -142,7 +142,7 @@ public interface IRestaurantsAccess extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false" nbrGuestsDataType="org.eclipse.uml2.types.Integer" nbrGuestsRequired="true" nbrGuestsOrdered="false"
 	 * @generated NOT
 	 */
-	List<String> getAvailableTablesByNbrGuests(String restaurantID, Date to, Date from, int nbrGuests);
+	List<String> getAvailableTablesByNbrGuests(String restaurantID, LocalDateTime to, LocalDateTime from, int nbrGuests);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -156,17 +156,17 @@ public interface IRestaurantsAccess extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" reservationIDDataType="org.eclipse.uml2.types.String" reservationIDRequired="true" reservationIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	Date getReservationFromTime(String restaurantID, String reservationID);
+	LocalDateTime getReservationFromTime(String restaurantID, String reservationID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" reservationIDDataType="org.eclipse.uml2.types.String" reservationIDRequired="true" reservationIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	Date getReservationToTime(String restaurantID, String reservationID);
+	LocalDateTime getReservationToTime(String restaurantID, String reservationID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -174,6 +174,6 @@ public interface IRestaurantsAccess extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated NOT
 	 */
-	List<String> searchRestaurantReservationsWithTime(String restaurantID, String keyword, Date from, Date to);
+	List<String> searchRestaurantReservationsWithTime(String restaurantID, String keyword, LocalDateTime from, LocalDateTime to);
 
 } // IRestaurantsAccess
