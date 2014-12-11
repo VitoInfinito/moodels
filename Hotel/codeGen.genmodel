@@ -911,12 +911,15 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Staff/SalaryContract">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/SalaryContract/getSalary"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/SalaryContract/getType"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Staff/MonthlySalaryContract">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Staff/MonthlySalaryContract/salary"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Staff/MonthlySalaryContract/type"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Staff/HourlySalaryContract">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Staff/HourlySalaryContract/salary"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Staff/HourlySalaryContract/type"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Staff/IStaff">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getAllStaff"/>

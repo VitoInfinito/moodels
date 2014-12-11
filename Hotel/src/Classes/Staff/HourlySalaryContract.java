@@ -12,6 +12,7 @@ package Classes.Staff;
  * The following features are supported:
  * <ul>
  *   <li>{@link Classes.Staff.HourlySalaryContract#getSalary <em>Salary</em>}</li>
+ *   <li>{@link Classes.Staff.HourlySalaryContract#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,5 +46,31 @@ public interface HourlySalaryContract extends SalaryContract {
 	 * @generated
 	 */
 	void setSalary(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see #setType(String)
+	 * @see Classes.Staff.StaffPackage#getHourlySalaryContract_Type()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	String getType();
+
+	/**
+	 * Sets the value of the '{@link Classes.Staff.HourlySalaryContract#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(String value);
 
 } // HourlySalaryContract
