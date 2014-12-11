@@ -437,9 +437,12 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public void changeNbrGuestsOfBooking(String bookingID, int nbrGuests) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (!booking.contains(bookingID)) {
+			logger.warn("A booking with ID {} does not exist.", bookingID);
+			throw new InvalidIDException();
+		} else {
+			booking.get(bookingID).setNbrGuests(nbrGuests);
+		}
 	}
 
 	/**
