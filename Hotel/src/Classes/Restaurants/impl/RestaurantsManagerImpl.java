@@ -547,12 +547,14 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void removeRestaurant(String restaurantID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void removeRestaurant(String restaurantID) throws InvalidIDException{
+		Restaurant rest = restaurant.removeKey(restaurantID);
+		if(rest == null) {
+			logger.warn("The Restaurant with ID {} could not be found. Invalid ID", restaurantID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
