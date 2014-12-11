@@ -102,7 +102,6 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 		stays = new EcoreEMap<String,Stay>(ECoreMapEntriesPackage.Literals.STRING_TO_STAY_MAP, StringToStayMapImpl.class, this, StaysPackage.STAYS_MANAGER__STAYS);
 		iBills = IBills.INSTANCE;
 		iGuests = IGuests.INSTANCE;
-		// TODO fetch bank
 	}
 
 	/**
