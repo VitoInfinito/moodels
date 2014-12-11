@@ -2856,7 +2856,7 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps_XpsEeST-65JbGUt8g" name="checkOutGuest" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9PtA3psEeST-65JbGUt8g" name="StaysManager" visibility="package">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9PtBHpsEeST-65JbGUt8g" name="stay" visibility="private" type="_w9Ps43psEeST-65JbGUt8g" association="_w9PtQnpsEeST-65JbGUt8g">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9PtBHpsEeST-65JbGUt8g" name="stays" visibility="private" type="_w9Ps43psEeST-65JbGUt8g" association="_w9PtQnpsEeST-65JbGUt8g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9PtBXpsEeST-65JbGUt8g"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9PtBnpsEeST-65JbGUt8g" value="*"/>
       </ownedAttribute>

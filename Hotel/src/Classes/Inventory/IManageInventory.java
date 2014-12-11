@@ -4,8 +4,6 @@ package Classes.Inventory;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>IManage Inventory</b></em>'.

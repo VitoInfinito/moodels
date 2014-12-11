@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,7 +32,7 @@ import Classes.Stays.StaysPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getStay <em>Stay</em>}</li>
+ *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getStays <em>Stays</em>}</li>
  *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getCustomerProvides <em>Customer Provides</em>}</li>
  *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getIBills <em>IBills</em>}</li>
  *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getIGuests <em>IGuests</em>}</li>
@@ -44,6 +45,8 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	private final Logger logger = LoggerFactory.getLogger(StaysManagerImpl.class);
 	public static StaysManagerImpl INSTANCE = new StaysManagerImpl();
 	
+	private static int IDCounter = 0;
+	
 	/**
 	 * The cached value of the '{@link #getStay() <em>Stay</em>}' map.
 	 * <!-- begin-user-doc -->
@@ -52,7 +55,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 * @ordered
 	 */
-	private EMap<String, Stay> stay;
+	private EMap<String, Stay> stays;
 
 	/**
 	 * The cached value of the '{@link #getCustomerProvides() <em>Customer Provides</em>}' reference.
@@ -91,7 +94,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	private StaysManagerImpl() {
 		super();
-		stay = new EcoreEMap<String,Stay>(ECoreMapEntriesPackage.Literals.STRING_TO_STAY_MAP, StringToStayMapImpl.class, this, StaysPackage.STAYS_MANAGER__STAY);
+		stays = new EcoreEMap<String,Stay>(ECoreMapEntriesPackage.Literals.STRING_TO_STAY_MAP, StringToStayMapImpl.class, this, StaysPackage.STAYS_MANAGER__STAYS);
 		iBills = IBills.INSTANCE;
 		iGuests = IGuests.INSTANCE;
 		// TODO fetch bank
@@ -113,7 +116,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EMap<String, Stay> getStay() {
+	public EMap<String, Stay> getStays() {
 		throw new UnsupportedOperationException();
 	}
 
@@ -221,23 +224,33 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void changeBookableOfStay(String stayID, String bookableID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (stays.contains(stayID)) {
+			stays.get(stayID).setBookable(bookableID);
+		} else {
+			logger.warn("A stay with ID {} could not be found.", stayID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addNewStay(String bookableID, String bookingID, Date fromDate, Date toDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		String id = IDCounter++ + "";
+		
+		Stay stay = new StayImpl();
+		stay.setID(id);
+		stay.setBookable(bookableID);
+		stay.setBooking(bookingID);
+		stay.setFromDate(fromDate);
+		stay.setToDate(toDate);
+		
+		stays.put(id, stay);
 	}
 
 	/**
@@ -260,11 +273,11 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public void addBillToStay(String stayID, String billID) {
-		if (!stay.contains(stayID)) {
+		if (!stays.contains(stayID)) {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
 		} else {
-			stay.get(stayID).addBill(billID);
+			stays.get(stayID).addBill(billID);
 		}
 	}
 
