@@ -383,7 +383,7 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addBill(String billID) {
+	public void addBill() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -562,8 +562,8 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case StaysPackage.STAY___ADD_BILL__STRING:
-				addBill((String)arguments.get(0));
+			case StaysPackage.STAY___ADD_BILL:
+				addBill();
 				return null;
 			case StaysPackage.STAY___ADD_CHECKED_IN_GUEST:
 				addCheckedInGuest();

@@ -239,10 +239,10 @@ public interface Stay extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
+	 * @model
 	 * @generated
 	 */
-	void addBill(String billID);
+	void addBill();
 
 	/**
 	 * <!-- begin-user-doc -->

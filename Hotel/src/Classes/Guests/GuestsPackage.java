@@ -643,7 +643,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST___REMOVE_STAY__STRING = 1;
+	int GUEST___REMOVE_STAY = 1;
 
 	/**
 	 * The operation id for the '<em>Add Request</em>' operation.
@@ -661,7 +661,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST___REMOVE_REQUEST__STRING = 3;
+	int GUEST___REMOVE_REQUEST = 3;
 
 	/**
 	 * The number of operations of the '<em>Guest</em>' class.
@@ -825,14 +825,14 @@ public interface GuestsPackage extends EPackage {
 	EOperation getGuest__AddStay();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#removeStay(java.lang.String) <em>Remove Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.Guest#removeStay() <em>Remove Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Stay</em>' operation.
-	 * @see Classes.Guests.Guest#removeStay(java.lang.String)
+	 * @see Classes.Guests.Guest#removeStay()
 	 * @generated
 	 */
-	EOperation getGuest__RemoveStay__String();
+	EOperation getGuest__RemoveStay();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Guests.Guest#addRequest() <em>Add Request</em>}' operation.
@@ -845,14 +845,14 @@ public interface GuestsPackage extends EPackage {
 	EOperation getGuest__AddRequest();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#removeRequest(java.lang.String) <em>Remove Request</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.Guest#removeRequest() <em>Remove Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Request</em>' operation.
-	 * @see Classes.Guests.Guest#removeRequest(java.lang.String)
+	 * @see Classes.Guests.Guest#removeRequest()
 	 * @generated
 	 */
-	EOperation getGuest__RemoveRequest__String();
+	EOperation getGuest__RemoveRequest();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Guests.IGuests <em>IGuests</em>}'.
@@ -1229,7 +1229,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUEST___REMOVE_STAY__STRING = eINSTANCE.getGuest__RemoveStay__String();
+		EOperation GUEST___REMOVE_STAY = eINSTANCE.getGuest__RemoveStay();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Request</b></em>' operation.
@@ -1245,7 +1245,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUEST___REMOVE_REQUEST__STRING = eINSTANCE.getGuest__RemoveRequest__String();
+		EOperation GUEST___REMOVE_REQUEST = eINSTANCE.getGuest__RemoveRequest();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Guests.IGuests <em>IGuests</em>}' class.

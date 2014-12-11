@@ -1578,9 +1578,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_34H_kHvFEeSLvtP7wKaE3g" name="SSID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5Ru20HvFEeSLvtP7wKaE3g" name="salaryContract">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5Ru20HvFEeSLvtP7wKaE3g" name="salaryContract" type="_w9N34XpsEeST-65JbGUt8g"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3wXpsEeST-65JbGUt8g" name="scheduleStaff">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_yU52YH_dEeS5IpkkkJsVew" name="from">
@@ -2585,17 +2583,9 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGLXpsEeST-65JbGUt8g" name="addStay" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGLnpsEeST-65JbGUt8g" name="removeStay" visibility="package">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_IbgJgIEwEeSiatlbNJveRQ" name="stayID">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGLnpsEeST-65JbGUt8g" name="removeStay" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGL3psEeST-65JbGUt8g" name="addRequest" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGMXpsEeST-65JbGUt8g" name="removeRequest" visibility="package">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LeJbIIEwEeSiatlbNJveRQ" name="requestID">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGMXpsEeST-65JbGUt8g" name="removeRequest" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9PGNnpsEeST-65JbGUt8g" visibility="private" memberEnd="_w9PGN3psEeST-65JbGUt8g _w9PGDXpsEeST-65JbGUt8g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9PGN3psEeST-65JbGUt8g" name="guestManager" type="_w9PGDHpsEeST-65JbGUt8g" association="_w9PGNnpsEeST-65JbGUt8g">
@@ -2866,16 +2856,12 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9Ps83psEeST-65JbGUt8g" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9Ps9HpsEeST-65JbGUt8g" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps93psEeST-65JbGUt8g" name="addBill" visibility="package">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7Fni8IEuEeScJv7dndHgAA" name="billID">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps93psEeST-65JbGUt8g" name="addBill" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps_HpsEeST-65JbGUt8g" name="addCheckedInGuest" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps_XpsEeST-65JbGUt8g" name="checkOutGuest" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9PtA3psEeST-65JbGUt8g" name="StaysManager" visibility="package">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9PtBHpsEeST-65JbGUt8g" name="stays" visibility="private" type="_w9Ps43psEeST-65JbGUt8g" association="_w9PtQnpsEeST-65JbGUt8g">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9PtBHpsEeST-65JbGUt8g" name="stay" visibility="private" type="_w9Ps43psEeST-65JbGUt8g" association="_w9PtQnpsEeST-65JbGUt8g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9PtBXpsEeST-65JbGUt8g"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9PtBnpsEeST-65JbGUt8g" value="*"/>
       </ownedAttribute>

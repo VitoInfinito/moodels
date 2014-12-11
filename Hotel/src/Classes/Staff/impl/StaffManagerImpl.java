@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import Classes.InvalidIDException;
+import Classes.Staff.SalaryContract;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToStaffMapImpl;
 import Classes.Staff.Staff;
@@ -276,7 +277,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	public void changeStaffJob(String SSID, String job) {
 		if(staff.contains(SSID)) {
-			staff.get(SSID).setJob(job);;
+			staff.get(SSID).setJob(job);
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -290,7 +291,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	public void changeStaffPhone(String SSID, String phoneNumber) {
 		if(staff.contains(SSID)) {
-			staff.get(SSID).setPhone(phoneNumber);;
+			staff.get(SSID).setPhone(phoneNumber);
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -300,11 +301,11 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void changeStaffSalaryContract(String SSID, String salaryContract) {
-		if(staff.contains(SSID)){
-			//TODO: Implement the change in salaryContract, string or salarycontract type?
+	public void changeStaffSalaryContract(String SSID, SalaryContract salaryContract) {
+		if(staff.contains(SSID)) {
+			staff.get(SSID).setSalaryContract(salaryContract);
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();

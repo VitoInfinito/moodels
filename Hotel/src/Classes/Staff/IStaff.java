@@ -134,7 +134,7 @@ public interface IStaff extends EObject {
 	 * @model SSIDRequired="true" SSIDOrdered="false" salaryContractRequired="true" salaryContractOrdered="false"
 	 * @generated
 	 */
-	void changeStaffSalaryContract(String SSID, String salaryContract);
+	void changeStaffSalaryContract(String SSID, SalaryContract salaryContract);
 
 	/**
 	 * <!-- begin-user-doc -->

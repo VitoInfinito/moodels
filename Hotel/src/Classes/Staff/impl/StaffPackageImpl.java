@@ -516,7 +516,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__ChangeStaffSalaryContract__String_String() {
+	public EOperation getIStaff__ChangeStaffSalaryContract__String_SalaryContract() {
 		return iStaffEClass.getEOperations().get(13);
 	}
 
@@ -605,7 +605,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_LAST_NAME__STRING_STRING);
 		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_JOB__STRING_STRING);
 		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_PHONE__STRING_STRING);
-		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING);
+		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_SALARYCONTRACT);
 		createEOperation(iStaffEClass, ISTAFF___SCHEDULE_STAFF__DATE_DATE);
 		createEOperation(iStaffEClass, ISTAFF___ADD_EMPLOYEE__STRING_STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE);
 	}
@@ -718,9 +718,9 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "phoneNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIStaff__ChangeStaffSalaryContract__String_String(), null, "changeStaffSalaryContract", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__ChangeStaffSalaryContract__String_SalaryContract(), null, "changeStaffSalaryContract", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "salaryContract", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getSalaryContract(), "salaryContract", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIStaff__ScheduleStaff__Date_Date(), theTypesPackage.getString(), "scheduleStaff", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);

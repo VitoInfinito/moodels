@@ -200,7 +200,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING = 13;
+	int ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_SALARYCONTRACT = 13;
 
 	/**
 	 * The operation id for the '<em>Schedule Staff</em>' operation.
@@ -390,7 +390,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING = ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING;
+	int STAFF_MANAGER___CHANGE_STAFF_SALARY_CONTRACT__STRING_SALARYCONTRACT = ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_SALARYCONTRACT;
 
 	/**
 	 * The operation id for the '<em>Schedule Staff</em>' operation.
@@ -1039,14 +1039,14 @@ public interface StaffPackage extends EPackage {
 	EOperation getIStaff__ChangeStaffPhone__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, java.lang.String) <em>Change Staff Salary Contract</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, Classes.Staff.SalaryContract) <em>Change Staff Salary Contract</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Staff Salary Contract</em>' operation.
-	 * @see Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, java.lang.String)
+	 * @see Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, Classes.Staff.SalaryContract)
 	 * @generated
 	 */
-	EOperation getIStaff__ChangeStaffSalaryContract__String_String();
+	EOperation getIStaff__ChangeStaffSalaryContract__String_SalaryContract();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Staff.IStaff#scheduleStaff(java.util.Date, java.util.Date) <em>Schedule Staff</em>}' operation.
@@ -1381,7 +1381,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING = eINSTANCE.getIStaff__ChangeStaffSalaryContract__String_String();
+		EOperation ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_SALARYCONTRACT = eINSTANCE.getIStaff__ChangeStaffSalaryContract__String_SalaryContract();
 
 		/**
 		 * The meta object literal for the '<em><b>Schedule Staff</b></em>' operation.

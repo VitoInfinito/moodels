@@ -164,7 +164,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAY___ADD_BILL__STRING = 0;
+	int STAY___ADD_BILL = 0;
 
 	/**
 	 * The operation id for the '<em>Add Checked In Guest</em>' operation.
@@ -521,13 +521,13 @@ public interface StaysPackage extends EPackage {
 	int STAYS_MANAGER = 2;
 
 	/**
-	 * The feature id for the '<em><b>Stays</b></em>' reference list.
+	 * The feature id for the '<em><b>Stay</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAYS_MANAGER__STAYS = ISTAYS_FEATURE_COUNT + 0;
+	int STAYS_MANAGER__STAY = ISTAYS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Customer Provides</b></em>' reference.
@@ -892,14 +892,14 @@ public interface StaysPackage extends EPackage {
 	EReference getStay_CreditCard();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.Stay#addBill(java.lang.String) <em>Add Bill</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.Stay#addBill() <em>Add Bill</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Bill</em>' operation.
-	 * @see Classes.Stays.Stay#addBill(java.lang.String)
+	 * @see Classes.Stays.Stay#addBill()
 	 * @generated
 	 */
-	EOperation getStay__AddBill__String();
+	EOperation getStay__AddBill();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Stays.Stay#addCheckedInGuest() <em>Add Checked In Guest</em>}' operation.
@@ -1008,15 +1008,15 @@ public interface StaysPackage extends EPackage {
 	EClass getStaysManager();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Classes.Stays.StaysManager#getStays <em>Stays</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Stays.StaysManager#getStay <em>Stay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Stays</em>'.
-	 * @see Classes.Stays.StaysManager#getStays()
+	 * @return the meta object for the reference list '<em>Stay</em>'.
+	 * @see Classes.Stays.StaysManager#getStay()
 	 * @see #getStaysManager()
 	 * @generated
 	 */
-	EReference getStaysManager_Stays();
+	EReference getStaysManager_Stay();
 
 	/**
 	 * Returns the meta object for the reference '{@link Classes.Stays.StaysManager#getCustomerProvides <em>Customer Provides</em>}'.
@@ -1402,7 +1402,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation STAY___ADD_BILL__STRING = eINSTANCE.getStay__AddBill__String();
+		EOperation STAY___ADD_BILL = eINSTANCE.getStay__AddBill();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Checked In Guest</b></em>' operation.
@@ -1489,12 +1489,12 @@ public interface StaysPackage extends EPackage {
 		EClass STAYS_MANAGER = eINSTANCE.getStaysManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Stays</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Stay</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STAYS_MANAGER__STAYS = eINSTANCE.getStaysManager_Stays();
+		EReference STAYS_MANAGER__STAY = eINSTANCE.getStaysManager_Stay();
 
 		/**
 		 * The meta object literal for the '<em><b>Customer Provides</b></em>' reference feature.

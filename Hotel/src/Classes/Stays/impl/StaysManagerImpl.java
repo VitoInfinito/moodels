@@ -5,26 +5,16 @@ package Classes.Stays.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
 import java.util.List;
-
-import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
-import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EOperation;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import Classes.InvalidIDException;
 import Classes.Banking.CustomerProvides;
 import Classes.Bills.IBills;
@@ -44,7 +34,7 @@ import Classes.Stays.StaysPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getStays <em>Stays</em>}</li>
+ *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getStay <em>Stay</em>}</li>
  *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getCustomerProvides <em>Customer Provides</em>}</li>
  *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getIBills <em>IBills</em>}</li>
  *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getIGuests <em>IGuests</em>}</li>
@@ -54,6 +44,15 @@ import Classes.Stays.StaysPackage;
  * @generated
  */
 public class StaysManagerImpl extends MinimalEObjectImpl.Container implements StaysManager {
+	/**
+	 * The cached value of the '{@link #getStay() <em>Stay</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStay()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Stay> stay;
 	private final Logger logger = LoggerFactory.getLogger(StaysManagerImpl.class);
 	public static StaysManagerImpl INSTANCE = new StaysManagerImpl();
 	
@@ -120,6 +119,18 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	@Override
 	protected EClass eStaticClass() {
 		return StaysPackage.Literals.STAYS_MANAGER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Stay> getStay() {
+		if (stay == null) {
+			stay = new EObjectResolvingEList<Stay>(Stay.class, this, StaysPackage.STAYS_MANAGER__STAY);
+		}
+		return stay;
 	}
 
 	/**
