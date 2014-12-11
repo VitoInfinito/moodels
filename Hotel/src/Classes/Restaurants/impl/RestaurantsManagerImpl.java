@@ -6,6 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -15,12 +16,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToRestaurantMapImpl;
 import Classes.Restaurants.Reservation;
 import Classes.Restaurants.Restaurant;
 import Classes.Restaurants.RestaurantMenu;
+import Classes.Restaurants.RestaurantTable;
 import Classes.Restaurants.RestaurantsManager;
 import Classes.Restaurants.RestaurantsPackage;
 
@@ -119,12 +122,29 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAvailableTables(Date to, Date from, String restaurantID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAvailableTables(Date to, Date from, String restaurantID) {
+		List<String> available = new ArrayList<String>();
+		List<String> notAvailable = new ArrayList<String>();
+		for(Reservation reservation : getRestaurantByID(restaurantID).getReservation().values()) {
+			if((reservation.getFrom().compareTo(from) >= 0 && reservation.getFrom().compareTo(to) <= 0)
+					|| (reservation.getTo().compareTo(from) >= 0 && reservation.getTo().compareTo(to) <= 0)) {
+				for(RestaurantTable table : reservation.getRestaurantTable()) {
+					if(!notAvailable.contains(table.getTableNumber())) {
+						notAvailable.add(table.getTableNumber());
+					}
+				}
+			}
+		}
+		
+		for(RestaurantTable table : getRestaurantByID(restaurantID).getRestaurantTable().values()) {
+			if(!notAvailable.contains(table.getTableNumber())) {
+				available.add(table.getTableNumber());
+			}
+		}
+		
+		return available;
 	}
 
 	/**
