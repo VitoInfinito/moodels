@@ -2,8 +2,11 @@
  */
 package Classes.Bills.impl;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -13,6 +16,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import Classes.InvalidIDException;
 import Classes.Banking.CustomerProvides;
 import Classes.Bills.Bill;
 import Classes.Bills.BillsManager;
@@ -125,42 +130,44 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * @generated
 	 */
 	public boolean getIsBillPaid(String billID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return bill.get(billID).isPaid();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllBillsNotPaid() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAllBillsNotPaid() {
+		List<String> notPaid = new ArrayList<String>();
+		for(Bill b : bill.values()) {
+			if(!b.isPaid()) 
+				notPaid.add(b.getId());
+		}
+		return notPaid;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Date getBillPaymentDate(String billID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (bill.containsKey(billID)) {
+			return bill.get(billID).getIssueDate();
+		} else {
+			logger.warn("A feedback with id {} could not be found.", billID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllBillIDs() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAllBillIDs() {
+		return new ArrayList<String>(bill.keySet());
 	}
 
 	/**
@@ -177,12 +184,16 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllPayedBills() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAllPayedBills() {
+		List<String> paidBills = new ArrayList<String>();
+		
+		for(Bill b : bill.values()){
+			if(b.isPaid())
+				paidBills.add(b.getId());
+		}
+		return paidBills;
 	}
 
 	/**
@@ -191,9 +202,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * @generated
 	 */
 	public void addBill(EList<String> items, EList<String> services, String bookable) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		bill.add(new Bill())
 	}
 
 	/**
