@@ -13,7 +13,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
+
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToStaffMapImpl;
 import Classes.Staff.Staff;
@@ -206,7 +208,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	public String getStaffEmail(String SSID) {
 		if(staff.contains(SSID)) {
-			return staff.get(SSID).getPhone();
+			return staff.get(SSID).getEmail();
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
