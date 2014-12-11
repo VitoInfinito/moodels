@@ -468,9 +468,13 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Guests/Guest/stays"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Guests/Guest/account"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/Guest/addStay"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/Guest/removeStay"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/Guest/removeStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Guests/Guest/removeStay/stayID"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/Guest/addRequest"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/Guest/removeRequest"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/Guest/removeRequest">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Guests/Guest/removeRequest/requestID"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Guests/IGuests">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Guests/IGuests/getAllGuestIDs"/>

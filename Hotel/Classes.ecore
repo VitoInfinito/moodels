@@ -488,9 +488,13 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Guest">
       <eOperations name="addStay" ordered="false" lowerBound="1"/>
-      <eOperations name="removeStay" ordered="false" lowerBound="1"/>
+      <eOperations name="removeStay" ordered="false" lowerBound="1">
+        <eParameters name="stayID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eOperations name="addRequest" ordered="false" lowerBound="1"/>
-      <eOperations name="removeRequest" ordered="false" lowerBound="1"/>
+      <eOperations name="removeRequest" ordered="false" lowerBound="1">
+        <eParameters name="requestID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstname" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastname" ordered="false"

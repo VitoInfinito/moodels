@@ -365,7 +365,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 */
 	public void removeGuestStay(String SSID, String stayID) {
 		if(guests.contains(SSID)) {
-			guests.get(SSID).removeStay();
+			guests.get(SSID).removeStay(stayID);
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -395,7 +395,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 */
 	public void removeGuestRequest(String SSID, String requestID) {
 		if(guests.contains(SSID)) {
-			guests.get(SSID).removeRequest();
+			guests.get(SSID).removeRequest(requestID);
 		} else {
 			logger.warn("A guest with SSID {} could not be found");
 			throw new InvalidIDException();

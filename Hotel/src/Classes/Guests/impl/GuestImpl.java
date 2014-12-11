@@ -11,7 +11,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import Classes.InvalidIDException;
 import Classes.Guests.Guest;
 import Classes.Guests.GuestsPackage;
 
@@ -37,6 +40,8 @@ import Classes.Guests.GuestsPackage;
  * @generated
  */
 public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
+	private final Logger logger = LoggerFactory.getLogger(GuestsManagerImpl.class);
+	
 	/**
 	 * The default value of the '{@link #getFirstname() <em>Firstname</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -401,12 +406,15 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void removeStay() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void removeStay(String stayID) {
+		if(stays.contains(stayID)) {
+			stays.remove(stayID);
+		} else {
+			logger.warn("A stay with stayID {} could not be found.", stayID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -423,12 +431,15 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void removeRequest() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void removeRequest(String requestID) {
+		if(stays.contains(requestID)) {
+			stays.remove(requestID);
+		} else {
+			logger.warn("A stay with requestID {} could not be found.", requestID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -583,14 +594,14 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 			case GuestsPackage.GUEST___ADD_STAY:
 				addStay();
 				return null;
-			case GuestsPackage.GUEST___REMOVE_STAY:
-				removeStay();
+			case GuestsPackage.GUEST___REMOVE_STAY__STRING:
+				removeStay((String)arguments.get(0));
 				return null;
 			case GuestsPackage.GUEST___ADD_REQUEST:
 				addRequest();
 				return null;
-			case GuestsPackage.GUEST___REMOVE_REQUEST:
-				removeRequest();
+			case GuestsPackage.GUEST___REMOVE_REQUEST__STRING:
+				removeRequest((String)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

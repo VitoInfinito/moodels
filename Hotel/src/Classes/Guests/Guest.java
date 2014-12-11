@@ -255,10 +255,10 @@ public interface Guest extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated
 	 */
-	void removeStay();
+	void removeStay(String stayID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -271,9 +271,9 @@ public interface Guest extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false"
 	 * @generated
 	 */
-	void removeRequest();
+	void removeRequest(String requestID);
 
 } // Guest

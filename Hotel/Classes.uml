@@ -2574,9 +2574,17 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGLXpsEeST-65JbGUt8g" name="addStay" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGLnpsEeST-65JbGUt8g" name="removeStay" visibility="package"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGLnpsEeST-65JbGUt8g" name="removeStay" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_IbgJgIEwEeSiatlbNJveRQ" name="stayID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGL3psEeST-65JbGUt8g" name="addRequest" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGMXpsEeST-65JbGUt8g" name="removeRequest" visibility="package"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGMXpsEeST-65JbGUt8g" name="removeRequest" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LeJbIIEwEeSiatlbNJveRQ" name="requestID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9PGNnpsEeST-65JbGUt8g" visibility="private" memberEnd="_w9PGN3psEeST-65JbGUt8g _w9PGDXpsEeST-65JbGUt8g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9PGN3psEeST-65JbGUt8g" name="guestManager" type="_w9PGDHpsEeST-65JbGUt8g" association="_w9PGNnpsEeST-65JbGUt8g">
