@@ -3,6 +3,13 @@
 package Classes.Accounts.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.regex.Pattern;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -12,11 +19,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
 import Classes.Accounts.Account;
 import Classes.Accounts.AccountType;
+import Classes.Accounts.AccountsFactory;
 import Classes.Accounts.AccountsManager;
 import Classes.Accounts.AccountsPackage;
+import Classes.Bookables.Bookable;
+import Classes.Bookables.ConferenceRoom;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToAccountMapImpl;
 
@@ -36,8 +47,8 @@ import Classes.ECoreMapEntries.impl.StringToAccountMapImpl;
 public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements AccountsManager {
 	private final Logger logger = LoggerFactory.getLogger(AccountsManagerImpl.class);
 	public static AccountsManagerImpl INSTANCE = new AccountsManagerImpl();
-	
-	
+
+
 	/**
 	 * The cached value of the '{@link #getAccounts() <em>Accounts</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -88,11 +99,12 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 			logger.warn("An account with username {} already exists.", username);
 			throw new InvalidIDException();
 		} else {
-			Account account = new AccountImpl();
+			Account account = AccountsFactory.eINSTANCE.createAccount();
+
 			account.setUsername(username);
 			account.setPassword(password);
 			account.setAccountType(type);
-			
+
 			accounts.put(username, account);
 		}
 	}
@@ -103,9 +115,8 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public void deleteAccount(String username) {
-		if (accounts.containsKey(username)) {
-			accounts.remove(username);
-		} else {
+		Account acc = accounts.removeKey(username);
+		if (acc == null) {
 			logger.warn("An account with username {} could not be found.", username);
 			throw new InvalidIDException();
 		}
@@ -161,23 +172,15 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getAccountName(String username) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<String> searchAccounts(String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (accounts.containsKey(username)) {
+			return accounts.get(username).getUsername();
+		} else {
+			logger.warn("An account with username {} could not be found.", username);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -185,13 +188,25 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public Account getAccount(String username) {
-		if (accounts.containsKey(username)) {
-			return accounts.get(username);
-		} else {
-			logger.warn("An account with username {} could not be found.", username);
-			throw new InvalidIDException();
+	public List<String> searchAccounts(String keyword) {
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
+
+		// Exact ID match. First Order!
+		if (accounts.containsKey(keyword)) {
+			searchResult.add(keyword);
 		}
+
+		// ID match somewhat. Second Order!
+		Collection<Account> c = accounts.values();
+		for (Account acc : c) {			
+			if (regexPattern.matcher(acc.getUsername()).matches()) {
+				searchResult.add(acc.getUsername());
+			}
+		}
+		
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -211,7 +226,7 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	public boolean login(String username, String password) {
 		return validateAccount(username, password);
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * NOT SUPPORTED. EMF CRAP!

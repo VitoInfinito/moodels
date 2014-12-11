@@ -171,82 +171,49 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case AccountsPackage.ACCOUNT__ACCOUNT_TYPE:
-				return getAccountType();
-			case AccountsPackage.ACCOUNT__USERNAME:
-				return getUsername();
-			case AccountsPackage.ACCOUNT__PASSWORD:
-				return getPassword();
-		}
-		return super.eGet(featureID, resolve, coreType);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case AccountsPackage.ACCOUNT__ACCOUNT_TYPE:
-				setAccountType((AccountType)newValue);
-				return;
-			case AccountsPackage.ACCOUNT__USERNAME:
-				setUsername((String)newValue);
-				return;
-			case AccountsPackage.ACCOUNT__PASSWORD:
-				setPassword((String)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case AccountsPackage.ACCOUNT__ACCOUNT_TYPE:
-				setAccountType(ACCOUNT_TYPE_EDEFAULT);
-				return;
-			case AccountsPackage.ACCOUNT__USERNAME:
-				setUsername(USERNAME_EDEFAULT);
-				return;
-			case AccountsPackage.ACCOUNT__PASSWORD:
-				setPassword(PASSWORD_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case AccountsPackage.ACCOUNT__ACCOUNT_TYPE:
-				return accountType != ACCOUNT_TYPE_EDEFAULT;
-			case AccountsPackage.ACCOUNT__USERNAME:
-				return USERNAME_EDEFAULT == null ? username != null : !USERNAME_EDEFAULT.equals(username);
-			case AccountsPackage.ACCOUNT__PASSWORD:
-				return PASSWORD_EDEFAULT == null ? password != null : !PASSWORD_EDEFAULT.equals(password);
-		}
-		return super.eIsSet(featureID);
+		throw new UnsupportedOperationException();
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
