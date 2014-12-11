@@ -3,6 +3,8 @@
 package Classes.Bills;
 
 import java.util.Date;
+import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
@@ -34,9 +36,9 @@ public interface IBills extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getAllBillsNotPaid();
+	List<String> getAllBillsNotPaid();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -50,25 +52,25 @@ public interface IBills extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getAllBillIDs();
+	List<String> getAllBillIDs();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchBills(String keyword);
+	List<String> searchBills(String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getAllPayedBills();
+	List<String> getAllPayedBills();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,9 +92,9 @@ public interface IBills extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getBillItems(String billID);
+	List<String> getBillItems(String billID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -106,9 +108,9 @@ public interface IBills extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getBillServices(String billID);
+	List<String> getBillServices(String billID);
 
 	/**
 	 * <!-- begin-user-doc -->

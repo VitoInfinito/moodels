@@ -202,7 +202,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * @generated
 	 */
 	public void addBill(EList<String> items, EList<String> services, String bookable) {
-		bill.add(new Bill())
+		bill.add(new Bill());
 	}
 
 	/**
