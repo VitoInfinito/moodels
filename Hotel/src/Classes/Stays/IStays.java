@@ -124,9 +124,9 @@ public interface IStays extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getAllHotelStayIDs();
+	List<String> getAllHotelStayIDs();
 
 	/**
 	 * <!-- begin-user-doc -->

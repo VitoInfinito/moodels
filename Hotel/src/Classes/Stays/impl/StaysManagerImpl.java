@@ -3,6 +3,7 @@
 package Classes.Stays.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -400,12 +401,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllHotelStayIDs() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAllHotelStayIDs() {
+		return new ArrayList<String>(stays.keySet());
 	}
 
 	/**
