@@ -372,12 +372,15 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getBookableOfHotelStay(String stayID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (stays.contains(stayID)) {
+			return stays.get(stayID).getBookable();
+		} else {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
