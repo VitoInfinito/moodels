@@ -201,7 +201,9 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/Stay/addBill">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/Stay/addBill/billID"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/Stay/addCheckedInGuest"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/Stay/addCheckedInGuest">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/Stay/addCheckedInGuest/SSID"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/Stay/checkOutGuest"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Stays/CreditCard">

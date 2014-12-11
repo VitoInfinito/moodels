@@ -380,8 +380,9 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Adds a bill to the list of bills
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addBill(String billID) {
 		bills.add(billID);
@@ -392,7 +393,7 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addCheckedInGuest() {
+	public void addCheckedInGuest(String SSID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -563,8 +564,8 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 			case StaysPackage.STAY___ADD_BILL__STRING:
 				addBill((String)arguments.get(0));
 				return null;
-			case StaysPackage.STAY___ADD_CHECKED_IN_GUEST:
-				addCheckedInGuest();
+			case StaysPackage.STAY___ADD_CHECKED_IN_GUEST__STRING:
+				addCheckedInGuest((String)arguments.get(0));
 				return null;
 			case StaysPackage.STAY___CHECK_OUT_GUEST:
 				checkOutGuest();

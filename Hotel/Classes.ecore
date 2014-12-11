@@ -191,7 +191,9 @@
       <eOperations name="addBill" ordered="false" lowerBound="1">
         <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="addCheckedInGuest" ordered="false" lowerBound="1"/>
+      <eOperations name="addCheckedInGuest" ordered="false" lowerBound="1">
+        <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eOperations name="checkOutGuest" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" ordered="false" lowerBound="1"
           eType="ecore:EDataType types.ecore#//String"/>

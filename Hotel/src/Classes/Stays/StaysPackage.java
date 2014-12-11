@@ -173,7 +173,7 @@ public interface StaysPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAY___ADD_CHECKED_IN_GUEST = 1;
+	int STAY___ADD_CHECKED_IN_GUEST__STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Check Out Guest</em>' operation.
@@ -902,14 +902,14 @@ public interface StaysPackage extends EPackage {
 	EOperation getStay__AddBill__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Stays.Stay#addCheckedInGuest() <em>Add Checked In Guest</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Stays.Stay#addCheckedInGuest(java.lang.String) <em>Add Checked In Guest</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Checked In Guest</em>' operation.
-	 * @see Classes.Stays.Stay#addCheckedInGuest()
+	 * @see Classes.Stays.Stay#addCheckedInGuest(java.lang.String)
 	 * @generated
 	 */
-	EOperation getStay__AddCheckedInGuest();
+	EOperation getStay__AddCheckedInGuest__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Stays.Stay#checkOutGuest() <em>Check Out Guest</em>}' operation.
@@ -1410,7 +1410,7 @@ public interface StaysPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation STAY___ADD_CHECKED_IN_GUEST = eINSTANCE.getStay__AddCheckedInGuest();
+		EOperation STAY___ADD_CHECKED_IN_GUEST__STRING = eINSTANCE.getStay__AddCheckedInGuest__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Out Guest</b></em>' operation.

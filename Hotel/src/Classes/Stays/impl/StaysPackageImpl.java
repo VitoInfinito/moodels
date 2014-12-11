@@ -293,7 +293,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStay__AddCheckedInGuest() {
+	public EOperation getStay__AddCheckedInGuest__String() {
 		return stayEClass.getEOperations().get(1);
 	}
 
@@ -669,7 +669,7 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 		createEAttribute(stayEClass, STAY__TO_DATE);
 		createEReference(stayEClass, STAY__CREDIT_CARD);
 		createEOperation(stayEClass, STAY___ADD_BILL__STRING);
-		createEOperation(stayEClass, STAY___ADD_CHECKED_IN_GUEST);
+		createEOperation(stayEClass, STAY___ADD_CHECKED_IN_GUEST__STRING);
 		createEOperation(stayEClass, STAY___CHECK_OUT_GUEST);
 
 		creditCardEClass = createEClass(CREDIT_CARD);
@@ -763,7 +763,8 @@ public class StaysPackageImpl extends EPackageImpl implements StaysPackage {
 		EOperation op = initEOperation(getStay__AddBill__String(), null, "addBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getStay__AddCheckedInGuest(), null, "addCheckedInGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStay__AddCheckedInGuest__String(), null, "addCheckedInGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getStay__CheckOutGuest(), null, "checkOutGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

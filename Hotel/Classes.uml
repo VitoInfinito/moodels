@@ -2927,7 +2927,11 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps_HpsEeST-65JbGUt8g" name="addCheckedInGuest" visibility="package"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps_HpsEeST-65JbGUt8g" name="addCheckedInGuest" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_k_ab0IFlEeSC7KTapWXTRw" name="SSID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Ps_XpsEeST-65JbGUt8g" name="checkOutGuest" visibility="package"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9PtA3psEeST-65JbGUt8g" name="StaysManager" visibility="package">
