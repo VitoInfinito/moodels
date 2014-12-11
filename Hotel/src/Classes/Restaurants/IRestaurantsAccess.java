@@ -21,6 +21,9 @@ import org.eclipse.jdt.annotation.NonNullByDefault;
  */
 @NonNullByDefault
 public interface IRestaurantsAccess extends EObject {
+	
+	IRestaurantsAccess INSTANCE = Classes.Restaurants.impl.RestaurantsManagerImpl.INSTANCE;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -81,9 +84,9 @@ public interface IRestaurantsAccess extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchRestaurants(String keyword);
+	List<String> searchRestaurants(String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->

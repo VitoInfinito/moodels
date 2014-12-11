@@ -4,8 +4,12 @@ package Classes.Restaurants.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.regex.Pattern;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -152,12 +156,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public String getReservationGuest(String restaurantID, String reservationID) throws IllegalArgumentException, InvalidIDException{
-		if(restaurantID == null || reservationID == null) {
-			logger.warn("The id of one or more parameters were null");
-			throw new IllegalArgumentException("ID was null");
-		}
-		
+	public String getReservationGuest(String restaurantID, String reservationID) throws IllegalArgumentException, InvalidIDException{		
 		Reservation reservation = getRestaurantByID(restaurantID).getReservation().get(reservationID);
 		if(reservation == null) {
 			logger.warn("Reservation with ID {} could not be found. Invalid ID", reservationID);
@@ -173,13 +172,13 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated NOT
 	 */
 	public String getRestaurantMenuName(String restaurantID) {
-		if(restaurantID == null) {
-			logger.warn("The id of restaurant was null");
-			throw new IllegalArgumentException("ID was null");
+		Restaurant restaurant = getRestaurantByID(restaurantID);
+		if(restaurant == null) {
+			logger.warn("The Restaurant with ID {} could not be found. Invalid ID", restaurantID);
+			throw new InvalidIDException();
 		}
 		
-		RestaurantMenu restaurantMenu = getRestaurantByID(restaurantID).getMenu();
-		
+		RestaurantMenu restaurantMenu = restaurant.getMenu();
 		if(restaurantMenu == null) {
 			logger.warn("Menu belonging to Restaurant with ID {} could not be found. Invalid ID", restaurantID);
 			throw new InvalidIDException();
@@ -200,12 +199,44 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> searchRestaurants(String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchRestaurants(String keyword) {
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
+		
+		EMap<String, Restaurant> restaurants = getRestaurant();
+		
+		//Exact Name match
+		Restaurant restaurant = restaurants.get(keyword);
+		if(restaurant != null) {
+			searchResult.add(restaurant.getName());
+		}
+		
+		//Name match somewhat
+		Collection<Restaurant> c = restaurants.values();
+		for(Restaurant r : c) {
+			if(regexPattern.matcher(r.getName()).matches()) {
+				searchResult.add(r.getName());
+			}
+		}
+		
+		//Some property match exactly
+		for(Restaurant r : c) {
+			if(r.getMenu().getName().equalsIgnoreCase(keyword)) {
+				searchResult.add(r.getName());
+			}
+		}
+		
+		//Some property match somewhat
+		for(Restaurant r : c) {
+			if(regexPattern.matcher(r.getMenu().getName()).matches()) {
+				searchResult.add(r.getName());
+			}
+		}
+		
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
