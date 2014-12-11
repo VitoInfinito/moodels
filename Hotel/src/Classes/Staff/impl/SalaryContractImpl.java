@@ -67,6 +67,17 @@ public abstract class SalaryContractImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void setSalary(double salary) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
@@ -74,6 +85,9 @@ public abstract class SalaryContractImpl extends MinimalEObjectImpl.Container im
 				return getSalary();
 			case StaffPackage.SALARY_CONTRACT___GET_TYPE:
 				return getType();
+			case StaffPackage.SALARY_CONTRACT___SET_SALARY__DOUBLE:
+				setSalary((Double)arguments.get(0));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

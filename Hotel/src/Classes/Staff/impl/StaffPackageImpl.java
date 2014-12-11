@@ -336,6 +336,15 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getSalaryContract__SetSalary__double() {
+		return salaryContractEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMonthlySalaryContract() {
 		return monthlySalaryContractEClass;
 	}
@@ -582,6 +591,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 		salaryContractEClass = createEClass(SALARY_CONTRACT);
 		createEOperation(salaryContractEClass, SALARY_CONTRACT___GET_SALARY);
 		createEOperation(salaryContractEClass, SALARY_CONTRACT___GET_TYPE);
+		createEOperation(salaryContractEClass, SALARY_CONTRACT___SET_SALARY__DOUBLE);
 
 		monthlySalaryContractEClass = createEClass(MONTHLY_SALARY_CONTRACT);
 		createEAttribute(monthlySalaryContractEClass, MONTHLY_SALARY_CONTRACT__SALARY);
@@ -666,6 +676,9 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 
 		initEOperation(getSalaryContract__GetType(), ecorePackage.getEString(), "getType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		EOperation op = initEOperation(getSalaryContract__SetSalary__double(), null, "setSalary", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "salary", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(monthlySalaryContractEClass, MonthlySalaryContract.class, "MonthlySalaryContract", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMonthlySalaryContract_Salary(), ecorePackage.getEDouble(), "salary", null, 1, 1, MonthlySalaryContract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getMonthlySalaryContract_Type(), ecorePackage.getEString(), "type", null, 1, 1, MonthlySalaryContract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -678,7 +691,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 
 		initEOperation(getIStaff__GetAllStaff(), theTypesPackage.getString(), "getAllStaff", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		EOperation op = initEOperation(getIStaff__SearchStaff__String(), theTypesPackage.getString(), "searchStaff", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__SearchStaff__String(), theTypesPackage.getString(), "searchStaff", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIStaff__GetStaffFirstName__String(), theTypesPackage.getString(), "getStaffFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);

@@ -16,10 +16,11 @@ import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import Classes.InvalidIDException;
-import Classes.Staff.SalaryContract;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToStaffMapImpl;
+import Classes.Staff.SalaryContract;
 import Classes.Staff.Staff;
+import Classes.Staff.StaffFactory;
 import Classes.Staff.StaffManager;
 import Classes.Staff.StaffPackage;
 import Classes.Statistics.IStatisticsGenerator;
@@ -324,14 +325,33 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+
 	public void addEmployee(String firstname, String lastname, String job, String phone, String email, String SSID, String salaryContractType, double salary) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Staff staff = StaffFactory.eINSTANCE.createStaff();
+		
+		staff.setFirstName(firstname);
+		staff.setLastName(lastname);
+		staff.setJob(job);
+		staff.setPhone(phone);
+		staff.setSsid(SSID);
+
+		SalaryContract contract;
+
+		switch (salaryContractType) {
+			case "Monthly": contract = StaffFactory.eINSTANCE.createMonthlySalaryContract();
+							contract.setSalary(salary);
+							staff.setSalaryContract(contract);
+							break;
+			case "Hourly":	contract = StaffFactory.eINSTANCE.createHourlySalaryContract();
+							contract.setSalary(salary);
+							staff.setSalaryContract(contract);
+							break;
+			default:	logger.warn("Invalid salary contract", salaryContractType);
+		}
 	}
 
 	/**

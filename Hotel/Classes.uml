@@ -1685,6 +1685,11 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_W4s_oIFAEeSCK-w0yxbYcw" name="setSalary">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_aFC_0IFAEeSCK-w0yxbYcw" name="salary">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9N343psEeST-65JbGUt8g" name="MonthlySalaryContract">
       <generalization xmi:type="uml:Generalization" xmi:id="_w9N35HpsEeST-65JbGUt8g" general="_w9N34XpsEeST-65JbGUt8g"/>

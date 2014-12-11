@@ -999,6 +999,9 @@
     <eClassifiers xsi:type="ecore:EClass" name="SalaryContract" abstract="true">
       <eOperations name="getSalary" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <eOperations name="getType" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setSalary" ordered="false" lowerBound="1">
+        <eParameters name="salary" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MonthlySalaryContract" eSuperTypes="#//Staff/SalaryContract">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="salary" ordered="false"

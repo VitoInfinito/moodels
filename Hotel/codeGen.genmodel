@@ -921,6 +921,9 @@
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Staff/SalaryContract">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/SalaryContract/getSalary"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/SalaryContract/getType"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/SalaryContract/setSalary">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Staff/SalaryContract/setSalary/salary"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Staff/MonthlySalaryContract">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Staff/MonthlySalaryContract/salary"/>

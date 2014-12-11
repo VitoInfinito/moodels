@@ -548,13 +548,22 @@ public interface StaffPackage extends EPackage {
 	int SALARY_CONTRACT___GET_TYPE = 1;
 
 	/**
+	 * The operation id for the '<em>Set Salary</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SALARY_CONTRACT___SET_SALARY__DOUBLE = 2;
+
+	/**
 	 * The number of operations of the '<em>Salary Contract</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SALARY_CONTRACT_OPERATION_COUNT = 2;
+	int SALARY_CONTRACT_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link Classes.Staff.impl.MonthlySalaryContractImpl <em>Monthly Salary Contract</em>}' class.
@@ -610,6 +619,15 @@ public interface StaffPackage extends EPackage {
 	 * @ordered
 	 */
 	int MONTHLY_SALARY_CONTRACT___GET_TYPE = SALARY_CONTRACT___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Set Salary</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONTHLY_SALARY_CONTRACT___SET_SALARY__DOUBLE = SALARY_CONTRACT___SET_SALARY__DOUBLE;
 
 	/**
 	 * The number of operations of the '<em>Monthly Salary Contract</em>' class.
@@ -674,6 +692,15 @@ public interface StaffPackage extends EPackage {
 	 * @ordered
 	 */
 	int HOURLY_SALARY_CONTRACT___GET_TYPE = SALARY_CONTRACT___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Set Salary</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOURLY_SALARY_CONTRACT___SET_SALARY__DOUBLE = SALARY_CONTRACT___SET_SALARY__DOUBLE;
 
 	/**
 	 * The number of operations of the '<em>Hourly Salary Contract</em>' class.
@@ -833,6 +860,16 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getSalaryContract__GetType();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Staff.SalaryContract#setSalary(double) <em>Set Salary</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Set Salary</em>' operation.
+	 * @see Classes.Staff.SalaryContract#setSalary(double)
+	 * @generated
+	 */
+	EOperation getSalaryContract__SetSalary__double();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Staff.MonthlySalaryContract <em>Monthly Salary Contract</em>}'.
@@ -1208,6 +1245,14 @@ public interface StaffPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SALARY_CONTRACT___GET_TYPE = eINSTANCE.getSalaryContract__GetType();
+
+		/**
+		 * The meta object literal for the '<em><b>Set Salary</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SALARY_CONTRACT___SET_SALARY__DOUBLE = eINSTANCE.getSalaryContract__SetSalary__double();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Staff.impl.MonthlySalaryContractImpl <em>Monthly Salary Contract</em>}' class.
