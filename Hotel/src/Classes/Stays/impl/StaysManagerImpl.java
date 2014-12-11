@@ -492,7 +492,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 			CreditCard creditCard = stays.get(stayID).getCreditCard();
 			
 			if (creditCard != null) {
-				iBills.payBillsWithCreditCard(getAllUnpayedBillsOfHotelStay(stayID), creditCard.getCcNumber(), creditCard.getCcv(), creditCard.getExpiryMonth(), creditCard.getExpiryYear(), creditCard.getFirstName(), creditCard.getLastName());
+				iBills.payBillsWithCreditCard(getAllUnpayedBillsOfHotelStay(stayID), creditCard);
 			} else {
 				logger.warn("A credit card is not registered with the stay.");
 				throw new InvalidIDException();
