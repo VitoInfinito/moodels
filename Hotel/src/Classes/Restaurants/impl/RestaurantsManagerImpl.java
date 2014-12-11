@@ -10,6 +10,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -19,6 +20,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToRestaurantMapImpl;
@@ -26,6 +28,7 @@ import Classes.Restaurants.Reservation;
 import Classes.Restaurants.Restaurant;
 import Classes.Restaurants.RestaurantMenu;
 import Classes.Restaurants.RestaurantTable;
+import Classes.Restaurants.RestaurantsFactory;
 import Classes.Restaurants.RestaurantsManager;
 import Classes.Restaurants.RestaurantsPackage;
 
@@ -45,6 +48,15 @@ import Classes.Restaurants.RestaurantsPackage;
 public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container implements RestaurantsManager {
 	private final Logger logger = LoggerFactory.getLogger(RestaurantsManagerImpl.class);
 	public static RestaurantsManagerImpl INSTANCE = new RestaurantsManagerImpl();
+	private static int counterID = 0;
+	
+	/**
+	 * Helper method for making id's to reservation
+	 * @return
+	 */
+	private String generateReservationID(){
+		return String.format("res%06d", counterID++);
+	}
 	
 	/**
 	 * The cached value of the '{@link #getRestaurant() <em>Restaurant</em>}' map.
@@ -100,9 +112,9 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EMap<String, Restaurant> getRestaurant() {
-		throw new UnsupportedOperationException();
-	}
+	//public EMap<String, Restaurant> getRestaurant() {
+		//throw new UnsupportedOperationException();
+	//}
 	
 	/**
 	 * Helper method to get a restaurant
@@ -209,7 +221,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated NOT
 	 */
 	public List<String> getAllRestaurantNames() {
-		return new ArrayList<String>(getRestaurant().keySet());
+		return new ArrayList<String>(restaurant.keySet());
 	}
 
 	/**
@@ -222,16 +234,14 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 		Set<String> searchResult = new LinkedHashSet<String>();
 		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
 		
-		EMap<String, Restaurant> restaurants = getRestaurant();
-		
 		//Exact Name match
-		Restaurant restaurant = restaurants.get(keyword);
-		if(restaurant != null) {
-			searchResult.add(restaurant.getName());
+		Restaurant rest = restaurant.get(keyword);
+		if(rest != null) {
+			searchResult.add(rest.getName());
 		}
 		
 		//Name match somewhat
-		Collection<Restaurant> c = restaurants.values();
+		Collection<Restaurant> c = restaurant.values();
 		for(Restaurant r : c) {
 			if(regexPattern.matcher(r.getName()).matches()) {
 				searchResult.add(r.getName());
@@ -265,13 +275,13 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 		Set<String> searchResult = new LinkedHashSet<String>();
 		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
 		
-		Restaurant restaurant = getRestaurant().get(restaurantID);
-		if(restaurant == null) {
+		Restaurant rest = restaurant.get(restaurantID);
+		if(rest == null) {
 			logger.warn("The Restaurant with ID {} could not be found. Invalid ID", restaurantID);
 			throw new InvalidIDException();
 		}
 		
-		EMap<String, Reservation> reservations = restaurant.getReservation();
+		EMap<String, Reservation> reservations = rest.getReservation();
 		
 		//Exact ID match
 		Reservation reservation = reservations.get(keyword);
@@ -314,13 +324,13 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 		Set<String> searchResult = new LinkedHashSet<String>();
 		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
 		
-		Restaurant restaurant = getRestaurant().get(restaurantID);
-		if(restaurant == null) {
+		Restaurant rest = restaurant.get(restaurantID);
+		if(rest == null) {
 			logger.warn("The Restaurant with ID {} could not be found. Invalid ID", restaurantID);
 			throw new InvalidIDException();
 		}
 		
-		EMap<String, RestaurantTable> tables = restaurant.getRestaurantTable();
+		EMap<String, RestaurantTable> tables = rest.getRestaurantTable();
 		
 		//Exact ID match
 		RestaurantTable table = tables.get(keyword);
@@ -351,12 +361,22 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void makeReservation(String restaurantID, EList<String> tables, String guestID, Date to, Date from) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void makeReservation(String restaurantID, List<String> tables, String guestID, Date to, Date from) {
+		Reservation reservation = RestaurantsFactory.eINSTANCE.createReservation();
+		
+		reservation.setId(generateReservationID());
+		reservation.setReservedBy(guestID);
+		reservation.setFrom(from);
+		reservation.setTo(to);
+		
+		EMap<String, RestaurantTable> restTables = restaurant.get(restaurantID).getRestaurantTable();
+		for(String table : tables) {
+			reservation.getRestaurantTable().add(restTables.get(table));
+		}
+		
+		restaurant.get(restaurantID).getReservation().put(reservation.getId(), reservation);
 	}
 
 	/**
@@ -435,13 +455,13 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 		Set<String> searchResult = new LinkedHashSet<String>();
 		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
 		
-		Restaurant restaurant = getRestaurant().get(restaurantID);
-		if(restaurant == null) {
+		Restaurant rest = restaurant.get(restaurantID);
+		if(rest == null) {
 			logger.warn("The Restaurant with ID {} could not be found. Invalid ID", restaurantID);
 			throw new InvalidIDException();
 		}
 		
-		EMap<String, Reservation> reservations = restaurant.getReservation();
+		EMap<String, Reservation> reservations = rest.getReservation();
 		
 		//Exact ID match
 		Reservation reservation = reservations.get(keyword);
