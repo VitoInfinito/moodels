@@ -4,6 +4,7 @@ package Classes.Bookings.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -13,6 +14,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import Classes.InvalidIDException;
 import Classes.Banking.CustomerProvides;
 import Classes.Bills.IBills;
 import Classes.Bookables.IBookablesAccess;
@@ -370,12 +373,15 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getCustomerOfBooking(String bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (!booking.contains(bookingID)) {
+			logger.warn("A booking with ID {} does not exist.", bookingID);
+			throw new InvalidIDException();
+		} else {
+			return booking.get(bookingID).getCustomer();
+		}
 	}
 
 	/**
