@@ -25,6 +25,8 @@ import org.slf4j.LoggerFactory;
 import Classes.InvalidIDException;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToRestaurantMapImpl;
+import Classes.Inventory.InventoryFactory;
+import Classes.Inventory.Item;
 import Classes.Restaurants.Reservation;
 import Classes.Restaurants.Restaurant;
 import Classes.Restaurants.RestaurantMenu;
@@ -541,6 +543,8 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 		}
 		
 		Restaurant rest = RestaurantsFactory.eINSTANCE.createRestaurant();
+		RestaurantMenu menu = RestaurantsFactory.eINSTANCE.createRestaurantMenu();
+		rest.setMenu(menu);
 		restaurant.put(name, rest);
 	}
 
@@ -625,9 +629,10 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated NOT
 	 */
 	public void addMenuItem(String restaurantID, String itemID) throws InvalidIDException{
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Restaurant rest = getRestaurantByID(restaurantID);
+		RestaurantMenu menu = rest.getMenu();		
+		menu.addItem(itemID);
+		
 	}
 
 	/**
