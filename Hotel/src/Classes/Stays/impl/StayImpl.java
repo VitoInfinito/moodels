@@ -391,12 +391,10 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addCheckedInGuest(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		checkedInGuests.add(SSID);
 	}
 
 	/**
