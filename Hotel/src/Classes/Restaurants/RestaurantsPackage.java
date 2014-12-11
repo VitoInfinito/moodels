@@ -230,13 +230,22 @@ public interface RestaurantsPackage extends EPackage {
 	int IRESTAURANTS_ACCESS___GET_RESERVATION_TO_TIME__STRING_STRING = 16;
 
 	/**
+	 * The operation id for the '<em>Search Restaurant Reservations With Time</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IRESTAURANTS_ACCESS___SEARCH_RESTAURANT_RESERVATIONS_WITH_TIME__STRING_STRING_DATE_DATE = 17;
+
+	/**
 	 * The number of operations of the '<em>IRestaurants Access</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRESTAURANTS_ACCESS_OPERATION_COUNT = 17;
+	int IRESTAURANTS_ACCESS_OPERATION_COUNT = 18;
 
 	/**
 	 * The meta object id for the '{@link Classes.Restaurants.IRestaurantsManage <em>IRestaurants Manage</em>}' class.
@@ -409,6 +418,15 @@ public interface RestaurantsPackage extends EPackage {
 	 * @ordered
 	 */
 	int IRESTAURANTS_MANAGE___GET_RESERVATION_TO_TIME__STRING_STRING = IRESTAURANTS_ACCESS___GET_RESERVATION_TO_TIME__STRING_STRING;
+
+	/**
+	 * The operation id for the '<em>Search Restaurant Reservations With Time</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IRESTAURANTS_MANAGE___SEARCH_RESTAURANT_RESERVATIONS_WITH_TIME__STRING_STRING_DATE_DATE = IRESTAURANTS_ACCESS___SEARCH_RESTAURANT_RESERVATIONS_WITH_TIME__STRING_STRING_DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Add Restaurant</em>' operation.
@@ -689,6 +707,15 @@ public interface RestaurantsPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESTAURANTS_MANAGER___GET_RESERVATION_TO_TIME__STRING_STRING = IRESTAURANTS_MANAGE___GET_RESERVATION_TO_TIME__STRING_STRING;
+
+	/**
+	 * The operation id for the '<em>Search Restaurant Reservations With Time</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESTAURANTS_MANAGER___SEARCH_RESTAURANT_RESERVATIONS_WITH_TIME__STRING_STRING_DATE_DATE = IRESTAURANTS_MANAGE___SEARCH_RESTAURANT_RESERVATIONS_WITH_TIME__STRING_STRING_DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Add Restaurant</em>' operation.
@@ -1337,6 +1364,16 @@ public interface RestaurantsPackage extends EPackage {
 	EOperation getIRestaurantsAccess__GetReservationToTime__String_String();
 
 	/**
+	 * Returns the meta object for the '{@link Classes.Restaurants.IRestaurantsAccess#searchRestaurantReservationsWithTime(java.lang.String, java.lang.String, java.util.Date, java.util.Date) <em>Search Restaurant Reservations With Time</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Search Restaurant Reservations With Time</em>' operation.
+	 * @see Classes.Restaurants.IRestaurantsAccess#searchRestaurantReservationsWithTime(java.lang.String, java.lang.String, java.util.Date, java.util.Date)
+	 * @generated
+	 */
+	EOperation getIRestaurantsAccess__SearchRestaurantReservationsWithTime__String_String_Date_Date();
+
+	/**
 	 * Returns the meta object for class '{@link Classes.Restaurants.RestaurantsManager <em>Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1828,6 +1865,14 @@ public interface RestaurantsPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IRESTAURANTS_ACCESS___GET_RESERVATION_TO_TIME__STRING_STRING = eINSTANCE.getIRestaurantsAccess__GetReservationToTime__String_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Search Restaurant Reservations With Time</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IRESTAURANTS_ACCESS___SEARCH_RESTAURANT_RESERVATIONS_WITH_TIME__STRING_STRING_DATE_DATE = eINSTANCE.getIRestaurantsAccess__SearchRestaurantReservationsWithTime__String_String_Date_Date();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Restaurants.impl.RestaurantsManagerImpl <em>Manager</em>}' class.

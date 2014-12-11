@@ -160,4 +160,12 @@ public interface IRestaurantsAccess extends EObject {
 	 */
 	Date getReservationToTime(String restaurantID, String reservationID);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
+	 * @generated
+	 */
+	void searchRestaurantReservationsWithTime(String restaurantID, String keyword, Date from, Date to);
+
 } // IRestaurantsAccess

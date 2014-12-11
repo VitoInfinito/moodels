@@ -1248,6 +1248,12 @@
         <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="reservationID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
+      <eOperations name="searchRestaurantReservationsWithTime" ordered="false" lowerBound="1">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RestaurantsManager" eSuperTypes="#//Restaurants/IRestaurantsManage">
       <eStructuralFeatures xsi:type="ecore:EReference" name="restaurant" ordered="false"

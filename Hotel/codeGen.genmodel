@@ -1154,6 +1154,12 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getReservationToTime/restaurantID"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/getReservationToTime/reservationID"/>
         </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurantReservationsWithTime">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurantReservationsWithTime/restaurantID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurantReservationsWithTime/keyword"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurantReservationsWithTime/from"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/IRestaurantsAccess/searchRestaurantReservationsWithTime/to"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Restaurants/RestaurantsManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

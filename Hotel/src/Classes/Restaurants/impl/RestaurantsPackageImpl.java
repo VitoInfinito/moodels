@@ -479,6 +479,15 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getIRestaurantsAccess__SearchRestaurantReservationsWithTime__String_String_Date_Date() {
+		return iRestaurantsAccessEClass.getEOperations().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRestaurantsManager() {
 		return restaurantsManagerEClass;
 	}
@@ -730,6 +739,7 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_RESTAURANT_MENU_ITEMS__STRING);
 		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_RESERVATION_FROM_TIME__STRING_STRING);
 		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_RESERVATION_TO_TIME__STRING_STRING);
+		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___SEARCH_RESTAURANT_RESERVATIONS_WITH_TIME__STRING_STRING_DATE_DATE);
 
 		restaurantsManagerEClass = createEClass(RESTAURANTS_MANAGER);
 		createEReference(restaurantsManagerEClass, RESTAURANTS_MANAGER__RESTAURANT);
@@ -905,6 +915,12 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 		op = initEOperation(getIRestaurantsAccess__GetReservationToTime__String_String(), ecorePackage.getEDate(), "getReservationToTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "restaurantID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "reservationID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIRestaurantsAccess__SearchRestaurantReservationsWithTime__String_String_Date_Date(), null, "searchRestaurantReservationsWithTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "restaurantID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(restaurantsManagerEClass, RestaurantsManager.class, "RestaurantsManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRestaurantsManager_Restaurant(), this.getRestaurant(), null, "restaurant", null, 0, -1, RestaurantsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

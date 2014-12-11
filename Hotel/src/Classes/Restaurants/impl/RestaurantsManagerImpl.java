@@ -243,9 +243,47 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated NOT
 	 */
 	public List<String> searchRestaurantReservations(String restaurantID, String keyword) {
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
 		
+		Restaurant restaurant = getRestaurant().get(restaurantID);
+		if(restaurant == null) {
+			logger.warn("The Restaurant with ID {} could not be found. Invalid ID", restaurantID);
+			throw new InvalidIDException();
+		}
 		
-		return null;
+		EMap<String, Reservation> reservations = restaurant.getReservation();
+		
+		//Exact ID match
+		Reservation reservation = reservations.get(keyword);
+		if(reservation != null) {
+			searchResult.add(reservation.getId());
+		}
+		
+		//ID match somewhat
+		Collection<Reservation> c = reservations.values();
+		for(Reservation r : c) {
+			if(regexPattern.matcher(r.getId()).matches()) {
+				searchResult.add(r.getId());
+			}
+		}
+		
+		//Some property match exactly
+		for(Reservation r : c) {
+			if(r.getReservedBy().equalsIgnoreCase(keyword)) {
+				searchResult.add(r.getId());
+			}
+		}
+		
+		//Some property match somewhat
+		for(Reservation r : c) {
+			if(regexPattern.matcher(r.getReservedBy()).matches()) {
+				searchResult.add(r.getId());
+			}
+		}
+		
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -331,6 +369,17 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	public Date getReservationToTime(String restaurantID, String reservationID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void searchRestaurantReservationsWithTime(String restaurantID, String keyword, Date from, Date to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
