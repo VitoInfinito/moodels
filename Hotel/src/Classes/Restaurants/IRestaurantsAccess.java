@@ -163,9 +163,9 @@ public interface IRestaurantsAccess extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	void searchRestaurantReservationsWithTime(String restaurantID, String keyword, Date from, Date to);
+	EList<String> searchRestaurantReservationsWithTime(String restaurantID, String keyword, Date from, Date to);
 
 } // IRestaurantsAccess

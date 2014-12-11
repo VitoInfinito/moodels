@@ -379,7 +379,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchRestaurantReservationsWithTime(String restaurantID, String keyword, Date from, Date to) {
+	public EList<String> searchRestaurantReservationsWithTime(String restaurantID, String keyword, Date from, Date to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

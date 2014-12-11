@@ -3,8 +3,6 @@
 package Classes.Bills;
 
 import java.util.Date;
-import java.util.List;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
@@ -38,7 +36,7 @@ public interface IBills extends EObject {
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
-	List<String> getAllBillsNotPaid();
+	EList<String> getAllBillsNotPaid();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -54,7 +52,7 @@ public interface IBills extends EObject {
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
-	List<String> getAllBillIDs();
+	EList<String> getAllBillIDs();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,7 +68,7 @@ public interface IBills extends EObject {
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
-	List<String> getAllPayedBills();
+	EList<String> getAllPayedBills();
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -1383,6 +1383,11 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_dvGB8IE7EeSRHohs3wWePg" name="to">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PL4lQIE9EeSRHohs3wWePg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QFyowIE9EeSRHohs3wWePg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QFzP0IE9EeSRHohs3wWePg" value="*"/>
+        </ownedParameter>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9NQ6npsEeST-65JbGUt8g" name="RestaurantsManager" visibility="package">

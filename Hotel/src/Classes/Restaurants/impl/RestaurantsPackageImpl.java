@@ -916,7 +916,7 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 		addEParameter(op, theTypesPackage.getString(), "restaurantID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "reservationID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIRestaurantsAccess__SearchRestaurantReservationsWithTime__String_String_Date_Date(), null, "searchRestaurantReservationsWithTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRestaurantsAccess__SearchRestaurantReservationsWithTime__String_String_Date_Date(), theTypesPackage.getString(), "searchRestaurantReservationsWithTime", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "restaurantID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);

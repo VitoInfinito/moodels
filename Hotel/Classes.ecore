@@ -1257,7 +1257,8 @@
         <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="reservationID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="searchRestaurantReservationsWithTime" ordered="false" lowerBound="1">
+      <eOperations name="searchRestaurantReservationsWithTime" ordered="false" upperBound="-1"
+          eType="ecore:EDataType types.ecore#//String">
         <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="keyword" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
