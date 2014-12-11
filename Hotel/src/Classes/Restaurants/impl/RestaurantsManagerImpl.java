@@ -24,6 +24,7 @@ import org.slf4j.LoggerFactory;
 import Classes.InvalidIDException;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToRestaurantMapImpl;
+import Classes.Requests.Request;
 import Classes.Restaurants.Reservation;
 import Classes.Restaurants.Restaurant;
 import Classes.Restaurants.RestaurantMenu;
@@ -382,12 +383,19 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void cancelReservation(String restaurantID, String reservationID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Restaurant rest = restaurant.get(restaurantID);
+		if(rest == null) {
+			logger.warn("The Restaurant with ID {} could not be found. Invalid ID", restaurantID);
+			throw new InvalidIDException();
+		}
+		Reservation reservation = rest.getReservation().removeKey(reservationID);
+		if(reservation == null) {
+			logger.warn("The Reservation with ID {} could not be found. Invalid ID", reservationID);
+			throw new InvalidIDException();
+		}	
 	}
 
 	/**
