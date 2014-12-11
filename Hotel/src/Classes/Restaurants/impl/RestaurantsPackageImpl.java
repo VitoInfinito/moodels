@@ -443,7 +443,7 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRestaurantsAccess__GetAvailableTablesByNbrGuests__Date_Date_int() {
+	public EOperation getIRestaurantsAccess__GetAvailableTablesByNbrGuests__String_Date_Date_int() {
 		return iRestaurantsAccessEClass.getEOperations().get(13);
 	}
 
@@ -735,7 +735,7 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___MAKE_RESERVATION__STRING_ELIST_STRING_DATE_DATE);
 		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___CANCEL_RESERVATION__STRING_STRING);
 		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___CHANGE_RESERVED_TABLES__STRING_STRING_ELIST);
-		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_AVAILABLE_TABLES_BY_NBR_GUESTS__DATE_DATE_INT);
+		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_AVAILABLE_TABLES_BY_NBR_GUESTS__STRING_DATE_DATE_INT);
 		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_RESTAURANT_MENU_ITEMS__STRING);
 		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_RESERVATION_FROM_TIME__STRING_STRING);
 		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_RESERVATION_TO_TIME__STRING_STRING);
@@ -900,7 +900,8 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 		addEParameter(op, theTypesPackage.getString(), "reservationID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "tables", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIRestaurantsAccess__GetAvailableTablesByNbrGuests__Date_Date_int(), theTypesPackage.getString(), "getAvailableTablesByNbrGuests", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRestaurantsAccess__GetAvailableTablesByNbrGuests__String_Date_Date_int(), theTypesPackage.getString(), "getAvailableTablesByNbrGuests", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "restaurantID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "nbrGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);

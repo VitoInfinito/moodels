@@ -1245,6 +1245,7 @@
       </eOperations>
       <eOperations name="getAvailableTablesByNbrGuests" ordered="false" upperBound="-1"
           eType="ecore:EDataType types.ecore#//String">
+        <eParameters name="restaurantID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="to" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
         <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
         <eParameters name="nbrGuests" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>

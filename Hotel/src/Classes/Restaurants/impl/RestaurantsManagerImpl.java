@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +25,6 @@ import org.slf4j.LoggerFactory;
 import Classes.InvalidIDException;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToRestaurantMapImpl;
-import Classes.Requests.Request;
 import Classes.Restaurants.Reservation;
 import Classes.Restaurants.Restaurant;
 import Classes.Restaurants.RestaurantMenu;
@@ -105,6 +105,16 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	protected EClass eStaticClass() {
 		return RestaurantsPackage.Literals.RESTAURANTS_MANAGER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public EMap<String, Restaurant> getRestaurant() {
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -357,6 +367,27 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	public void makeReservation(String restaurantID, EList<String> tables, String guestID, Date to, Date from) {
+		Reservation reservation = RestaurantsFactory.eINSTANCE.createReservation();
+		
+		reservation.setId(generateReservationID());
+		reservation.setReservedBy(guestID);
+		reservation.setFrom(from);
+		reservation.setTo(to);
+		
+		EMap<String, RestaurantTable> restTables = restaurant.get(restaurantID).getRestaurantTable();
+		for(String table : tables) {
+			reservation.getRestaurantTable().add(restTables.get(table));
+		}
+		
+		restaurant.get(restaurantID).getReservation().put(reservation.getId(), reservation);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	public void makeReservation(String restaurantID, List<String> tables, String guestID, Date to, Date from) {
 		Reservation reservation = RestaurantsFactory.eINSTANCE.createReservation();
 		
@@ -405,7 +436,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getAvailableTablesByNbrGuests(Date to, Date from, int nbrGuests) {
+	public EList<String> getAvailableTablesByNbrGuests(String restaurantID, Date to, Date from, int nbrGuests) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -416,7 +447,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public List<String> getRestaurantMenuItems(String restaurantID) {
+	public EList<String> getRestaurantMenuItems(String restaurantID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

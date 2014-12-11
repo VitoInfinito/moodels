@@ -1323,6 +1323,9 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_TFmKoH_xEeS5IpkkkJsVew" name="getAvailableTablesByNbrGuests">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__XMQkIFUEeSRHohs3wWePg" name="restaurantID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ukw3UH_xEeS5IpkkkJsVew" name="to">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
         </ownedParameter>

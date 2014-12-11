@@ -110,7 +110,7 @@ public interface IRestaurantsAccess extends EObject {
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" tablesDataType="org.eclipse.uml2.types.String" tablesMany="true" tablesOrdered="false" guestIDDataType="org.eclipse.uml2.types.String" guestIDRequired="true" guestIDOrdered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false"
 	 * @generated
 	 */
-	void makeReservation(String restaurantID, List<String> tables, String guestID, Date to, Date from);
+	void makeReservation(String restaurantID, EList<String> tables, String guestID, Date to, Date from);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,10 +131,10 @@ public interface IRestaurantsAccess extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false" nbrGuestsDataType="org.eclipse.uml2.types.Integer" nbrGuestsRequired="true" nbrGuestsOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false" nbrGuestsDataType="org.eclipse.uml2.types.Integer" nbrGuestsRequired="true" nbrGuestsOrdered="false"
 	 * @generated NOT
 	 */
-	List<String> getAvailableTablesByNbrGuests(Date to, Date from, int nbrGuests);
+	List<String> getAvailableTablesByNbrGuests(String restaurantID, Date to, Date from, int nbrGuests);
 
 	/**
 	 * <!-- begin-user-doc -->
