@@ -2,8 +2,8 @@
  */
 package Classes.Bills.impl;
 
-import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -144,40 +144,40 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIssueDate()
-	 * @generated NOT
+	 * @generated
 	 * @ordered
 	 */
-	protected static final LocalDateTime ISSUE_DATE_EDEFAULT = null;
+	protected static final Date ISSUE_DATE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getIssueDate() <em>Issue Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIssueDate()
-	 * @generated NOT
+	 * @generated
 	 * @ordered
 	 */
-	protected LocalDateTime issueDate = ISSUE_DATE_EDEFAULT;
+	protected Date issueDate = ISSUE_DATE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPaymentDate() <em>Payment Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPaymentDate()
-	 * @generated NOT
+	 * @generated
 	 * @ordered
 	 */
-	protected static final LocalDateTime PAYMENT_DATE_EDEFAULT = null;
+	protected static final Date PAYMENT_DATE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getPaymentDate() <em>Payment Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPaymentDate()
-	 * @generated NOT
+	 * @generated
 	 * @ordered
 	 */
-	protected LocalDateTime paymentDate = PAYMENT_DATE_EDEFAULT;
+	protected Date paymentDate = PAYMENT_DATE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTotalAmount() <em>Total Amount</em>}' attribute.
@@ -329,19 +329,19 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public LocalDateTime getIssueDate() {
+	public Date getIssueDate() {
 		return issueDate;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public void setIssueDate(LocalDateTime newIssueDate) {
-		LocalDateTime oldIssueDate = issueDate;
+	public void setIssueDate(Date newIssueDate) {
+		Date oldIssueDate = issueDate;
 		issueDate = newIssueDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BillsPackage.BILL__ISSUE_DATE, oldIssueDate, issueDate));
@@ -350,19 +350,19 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public LocalDateTime getPaymentDate() {
+	public Date getPaymentDate() {
 		return paymentDate;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public void setPaymentDate(LocalDateTime newPaymentDate) {
-		LocalDateTime oldPaymentDate = paymentDate;
+	public void setPaymentDate(Date newPaymentDate) {
+		Date oldPaymentDate = paymentDate;
 		paymentDate = newPaymentDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BillsPackage.BILL__PAYMENT_DATE, oldPaymentDate, paymentDate));
@@ -392,7 +392,7 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
@@ -422,7 +422,7 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
@@ -449,10 +449,10 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 				setBookable((String)newValue);
 				return;
 			case BillsPackage.BILL__ISSUE_DATE:
-				setIssueDate((LocalDateTime)newValue);
+				setIssueDate((Date)newValue);
 				return;
 			case BillsPackage.BILL__PAYMENT_DATE:
-				setPaymentDate((LocalDateTime)newValue);
+				setPaymentDate((Date)newValue);
 				return;
 			case BillsPackage.BILL__TOTAL_AMOUNT:
 				setTotalAmount((Double)newValue);

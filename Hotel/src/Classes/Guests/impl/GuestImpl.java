@@ -3,9 +3,9 @@
 package Classes.Guests.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.time.LocalDateTime;
 import java.util.Collection;
 
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -398,9 +398,9 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public void addStay(String bookableID, String bookingID, LocalDateTime fromDate, LocalDateTime toDate) {
+	public void addStay(String bookableID, String bookingID, Date fromDate, Date toDate) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -591,13 +591,13 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case GuestsPackage.GUEST___ADD_STAY__STRING_STRING_DATE_DATE:
-				addStay((String)arguments.get(0), (String)arguments.get(1), (LocalDateTime)arguments.get(2), (LocalDateTime)arguments.get(3));
+				addStay((String)arguments.get(0), (String)arguments.get(1), (Date)arguments.get(2), (Date)arguments.get(3));
 				return null;
 			case GuestsPackage.GUEST___REMOVE_STAY__STRING:
 				removeStay((String)arguments.get(0));

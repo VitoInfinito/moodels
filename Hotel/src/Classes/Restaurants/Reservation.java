@@ -2,8 +2,7 @@
  */
 package Classes.Restaurants;
 
-
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -109,9 +108,9 @@ public interface Reservation extends EObject {
 	 * @see #setFrom(Date)
 	 * @see Classes.Restaurants.RestaurantsPackage#getReservation_From()
 	 * @model required="true" ordered="false"
-	 * @generated NOT
+	 * @generated
 	 */
-	LocalDateTime getFrom();
+	Date getFrom();
 
 	/**
 	 * Sets the value of the '{@link Classes.Restaurants.Reservation#getFrom <em>From</em>}' attribute.
@@ -119,9 +118,9 @@ public interface Reservation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>From</em>' attribute.
 	 * @see #getFrom()
-	 * @generated NOT
+	 * @generated
 	 */
-	void setFrom(LocalDateTime value);
+	void setFrom(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>To</b></em>' attribute.
@@ -135,9 +134,9 @@ public interface Reservation extends EObject {
 	 * @see #setTo(Date)
 	 * @see Classes.Restaurants.RestaurantsPackage#getReservation_To()
 	 * @model required="true" ordered="false"
-	 * @generated NOT
+	 * @generated
 	 */
-	LocalDateTime getTo();
+	Date getTo();
 
 	/**
 	 * Sets the value of the '{@link Classes.Restaurants.Reservation#getTo <em>To</em>}' attribute.
@@ -145,8 +144,8 @@ public interface Reservation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>To</em>' attribute.
 	 * @see #getTo()
-	 * @generated NOT
+	 * @generated
 	 */
-	void setTo(LocalDateTime value);
+	void setTo(Date value);
 
 } // Reservation

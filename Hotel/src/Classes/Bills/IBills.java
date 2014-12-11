@@ -2,7 +2,6 @@
  */
 package Classes.Bills;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -45,9 +44,9 @@ public interface IBills extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
-	 * @generated NOT
+	 * @generated
 	 */
-	LocalDateTime getBillPaymentDate(String billID);
+	Date getBillPaymentDate(String billID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,9 +116,9 @@ public interface IBills extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
-	 * @generated NOT
+	 * @generated
 	 */
-	LocalDateTime getBillIssueDate(String billID);
+	Date getBillIssueDate(String billID);
 
 	/**
 	 * <!-- begin-user-doc -->

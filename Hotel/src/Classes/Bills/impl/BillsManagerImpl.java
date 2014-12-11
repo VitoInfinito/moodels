@@ -2,11 +2,10 @@
  */
 package Classes.Bills.impl;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.lang.reflect.InvocationTargetException;
-
+import java.util.Date;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -16,7 +15,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import Classes.InvalidIDException;
 import Classes.Banking.CustomerProvides;
 import Classes.Bills.Bill;
@@ -154,7 +152,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public LocalDateTime getBillPaymentDate(String billID) {
+	public Date getBillPaymentDate(String billID) {
 		if (bill.containsKey(billID)) {
 			return bill.get(billID).getIssueDate();
 		} else {
@@ -256,9 +254,9 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public LocalDateTime getBillIssueDate(String billID) {
+	public Date getBillIssueDate(String billID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

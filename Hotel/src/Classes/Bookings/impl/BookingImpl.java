@@ -3,8 +3,8 @@
 package Classes.Bookings.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -113,20 +113,20 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIssueDate()
-	 * @generated NOT
+	 * @generated
 	 * @ordered
 	 */
-	protected static final LocalDateTime ISSUE_DATE_EDEFAULT = null;
+	protected static final Date ISSUE_DATE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getIssueDate() <em>Issue Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIssueDate()
-	 * @generated NOT
+	 * @generated
 	 * @ordered
 	 */
-	protected LocalDateTime issueDate = ISSUE_DATE_EDEFAULT;
+	protected Date issueDate = ISSUE_DATE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getCreditCard() <em>Credit Card</em>}' reference.
@@ -255,19 +255,19 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public LocalDateTime getIssueDate() {
+	public Date getIssueDate() {
 		return issueDate;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public void setIssueDate(LocalDateTime newIssueDate) {
-		LocalDateTime oldIssueDate = issueDate;
+	public void setIssueDate(Date newIssueDate) {
+		Date oldIssueDate = issueDate;
 		issueDate = newIssueDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BookingsPackage.BOOKING__ISSUE_DATE, oldIssueDate, issueDate));
@@ -384,7 +384,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
@@ -404,7 +404,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				setNbrGuests((Integer)newValue);
 				return;
 			case BookingsPackage.BOOKING__ISSUE_DATE:
-				setIssueDate((LocalDateTime)newValue);
+				setIssueDate((Date)newValue);
 				return;
 			case BookingsPackage.BOOKING__CREDIT_CARD:
 				setCreditCard((CreditCard)newValue);

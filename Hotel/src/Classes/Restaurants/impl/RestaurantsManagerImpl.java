@@ -3,14 +3,13 @@
 package Classes.Restaurants.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -20,7 +19,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import Classes.InvalidIDException;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToRestaurantMapImpl;
@@ -188,12 +186,12 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<String> getAvailableTables(LocalDateTime to, LocalDateTime from, String restaurantID) {
+	public List<String> getAvailableTables(Date to, Date from, String restaurantID) {
 		List<String> available = new ArrayList<String>();
 		List<String> notAvailable = new ArrayList<String>();
 		for(Reservation reservation : getRestaurantByID(restaurantID).getReservation().values()) {
 			if((reservation.getFrom().compareTo(from) >= 0 && reservation.getFrom().compareTo(to) <= 0)
-					&& (reservation.getTo().compareTo(from) >= 0 && reservation.getTo().compareTo(to) <= 0)) {
+					|| (reservation.getTo().compareTo(from) >= 0 && reservation.getTo().compareTo(to) <= 0)) {
 				for(RestaurantTable table : reservation.getRestaurantTable()) {
 					if(!notAvailable.contains(table.getTableNumber())) {
 						notAvailable.add(table.getTableNumber());
@@ -375,9 +373,9 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public void makeReservation(String restaurantID, EList<String> tables, String guestID, LocalDateTime to, LocalDateTime from) {
+	public void makeReservation(String restaurantID, EList<String> tables, String guestID, Date to, Date from) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -388,7 +386,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void makeReservation(String restaurantID, List<String> tables, String guestID, LocalDateTime to, LocalDateTime from) {
+	public void makeReservation(String restaurantID, List<String> tables, String guestID, Date to, Date from) {
 		Reservation reservation = RestaurantsFactory.eINSTANCE.createReservation();
 		
 		reservation.setId(generateReservationID());
@@ -439,7 +437,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<String> getAvailableTablesByNbrGuests(String restaurantID, LocalDateTime to, LocalDateTime from, int nbrGuests) {
+	public List<String> getAvailableTablesByNbrGuests(String restaurantID, Date to, Date from, int nbrGuests) {
 		Restaurant rest = getRestaurantByID(restaurantID);
 		List<String> availableTables = getAvailableTables(to, from, restaurantID);
 		List<String> newList = new ArrayList<String>();
@@ -467,7 +465,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public LocalDateTime getReservationFromTime(String restaurantID, String reservationID) {
+	public Date getReservationFromTime(String restaurantID, String reservationID) {
 		return getReservationByID(restaurantID, reservationID).getFrom();
 	}
 
@@ -476,7 +474,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public LocalDateTime getReservationToTime(String restaurantID, String reservationID) {
+	public Date getReservationToTime(String restaurantID, String reservationID) {
 		return getReservationByID(restaurantID, reservationID).getTo();
 	}
 
@@ -485,7 +483,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<String> searchRestaurantReservationsWithTime(String restaurantID, String keyword, LocalDateTime from, LocalDateTime to) {
+	public List<String> searchRestaurantReservationsWithTime(String restaurantID, String keyword, Date from, Date to) {
 		keyword = keyword.trim();
 		Set<String> searchResult = new LinkedHashSet<String>();
 		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
