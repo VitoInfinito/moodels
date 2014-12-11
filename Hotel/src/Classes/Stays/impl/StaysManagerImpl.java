@@ -520,12 +520,18 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void changePeriodOfStay(String stayID, Date from, Date to) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Stay stay = stays.get(stayID);
+		
+		if (stay != null) {
+			stay.setFromDate(from);
+			stay.setToDate(to);
+		} else {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
