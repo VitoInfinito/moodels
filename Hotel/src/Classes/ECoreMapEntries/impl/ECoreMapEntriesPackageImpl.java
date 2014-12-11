@@ -106,7 +106,7 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass stringToItemTypeMapEClass = null;
+	private EClass stringToItemMapEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -469,8 +469,8 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getStringToItemTypeMap() {
-		return stringToItemTypeMapEClass;
+	public EClass getStringToItemMap() {
+		return stringToItemMapEClass;
 	}
 
 	/**
@@ -478,8 +478,8 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getStringToItemTypeMap_Key() {
-		return (EAttribute)stringToItemTypeMapEClass.getEStructuralFeatures().get(0);
+	public EAttribute getStringToItemMap_Key() {
+		return (EAttribute)stringToItemMapEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -487,8 +487,8 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStringToItemTypeMap_Value() {
-		return (EReference)stringToItemTypeMapEClass.getEStructuralFeatures().get(1);
+	public EReference getStringToItemMap_Value() {
+		return (EReference)stringToItemMapEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -763,9 +763,9 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 		createEAttribute(stringToAccountMapEClass, STRING_TO_ACCOUNT_MAP__KEY);
 		createEReference(stringToAccountMapEClass, STRING_TO_ACCOUNT_MAP__VALUE);
 
-		stringToItemTypeMapEClass = createEClass(STRING_TO_ITEM_TYPE_MAP);
-		createEAttribute(stringToItemTypeMapEClass, STRING_TO_ITEM_TYPE_MAP__KEY);
-		createEReference(stringToItemTypeMapEClass, STRING_TO_ITEM_TYPE_MAP__VALUE);
+		stringToItemMapEClass = createEClass(STRING_TO_ITEM_MAP);
+		createEAttribute(stringToItemMapEClass, STRING_TO_ITEM_MAP__KEY);
+		createEReference(stringToItemMapEClass, STRING_TO_ITEM_MAP__VALUE);
 
 		stringToRequestMapEClass = createEClass(STRING_TO_REQUEST_MAP);
 		createEAttribute(stringToRequestMapEClass, STRING_TO_REQUEST_MAP__KEY);
@@ -874,9 +874,9 @@ public class ECoreMapEntriesPackageImpl extends EPackageImpl implements ECoreMap
 		initEAttribute(getStringToAccountMap_Key(), theTypesPackage.getString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getStringToAccountMap_Value(), theAccountsPackage.getAccount(), null, "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(stringToItemTypeMapEClass, Map.Entry.class, "StringToItemTypeMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStringToItemTypeMap_Key(), theTypesPackage.getString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStringToItemTypeMap_Value(), theInventoryPackage.getItem(), null, "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(stringToItemMapEClass, Map.Entry.class, "StringToItemMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStringToItemMap_Key(), theTypesPackage.getString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStringToItemMap_Value(), theInventoryPackage.getItem(), null, "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stringToRequestMapEClass, Map.Entry.class, "StringToRequestMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStringToRequestMap_Key(), theTypesPackage.getString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

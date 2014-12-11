@@ -36,7 +36,7 @@ Customer Service representative inherits the uses of Staff</body>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CVQ6kXbpEeSwu4_phSkYgQ" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CVQ6knbpEeSwu4_phSkYgQ" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_v5CIcHbrEeSWb_3hJA4u-g" name="itemType">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_v5CIcHbrEeSWb_3hJA4u-g" name="Item">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v5CIcXbrEeSWb_3hJA4u-g"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v5CIcnbrEeSWb_3hJA4u-g" value="*"/>
           </ownedAttribute>
@@ -616,13 +616,13 @@ Customer Service representative inherits the uses of Staff</body>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_OlBD4HcIEeS8a9tzu_DvHw" name="changeItemName"/>
           </nestedClassifier>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_tCuY8HcHEeS8a9tzu_DvHw" name="Inventory" visibility="package">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_7PYr8HcHEeS8a9tzu_DvHw" name="itemType" type="_viF-YHcHEeS8a9tzu_DvHw" association="_7PZTAHcHEeS8a9tzu_DvHw">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_7PYr8HcHEeS8a9tzu_DvHw" name="Item" type="_viF-YHcHEeS8a9tzu_DvHw" association="_7PZTAHcHEeS8a9tzu_DvHw">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7PYr8XcHEeS8a9tzu_DvHw"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7PYr8ncHEeS8a9tzu_DvHw" value="*"/>
             </ownedAttribute>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_AknrQHcIEeS8a9tzu_DvHw" client="_tCuY8HcHEeS8a9tzu_DvHw" supplier="_ouNOkHbtEeSWb_3hJA4u-g" contract="_ouNOkHbtEeSWb_3hJA4u-g"/>
           </nestedClassifier>
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_viF-YHcHEeS8a9tzu_DvHw" name="ItemType" visibility="package">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_viF-YHcHEeS8a9tzu_DvHw" name="Item" visibility="package">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_1VfKEHbrEeSWb_3hJA4u-g" name="name" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedAttribute>

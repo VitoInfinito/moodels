@@ -75,7 +75,7 @@ public class StringToItemMapImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ECoreMapEntriesPackage.Literals.STRING_TO_ITEM_TYPE_MAP;
+		return ECoreMapEntriesPackage.Literals.STRING_TO_ITEM_MAP;
 	}
 
 	/**
@@ -96,7 +96,7 @@ public class StringToItemMapImpl extends MinimalEObjectImpl.Container implements
 		String oldKey = key;
 		key = newKey;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP__KEY, oldKey, key));
+			eNotify(new ENotificationImpl(this, Notification.SET, ECoreMapEntriesPackage.STRING_TO_ITEM_MAP__KEY, oldKey, key));
 	}
 
 	/**
@@ -110,7 +110,7 @@ public class StringToItemMapImpl extends MinimalEObjectImpl.Container implements
 			value = (Item)eResolveProxy(oldValue);
 			if (value != oldValue) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP__VALUE, oldValue, value));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ECoreMapEntriesPackage.STRING_TO_ITEM_MAP__VALUE, oldValue, value));
 			}
 		}
 		return value;
@@ -134,7 +134,7 @@ public class StringToItemMapImpl extends MinimalEObjectImpl.Container implements
 		Item oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, ECoreMapEntriesPackage.STRING_TO_ITEM_MAP__VALUE, oldValue, value));
 	}
 
 	/**
@@ -145,9 +145,9 @@ public class StringToItemMapImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP__KEY:
+			case ECoreMapEntriesPackage.STRING_TO_ITEM_MAP__KEY:
 				return getTypedKey();
-			case ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP__VALUE:
+			case ECoreMapEntriesPackage.STRING_TO_ITEM_MAP__VALUE:
 				if (resolve) return getTypedValue();
 				return basicGetTypedValue();
 		}
@@ -162,10 +162,10 @@ public class StringToItemMapImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP__KEY:
+			case ECoreMapEntriesPackage.STRING_TO_ITEM_MAP__KEY:
 				setTypedKey((String)newValue);
 				return;
-			case ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP__VALUE:
+			case ECoreMapEntriesPackage.STRING_TO_ITEM_MAP__VALUE:
 				setTypedValue((Item)newValue);
 				return;
 		}
@@ -180,10 +180,10 @@ public class StringToItemMapImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP__KEY:
+			case ECoreMapEntriesPackage.STRING_TO_ITEM_MAP__KEY:
 				setTypedKey(KEY_EDEFAULT);
 				return;
-			case ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP__VALUE:
+			case ECoreMapEntriesPackage.STRING_TO_ITEM_MAP__VALUE:
 				setTypedValue((Item)null);
 				return;
 		}
@@ -198,9 +198,9 @@ public class StringToItemMapImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP__KEY:
+			case ECoreMapEntriesPackage.STRING_TO_ITEM_MAP__KEY:
 				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
-			case ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP__VALUE:
+			case ECoreMapEntriesPackage.STRING_TO_ITEM_MAP__VALUE:
 				return value != null;
 		}
 		return super.eIsSet(featureID);

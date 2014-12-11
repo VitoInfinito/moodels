@@ -41,7 +41,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	private static int IDCounter = 0;
 	
 	/**
-	 * The cached value of the '{@link #getItemType() <em>Item Type</em>}' reference list.
+	 * The cached value of the '{@link #getItem() <em>Item Type</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getItems()
@@ -57,7 +57,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	 */
 	private InventoryManagerImpl() {
 		super();
-		items = new EcoreEMap<String,Item>(ECoreMapEntriesPackage.Literals.STRING_TO_ITEM_TYPE_MAP, StringToItemMapImpl.class, this, InventoryPackage.INVENTORY_MANAGER__ITEMS);
+		items = new EcoreEMap<String,Item>(ECoreMapEntriesPackage.Literals.STRING_TO_ITEM_MAP, StringToItemMapImpl.class, this, InventoryPackage.INVENTORY_MANAGER__ITEMS);
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			items.get(id).setStock(stock);
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -103,7 +103,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			return items.get(id).getPrice();
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -117,7 +117,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			return items.get(id).getName();
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -131,7 +131,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			return items.get(id).getStock();
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -145,7 +145,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			return items.get(id).getExpense();
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -179,7 +179,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			items.get(id).setName(name);
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -193,7 +193,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			items.get(id).setPrice(price);
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -207,7 +207,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			items.get(id).setExpense(expense);
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -240,7 +240,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			items.remove(id);
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}

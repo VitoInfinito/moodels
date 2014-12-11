@@ -782,10 +782,10 @@
         <eOperations name="searchItems" ordered="false" lowerBound="1"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="InventoryComponent_Inventory" eSuperTypes="#//Components/Inventory/InventoryComponent_IManageInventory">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="itemType" ordered="false"
-            upperBound="-1" eType="#//Components/Inventory/InventoryComponent_ItemType"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="Item" ordered="false"
+            upperBound="-1" eType="#//Components/Inventory/InventoryComponent_Item"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="InventoryComponent_ItemType">
+      <eClassifiers xsi:type="ecore:EClass" name="InventoryComponent_Item">
         <eOperations name="getName" ordered="false" lowerBound="1"/>
         <eOperations name="setName" ordered="false" lowerBound="1"/>
         <eOperations name="getPrice" ordered="false" lowerBound="1"/>
