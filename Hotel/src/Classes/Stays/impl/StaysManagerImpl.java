@@ -271,6 +271,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Add a bill to an existing stay
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
