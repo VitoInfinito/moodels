@@ -1408,6 +1408,9 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/addRequest/specialRequestId"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/addRequest/description"/>
         </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Requests/IRequests/createRequest">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Requests/IRequests/createRequest/description"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Requests/RequestsManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

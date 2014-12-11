@@ -1529,6 +1529,9 @@
         <eParameters name="specialRequestId" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
+      <eOperations name="createRequest" ordered="false" lowerBound="1">
+        <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RequestsManager" eSuperTypes="#//Requests/IRequests">
       <eStructuralFeatures xsi:type="ecore:EReference" name="specialRequest" ordered="false"

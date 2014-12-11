@@ -93,4 +93,12 @@ public interface IRequests extends EObject {
 	 */
 	void addRequest(String specialRequestId, String description);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
+	 * @generated
+	 */
+	void createRequest(String description);
+
 } // IRequests

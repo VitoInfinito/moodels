@@ -5,7 +5,10 @@ package Classes.Requests.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.regex.Pattern;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -38,6 +41,7 @@ import Classes.Requests.RequestsPackage;
 public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements RequestsManager {
 	private final Logger logger = LoggerFactory.getLogger(BookablesManagerImpl.class);
 	public static RequestsManagerImpl INSTANCE = new RequestsManagerImpl();
+	private static int counterID = 1;
 	
 	/**
 	 * The cached value of the '{@link #getSpecialRequest() <em>Special Request</em>}' reference list.
@@ -85,14 +89,10 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public String getRequestDescription(String specialRequestId) {
-		if(specialRequestId == null){
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
 		Request req = specialRequest.get(specialRequestId);
 		if(req == null){
 			logger.warn("The id do not beong to a special request!");
-			throw new IllegalArgumentException("The id was not found!");
+			throw new InvalidIDException("The id was not found!");
 		}
 		return req.getDescription();
 	}
@@ -103,14 +103,10 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public boolean hasRequestBeenResolved(String specialRequestId) {
-		if(specialRequestId == null){
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
 		Request req = specialRequest.get(specialRequestId);
 		if(req == null){
 			logger.warn("The id do not beong to a special request!");
-			throw new IllegalArgumentException("The id was not found!");
+			throw new InvalidIDException("The id was not found!");
 		}
 		return req.isResolved();
 	}
@@ -121,14 +117,10 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public void setRequestResolved(String specialRequestId) {
-		if(specialRequestId == null){
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
 		Request req = specialRequest.get(specialRequestId);
 		if(req == null){
 			logger.warn("The id do not beong to a special request!");
-			throw new IllegalArgumentException("The id was not found!");
+			throw new InvalidIDException("The id was not found!");
 		}
 		req.setIsResolved(true);
 
@@ -140,14 +132,10 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public void deleteRequest(String specialRequestId) {
-		if(specialRequestId == null){
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
 		Request req = specialRequest.removeKey(specialRequestId);
 		if(req == null){
 			logger.warn("The bookable with ID {} could not be found. Invalid ID!", specialRequestId);
-			throw new InvalidIDException();
+			throw new InvalidIDException("The id was not found!");
 		}
 	}
 
@@ -163,12 +151,23 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> searchRequests(String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchRequests(String keyword) {
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
+		// Exact ID match. First Order!
+		searchResult.add(specialRequest.get(keyword).getId());
+
+		// ID match somewhat. Second Order!
+		Collection<Request> tmpC = specialRequest.values();
+		for (Request sp : tmpC) {
+			if (regexPattern.matcher(sp.getId()).matches()) {
+				searchResult.add(sp.getId());
+			}
+		}
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -177,12 +176,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<String> getAllRequestIDs() {
-		Collection<Request> sReq = specialRequest.values();
-		List<String> tmp = new ArrayList<String>();
-		for(Request sp: sReq){
-			tmp.add(sp.getId());
-		}
-		return tmp;
+		return new ArrayList<String>(specialRequest.keySet());
 	}
 
 	/**
@@ -191,14 +185,10 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public void setRequestDescription(String specialRequestId, String description) {
-		if(specialRequestId == null){
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
 		Request req = specialRequest.get(specialRequestId);
 		if(req == null){
 			logger.warn("The id do not beong to a special request!");
-			throw new IllegalArgumentException("The id was not found!");
+			throw new InvalidIDException("The id was not found!");
 		}
 		req.setDescription(description);
 	}
@@ -209,14 +199,24 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public void addRequest(String specialRequestId, String description) {
-		if(specialRequestId == null){
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
+		throw new UnsupportedOperationException();
+	}
+	
+	private String generateID(){
+		return String.format("sr%06d", counterID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createRequest(String description) {
 		if(description.length() > 0){
 			logger.warn("The description is to short! Invalid argument!");
 			throw new IllegalArgumentException("The description was to short!");
 		}
+		String specialRequestId = generateID();
 		Request req = RequestsFactory.eINSTANCE.createRequest();
 		req.setDescription(description);
 		req.setId(specialRequestId);

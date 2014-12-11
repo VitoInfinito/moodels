@@ -158,13 +158,22 @@ public interface RequestsPackage extends EPackage {
 	int IREQUESTS___ADD_REQUEST__STRING_STRING = 8;
 
 	/**
+	 * The operation id for the '<em>Create Request</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IREQUESTS___CREATE_REQUEST__STRING = 9;
+
+	/**
 	 * The number of operations of the '<em>IRequests</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IREQUESTS_OPERATION_COUNT = 9;
+	int IREQUESTS_OPERATION_COUNT = 10;
 
 	/**
 	 * The meta object id for the '{@link Classes.Requests.impl.RequestsManagerImpl <em>Manager</em>}' class.
@@ -274,6 +283,15 @@ public interface RequestsPackage extends EPackage {
 	 * @ordered
 	 */
 	int REQUESTS_MANAGER___ADD_REQUEST__STRING_STRING = IREQUESTS___ADD_REQUEST__STRING_STRING;
+
+	/**
+	 * The operation id for the '<em>Create Request</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUESTS_MANAGER___CREATE_REQUEST__STRING = IREQUESTS___CREATE_REQUEST__STRING;
 
 	/**
 	 * The number of operations of the '<em>Manager</em>' class.
@@ -439,6 +457,16 @@ public interface RequestsPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIRequests__AddRequest__String_String();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Requests.IRequests#createRequest(java.lang.String) <em>Create Request</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Request</em>' operation.
+	 * @see Classes.Requests.IRequests#createRequest(java.lang.String)
+	 * @generated
+	 */
+	EOperation getIRequests__CreateRequest__String();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Requests.RequestsManager <em>Manager</em>}'.
@@ -608,6 +636,14 @@ public interface RequestsPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IREQUESTS___ADD_REQUEST__STRING_STRING = eINSTANCE.getIRequests__AddRequest__String_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Request</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IREQUESTS___CREATE_REQUEST__STRING = eINSTANCE.getIRequests__CreateRequest__String();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Requests.impl.RequestsManagerImpl <em>Manager</em>}' class.

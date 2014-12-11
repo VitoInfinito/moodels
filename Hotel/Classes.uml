@@ -3293,11 +3293,16 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT-3psEeST-65JbGUt8g" name="addRequest">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9QT-3psEeST-65JbGUt8g" name="addRequest" visibility="private">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_LXbLUH3_EeSmXdYZIHENJw" name="specialRequestId">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_N5oCUH3_EeSmXdYZIHENJw" name="description">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_PitXkIFCEeSlm8bwiTAWog" name="createRequest">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YLvC4IFCEeSlm8bwiTAWog" name="description">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>

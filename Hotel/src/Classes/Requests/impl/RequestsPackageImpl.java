@@ -276,6 +276,15 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getIRequests__CreateRequest__String() {
+		return iRequestsEClass.getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRequestsManager() {
 		return requestsManagerEClass;
 	}
@@ -363,6 +372,7 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 		createEOperation(iRequestsEClass, IREQUESTS___GET_ALL_REQUEST_IDS);
 		createEOperation(iRequestsEClass, IREQUESTS___SET_REQUEST_DESCRIPTION__STRING_STRING);
 		createEOperation(iRequestsEClass, IREQUESTS___ADD_REQUEST__STRING_STRING);
+		createEOperation(iRequestsEClass, IREQUESTS___CREATE_REQUEST__STRING);
 
 		requestsManagerEClass = createEClass(REQUESTS_MANAGER);
 		createEReference(requestsManagerEClass, REQUESTS_MANAGER__SPECIAL_REQUEST);
@@ -436,6 +446,9 @@ public class RequestsPackageImpl extends EPackageImpl implements RequestsPackage
 
 		op = initEOperation(getIRequests__AddRequest__String_String(), null, "addRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "specialRequestId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIRequests__CreateRequest__String(), null, "createRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(requestsManagerEClass, RequestsManager.class, "RequestsManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
