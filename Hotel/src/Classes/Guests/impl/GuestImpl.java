@@ -17,6 +17,8 @@ import org.slf4j.LoggerFactory;
 import Classes.InvalidIDException;
 import Classes.Guests.Guest;
 import Classes.Guests.GuestsPackage;
+import Classes.Requests.RequestsManager;
+import Classes.Stays.StaysManager;
 
 /**
  * <!-- begin-user-doc -->
@@ -410,6 +412,7 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 */
 	public void removeStay(String stayID) {
 		if(stays.contains(stayID)) {
+			StaysManager.INSTANCE.removeStay(stayID);
 			stays.remove(stayID);
 		} else {
 			logger.warn("A stay with stayID {} could not be found.", stayID);
@@ -435,6 +438,7 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 */
 	public void removeRequest(String requestID) {
 		if(stays.contains(requestID)) {
+			RequestsManager.INSTANCE.deleteRequest(requestID);
 			stays.remove(requestID);
 		} else {
 			logger.warn("A stay with requestID {} could not be found.", requestID);
