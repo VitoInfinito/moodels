@@ -259,11 +259,11 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public void removeStay(String stayID) {
-		if (!stay.contains(stayID)) {
+		if (!stays.contains(stayID)) {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
 		} else {
-			stay.removeKey(stayID);
+			stays.removeKey(stayID);
 		}
 	}
 
