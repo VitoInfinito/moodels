@@ -3,6 +3,7 @@
 package Classes.Staff;
 
 import java.util.Date;
+import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -27,9 +28,9 @@ public interface IStaff extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getAllStaff();
+	List<String> getAllStaff();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,7 +134,7 @@ public interface IStaff extends EObject {
 	 * @model SSIDRequired="true" SSIDOrdered="false" salaryContractRequired="true" salaryContractOrdered="false"
 	 * @generated
 	 */
-	void changeStaffSalaryContract(String SSID, String salaryContract);
+	void changeStaffSalaryContract(String SSID, SalaryContract salaryContract);
 
 	/**
 	 * <!-- begin-user-doc -->

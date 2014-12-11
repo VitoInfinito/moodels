@@ -200,7 +200,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING = 13;
+	int ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_SALARYCONTRACT = 13;
 
 	/**
 	 * The operation id for the '<em>Schedule Staff</em>' operation.
@@ -390,7 +390,7 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_MANAGER___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING = ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING;
+	int STAFF_MANAGER___CHANGE_STAFF_SALARY_CONTRACT__STRING_SALARYCONTRACT = ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_SALARYCONTRACT;
 
 	/**
 	 * The operation id for the '<em>Schedule Staff</em>' operation.
@@ -539,13 +539,22 @@ public interface StaffPackage extends EPackage {
 	int SALARY_CONTRACT___GET_SALARY = 0;
 
 	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SALARY_CONTRACT___GET_TYPE = 1;
+
+	/**
 	 * The number of operations of the '<em>Salary Contract</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SALARY_CONTRACT_OPERATION_COUNT = 1;
+	int SALARY_CONTRACT_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link Classes.Staff.impl.MonthlySalaryContractImpl <em>Monthly Salary Contract</em>}' class.
@@ -567,13 +576,22 @@ public interface StaffPackage extends EPackage {
 	int MONTHLY_SALARY_CONTRACT__SALARY = SALARY_CONTRACT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONTHLY_SALARY_CONTRACT__TYPE = SALARY_CONTRACT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Monthly Salary Contract</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MONTHLY_SALARY_CONTRACT_FEATURE_COUNT = SALARY_CONTRACT_FEATURE_COUNT + 1;
+	int MONTHLY_SALARY_CONTRACT_FEATURE_COUNT = SALARY_CONTRACT_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Salary</em>' operation.
@@ -583,6 +601,15 @@ public interface StaffPackage extends EPackage {
 	 * @ordered
 	 */
 	int MONTHLY_SALARY_CONTRACT___GET_SALARY = SALARY_CONTRACT___GET_SALARY;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONTHLY_SALARY_CONTRACT___GET_TYPE = SALARY_CONTRACT___GET_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Monthly Salary Contract</em>' class.
@@ -613,13 +640,22 @@ public interface StaffPackage extends EPackage {
 	int HOURLY_SALARY_CONTRACT__SALARY = SALARY_CONTRACT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOURLY_SALARY_CONTRACT__TYPE = SALARY_CONTRACT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Hourly Salary Contract</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOURLY_SALARY_CONTRACT_FEATURE_COUNT = SALARY_CONTRACT_FEATURE_COUNT + 1;
+	int HOURLY_SALARY_CONTRACT_FEATURE_COUNT = SALARY_CONTRACT_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Salary</em>' operation.
@@ -629,6 +665,15 @@ public interface StaffPackage extends EPackage {
 	 * @ordered
 	 */
 	int HOURLY_SALARY_CONTRACT___GET_SALARY = SALARY_CONTRACT___GET_SALARY;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOURLY_SALARY_CONTRACT___GET_TYPE = SALARY_CONTRACT___GET_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Hourly Salary Contract</em>' class.
@@ -780,6 +825,16 @@ public interface StaffPackage extends EPackage {
 	EOperation getSalaryContract__GetSalary();
 
 	/**
+	 * Returns the meta object for the '{@link Classes.Staff.SalaryContract#getType() <em>Get Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Type</em>' operation.
+	 * @see Classes.Staff.SalaryContract#getType()
+	 * @generated
+	 */
+	EOperation getSalaryContract__GetType();
+
+	/**
 	 * Returns the meta object for class '{@link Classes.Staff.MonthlySalaryContract <em>Monthly Salary Contract</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -801,6 +856,17 @@ public interface StaffPackage extends EPackage {
 	EAttribute getMonthlySalaryContract_Salary();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Classes.Staff.MonthlySalaryContract#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see Classes.Staff.MonthlySalaryContract#getType()
+	 * @see #getMonthlySalaryContract()
+	 * @generated
+	 */
+	EAttribute getMonthlySalaryContract_Type();
+
+	/**
 	 * Returns the meta object for class '{@link Classes.Staff.HourlySalaryContract <em>Hourly Salary Contract</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -820,6 +886,17 @@ public interface StaffPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getHourlySalaryContract_Salary();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Classes.Staff.HourlySalaryContract#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see Classes.Staff.HourlySalaryContract#getType()
+	 * @see #getHourlySalaryContract()
+	 * @generated
+	 */
+	EAttribute getHourlySalaryContract_Type();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Staff.IStaff <em>IStaff</em>}'.
@@ -962,14 +1039,14 @@ public interface StaffPackage extends EPackage {
 	EOperation getIStaff__ChangeStaffPhone__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, java.lang.String) <em>Change Staff Salary Contract</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, Classes.Staff.SalaryContract) <em>Change Staff Salary Contract</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Staff Salary Contract</em>' operation.
-	 * @see Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, java.lang.String)
+	 * @see Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, Classes.Staff.SalaryContract)
 	 * @generated
 	 */
-	EOperation getIStaff__ChangeStaffSalaryContract__String_String();
+	EOperation getIStaff__ChangeStaffSalaryContract__String_SalaryContract();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Staff.IStaff#scheduleStaff(java.util.Date, java.util.Date) <em>Schedule Staff</em>}' operation.
@@ -1125,6 +1202,14 @@ public interface StaffPackage extends EPackage {
 		EOperation SALARY_CONTRACT___GET_SALARY = eINSTANCE.getSalaryContract__GetSalary();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SALARY_CONTRACT___GET_TYPE = eINSTANCE.getSalaryContract__GetType();
+
+		/**
 		 * The meta object literal for the '{@link Classes.Staff.impl.MonthlySalaryContractImpl <em>Monthly Salary Contract</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1143,6 +1228,14 @@ public interface StaffPackage extends EPackage {
 		EAttribute MONTHLY_SALARY_CONTRACT__SALARY = eINSTANCE.getMonthlySalaryContract_Salary();
 
 		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MONTHLY_SALARY_CONTRACT__TYPE = eINSTANCE.getMonthlySalaryContract_Type();
+
+		/**
 		 * The meta object literal for the '{@link Classes.Staff.impl.HourlySalaryContractImpl <em>Hourly Salary Contract</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1159,6 +1252,14 @@ public interface StaffPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute HOURLY_SALARY_CONTRACT__SALARY = eINSTANCE.getHourlySalaryContract_Salary();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HOURLY_SALARY_CONTRACT__TYPE = eINSTANCE.getHourlySalaryContract_Type();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Staff.IStaff <em>IStaff</em>}' class.
@@ -1280,7 +1381,7 @@ public interface StaffPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING = eINSTANCE.getIStaff__ChangeStaffSalaryContract__String_String();
+		EOperation ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_SALARYCONTRACT = eINSTANCE.getIStaff__ChangeStaffSalaryContract__String_SalaryContract();
 
 		/**
 		 * The meta object literal for the '<em><b>Schedule Staff</b></em>' operation.

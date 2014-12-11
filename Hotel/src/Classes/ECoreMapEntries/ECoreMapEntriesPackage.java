@@ -383,10 +383,10 @@ public interface ECoreMapEntriesPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see Classes.ECoreMapEntries.impl.StringToItemMapImpl
-	 * @see Classes.ECoreMapEntries.impl.ECoreMapEntriesPackageImpl#getStringToItemTypeMap()
+	 * @see Classes.ECoreMapEntries.impl.ECoreMapEntriesPackageImpl#getStringToItemMap()
 	 * @generated
 	 */
-	int STRING_TO_ITEM_TYPE_MAP = 7;
+	int STRING_TO_ITEM_MAP = 7;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -395,7 +395,7 @@ public interface ECoreMapEntriesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TO_ITEM_TYPE_MAP__KEY = 0;
+	int STRING_TO_ITEM_MAP__KEY = 0;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' reference.
@@ -404,7 +404,7 @@ public interface ECoreMapEntriesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TO_ITEM_TYPE_MAP__VALUE = 1;
+	int STRING_TO_ITEM_MAP__VALUE = 1;
 
 	/**
 	 * The number of structural features of the '<em>String To Item Type Map</em>' class.
@@ -413,7 +413,7 @@ public interface ECoreMapEntriesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TO_ITEM_TYPE_MAP_FEATURE_COUNT = 2;
+	int STRING_TO_ITEM_MAP_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>String To Item Type Map</em>' class.
@@ -422,7 +422,7 @@ public interface ECoreMapEntriesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TO_ITEM_TYPE_MAP_OPERATION_COUNT = 0;
+	int STRING_TO_ITEM_MAP_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link Classes.ECoreMapEntries.impl.StringToRequestMapImpl <em>String To Request Map</em>}' class.
@@ -1038,10 +1038,10 @@ public interface ECoreMapEntriesPackage extends EPackage {
 	 * @return the meta object for class '<em>String To Item Type Map</em>'.
 	 * @see java.util.Map.Entry
 	 * @model keyDataType="org.eclipse.uml2.types.String"
-	 *        valueType="Classes.Inventory.ItemType"
+	 *        valueType="Classes.Inventory.Item"
 	 * @generated
 	 */
-	EClass getStringToItemTypeMap();
+	EClass getStringToItemMap();
 
 	/**
 	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Key</em>}'.
@@ -1049,10 +1049,10 @@ public interface ECoreMapEntriesPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Key</em>'.
 	 * @see java.util.Map.Entry
-	 * @see #getStringToItemTypeMap()
+	 * @see #getStringToItemMap()
 	 * @generated
 	 */
-	EAttribute getStringToItemTypeMap_Key();
+	EAttribute getStringToItemMap_Key();
 
 	/**
 	 * Returns the meta object for the reference '{@link java.util.Map.Entry <em>Value</em>}'.
@@ -1060,10 +1060,10 @@ public interface ECoreMapEntriesPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Value</em>'.
 	 * @see java.util.Map.Entry
-	 * @see #getStringToItemTypeMap()
+	 * @see #getStringToItemMap()
 	 * @generated
 	 */
-	EReference getStringToItemTypeMap_Value();
+	EReference getStringToItemMap_Value();
 
 	/**
 	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To Request Map</em>}'.
@@ -1547,10 +1547,10 @@ public interface ECoreMapEntriesPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see Classes.ECoreMapEntries.impl.StringToItemMapImpl
-		 * @see Classes.ECoreMapEntries.impl.ECoreMapEntriesPackageImpl#getStringToItemTypeMap()
+		 * @see Classes.ECoreMapEntries.impl.ECoreMapEntriesPackageImpl#getStringToItemMap()
 		 * @generated
 		 */
-		EClass STRING_TO_ITEM_TYPE_MAP = eINSTANCE.getStringToItemTypeMap();
+		EClass STRING_TO_ITEM_MAP = eINSTANCE.getStringToItemMap();
 
 		/**
 		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
@@ -1558,7 +1558,7 @@ public interface ECoreMapEntriesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute STRING_TO_ITEM_TYPE_MAP__KEY = eINSTANCE.getStringToItemTypeMap_Key();
+		EAttribute STRING_TO_ITEM_MAP__KEY = eINSTANCE.getStringToItemMap_Key();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
@@ -1566,7 +1566,7 @@ public interface ECoreMapEntriesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STRING_TO_ITEM_TYPE_MAP__VALUE = eINSTANCE.getStringToItemTypeMap_Value();
+		EReference STRING_TO_ITEM_MAP__VALUE = eINSTANCE.getStringToItemMap_Value();
 
 		/**
 		 * The meta object literal for the '{@link Classes.ECoreMapEntries.impl.StringToRequestMapImpl <em>String To Request Map</em>}' class.

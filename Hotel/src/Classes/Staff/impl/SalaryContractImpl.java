@@ -56,11 +56,24 @@ public abstract class SalaryContractImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getType() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case StaffPackage.SALARY_CONTRACT___GET_SALARY:
 				return getSalary();
+			case StaffPackage.SALARY_CONTRACT___GET_TYPE:
+				return getType();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -5,6 +5,7 @@ package Classes.Inventory.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -14,9 +15,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToItemMapImpl;
+import Classes.Inventory.InventoryFactory;
 import Classes.Inventory.InventoryManager;
 import Classes.Inventory.InventoryPackage;
 import Classes.Inventory.Item;
@@ -41,7 +44,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	private static int IDCounter = 0;
 	
 	/**
-	 * The cached value of the '{@link #getItemType() <em>Item Type</em>}' reference list.
+	 * The cached value of the '{@link #getItem() <em>Item Type</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getItems()
@@ -57,7 +60,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	 */
 	private InventoryManagerImpl() {
 		super();
-		items = new EcoreEMap<String,Item>(ECoreMapEntriesPackage.Literals.STRING_TO_ITEM_TYPE_MAP, StringToItemMapImpl.class, this, InventoryPackage.INVENTORY_MANAGER__ITEMS);
+		items = new EcoreEMap<String,Item>(ECoreMapEntriesPackage.Literals.STRING_TO_ITEM_MAP, StringToItemMapImpl.class, this, InventoryPackage.INVENTORY_MANAGER__ITEMS);
 	}
 
 	/**
@@ -89,7 +92,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			items.get(id).setStock(stock);
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -103,7 +106,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			return items.get(id).getPrice();
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -117,7 +120,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			return items.get(id).getName();
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -131,7 +134,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			return items.get(id).getStock();
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -145,7 +148,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			return items.get(id).getExpense();
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -179,7 +182,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			items.get(id).setName(name);
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -193,7 +196,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			items.get(id).setPrice(price);
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -207,7 +210,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			items.get(id).setExpense(expense);
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}
@@ -220,7 +223,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	public void addItem(String name, double price, double expense, int stock) {
 		String id = IDCounter++ + "";
 		
-		Item item = new ItemImpl();
+		Item item = InventoryFactory.eINSTANCE.createItem();
 			
 		item.setId(id);
 		item.setName(name);
@@ -240,7 +243,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		if (items.containsKey(id)) {
 			items.remove(id);
 		} else {
-			logger.warn("The ItemType with ID {} could not be found.", id);
+			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
 	}

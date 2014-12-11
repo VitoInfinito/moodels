@@ -327,6 +327,15 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getSalaryContract__GetType() {
+		return salaryContractEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMonthlySalaryContract() {
 		return monthlySalaryContractEClass;
 	}
@@ -345,6 +354,15 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMonthlySalaryContract_Type() {
+		return (EAttribute)monthlySalaryContractEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getHourlySalaryContract() {
 		return hourlySalaryContractEClass;
 	}
@@ -356,6 +374,15 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 */
 	public EAttribute getHourlySalaryContract_Salary() {
 		return (EAttribute)hourlySalaryContractEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHourlySalaryContract_Type() {
+		return (EAttribute)hourlySalaryContractEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -489,7 +516,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIStaff__ChangeStaffSalaryContract__String_String() {
+	public EOperation getIStaff__ChangeStaffSalaryContract__String_SalaryContract() {
 		return iStaffEClass.getEOperations().get(13);
 	}
 
@@ -554,12 +581,15 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 
 		salaryContractEClass = createEClass(SALARY_CONTRACT);
 		createEOperation(salaryContractEClass, SALARY_CONTRACT___GET_SALARY);
+		createEOperation(salaryContractEClass, SALARY_CONTRACT___GET_TYPE);
 
 		monthlySalaryContractEClass = createEClass(MONTHLY_SALARY_CONTRACT);
 		createEAttribute(monthlySalaryContractEClass, MONTHLY_SALARY_CONTRACT__SALARY);
+		createEAttribute(monthlySalaryContractEClass, MONTHLY_SALARY_CONTRACT__TYPE);
 
 		hourlySalaryContractEClass = createEClass(HOURLY_SALARY_CONTRACT);
 		createEAttribute(hourlySalaryContractEClass, HOURLY_SALARY_CONTRACT__SALARY);
+		createEAttribute(hourlySalaryContractEClass, HOURLY_SALARY_CONTRACT__TYPE);
 
 		iStaffEClass = createEClass(ISTAFF);
 		createEOperation(iStaffEClass, ISTAFF___GET_ALL_STAFF);
@@ -575,7 +605,7 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_LAST_NAME__STRING_STRING);
 		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_JOB__STRING_STRING);
 		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_PHONE__STRING_STRING);
-		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_STRING);
+		createEOperation(iStaffEClass, ISTAFF___CHANGE_STAFF_SALARY_CONTRACT__STRING_SALARYCONTRACT);
 		createEOperation(iStaffEClass, ISTAFF___SCHEDULE_STAFF__DATE_DATE);
 		createEOperation(iStaffEClass, ISTAFF___ADD_EMPLOYEE__STRING_STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE);
 	}
@@ -634,11 +664,15 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 
 		initEOperation(getSalaryContract__GetSalary(), ecorePackage.getEDouble(), "getSalary", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		initEOperation(getSalaryContract__GetType(), ecorePackage.getEString(), "getType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(monthlySalaryContractEClass, MonthlySalaryContract.class, "MonthlySalaryContract", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMonthlySalaryContract_Salary(), ecorePackage.getEDouble(), "salary", null, 1, 1, MonthlySalaryContract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMonthlySalaryContract_Type(), ecorePackage.getEString(), "type", null, 1, 1, MonthlySalaryContract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(hourlySalaryContractEClass, HourlySalaryContract.class, "HourlySalaryContract", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHourlySalaryContract_Salary(), ecorePackage.getEDouble(), "salary", null, 1, 1, HourlySalaryContract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getHourlySalaryContract_Type(), ecorePackage.getEString(), "type", null, 1, 1, HourlySalaryContract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(iStaffEClass, IStaff.class, "IStaff", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -684,9 +718,9 @@ public class StaffPackageImpl extends EPackageImpl implements StaffPackage {
 		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "phoneNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIStaff__ChangeStaffSalaryContract__String_String(), null, "changeStaffSalaryContract", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIStaff__ChangeStaffSalaryContract__String_SalaryContract(), null, "changeStaffSalaryContract", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "salaryContract", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getSalaryContract(), "salaryContract", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIStaff__ScheduleStaff__Date_Date(), theTypesPackage.getString(), "scheduleStaff", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);

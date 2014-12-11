@@ -9,6 +9,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -19,6 +20,7 @@ import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.jdt.annotation.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
 import Classes.RegexPatterns;
 import Classes.Bookables.Bookable;
@@ -30,6 +32,7 @@ import Classes.Bookables.ConferenceRoomCategory;
 import Classes.Bookables.HostelBed;
 import Classes.Bookables.HotelRoom;
 import Classes.Bookables.HotelRoomCategory;
+import Classes.Bookables.IBookablesAccess;
 import Classes.Bookables.Room;
 import Classes.Bookables.RoomLocation;
 import Classes.Stays.IStays;

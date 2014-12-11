@@ -3,7 +3,9 @@
 package Classes.Staff.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -13,9 +15,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import Classes.InvalidIDException;
-
+import Classes.Staff.SalaryContract;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToStaffMapImpl;
 import Classes.Staff.Staff;
@@ -125,12 +126,10 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllStaff() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAllStaff() {
+		return new ArrayList<String>(staff.keySet());
 	}
 
 	/**
@@ -218,12 +217,15 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getStaffSalaryContractType(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(staff.contains(SSID)){
+			return staff.get(SSID).getSalaryContract().getType();
+		} else {
+			logger.warn("A staff with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -275,7 +277,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	public void changeStaffJob(String SSID, String job) {
 		if(staff.contains(SSID)) {
-			staff.get(SSID).setJob(job);;
+			staff.get(SSID).setJob(job);
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -289,7 +291,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	public void changeStaffPhone(String SSID, String phoneNumber) {
 		if(staff.contains(SSID)) {
-			staff.get(SSID).setPhone(phoneNumber);;
+			staff.get(SSID).setPhone(phoneNumber);
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -299,12 +301,15 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void changeStaffSalaryContract(String SSID, String salaryContract) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void changeStaffSalaryContract(String SSID, SalaryContract salaryContract) {
+		if(staff.contains(SSID)) {
+			staff.get(SSID).setSalaryContract(salaryContract);
+		} else {
+			logger.warn("A staff with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**

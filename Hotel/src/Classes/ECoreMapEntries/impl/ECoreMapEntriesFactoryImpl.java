@@ -80,7 +80,7 @@ public class ECoreMapEntriesFactoryImpl extends EFactoryImpl implements ECoreMap
 			case ECoreMapEntriesPackage.STRING_TO_BILL_MAP: return (EObject)createStringToBillMap();
 			case ECoreMapEntriesPackage.STRING_TO_FEEDBACK_MAP: return (EObject)createStringToFeedbackMap();
 			case ECoreMapEntriesPackage.STRING_TO_ACCOUNT_MAP: return (EObject)createStringToAccountMap();
-			case ECoreMapEntriesPackage.STRING_TO_ITEM_TYPE_MAP: return (EObject)createStringToItemMap();
+			case ECoreMapEntriesPackage.STRING_TO_ITEM_MAP: return (EObject)createStringToItemMap();
 			case ECoreMapEntriesPackage.STRING_TO_REQUEST_MAP: return (EObject)createStringToRequestMap();
 			case ECoreMapEntriesPackage.STRING_TO_STAFF_MAP: return (EObject)createStringToStaffMap();
 			case ECoreMapEntriesPackage.STRING_TO_BOOKING_MAP: return (EObject)createStringToBookingMap();

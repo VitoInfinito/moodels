@@ -188,7 +188,9 @@
   </eSubpackages>
   <eSubpackages name="Stays" nsURI="http:///Classes/Stays.ecore" nsPrefix="Classes.Stays">
     <eClassifiers xsi:type="ecore:EClass" name="Stay">
-      <eOperations name="addBill" ordered="false" lowerBound="1"/>
+      <eOperations name="addBill" ordered="false" lowerBound="1">
+        <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eOperations name="addCheckedInGuest" ordered="false" lowerBound="1"/>
       <eOperations name="checkOutGuest" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" ordered="false" lowerBound="1"
@@ -225,7 +227,7 @@
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="StaysManager" eSuperTypes="#//Stays/IStays">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="stay" ordered="false"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="stays" ordered="false"
           upperBound="-1" eType="#//Stays/Stay"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="customerProvides" ordered="false"
           lowerBound="1" eType="#//Banking/CustomerProvides"/>
@@ -983,14 +985,19 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SalaryContract" abstract="true">
       <eOperations name="getSalary" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eOperations name="getType" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MonthlySalaryContract" eSuperTypes="#//Staff/SalaryContract">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="salary" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="HourlySalaryContract" eSuperTypes="#//Staff/SalaryContract">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="salary" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IStaff" abstract="true" interface="true">
       <eOperations name="getAllStaff" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
@@ -1037,7 +1044,7 @@
       </eOperations>
       <eOperations name="changeStaffSalaryContract" ordered="false" lowerBound="1">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-        <eParameters name="salaryContract" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="salaryContract" ordered="false" lowerBound="1" eType="#//Staff/SalaryContract"/>
       </eOperations>
       <eOperations name="scheduleStaff" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="from" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>

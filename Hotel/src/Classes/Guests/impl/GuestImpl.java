@@ -11,9 +11,14 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import Classes.InvalidIDException;
 import Classes.Guests.Guest;
 import Classes.Guests.GuestsPackage;
+import Classes.Requests.RequestsManager;
+import Classes.Stays.StaysManager;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,6 +42,8 @@ import Classes.Guests.GuestsPackage;
  * @generated
  */
 public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
+	private final Logger logger = LoggerFactory.getLogger(GuestsManagerImpl.class);
+	
 	/**
 	 * The default value of the '{@link #getFirstname() <em>Firstname</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -412,6 +419,21 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void removeStay(String stayID) {
+		if(stays.contains(stayID)) {
+			StaysManager.INSTANCE.removeStay(stayID);
+			stays.remove(stayID);
+		} else {
+			logger.warn("A stay with stayID {} could not be found.", stayID);
+			throw new InvalidIDException();
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void addRequest() {
@@ -429,6 +451,21 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void removeRequest(String requestID) {
+		if(stays.contains(requestID)) {
+			RequestsManager.INSTANCE.deleteRequest(requestID);
+			stays.remove(requestID);
+		} else {
+			logger.warn("A stay with requestID {} could not be found.", requestID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**

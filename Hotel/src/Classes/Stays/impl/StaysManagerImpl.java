@@ -3,7 +3,10 @@
 package Classes.Stays.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -13,12 +16,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import Classes.InvalidIDException;
 import Classes.Banking.CustomerProvides;
 import Classes.Bills.IBills;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToStayMapImpl;
 import Classes.Guests.IGuests;
+import Classes.Stays.CreditCard;
 import Classes.Stays.Stay;
+import Classes.Stays.StaysFactory;
 import Classes.Stays.StaysManager;
 import Classes.Stays.StaysPackage;
 
@@ -29,7 +36,7 @@ import Classes.Stays.StaysPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getStay <em>Stay</em>}</li>
+ *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getStays <em>Stays</em>}</li>
  *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getCustomerProvides <em>Customer Provides</em>}</li>
  *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getIBills <em>IBills</em>}</li>
  *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getIGuests <em>IGuests</em>}</li>
@@ -42,6 +49,8 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	private final Logger logger = LoggerFactory.getLogger(StaysManagerImpl.class);
 	public static StaysManagerImpl INSTANCE = new StaysManagerImpl();
 	
+	private static int IDCounter = 0;
+	
 	/**
 	 * The cached value of the '{@link #getStay() <em>Stay</em>}' map.
 	 * <!-- begin-user-doc -->
@@ -50,7 +59,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 * @ordered
 	 */
-	private EMap<String, Stay> stay;
+	private EMap<String, Stay> stays;
 
 	/**
 	 * The cached value of the '{@link #getCustomerProvides() <em>Customer Provides</em>}' reference.
@@ -89,7 +98,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	private StaysManagerImpl() {
 		super();
-		stay = new EcoreEMap<String,Stay>(ECoreMapEntriesPackage.Literals.STRING_TO_STAY_MAP, StringToStayMapImpl.class, this, StaysPackage.STAYS_MANAGER__STAY);
+		stays = new EcoreEMap<String,Stay>(ECoreMapEntriesPackage.Literals.STRING_TO_STAY_MAP, StringToStayMapImpl.class, this, StaysPackage.STAYS_MANAGER__STAYS);
 		iBills = IBills.INSTANCE;
 		iGuests = IGuests.INSTANCE;
 		// TODO fetch bank
@@ -111,7 +120,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EMap<String, Stay> getStay() {
+	public EMap<String, Stay> getStays() {
 		throw new UnsupportedOperationException();
 	}
 
@@ -152,7 +161,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public IBills getIBills() {
-		throw new UnsupportedOperationException();
+		return iBills;
 	}
 
 	/**
@@ -219,45 +228,61 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void changeBookableOfStay(String stayID, String bookableID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (stays.contains(stayID)) {
+			stays.get(stayID).setBookable(bookableID);
+		} else {
+			logger.warn("A stay with ID {} could not be found.", stayID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addNewStay(String bookableID, String bookingID, Date fromDate, Date toDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		String id = IDCounter++ + "";
+		
+		Stay stay = StaysFactory.eINSTANCE.createStay();
+		stay.setID(id);
+		stay.setBookable(bookableID);
+		stay.setBooking(bookingID);
+		stay.setFromDate(fromDate);
+		stay.setToDate(toDate);
+		
+		stays.put(id, stay);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void removeStay(String stayID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (!stays.contains(stayID)) {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		} else {
+			stays.removeKey(stayID);
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addBillToStay(String stayID, String billID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (!stays.contains(stayID)) {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		} else {
+			stays.get(stayID).addBill(billID);
+		}
 	}
 
 	/**
@@ -274,12 +299,22 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (!stays.contains(stayID)) {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		} else {
+			CreditCard creditCard = StaysFactory.eINSTANCE.createCreditCard();
+			creditCard.setCcNumber(ccNumber);
+			creditCard.setCcv(ccv);
+			creditCard.setExpiryMonth(expiryMonth);
+			creditCard.setExpiryYear(expiryYear);
+			creditCard.setFirstName(firstName);
+			creditCard.setLastName(lastName);
+			stays.get(stayID).setCreditCard(creditCard);
+		}
 	}
 
 	/**
@@ -296,9 +331,9 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getGuestsOfHotelStay(String stayID) {
+	public List<String> getGuestsOfHotelStay(String stayID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -318,56 +353,66 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getBookableOfHotelStay(String stayID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (stays.contains(stayID)) {
+			return stays.get(stayID).getBookable();
+		} else {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getBookingOfHotelStay(String stayID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (stays.contains(stayID)) {
+			return stays.get(stayID).getBooking();
+		} else {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllHotelStayIDs() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAllHotelStayIDs() {
+		return new ArrayList<String>(stays.keySet());
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getCheckedInGuestsOfHotelStay(String stayID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getCheckedInGuestsOfHotelStay(String stayID) {
+		if (stays.contains(stayID)) {
+			return stays.get(stayID).getCheckedInGuests();
+		} else {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getCheckedOutGuestsOfHotelStay(String stayID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getCheckedOutGuestsOfHotelStay(String stayID) {
+		if (stays.contains(stayID)) {
+			return stays.get(stayID).getCheckedOutGuests();
+		} else {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
