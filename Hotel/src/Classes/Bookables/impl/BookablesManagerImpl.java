@@ -141,11 +141,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public double getBookableBasePrice(String bookableID) throws InvalidIDException, IllegalArgumentException {
-		if (bookableID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
+	public double getBookableBasePrice(String bookableID) throws InvalidIDException{
 		Bookable bookable = bookables.get(bookableID);
 		if (bookable == null) {
 			logger.warn("The bookable with ID {} could not be found. Invalid ID!", bookableID);
@@ -159,11 +155,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public String getRoomLocationInfo(String roomID) throws InvalidIDException, IllegalArgumentException  {
-		if (roomID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
+	public String getRoomLocationInfo(String roomID) throws InvalidIDException {
 		Bookable bookable = bookables.get(roomID);
 		if (bookable == null || !(bookable instanceof Room)) {
 			logger.warn("The room with ID {} could not be found. Invalid ID!", roomID);
@@ -177,11 +169,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public String getBookableDescription(String bookableID) throws InvalidIDException, IllegalArgumentException  {
-		if (bookableID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
+	public String getBookableDescription(String bookableID) throws InvalidIDException {
 		Bookable bookable = bookables.get(bookableID);
 		if (bookable == null) {
 			logger.warn("The bookable with ID {} could not be found. Invalid ID!", bookableID);
@@ -204,11 +192,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public String getRoomOfHostelBed(String hostelBedID) throws InvalidIDException, IllegalArgumentException  {
-		if (hostelBedID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
+	public String getRoomOfHostelBed(String hostelBedID) throws InvalidIDException {
 		Bookable bookable = bookables.get(hostelBedID);
 		if (bookable == null || !(bookable instanceof HostelBed)) {
 			logger.warn("The hostelbed with ID {} could not be found. Invalid ID!", hostelBedID);
@@ -222,11 +206,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public HotelRoomCategory getHotelRoomCategory(String roomID) throws InvalidIDException, IllegalArgumentException {
-		if (roomID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
+	public HotelRoomCategory getHotelRoomCategory(String roomID) throws InvalidIDException{
 		Bookable bookable = bookables.get(roomID);
 		if (bookable == null || !(bookable instanceof HotelRoom)) {
 			logger.warn("The room with ID {} could not be found. Invalid ID!", roomID);
@@ -240,11 +220,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int getConferenceRoomCapacity(String roomID) throws InvalidIDException, IllegalArgumentException {
-		if (roomID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
+	public int getConferenceRoomCapacity(String roomID) throws InvalidIDException {
 		Bookable bookable = bookables.get(roomID);
 		if (bookable == null || !(bookable instanceof ConferenceRoom)) {
 			logger.warn("The room with ID {} could not be found. Invalid ID!", roomID);
@@ -258,11 +234,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int getHotelRoomNbrBeds(String roomID) throws InvalidIDException, IllegalArgumentException {
-		if (roomID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
+	public int getHotelRoomNbrBeds(String roomID) throws InvalidIDException{
 		Bookable bookable = bookables.get(roomID);
 		if (bookable == null || !(bookable instanceof HotelRoom)) {
 			logger.warn("The room with ID {} could not be found. Invalid ID!", roomID);
@@ -276,11 +248,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<String> searchForBookable(String keyword) throws IllegalArgumentException {
-		if (keyword == null) {
-			logger.warn("The keyword passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The keyword was null!");
-		}
+	public List<String> searchForBookable(String keyword) {
 		keyword = keyword.trim();
 		Set<String> searchResult = new LinkedHashSet<String>();
 		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
@@ -352,11 +320,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int getRoomLocationFloor(String roomID) throws InvalidIDException, IllegalArgumentException {
-		if (roomID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
+	public int getRoomLocationFloor(String roomID) throws InvalidIDException {
 		Bookable bookable = bookables.get(roomID);
 		if (bookable == null || !(bookable instanceof Room)) {
 			logger.warn("The room with ID {} could not be found. Invalid ID!", roomID);
@@ -418,11 +382,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public ConferenceRoomCategory getConferenceRoomCategory(String roomID) throws InvalidIDException, IllegalArgumentException {
-		if (roomID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
+	public ConferenceRoomCategory getConferenceRoomCategory(String roomID) throws InvalidIDException {
 		Bookable bookable = bookables.get(roomID);
 		if (bookable == null || !(bookable instanceof ConferenceRoom)) {
 			logger.warn("The room with ID {} could not be found. Invalid ID!", roomID);
@@ -437,11 +397,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<String> searchHotelRooms(String keyword, @Nullable HotelRoomCategory category) throws IllegalArgumentException {
-		if (keyword == null) {
-			logger.warn("The keyword passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The keyword was null!");
-		}
+	public List<String> searchHotelRooms(String keyword, @Nullable HotelRoomCategory category)  {
 		keyword = keyword.trim();
 		Set<String> searchResult = new LinkedHashSet<String>();
 		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
@@ -496,11 +452,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<String> searchHostelBeds(String keyword) throws IllegalArgumentException {
-		if (keyword == null) {
-			logger.warn("The keyword passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The keyword was null!");
-		}
+	public List<String> searchHostelBeds(String keyword)  {
 		keyword = keyword.trim();
 		Set<String> searchResult = new LinkedHashSet<String>();
 		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
@@ -552,11 +504,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<String> searchConferenceRooms(String keyword, @Nullable ConferenceRoomCategory category) throws IllegalArgumentException {
-		if (keyword == null) {
-			logger.warn("The keyword passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The keyword was null!");
-		}
+	public List<String> searchConferenceRooms(String keyword, @Nullable ConferenceRoomCategory category) {
 		keyword = keyword.trim();
 		Set<String> searchResult = new LinkedHashSet<String>();
 		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
@@ -611,14 +559,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changeHostelBedRoom(String hostelBedID, String roomID) throws InvalidIDException, IllegalArgumentException {
-		if (hostelBedID == null) {
-			logger.warn("The hostelBedID passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The hostelBedID was null!");
-		} else if (roomID == null) {
-			logger.warn("The roomID passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The roomID was null!");
-		}
+	public void changeHostelBedRoom(String hostelBedID, String roomID) throws InvalidIDException {
 		Bookable hostelBed = bookables.get(hostelBedID);
 		Bookable room = bookables.get(roomID);
 		if (room == null || !(room instanceof HotelRoom)) {
@@ -636,11 +577,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void deleteBookable(String bookableID) throws InvalidIDException, IllegalArgumentException {
-		if (bookableID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		}
+	public void deleteBookable(String bookableID) throws InvalidIDException{
 		Bookable bookable = bookables.removeKey(bookableID);
 		if (bookable == null) {
 			logger.warn("The bookable with ID {} could not be found. Invalid ID!", bookableID);
@@ -654,14 +591,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changeRoomLocation(String roomID, int floor, String additionalInfo) throws InvalidIDException, IllegalArgumentException {
-		if (roomID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		} else if (additionalInfo == null) {
-			logger.warn("The additionalInfo passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The additionalInfo was null!");
-		}
+	public void changeRoomLocation(String roomID, int floor, String additionalInfo) throws InvalidIDException {
 		Bookable room = bookables.get(roomID);
 		if (room == null || !(room instanceof Room)) {
 			logger.warn("The room with ID {} could not be found. Invalid ID!", roomID);
@@ -677,14 +607,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changeHotelRoomCategory(String roomID, HotelRoomCategory category) throws InvalidIDException, IllegalArgumentException {
-		if (roomID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		} else if (category == null) {
-			logger.warn("The category passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The category was null!");
-		} 
+	public void changeHotelRoomCategory(String roomID, HotelRoomCategory category) throws InvalidIDException {
 		Bookable room = bookables.get(roomID);
 		if (room == null || !(room instanceof HotelRoom)) {
 			logger.warn("The room with ID {} could not be found. Invalid ID!", roomID);
@@ -698,14 +621,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changeConferenceRoomCategory(String roomID, ConferenceRoomCategory category) throws InvalidIDException, IllegalArgumentException {
-		if (roomID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		} else if (category == null) {
-			logger.warn("The category passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The category was null!");
-		} 
+	public void changeConferenceRoomCategory(String roomID, ConferenceRoomCategory category) throws InvalidIDException {
 		Bookable room = bookables.get(roomID);
 		if (room == null || !(room instanceof ConferenceRoom)) {
 			logger.warn("The room with ID {} could not be found. Invalid ID!", roomID);
@@ -720,10 +636,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated NOT
 	 */
 	public void changeBookableBasePrice(String bookableID, double basePrice) throws InvalidIDException, IllegalArgumentException  {
-		if (bookableID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		} else if (basePrice < 0) {
+		if (basePrice < 0) {
 			logger.warn("The basePrice passed was negative! Invalid argument!");
 			throw new IllegalArgumentException("The basePrice was negative!");
 		}
@@ -740,14 +653,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changeBookableDescription(String bookableID, String description) throws InvalidIDException, IllegalArgumentException  {
-		if (bookableID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		} else if (description == null) {
-			logger.warn("The id description was null! Invalid argument!");
-			throw new IllegalArgumentException("The description was null!");
-		} 
+	public void changeBookableDescription(String bookableID, String description) throws InvalidIDException {
 		Bookable bookable = bookables.get(bookableID);
 		if (bookable == null) {
 			logger.warn("The bookable with ID {} could not be found. Invalid ID!", bookableID);
@@ -762,21 +668,9 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated NOT
 	 */
 	public String addHotelRoom(String roomNumber, double basePrice, String description, int floor, String locationInfo, HotelRoomCategory category, int nbrBeds) throws InvalidIDException, IllegalArgumentException{
-		if (roomNumber == null) {
-			logger.warn("The roomNumber passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The roomNumber was null!");
-		} else if (basePrice < 0) {
+		if (basePrice < 0) {
 			logger.warn("The basePrice was negative! Invalid argument!");
 			throw new IllegalArgumentException("The basePrice was negative!");
-		} else if (description == null) {
-			logger.warn("The description passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The description was null!");
-		} else if (locationInfo == null) {
-			logger.warn("The locationInfo passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The locationInfo was null!");
-		} else if (category == null) {
-			logger.warn("The category passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The category was null!");
 		} else if (nbrBeds < 0) {
 			logger.warn("The nbrBeds passed was negative! Invalid argument!");
 			throw new IllegalArgumentException("The nbrBeds was negative!");
@@ -810,19 +704,10 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated NOT
 	 */
 	public String addHostelBed(String bedNumber, double basePrice, String description, String roomID) throws InvalidIDException, IllegalArgumentException {
-		if (bedNumber == null) {
-			logger.warn("The bedNumber passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The bedNumber was null!");
-		} else if (basePrice < 0) {
+		if (basePrice < 0) {
 			logger.warn("The basePrice was negative! Invalid argument!");
 			throw new IllegalArgumentException("The basePrice was negative!");
-		} else if (description == null) {
-			logger.warn("The description passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The description was null!");
-		} else if (roomID == null) {
-			logger.warn("The roomID passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The roomID was null!");
-		} 
+		}
 		
 		Bookable room = bookables.get(roomID);
 		if (room == null || !(room instanceof HotelRoom)) {
@@ -852,21 +737,9 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated NOT
 	 */
 	public String addConferenceRoom(String roomNumber, double basePrice, String description, int floor, String locationInfo, ConferenceRoomCategory category, int capacity) throws InvalidIDException, IllegalArgumentException {
-		if (roomNumber == null) {
-			logger.warn("The roomNumber passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The roomNumber was null!");
-		} else if (basePrice < 0) {
+		if (basePrice < 0) {
 			logger.warn("The basePrice was negative! Invalid argument!");
 			throw new IllegalArgumentException("The basePrice was negative!");
-		} else if (description == null) {
-			logger.warn("The description passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The description was null!");
-		} else if (locationInfo == null) {
-			logger.warn("The locationInfo passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The locationInfo was null!");
-		} else if (category == null) {
-			logger.warn("The category passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The category was null!");
 		} else if (capacity < 0) {
 			logger.warn("The capacity passed was negative! Invalid argument!");
 			throw new IllegalArgumentException("The capacity was negative!");
@@ -899,11 +772,8 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changeHotelRoomNumberBeds(String roomID, int nbrBeds) {
-		if (roomID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		} else if (nbrBeds < 0) {
+	public void changeHotelRoomNumberBeds(String roomID, int nbrBeds) throws InvalidIDException, IllegalArgumentException { 
+		if (nbrBeds < 0) {
 			logger.warn("The nbrBeds passed was negative! Invalid argument!");
 			throw new IllegalArgumentException("The nbrBeds was negative!");
 		} 
@@ -920,11 +790,8 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changeConferenceRoomCapacity(String roomID, int capacity) {
-		if (roomID == null) {
-			logger.warn("The id passed was null! Invalid argument!");
-			throw new IllegalArgumentException("The id was null!");
-		} else if (capacity < 0) {
+	public void changeConferenceRoomCapacity(String roomID, int capacity) throws InvalidIDException, IllegalArgumentException { 
+		if (capacity < 0) {
 			logger.warn("The capacity passed was negative! Invalid argument!");
 			throw new IllegalArgumentException("The capacity was negative!");
 		} 
