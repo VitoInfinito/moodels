@@ -227,7 +227,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGUESTS___ADD_GUEST_REQUEST__STRING_STRING = 16;
+	int IGUESTS___ADD_GUEST_REQUEST__STRING_STRING_STRING = 16;
 
 	/**
 	 * The operation id for the '<em>Remove Guest Request</em>' operation.
@@ -471,7 +471,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUESTS_MANAGER___ADD_GUEST_REQUEST__STRING_STRING = IGUESTS___ADD_GUEST_REQUEST__STRING_STRING;
+	int GUESTS_MANAGER___ADD_GUEST_REQUEST__STRING_STRING_STRING = IGUESTS___ADD_GUEST_REQUEST__STRING_STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Remove Guest Request</em>' operation.
@@ -634,7 +634,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST___ADD_STAY = 0;
+	int GUEST___ADD_STAY__STRING_STRING_DATE_DATE = 0;
 
 	/**
 	 * The operation id for the '<em>Remove Stay</em>' operation.
@@ -652,7 +652,7 @@ public interface GuestsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST___ADD_REQUEST = 2;
+	int GUEST___ADD_REQUEST__STRING_STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Remove Request</em>' operation.
@@ -815,14 +815,14 @@ public interface GuestsPackage extends EPackage {
 	EAttribute getGuest_Account();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#addStay() <em>Add Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.Guest#addStay(java.lang.String, java.lang.String, java.util.Date, java.util.Date) <em>Add Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Stay</em>' operation.
-	 * @see Classes.Guests.Guest#addStay()
+	 * @see Classes.Guests.Guest#addStay(java.lang.String, java.lang.String, java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getGuest__AddStay();
+	EOperation getGuest__AddStay__String_String_Date_Date();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Guests.Guest#removeStay(java.lang.String) <em>Remove Stay</em>}' operation.
@@ -835,14 +835,14 @@ public interface GuestsPackage extends EPackage {
 	EOperation getGuest__RemoveStay__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.Guest#addRequest() <em>Add Request</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.Guest#addRequest(java.lang.String, java.lang.String) <em>Add Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Request</em>' operation.
-	 * @see Classes.Guests.Guest#addRequest()
+	 * @see Classes.Guests.Guest#addRequest(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getGuest__AddRequest();
+	EOperation getGuest__AddRequest__String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Guests.Guest#removeRequest(java.lang.String) <em>Remove Request</em>}' operation.
@@ -1025,14 +1025,14 @@ public interface GuestsPackage extends EPackage {
 	EOperation getIGuests__RemoveGuestStay__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Guests.IGuests#addGuestRequest(java.lang.String, java.lang.String) <em>Add Guest Request</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Guests.IGuests#addGuestRequest(java.lang.String, java.lang.String, java.lang.String) <em>Add Guest Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Guest Request</em>' operation.
-	 * @see Classes.Guests.IGuests#addGuestRequest(java.lang.String, java.lang.String)
+	 * @see Classes.Guests.IGuests#addGuestRequest(java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIGuests__AddGuestRequest__String_String();
+	EOperation getIGuests__AddGuestRequest__String_String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Guests.IGuests#removeGuestRequest(java.lang.String, java.lang.String) <em>Remove Guest Request</em>}' operation.
@@ -1221,7 +1221,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUEST___ADD_STAY = eINSTANCE.getGuest__AddStay();
+		EOperation GUEST___ADD_STAY__STRING_STRING_DATE_DATE = eINSTANCE.getGuest__AddStay__String_String_Date_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Stay</b></em>' operation.
@@ -1237,7 +1237,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUEST___ADD_REQUEST = eINSTANCE.getGuest__AddRequest();
+		EOperation GUEST___ADD_REQUEST__STRING_STRING = eINSTANCE.getGuest__AddRequest__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Request</b></em>' operation.
@@ -1391,7 +1391,7 @@ public interface GuestsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IGUESTS___ADD_GUEST_REQUEST__STRING_STRING = eINSTANCE.getIGuests__AddGuestRequest__String_String();
+		EOperation IGUESTS___ADD_GUEST_REQUEST__STRING_STRING_STRING = eINSTANCE.getIGuests__AddGuestRequest__String_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Guest Request</b></em>' operation.

@@ -152,10 +152,10 @@ public interface IGuests extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false"
+	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false" desctiptionDataType="org.eclipse.uml2.types.String" desctiptionRequired="true" desctiptionOrdered="false"
 	 * @generated
 	 */
-	void addGuestRequest(String SSID, String requestID);
+	void addGuestRequest(String SSID, String requestID, String desctiption);
 
 	/**
 	 * <!-- begin-user-doc -->

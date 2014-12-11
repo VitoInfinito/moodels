@@ -487,11 +487,19 @@
           lowerBound="1" eType="#//Accounts/IManageAccounts"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Guest">
-      <eOperations name="addStay" ordered="false" lowerBound="1"/>
+      <eOperations name="addStay" ordered="false" lowerBound="1">
+        <eParameters name="bookableID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="fromDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="toDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eOperations>
       <eOperations name="removeStay" ordered="false" lowerBound="1">
         <eParameters name="stayID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="addRequest" ordered="false" lowerBound="1"/>
+      <eOperations name="addRequest" ordered="false" lowerBound="1">
+        <eParameters name="requestID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eOperations name="removeRequest" ordered="false" lowerBound="1">
         <eParameters name="requestID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
@@ -575,6 +583,7 @@
       <eOperations name="addGuestRequest" ordered="false" lowerBound="1">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="requestID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="desctiption" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="removeGuestRequest" ordered="false" lowerBound="1">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>

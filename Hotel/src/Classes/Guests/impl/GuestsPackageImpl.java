@@ -303,7 +303,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGuest__AddStay() {
+	public EOperation getGuest__AddStay__String_String_Date_Date() {
 		return guestEClass.getEOperations().get(0);
 	}
 
@@ -321,7 +321,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGuest__AddRequest() {
+	public EOperation getGuest__AddRequest__String_String() {
 		return guestEClass.getEOperations().get(2);
 	}
 
@@ -492,7 +492,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIGuests__AddGuestRequest__String_String() {
+	public EOperation getIGuests__AddGuestRequest__String_String_String() {
 		return iGuestsEClass.getEOperations().get(16);
 	}
 
@@ -583,9 +583,9 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 		createEAttribute(guestEClass, GUEST__REQUESTS);
 		createEAttribute(guestEClass, GUEST__STAYS);
 		createEAttribute(guestEClass, GUEST__ACCOUNT);
-		createEOperation(guestEClass, GUEST___ADD_STAY);
+		createEOperation(guestEClass, GUEST___ADD_STAY__STRING_STRING_DATE_DATE);
 		createEOperation(guestEClass, GUEST___REMOVE_STAY__STRING);
-		createEOperation(guestEClass, GUEST___ADD_REQUEST);
+		createEOperation(guestEClass, GUEST___ADD_REQUEST__STRING_STRING);
 		createEOperation(guestEClass, GUEST___REMOVE_REQUEST__STRING);
 
 		iGuestsEClass = createEClass(IGUESTS);
@@ -605,7 +605,7 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_STAYS__STRING);
 		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_REQUESTS__STRING);
 		createEOperation(iGuestsEClass, IGUESTS___REMOVE_GUEST_STAY__STRING_STRING);
-		createEOperation(iGuestsEClass, IGUESTS___ADD_GUEST_REQUEST__STRING_STRING);
+		createEOperation(iGuestsEClass, IGUESTS___ADD_GUEST_REQUEST__STRING_STRING_STRING);
 		createEOperation(iGuestsEClass, IGUESTS___REMOVE_GUEST_REQUEST__STRING_STRING);
 		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_ACCOUNT_USERNAME__STRING);
 		createEOperation(iGuestsEClass, IGUESTS___GET_GUEST_ACCOUNT_PASSWORD__STRING);
@@ -663,12 +663,18 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 		initEAttribute(getGuest_Stays(), theTypesPackage.getString(), "stays", null, 0, -1, Guest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getGuest_Account(), theTypesPackage.getString(), "account", null, 1, 1, Guest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getGuest__AddStay(), null, "addStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getGuest__AddStay__String_String_Date_Date(), null, "addStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookableID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "fromDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "toDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		EOperation op = initEOperation(getGuest__RemoveStay__String(), null, "removeStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getGuest__RemoveStay__String(), null, "removeStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getGuest__AddRequest(), null, "addRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getGuest__AddRequest__String_String(), null, "addRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "requestID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getGuest__RemoveRequest__String(), null, "removeRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "requestID", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -733,9 +739,10 @@ public class GuestsPackageImpl extends EPackageImpl implements GuestsPackage {
 		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "stayID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIGuests__AddGuestRequest__String_String(), null, "addGuestRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIGuests__AddGuestRequest__String_String_String(), null, "addGuestRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "requestID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "desctiption", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIGuests__RemoveGuestRequest__String_String(), null, "removeGuestRequest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "SSID", 1, 1, IS_UNIQUE, !IS_ORDERED);

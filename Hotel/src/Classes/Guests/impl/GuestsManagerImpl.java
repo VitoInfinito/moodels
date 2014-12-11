@@ -378,9 +378,9 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addGuestRequest(String SSID, String requestID) {
+	public void addGuestRequest(String SSID, String requestID, String description) {
 		if(guests.contains(SSID)) {
-			guests.get(SSID).addRequest();
+			guests.get(SSID).addRequest(requestID, description);
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
