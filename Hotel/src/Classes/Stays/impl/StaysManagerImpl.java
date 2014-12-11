@@ -464,12 +464,22 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllUnpayedBillsOfHotelStay(String stayID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAllUnpayedBillsOfHotelStay(String stayID) {
+		if (stays.contains(stayID)) {
+			List<String> unpaid = new ArrayList<String>();
+			
+			for (String billID : stays.get(stayID).getBills()) {
+				if (!iBills.getIsBillPaid(billID))
+					unpaid.add(billID);
+			}
+			
+			return unpaid;
+		} else {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
