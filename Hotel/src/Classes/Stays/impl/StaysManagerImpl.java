@@ -6,6 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -15,6 +16,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
 import Classes.Banking.CustomerProvides;
 import Classes.Bills.IBills;
@@ -245,7 +247,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	public void addNewStay(String bookableID, String bookingID, Date fromDate, Date toDate) {
 		String id = IDCounter++ + "";
 		
-		Stay stay = new StayImpl();
+		Stay stay = StaysFactory.eINSTANCE.createStay();
 		stay.setID(id);
 		stay.setBookable(bookableID);
 		stay.setBooking(bookingID);
