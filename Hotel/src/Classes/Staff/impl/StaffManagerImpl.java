@@ -216,12 +216,15 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getStaffSalaryContractType(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(staff.contains(SSID)){
+			return staff.get(SSID).getSalaryContract().getType();
+		} else {
+			logger.warn("A staff with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -300,9 +303,12 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated
 	 */
 	public void changeStaffSalaryContract(String SSID, String salaryContract) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(staff.contains(SSID)){
+			//TODO: Implement the change in salaryContract, string or salarycontract type?
+		} else {
+			logger.warn("A staff with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
