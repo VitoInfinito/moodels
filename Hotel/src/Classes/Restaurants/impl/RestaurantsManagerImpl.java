@@ -563,20 +563,29 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	public void addRestaurantTable(String restaurantID, int nbrSeats, String tableNbr) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Restaurant rest = getRestaurantByID(restaurantID);
+		if(rest.getRestaurantTable().get(tableNbr) != null) {
+			logger.warn("The restaurant table already exists");
+			throw new IllegalArgumentException("Table number already exists");
+		}
+		RestaurantTable table = RestaurantsFactory.eINSTANCE.createRestaurantTable();
+		
+		table.setNumberOfSeats(nbrSeats);
+		rest.getRestaurantTable().put(tableNbr, table);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void removeRestaurantTable(String restaurantID, String tableNbr) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void removeRestaurantTable(String restaurantID, String tableNbr) throws InvalidIDException{
+		Restaurant rest = getRestaurantByID(restaurantID);
+		RestaurantTable table = rest.getRestaurantTable().removeKey(tableNbr);
+		if(table == null) {
+			logger.warn("The Table with number {} could not be found. Invalid ID", tableNbr);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
