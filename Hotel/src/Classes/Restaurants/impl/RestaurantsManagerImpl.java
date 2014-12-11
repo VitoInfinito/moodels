@@ -58,6 +58,8 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	private String generateReservationID(){
 		return String.format("res%06d", counterID++);
 	}
+	//TODO add throw exception to methods
+	
 	
 	/**
 	 * The cached value of the '{@link #getRestaurant() <em>Restaurant</em>}' map.
@@ -530,12 +532,16 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void addRestaurant(String name) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void addRestaurant(String name) throws IllegalArgumentException{
+		if(restaurant.containsKey(name)) {
+			logger.warn("The restaurant name already exists");
+			throw new IllegalArgumentException("Name ID already exists");
+		}
+		
+		Restaurant rest = RestaurantsFactory.eINSTANCE.createRestaurant();
+		restaurant.put(name, rest);
 	}
 
 	/**
