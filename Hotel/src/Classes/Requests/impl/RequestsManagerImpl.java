@@ -203,17 +203,17 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	}
 	
 	private String generateID(){
-		return String.format("sr%06d", counterID);
+		return String.format("sr%06d", counterID++);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void createRequest(String description) {
-		if(description.length() > 0){
-			logger.warn("The description is to short! Invalid argument!");
+		if(description.length() < 0){
+			logger.warn("The description is too short! Invalid argument!");
 			throw new IllegalArgumentException("The description was to short!");
 		}
 		String specialRequestId = generateID();
