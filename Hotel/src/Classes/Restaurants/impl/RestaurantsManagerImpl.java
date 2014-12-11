@@ -375,7 +375,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 		reservation.setFrom(from);
 		reservation.setTo(to);
 		
-		EMap<String, RestaurantTable> restTables = restaurant.get(restaurantID).getRestaurantTable();
+		EMap<String, RestaurantTable> restTables = getRestaurantByID(restaurantID).getRestaurantTable();
 		for(String table : tables) {
 			reservation.getRestaurantTable().add(restTables.get(table));
 		}
@@ -403,22 +403,37 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated NOT
 	 */
 	public void changeReservedTables(String restaurantID, String reservationID, EList<String> tables) {
-		Restaurant rest = restaurant.get(restaurantID);
-		if(rest == null) {
-			logger.warn("The Restaurant with ID {} could not be found. Invalid ID", restaurantID);
+		Restaurant rest = getRestaurantByID(restaurantID);
+		Reservation reservation = rest.getReservation().get(reservationID);
+		if(reservation == null) {
+			logger.warn("The Reservation with ID {} could not be found. Invalid ID", reservationID);
 			throw new InvalidIDException();
+		}
+		
+		reservation.getRestaurantTable().clear();
+		EMap<String, RestaurantTable> restTables = rest.getRestaurantTable();
+		for(String table : tables) {
+			reservation.getRestaurantTable().add(restTables.get(table));
 		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAvailableTablesByNbrGuests(String restaurantID, Date to, Date from, int nbrGuests) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAvailableTablesByNbrGuests(String restaurantID, Date to, Date from, int nbrGuests) {
+		Restaurant rest = getRestaurantByID(restaurantID);
+		List<String> availableTables = getAvailableTables(to, from, restaurantID);
+		List<String> newList = new ArrayList<String>();
+		
+		for(String table : availableTables) {
+			if(rest.getRestaurantTable().get(table) != null && rest.getRestaurantTable().get(table).getNumberOfSeats() >= nbrGuests) {
+				newList.add(table);
+			}
+		}
+		
+		return new ArrayList<String>(newList);
 	}
 
 	/**
