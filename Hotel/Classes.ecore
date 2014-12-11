@@ -400,12 +400,18 @@
   </eSubpackages>
   <eSubpackages name="Bills" nsURI="http:///Classes/Bills.ecore" nsPrefix="Classes.Bills">
     <eClassifiers xsi:type="ecore:EClass" name="BillsManager" eSuperTypes="#//Bills/IBills">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="bill" ordered="false"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="bills" ordered="false"
           upperBound="-1" eType="#//Bills/Bill"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="customerProvides" ordered="false"
           lowerBound="1" eType="#//Banking/CustomerProvides"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Bill">
+      <eOperations name="addItem" ordered="false" lowerBound="1">
+        <eParameters name="itemID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="addService" ordered="false" lowerBound="1">
+        <eParameters name="serviceID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPaid" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="paymentType" ordered="false"

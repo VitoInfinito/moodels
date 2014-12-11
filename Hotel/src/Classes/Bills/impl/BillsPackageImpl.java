@@ -195,7 +195,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBillsManager_Bill() {
+	public EReference getBillsManager_Bills() {
 		return (EReference)billsManagerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -296,6 +296,24 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 */
 	public EAttribute getBill_TotalAmount() {
 		return (EAttribute)billEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBill__AddItem__String() {
+		return billEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBill__AddService__String() {
+		return billEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -489,7 +507,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 
 		// Create classes and their features
 		billsManagerEClass = createEClass(BILLS_MANAGER);
-		createEReference(billsManagerEClass, BILLS_MANAGER__BILL);
+		createEReference(billsManagerEClass, BILLS_MANAGER__BILLS);
 		createEReference(billsManagerEClass, BILLS_MANAGER__CUSTOMER_PROVIDES);
 
 		billEClass = createEClass(BILL);
@@ -502,6 +520,8 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 		createEAttribute(billEClass, BILL__ISSUE_DATE);
 		createEAttribute(billEClass, BILL__PAYMENT_DATE);
 		createEAttribute(billEClass, BILL__TOTAL_AMOUNT);
+		createEOperation(billEClass, BILL___ADD_ITEM__STRING);
+		createEOperation(billEClass, BILL___ADD_SERVICE__STRING);
 
 		iBillsEClass = createEClass(IBILLS);
 		createEOperation(iBillsEClass, IBILLS___GET_IS_BILL_PAID__STRING);
@@ -559,7 +579,7 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(billsManagerEClass, BillsManager.class, "BillsManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBillsManager_Bill(), this.getBill(), null, "bill", null, 0, -1, BillsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBillsManager_Bills(), this.getBill(), null, "bills", null, 0, -1, BillsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBillsManager_CustomerProvides(), theBankingPackage.getCustomerProvides(), null, "customerProvides", null, 1, 1, BillsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(billEClass, Bill.class, "Bill", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -573,9 +593,15 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 		initEAttribute(getBill_PaymentDate(), ecorePackage.getEDate(), "paymentDate", null, 1, 1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBill_TotalAmount(), ecorePackage.getEDouble(), "totalAmount", null, 1, 1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
+		EOperation op = initEOperation(getBill__AddItem__String(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "itemID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBill__AddService__String(), null, "addService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "serviceID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(iBillsEClass, IBills.class, "IBills", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getIBills__GetIsBillPaid__String(), theTypesPackage.getBoolean(), "getIsBillPaid", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBills__GetIsBillPaid__String(), theTypesPackage.getBoolean(), "getIsBillPaid", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIBills__GetAllBillsNotPaid(), theTypesPackage.getString(), "getAllBillsNotPaid", 0, -1, IS_UNIQUE, !IS_ORDERED);

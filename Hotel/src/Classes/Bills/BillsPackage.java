@@ -249,13 +249,13 @@ public interface BillsPackage extends EPackage {
 	int BILLS_MANAGER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Bill</b></em>' reference list.
+	 * The feature id for the '<em><b>Bills</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER__BILL = IBILLS_FEATURE_COUNT + 0;
+	int BILLS_MANAGER__BILLS = IBILLS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Customer Provides</b></em>' reference.
@@ -538,13 +538,31 @@ public interface BillsPackage extends EPackage {
 	int BILL_FEATURE_COUNT = 9;
 
 	/**
+	 * The operation id for the '<em>Add Item</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILL___ADD_ITEM__STRING = 0;
+
+	/**
+	 * The operation id for the '<em>Add Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILL___ADD_SERVICE__STRING = 1;
+
+	/**
 	 * The number of operations of the '<em>Bill</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BILL_OPERATION_COUNT = 0;
+	int BILL_OPERATION_COUNT = 2;
 
 
 	/**
@@ -558,15 +576,15 @@ public interface BillsPackage extends EPackage {
 	EClass getBillsManager();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Classes.Bills.BillsManager#getBill <em>Bill</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Bills.BillsManager#getBills <em>Bills</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Bill</em>'.
-	 * @see Classes.Bills.BillsManager#getBill()
+	 * @return the meta object for the reference list '<em>Bills</em>'.
+	 * @see Classes.Bills.BillsManager#getBills()
 	 * @see #getBillsManager()
 	 * @generated
 	 */
-	EReference getBillsManager_Bill();
+	EReference getBillsManager_Bills();
 
 	/**
 	 * Returns the meta object for the reference '{@link Classes.Bills.BillsManager#getCustomerProvides <em>Customer Provides</em>}'.
@@ -687,6 +705,26 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBill_TotalAmount();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Bills.Bill#addItem(java.lang.String) <em>Add Item</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Item</em>' operation.
+	 * @see Classes.Bills.Bill#addItem(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBill__AddItem__String();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Bills.Bill#addService(java.lang.String) <em>Add Service</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Service</em>' operation.
+	 * @see Classes.Bills.Bill#addService(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBill__AddService__String();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Bills.IBills <em>IBills</em>}'.
@@ -902,12 +940,12 @@ public interface BillsPackage extends EPackage {
 		EClass BILLS_MANAGER = eINSTANCE.getBillsManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Bill</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Bills</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BILLS_MANAGER__BILL = eINSTANCE.getBillsManager_Bill();
+		EReference BILLS_MANAGER__BILLS = eINSTANCE.getBillsManager_Bills();
 
 		/**
 		 * The meta object literal for the '<em><b>Customer Provides</b></em>' reference feature.
@@ -998,6 +1036,22 @@ public interface BillsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BILL__TOTAL_AMOUNT = eINSTANCE.getBill_TotalAmount();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Item</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BILL___ADD_ITEM__STRING = eINSTANCE.getBill__AddItem__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Service</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BILL___ADD_SERVICE__STRING = eINSTANCE.getBill__AddService__String();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Bills.IBills <em>IBills</em>}' class.

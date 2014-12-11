@@ -1801,6 +1801,8 @@
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_NymLgH_nEeS5IpkkkJsVew" name="bookable">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uFU0cIGGEeSFKZZHOpdzQg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uFU0cYGGEeSFKZZHOpdzQg" value="1"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9Oe1HpsEeST-65JbGUt8g" name="payBillsWithCreditCard">
@@ -1902,7 +1904,7 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9Oe3XpsEeST-65JbGUt8g" name="BillsManager" visibility="package">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9Oe3npsEeST-65JbGUt8g" name="bill" visibility="private" type="_w9Oe6HpsEeST-65JbGUt8g" association="_w9OewnpsEeST-65JbGUt8g">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9Oe3npsEeST-65JbGUt8g" name="bills" visibility="private" type="_w9Oe6HpsEeST-65JbGUt8g" association="_w9OewnpsEeST-65JbGUt8g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9Oe33psEeST-65JbGUt8g"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9Oe4HpsEeST-65JbGUt8g" value="*"/>
       </ownedAttribute>
@@ -1934,6 +1936,8 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9Oe8npsEeST-65JbGUt8g" name="bookable" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rJCCcIGGEeSFKZZHOpdzQg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rJCCcYGGEeSFKZZHOpdzQg" value="1"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9Oe83psEeST-65JbGUt8g" name="issueDate" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
@@ -1944,6 +1948,16 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_dZ8IkHwdEeSdJr2ued9Z6A" name="totalAmount" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
       </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_it9JAIGFEeSFKZZHOpdzQg" name="addItem">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_oGsIQIGFEeSFKZZHOpdzQg" name="itemID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jdlPIIGFEeSFKZZHOpdzQg" name="addService">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sJrckIGFEeSFKZZHOpdzQg" name="serviceID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9OewnpsEeST-65JbGUt8g" name="bills" visibility="private" memberEnd="_w9Oew3psEeST-65JbGUt8g _w9Oe3npsEeST-65JbGUt8g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9Oew3psEeST-65JbGUt8g" name="billsManager" type="_w9Oe3XpsEeST-65JbGUt8g" association="_w9OewnpsEeST-65JbGUt8g">

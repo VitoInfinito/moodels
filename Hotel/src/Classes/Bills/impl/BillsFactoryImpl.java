@@ -50,26 +50,23 @@ public class BillsFactoryImpl extends EFactoryImpl implements BillsFactory {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case BillsPackage.BILLS_MANAGER: return createBillsManager();
-			case BillsPackage.BILL: return createBill();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public BillsManager createBillsManager() {
-		return BillsManagerImpl.INSTANCE;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -84,22 +81,23 @@ public class BillsFactoryImpl extends EFactoryImpl implements BillsFactory {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public BillsPackage getBillsPackage() {
-		return (BillsPackage)getEPackage();
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
+	 * @generated NOT
 	 */
 	@Deprecated
 	public static BillsPackage getPackage() {
-		return BillsPackage.eINSTANCE;
+		throw new UnsupportedOperationException();
 	}
 
 } //BillsFactoryImpl

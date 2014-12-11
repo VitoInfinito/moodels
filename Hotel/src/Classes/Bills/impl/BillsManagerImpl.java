@@ -3,21 +3,29 @@
 package Classes.Bills.impl;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
+import java.util.regex.Pattern;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
 import Classes.Banking.CustomerProvides;
 import Classes.Bills.Bill;
+import Classes.Bills.BillsFactory;
 import Classes.Bills.BillsManager;
 import Classes.Bills.BillsPackage;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
@@ -30,7 +38,7 @@ import Classes.ECoreMapEntries.impl.StringToBillMapImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Classes.Bills.impl.BillsManagerImpl#getBill <em>Bill</em>}</li>
+ *   <li>{@link Classes.Bills.impl.BillsManagerImpl#getBills <em>Bills</em>}</li>
  *   <li>{@link Classes.Bills.impl.BillsManagerImpl#getCustomerProvides <em>Customer Provides</em>}</li>
  * </ul>
  * </p>
@@ -38,9 +46,11 @@ import Classes.ECoreMapEntries.impl.StringToBillMapImpl;
  * @generated
  */
 public class BillsManagerImpl extends MinimalEObjectImpl.Container implements BillsManager {
+
 	private final Logger logger = LoggerFactory.getLogger(BillsManagerImpl.class);
 	public static BillsManagerImpl INSTANCE = new BillsManagerImpl();
-	
+	private static int idCounter = 1;
+
 	/**
 	 * The cached value of the '{@link #getBill() <em>Bill</em>}' map.
 	 * <!-- begin-user-doc -->
@@ -49,7 +59,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * @generated NOT
 	 * @ordered
 	 */
-	private EMap<String, Bill> bill;
+	private EMap<String, Bill> bills;
 
 	/**
 	 * The cached value of the '{@link #getCustomerProvides() <em>Customer Provides</em>}' reference.
@@ -68,8 +78,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 */
 	private BillsManagerImpl() {
 		super();
-		bill = new EcoreEMap<String,Bill>(ECoreMapEntriesPackage.Literals.STRING_TO_BILL_MAP, StringToBillMapImpl.class, this, BillsPackage.BILLS_MANAGER__BILL);
-		// TODO fetch customer provides
+		bills = new EcoreEMap<String,Bill>(ECoreMapEntriesPackage.Literals.STRING_TO_BILL_MAP, StringToBillMapImpl.class, this, BillsPackage.BILLS_MANAGER__BILLS);
 	}
 
 	/**
@@ -125,12 +134,15 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean getIsBillPaid(String billID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (bills.containsKey(billID)) {
+			return bills.get(billID).isPaid();
+		} else {
+			logger.warn("A feedback with id {} could not be found.", billID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -140,7 +152,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 */
 	public List<String> getAllBillsNotPaid() {
 		List<String> notPaid = new ArrayList<String>();
-		for(Bill b : bill.values()) {
+		for(Bill b : bills.values()) {
 			if(!b.isPaid()) 
 				notPaid.add(b.getId());
 		}
@@ -153,8 +165,8 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * @generated NOT
 	 */
 	public Date getBillPaymentDate(String billID) {
-		if (bill.containsKey(billID)) {
-			return bill.get(billID).getIssueDate();
+		if (bills.containsKey(billID)) {
+			return bills.get(billID).getIssueDate();
 		} else {
 			logger.warn("A feedback with id {} could not be found.", billID);
 			throw new InvalidIDException();
@@ -167,18 +179,49 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * @generated NOT
 	 */
 	public List<String> getAllBillIDs() {
-		return new ArrayList<String>(bill.keySet());
+		return new ArrayList<String>(bills.keySet());
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> searchBills(String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchBills(String keyword) {
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
+
+		// Exact ID match. First Order!
+		if (bills.containsKey(keyword)) {
+			searchResult.add(keyword);
+		}
+
+		Collection<Bill> c = bills.values();
+		
+		// Some property match exactly. Second Order!
+		for (Bill b : c) {
+			if (b.getBookable().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getId());
+			}
+		}
+		
+		// ID match somewhat. Third Order!
+		for (Bill b : c) {			
+			if (regexPattern.matcher(b.getId()).matches()) {
+				searchResult.add(b.getId());
+			} 
+		}
+
+		// Some property match somewhat. Fourth Order.
+		for (Bill b : c) {
+			if (regexPattern.matcher(b.getBookable()).matches()) {
+				searchResult.add(b.getId());
+			}
+		}
+		
+
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -188,13 +231,14 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 */
 	public List<String> getAllPayedBills() {
 		List<String> paidBills = new ArrayList<String>();
-		
-		for(Bill b : bill.values()){
+
+		for(Bill b : bills.values()){
 			if(b.isPaid())
 				paidBills.add(b.getId());
 		}
 		return paidBills;
 	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -202,22 +246,39 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * @generated
 	 */
 	public void addBill(EList<String> items, EList<String> services, String bookable) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Bill b = BillsFactory.eINSTANCE.createBill();
+		
+		String ID = generateID();
+		
+		b.setId(ID);
+		b.setBookable(bookable);
+		b.setIsPaid(false);
+		b.setIssueDate(new Date());
+		
+		
+		
+		for (String item : items) {
+			
+		}
+		
+	}
+
+	private String generateID() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public void payBillsWithCreditCard(List<String> bills, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

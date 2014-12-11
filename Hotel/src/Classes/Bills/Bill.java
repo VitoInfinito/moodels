@@ -246,4 +246,20 @@ public interface Bill extends EObject {
 	 */
 	void setTotalAmount(double value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model itemIDDataType="org.eclipse.uml2.types.String" itemIDRequired="true" itemIDOrdered="false"
+	 * @generated
+	 */
+	void addItem(String itemID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model serviceIDDataType="org.eclipse.uml2.types.String" serviceIDRequired="true" serviceIDOrdered="false"
+	 * @generated
+	 */
+	void addService(String serviceID);
+
 } // Bill

@@ -380,7 +380,7 @@
         disposableProviderFactory="true" ecorePackage="Classes.ecore#//Bills">
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Bills/BillsManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Bills/BillsManager/bill"/>
+            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Bills/BillsManager/bills"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Bills/BillsManager/customerProvides"/>
       </genClasses>
@@ -394,6 +394,12 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Bills/Bill/issueDate"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Bills/Bill/paymentDate"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Bills/Bill/totalAmount"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/Bill/addItem">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/Bill/addItem/itemID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/Bill/addService">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bills/Bill/addService/serviceID"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Bills/IBills">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bills/IBills/getIsBillPaid">

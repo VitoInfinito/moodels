@@ -22,11 +22,10 @@ public interface BillsFactory extends EFactory {
 	BillsFactory eINSTANCE = Classes.Bills.impl.BillsFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Manager</em>'.
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Manager</em>'.
-	 * @generated
+	 * @generated NOT
 	 */
 	BillsManager createBillsManager();
 
@@ -40,11 +39,10 @@ public interface BillsFactory extends EFactory {
 	Bill createBill();
 
 	/**
-	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
+	 * @generated NOT
 	 */
 	BillsPackage getBillsPackage();
 

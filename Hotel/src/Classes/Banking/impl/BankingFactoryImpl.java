@@ -14,7 +14,7 @@ import Classes.Banking.BankingPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
- * @generated
+ * @generated NOT
  */
 public class BankingFactoryImpl extends EFactoryImpl implements BankingFactory {
 	/**

@@ -4,16 +4,15 @@ package Classes.Bills.impl;
 
 import java.util.Collection;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-
 import Classes.Bills.Bill;
 import Classes.Bills.BillsPackage;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * <!-- begin-user-doc -->
@@ -96,8 +95,6 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	 * @ordered
 	 */
 	protected String id = ID_EDEFAULT;
-
-	// TODO what if a bill get issued and then the prices of the items/services change?....
 	
 	/**
 	 * The cached value of the '{@link #getItems() <em>Items</em>}' attribute list.
@@ -392,6 +389,24 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void addItem(String itemID) {
+		items.add(itemID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void addService(String serviceID) {
+		services.add(serviceID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -528,6 +543,24 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 				return totalAmount != TOTAL_AMOUNT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case BillsPackage.BILL___ADD_ITEM__STRING:
+				addItem((String)arguments.get(0));
+				return null;
+			case BillsPackage.BILL___ADD_SERVICE__STRING:
+				addService((String)arguments.get(0));
+				return null;
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
