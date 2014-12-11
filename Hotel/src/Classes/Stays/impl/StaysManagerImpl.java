@@ -320,12 +320,22 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void changeResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (!stays.contains(stayID)) {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		} else {
+			CreditCard creditCard = StaysFactory.eINSTANCE.createCreditCard();
+			creditCard.setCcNumber(ccNumber);
+			creditCard.setCcv(ccv);
+			creditCard.setExpiryMonth(expiryMonth);
+			creditCard.setExpiryYear(expiryYear);
+			creditCard.setFirstName(firstName);
+			creditCard.setLastName(lastName);
+			stays.get(stayID).setCreditCard(creditCard);
+		}
 	}
 
 	/**
