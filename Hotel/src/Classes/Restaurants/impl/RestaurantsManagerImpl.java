@@ -65,6 +65,24 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 		super();
 		restaurant = new EcoreEMap<String,Restaurant>(ECoreMapEntriesPackage.Literals.STRING_TO_RESTAURANT_MAP, StringToRestaurantMapImpl.class, this, RestaurantsPackage.RESTAURANTS_MANAGER__RESTAURANT);
 	}
+	
+	/**
+	 * Helper method to check if string can be parsedInt
+	 * @param str
+	 * @return
+	 */
+	private boolean isNumeric(String str)  
+	{  
+	  try  
+	  {  
+	    Integer.parseInt(str);
+	  }  
+	  catch(NumberFormatException nfe)  
+	  {  
+	    return false;  
+	  }  
+	  return true;  
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -289,12 +307,45 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> searchRestaurantTables(String restaurantID, String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchRestaurantTables(String restaurantID, String keyword) {
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
+		
+		Restaurant restaurant = getRestaurant().get(restaurantID);
+		if(restaurant == null) {
+			logger.warn("The Restaurant with ID {} could not be found. Invalid ID", restaurantID);
+			throw new InvalidIDException();
+		}
+		
+		EMap<String, RestaurantTable> tables = restaurant.getRestaurantTable();
+		
+		//Exact ID match
+		RestaurantTable table = tables.get(keyword);
+		if(table != null) {
+			searchResult.add(table.getTableNumber());
+		}
+		
+		//ID match somewhat
+		Collection<RestaurantTable> c = tables.values();
+		for(RestaurantTable r : c) {
+			if(regexPattern.matcher(r.getTableNumber()).matches()) {
+				searchResult.add(r.getTableNumber());
+			}
+		}
+		
+		//Some property match exactly
+		if(isNumeric(keyword)) {
+			for(RestaurantTable r : c) {
+				if(r.getNumberOfSeats() == Integer.parseInt(keyword)) {
+					searchResult.add(r.getTableNumber());
+				}
+			}
+		}
+		
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -346,7 +397,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getRestaurantMenuItems(String restaurantID) {
+	public List<String> getRestaurantMenuItems(String restaurantID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -377,12 +428,65 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> searchRestaurantReservationsWithTime(String restaurantID, String keyword, Date from, Date to) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchRestaurantReservationsWithTime(String restaurantID, String keyword, Date from, Date to) {
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
+		
+		Restaurant restaurant = getRestaurant().get(restaurantID);
+		if(restaurant == null) {
+			logger.warn("The Restaurant with ID {} could not be found. Invalid ID", restaurantID);
+			throw new InvalidIDException();
+		}
+		
+		EMap<String, Reservation> reservations = restaurant.getReservation();
+		
+		//Exact ID match
+		Reservation reservation = reservations.get(keyword);
+		if(reservation != null) {
+			searchResult.add(reservation.getId());
+		}
+		
+		//ID match somewhat
+		Collection<Reservation> c = reservations.values();
+		for(Reservation r : c) {
+			if(regexPattern.matcher(r.getId()).matches()) {
+				searchResult.add(r.getId());
+			}
+		}
+		
+		//Time match exactly
+		for(Reservation r : c) {
+			if(r.getFrom().compareTo(from) == 0 && r.getTo().compareTo(to) == 0) {
+				searchResult.add(r.getId());
+			}
+		}
+		
+		//Some property match exactly
+		for(Reservation r : c) {
+			if(r.getReservedBy().equalsIgnoreCase(keyword)) {
+				searchResult.add(r.getId());
+			}
+		}
+		
+		//Some property match somewhat
+		for(Reservation r : c) {
+			if(regexPattern.matcher(r.getReservedBy()).matches()) {
+				searchResult.add(r.getId());
+			}
+		}
+		
+		//Some Time match somewhat
+		for(Reservation r : c) {
+			//TODO Implement replacement of date
+			/*if(r.getFrom()) {
+				searchResult.add(r.getId());
+			}*/
+		}
+		
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**

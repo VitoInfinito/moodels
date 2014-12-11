@@ -100,9 +100,9 @@ public interface IRestaurantsAccess extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchRestaurantTables(String restaurantID, String keyword);
+	List<String> searchRestaurantTables(String restaurantID, String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -132,17 +132,17 @@ public interface IRestaurantsAccess extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false" nbrGuestsDataType="org.eclipse.uml2.types.Integer" nbrGuestsRequired="true" nbrGuestsOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getAvailableTablesByNbrGuests(Date to, Date from, int nbrGuests);
+	List<String> getAvailableTablesByNbrGuests(Date to, Date from, int nbrGuests);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getRestaurantMenuItems(String restaurantID);
+	List<String> getRestaurantMenuItems(String restaurantID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -164,8 +164,8 @@ public interface IRestaurantsAccess extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchRestaurantReservationsWithTime(String restaurantID, String keyword, Date from, Date to);
+	List<String> searchRestaurantReservationsWithTime(String restaurantID, String keyword, Date from, Date to);
 
 } // IRestaurantsAccess
