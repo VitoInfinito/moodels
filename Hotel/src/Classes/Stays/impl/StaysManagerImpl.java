@@ -307,22 +307,19 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- begin-user-doc -->
 	 * Add a new resposinble credit card to an existing stay
 	 * <!-- end-user-doc -->
+	 * @throws SOAPException 
 	 * @generated NOT
 	 */
-	public void addResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
+	public void addResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException {
 		if (!stays.contains(stayID)) {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
 		} else {
-			try {
-				CustomerRequires customerReq = CustomerRequires.instance();
-				if (!customerReq.isCreditCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName)) {
-					logger.warn("This credit card is not valid.");
-					throw new InvalidCreditCardException();
-				}
-				
-			} catch (SOAPException e) {
-				e.printStackTrace();
+			
+			CustomerRequires customerReq = CustomerRequires.instance();
+			if (!customerReq.isCreditCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName)) {
+				logger.warn("This credit card is not valid.");
+				throw new InvalidCreditCardException();
 			}
 			
 			CreditCard creditCard = StaysFactory.eINSTANCE.createCreditCard();
@@ -340,23 +337,19 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- begin-user-doc -->
 	 * Change the responsible credit card of an existing stay
 	 * <!-- end-user-doc -->
+	 * @throws SOAPException 
 	 * @generated NOT
 	 */
-	public void changeResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
+	public void changeResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException {
 		if (!stays.contains(stayID)) {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
 		} else {
 			
-			try {
-				CustomerRequires customerReq = CustomerRequires.instance();
-				if (!customerReq.isCreditCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName)) {
-					logger.warn("This credit card is not valid.");
-					throw new InvalidCreditCardException();
-				}
-				
-			} catch (SOAPException e) {
-				e.printStackTrace();
+			CustomerRequires customerReq = CustomerRequires.instance();
+			if (!customerReq.isCreditCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName)) {
+				logger.warn("This credit card is not valid.");
+				throw new InvalidCreditCardException();
 			}
 			
 			CreditCard creditCard = StaysFactory.eINSTANCE.createCreditCard();
