@@ -198,7 +198,9 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Stays/Stay/toDate"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Stays/Stay/creditCard"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/Stay/addBill"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/Stay/addBill">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Stays/Stay/addBill/billID"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/Stay/addCheckedInGuest"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Stays/Stay/checkOutGuest"/>
       </genClasses>

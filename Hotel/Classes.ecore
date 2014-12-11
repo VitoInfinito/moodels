@@ -188,7 +188,9 @@
   </eSubpackages>
   <eSubpackages name="Stays" nsURI="http:///Classes/Stays.ecore" nsPrefix="Classes.Stays">
     <eClassifiers xsi:type="ecore:EClass" name="Stay">
-      <eOperations name="addBill" ordered="false" lowerBound="1"/>
+      <eOperations name="addBill" ordered="false" lowerBound="1">
+        <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eOperations name="addCheckedInGuest" ordered="false" lowerBound="1"/>
       <eOperations name="checkOutGuest" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" ordered="false" lowerBound="1"
