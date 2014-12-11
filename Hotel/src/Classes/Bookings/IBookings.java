@@ -3,6 +3,7 @@
 package Classes.Bookings;
 
 import java.util.Date;
+import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -99,9 +100,9 @@ public interface IBookings extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getAllBookings();
+	List<String> getAllBookings();
 
 	/**
 	 * <!-- begin-user-doc -->
