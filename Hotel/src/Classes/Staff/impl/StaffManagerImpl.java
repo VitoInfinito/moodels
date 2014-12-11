@@ -3,7 +3,9 @@
 package Classes.Staff.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -123,12 +125,10 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllStaff() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAllStaff() {
+		return new ArrayList<String>(staff.keySet());
 	}
 
 	/**

@@ -17,6 +17,7 @@ import Classes.Staff.StaffPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link Classes.Staff.impl.MonthlySalaryContractImpl#getSalary <em>Salary</em>}</li>
+ *   <li>{@link Classes.Staff.impl.MonthlySalaryContractImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,6 +43,26 @@ public class MonthlySalaryContractImpl extends SalaryContractImpl implements Mon
 	 * @ordered
 	 */
 	protected double salary = SALARY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TYPE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected String type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -88,11 +109,34 @@ public class MonthlySalaryContractImpl extends SalaryContractImpl implements Mon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(String newType) {
+		String oldType = type;
+		type = newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StaffPackage.MONTHLY_SALARY_CONTRACT__TYPE, oldType, type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case StaffPackage.MONTHLY_SALARY_CONTRACT__SALARY:
 				return getSalary();
+			case StaffPackage.MONTHLY_SALARY_CONTRACT__TYPE:
+				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,6 +151,9 @@ public class MonthlySalaryContractImpl extends SalaryContractImpl implements Mon
 		switch (featureID) {
 			case StaffPackage.MONTHLY_SALARY_CONTRACT__SALARY:
 				setSalary((Double)newValue);
+				return;
+			case StaffPackage.MONTHLY_SALARY_CONTRACT__TYPE:
+				setType((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,6 +170,9 @@ public class MonthlySalaryContractImpl extends SalaryContractImpl implements Mon
 			case StaffPackage.MONTHLY_SALARY_CONTRACT__SALARY:
 				setSalary(SALARY_EDEFAULT);
 				return;
+			case StaffPackage.MONTHLY_SALARY_CONTRACT__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -137,6 +187,8 @@ public class MonthlySalaryContractImpl extends SalaryContractImpl implements Mon
 		switch (featureID) {
 			case StaffPackage.MONTHLY_SALARY_CONTRACT__SALARY:
 				return salary != SALARY_EDEFAULT;
+			case StaffPackage.MONTHLY_SALARY_CONTRACT__TYPE:
+				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,6 +205,8 @@ public class MonthlySalaryContractImpl extends SalaryContractImpl implements Mon
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (salary: ");
 		result.append(salary);
+		result.append(", type: ");
+		result.append(type);
 		result.append(')');
 		return result.toString();
 	}

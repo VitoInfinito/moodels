@@ -23,4 +23,12 @@ public interface SalaryContract extends EObject {
 	 */
 	double getSalary();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" required="true" ordered="false"
+	 * @generated
+	 */
+	String getType();
+
 } // SalaryContract
