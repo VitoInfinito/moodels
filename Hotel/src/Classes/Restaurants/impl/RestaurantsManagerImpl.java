@@ -240,12 +240,12 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> searchRestaurantReservations(String restaurantID, String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchRestaurantReservations(String restaurantID, String keyword) {
+		
+		
+		return null;
 	}
 
 	/**
