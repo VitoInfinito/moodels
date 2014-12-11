@@ -100,9 +100,9 @@ public interface IStays extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getBillsOfHotelStay(String stayID);
+	List<String> getBillsOfHotelStay(String stayID);
 
 	/**
 	 * <!-- begin-user-doc -->
