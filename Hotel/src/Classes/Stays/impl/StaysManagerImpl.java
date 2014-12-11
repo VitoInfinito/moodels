@@ -334,9 +334,13 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public List<String> getGuestsOfHotelStay(String stayID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		if (!stays.contains(stayID)) {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		} else {
+			return stays.get(stayID).getCheckedInGuests();
+		}
 	}
 
 	/**
