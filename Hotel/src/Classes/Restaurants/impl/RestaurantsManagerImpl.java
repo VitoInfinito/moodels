@@ -394,7 +394,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 		if(reservation == null) {
 			logger.warn("The Reservation with ID {} could not be found. Invalid ID", reservationID);
 			throw new InvalidIDException();
-		}	
+		}
 	}
 
 	/**
