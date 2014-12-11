@@ -537,7 +537,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	public void addRestaurant(String name) throws IllegalArgumentException{
 		if(restaurant.containsKey(name)) {
 			logger.warn("The restaurant name already exists");
-			throw new IllegalArgumentException("Name ID already exists");
+			throw new InvalidIDException("Name ID already exists");
 		}
 		
 		Restaurant rest = RestaurantsFactory.eINSTANCE.createRestaurant();
@@ -553,7 +553,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 		Restaurant rest = restaurant.removeKey(restaurantID);
 		if(rest == null) {
 			logger.warn("The Restaurant with ID {} could not be found. Invalid ID", restaurantID);
-			throw new InvalidIDException();
+			throw new InvalidIDException("Restaurant ID already exists");
 		}
 	}
 
@@ -562,11 +562,11 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addRestaurantTable(String restaurantID, int nbrSeats, String tableNbr) {
+	public void addRestaurantTable(String restaurantID, int nbrSeats, String tableNbr) throws InvalidIDException{
 		Restaurant rest = getRestaurantByID(restaurantID);
 		if(rest.getRestaurantTable().get(tableNbr) != null) {
 			logger.warn("The restaurant table already exists");
-			throw new IllegalArgumentException("Table number already exists");
+			throw new InvalidIDException("Table number already exists");
 		}
 		RestaurantTable table = RestaurantsFactory.eINSTANCE.createRestaurantTable();
 		
@@ -584,16 +584,47 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 		RestaurantTable table = rest.getRestaurantTable().removeKey(tableNbr);
 		if(table == null) {
 			logger.warn("The Table with number {} could not be found. Invalid ID", tableNbr);
-			throw new InvalidIDException();
+			throw new InvalidIDException("Table number could not be found");
 		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void changeRestaurantName(String restaurantID, String name) {
+	public void changeRestaurantName(String restaurantID, String name) throws InvalidIDException{
+		if(restaurant.containsKey(name)) {
+			logger.warn("The Restaurant name already exists");
+			throw new InvalidIDException("Restaurant name already exists");
+		}
+		
+		Restaurant rest = restaurant.removeKey(restaurantID);
+		restaurant.put(name, rest);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void changeTableNumberOfSeats(String restaurantID, String tableNbr, int nbrSeats) throws InvalidIDException{
+		Restaurant rest = getRestaurantByID(restaurantID);
+		RestaurantTable table = rest.getRestaurantTable().get(tableNbr);
+		if(table == null) {
+			logger.warn("The Table with number {} could not be found. Invalid ID", tableNbr);
+			throw new InvalidIDException("Table number could not be found");
+		}
+		
+		table.setNumberOfSeats(nbrSeats);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void addMenuItem(String restaurantID, String itemID) throws InvalidIDException{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -602,9 +633,9 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void changeTableNumberOfSeats(String restaurantID, String tableNbr, int nbrSeats) {
+	public void removeMenuItem(String restaurantID, String itemID) throws InvalidIDException{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -613,9 +644,9 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void addMenuItem(String restaurantID, String itemID) {
+	public void changeMenuName(String restaurantID, String name) throws InvalidIDException{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -624,31 +655,9 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void removeMenuItem(String restaurantID, String itemID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void changeMenuName(String restaurantID, String name) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void changeTableNumber(String restaurantID, String oldTableNbr, String newTableNbr) {
+	public void changeTableNumber(String restaurantID, String oldTableNbr, String newTableNbr) throws InvalidIDException{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
