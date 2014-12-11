@@ -343,6 +343,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Get all the guests of an existing stay
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
