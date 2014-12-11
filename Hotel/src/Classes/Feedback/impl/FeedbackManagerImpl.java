@@ -4,7 +4,12 @@ package Classes.Feedback.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.regex.Pattern;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -14,7 +19,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
+import Classes.RegexPatterns;
+import Classes.Bookables.HostelBed;
+import Classes.Bookables.Room;
+import Classes.Bookables.RoomLocation;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToFeedbackMapImpl;
 import Classes.Feedback.Feedback;
@@ -191,12 +201,42 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> searchFeedback(String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchFeedback(String keyword) {
+		
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
+
+		// Exact ID match. First Order!
+		Feedback feedback = getFeedback(keyword);
+		if (feedback != null) {
+			searchResult.add(feedback.getId());
+			//return new ArrayList<String>(searchResult);
+		}
+
+		// ID match somewhat. Second Order!
+		Collection<Feedback> c = feedbacks.values();
+		for (Feedback f : c) {	
+			if (regexPattern.matcher(f.getId()).matches()) {
+				searchResult.add(f.getId());
+			}
+		}
+
+		// Some property match exactly. Third Order!
+		for (Feedback f : c) {
+			if (f.getDescription().equalsIgnoreCase(keyword) || (keyword.matches(RegexPatterns.IntOnlyRegex))) // && Integer.valueOf(keyword) == b.getBaseprice() 
+				searchResult.add(f.getId());
+		}
+
+		// Some property match somewhat. Fourth Order.
+		for (Feedback b : c) {
+			if (regexPattern.matcher(b.getDescription()).matches())
+				searchResult.add(b.getId());
+		}
+
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**

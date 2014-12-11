@@ -82,9 +82,9 @@ public interface IFeedback extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchFeedback(String keyword);
+	List<String> searchFeedback(String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
