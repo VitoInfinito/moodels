@@ -110,7 +110,7 @@ public interface RestaurantsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IRESTAURANTS_ACCESS___GET_AVAILABLE_TABLES__DATE_DATE = 3;
+	int IRESTAURANTS_ACCESS___GET_AVAILABLE_TABLES__DATE_DATE_STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Get Reservation Guest</em>' operation.
@@ -291,7 +291,7 @@ public interface RestaurantsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IRESTAURANTS_MANAGE___GET_AVAILABLE_TABLES__DATE_DATE = IRESTAURANTS_ACCESS___GET_AVAILABLE_TABLES__DATE_DATE;
+	int IRESTAURANTS_MANAGE___GET_AVAILABLE_TABLES__DATE_DATE_STRING = IRESTAURANTS_ACCESS___GET_AVAILABLE_TABLES__DATE_DATE_STRING;
 
 	/**
 	 * The operation id for the '<em>Get Reservation Guest</em>' operation.
@@ -571,7 +571,7 @@ public interface RestaurantsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTAURANTS_MANAGER___GET_AVAILABLE_TABLES__DATE_DATE = IRESTAURANTS_MANAGE___GET_AVAILABLE_TABLES__DATE_DATE;
+	int RESTAURANTS_MANAGER___GET_AVAILABLE_TABLES__DATE_DATE_STRING = IRESTAURANTS_MANAGE___GET_AVAILABLE_TABLES__DATE_DATE_STRING;
 
 	/**
 	 * The operation id for the '<em>Get Reservation Guest</em>' operation.
@@ -1197,14 +1197,14 @@ public interface RestaurantsPackage extends EPackage {
 	EOperation getIRestaurantsAccess__GetRestaurantTableNumberOfSeats__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Restaurants.IRestaurantsAccess#getAvailableTables(java.util.Date, java.util.Date) <em>Get Available Tables</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Restaurants.IRestaurantsAccess#getAvailableTables(java.util.Date, java.util.Date, java.lang.String) <em>Get Available Tables</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Available Tables</em>' operation.
-	 * @see Classes.Restaurants.IRestaurantsAccess#getAvailableTables(java.util.Date, java.util.Date)
+	 * @see Classes.Restaurants.IRestaurantsAccess#getAvailableTables(java.util.Date, java.util.Date, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIRestaurantsAccess__GetAvailableTables__Date_Date();
+	EOperation getIRestaurantsAccess__GetAvailableTables__Date_Date_String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Restaurants.IRestaurantsAccess#getReservationGuest(java.lang.String, java.lang.String) <em>Get Reservation Guest</em>}' operation.
@@ -1723,7 +1723,7 @@ public interface RestaurantsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IRESTAURANTS_ACCESS___GET_AVAILABLE_TABLES__DATE_DATE = eINSTANCE.getIRestaurantsAccess__GetAvailableTables__Date_Date();
+		EOperation IRESTAURANTS_ACCESS___GET_AVAILABLE_TABLES__DATE_DATE_STRING = eINSTANCE.getIRestaurantsAccess__GetAvailableTables__Date_Date_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Reservation Guest</b></em>' operation.

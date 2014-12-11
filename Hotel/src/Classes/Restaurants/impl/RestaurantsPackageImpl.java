@@ -353,7 +353,7 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRestaurantsAccess__GetAvailableTables__Date_Date() {
+	public EOperation getIRestaurantsAccess__GetAvailableTables__Date_Date_String() {
 		return iRestaurantsAccessEClass.getEOperations().get(3);
 	}
 
@@ -716,7 +716,7 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_RESTAURANT_RESERVATIONS__STRING);
 		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_RESTAURANT_TABLES__STRING);
 		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_RESTAURANT_TABLE_NUMBER_OF_SEATS__STRING_STRING);
-		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_AVAILABLE_TABLES__DATE_DATE);
+		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_AVAILABLE_TABLES__DATE_DATE_STRING);
 		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_RESERVATION_GUEST__STRING_STRING);
 		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_RESTAURANT_MENU_NAME__STRING);
 		createEOperation(iRestaurantsAccessEClass, IRESTAURANTS_ACCESS___GET_ALL_RESTAURANT_NAMES);
@@ -849,9 +849,10 @@ public class RestaurantsPackageImpl extends EPackageImpl implements RestaurantsP
 		addEParameter(op, theTypesPackage.getString(), "restaurantID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "tableNbr", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIRestaurantsAccess__GetAvailableTables__Date_Date(), theTypesPackage.getString(), "getAvailableTables", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRestaurantsAccess__GetAvailableTables__Date_Date_String(), theTypesPackage.getString(), "getAvailableTables", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "to", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "from", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "restaurantID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIRestaurantsAccess__GetReservationGuest__String_String(), theTypesPackage.getString(), "getReservationGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "restaurantID", 1, 1, IS_UNIQUE, !IS_ORDERED);

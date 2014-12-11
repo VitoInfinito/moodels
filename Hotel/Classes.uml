@@ -1216,6 +1216,9 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PUKgYX_xEeS5IpkkkJsVew"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PUKgYn_xEeS5IpkkkJsVew" value="*"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_AXSEIIEfEeSRHohs3wWePg" name="restaurantID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NQ4HpsEeST-65JbGUt8g" name="getReservationGuest">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_jLq2UH_xEeS5IpkkkJsVew" direction="return">

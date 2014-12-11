@@ -48,10 +48,10 @@ public interface IRestaurantsAccess extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false"
 	 * @generated
 	 */
-	EList<String> getAvailableTables(Date to, Date from);
+	EList<String> getAvailableTables(Date to, Date from, String restaurantID);
 
 	/**
 	 * <!-- begin-user-doc -->
