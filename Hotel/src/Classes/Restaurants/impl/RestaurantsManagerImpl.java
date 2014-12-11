@@ -367,27 +367,6 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void makeReservation(String restaurantID, EList<String> tables, String guestID, Date to, Date from) {
-		Reservation reservation = RestaurantsFactory.eINSTANCE.createReservation();
-		
-		reservation.setId(generateReservationID());
-		reservation.setReservedBy(guestID);
-		reservation.setFrom(from);
-		reservation.setTo(to);
-		
-		EMap<String, RestaurantTable> restTables = restaurant.get(restaurantID).getRestaurantTable();
-		for(String table : tables) {
-			reservation.getRestaurantTable().add(restTables.get(table));
-		}
-		
-		restaurant.get(restaurantID).getReservation().put(reservation.getId(), reservation);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
 	public void makeReservation(String restaurantID, List<String> tables, String guestID, Date to, Date from) {
 		Reservation reservation = RestaurantsFactory.eINSTANCE.createReservation();
 		
