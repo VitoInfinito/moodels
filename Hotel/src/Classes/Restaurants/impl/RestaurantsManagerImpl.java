@@ -131,13 +131,28 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * Helper method to get a restaurant
 	 * returns restaurant belonging to restaurantID
 	 */
-	private Restaurant getRestaurantByID(String restaurantID) {
+	private Restaurant getRestaurantByID(String restaurantID) throws InvalidIDException{
 		Restaurant rest = restaurant.get(restaurantID);
 		if(rest == null) {
 			logger.warn("The Restaurant with ID {} could not be found. Invalid ID", restaurantID);
 			throw new InvalidIDException();
 		}
 		return rest;
+	}
+	
+	/**
+	 * Helper method to get a reservation
+	 * @param restaurantID
+	 * @param reservationID
+	 * @return
+	 */
+	private Reservation getReservationByID(String restaurantID, String reservationID) throws InvalidIDException{
+		Reservation reservation = getRestaurantByID(restaurantID).getReservation().get(reservationID);
+		if(reservation == null) {
+			logger.warn("The Reservation with ID {} could not be found. Invalid ID", reservationID);
+			throw new InvalidIDException();
+		}
+		return reservation;
 	}
 
 	/**
@@ -200,14 +215,8 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public String getReservationGuest(String restaurantID, String reservationID) throws IllegalArgumentException, InvalidIDException{		
-		Reservation reservation = getRestaurantByID(restaurantID).getReservation().get(reservationID);
-		if(reservation == null) {
-			logger.warn("Reservation with ID {} could not be found. Invalid ID", reservationID);
-			throw new InvalidIDException();
-		}
-		
-		return reservation.getReservedBy();
+	public String getReservationGuest(String restaurantID, String reservationID) {		
+		return getReservationByID(restaurantID, reservationID).getReservedBy();
 	}
 
 	/**
@@ -404,11 +413,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	public void changeReservedTables(String restaurantID, String reservationID, EList<String> tables) {
 		Restaurant rest = getRestaurantByID(restaurantID);
-		Reservation reservation = rest.getReservation().get(reservationID);
-		if(reservation == null) {
-			logger.warn("The Reservation with ID {} could not be found. Invalid ID", reservationID);
-			throw new InvalidIDException();
-		}
+		Reservation reservation = getReservationByID(restaurantID, reservationID);
 		
 		reservation.getRestaurantTable().clear();
 		EMap<String, RestaurantTable> restTables = rest.getRestaurantTable();
@@ -448,23 +453,19 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Date getReservationFromTime(String restaurantID, String reservationID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return getReservationByID(restaurantID, reservationID).getFrom();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Date getReservationToTime(String restaurantID, String reservationID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return getReservationByID(restaurantID, reservationID).getTo();
 	}
 
 	/**
