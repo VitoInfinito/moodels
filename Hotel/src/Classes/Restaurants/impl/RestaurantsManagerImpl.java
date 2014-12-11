@@ -146,7 +146,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated NOT
 	 */
 	public List<String> getRestaurantReservations(String restaurantID) {
-		return restaurantID != null ? new ArrayList<String>(getRestaurantByID(restaurantID).getReservation().keySet()) : new ArrayList<String>();
+		return new ArrayList<String>(getRestaurantByID(restaurantID).getReservation().keySet());
 	}
 
 	/**
@@ -192,7 +192,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 			}
 		}
 		
-		return available;
+		return new ArrayList<String>(available);
 	}
 
 	/**
@@ -439,12 +439,10 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getRestaurantMenuItems(String restaurantID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getRestaurantMenuItems(String restaurantID) {
+		return new ArrayList<String>(getRestaurantByID(restaurantID).getMenu().getItems());
 	}
 
 	/**
