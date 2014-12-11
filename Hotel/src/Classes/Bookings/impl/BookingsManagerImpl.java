@@ -374,6 +374,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Get the customer for a specific booking
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -388,6 +389,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * get the number of guests of a specific booking
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -435,6 +437,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Change the number of guests on a specific booking
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -449,6 +452,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Returns a list of all existing bookings
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -547,12 +551,14 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getBookingRequests(String bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getBookingRequests(String bookingID) {
+		
+		//TODO Check whether or not there could be multiple requests, change method in booking
+		
+		//return new ArrayList<String>(booking.get(bookingID).getRequests());
+		return null;
 	}
 
 	/**

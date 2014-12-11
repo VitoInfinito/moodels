@@ -172,9 +172,9 @@ public interface IBookings extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getBookingRequests(String bookingID);
+	List<String> getBookingRequests(String bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->
