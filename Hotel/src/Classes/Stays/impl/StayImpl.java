@@ -384,9 +384,7 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 	 * @generated
 	 */
 	public void addBill(String billID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		bills.add(billID);
 	}
 
 	/**
