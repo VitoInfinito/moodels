@@ -408,17 +408,6 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void removeStay() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void removeStay(String stayID) {
@@ -437,17 +426,6 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 * @generated
 	 */
 	public void addRequest() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void removeRequest() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -620,14 +598,14 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 			case GuestsPackage.GUEST___ADD_STAY:
 				addStay();
 				return null;
-			case GuestsPackage.GUEST___REMOVE_STAY:
-				removeStay();
+			case GuestsPackage.GUEST___REMOVE_STAY__STRING:
+				removeStay((String)arguments.get(0));
 				return null;
 			case GuestsPackage.GUEST___ADD_REQUEST:
 				addRequest();
 				return null;
-			case GuestsPackage.GUEST___REMOVE_REQUEST:
-				removeRequest();
+			case GuestsPackage.GUEST___REMOVE_REQUEST__STRING:
+				removeRequest((String)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

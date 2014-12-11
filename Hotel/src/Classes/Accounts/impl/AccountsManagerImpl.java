@@ -17,7 +17,6 @@ import Classes.Accounts.Account;
 import Classes.Accounts.AccountType;
 import Classes.Accounts.AccountsManager;
 import Classes.Accounts.AccountsPackage;
-import Classes.Accounts.IAccountsAccess;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToAccountMapImpl;
 

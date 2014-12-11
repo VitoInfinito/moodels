@@ -126,7 +126,9 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	public void changeCustomerFirstName(String SSID, String firstName) {
-		
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
