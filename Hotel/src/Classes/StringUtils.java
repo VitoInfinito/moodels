@@ -1,6 +1,9 @@
 package Classes;
 
-public class RegexPatterns {
+import java.security.SecureRandom;
+import java.util.Random;
+
+public class StringUtils {
 	static final String Digits     = "(\\p{Digit}+)";
 	static final String HexDigits  = "(\\p{XDigit}+)";
 	// an exponent is 'e' or 'E' followed by an optionally 
@@ -39,8 +42,31 @@ public class RegexPatterns {
 	        ")[pP][+-]?" + Digits + "))" +
 	        "[fFdD]?))" +
 					"[\\x00-\\x20]*");// Optional trailing "whitespace"
-	
-	
-	
+
+
+
 	public static final String IntOnlyRegex    = "^[0-9]+$";
+
+
+	private static final Random RANDOM = new SecureRandom();
+	/**
+	 * Generate a random String suitable for use as a temporary password.
+	 *
+	 * @return String suitable for use as a temporary password
+	 */
+	public static String generateRandomPassword(int length)
+	{
+		// Pick from some letters that won't be easily mistaken for each
+		// other. So, for example, omit o O and 0, 1 l and L.
+		String letters = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789+@";
+
+		String pw = "";
+		for (int i=0; i<length; i++)
+		{
+			int index = (int)(RANDOM.nextDouble()*letters.length());
+			pw += letters.substring(index, index+1);
+		}
+		return pw;
+	}
+
 }

@@ -22,7 +22,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import Classes.InvalidIDException;
-import Classes.RegexPatterns;
+import Classes.StringUtils;
 import Classes.Bookables.Bookable;
 import Classes.Bookables.BookablesFactory;
 import Classes.Bookables.BookablesManager;
@@ -270,21 +270,21 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 
 		// Some property match exactly. Third Order!
 		for (Bookable b : c) {
-			if (b.getDescription().equalsIgnoreCase(keyword) || (keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.valueOf(keyword) == b.getBaseprice())) {
+			if (b.getDescription().equalsIgnoreCase(keyword) || (keyword.matches(StringUtils.IntOnlyRegex) && Integer.valueOf(keyword) == b.getBaseprice())) {
 				searchResult.add(b.getId());
 			} else if (b instanceof Room) {
 				Room r = (Room)b;
 				RoomLocation l = r.getLocation();
-				if ((keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.valueOf(keyword) == l.getFloor()) || keyword.equalsIgnoreCase(l.getAddtionalInfo())){ 
+				if ((keyword.matches(StringUtils.IntOnlyRegex) && Integer.valueOf(keyword) == l.getFloor()) || keyword.equalsIgnoreCase(l.getAddtionalInfo())){ 
 					searchResult.add(r.getId());
 				} else if (b instanceof HotelRoom) {
 					HotelRoom hr = (HotelRoom)b;
-					if (keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.valueOf(keyword) == hr.getNbrBeds()) {
+					if (keyword.matches(StringUtils.IntOnlyRegex) && Integer.valueOf(keyword) == hr.getNbrBeds()) {
 						searchResult.add(hr.getId());
 					}
 				} else if (b instanceof ConferenceRoom) {
 					ConferenceRoom cr = (ConferenceRoom)b;
-					if (keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.valueOf(keyword) == cr.getCapacity()) {
+					if (keyword.matches(StringUtils.IntOnlyRegex) && Integer.valueOf(keyword) == cr.getCapacity()) {
 						searchResult.add(cr.getId());
 					}
 				}
@@ -425,11 +425,11 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 		// Some property match exactly. Third Order!
 		for (HotelRoom room : rooms) {
 			RoomLocation location = room.getLocation();
-			if (room.getDescription().equalsIgnoreCase(keyword) || (keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.valueOf(keyword) == room.getBaseprice())) {
+			if (room.getDescription().equalsIgnoreCase(keyword) || (keyword.matches(StringUtils.IntOnlyRegex) && Integer.valueOf(keyword) == room.getBaseprice())) {
 				searchResult.add(room.getId());
-			} else if ((keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.valueOf(keyword) == location.getFloor()) || keyword.equalsIgnoreCase(location.getAddtionalInfo())){
+			} else if ((keyword.matches(StringUtils.IntOnlyRegex) && Integer.valueOf(keyword) == location.getFloor()) || keyword.equalsIgnoreCase(location.getAddtionalInfo())){
 				searchResult.add(room.getId());
-			} else if (keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.valueOf(keyword) == room.getNbrBeds()) {
+			} else if (keyword.matches(StringUtils.IntOnlyRegex) && Integer.valueOf(keyword) == room.getNbrBeds()) {
 				searchResult.add(room.getId());
 			}
 		}
@@ -479,7 +479,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 
 		// Some property match exactly. Third Order!
 		for (HostelBed bed : beds) {
-			if (bed.getDescription().equalsIgnoreCase(keyword) || (keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.valueOf(keyword) == bed.getBaseprice())) {
+			if (bed.getDescription().equalsIgnoreCase(keyword) || (keyword.matches(StringUtils.IntOnlyRegex) && Integer.valueOf(keyword) == bed.getBaseprice())) {
 				searchResult.add(bed.getId());
 			} else if (bed.getRoom().getId().equalsIgnoreCase(keyword)) {
 				searchResult.add(bed.getId());
@@ -532,11 +532,11 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 		// Some property match exactly. Third Order!
 		for (ConferenceRoom room : rooms) {
 			RoomLocation location = room.getLocation();
-			if (room.getDescription().equalsIgnoreCase(keyword) || (keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.valueOf(keyword) == room.getBaseprice())) {
+			if (room.getDescription().equalsIgnoreCase(keyword) || (keyword.matches(StringUtils.IntOnlyRegex) && Integer.valueOf(keyword) == room.getBaseprice())) {
 				searchResult.add(room.getId());
-			} else if ((keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.valueOf(keyword) == location.getFloor()) || keyword.equalsIgnoreCase(location.getAddtionalInfo())){
+			} else if ((keyword.matches(StringUtils.IntOnlyRegex) && Integer.valueOf(keyword) == location.getFloor()) || keyword.equalsIgnoreCase(location.getAddtionalInfo())){
 				searchResult.add(room.getId());
-			} else if (keyword.matches(RegexPatterns.IntOnlyRegex) && Integer.valueOf(keyword) == room.getCapacity()) {
+			} else if (keyword.matches(StringUtils.IntOnlyRegex) && Integer.valueOf(keyword) == room.getCapacity()) {
 				searchResult.add(room.getId());
 			}
 		}

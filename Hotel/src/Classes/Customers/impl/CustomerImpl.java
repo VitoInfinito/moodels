@@ -10,9 +10,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import Classes.InvalidIDException;
 import Classes.Customers.Customer;
 import Classes.Customers.CustomersPackage;
+import Classes.Feedback.impl.FeedbackManagerImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,6 +39,7 @@ import Classes.Customers.CustomersPackage;
  * @generated
  */
 public class CustomerImpl extends MinimalEObjectImpl.Container implements Customer {
+	private final Logger logger = LoggerFactory.getLogger(CustomerImpl.class);
 	/**
 	 * The default value of the '{@link #getFirstname() <em>Firstname</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -350,7 +355,12 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	 * @generated NOT
 	 */
 	public void addBooking(String bookingID) {
-		bookings.add(bookingID);
+		if(!bookings.contains(bookingID)) {
+			bookings.add(bookingID);
+		} else {
+			logger.warn("A booking with bookingID {} could not be found.", bookingID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -359,7 +369,12 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	 * @generated NOT
 	 */
 	public void removeBooking(String bookingID) {
-		bookings.remove(bookingID);
+		if(bookings.contains(bookingID)) {
+			bookings.remove(bookingID);
+		} else {
+			logger.warn("A booking with bookingID {} could not be found.", bookingID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -368,7 +383,12 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	 * @generated NOT
 	 */
 	public void addRequest(String requestID) {
-		requests.add(requestID);
+		if(!requests.contains(requestID)) {
+			requests.add(requestID);
+		} else {
+			logger.warn("A request with requestID {} could not be found.", requestID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -377,7 +397,12 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	 * @generated NOT
 	 */
 	public void removeRequest(String requestID) {
-		requests.remove(requestID);
+		if(requests.contains(requestID)) {
+			requests.remove(requestID);
+		} else {
+			logger.warn("A request with requestID {} could not be found.", requestID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
