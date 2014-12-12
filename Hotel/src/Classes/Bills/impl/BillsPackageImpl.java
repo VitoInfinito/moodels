@@ -123,15 +123,15 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 		BookablesPackageImpl theBookablesPackage = (BookablesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BookablesPackage.eNS_URI) instanceof BookablesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BookablesPackage.eNS_URI) : BookablesPackage.eINSTANCE);
 		StaysPackageImpl theStaysPackage = (StaysPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StaysPackage.eNS_URI) instanceof StaysPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StaysPackage.eNS_URI) : StaysPackage.eINSTANCE);
 		BankingPackageImpl theBankingPackage = (BankingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BankingPackage.eNS_URI) instanceof BankingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BankingPackage.eNS_URI) : BankingPackage.eINSTANCE);
+		InventoryPackageImpl theInventoryPackage = (InventoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(InventoryPackage.eNS_URI) instanceof InventoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(InventoryPackage.eNS_URI) : InventoryPackage.eINSTANCE);
+		ServicesPackageImpl theServicesPackage = (ServicesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) instanceof ServicesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) : ServicesPackage.eINSTANCE);
 		GuestsPackageImpl theGuestsPackage = (GuestsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(GuestsPackage.eNS_URI) instanceof GuestsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(GuestsPackage.eNS_URI) : GuestsPackage.eINSTANCE);
 		AccountsPackageImpl theAccountsPackage = (AccountsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AccountsPackage.eNS_URI) instanceof AccountsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AccountsPackage.eNS_URI) : AccountsPackage.eINSTANCE);
 		BookingsPackageImpl theBookingsPackage = (BookingsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BookingsPackage.eNS_URI) instanceof BookingsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BookingsPackage.eNS_URI) : BookingsPackage.eINSTANCE);
 		CustomersPackageImpl theCustomersPackage = (CustomersPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CustomersPackage.eNS_URI) instanceof CustomersPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CustomersPackage.eNS_URI) : CustomersPackage.eINSTANCE);
 		StatisticsPackageImpl theStatisticsPackage = (StatisticsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StatisticsPackage.eNS_URI) instanceof StatisticsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StatisticsPackage.eNS_URI) : StatisticsPackage.eINSTANCE);
 		StaffPackageImpl theStaffPackage = (StaffPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StaffPackage.eNS_URI) instanceof StaffPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StaffPackage.eNS_URI) : StaffPackage.eINSTANCE);
-		InventoryPackageImpl theInventoryPackage = (InventoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(InventoryPackage.eNS_URI) instanceof InventoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(InventoryPackage.eNS_URI) : InventoryPackage.eINSTANCE);
 		RestaurantsPackageImpl theRestaurantsPackage = (RestaurantsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RestaurantsPackage.eNS_URI) instanceof RestaurantsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RestaurantsPackage.eNS_URI) : RestaurantsPackage.eINSTANCE);
-		ServicesPackageImpl theServicesPackage = (ServicesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) instanceof ServicesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) : ServicesPackage.eINSTANCE);
 		FeedbackPackageImpl theFeedbackPackage = (FeedbackPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) instanceof FeedbackPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) : FeedbackPackage.eINSTANCE);
 		RequestsPackageImpl theRequestsPackage = (RequestsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) instanceof RequestsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) : RequestsPackage.eINSTANCE);
 		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
@@ -141,15 +141,15 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 		theBookablesPackage.createPackageContents();
 		theStaysPackage.createPackageContents();
 		theBankingPackage.createPackageContents();
+		theInventoryPackage.createPackageContents();
+		theServicesPackage.createPackageContents();
 		theGuestsPackage.createPackageContents();
 		theAccountsPackage.createPackageContents();
 		theBookingsPackage.createPackageContents();
 		theCustomersPackage.createPackageContents();
 		theStatisticsPackage.createPackageContents();
 		theStaffPackage.createPackageContents();
-		theInventoryPackage.createPackageContents();
 		theRestaurantsPackage.createPackageContents();
-		theServicesPackage.createPackageContents();
 		theFeedbackPackage.createPackageContents();
 		theRequestsPackage.createPackageContents();
 		theTypesPackage.createPackageContents();
@@ -159,15 +159,15 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 		theBookablesPackage.initializePackageContents();
 		theStaysPackage.initializePackageContents();
 		theBankingPackage.initializePackageContents();
+		theInventoryPackage.initializePackageContents();
+		theServicesPackage.initializePackageContents();
 		theGuestsPackage.initializePackageContents();
 		theAccountsPackage.initializePackageContents();
 		theBookingsPackage.initializePackageContents();
 		theCustomersPackage.initializePackageContents();
 		theStatisticsPackage.initializePackageContents();
 		theStaffPackage.initializePackageContents();
-		theInventoryPackage.initializePackageContents();
 		theRestaurantsPackage.initializePackageContents();
-		theServicesPackage.initializePackageContents();
 		theFeedbackPackage.initializePackageContents();
 		theRequestsPackage.initializePackageContents();
 		theTypesPackage.initializePackageContents();
@@ -206,6 +206,33 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 	 */
 	public EReference getBillsManager_CustomerProvides() {
 		return (EReference)billsManagerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBillsManager_BookablesAccess() {
+		return (EReference)billsManagerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBillsManager_InventoryAccess() {
+		return (EReference)billsManagerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBillsManager_ServicesAccess() {
+		return (EReference)billsManagerEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -509,6 +536,9 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 		billsManagerEClass = createEClass(BILLS_MANAGER);
 		createEReference(billsManagerEClass, BILLS_MANAGER__BILLS);
 		createEReference(billsManagerEClass, BILLS_MANAGER__CUSTOMER_PROVIDES);
+		createEReference(billsManagerEClass, BILLS_MANAGER__BOOKABLES_ACCESS);
+		createEReference(billsManagerEClass, BILLS_MANAGER__INVENTORY_ACCESS);
+		createEReference(billsManagerEClass, BILLS_MANAGER__SERVICES_ACCESS);
 
 		billEClass = createEClass(BILL);
 		createEAttribute(billEClass, BILL__IS_PAID);
@@ -568,6 +598,9 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 
 		// Obtain other dependent packages
 		BankingPackage theBankingPackage = (BankingPackage)EPackage.Registry.INSTANCE.getEPackage(BankingPackage.eNS_URI);
+		BookablesPackage theBookablesPackage = (BookablesPackage)EPackage.Registry.INSTANCE.getEPackage(BookablesPackage.eNS_URI);
+		InventoryPackage theInventoryPackage = (InventoryPackage)EPackage.Registry.INSTANCE.getEPackage(InventoryPackage.eNS_URI);
+		ServicesPackage theServicesPackage = (ServicesPackage)EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI);
 		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 
 		// Create type parameters
@@ -581,6 +614,9 @@ public class BillsPackageImpl extends EPackageImpl implements BillsPackage {
 		initEClass(billsManagerEClass, BillsManager.class, "BillsManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBillsManager_Bills(), this.getBill(), null, "bills", null, 0, -1, BillsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBillsManager_CustomerProvides(), theBankingPackage.getCustomerProvides(), null, "customerProvides", null, 1, 1, BillsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBillsManager_BookablesAccess(), theBookablesPackage.getIBookablesAccess(), null, "bookablesAccess", null, 1, 1, BillsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBillsManager_InventoryAccess(), theInventoryPackage.getIInventoryAccess(), null, "inventoryAccess", null, 1, 1, BillsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBillsManager_ServicesAccess(), theServicesPackage.getIServicesAccess(), null, "servicesAccess", null, 1, 1, BillsManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(billEClass, Bill.class, "Bill", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBill_IsPaid(), theTypesPackage.getBoolean(), "isPaid", null, 1, 1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

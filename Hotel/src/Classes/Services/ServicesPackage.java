@@ -129,7 +129,7 @@ public interface ServicesPackage extends EPackage {
 	 * @see Classes.Services.impl.ServicesPackageImpl#getIServicesAccess()
 	 * @generated
 	 */
-	int ISERVICES_ACCESS = 1;
+	int ISERVICES_ACCESS = 5;
 
 	/**
 	 * The number of structural features of the '<em>IServices Access</em>' class.
@@ -328,7 +328,7 @@ public interface ServicesPackage extends EPackage {
 	 * @see Classes.Services.impl.ServicesPackageImpl#getIServicesManage()
 	 * @generated
 	 */
-	int ISERVICES_MANAGE = 5;
+	int ISERVICES_MANAGE = 4;
 
 	/**
 	 * The number of structural features of the '<em>IServices Manage</em>' class.
@@ -590,7 +590,7 @@ public interface ServicesPackage extends EPackage {
 	 * @see Classes.Services.impl.ServicesPackageImpl#getServiceManager()
 	 * @generated
 	 */
-	int SERVICE_MANAGER = 2;
+	int SERVICE_MANAGER = 1;
 
 	/**
 	 * The feature id for the '<em><b>Service</b></em>' reference list.
@@ -879,7 +879,7 @@ public interface ServicesPackage extends EPackage {
 	 * @see Classes.Services.impl.ServicesPackageImpl#getService()
 	 * @generated
 	 */
-	int SERVICE = 3;
+	int SERVICE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -943,7 +943,7 @@ public interface ServicesPackage extends EPackage {
 	 * @see Classes.Services.impl.ServicesPackageImpl#getRoomServiceOrder()
 	 * @generated
 	 */
-	int ROOM_SERVICE_ORDER = 4;
+	int ROOM_SERVICE_ORDER = 3;
 
 	/**
 	 * The feature id for the '<em><b>Service</b></em>' reference list.

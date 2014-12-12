@@ -503,9 +503,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws SOAPException 
 	 * @generated NOT
 	 */
-	public void billCreditCardWithAllUnpaidBillsOfHotelStay(String stayID) {
+	public void billCreditCardWithAllUnpaidBillsOfHotelStay(String stayID) throws SOAPException {
 		if (stays.contains(stayID)) {
 			CreditCard creditCard = stays.get(stayID).getCreditCard();
 			if (creditCard != null) {

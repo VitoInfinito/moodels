@@ -4,11 +4,13 @@ package Classes.Bills;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
+
+import javax.xml.soap.SOAPException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
+import org.eclipse.jdt.annotation.Nullable;
 
 /**
  * <!-- begin-user-doc -->
@@ -75,19 +77,22 @@ public interface IBills extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOTE the the bookable is supplied if the bill is including a bookable, not if the bill is put on a room etc.
+	 * Discount is between 0 and 1.
 	 * <!-- end-user-doc -->
 	 * @model itemsDataType="org.eclipse.uml2.types.String" itemsMany="true" itemsOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false" bookableDataType="org.eclipse.uml2.types.String" bookableRequired="true" bookableOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void addBill(EList<String> items, EList<String> services, String bookable);
+	void addBill(List<String> items, List<String> services, @Nullable String bookable, double discount);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws SOAPException 
 	 * @model billsDataType="org.eclipse.uml2.types.String" billsMany="true" billsOrdered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
 	 * @generated NOT
 	 */
-	void payBillsWithCreditCard(List<String> bills, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName);
+	void payBillsWithCreditCard(List<String> bills, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,9 +138,9 @@ public interface IBills extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model billsDataType="org.eclipse.uml2.types.String" billsMany="true" billsOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void payBillsWithCash(EList<String> bills);
+	void payBillsWithCash(List<String> bills);
 
 	/**
 	 * <!-- begin-user-doc -->

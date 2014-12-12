@@ -131,7 +131,6 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 		booking = new EcoreEMap<String,Booking>(ECoreMapEntriesPackage.Literals.STRING_TO_BOOKING_MAP, StringToBookingMapImpl.class, this, BookingsPackage.BOOKINGS_MANAGER__BOOKING);
 		iBookableAccess = IBookablesAccess.INSTANCE;
 		iHotelStayManager = IStays.INSTANCE;
-		// TODO fetch bank
 		iGuest = IGuests.INSTANCE;
 		iCustomer = ICustomers.INSTANCE;
 		iBills = IBills.INSTANCE;

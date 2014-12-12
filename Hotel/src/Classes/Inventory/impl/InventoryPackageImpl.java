@@ -132,6 +132,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		StaysPackageImpl theStaysPackage = (StaysPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StaysPackage.eNS_URI) instanceof StaysPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StaysPackage.eNS_URI) : StaysPackage.eINSTANCE);
 		BankingPackageImpl theBankingPackage = (BankingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BankingPackage.eNS_URI) instanceof BankingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BankingPackage.eNS_URI) : BankingPackage.eINSTANCE);
 		BillsPackageImpl theBillsPackage = (BillsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BillsPackage.eNS_URI) instanceof BillsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BillsPackage.eNS_URI) : BillsPackage.eINSTANCE);
+		ServicesPackageImpl theServicesPackage = (ServicesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) instanceof ServicesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) : ServicesPackage.eINSTANCE);
 		GuestsPackageImpl theGuestsPackage = (GuestsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(GuestsPackage.eNS_URI) instanceof GuestsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(GuestsPackage.eNS_URI) : GuestsPackage.eINSTANCE);
 		AccountsPackageImpl theAccountsPackage = (AccountsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AccountsPackage.eNS_URI) instanceof AccountsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AccountsPackage.eNS_URI) : AccountsPackage.eINSTANCE);
 		BookingsPackageImpl theBookingsPackage = (BookingsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BookingsPackage.eNS_URI) instanceof BookingsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BookingsPackage.eNS_URI) : BookingsPackage.eINSTANCE);
@@ -139,7 +140,6 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		StatisticsPackageImpl theStatisticsPackage = (StatisticsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StatisticsPackage.eNS_URI) instanceof StatisticsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StatisticsPackage.eNS_URI) : StatisticsPackage.eINSTANCE);
 		StaffPackageImpl theStaffPackage = (StaffPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StaffPackage.eNS_URI) instanceof StaffPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StaffPackage.eNS_URI) : StaffPackage.eINSTANCE);
 		RestaurantsPackageImpl theRestaurantsPackage = (RestaurantsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RestaurantsPackage.eNS_URI) instanceof RestaurantsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RestaurantsPackage.eNS_URI) : RestaurantsPackage.eINSTANCE);
-		ServicesPackageImpl theServicesPackage = (ServicesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) instanceof ServicesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ServicesPackage.eNS_URI) : ServicesPackage.eINSTANCE);
 		FeedbackPackageImpl theFeedbackPackage = (FeedbackPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) instanceof FeedbackPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) : FeedbackPackage.eINSTANCE);
 		RequestsPackageImpl theRequestsPackage = (RequestsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) instanceof RequestsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) : RequestsPackage.eINSTANCE);
 		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
@@ -150,6 +150,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		theStaysPackage.createPackageContents();
 		theBankingPackage.createPackageContents();
 		theBillsPackage.createPackageContents();
+		theServicesPackage.createPackageContents();
 		theGuestsPackage.createPackageContents();
 		theAccountsPackage.createPackageContents();
 		theBookingsPackage.createPackageContents();
@@ -157,7 +158,6 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		theStatisticsPackage.createPackageContents();
 		theStaffPackage.createPackageContents();
 		theRestaurantsPackage.createPackageContents();
-		theServicesPackage.createPackageContents();
 		theFeedbackPackage.createPackageContents();
 		theRequestsPackage.createPackageContents();
 		theTypesPackage.createPackageContents();
@@ -168,6 +168,7 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		theStaysPackage.initializePackageContents();
 		theBankingPackage.initializePackageContents();
 		theBillsPackage.initializePackageContents();
+		theServicesPackage.initializePackageContents();
 		theGuestsPackage.initializePackageContents();
 		theAccountsPackage.initializePackageContents();
 		theBookingsPackage.initializePackageContents();
@@ -175,7 +176,6 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		theStatisticsPackage.initializePackageContents();
 		theStaffPackage.initializePackageContents();
 		theRestaurantsPackage.initializePackageContents();
-		theServicesPackage.initializePackageContents();
 		theFeedbackPackage.initializePackageContents();
 		theRequestsPackage.initializePackageContents();
 		theTypesPackage.initializePackageContents();
@@ -422,15 +422,6 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___ADD_ITEM__STRING_DOUBLE_DOUBLE_INT);
 		createEOperation(iManageInventoryEClass, IMANAGE_INVENTORY___REMOVE_ITEM__STRING);
 
-		iInventoryAccessEClass = createEClass(IINVENTORY_ACCESS);
-		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___CHANGE_ITEM_STOCK__STRING_INT);
-		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_PRICE__STRING);
-		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_NAME__STRING);
-		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_STOCK__STRING);
-		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_EXPENSE__STRING);
-		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ALL_ITEM_IDS);
-		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___SEARCH_ITEMS__STRING);
-
 		inventoryManagerEClass = createEClass(INVENTORY_MANAGER);
 		createEReference(inventoryManagerEClass, INVENTORY_MANAGER__ITEMS);
 
@@ -440,6 +431,15 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		createEAttribute(itemEClass, ITEM__EXPENSE);
 		createEAttribute(itemEClass, ITEM__STOCK);
 		createEAttribute(itemEClass, ITEM__ID);
+
+		iInventoryAccessEClass = createEClass(IINVENTORY_ACCESS);
+		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___CHANGE_ITEM_STOCK__STRING_INT);
+		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_PRICE__STRING);
+		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_NAME__STRING);
+		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_STOCK__STRING);
+		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ITEM_EXPENSE__STRING);
+		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___GET_ALL_ITEM_IDS);
+		createEOperation(iInventoryAccessEClass, IINVENTORY_ACCESS___SEARCH_ITEMS__STRING);
 	}
 
 	/**
@@ -500,6 +500,16 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 		op = initEOperation(getIManageInventory__RemoveItem__String(), null, "removeItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		initEClass(inventoryManagerEClass, InventoryManager.class, "InventoryManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInventoryManager_Items(), this.getItem(), null, "items", null, 0, -1, InventoryManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(itemEClass, Item.class, "Item", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getItem_Name(), theTypesPackage.getString(), "name", null, 1, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getItem_Price(), ecorePackage.getEDouble(), "price", null, 1, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getItem_Expense(), ecorePackage.getEDouble(), "expense", null, 1, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getItem_Stock(), theTypesPackage.getInteger(), "stock", null, 1, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getItem_Id(), theTypesPackage.getString(), "id", null, 1, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
 		initEClass(iInventoryAccessEClass, IInventoryAccess.class, "IInventoryAccess", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getIInventoryAccess__ChangeItemStock__String_int(), null, "changeItemStock", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -522,16 +532,6 @@ public class InventoryPackageImpl extends EPackageImpl implements InventoryPacka
 
 		op = initEOperation(getIInventoryAccess__SearchItems__String(), theTypesPackage.getString(), "searchItems", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "keyword", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEClass(inventoryManagerEClass, InventoryManager.class, "InventoryManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInventoryManager_Items(), this.getItem(), null, "items", null, 0, -1, InventoryManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(itemEClass, Item.class, "Item", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getItem_Name(), theTypesPackage.getString(), "name", null, 1, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getItem_Price(), ecorePackage.getEDouble(), "price", null, 1, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getItem_Expense(), ecorePackage.getEDouble(), "expense", null, 1, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getItem_Stock(), theTypesPackage.getInteger(), "stock", null, 1, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getItem_Id(), theTypesPackage.getString(), "id", null, 1, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

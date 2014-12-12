@@ -1912,6 +1912,9 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9Oe5XpsEeST-65JbGUt8g" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9Oe5npsEeST-65JbGUt8g" value="1"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_SaDYgIGMEeSFKZZHOpdzQg" name="bookablesAccess" visibility="private" type="_w9Lbt3psEeST-65JbGUt8g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WxCm4IGMEeSFKZZHOpdzQg" name="inventoryAccess" visibility="private" type="_w9NQvnpsEeST-65JbGUt8g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_bclI8IGMEeSFKZZHOpdzQg" name="servicesAccess" visibility="private" type="_w9OfDXpsEeST-65JbGUt8g"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_w9Oe53psEeST-65JbGUt8g" client="_w9Oe3XpsEeST-65JbGUt8g" supplier="_w9OezHpsEeST-65JbGUt8g" contract="_w9OezHpsEeST-65JbGUt8g"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9Oe6HpsEeST-65JbGUt8g" name="Bill" visibility="package">

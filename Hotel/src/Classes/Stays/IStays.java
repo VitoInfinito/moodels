@@ -183,10 +183,11 @@ public interface IStays extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws SOAPException 
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void billCreditCardWithAllUnpaidBillsOfHotelStay(String stayID);
+	void billCreditCardWithAllUnpaidBillsOfHotelStay(String stayID) throws SOAPException;
 
 	/**
 	 * <!-- begin-user-doc -->

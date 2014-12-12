@@ -267,13 +267,40 @@ public interface BillsPackage extends EPackage {
 	int BILLS_MANAGER__CUSTOMER_PROVIDES = IBILLS_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Bookables Access</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILLS_MANAGER__BOOKABLES_ACCESS = IBILLS_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Inventory Access</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILLS_MANAGER__INVENTORY_ACCESS = IBILLS_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Services Access</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILLS_MANAGER__SERVICES_ACCESS = IBILLS_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BILLS_MANAGER_FEATURE_COUNT = IBILLS_FEATURE_COUNT + 2;
+	int BILLS_MANAGER_FEATURE_COUNT = IBILLS_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Get Is Bill Paid</em>' operation.
@@ -596,6 +623,39 @@ public interface BillsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBillsManager_CustomerProvides();
+
+	/**
+	 * Returns the meta object for the reference '{@link Classes.Bills.BillsManager#getBookablesAccess <em>Bookables Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Bookables Access</em>'.
+	 * @see Classes.Bills.BillsManager#getBookablesAccess()
+	 * @see #getBillsManager()
+	 * @generated
+	 */
+	EReference getBillsManager_BookablesAccess();
+
+	/**
+	 * Returns the meta object for the reference '{@link Classes.Bills.BillsManager#getInventoryAccess <em>Inventory Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Inventory Access</em>'.
+	 * @see Classes.Bills.BillsManager#getInventoryAccess()
+	 * @see #getBillsManager()
+	 * @generated
+	 */
+	EReference getBillsManager_InventoryAccess();
+
+	/**
+	 * Returns the meta object for the reference '{@link Classes.Bills.BillsManager#getServicesAccess <em>Services Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Services Access</em>'.
+	 * @see Classes.Bills.BillsManager#getServicesAccess()
+	 * @see #getBillsManager()
+	 * @generated
+	 */
+	EReference getBillsManager_ServicesAccess();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Bills.Bill <em>Bill</em>}'.
@@ -954,6 +1014,30 @@ public interface BillsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BILLS_MANAGER__CUSTOMER_PROVIDES = eINSTANCE.getBillsManager_CustomerProvides();
+
+		/**
+		 * The meta object literal for the '<em><b>Bookables Access</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BILLS_MANAGER__BOOKABLES_ACCESS = eINSTANCE.getBillsManager_BookablesAccess();
+
+		/**
+		 * The meta object literal for the '<em><b>Inventory Access</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BILLS_MANAGER__INVENTORY_ACCESS = eINSTANCE.getBillsManager_InventoryAccess();
+
+		/**
+		 * The meta object literal for the '<em><b>Services Access</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BILLS_MANAGER__SERVICES_ACCESS = eINSTANCE.getBillsManager_ServicesAccess();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Bills.impl.BillImpl <em>Bill</em>}' class.

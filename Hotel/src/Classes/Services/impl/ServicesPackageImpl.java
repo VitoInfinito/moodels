@@ -148,13 +148,13 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		StaysPackageImpl theStaysPackage = (StaysPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StaysPackage.eNS_URI) instanceof StaysPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StaysPackage.eNS_URI) : StaysPackage.eINSTANCE);
 		BankingPackageImpl theBankingPackage = (BankingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BankingPackage.eNS_URI) instanceof BankingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BankingPackage.eNS_URI) : BankingPackage.eINSTANCE);
 		BillsPackageImpl theBillsPackage = (BillsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BillsPackage.eNS_URI) instanceof BillsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BillsPackage.eNS_URI) : BillsPackage.eINSTANCE);
+		InventoryPackageImpl theInventoryPackage = (InventoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(InventoryPackage.eNS_URI) instanceof InventoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(InventoryPackage.eNS_URI) : InventoryPackage.eINSTANCE);
 		GuestsPackageImpl theGuestsPackage = (GuestsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(GuestsPackage.eNS_URI) instanceof GuestsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(GuestsPackage.eNS_URI) : GuestsPackage.eINSTANCE);
 		AccountsPackageImpl theAccountsPackage = (AccountsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AccountsPackage.eNS_URI) instanceof AccountsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AccountsPackage.eNS_URI) : AccountsPackage.eINSTANCE);
 		BookingsPackageImpl theBookingsPackage = (BookingsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BookingsPackage.eNS_URI) instanceof BookingsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BookingsPackage.eNS_URI) : BookingsPackage.eINSTANCE);
 		CustomersPackageImpl theCustomersPackage = (CustomersPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CustomersPackage.eNS_URI) instanceof CustomersPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CustomersPackage.eNS_URI) : CustomersPackage.eINSTANCE);
 		StatisticsPackageImpl theStatisticsPackage = (StatisticsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StatisticsPackage.eNS_URI) instanceof StatisticsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StatisticsPackage.eNS_URI) : StatisticsPackage.eINSTANCE);
 		StaffPackageImpl theStaffPackage = (StaffPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StaffPackage.eNS_URI) instanceof StaffPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StaffPackage.eNS_URI) : StaffPackage.eINSTANCE);
-		InventoryPackageImpl theInventoryPackage = (InventoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(InventoryPackage.eNS_URI) instanceof InventoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(InventoryPackage.eNS_URI) : InventoryPackage.eINSTANCE);
 		RestaurantsPackageImpl theRestaurantsPackage = (RestaurantsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RestaurantsPackage.eNS_URI) instanceof RestaurantsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RestaurantsPackage.eNS_URI) : RestaurantsPackage.eINSTANCE);
 		FeedbackPackageImpl theFeedbackPackage = (FeedbackPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) instanceof FeedbackPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(FeedbackPackage.eNS_URI) : FeedbackPackage.eINSTANCE);
 		RequestsPackageImpl theRequestsPackage = (RequestsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) instanceof RequestsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RequestsPackage.eNS_URI) : RequestsPackage.eINSTANCE);
@@ -166,13 +166,13 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		theStaysPackage.createPackageContents();
 		theBankingPackage.createPackageContents();
 		theBillsPackage.createPackageContents();
+		theInventoryPackage.createPackageContents();
 		theGuestsPackage.createPackageContents();
 		theAccountsPackage.createPackageContents();
 		theBookingsPackage.createPackageContents();
 		theCustomersPackage.createPackageContents();
 		theStatisticsPackage.createPackageContents();
 		theStaffPackage.createPackageContents();
-		theInventoryPackage.createPackageContents();
 		theRestaurantsPackage.createPackageContents();
 		theFeedbackPackage.createPackageContents();
 		theRequestsPackage.createPackageContents();
@@ -184,13 +184,13 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		theStaysPackage.initializePackageContents();
 		theBankingPackage.initializePackageContents();
 		theBillsPackage.initializePackageContents();
+		theInventoryPackage.initializePackageContents();
 		theGuestsPackage.initializePackageContents();
 		theAccountsPackage.initializePackageContents();
 		theBookingsPackage.initializePackageContents();
 		theCustomersPackage.initializePackageContents();
 		theStatisticsPackage.initializePackageContents();
 		theStaffPackage.initializePackageContents();
-		theInventoryPackage.initializePackageContents();
 		theRestaurantsPackage.initializePackageContents();
 		theFeedbackPackage.initializePackageContents();
 		theRequestsPackage.initializePackageContents();
@@ -725,27 +725,6 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		createEOperation(roomServiceMenuEClass, ROOM_SERVICE_MENU___ADD_ITEM__STRING);
 		createEOperation(roomServiceMenuEClass, ROOM_SERVICE_MENU___REMOVE_ITEM__STRING);
 
-		iServicesAccessEClass = createEClass(ISERVICES_ACCESS);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_ALL_SERVICE_IDS);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_ALL_ROOM_SERVICE_ORDER_IDS);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___SEARCH_SERVICES__STRING);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___SEARCH_ROOM_SERVICE_ORDERS__STRING);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_SERVICE_NAME__STRING);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_SERVICE_PRICE__STRING);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_SERVICE_EXPENSE__STRING);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___IS_RSO_DELIVERED__STRING);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_DELIVERY_DATE__STRING);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_BOOKABLE__STRING);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_ITEMS__STRING);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_SERVICES__STRING);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___CHANGE_RSOIS_DELIVERED__STRING_BOOLEAN);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___CHANGE_RSO_DELIVERY_DATE__STRING_DATE);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_ROOM_SERVICE_MENU_NAME);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_ROOM_SERVICE_MENU_ITEMS);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___SET_RSO_BILL__STRING_STRING);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_BILL__STRING);
-		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___MAKE_ROOM_SERVICE_ORDER__ELIST_ELIST_STRING_STRING_DATE_BOOLEAN);
-
 		serviceManagerEClass = createEClass(SERVICE_MANAGER);
 		createEReference(serviceManagerEClass, SERVICE_MANAGER__SERVICE);
 		createEReference(serviceManagerEClass, SERVICE_MANAGER__ROOM_SERVICE_ORDER);
@@ -778,6 +757,27 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___REMOVE_ROOM_SERVICE_MENU_ITEM__STRING);
 		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___CHANGE_ROOM_SERVICE_MENU_NAME__STRING);
 		createEOperation(iServicesManageEClass, ISERVICES_MANAGE___ADD_SERVICE__STRING_DOUBLE_DOUBLE);
+
+		iServicesAccessEClass = createEClass(ISERVICES_ACCESS);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_ALL_SERVICE_IDS);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_ALL_ROOM_SERVICE_ORDER_IDS);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___SEARCH_SERVICES__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___SEARCH_ROOM_SERVICE_ORDERS__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_SERVICE_NAME__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_SERVICE_PRICE__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_SERVICE_EXPENSE__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___IS_RSO_DELIVERED__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_DELIVERY_DATE__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_BOOKABLE__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_ITEMS__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_SERVICES__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___CHANGE_RSOIS_DELIVERED__STRING_BOOLEAN);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___CHANGE_RSO_DELIVERY_DATE__STRING_DATE);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_ROOM_SERVICE_MENU_NAME);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_ROOM_SERVICE_MENU_ITEMS);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___SET_RSO_BILL__STRING_STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___GET_RSO_BILL__STRING);
+		createEOperation(iServicesAccessEClass, ISERVICES_ACCESS___MAKE_ROOM_SERVICE_ORDER__ELIST_ELIST_STRING_STRING_DATE_BOOLEAN);
 	}
 
 	/**
@@ -824,6 +824,62 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 
 		op = initEOperation(getRoomServiceMenu__RemoveItem__String(), null, "removeItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "itemID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(serviceManagerEClass, ServiceManager.class, "ServiceManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getServiceManager_Service(), this.getService(), null, "service", null, 0, -1, ServiceManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getServiceManager_RoomServiceOrder(), this.getRoomServiceOrder(), null, "roomServiceOrder", null, 0, -1, ServiceManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getServiceManager_RoomServiceMenu(), this.getRoomServiceMenu(), null, "roomServiceMenu", null, 1, 1, ServiceManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getService_Name(), theTypesPackage.getString(), "name", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getService_Price(), ecorePackage.getEDouble(), "price", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getService_Expense(), ecorePackage.getEDouble(), "expense", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getService_Id(), theTypesPackage.getString(), "id", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(roomServiceOrderEClass, RoomServiceOrder.class, "RoomServiceOrder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRoomServiceOrder_Service(), this.getService(), null, "service", null, 0, -1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoomServiceOrder_IsDelivered(), theTypesPackage.getBoolean(), "isDelivered", null, 1, 1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoomServiceOrder_DeliveryDate(), ecorePackage.getEDate(), "deliveryDate", null, 1, 1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoomServiceOrder_Bookable(), theTypesPackage.getString(), "bookable", null, 1, 1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoomServiceOrder_Items(), theTypesPackage.getString(), "items", null, 0, -1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoomServiceOrder_Id(), theTypesPackage.getString(), "id", null, 1, 1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoomServiceOrder_Bill(), theTypesPackage.getString(), "bill", null, 1, 1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEOperation(getRoomServiceOrder__AddService(), null, "addService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getRoomServiceOrder__AddItem(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getRoomServiceOrder__RemoveItem(), null, "removeItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getRoomServiceOrder__RemoveService(), null, "removeService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(iServicesManageEClass, IServicesManage.class, "IServicesManage", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		op = initEOperation(getIServicesManage__ChangeServiceName__String_String(), null, "changeServiceName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "serviceID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIServicesManage__ChangeServicePrice__String_double(), null, "changeServicePrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "serviceID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIServicesManage__ChangeServiceExpense__String_double(), null, "changeServiceExpense", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "serviceID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "expense", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIServicesManage__AddRoomServiceMenuItem__String(), null, "addRoomServiceMenuItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "itemID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIServicesManage__RemoveRoomServiceMenuItem__String(), null, "removeRoomServiceMenuItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "itemID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIServicesManage__ChangeRoomServiceMenuName__String(), null, "changeRoomServiceMenuName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIServicesManage__AddService__String_double_double(), null, "addService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "expense", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iServicesAccessEClass, IServicesAccess.class, "IServicesAccess", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -887,62 +943,6 @@ public class ServicesPackageImpl extends EPackageImpl implements ServicesPackage
 		addEParameter(op, theTypesPackage.getString(), "bookable", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "deliveryDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getBoolean(), "isDelivered", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEClass(serviceManagerEClass, ServiceManager.class, "ServiceManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getServiceManager_Service(), this.getService(), null, "service", null, 0, -1, ServiceManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getServiceManager_RoomServiceOrder(), this.getRoomServiceOrder(), null, "roomServiceOrder", null, 0, -1, ServiceManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getServiceManager_RoomServiceMenu(), this.getRoomServiceMenu(), null, "roomServiceMenu", null, 1, 1, ServiceManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getService_Name(), theTypesPackage.getString(), "name", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getService_Price(), ecorePackage.getEDouble(), "price", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getService_Expense(), ecorePackage.getEDouble(), "expense", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getService_Id(), theTypesPackage.getString(), "id", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(roomServiceOrderEClass, RoomServiceOrder.class, "RoomServiceOrder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRoomServiceOrder_Service(), this.getService(), null, "service", null, 0, -1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getRoomServiceOrder_IsDelivered(), theTypesPackage.getBoolean(), "isDelivered", null, 1, 1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getRoomServiceOrder_DeliveryDate(), ecorePackage.getEDate(), "deliveryDate", null, 1, 1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getRoomServiceOrder_Bookable(), theTypesPackage.getString(), "bookable", null, 1, 1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getRoomServiceOrder_Items(), theTypesPackage.getString(), "items", null, 0, -1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getRoomServiceOrder_Id(), theTypesPackage.getString(), "id", null, 1, 1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getRoomServiceOrder_Bill(), theTypesPackage.getString(), "bill", null, 1, 1, RoomServiceOrder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getRoomServiceOrder__AddService(), null, "addService", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomServiceOrder__AddItem(), null, "addItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomServiceOrder__RemoveItem(), null, "removeItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getRoomServiceOrder__RemoveService(), null, "removeService", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEClass(iServicesManageEClass, IServicesManage.class, "IServicesManage", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		op = initEOperation(getIServicesManage__ChangeServiceName__String_String(), null, "changeServiceName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "serviceID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIServicesManage__ChangeServicePrice__String_double(), null, "changeServicePrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "serviceID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIServicesManage__ChangeServiceExpense__String_double(), null, "changeServiceExpense", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "serviceID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "expense", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIServicesManage__AddRoomServiceMenuItem__String(), null, "addRoomServiceMenuItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "itemID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIServicesManage__RemoveRoomServiceMenuItem__String(), null, "removeRoomServiceMenuItem", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "itemID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIServicesManage__ChangeRoomServiceMenuName__String(), null, "changeRoomServiceMenuName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIServicesManage__AddService__String_double_double(), null, "addService", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "expense", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

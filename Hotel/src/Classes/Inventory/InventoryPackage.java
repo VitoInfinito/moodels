@@ -65,7 +65,7 @@ public interface InventoryPackage extends EPackage {
 	 * @see Classes.Inventory.impl.InventoryPackageImpl#getIInventoryAccess()
 	 * @generated
 	 */
-	int IINVENTORY_ACCESS = 1;
+	int IINVENTORY_ACCESS = 3;
 
 	/**
 	 * The number of structural features of the '<em>IInventory Access</em>' class.
@@ -292,7 +292,7 @@ public interface InventoryPackage extends EPackage {
 	 * @see Classes.Inventory.impl.InventoryPackageImpl#getInventoryManager()
 	 * @generated
 	 */
-	int INVENTORY_MANAGER = 2;
+	int INVENTORY_MANAGER = 1;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -437,7 +437,7 @@ public interface InventoryPackage extends EPackage {
 	 * @see Classes.Inventory.impl.InventoryPackageImpl#getItem()
 	 * @generated
 	 */
-	int ITEM = 3;
+	int ITEM = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
