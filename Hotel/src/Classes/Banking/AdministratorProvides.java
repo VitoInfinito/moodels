@@ -15,6 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface AdministratorProvides extends EObject {
+	
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

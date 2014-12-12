@@ -36,6 +36,7 @@ import Classes.ECoreMapEntries.impl.StringToCustomerMapImpl;
  *
  * @generated
  */
+@NonNullByDefault
 public class CustomersManagerImpl extends MinimalEObjectImpl.Container implements CustomersManager {
 	private final Logger logger = LoggerFactory.getLogger(CustomersManagerImpl.class);
 	public static CustomersManagerImpl INSTANCE = new CustomersManagerImpl();
@@ -89,7 +90,6 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	@NonNullByDefault
 	public List<String> getAllCustomers() {
 		return new ArrayList<String>(customer.keySet());
 	}
@@ -103,8 +103,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	@NonNullByDefault
-	 public void addCustomer(String SSID, String firstname, String lastname, String title, String email, String phone) {
+	 public void addCustomer(String SSID, String firstname, String lastname, String title, String email, String phone) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			logger.warn("There is already a customer added with the SSID {}. The SSID can not be used as a unique ID!", SSID);
 			throw new InvalidIDException("There is already a customer added with the SSID " + SSID + ". The SSID can not be used as a unique ID!");
@@ -126,11 +125,8 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@NonNullByDefault
 	public void changeCustomerFirstName(String SSID, String firstName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
 	}
 
 	/**
@@ -138,7 +134,6 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@NonNullByDefault
 	public void changeCustomerLastName(String SSID, String lastName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT

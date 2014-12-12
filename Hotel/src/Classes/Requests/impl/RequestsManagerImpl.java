@@ -177,7 +177,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<String> getAllRequestIDs() {
-		Collection<Request> sReq = getSpecialRequest().values();
+		Collection<Request> sReq = specialRequest.values();
 		List<String> tmp = new ArrayList<String>();
 		for(Request sp: sReq){
 			tmp.add(sp.getId());
