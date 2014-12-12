@@ -222,6 +222,20 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	public boolean login(String username, String password) {
 		return validateAccount(username, password);
 	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public AccountType getAccountType(String username) {
+		if (accounts.containsKey(username)) {
+			return accounts.get(username).getAccountType();
+		} else {
+			logger.warn("An account with username {} could not be found.", username);
+			throw new InvalidIDException();
+		}
+	}
 
 	/**
 	 * <!-- begin-user-doc -->

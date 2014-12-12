@@ -36,5 +36,13 @@ public interface IAccountsAccess extends EObject {
 	 * @generated
 	 */
 	boolean login(String username, String password);
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" usernameDataType="org.eclipse.uml2.types.String" usernameRequired="true" usernameOrdered="false" passwordDataType="org.eclipse.uml2.types.String" passwordRequired="true" passwordOrdered="false"
+	 * @generated
+	 */
+	AccountType getAccountType(String username);
 
 } // IAccountsAccess
