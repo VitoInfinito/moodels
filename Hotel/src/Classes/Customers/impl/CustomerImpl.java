@@ -3,7 +3,6 @@
 package Classes.Customers.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -348,200 +347,93 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void addBooking() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void addBooking(String bookingID) {
+		bookings.add(bookingID);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void removeBooking() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void removeBooking(String bookingID) {
+		bookings.remove(bookingID);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void addRequest() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void addRequest(String requestID) {
+		requests.add(requestID);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void removeRequest() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void removeRequest(String requestID) {
+		requests.remove(requestID);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case CustomersPackage.CUSTOMER__FIRSTNAME:
-				return getFirstname();
-			case CustomersPackage.CUSTOMER__LASTNAME:
-				return getLastname();
-			case CustomersPackage.CUSTOMER__TITLE:
-				return getTitle();
-			case CustomersPackage.CUSTOMER__EMAIL:
-				return getEmail();
-			case CustomersPackage.CUSTOMER__PHONE:
-				return getPhone();
-			case CustomersPackage.CUSTOMER__SSID:
-				return getSsid();
-			case CustomersPackage.CUSTOMER__BOOKINGS:
-				return getBookings();
-			case CustomersPackage.CUSTOMER__REQUESTS:
-				return getRequests();
-		}
-		return super.eGet(featureID, resolve, coreType);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case CustomersPackage.CUSTOMER__FIRSTNAME:
-				setFirstname((String)newValue);
-				return;
-			case CustomersPackage.CUSTOMER__LASTNAME:
-				setLastname((String)newValue);
-				return;
-			case CustomersPackage.CUSTOMER__TITLE:
-				setTitle((String)newValue);
-				return;
-			case CustomersPackage.CUSTOMER__EMAIL:
-				setEmail((String)newValue);
-				return;
-			case CustomersPackage.CUSTOMER__PHONE:
-				setPhone((String)newValue);
-				return;
-			case CustomersPackage.CUSTOMER__SSID:
-				setSsid((String)newValue);
-				return;
-			case CustomersPackage.CUSTOMER__BOOKINGS:
-				getBookings().clear();
-				getBookings().addAll((Collection<? extends String>)newValue);
-				return;
-			case CustomersPackage.CUSTOMER__REQUESTS:
-				getRequests().clear();
-				getRequests().addAll((Collection<? extends String>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case CustomersPackage.CUSTOMER__FIRSTNAME:
-				setFirstname(FIRSTNAME_EDEFAULT);
-				return;
-			case CustomersPackage.CUSTOMER__LASTNAME:
-				setLastname(LASTNAME_EDEFAULT);
-				return;
-			case CustomersPackage.CUSTOMER__TITLE:
-				setTitle(TITLE_EDEFAULT);
-				return;
-			case CustomersPackage.CUSTOMER__EMAIL:
-				setEmail(EMAIL_EDEFAULT);
-				return;
-			case CustomersPackage.CUSTOMER__PHONE:
-				setPhone(PHONE_EDEFAULT);
-				return;
-			case CustomersPackage.CUSTOMER__SSID:
-				setSsid(SSID_EDEFAULT);
-				return;
-			case CustomersPackage.CUSTOMER__BOOKINGS:
-				getBookings().clear();
-				return;
-			case CustomersPackage.CUSTOMER__REQUESTS:
-				getRequests().clear();
-				return;
-		}
-		super.eUnset(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case CustomersPackage.CUSTOMER__FIRSTNAME:
-				return FIRSTNAME_EDEFAULT == null ? firstname != null : !FIRSTNAME_EDEFAULT.equals(firstname);
-			case CustomersPackage.CUSTOMER__LASTNAME:
-				return LASTNAME_EDEFAULT == null ? lastname != null : !LASTNAME_EDEFAULT.equals(lastname);
-			case CustomersPackage.CUSTOMER__TITLE:
-				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
-			case CustomersPackage.CUSTOMER__EMAIL:
-				return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
-			case CustomersPackage.CUSTOMER__PHONE:
-				return PHONE_EDEFAULT == null ? phone != null : !PHONE_EDEFAULT.equals(phone);
-			case CustomersPackage.CUSTOMER__SSID:
-				return SSID_EDEFAULT == null ? ssid != null : !SSID_EDEFAULT.equals(ssid);
-			case CustomersPackage.CUSTOMER__BOOKINGS:
-				return bookings != null && !bookings.isEmpty();
-			case CustomersPackage.CUSTOMER__REQUESTS:
-				return requests != null && !requests.isEmpty();
-		}
-		return super.eIsSet(featureID);
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * NOT SUPPORTED. EMF CRAP!
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case CustomersPackage.CUSTOMER___ADD_BOOKING:
-				addBooking();
-				return null;
-			case CustomersPackage.CUSTOMER___REMOVE_BOOKING:
-				removeBooking();
-				return null;
-			case CustomersPackage.CUSTOMER___ADD_REQUEST:
-				addRequest();
-				return null;
-			case CustomersPackage.CUSTOMER___REMOVE_REQUEST:
-				removeRequest();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
+		throw new UnsupportedOperationException();
 	}
 
 	/**

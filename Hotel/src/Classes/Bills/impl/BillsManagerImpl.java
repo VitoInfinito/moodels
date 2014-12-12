@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -54,6 +55,7 @@ import Classes.Services.IServicesAccess;
  *
  * @generated
  */
+@NonNullByDefault
 public class BillsManagerImpl extends MinimalEObjectImpl.Container implements BillsManager {
 
 	private final Logger logger = LoggerFactory.getLogger(BillsManagerImpl.class);

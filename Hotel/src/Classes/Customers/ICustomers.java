@@ -4,7 +4,6 @@ package Classes.Customers;
 
 import java.util.List;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
@@ -123,25 +122,25 @@ public interface ICustomers extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchCustomers(String keyword);
+	List<String> searchCustomers(String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getCustomerBookings(String SSID);
+	List<String> getCustomerBookings(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getCustomerRequests(String SSID);
+	List<String> getCustomerRequests(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -4,7 +4,11 @@ package Classes.Customers.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.regex.Pattern;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -125,194 +129,298 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void changeCustomerFirstName(String SSID, String firstName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (customer.containsKey(SSID)) {
+			customer.get(SSID).setFirstname(firstName);
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void changeCustomerLastName(String SSID, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (customer.containsKey(SSID)) {
+			customer.get(SSID).setLastname(lastName);
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	@NonNullByDefault
 	public void changeCustomerTitle(String SSID, String title) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (customer.containsKey(SSID)) {
+			customer.get(SSID).setTitle(title);
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	@NonNullByDefault
 	public void changeCustomerEmail(String SSID, String eMail) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (customer.containsKey(SSID)) {
+			customer.get(SSID).setEmail(eMail);
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@NonNullByDefault
 	public void changeCustomerPhone(String SSID, String phoneNr) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (customer.containsKey(SSID)) {
+			customer.get(SSID).setPhone(phoneNr);
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@NonNullByDefault
 	public String getCustomerFirstName(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (customer.containsKey(SSID)) {
+			return customer.get(SSID).getFirstname();
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@NonNullByDefault
 	public String getCustomerLastName(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (customer.containsKey(SSID)) {
+			return customer.get(SSID).getLastname();
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	@NonNullByDefault
 	public String getCustomerTitle(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (customer.containsKey(SSID)) {
+			return customer.get(SSID).getTitle();
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getCustomerEmail(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (customer.containsKey(SSID)) {
+			return customer.get(SSID).getEmail();
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getCustomerPhone(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (customer.containsKey(SSID)) {
+			return customer.get(SSID).getPhone();
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> searchCustomers(String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchCustomers(String keyword) {
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
+
+		// Exact ID match. First Order!
+		if (customer.containsKey(keyword)) {
+			searchResult.add(keyword);
+		}
+
+		Collection<Customer> c = customer.values();
+		
+		// Some property match exactly. Second Order!
+		for (Customer b : c) {
+			if (b.getFirstname().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getSsid());
+			} else if (b.getLastname().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getSsid());
+			} else if (b.getTitle().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getSsid());
+			} else if (b.getEmail().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getSsid());
+			} else if (b.getPhone().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getSsid());
+			} else if (b.getBookings().contains(keyword)) {
+				searchResult.add(b.getSsid());
+			} else if (b.getRequests().contains(keyword)) {
+				searchResult.add(b.getSsid());
+			}
+		}
+		
+		// ID match somewhat. Third Order!
+		for (Customer b : c) {			
+			if (regexPattern.matcher(b.getSsid()).matches()) {
+				searchResult.add(b.getSsid());
+			} 
+		}
+
+		// Some property match somewhat. Fourth Order.
+		for (Customer b : c) {
+			if (regexPattern.matcher(b.getFirstname()).matches()) {
+				searchResult.add(b.getSsid());
+			} else if (regexPattern.matcher(b.getLastname()).matches()) {
+				searchResult.add(b.getSsid());
+			} else if (regexPattern.matcher(b.getTitle()).matches()) {
+				searchResult.add(b.getSsid());
+			} else if (regexPattern.matcher(b.getFirstname()).matches()) {
+				searchResult.add(b.getSsid());
+			} else if (regexPattern.matcher(b.getEmail()).matches()) {
+				searchResult.add(b.getSsid());
+			} else if (regexPattern.matcher(b.getPhone()).matches()) {
+				searchResult.add(b.getSsid());
+			} else {
+				for (String booking : b.getBookings()) {
+					if (regexPattern.matcher(booking).matches()) {
+						searchResult.add(b.getSsid());
+					}
+				}
+			}
+		}
+		
+
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getCustomerBookings(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getCustomerBookings(String SSID) {
+		if (customer.containsKey(SSID)) {
+			return new ArrayList<String>(customer.get(SSID).getBookings());
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getCustomerRequests(String SSID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getCustomerRequests(String SSID) {
+		if (customer.containsKey(SSID)) {
+			return new ArrayList<String>(customer.get(SSID).getRequests());
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addCustomerBooking(String SSID, String bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (customer.containsKey(SSID)) {
+			customer.get(SSID).addBooking(bookingID);
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void removeCustomerBooking(String SSID, String bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (customer.containsKey(SSID)) {
+			customer.get(SSID).removeBooking(bookingID);
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addCustomerRequest(String SSID, String requestID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (customer.containsKey(SSID)) {
+			customer.get(SSID).addRequest(requestID);
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}	
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void removeCustomerRequest(String SSID, String requestID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (customer.containsKey(SSID)) {
+			customer.get(SSID).removeRequest(requestID);
+		} else {
+			logger.warn("A customer with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}	
 	}
 	
 	/**

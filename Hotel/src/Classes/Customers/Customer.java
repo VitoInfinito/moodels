@@ -221,32 +221,32 @@ public interface Customer extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
-	 * @generated
+	 * @generated NOT
 	 */
-	void addBooking();
+	void addBooking(String bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
-	 * @generated
+	 * @generated NOT
 	 */
-	void removeBooking();
+	void removeBooking(String bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
-	 * @generated
+	 * @generated NOT
 	 */
-	void addRequest();
+	void addRequest(String requestID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
-	 * @generated
+	 * @generated NOT
 	 */
-	void removeRequest();
+	void removeRequest(String requestID);
 
 } // Customer
