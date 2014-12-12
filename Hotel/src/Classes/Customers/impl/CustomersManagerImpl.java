@@ -5,6 +5,7 @@ package Classes.Customers.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -15,6 +16,7 @@ import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
 import Classes.Customers.Customer;
 import Classes.Customers.CustomersFactory;

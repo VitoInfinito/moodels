@@ -3,9 +3,11 @@
 package Classes.Bookables;
 
 import java.util.List;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.eclipse.jdt.annotation.Nullable;
+
 import Classes.InvalidIDException;
 
 /**

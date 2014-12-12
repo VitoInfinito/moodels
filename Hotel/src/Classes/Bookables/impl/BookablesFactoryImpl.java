@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
 import Classes.Bookables.BookablesFactory;
 import Classes.Bookables.BookablesManager;
 import Classes.Bookables.BookablesPackage;

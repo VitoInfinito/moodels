@@ -4,7 +4,12 @@ package Classes.Feedback.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.regex.Pattern;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -14,10 +19,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import Classes.InvalidIDException;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToFeedbackMapImpl;
 import Classes.Feedback.Feedback;
+import Classes.Feedback.FeedbackFactory;
 import Classes.Feedback.FeedbackManager;
 import Classes.Feedback.FeedbackPackage;
 
@@ -37,8 +44,6 @@ import Classes.Feedback.FeedbackPackage;
 public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements FeedbackManager {
 	private final Logger logger = LoggerFactory.getLogger(FeedbackManagerImpl.class);
 	public static FeedbackManagerImpl INSTANCE = new FeedbackManagerImpl();
-	
-	
 	private static int IDCounter = 0;
 	
 	/**
@@ -191,12 +196,41 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> searchFeedback(String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchFeedback(String keyword) {
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
+
+		// Exact ID match. First Order!
+		if (feedbacks.containsKey(keyword)) {
+			searchResult.add(keyword);
+		}
+		
+		Collection<Feedback> c = feedbacks.values();
+		// ID match somewhat. Second Order!
+		for (Feedback b : c) {			
+			if (regexPattern.matcher(b.getId()).matches()) {
+				searchResult.add(b.getId());
+			} 
+		}
+		
+		// Some property match exactly. Thirs Order!
+		for (Feedback b : c) {
+			if (b.getDescription().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getId());
+			} 
+		}
+
+		// Some property match somewhat. Fourth Order.
+		for (Feedback b : c) {
+			if (regexPattern.matcher(b.getDescription()).matches()) {
+				searchResult.add(b.getId());
+			}
+		}
+		
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -208,10 +242,12 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 		String id = IDCounter++ + "";
 		
 		if (!feedbacks.containsKey(id)) {
-			Feedback feedback = new FeedbackImpl();
+			Feedback feedback = FeedbackFactory.eINSTANCE.createFeedback();
 			
 			feedback.setId(id);
 			feedback.setDescription(desc);
+			feedback.setIsNoted(false);
+			feedback.setIsResolved(false);
 			
 			feedbacks.put(id, feedback);
 		} else {

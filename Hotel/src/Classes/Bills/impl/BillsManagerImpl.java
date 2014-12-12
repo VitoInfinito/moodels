@@ -2,26 +2,23 @@
  */
 package Classes.Bills.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
-import java.lang.reflect.InvocationTargetException;
-import java.util.Date;
 import java.util.regex.Pattern;
 
 import javax.xml.soap.SOAPException;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,8 +26,6 @@ import org.slf4j.LoggerFactory;
 import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
 import Classes.InvalidCreditCardException;
 import Classes.InvalidIDException;
-import Classes.Inventory.IInventoryAccess;
-import Classes.Services.IServicesAccess;
 import Classes.Banking.CustomerProvides;
 import Classes.Bills.Bill;
 import Classes.Bills.BillsFactory;
@@ -39,6 +34,8 @@ import Classes.Bills.BillsPackage;
 import Classes.Bookables.IBookablesAccess;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToBillMapImpl;
+import Classes.Inventory.IInventoryAccess;
+import Classes.Services.IServicesAccess;
 
 /**
  * <!-- begin-user-doc -->

@@ -7,7 +7,6 @@ import java.util.List;
 
 import javax.xml.soap.SOAPException;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.eclipse.jdt.annotation.Nullable;

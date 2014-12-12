@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
 import Classes.Staff.HourlySalaryContract;
 import Classes.Staff.MonthlySalaryContract;
 import Classes.Staff.Staff;
