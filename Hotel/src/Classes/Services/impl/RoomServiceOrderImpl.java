@@ -4,7 +4,9 @@ package Classes.Services.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -13,7 +15,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import Classes.InvalidIDException;
+import Classes.Bills.impl.BillsManagerImpl;
 import Classes.Services.RoomServiceOrder;
 import Classes.Services.Service;
 import Classes.Services.ServicesPackage;
@@ -38,125 +44,14 @@ import Classes.Services.ServicesPackage;
  * @generated
  */
 public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implements RoomServiceOrder {
-	/**
-	 * The cached value of the '{@link #getService() <em>Service</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getService()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Service> service;
-
-	/**
-	 * The default value of the '{@link #isDelivered() <em>Is Delivered</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isDelivered()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IS_DELIVERED_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isDelivered() <em>Is Delivered</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isDelivered()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isDelivered = IS_DELIVERED_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDeliveryDate() <em>Delivery Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDeliveryDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date DELIVERY_DATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDeliveryDate() <em>Delivery Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDeliveryDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected Date deliveryDate = DELIVERY_DATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getBookable() <em>Bookable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBookable()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String BOOKABLE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getBookable() <em>Bookable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBookable()
-	 * @generated
-	 * @ordered
-	 */
-	protected String bookable = BOOKABLE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getItems() <em>Items</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getItems()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> items;
-
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getBill() <em>Bill</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBill()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String BILL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getBill() <em>Bill</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBill()
-	 * @generated
-	 * @ordered
-	 */
-	protected String bill = BILL_EDEFAULT;
+	private final Logger logger = LoggerFactory.getLogger(RoomServiceOrderImpl.class);
+	private EList<Service> service;
+	private boolean isDelivered;
+	private Date deliveryDate;
+	private String bookable;
+	private EList<String> items;
+	private String id;
+	private String bill;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -165,29 +60,9 @@ public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implement
 	 */
 	protected RoomServiceOrderImpl() {
 		super();
+		service = new EObjectResolvingEList<Service>(Service.class, this, ServicesPackage.ROOM_SERVICE_ORDER__SERVICE);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return ServicesPackage.Literals.ROOM_SERVICE_ORDER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Service> getService() {
-		if (service == null) {
-			service = new EObjectResolvingEList<Service>(Service.class, this, ServicesPackage.ROOM_SERVICE_ORDER__SERVICE);
-		}
-		return service;
-	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -258,9 +133,6 @@ public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	public EList<String> getItems() {
-		if (items == null) {
-			items = new EDataTypeUniqueEList<String>(String.class, this, ServicesPackage.ROOM_SERVICE_ORDER__ITEMS);
-		}
 		return items;
 	}
 
@@ -311,10 +183,8 @@ public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addService() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void addService(Service ser) {
+		service.add(ser);
 	}
 
 	/**
@@ -322,10 +192,8 @@ public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addItem() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void addItem(String itemID) {
+		items.add(itemID);
 	}
 
 	/**
@@ -333,10 +201,8 @@ public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeItem() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void removeItem(String itemID) {
+		items.remove(itemID);
 	}
 
 	/**
@@ -344,155 +210,8 @@ public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeService() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case ServicesPackage.ROOM_SERVICE_ORDER__SERVICE:
-				return getService();
-			case ServicesPackage.ROOM_SERVICE_ORDER__IS_DELIVERED:
-				return isDelivered();
-			case ServicesPackage.ROOM_SERVICE_ORDER__DELIVERY_DATE:
-				return getDeliveryDate();
-			case ServicesPackage.ROOM_SERVICE_ORDER__BOOKABLE:
-				return getBookable();
-			case ServicesPackage.ROOM_SERVICE_ORDER__ITEMS:
-				return getItems();
-			case ServicesPackage.ROOM_SERVICE_ORDER__ID:
-				return getId();
-			case ServicesPackage.ROOM_SERVICE_ORDER__BILL:
-				return getBill();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case ServicesPackage.ROOM_SERVICE_ORDER__SERVICE:
-				getService().clear();
-				getService().addAll((Collection<? extends Service>)newValue);
-				return;
-			case ServicesPackage.ROOM_SERVICE_ORDER__IS_DELIVERED:
-				setIsDelivered((Boolean)newValue);
-				return;
-			case ServicesPackage.ROOM_SERVICE_ORDER__DELIVERY_DATE:
-				setDeliveryDate((Date)newValue);
-				return;
-			case ServicesPackage.ROOM_SERVICE_ORDER__BOOKABLE:
-				setBookable((String)newValue);
-				return;
-			case ServicesPackage.ROOM_SERVICE_ORDER__ITEMS:
-				getItems().clear();
-				getItems().addAll((Collection<? extends String>)newValue);
-				return;
-			case ServicesPackage.ROOM_SERVICE_ORDER__ID:
-				setId((String)newValue);
-				return;
-			case ServicesPackage.ROOM_SERVICE_ORDER__BILL:
-				setBill((String)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case ServicesPackage.ROOM_SERVICE_ORDER__SERVICE:
-				getService().clear();
-				return;
-			case ServicesPackage.ROOM_SERVICE_ORDER__IS_DELIVERED:
-				setIsDelivered(IS_DELIVERED_EDEFAULT);
-				return;
-			case ServicesPackage.ROOM_SERVICE_ORDER__DELIVERY_DATE:
-				setDeliveryDate(DELIVERY_DATE_EDEFAULT);
-				return;
-			case ServicesPackage.ROOM_SERVICE_ORDER__BOOKABLE:
-				setBookable(BOOKABLE_EDEFAULT);
-				return;
-			case ServicesPackage.ROOM_SERVICE_ORDER__ITEMS:
-				getItems().clear();
-				return;
-			case ServicesPackage.ROOM_SERVICE_ORDER__ID:
-				setId(ID_EDEFAULT);
-				return;
-			case ServicesPackage.ROOM_SERVICE_ORDER__BILL:
-				setBill(BILL_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case ServicesPackage.ROOM_SERVICE_ORDER__SERVICE:
-				return service != null && !service.isEmpty();
-			case ServicesPackage.ROOM_SERVICE_ORDER__IS_DELIVERED:
-				return isDelivered != IS_DELIVERED_EDEFAULT;
-			case ServicesPackage.ROOM_SERVICE_ORDER__DELIVERY_DATE:
-				return DELIVERY_DATE_EDEFAULT == null ? deliveryDate != null : !DELIVERY_DATE_EDEFAULT.equals(deliveryDate);
-			case ServicesPackage.ROOM_SERVICE_ORDER__BOOKABLE:
-				return BOOKABLE_EDEFAULT == null ? bookable != null : !BOOKABLE_EDEFAULT.equals(bookable);
-			case ServicesPackage.ROOM_SERVICE_ORDER__ITEMS:
-				return items != null && !items.isEmpty();
-			case ServicesPackage.ROOM_SERVICE_ORDER__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case ServicesPackage.ROOM_SERVICE_ORDER__BILL:
-				return BILL_EDEFAULT == null ? bill != null : !BILL_EDEFAULT.equals(bill);
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ServicesPackage.ROOM_SERVICE_ORDER___ADD_SERVICE:
-				addService();
-				return null;
-			case ServicesPackage.ROOM_SERVICE_ORDER___ADD_ITEM:
-				addItem();
-				return null;
-			case ServicesPackage.ROOM_SERVICE_ORDER___REMOVE_ITEM:
-				removeItem();
-				return null;
-			case ServicesPackage.ROOM_SERVICE_ORDER___REMOVE_SERVICE:
-				removeService();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
+	public void removeService(Service ser) {
+		service.remove(ser);
 	}
 
 	/**
@@ -519,6 +238,12 @@ public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implement
 		result.append(bill);
 		result.append(')');
 		return result.toString();
+	}
+
+
+	@Override
+	public EList<Service> getService() {
+		return service;
 	}
 
 } //RoomServiceOrderImpl

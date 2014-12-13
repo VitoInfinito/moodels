@@ -195,10 +195,20 @@ public interface RoomServiceOrder extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param service 
 	 * @model
 	 * @generated
 	 */
-	void addService();
+	void addService(Service service);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param item 
+	 * @model
+	 * @generated
+	 */
+	void addItem(String itemID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -206,7 +216,7 @@ public interface RoomServiceOrder extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void addItem();
+	void removeItem(String itemID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -214,14 +224,6 @@ public interface RoomServiceOrder extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void removeItem();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void removeService();
+	void removeService(Service service);
 
 } // RoomServiceOrder

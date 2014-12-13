@@ -3,6 +3,7 @@
 package Classes.Services;
 
 import java.util.Date;
+import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -16,7 +17,7 @@ import org.eclipse.jdt.annotation.NonNullByDefault;
  *
  * @see Classes.Services.ServicesPackage#getIServicesAccess()
  * @model interface="true" abstract="true"
- * @generated
+ * @generated NOT
  */
 @NonNullByDefault
 public interface IServicesAccess extends EObject {
@@ -29,7 +30,7 @@ public interface IServicesAccess extends EObject {
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
-	EList<String> getAllServiceIDs();
+	List<String> getAllServiceIDs();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -37,7 +38,7 @@ public interface IServicesAccess extends EObject {
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
-	EList<String> getAllRoomServiceOrderIDs();
+	List<String> getAllRoomServiceOrderIDs();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,7 +46,7 @@ public interface IServicesAccess extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated
 	 */
-	EList<String> searchServices(String keyword);
+	List<String> searchServices(String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -53,7 +54,7 @@ public interface IServicesAccess extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated
 	 */
-	EList<String> searchRoomServiceOrders(String keyword);
+	List<String> searchRoomServiceOrders(String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,7 +110,7 @@ public interface IServicesAccess extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false"
 	 * @generated
 	 */
-	EList<String> getRSOItems(String orderID);
+	List<String> getRSOItems(String orderID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,7 +118,7 @@ public interface IServicesAccess extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false"
 	 * @generated
 	 */
-	EList<String> getRSOServices(String orderID);
+	List<String> getRSOServices(String orderID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -149,7 +150,7 @@ public interface IServicesAccess extends EObject {
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
-	EList<String> getRoomServiceMenuItems();
+	List<String> getRoomServiceMenuItems();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -173,6 +174,6 @@ public interface IServicesAccess extends EObject {
 	 * @model itemsDataType="org.eclipse.uml2.types.String" itemsMany="true" itemsOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false" billDataType="org.eclipse.uml2.types.String" billRequired="true" billOrdered="false" bookableDataType="org.eclipse.uml2.types.String" bookableRequired="true" bookableOrdered="false" deliveryDateRequired="true" deliveryDateOrdered="false" isDeliveredDataType="org.eclipse.uml2.types.Boolean" isDeliveredRequired="true" isDeliveredOrdered="false"
 	 * @generated
 	 */
-	void makeRoomServiceOrder(EList<String> items, EList<String> services, String bill, String bookable, Date deliveryDate, boolean isDelivered);
+	void makeRoomServiceOrder(List<String> items, List<String> services, String bill, String bookable, Date deliveryDate, boolean isDelivered);
 
 } // IServicesAccess
