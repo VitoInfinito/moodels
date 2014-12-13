@@ -4,6 +4,7 @@ package Classes.Bills.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -267,7 +268,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 */
 	public List<String> getBillItems(String billID) {
 		if (bills.containsKey(billID)) {
-			return new ArrayList<String>(bills.get(billID).getItems());
+			return Collections.unmodifiableList(bills.get(billID).getItems());
 		} else {
 			logger.warn("A bill with id {} could not be found.", billID);
 			throw new InvalidIDException();
@@ -295,7 +296,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 */
 	public List<String> getBillServices(String billID) {
 		if (bills.containsKey(billID)) {
-			return new ArrayList<String>(bills.get(billID).getServices());
+			return Collections.unmodifiableList(bills.get(billID).getServices());
 		} else {
 			logger.warn("A bill with id {} could not be found.", billID);
 			throw new InvalidIDException();

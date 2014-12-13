@@ -3,8 +3,8 @@
 package Classes.Restaurants;
 
 import java.util.Date;
+import java.util.List;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -81,22 +81,6 @@ public interface Reservation extends EObject {
 	void setReservedBy(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Restaurant Table</b></em>' reference list.
-	 * The list contents are of type {@link Classes.Restaurants.RestaurantTable}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Restaurant Table</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Restaurant Table</em>' reference list.
-	 * @see Classes.Restaurants.RestaurantsPackage#getReservation_RestaurantTable()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	EList<RestaurantTable> getRestaurantTable();
-
-	/**
 	 * Returns the value of the '<em><b>From</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -147,5 +131,9 @@ public interface Reservation extends EObject {
 	 * @generated
 	 */
 	void setTo(Date value);
+
+	void addTable(RestaurantTable restaurantTable);
+
+	void changeTables(List<RestaurantTable> tables);
 
 } // Reservation

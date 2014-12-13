@@ -1419,6 +1419,11 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9NQ_npsEeST-65JbGUt8g" value="1"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9NRAXpsEeST-65JbGUt8g" name="addReservation" visibility="package"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_RZrosILhEeSNGu54B-FaGw" name="getReservation">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_VuMx4ILhEeSNGu54B-FaGw" name="reservationID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9NRBXpsEeST-65JbGUt8g" name="Reservation" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9NRBnpsEeST-65JbGUt8g" name="id" visibility="private">
@@ -1651,7 +1656,7 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9N3wnpsEeST-65JbGUt8g" name="StaffManager" visibility="package">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9N3w3psEeST-65JbGUt8g" name="staff" visibility="private" type="_w9N3ynpsEeST-65JbGUt8g" association="_w9N36npsEeST-65JbGUt8g">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9N3w3psEeST-65JbGUt8g" name="employees" visibility="private" type="_w9N3ynpsEeST-65JbGUt8g" association="_w9N36npsEeST-65JbGUt8g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9N3xHpsEeST-65JbGUt8g"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9N3xXpsEeST-65JbGUt8g" value="*"/>
       </ownedAttribute>
@@ -1707,17 +1712,11 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9N35XpsEeST-65JbGUt8g" name="salary" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_huNj4IEwEeSCK-w0yxbYcw" name="type" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9N35npsEeST-65JbGUt8g" name="HourlySalaryContract">
       <generalization xmi:type="uml:Generalization" xmi:id="_w9N353psEeST-65JbGUt8g" general="_w9N34XpsEeST-65JbGUt8g"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9N36HpsEeST-65JbGUt8g" name="salary" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_q8-ZgIEwEeSCK-w0yxbYcw" name="type" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9N36npsEeST-65JbGUt8g" name="employees" visibility="private" memberEnd="_w9N363psEeST-65JbGUt8g _w9N3w3psEeST-65JbGUt8g">

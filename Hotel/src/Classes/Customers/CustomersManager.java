@@ -2,7 +2,6 @@
  */
 package Classes.Customers;
 
-import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->

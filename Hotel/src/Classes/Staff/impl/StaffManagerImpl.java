@@ -3,6 +3,7 @@
 package Classes.Staff.impl;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -41,7 +42,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	private final Logger logger = LoggerFactory.getLogger(StaffManagerImpl.class);
 	public static StaffManagerImpl INSTANCE = new StaffManagerImpl();
 
-	private EMap<String, Staff> staff;
+	private EMap<String, Staff> employees;
 	private IStatisticsGenerator iStatisticsGenerator;
 
 	/**
@@ -51,7 +52,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	private StaffManagerImpl() {
 		super();
-		staff = new EcoreEMap<String,Staff>(ECoreMapEntriesPackage.Literals.STRING_TO_STAFF_MAP, StringToStaffMapImpl.class, this, StaffPackage.STAFF_MANAGER__STAFF);
+		employees = new EcoreEMap<String,Staff>(ECoreMapEntriesPackage.Literals.STRING_TO_STAFF_MAP, StringToStaffMapImpl.class, this, StaffPackage.STAFF_MANAGER__STAFF);
 		iStatisticsGenerator = IStatisticsGenerator.INSTANCE;
 	}
 
@@ -61,7 +62,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public List<String> getAllStaff() {
-		return new ArrayList<String>(staff.keySet());
+		return Collections.unmodifiableList(new ArrayList<String>(employees.keySet()));
 	}
 
 	/**
@@ -81,8 +82,8 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public String getStaffFirstName(String SSID) {
-		if(staff.contains(SSID)) {
-			return staff.get(SSID).getFirstName();
+		if(employees.contains(SSID)) {
+			return employees.get(SSID).getFirstName();
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -96,8 +97,8 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public String getStaffLastName(String SSID) {
-		if(staff.contains(SSID)) {
-			return staff.get(SSID).getLastName();
+		if(employees.contains(SSID)) {
+			return employees.get(SSID).getLastName();
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -110,8 +111,8 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public String getStaffJob(String SSID) {
-		if(staff.contains(SSID)) {
-			return staff.get(SSID).getJob();
+		if(employees.contains(SSID)) {
+			return employees.get(SSID).getJob();
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -124,8 +125,8 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public String getStaffPhone(String SSID) {
-		if(staff.contains(SSID)) {
-			return staff.get(SSID).getPhone();
+		if(employees.contains(SSID)) {
+			return employees.get(SSID).getPhone();
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -138,8 +139,8 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public String getStaffEmail(String SSID) {
-		if(staff.contains(SSID)) {
-			return staff.get(SSID).getEmail();
+		if(employees.contains(SSID)) {
+			return employees.get(SSID).getEmail();
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -152,8 +153,8 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public String getStaffSalaryContractType(String SSID) {
-		if(staff.contains(SSID)){
-			return staff.get(SSID).getSalaryContract().getType();
+		if(employees.contains(SSID)){
+			return employees.get(SSID).getSalaryContract().getType();
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -166,8 +167,8 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public double getStaffSalary(String SSID) {
-		if(staff.contains(SSID)) {
-			return staff.get(SSID).getSalaryContract().getSalary();
+		if(employees.contains(SSID)) {
+			return employees.get(SSID).getSalaryContract().getSalary();
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -180,8 +181,8 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public void changeStaffFirstName(String SSID, String firstName) {
-		if(staff.contains(SSID)) {
-			staff.get(SSID).setFirstName(firstName);
+		if(employees.contains(SSID)) {
+			employees.get(SSID).setFirstName(firstName);
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -194,8 +195,8 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public void changeStaffLastName(String SSID, String lastName) {
-		if(staff.contains(SSID)) {
-			staff.get(SSID).setLastName(lastName);
+		if(employees.contains(SSID)) {
+			employees.get(SSID).setLastName(lastName);
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -208,8 +209,8 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public void changeStaffJob(String SSID, String job) {
-		if(staff.contains(SSID)) {
-			staff.get(SSID).setJob(job);
+		if(employees.contains(SSID)) {
+			employees.get(SSID).setJob(job);
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -222,8 +223,8 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public void changeStaffPhone(String SSID, String phoneNumber) {
-		if(staff.contains(SSID)) {
-			staff.get(SSID).setPhone(phoneNumber);
+		if(employees.contains(SSID)) {
+			employees.get(SSID).setPhone(phoneNumber);
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -236,8 +237,8 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public void changeStaffSalaryContract(String SSID, SalaryContract salaryContract) {
-		if(staff.contains(SSID)) {
-			staff.get(SSID).setSalaryContract(salaryContract);
+		if(employees.contains(SSID)) {
+			employees.get(SSID).setSalaryContract(salaryContract);
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -262,6 +263,12 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	*/
 
 	public void addEmployee(String firstname, String lastname, String job, String phone, String email, String SSID, String salaryContractType, double salary) {
+		if (employees.containsKey(SSID)) {
+			logger.warn("There is already an employee added with the SSID {}. The SSID can not be used as a unique ID!", SSID);
+			throw new InvalidIDException("There is already an employee added with the SSID " + SSID + ". The SSID can not be used as a unique ID!");
+		}
+		
+		
 		Staff staff = StaffFactory.eINSTANCE.createStaff();
 		
 		staff.setFirstName(firstname);
@@ -283,5 +290,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 							break;
 			default:	logger.warn("Invalid salary contract", salaryContractType);
 		}
+		
+		employees.put(SSID, staff);
 	}
 } //StaffManagerImpl

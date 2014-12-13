@@ -2,19 +2,15 @@
  */
 package Classes.Requests.impl;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
@@ -45,14 +41,6 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	public static RequestsManagerImpl INSTANCE = new RequestsManagerImpl();
 	private static int counterID = 1;
 	
-	/**
-	 * The cached value of the '{@link #getSpecialRequest() <em>Special Request</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSpecialRequest()
-	 * @generated NOT
-	 * @ordered
-	 */
 	private EMap<String, Request> specialRequest;
 
 	/**
@@ -63,26 +51,6 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	private RequestsManagerImpl() {
 		super();
 		specialRequest = new EcoreEMap<String,Request>(Classes.ECoreMapEntries.ECoreMapEntriesPackage.Literals.STRING_TO_REQUEST_MAP, Classes.ECoreMapEntries.impl.StringToRequestMapImpl.class, this, RequestsPackage.REQUESTS_MANAGER__SPECIAL_REQUEST);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return RequestsPackage.Literals.REQUESTS_MANAGER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public EMap<String, Request> getSpecialRequest() {
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -162,14 +130,30 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 		// Exact ID match. First Order!
 		searchResult.add(specialRequest.get(keyword).getId());
 
-		// ID match somewhat. Second Order!
 		Collection<Request> tmpC = specialRequest.values();
+		
+		// Some property match exactly. Second Order!
+		for (Request sp : tmpC) {
+			if (sp.getDescription().equalsIgnoreCase(keyword)) {
+				searchResult.add(sp.getId());
+			} 
+		}
+		
+		// ID match somewhat. Third Order!
 		for (Request sp : tmpC) {
 			if (regexPattern.matcher(sp.getId()).matches()) {
 				searchResult.add(sp.getId());
 			}
 		}
-		return new ArrayList<String>(searchResult);
+		
+		// Some property match somewhat. Fourth Order.
+		for (Request sp : tmpC) {
+			if (regexPattern.matcher(sp.getDescription()).matches()) {
+				searchResult.add(sp.getDescription());
+			}
+		}
+		
+		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
 	}
 
 	/**
@@ -178,7 +162,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<String> getAllRequestIDs() {
-		return new ArrayList<String>(specialRequest.keySet());
+		return Collections.unmodifiableList(new ArrayList<String>(specialRequest.keySet()));
 	}
 
 	/**
@@ -216,72 +200,4 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 		
 		return specialRequestId;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		throw new UnsupportedOperationException();
-	}
-
 } //RequestsManagerImpl

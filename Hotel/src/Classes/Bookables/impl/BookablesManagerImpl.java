@@ -4,6 +4,7 @@ package Classes.Bookables.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -231,7 +232,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 			}
 		}
 
-		return new ArrayList<String>(searchResult);
+		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
 	}
 
 	/**
@@ -261,7 +262,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 				result.add(b.getId());
 			}
 		}
-		return result;
+		return Collections.unmodifiableList(result);
 	}
 
 	/**
@@ -277,7 +278,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 				result.add(b.getId());
 			}
 		}
-		return result;
+		return Collections.unmodifiableList(result);
 	}
 
 	/**
@@ -293,7 +294,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 				result.add(b.getId());
 			}
 		}
-		return result;
+		return Collections.unmodifiableList(result);
 	}
 
 	/**
@@ -363,7 +364,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 			} 
 		}
 
-		return new ArrayList<String>(searchResult);
+		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
 	}
 
 	/**
@@ -414,7 +415,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 			} 
 		}
 
-		return new ArrayList<String>(searchResult);
+		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
 	}
 
 	/**
@@ -470,7 +471,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 			} 
 		}
 
-		return new ArrayList<String>(searchResult);
+		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
 	}
 
 	/**

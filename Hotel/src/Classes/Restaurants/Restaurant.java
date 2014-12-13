@@ -2,7 +2,9 @@
  */
 package Classes.Restaurants;
 
-import org.eclipse.emf.common.util.EMap;
+import java.util.Date;
+import java.util.List;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -52,40 +54,6 @@ public interface Restaurant extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Reservation</b></em>' map.
-	 * The key is of type {@link java.lang.String},
-	 * and the value is of type {@link Classes.Restaurants.Reservation},
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Reservation</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reservation</em>' map.
-	 * @see Classes.Restaurants.RestaurantsPackage#getRestaurant_Reservation()
-	 * @model mapType="Classes.ECoreMapEntries.StringToReservationMap<org.eclipse.uml2.types.String, Classes.Restaurants.Reservation>" ordered="false"
-	 * @generated
-	 */
-	EMap<String, Reservation> getReservation();
-
-	/**
-	 * Returns the value of the '<em><b>Restaurant Table</b></em>' map.
-	 * The key is of type {@link java.lang.String},
-	 * and the value is of type {@link Classes.Restaurants.RestaurantTable},
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Restaurant Table</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Restaurant Table</em>' map.
-	 * @see Classes.Restaurants.RestaurantsPackage#getRestaurant_RestaurantTable()
-	 * @model mapType="Classes.ECoreMapEntries.StringToRestaurantTableMap<org.eclipse.uml2.types.String, Classes.Restaurants.RestaurantTable>" ordered="false"
-	 * @generated
-	 */
-	EMap<String, RestaurantTable> getRestaurantTable();
-
-	/**
 	 * Returns the value of the '<em><b>Menu</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -102,14 +70,16 @@ public interface Restaurant extends EObject {
 	RestaurantMenu getMenu();
 
 	/**
-	 * Sets the value of the '{@link Classes.Restaurants.Restaurant#getMenu <em>Menu</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Menu</em>' reference.
-	 * @see #getMenu()
+	 * @param from 
+	 * @param to 
+	 * @param guestID 
+	 * @param tables 
+	 * @model
 	 * @generated
 	 */
-	void setMenu(RestaurantMenu value);
+	void addReservation(List<String> tables, String guestID, Date to, Date from);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,6 +87,35 @@ public interface Restaurant extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void addReservation();
+	Reservation getReservation(String reservationID);
+
+	void changeTableNumber(String oldTableNbr, String newTableNbr);
+
+	void changeTableNumberOfSeats(String tableNbr, int nbrSeats);
+
+	void removeTable(String tableNbr);
+
+	void addTable(String tableNbr, int nbrSeats);
+
+	List<String> getReservationIDs();
+
+	List<String> getRestaurantTableIDs();
+
+	int getTableNumberOfSeats(String tableNbr);
+
+	List<String> getAvailableTables(Date to, Date from);
+
+	List<String> searchReservations(String keyword);
+
+	List<String> searchTables(String keyword);
+
+	void cancelReservation(String reservationID);
+
+	void changeReservedTables(String reservationID, List<String> tables);
+
+	List<String> getAvailableTablesByNbrGuests(Date to, Date from, int nbrGuests);
+
+	List<String> searchReservationsWithTime(String keyword, Date from, Date to);
+
 
 } // Restaurant

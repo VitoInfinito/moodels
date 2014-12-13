@@ -15,18 +15,9 @@ import Classes.Accounts.AccountsPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Account</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Accounts.impl.AccountImpl#getAccountType <em>Account Type</em>}</li>
- *   <li>{@link Classes.Accounts.impl.AccountImpl#getUsername <em>Username</em>}</li>
- *   <li>{@link Classes.Accounts.impl.AccountImpl#getPassword <em>Password</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
-public class AccountImpl extends MinimalEObjectImpl.Container implements Account {
+class AccountImpl extends MinimalEObjectImpl.Container implements Account {
 	/**
 	 * The default value of the '{@link #getAccountType() <em>Account Type</em>}' attribute.
 	 * <!-- begin-user-doc -->

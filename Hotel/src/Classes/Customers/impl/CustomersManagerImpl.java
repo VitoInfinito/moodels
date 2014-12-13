@@ -2,19 +2,15 @@
  */
 package Classes.Customers.impl;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.jdt.annotation.NonNullByDefault;
@@ -26,7 +22,6 @@ import Classes.Customers.Customer;
 import Classes.Customers.CustomersFactory;
 import Classes.Customers.CustomersManager;
 import Classes.Customers.CustomersPackage;
-import Classes.Customers.ICustomers;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToCustomerMapImpl;
 import Classes.Requests.IRequests;
@@ -313,7 +308,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 		}
 		
 
-		return new ArrayList<String>(searchResult);
+		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
 	}
 
 	/**
@@ -323,7 +318,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public List<String> getCustomerBookings(String SSID) {
 		if (customer.containsKey(SSID)) {
-			return new ArrayList<String>(customer.get(SSID).getBookings());
+			return Collections.unmodifiableList(customer.get(SSID).getBookings());
 		} else {
 			logger.warn("A customer with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -337,7 +332,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public List<String> getCustomerRequests(String SSID) {
 		if (customer.containsKey(SSID)) {
-			return new ArrayList<String>(customer.get(SSID).getRequests());
+			return Collections.unmodifiableList(customer.get(SSID).getRequests());
 		} else {
 			logger.warn("A customer with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();

@@ -63,14 +63,4 @@ public interface HourlySalaryContract extends SalaryContract {
 	 */
 	String getType();
 
-	/**
-	 * Sets the value of the '{@link Classes.Staff.HourlySalaryContract#getType <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see #getType()
-	 * @generated
-	 */
-	void setType(String value);
-
 } // HourlySalaryContract

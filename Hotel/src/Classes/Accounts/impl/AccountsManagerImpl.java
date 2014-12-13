@@ -4,6 +4,7 @@ package Classes.Accounts.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -163,7 +164,7 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 			}
 		}
 		
-		return new ArrayList<String>(searchResult);
+		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
 	}
 
 	/**

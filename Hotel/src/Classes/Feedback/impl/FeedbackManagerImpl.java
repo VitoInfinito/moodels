@@ -4,13 +4,13 @@ package Classes.Feedback.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 
 import org.eclipse.emf.common.util.EMap;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
@@ -41,7 +41,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	private final Logger logger = LoggerFactory.getLogger(FeedbackManagerImpl.class);
 	public static FeedbackManagerImpl INSTANCE = new FeedbackManagerImpl();
 	private static int IDCounter = 0;
-	
+
 	private EMap<String, Feedback> feedbacks;
 
 	/**
@@ -67,14 +67,14 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 			throw new InvalidIDException();
 		}
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public List<String> getAllFeedbackIDs() {
-		return new ArrayList<String>(feedbacks.keySet());
+		return Collections.unmodifiableList(new ArrayList<String>(feedbacks.keySet()));
 	}
 
 	/**
@@ -175,7 +175,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 		if (feedbacks.containsKey(keyword)) {
 			searchResult.add(keyword);
 		}
-		
+
 		Collection<Feedback> c = feedbacks.values();
 		// ID match somewhat. Second Order!
 		for (Feedback b : c) {			
@@ -183,7 +183,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 				searchResult.add(b.getId());
 			} 
 		}
-		
+
 		// Some property match exactly. Thirs Order!
 		for (Feedback b : c) {
 			if (b.getDescription().equalsIgnoreCase(keyword)) {
@@ -197,8 +197,8 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 				searchResult.add(b.getId());
 			}
 		}
-		
-		return new ArrayList<String>(searchResult);
+
+		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
 	}
 
 	/**
@@ -207,20 +207,18 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public void addFeedback(String desc) {
-		String id = IDCounter++ + "";
-		
-		if (!feedbacks.containsKey(id)) {
-			Feedback feedback = FeedbackFactory.eINSTANCE.createFeedback();
-			
-			feedback.setId(id);
-			feedback.setDescription(desc);
-			feedback.setIsNoted(false);
-			feedback.setIsResolved(false);
-			
-			feedbacks.put(id, feedback);
-		} else {
-			logger.warn("A feedback with ID {} already exists.", id);
-			throw new InvalidIDException();
-		}
+		String id = generateID();
+		Feedback feedback = FeedbackFactory.eINSTANCE.createFeedback();
+
+		feedback.setId(id);
+		feedback.setDescription(desc);
+		feedback.setIsNoted(false);
+		feedback.setIsResolved(false);
+
+		feedbacks.put(id, feedback);
+	}
+
+	private String generateID() {
+		return String.format("fe%06d", IDCounter++);
 	}
 } //FeedbackManagerImpl

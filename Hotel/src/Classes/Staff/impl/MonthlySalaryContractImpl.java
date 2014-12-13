@@ -3,7 +3,6 @@
 package Classes.Staff.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import Classes.Staff.MonthlySalaryContract;
@@ -21,55 +20,18 @@ import Classes.Staff.StaffPackage;
  * </ul>
  * </p>
  *
- * @generated
+ * @generated NOT
  */
 public class MonthlySalaryContractImpl extends SalaryContractImpl implements MonthlySalaryContract {
-	/**
-	 * The default value of the '{@link #getSalary() <em>Salary</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSalary()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double SALARY_EDEFAULT = 0.0;
 
-	/**
-	 * The cached value of the '{@link #getSalary() <em>Salary</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSalary()
-	 * @generated
-	 * @ordered
-	 */
-	protected double salary = SALARY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TYPE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected String type = TYPE_EDEFAULT;
+	private double salary;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MonthlySalaryContractImpl() {
+	MonthlySalaryContractImpl() {
 		super();
 	}
 
@@ -79,15 +41,6 @@ public class MonthlySalaryContractImpl extends SalaryContractImpl implements Mon
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
-		return StaffPackage.Literals.MONTHLY_SALARY_CONTRACT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public double getSalary() {
 		return salary;
 	}
@@ -97,6 +50,7 @@ public class MonthlySalaryContractImpl extends SalaryContractImpl implements Mon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSalary(double newSalary) {
 		double oldSalary = salary;
 		salary = newSalary;
@@ -109,88 +63,9 @@ public class MonthlySalaryContractImpl extends SalaryContractImpl implements Mon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getType() {
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StaffPackage.MONTHLY_SALARY_CONTRACT__TYPE, oldType, type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case StaffPackage.MONTHLY_SALARY_CONTRACT__SALARY:
-				return getSalary();
-			case StaffPackage.MONTHLY_SALARY_CONTRACT__TYPE:
-				return getType();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case StaffPackage.MONTHLY_SALARY_CONTRACT__SALARY:
-				setSalary((Double)newValue);
-				return;
-			case StaffPackage.MONTHLY_SALARY_CONTRACT__TYPE:
-				setType((String)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case StaffPackage.MONTHLY_SALARY_CONTRACT__SALARY:
-				setSalary(SALARY_EDEFAULT);
-				return;
-			case StaffPackage.MONTHLY_SALARY_CONTRACT__TYPE:
-				setType(TYPE_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case StaffPackage.MONTHLY_SALARY_CONTRACT__SALARY:
-				return salary != SALARY_EDEFAULT;
-			case StaffPackage.MONTHLY_SALARY_CONTRACT__TYPE:
-				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-		}
-		return super.eIsSet(featureID);
+		return this.getClass().getName();
 	}
 
 	/**
@@ -206,7 +81,7 @@ public class MonthlySalaryContractImpl extends SalaryContractImpl implements Mon
 		result.append(" (salary: ");
 		result.append(salary);
 		result.append(", type: ");
-		result.append(type);
+		result.append(getType());
 		result.append(')');
 		return result.toString();
 	}

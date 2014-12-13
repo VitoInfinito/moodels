@@ -4,6 +4,7 @@ package Classes.Guests.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -64,7 +65,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated NOT
 	 */
 	public List<String> getAllGuestIDs() {
-		return new ArrayList<String>(guests.keySet());
+		return Collections.unmodifiableList(new ArrayList<String>(guests.keySet()));
 	}
 
 	/**
@@ -305,7 +306,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 		}
 		
 
-		return new ArrayList<String>(searchResult);
+		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
 	}
 
 	/**
@@ -315,7 +316,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 */
 	public List<String> getGuestStays(String SSID) {
 		if(guests.containsKey(SSID)) {
-			return guests.get(SSID).getStays();
+			return Collections.unmodifiableList(guests.get(SSID).getStays());
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -329,7 +330,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 */
 	public List<String> getGuestRequests(String SSID) {
 		if(guests.containsKey(SSID)) {
-			return guests.get(SSID).getRequests();
+			return Collections.unmodifiableList(guests.get(SSID).getRequests());
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();

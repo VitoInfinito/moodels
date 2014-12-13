@@ -2,15 +2,12 @@
  */
 package Classes.Inventory.impl;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
@@ -130,7 +127,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated NOT
 	 */
 	public List<String> getAllItemIDs() {
-		return new ArrayList<String>(items.keySet());
+		return Collections.unmodifiableList(new ArrayList<String>(items.keySet()));
 	}
 
 	/**
@@ -192,7 +189,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated NOT
 	 */
 	public void addItem(String name, double price, double expense, int stock) {
-		String id = IDCounter++ + "";
+		String id = generateID();
 		
 		Item item = InventoryFactory.eINSTANCE.createItem();
 			
@@ -203,6 +200,10 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		item.setStock(stock);
 		
 		items.put(id, item);
+	}
+	
+	private String generateID() {
+		return String.format("it%06d", IDCounter++);
 	}
 
 	/**

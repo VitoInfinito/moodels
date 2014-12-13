@@ -2,18 +2,15 @@
  */
 package Classes.Stays.impl;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
 import javax.xml.soap.SOAPException;
 
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
@@ -22,7 +19,6 @@ import org.slf4j.LoggerFactory;
 import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
 import Classes.InvalidCreditCardException;
 import Classes.InvalidIDException;
-import Classes.Banking.CustomerProvides;
 import Classes.Bills.IBills;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToStayMapImpl;
@@ -94,7 +90,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public void addNewStay(String bookableID, String bookingID, Date fromDate, Date toDate) {
-		String id = IDCounter++ + "";
+		String id = generateID();
 		
 		Stay stay = StaysFactory.eINSTANCE.createStay();
 		stay.setID(id);
@@ -104,6 +100,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 		stay.setToDate(toDate);
 		
 		stays.put(id, stay);
+	}
+	
+	private String generateID() {
+		return String.format("st%06d", IDCounter++);
 	}
 
 	/**
@@ -214,7 +214,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public List<String> getGuestsOfHotelStay(String stayID) {
-		return new ArrayList<String>(stays.get(stayID).getCheckedInGuests());
+		return Collections.unmodifiableList(new ArrayList<String>(stays.get(stayID).getCheckedInGuests()));
 	}
 
 	/**
@@ -224,7 +224,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public List<String> getBillsOfHotelStay(String stayID) {
-		return new ArrayList<String>(stays.get(stayID).getBills());
+		return Collections.unmodifiableList(new ArrayList<String>(stays.get(stayID).getBills()));
 	}
 
 	/**
@@ -263,7 +263,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public List<String> getAllHotelStayIDs() {
-		return new ArrayList<String>(stays.keySet());
+		return Collections.unmodifiableList(new ArrayList<String>(stays.keySet()));
 	}
 
 	/**
@@ -273,7 +273,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	public List<String> getCheckedInGuestsOfHotelStay(String stayID) {
 		if (stays.contains(stayID)) {
-			return stays.get(stayID).getCheckedInGuests();
+			return Collections.unmodifiableList(stays.get(stayID).getCheckedInGuests());
 		} else {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
@@ -287,7 +287,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	public List<String> getCheckedOutGuestsOfHotelStay(String stayID) {
 		if (stays.contains(stayID)) {
-			return stays.get(stayID).getCheckedOutGuests();
+			return Collections.unmodifiableList(stays.get(stayID).getCheckedOutGuests());
 		} else {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
@@ -336,12 +336,14 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 		if (stays.contains(stayID)) {
 			List<String> unpaid = new ArrayList<String>();
 			
-			for (String billID : stays.get(stayID).getBills()) {
+			List<String> bills = stays.get(stayID).getBills();
+			
+			for (String billID : bills) {
 				if (!iBills.getIsBillPaid(billID))
 					unpaid.add(billID);
 			}
 			
-			return unpaid;
+			return Collections.unmodifiableList(unpaid);
 		} else {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();

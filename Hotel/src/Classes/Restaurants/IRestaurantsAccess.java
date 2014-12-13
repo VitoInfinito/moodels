@@ -5,7 +5,6 @@ package Classes.Restaurants;
 import java.util.Date;
 import java.util.List;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
@@ -108,14 +107,6 @@ public interface IRestaurantsAccess extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" tablesDataType="org.eclipse.uml2.types.String" tablesMany="true" tablesOrdered="false" guestIDDataType="org.eclipse.uml2.types.String" guestIDRequired="true" guestIDOrdered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false"
-	 * @generated
-	 */
-	void makeReservation(String restaurantID, EList<String> tables, String guestID, Date to, Date from);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" tablesDataType="org.eclipse.uml2.types.String" tablesMany="true" tablesOrdered="false" guestIDDataType="org.eclipse.uml2.types.String" guestIDRequired="true" guestIDOrdered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false"
 	 * @generated NOT
 	 */
 	void makeReservation(String restaurantID, List<String> tables, String guestID, Date to, Date from);
@@ -134,7 +125,7 @@ public interface IRestaurantsAccess extends EObject {
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" reservationIDDataType="org.eclipse.uml2.types.String" reservationIDRequired="true" reservationIDOrdered="false" tablesDataType="org.eclipse.uml2.types.String" tablesMany="true" tablesOrdered="false"
 	 * @generated
 	 */
-	void changeReservedTables(String restaurantID, String reservationID, EList<String> tables);
+	void changeReservedTables(String restaurantID, String reservationID, List<String> tables);
 
 	/**
 	 * <!-- begin-user-doc -->

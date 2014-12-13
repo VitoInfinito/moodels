@@ -2,17 +2,12 @@
  */
 package Classes.Accounts.impl;
 
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import Classes.Accounts.Account;
-import Classes.Accounts.AccountType;
 import Classes.Accounts.AccountsFactory;
-import Classes.Accounts.AccountsManager;
 import Classes.Accounts.AccountsPackage;
 
 /**
@@ -50,40 +45,7 @@ public class AccountsFactoryImpl extends EFactoryImpl implements AccountsFactory
 	public AccountsFactoryImpl() {
 		super();
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public EObject create(EClass eClass) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object createFromString(EDataType eDataType, String initialValue) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public String convertToString(EDataType eDataType, Object instanceValue) {
-		throw new UnsupportedOperationException();
-	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,56 +55,4 @@ public class AccountsFactoryImpl extends EFactoryImpl implements AccountsFactory
 		AccountImpl account = new AccountImpl();
 		return account;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public AccountsManager createAccountsManager() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public AccountType createAccountTypeFromString(EDataType eDataType, String initialValue) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String convertAccountTypeToString(EDataType eDataType, Object instanceValue) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public AccountsPackage getAccountsPackage() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Deprecated
-	public static AccountsPackage getPackage() {
-		throw new UnsupportedOperationException();
-	}
-
 } //AccountsFactoryImpl
