@@ -2847,7 +2847,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_XUxvkH_rEeS5IpkkkJsVew" name="SSID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_XU1Z8H_rEeS5IpkkkJsVew" name="requestID">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_XU1Z8H_rEeS5IpkkkJsVew" name="description">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>

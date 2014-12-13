@@ -2,16 +2,12 @@
  */
 package Classes.Bookings.impl;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
@@ -28,100 +24,28 @@ import Classes.Customers.ICustomers;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToBookingMapImpl;
 import Classes.Guests.IGuests;
+import Classes.Requests.IRequests;
 import Classes.Stays.IStays;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Manager</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Bookings.impl.BookingsManagerImpl#getBooking <em>Booking</em>}</li>
- *   <li>{@link Classes.Bookings.impl.BookingsManagerImpl#getIBookableAccess <em>IBookable Access</em>}</li>
- *   <li>{@link Classes.Bookings.impl.BookingsManagerImpl#getIHotelStayManager <em>IHotel Stay Manager</em>}</li>
- *   <li>{@link Classes.Bookings.impl.BookingsManagerImpl#getBank <em>Bank</em>}</li>
- *   <li>{@link Classes.Bookings.impl.BookingsManagerImpl#getIGuest <em>IGuest</em>}</li>
- *   <li>{@link Classes.Bookings.impl.BookingsManagerImpl#getICustomer <em>ICustomer</em>}</li>
- *   <li>{@link Classes.Bookings.impl.BookingsManagerImpl#getIBills <em>IBills</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements BookingsManager {
 	private final Logger logger = LoggerFactory.getLogger(BookingsManagerImpl.class);
 	public static BookingsManagerImpl INSTANCE = new BookingsManagerImpl();
 	
-	/**
-	 * The cached value of the '{@link #getBooking() <em>Booking</em>}' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBooking()
-	 * @generated NOT
-	 * @ordered
-	 */
 	private EMap<String, Booking> booking;
 
-	/**
-	 * The cached value of the '{@link #getIBookableAccess() <em>IBookable Access</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIBookableAccess()
-	 * @generated
-	 * @ordered
-	 */
-	protected IBookablesAccess iBookableAccess;
-
-	/**
-	 * The cached value of the '{@link #getIHotelStayManager() <em>IHotel Stay Manager</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIHotelStayManager()
-	 * @generated
-	 * @ordered
-	 */
-	protected IStays iHotelStayManager;
-
-	/**
-	 * The cached value of the '{@link #getBank() <em>Bank</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBank()
-	 * @generated
-	 * @ordered
-	 */
-	protected CustomerProvides bank;
-
-	/**
-	 * The cached value of the '{@link #getIGuest() <em>IGuest</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIGuest()
-	 * @generated
-	 * @ordered
-	 */
-	protected IGuests iGuest;
-
-	/**
-	 * The cached value of the '{@link #getICustomer() <em>ICustomer</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getICustomer()
-	 * @generated
-	 * @ordered
-	 */
-	protected ICustomers iCustomer;
-
-	/**
-	 * The cached value of the '{@link #getIBills() <em>IBills</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIBills()
-	 * @generated
-	 * @ordered
-	 */
-	protected IBills iBills;
+	private IBookablesAccess iBookableAccess;
+	private IStays iHotelStayManager;
+	private CustomerProvides bank;
+	private IGuests iGuest;
+	private ICustomers iCustomer;
+	private IBills iBills;
+	private IRequests iRequests;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -136,206 +60,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 		iGuest = IGuests.INSTANCE;
 		iCustomer = ICustomers.INSTANCE;
 		iBills = IBills.INSTANCE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return BookingsPackage.Literals.BOOKINGS_MANAGER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public EMap<String, Booking> getBooking() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IBookablesAccess getIBookableAccess() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IBookablesAccess basicGetIBookableAccess() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setIBookableAccess(IBookablesAccess newIBookableAccess) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IStays getIHotelStayManager() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IStays basicGetIHotelStayManager() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setIHotelStayManager(IStays newIHotelStayManager) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public CustomerProvides getBank() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public CustomerProvides basicGetBank() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setBank(CustomerProvides newBank) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IGuests getIGuest() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IGuests basicGetIGuest() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setIGuest(IGuests newIGuest) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public ICustomers getICustomer() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public ICustomers basicGetICustomer() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setICustomer(ICustomers newICustomer) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IBills getIBills() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IBills basicGetIBills() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setIBills(IBills newIBills) {
-		throw new UnsupportedOperationException();
+		iRequests = IRequests.INSTANCE;
 	}
 
 	/**
@@ -530,7 +255,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addBookingRequest(String bookingID, String requestID) {
+	public void addBookingRequest(String bookingID, String description) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -645,73 +370,6 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	public EList<String> getAvailableHostelBedsInPeriod(Date from, Date to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		throw new UnsupportedOperationException();
 	}
 

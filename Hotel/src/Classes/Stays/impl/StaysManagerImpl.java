@@ -37,16 +37,7 @@ import Classes.Stays.StaysPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Manager</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getStays <em>Stays</em>}</li>
- *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getCustomerProvides <em>Customer Provides</em>}</li>
- *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getIBills <em>IBills</em>}</li>
- *   <li>{@link Classes.Stays.impl.StaysManagerImpl#getIGuests <em>IGuests</em>}</li>
- * </ul>
- * </p>
- *
+
  * @generated
  */
 public class StaysManagerImpl extends MinimalEObjectImpl.Container implements StaysManager {
@@ -55,45 +46,9 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	
 	private static int IDCounter = 0;
 	
-	/**
-	 * The cached value of the '{@link #getStay() <em>Stay</em>}' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStay()
-	 * @generated NOT
-	 * @ordered
-	 */
 	private EMap<String, Stay> stays;
-
-	/**
-	 * The cached value of the '{@link #getCustomerProvides() <em>Customer Provides</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCustomerProvides()
-	 * @generated
-	 * @ordered
-	 */
-	protected CustomerProvides customerProvides;
-
-	/**
-	 * The cached value of the '{@link #getIBills() <em>IBills</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIBills()
-	 * @generated
-	 * @ordered
-	 */
-	protected IBills iBills;
-
-	/**
-	 * The cached value of the '{@link #getIGuests() <em>IGuests</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIGuests()
-	 * @generated
-	 * @ordered
-	 */
-	protected IGuests iGuests;
+	private IBills iBills;
+	private IGuests iGuests;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,116 +60,6 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 		stays = new EcoreEMap<String,Stay>(ECoreMapEntriesPackage.Literals.STRING_TO_STAY_MAP, StringToStayMapImpl.class, this, StaysPackage.STAYS_MANAGER__STAYS);
 		iBills = IBills.INSTANCE;
 		iGuests = IGuests.INSTANCE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return StaysPackage.Literals.STAYS_MANAGER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public EMap<String, Stay> getStays() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public CustomerProvides getCustomerProvides() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public CustomerProvides basicGetCustomerProvides() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setCustomerProvides(CustomerProvides newCustomerProvides) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IBills getIBills() {
-		return iBills;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IBills basicGetIBills() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setIBills(IBills newIBills) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IGuests getIGuests() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IGuests basicGetIGuests() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setIGuests(IGuests newIGuests) {
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -568,72 +413,4 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 			throw new InvalidIDException();
 		}
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		throw new UnsupportedOperationException();
-	}
-
 } //StaysManagerImpl

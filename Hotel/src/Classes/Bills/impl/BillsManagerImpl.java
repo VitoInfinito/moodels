@@ -2,7 +2,6 @@
  */
 package Classes.Bills.impl;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -13,11 +12,7 @@ import java.util.regex.Pattern;
 
 import javax.xml.soap.SOAPException;
 
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.jdt.annotation.NonNullByDefault;
@@ -27,7 +22,6 @@ import org.slf4j.LoggerFactory;
 import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
 import Classes.InvalidCreditCardException;
 import Classes.InvalidIDException;
-import Classes.Banking.CustomerProvides;
 import Classes.Bills.Bill;
 import Classes.Bills.BillsFactory;
 import Classes.Bills.BillsManager;
@@ -42,74 +36,18 @@ import Classes.Services.IServicesAccess;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Manager</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Bills.impl.BillsManagerImpl#getBills <em>Bills</em>}</li>
- *   <li>{@link Classes.Bills.impl.BillsManagerImpl#getCustomerProvides <em>Customer Provides</em>}</li>
- *   <li>{@link Classes.Bills.impl.BillsManagerImpl#getBookablesAccess <em>Bookables Access</em>}</li>
- *   <li>{@link Classes.Bills.impl.BillsManagerImpl#getInventoryAccess <em>Inventory Access</em>}</li>
- *   <li>{@link Classes.Bills.impl.BillsManagerImpl#getServicesAccess <em>Services Access</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 @NonNullByDefault
 public class BillsManagerImpl extends MinimalEObjectImpl.Container implements BillsManager {
-
 	private final Logger logger = LoggerFactory.getLogger(BillsManagerImpl.class);
 	public static BillsManagerImpl INSTANCE = new BillsManagerImpl();
 	private static int idCounter = 1;
 
-	/**
-	 * The cached value of the '{@link #getBill() <em>Bill</em>}' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBill()
-	 * @generated NOT
-	 * @ordered
-	 */
 	private EMap<String, Bill> bills;
-
-	/**
-	 * The cached value of the '{@link #getCustomerProvides() <em>Customer Provides</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCustomerProvides()
-	 * @generated NOT
-	 * @ordered
-	 */
-	private CustomerProvides customerProvides;
-
-	/**
-	 * The cached value of the '{@link #getBookablesAccess() <em>Bookables Access</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBookablesAccess()
-	 * @generated NOT
-	 * @ordered
-	 */
+	
 	private IBookablesAccess bookablesAccess;
-	
-	/**
-	 * The cached value of the '{@link #getInventoryAccess() <em>Inventory Access</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInventoryAccess()
-	 * @generated NOT
-	 * @ordered
-	 */
 	private IInventoryAccess inventoryAccess;
-	
-	/**
-	 * The cached value of the '{@link #getServicesAccess() <em>Services Access</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getServicesAccess()
-	 * @generated NOT
-	 * @ordered
-	 */
 	private IServicesAccess servicesAccess;
 
 	/**
@@ -123,146 +61,6 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 		bookablesAccess = IBookablesAccess.INSTANCE;
 		inventoryAccess = IInventoryAccess.INSTANCE;
 		servicesAccess = IServicesAccess.INSTANCE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return BillsPackage.Literals.BILLS_MANAGER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public EMap<String, Bill> getBills() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public CustomerProvides getCustomerProvides() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public CustomerProvides basicGetCustomerProvides() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setCustomerProvides(CustomerProvides newCustomerProvides) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IBookablesAccess getBookablesAccess() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IBookablesAccess basicGetBookablesAccess() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setBookablesAccess(IBookablesAccess newBookablesAccess) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IInventoryAccess getInventoryAccess() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IInventoryAccess basicGetInventoryAccess() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setInventoryAccess(IInventoryAccess newInventoryAccess) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IServicesAccess getServicesAccess() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IServicesAccess basicGetServicesAccess() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setServicesAccess(IServicesAccess newServicesAccess) {
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -584,72 +382,4 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 			throw new InvalidIDException();
 		}
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		throw new UnsupportedOperationException();
-	}
-
 } //BillsManagerImpl

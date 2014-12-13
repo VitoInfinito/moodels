@@ -195,17 +195,9 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 		req.setDescription(description);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void addRequest(String specialRequestId, String description) {
-		throw new UnsupportedOperationException();
-	}
 	
 	private String generateID(){
-		return String.format("sr%06d", counterID++);
+		return String.format("re%06d", counterID++);
 	}
 
 	/**
@@ -213,11 +205,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void createRequest(String description) {
-		if(description.length() < 0){
-			logger.warn("The description is too short! Invalid argument!");
-			throw new IllegalArgumentException("The description was to short!");
-		}
+	public String addRequest(String description) {
 		String specialRequestId = generateID();
 		Request req = RequestsFactory.eINSTANCE.createRequest();
 		req.setDescription(description);
@@ -225,6 +213,8 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 		req.setIsResolved(false);
 		
 		specialRequest.put(specialRequestId,req);
+		
+		return specialRequestId;
 	}
 
 	/**

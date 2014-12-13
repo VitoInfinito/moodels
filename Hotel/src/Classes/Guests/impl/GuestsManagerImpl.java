@@ -2,8 +2,6 @@
  */
 package Classes.Guests.impl;
 
-import java.lang.reflect.InvocationTargetException;
-import java.security.acl.LastOwnerException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashSet;
@@ -11,11 +9,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
@@ -24,53 +18,29 @@ import org.slf4j.LoggerFactory;
 import Classes.InvalidIDException;
 import Classes.StringUtils;
 import Classes.Accounts.AccountType;
-import Classes.Accounts.IAccountsAccess;
 import Classes.Accounts.IManageAccounts;
-import Classes.Customers.Customer;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToGuestMapImpl;
 import Classes.Guests.Guest;
 import Classes.Guests.GuestsFactory;
 import Classes.Guests.GuestsManager;
 import Classes.Guests.GuestsPackage;
+import Classes.Requests.IRequests;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Manager</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Guests.impl.GuestsManagerImpl#getGuests <em>Guests</em>}</li>
- *   <li>{@link Classes.Guests.impl.GuestsManagerImpl#getIManageAccounts <em>IManage Accounts</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements GuestsManager {
 	private final Logger logger = LoggerFactory.getLogger(GuestsManagerImpl.class);
 	public static GuestsManagerImpl INSTANCE = new GuestsManagerImpl();
 	
-	/**
-	 * The cached value of the '{@link #getGuests() <em>Guest</em>}' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGuests()
-	 * @generated NOT
-	 * @ordered
-	 */
 	private EMap<String, Guest> guests;
 
-	/**
-	 * The cached value of the '{@link #getIManageAccounts() <em>IManage Accounts</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIManageAccounts()
-	 * @generated NOT
-	 * @ordered
-	 */
 	private IManageAccounts iManageAccounts;
+	private IRequests iRequests;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,58 +51,9 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 		super();
 		guests = new EcoreEMap<String,Guest>(ECoreMapEntriesPackage.Literals.STRING_TO_GUEST_MAP, StringToGuestMapImpl.class, this, GuestsPackage.GUESTS_MANAGER__GUESTS);
 		iManageAccounts = IManageAccounts.INSTANCE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return GuestsPackage.Literals.GUESTS_MANAGER;
+		iRequests = IRequests.INSTANCE;
 	}
 	
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public EMap<String, Guest> getGuests() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IManageAccounts getIManageAccounts() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public IManageAccounts basicGetIManageAccounts() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setIManageAccounts(IManageAccounts newIManageAccounts) {
-		throw new UnsupportedOperationException();
-	}
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * Requires: 
@@ -435,9 +356,9 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addGuestRequest(String SSID, String requestID, String description) {
+	public void addGuestRequest(String SSID, String description) {
 		if(guests.containsKey(SSID)) {
-			guests.get(SSID).addRequest(requestID, description);
+			guests.get(SSID).addRequest(iRequests.addRequest(description));
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -452,6 +373,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 */
 	public void removeGuestRequest(String SSID, String requestID) {
 		if(guests.containsKey(SSID)) {
+			iRequests.deleteRequest(requestID);
 			guests.get(SSID).removeRequest(requestID);
 		} else {
 			logger.warn("A guest with SSID {} could not be found");
@@ -515,72 +437,5 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 			logger.warn("A guest with SSID {} could not be found");
 			throw new InvalidIDException();
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		throw new UnsupportedOperationException();
 	}
 } //GuestsManagerImpl

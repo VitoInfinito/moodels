@@ -26,8 +26,10 @@ import Classes.Customers.Customer;
 import Classes.Customers.CustomersFactory;
 import Classes.Customers.CustomersManager;
 import Classes.Customers.CustomersPackage;
+import Classes.Customers.ICustomers;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToCustomerMapImpl;
+import Classes.Requests.IRequests;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,14 +49,8 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	private final Logger logger = LoggerFactory.getLogger(CustomersManagerImpl.class);
 	public static CustomersManagerImpl INSTANCE = new CustomersManagerImpl();
 	
-	/**
-	 * The cached value of the '{@link #getCustomer() <em>Customer</em>}' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCustomer()
-	 * @generated NOT
-	 * @ordered
-	 */
+	private IRequests iRequests;
+	
 	private EMap<String, Customer> customer;
 
 	/**
@@ -65,26 +61,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	private CustomersManagerImpl() {
 		super();
 		customer = new EcoreEMap<String,Customer>(ECoreMapEntriesPackage.Literals.STRING_TO_CUSTOMER_MAP, StringToCustomerMapImpl.class, this, CustomersPackage.CUSTOMERS_MANAGER__CUSTOMER);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return CustomersPackage.Literals.CUSTOMERS_MANAGER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public EMap<String, Customer> getCustomer() {
-		throw new UnsupportedOperationException();
+		iRequests = IRequests.INSTANCE;
 	}
 
 	/**
@@ -400,9 +377,9 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addCustomerRequest(String SSID, String requestID) {
+	public void addCustomerRequest(String SSID, String description) {
 		if (customer.containsKey(SSID)) {
-			customer.get(SSID).addRequest(requestID);
+			customer.get(SSID).addRequest(iRequests.addRequest(description));
 		} else {
 			logger.warn("A customer with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -416,78 +393,11 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public void removeCustomerRequest(String SSID, String requestID) {
 		if (customer.containsKey(SSID)) {
+			iRequests.deleteRequest(requestID);
 			customer.get(SSID).removeRequest(requestID);
 		} else {
 			logger.warn("A customer with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
 		}	
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		throw new UnsupportedOperationException();
-	}
-
 } //CustomersManagerImpl

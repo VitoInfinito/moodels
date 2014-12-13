@@ -3,8 +3,6 @@
 package Classes.Guests.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Collection;
-import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -18,32 +16,15 @@ import org.slf4j.LoggerFactory;
 import Classes.InvalidIDException;
 import Classes.Guests.Guest;
 import Classes.Guests.GuestsPackage;
-import Classes.Requests.RequestsManager;
-import Classes.Stays.StaysManager;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Guest</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Guests.impl.GuestImpl#getFirstname <em>Firstname</em>}</li>
- *   <li>{@link Classes.Guests.impl.GuestImpl#getLastname <em>Lastname</em>}</li>
- *   <li>{@link Classes.Guests.impl.GuestImpl#getTitle <em>Title</em>}</li>
- *   <li>{@link Classes.Guests.impl.GuestImpl#getEmail <em>Email</em>}</li>
- *   <li>{@link Classes.Guests.impl.GuestImpl#getPhone <em>Phone</em>}</li>
- *   <li>{@link Classes.Guests.impl.GuestImpl#getSsid <em>Ssid</em>}</li>
- *   <li>{@link Classes.Guests.impl.GuestImpl#getRequests <em>Requests</em>}</li>
- *   <li>{@link Classes.Guests.impl.GuestImpl#getStays <em>Stays</em>}</li>
- *   <li>{@link Classes.Guests.impl.GuestImpl#getAccount <em>Account</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
-	private final Logger logger = LoggerFactory.getLogger(GuestsManagerImpl.class);
+	private final Logger logger = LoggerFactory.getLogger(GuestImpl.class);
 	
 	/**
 	 * The default value of the '{@link #getFirstname() <em>Firstname</em>}' attribute.
@@ -400,10 +381,13 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addStay(String bookableID, String bookingID, Date fromDate, Date toDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void addStay(String stayID) {
+		if(!stays.contains(stayID)) {
+			stays.add(stayID);
+		} else {
+			logger.warn("A stay with stayID {} is already added.", stayID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -413,7 +397,6 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 */
 	public void removeStay(String stayID) {
 		if(stays.contains(stayID)) {
-			StaysManager.INSTANCE.removeStay(stayID);
 			stays.remove(stayID);
 		} else {
 			logger.warn("A stay with stayID {} could not be found.", stayID);
@@ -426,10 +409,13 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addRequest(String requestID, String description) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void addRequest(String requestID) {
+		if(!requests.contains(requestID)) {
+			requests.add(requestID);
+		} else {
+			logger.warn("A request with requestID {} is already added.", requestID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -438,178 +424,12 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 * @generated NOT
 	 */
 	public void removeRequest(String requestID) {
-		if(stays.contains(requestID)) {
-			RequestsManager.INSTANCE.deleteRequest(requestID);
-			stays.remove(requestID);
+		if(requests.contains(requestID)) {
+			requests.remove(requestID);
 		} else {
-			logger.warn("A stay with requestID {} could not be found.", requestID);
+			logger.warn("A request with requestID {} could not be found.", requestID);
 			throw new InvalidIDException();
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case GuestsPackage.GUEST__FIRSTNAME:
-				return getFirstname();
-			case GuestsPackage.GUEST__LASTNAME:
-				return getLastname();
-			case GuestsPackage.GUEST__TITLE:
-				return getTitle();
-			case GuestsPackage.GUEST__EMAIL:
-				return getEmail();
-			case GuestsPackage.GUEST__PHONE:
-				return getPhone();
-			case GuestsPackage.GUEST__SSID:
-				return getSsid();
-			case GuestsPackage.GUEST__REQUESTS:
-				return getRequests();
-			case GuestsPackage.GUEST__STAYS:
-				return getStays();
-			case GuestsPackage.GUEST__ACCOUNT:
-				return getAccount();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case GuestsPackage.GUEST__FIRSTNAME:
-				setFirstname((String)newValue);
-				return;
-			case GuestsPackage.GUEST__LASTNAME:
-				setLastname((String)newValue);
-				return;
-			case GuestsPackage.GUEST__TITLE:
-				setTitle((String)newValue);
-				return;
-			case GuestsPackage.GUEST__EMAIL:
-				setEmail((String)newValue);
-				return;
-			case GuestsPackage.GUEST__PHONE:
-				setPhone((String)newValue);
-				return;
-			case GuestsPackage.GUEST__SSID:
-				setSsid((String)newValue);
-				return;
-			case GuestsPackage.GUEST__REQUESTS:
-				getRequests().clear();
-				getRequests().addAll((Collection<? extends String>)newValue);
-				return;
-			case GuestsPackage.GUEST__STAYS:
-				getStays().clear();
-				getStays().addAll((Collection<? extends String>)newValue);
-				return;
-			case GuestsPackage.GUEST__ACCOUNT:
-				setAccount((String)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case GuestsPackage.GUEST__FIRSTNAME:
-				setFirstname(FIRSTNAME_EDEFAULT);
-				return;
-			case GuestsPackage.GUEST__LASTNAME:
-				setLastname(LASTNAME_EDEFAULT);
-				return;
-			case GuestsPackage.GUEST__TITLE:
-				setTitle(TITLE_EDEFAULT);
-				return;
-			case GuestsPackage.GUEST__EMAIL:
-				setEmail(EMAIL_EDEFAULT);
-				return;
-			case GuestsPackage.GUEST__PHONE:
-				setPhone(PHONE_EDEFAULT);
-				return;
-			case GuestsPackage.GUEST__SSID:
-				setSsid(SSID_EDEFAULT);
-				return;
-			case GuestsPackage.GUEST__REQUESTS:
-				getRequests().clear();
-				return;
-			case GuestsPackage.GUEST__STAYS:
-				getStays().clear();
-				return;
-			case GuestsPackage.GUEST__ACCOUNT:
-				setAccount(ACCOUNT_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case GuestsPackage.GUEST__FIRSTNAME:
-				return FIRSTNAME_EDEFAULT == null ? firstname != null : !FIRSTNAME_EDEFAULT.equals(firstname);
-			case GuestsPackage.GUEST__LASTNAME:
-				return LASTNAME_EDEFAULT == null ? lastname != null : !LASTNAME_EDEFAULT.equals(lastname);
-			case GuestsPackage.GUEST__TITLE:
-				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
-			case GuestsPackage.GUEST__EMAIL:
-				return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
-			case GuestsPackage.GUEST__PHONE:
-				return PHONE_EDEFAULT == null ? phone != null : !PHONE_EDEFAULT.equals(phone);
-			case GuestsPackage.GUEST__SSID:
-				return SSID_EDEFAULT == null ? ssid != null : !SSID_EDEFAULT.equals(ssid);
-			case GuestsPackage.GUEST__REQUESTS:
-				return requests != null && !requests.isEmpty();
-			case GuestsPackage.GUEST__STAYS:
-				return stays != null && !stays.isEmpty();
-			case GuestsPackage.GUEST__ACCOUNT:
-				return ACCOUNT_EDEFAULT == null ? account != null : !ACCOUNT_EDEFAULT.equals(account);
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case GuestsPackage.GUEST___ADD_STAY__STRING_STRING_DATE_DATE:
-				addStay((String)arguments.get(0), (String)arguments.get(1), (Date)arguments.get(2), (Date)arguments.get(3));
-				return null;
-			case GuestsPackage.GUEST___REMOVE_STAY__STRING:
-				removeStay((String)arguments.get(0));
-				return null;
-			case GuestsPackage.GUEST___ADD_REQUEST__STRING_STRING:
-				addRequest((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case GuestsPackage.GUEST___REMOVE_REQUEST__STRING:
-				removeRequest((String)arguments.get(0));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

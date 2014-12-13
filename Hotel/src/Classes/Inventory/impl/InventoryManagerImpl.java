@@ -42,15 +42,6 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	public static InventoryManagerImpl INSTANCE = new InventoryManagerImpl();
 	
 	private static int IDCounter = 0;
-	
-	/**
-	 * The cached value of the '{@link #getItem() <em>Item Type</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getItems()
-	 * @generated NOT
-	 * @ordered
-	 */
 	private EMap<String, Item> items;
 
 	/**
@@ -61,26 +52,6 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	private InventoryManagerImpl() {
 		super();
 		items = new EcoreEMap<String,Item>(ECoreMapEntriesPackage.Literals.STRING_TO_ITEM_MAP, StringToItemMapImpl.class, this, InventoryPackage.INVENTORY_MANAGER__ITEMS);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return InventoryPackage.Literals.INVENTORY_MANAGER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public EMap<String, Item> getItems() {
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -246,72 +217,5 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 			logger.warn("The Item with ID {} could not be found.", id);
 			throw new InvalidIDException();
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		throw new UnsupportedOperationException();
 	}
 } //InventoryManagerImpl

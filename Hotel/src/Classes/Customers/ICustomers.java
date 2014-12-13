@@ -164,7 +164,7 @@ public interface ICustomers extends EObject {
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false"
 	 * @generated
 	 */
-	void addCustomerRequest(String SSID, String requestID);
+	void addCustomerRequest(String SSID, String description);
 
 	/**
 	 * <!-- begin-user-doc -->

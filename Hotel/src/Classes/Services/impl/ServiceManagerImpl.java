@@ -2,14 +2,10 @@
  */
 package Classes.Services.impl;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
 
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
@@ -30,49 +26,14 @@ import Classes.Services.ServicesPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Service Manager</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Services.impl.ServiceManagerImpl#getService <em>Service</em>}</li>
- *   <li>{@link Classes.Services.impl.ServiceManagerImpl#getRoomServiceOrder <em>Room Service Order</em>}</li>
- *   <li>{@link Classes.Services.impl.ServiceManagerImpl#getRoomServiceMenu <em>Room Service Menu</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements ServiceManager {
 	private final Logger logger = LoggerFactory.getLogger(GuestsManagerImpl.class);
 	public static ServiceManagerImpl INSTANCE = new ServiceManagerImpl();
 	
-	/**
-	 * The cached value of the '{@link #getService() <em>Service</em>}' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getService()
-	 * @generated NOT
-	 * @ordered
-	 */
 	private EMap<String, Service> service;
-
-	/**
-	 * The cached value of the '{@link #getRoomServiceOrder() <em>Room Service Order</em>}' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRoomServiceOrder()
-	 * @generated NOT
-	 * @ordered
-	 */
 	private EMap<String, RoomServiceOrder> roomServiceOrder;
-
-	/**
-	 * The cached value of the '{@link #getRoomServiceMenu() <em>Room Service Menu</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRoomServiceMenu()
-	 * @generated NOT
-	 * @ordered
-	 */
 	private RoomServiceMenu roomServiceMenu;
 
 	/**
@@ -85,66 +46,6 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 		service = new EcoreEMap<String,Service>(ECoreMapEntriesPackage.Literals.STRING_TO_SERVICE_MAP, StringToServiceMapImpl.class, this, ServicesPackage.SERVICE_MANAGER__SERVICE);
 		roomServiceOrder = new EcoreEMap<String,RoomServiceOrder>(ECoreMapEntriesPackage.Literals.STRING_TO_ROOM_SERVICE_ORDER_MAP, StringToRoomServiceOrderMapImpl.class, this, ServicesPackage.SERVICE_MANAGER__ROOM_SERVICE_ORDER);
 		roomServiceMenu = ServicesFactory.eINSTANCE.createRoomServiceMenu();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return ServicesPackage.Literals.SERVICE_MANAGER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public EMap<String, Service> getService() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public EMap<String, RoomServiceOrder> getRoomServiceOrder() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public RoomServiceMenu getRoomServiceMenu() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public RoomServiceMenu basicGetRoomServiceMenu() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void setRoomServiceMenu(RoomServiceMenu newRoomServiceMenu) {
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -432,72 +333,4 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		throw new UnsupportedOperationException();
-	}
-
 } //ServiceManagerImpl

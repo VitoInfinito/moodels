@@ -158,7 +158,7 @@ public interface IBookings extends EObject {
 	 * @model bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false" requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false"
 	 * @generated
 	 */
-	void addBookingRequest(String bookingID, String requestID);
+	void addBookingRequest(String bookingID, String description);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -36,38 +36,13 @@ import Classes.Restaurants.RestaurantsPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Manager</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Restaurants.impl.RestaurantsManagerImpl#getRestaurant <em>Restaurant</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container implements RestaurantsManager {
 	private final Logger logger = LoggerFactory.getLogger(RestaurantsManagerImpl.class);
 	public static RestaurantsManagerImpl INSTANCE = new RestaurantsManagerImpl();
 	private static int counterID = 0;
-	
-	/**
-	 * Helper method for making id's to reservation
-	 * @return
-	 */
-	private String generateReservationID(){
-		return String.format("res%06d", counterID++);
-	}
-	//TODO add throw exception to methods
-	
-	
-	/**
-	 * The cached value of the '{@link #getRestaurant() <em>Restaurant</em>}' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRestaurant()
-	 * @generated NOT
-	 * @ordered
-	 */
+
 	private EMap<String, Restaurant> restaurant;
 
 	/**
@@ -98,36 +73,6 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	  return true;  
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return RestaurantsPackage.Literals.RESTAURANTS_MANAGER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public EMap<String, Restaurant> getRestaurant() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	//public EMap<String, Restaurant> getRestaurant() {
-		//throw new UnsupportedOperationException();
-	//}
-	
 	/**
 	 * Helper method to get a restaurant
 	 * returns restaurant belonging to restaurantID
@@ -403,6 +348,14 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 		
 		restaurant.get(restaurantID).getReservation().put(reservation.getId(), reservation);
 	}
+	
+	/**
+	 * Helper method for making id's to reservation
+	 * @return
+	 */
+	private String generateReservationID(){
+		return String.format("res%06d", counterID++);
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -675,72 +628,4 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 		RestaurantTable table = rest.getRestaurantTable().removeKey(oldTableNbr);
 		rest.getRestaurantTable().put(newTableNbr, table);
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		throw new UnsupportedOperationException();
-	}
-
 } //RestaurantsManagerImpl

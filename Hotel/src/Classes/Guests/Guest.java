@@ -249,10 +249,10 @@ public interface Guest extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false" bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false" fromDateRequired="true" fromDateOrdered="false" toDateRequired="true" toDateOrdered="false"
+	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" 
 	 * @generated
 	 */
-	void addStay(String bookableID, String bookingID, Date fromDate, Date toDate);
+	void addStay(String stayID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -265,10 +265,10 @@ public interface Guest extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
+	 * @model requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false" 
 	 * @generated
 	 */
-	void addRequest(String requestID, String description);
+	void addRequest(String requestID);
 
 	/**
 	 * <!-- begin-user-doc -->
