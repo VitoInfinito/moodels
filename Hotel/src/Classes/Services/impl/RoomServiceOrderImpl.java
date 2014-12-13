@@ -2,24 +2,16 @@
  */
 package Classes.Services.impl;
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Date;
-import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import Classes.InvalidIDException;
-import Classes.Bills.impl.BillsManagerImpl;
 import Classes.Services.RoomServiceOrder;
 import Classes.Services.Service;
 import Classes.Services.ServicesPackage;
