@@ -319,12 +319,23 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllHotelStaysWithinPeriod(Date from, Date to) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAllHotelStaysWithinPeriod(Date from, Date to) {
+		
+		List<String> searchResults = new ArrayList<String>();
+		
+		for (int i = 0; i < stays.keySet().toArray().length; i++) {
+			
+			Stay tmp = (Stay) stays.get(i);
+			
+			if (tmp.getFromDate().after(from) && tmp.getToDate().before(to)) {
+				searchResults.add(tmp.getID());
+			}
+			
+		}
+		
+		return searchResults;
 	}
 
 	/**

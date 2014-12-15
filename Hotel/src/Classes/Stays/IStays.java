@@ -168,9 +168,9 @@ public interface IStays extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getAllHotelStaysWithinPeriod(Date from, Date to);
+	List<String> getAllHotelStaysWithinPeriod(Date from, Date to);
 
 	/**
 	 * <!-- begin-user-doc -->
