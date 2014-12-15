@@ -20,16 +20,7 @@ public interface GuestsFactory extends EFactory {
 	 * @generated
 	 */
 	GuestsFactory eINSTANCE = Classes.Guests.impl.GuestsFactoryImpl.init();
-
-	/**
-	 * Returns a new object of class '<em>Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Manager</em>'.
-	 * @generated
-	 */
-	GuestsManager createGuestsManager();
-
+	
 	/**
 	 * Returns a new object of class '<em>Guest</em>'.
 	 * <!-- begin-user-doc -->
@@ -38,14 +29,4 @@ public interface GuestsFactory extends EFactory {
 	 * @generated
 	 */
 	Guest createGuest();
-
-	/**
-	 * Returns the package supported by this factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
-	 */
-	GuestsPackage getGuestsPackage();
-
 } //GuestsFactory

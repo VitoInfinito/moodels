@@ -47,34 +47,8 @@ public class StaffFactoryImpl extends EFactoryImpl implements StaffFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StaffFactoryImpl() {
+	private StaffFactoryImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case StaffPackage.STAFF_MANAGER: return createStaffManager();
-			case StaffPackage.STAFF: return createStaff();
-			case StaffPackage.MONTHLY_SALARY_CONTRACT: return createMonthlySalaryContract();
-			case StaffPackage.HOURLY_SALARY_CONTRACT: return createHourlySalaryContract();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public StaffManager createStaffManager() {
-		return StaffManagerImpl.INSTANCE;
 	}
 
 	/**
@@ -106,25 +80,4 @@ public class StaffFactoryImpl extends EFactoryImpl implements StaffFactory {
 		HourlySalaryContractImpl hourlySalaryContract = new HourlySalaryContractImpl();
 		return hourlySalaryContract;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StaffPackage getStaffPackage() {
-		return (StaffPackage)getEPackage();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
-	@Deprecated
-	public static StaffPackage getPackage() {
-		return StaffPackage.eINSTANCE;
-	}
-
 } //StaffFactoryImpl

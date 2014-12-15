@@ -21,17 +21,6 @@ import Classes.Restaurants.RestaurantsPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Reservation</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Restaurants.impl.ReservationImpl#getId <em>Id</em>}</li>
- *   <li>{@link Classes.Restaurants.impl.ReservationImpl#getReservedBy <em>Reserved By</em>}</li>
- *   <li>{@link Classes.Restaurants.impl.ReservationImpl#getRestaurantTable <em>Restaurant Table</em>}</li>
- *   <li>{@link Classes.Restaurants.impl.ReservationImpl#getFrom <em>From</em>}</li>
- *   <li>{@link Classes.Restaurants.impl.ReservationImpl#getTo <em>To</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 public class ReservationImpl extends MinimalEObjectImpl.Container implements Reservation {

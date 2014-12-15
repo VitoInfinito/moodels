@@ -45,32 +45,8 @@ public class CustomersFactoryImpl extends EFactoryImpl implements CustomersFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CustomersFactoryImpl() {
+	private CustomersFactoryImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case CustomersPackage.CUSTOMERS_MANAGER: return createCustomersManager();
-			case CustomersPackage.CUSTOMER: return createCustomer();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public CustomersManager createCustomersManager() {
-		return CustomersManagerImpl.INSTANCE;
 	}
 
 	/**
@@ -82,25 +58,4 @@ public class CustomersFactoryImpl extends EFactoryImpl implements CustomersFacto
 		CustomerImpl customer = new CustomerImpl();
 		return customer;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CustomersPackage getCustomersPackage() {
-		return (CustomersPackage)getEPackage();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
-	@Deprecated
-	public static CustomersPackage getPackage() {
-		return CustomersPackage.eINSTANCE;
-	}
-
 } //CustomersFactoryImpl

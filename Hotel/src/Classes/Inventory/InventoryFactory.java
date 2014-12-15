@@ -22,15 +22,6 @@ public interface InventoryFactory extends EFactory {
 	InventoryFactory eINSTANCE = Classes.Inventory.impl.InventoryFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Manager</em>'.
-	 * @generated
-	 */
-	InventoryManager createInventoryManager();
-
-	/**
 	 * Returns a new object of class '<em>Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,14 +29,4 @@ public interface InventoryFactory extends EFactory {
 	 * @generated
 	 */
 	Item createItem();
-
-	/**
-	 * Returns the package supported by this factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
-	 */
-	InventoryPackage getInventoryPackage();
-
 } //InventoryFactory

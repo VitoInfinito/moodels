@@ -12,14 +12,6 @@ import Classes.Staff.StaffPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Monthly Salary Contract</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Staff.impl.MonthlySalaryContractImpl#getSalary <em>Salary</em>}</li>
- *   <li>{@link Classes.Staff.impl.MonthlySalaryContractImpl#getType <em>Type</em>}</li>
- * </ul>
- * </p>
- *
  * @generated NOT
  */
 public class MonthlySalaryContractImpl extends SalaryContractImpl implements MonthlySalaryContract {

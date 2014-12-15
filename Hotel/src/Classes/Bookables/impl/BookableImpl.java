@@ -14,77 +14,13 @@ import Classes.Bookables.BookablesPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Bookable</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Bookables.impl.BookableImpl#getBaseprice <em>Baseprice</em>}</li>
- *   <li>{@link Classes.Bookables.impl.BookableImpl#getId <em>Id</em>}</li>
- *   <li>{@link Classes.Bookables.impl.BookableImpl#getDescription <em>Description</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 public abstract class BookableImpl extends MinimalEObjectImpl.Container implements Bookable {
-	/**
-	 * The default value of the '{@link #getBaseprice() <em>Baseprice</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBaseprice()
-	 * @generated NOT
-	 * @ordered
-	 */
-	static final double BASEPRICE_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getBaseprice() <em>Baseprice</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBaseprice()
-	 * @generated
-	 * @ordered
-	 */
-	protected double baseprice = BASEPRICE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected String description = DESCRIPTION_EDEFAULT;
+	
+	private double baseprice;
+	private String id;
+	private String description;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -93,16 +29,6 @@ public abstract class BookableImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	protected BookableImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return BookablesPackage.Literals.BOOKABLE;
 	}
 
 	/**
@@ -166,84 +92,6 @@ public abstract class BookableImpl extends MinimalEObjectImpl.Container implemen
 		description = newDescription;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BookablesPackage.BOOKABLE__DESCRIPTION, oldDescription, description));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case BookablesPackage.BOOKABLE__BASEPRICE:
-				return getBaseprice();
-			case BookablesPackage.BOOKABLE__ID:
-				return getId();
-			case BookablesPackage.BOOKABLE__DESCRIPTION:
-				return getDescription();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case BookablesPackage.BOOKABLE__BASEPRICE:
-				setBaseprice((Double)newValue);
-				return;
-			case BookablesPackage.BOOKABLE__ID:
-				setId((String)newValue);
-				return;
-			case BookablesPackage.BOOKABLE__DESCRIPTION:
-				setDescription((String)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case BookablesPackage.BOOKABLE__BASEPRICE:
-				setBaseprice(BASEPRICE_EDEFAULT);
-				return;
-			case BookablesPackage.BOOKABLE__ID:
-				setId(ID_EDEFAULT);
-				return;
-			case BookablesPackage.BOOKABLE__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case BookablesPackage.BOOKABLE__BASEPRICE:
-				return baseprice != BASEPRICE_EDEFAULT;
-			case BookablesPackage.BOOKABLE__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case BookablesPackage.BOOKABLE__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		}
-		return super.eIsSet(featureID);
 	}
 
 	/**

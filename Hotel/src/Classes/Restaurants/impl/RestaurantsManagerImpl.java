@@ -337,7 +337,6 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated NOT
 	 */
 	public void addMenuItem(String restaurantID, String itemID) throws InvalidIDException{	
-		//TODO possibly check if item exists
 		getRestaurantByID(restaurantID).getMenu().addItem(itemID);
 	}
 
@@ -347,7 +346,6 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated NOT
 	 */
 	public void removeMenuItem(String restaurantID, String itemID) throws InvalidIDException{
-		//TODO possibly check if item exists
 		getRestaurantByID(restaurantID).getMenu().removeItem(itemID);
 	}
 

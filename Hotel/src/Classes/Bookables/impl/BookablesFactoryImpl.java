@@ -51,60 +51,8 @@ public class BookablesFactoryImpl extends EFactoryImpl implements BookablesFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BookablesFactoryImpl() {
+	private BookablesFactoryImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case BookablesPackage.ROOM_LOCATION: return createRoomLocation();
-			case BookablesPackage.HOSTEL_BED: return createHostelBed();
-			case BookablesPackage.HOTEL_ROOM: return createHotelRoom();
-			case BookablesPackage.CONFERENCE_ROOM: return createConferenceRoom();
-			case BookablesPackage.BOOKABLES_MANAGER: return createBookablesManager();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object createFromString(EDataType eDataType, String initialValue) {
-		switch (eDataType.getClassifierID()) {
-			case BookablesPackage.HOTEL_ROOM_CATEGORY:
-				return createHotelRoomCategoryFromString(eDataType, initialValue);
-			case BookablesPackage.CONFERENCE_ROOM_CATEGORY:
-				return createConferenceRoomCategoryFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String convertToString(EDataType eDataType, Object instanceValue) {
-		switch (eDataType.getClassifierID()) {
-			case BookablesPackage.HOTEL_ROOM_CATEGORY:
-				return convertHotelRoomCategoryToString(eDataType, instanceValue);
-			case BookablesPackage.CONFERENCE_ROOM_CATEGORY:
-				return convertConferenceRoomCategoryToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
 	}
 
 	/**
@@ -146,74 +94,4 @@ public class BookablesFactoryImpl extends EFactoryImpl implements BookablesFacto
 		HotelRoomImpl hotelRoom = new HotelRoomImpl();
 		return hotelRoom;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public BookablesManager createBookablesManager() {
-		return BookablesManagerImpl.INSTANCE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ConferenceRoomCategory createConferenceRoomCategoryFromString(EDataType eDataType, String initialValue) {
-		ConferenceRoomCategory result = ConferenceRoomCategory.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertConferenceRoomCategoryToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public HotelRoomCategory createHotelRoomCategoryFromString(EDataType eDataType, String initialValue) {
-		HotelRoomCategory result = HotelRoomCategory.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertHotelRoomCategoryToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BookablesPackage getBookablesPackage() {
-		return (BookablesPackage)getEPackage();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
-	@Deprecated
-	public static BookablesPackage getPackage() {
-		return BookablesPackage.eINSTANCE;
-	}
-
 } //BookablesFactoryImpl

@@ -48,35 +48,8 @@ public class RestaurantsFactoryImpl extends EFactoryImpl implements RestaurantsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RestaurantsFactoryImpl() {
+	private RestaurantsFactoryImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case RestaurantsPackage.RESTAURANTS_MANAGER: return createRestaurantsManager();
-			case RestaurantsPackage.RESTAURANT: return createRestaurant();
-			case RestaurantsPackage.RESERVATION: return createReservation();
-			case RestaurantsPackage.RESTAURANT_TABLE: return createRestaurantTable();
-			case RestaurantsPackage.RESTAURANT_MENU: return createRestaurantMenu();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public RestaurantsManager createRestaurantsManager() {
-		return RestaurantsManagerImpl.INSTANCE;
 	}
 
 	/**
@@ -118,25 +91,4 @@ public class RestaurantsFactoryImpl extends EFactoryImpl implements RestaurantsF
 		RestaurantMenuImpl restaurantMenu = new RestaurantMenuImpl();
 		return restaurantMenu;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RestaurantsPackage getRestaurantsPackage() {
-		return (RestaurantsPackage)getEPackage();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
-	@Deprecated
-	public static RestaurantsPackage getPackage() {
-		return RestaurantsPackage.eINSTANCE;
-	}
-
 } //RestaurantsFactoryImpl

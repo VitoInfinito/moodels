@@ -17,7 +17,7 @@ import org.eclipse.jdt.annotation.NonNullByDefault;
  *
  * @see Classes.Staff.StaffPackage#getIStaff()
  * @model interface="true" abstract="true"
- * @generated
+ * @generated NOT
  */
 @NonNullByDefault
 public interface IStaff extends EObject {
@@ -36,9 +36,9 @@ public interface IStaff extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchStaff(String keyword);
+	List<String> searchStaff(String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->

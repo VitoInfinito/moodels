@@ -23,166 +23,16 @@ import Classes.Guests.GuestsPackage;
  */
 public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	private final Logger logger = LoggerFactory.getLogger(GuestImpl.class);
-	
-	/**
-	 * The default value of the '{@link #getFirstname() <em>Firstname</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFirstname()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FIRSTNAME_EDEFAULT = null;
 
-	/**
-	 * The cached value of the '{@link #getFirstname() <em>Firstname</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFirstname()
-	 * @generated
-	 * @ordered
-	 */
-	protected String firstname = FIRSTNAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLastname() <em>Lastname</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastname()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String LASTNAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLastname() <em>Lastname</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastname()
-	 * @generated
-	 * @ordered
-	 */
-	protected String lastname = LASTNAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTitle()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TITLE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTitle()
-	 * @generated
-	 * @ordered
-	 */
-	protected String title = TITLE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getEmail() <em>Email</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEmail()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String EMAIL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getEmail() <em>Email</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEmail()
-	 * @generated
-	 * @ordered
-	 */
-	protected String email = EMAIL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPhone() <em>Phone</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPhone()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PHONE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getPhone() <em>Phone</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPhone()
-	 * @generated
-	 * @ordered
-	 */
-	protected String phone = PHONE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getSsid() <em>Ssid</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSsid()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String SSID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getSsid() <em>Ssid</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSsid()
-	 * @generated
-	 * @ordered
-	 */
-	protected String ssid = SSID_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getRequests() <em>Requests</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequests()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> requests;
-
-	/**
-	 * The cached value of the '{@link #getStays() <em>Stays</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStays()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> stays;
-
-	/**
-	 * The default value of the '{@link #getAccount() <em>Account</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAccount()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ACCOUNT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getAccount() <em>Account</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAccount()
-	 * @generated
-	 * @ordered
-	 */
-	protected String account = ACCOUNT_EDEFAULT;
+	private String firstname;
+	private String lastname;
+	private String title;
+	private String email;
+	private String phone;
+	private String ssid;
+	private EList<String> requests;
+	private EList<String> stays;
+	private String account;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -191,16 +41,8 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 */
 	protected GuestImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return GuestsPackage.Literals.GUEST;
+		requests = new EDataTypeUniqueEList<String>(String.class, this, GuestsPackage.GUEST__REQUESTS);
+		stays = new EDataTypeUniqueEList<String>(String.class, this, GuestsPackage.GUEST__STAYS);
 	}
 
 	/**
@@ -335,9 +177,6 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 * @generated
 	 */
 	public EList<String> getRequests() {
-		if (requests == null) {
-			requests = new EDataTypeUniqueEList<String>(String.class, this, GuestsPackage.GUEST__REQUESTS);
-		}
 		return requests;
 	}
 
@@ -347,9 +186,6 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 * @generated
 	 */
 	public EList<String> getStays() {
-		if (stays == null) {
-			stays = new EDataTypeUniqueEList<String>(String.class, this, GuestsPackage.GUEST__STAYS);
-		}
 		return stays;
 	}
 

@@ -27,13 +27,6 @@ import Classes.Requests.RequestsPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Manager</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Requests.impl.RequestsManagerImpl#getSpecialRequest <em>Special Request</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements RequestsManager {

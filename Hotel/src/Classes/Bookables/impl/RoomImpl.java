@@ -15,25 +15,10 @@ import Classes.Bookables.RoomLocation;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Room</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Bookables.impl.RoomImpl#getLocation <em>Location</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 public abstract class RoomImpl extends BookableImpl implements Room {
-	/**
-	 * The cached value of the '{@link #getLocation() <em>Location</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLocation()
-	 * @generated
-	 * @ordered
-	 */
-	protected RoomLocation location;
+	private RoomLocation location;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -42,16 +27,6 @@ public abstract class RoomImpl extends BookableImpl implements Room {
 	 */
 	protected RoomImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return BookablesPackage.Literals.ROOM;
 	}
 
 	/**
@@ -91,64 +66,4 @@ public abstract class RoomImpl extends BookableImpl implements Room {
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BookablesPackage.ROOM__LOCATION, oldLocation, location));
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case BookablesPackage.ROOM__LOCATION:
-				if (resolve) return getLocation();
-				return basicGetLocation();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case BookablesPackage.ROOM__LOCATION:
-				setLocation((RoomLocation)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case BookablesPackage.ROOM__LOCATION:
-				setLocation((RoomLocation)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case BookablesPackage.ROOM__LOCATION:
-				return location != null;
-		}
-		return super.eIsSet(featureID);
-	}
-
 } //RoomImpl

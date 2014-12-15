@@ -29,23 +29,4 @@ public interface BookingsFactory extends EFactory {
 	 * @generated
 	 */
 	Booking createBooking();
-
-	/**
-	 * Returns a new object of class '<em>Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Manager</em>'.
-	 * @generated
-	 */
-	BookingsManager createBookingsManager();
-
-	/**
-	 * Returns the package supported by this factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
-	 */
-	BookingsPackage getBookingsPackage();
-
 } //BookingsFactory

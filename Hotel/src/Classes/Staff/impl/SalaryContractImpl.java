@@ -10,9 +10,6 @@ import Classes.Staff.SalaryContract;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Salary Contract</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
- *
  * @generated
  */
 public abstract class SalaryContractImpl extends MinimalEObjectImpl.Container implements SalaryContract {

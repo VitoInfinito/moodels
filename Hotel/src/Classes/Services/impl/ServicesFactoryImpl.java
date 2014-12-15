@@ -47,25 +47,8 @@ public class ServicesFactoryImpl extends EFactoryImpl implements ServicesFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ServicesFactoryImpl() {
+	private ServicesFactoryImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case ServicesPackage.ROOM_SERVICE_MENU: return createRoomServiceMenu();
-			case ServicesPackage.SERVICE_MANAGER: return createServiceManager();
-			case ServicesPackage.SERVICE: return createService();
-			case ServicesPackage.ROOM_SERVICE_ORDER: return createRoomServiceOrder();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
 	}
 
 	/**
@@ -76,15 +59,6 @@ public class ServicesFactoryImpl extends EFactoryImpl implements ServicesFactory
 	public RoomServiceMenu createRoomServiceMenu() {
 		RoomServiceMenuImpl roomServiceMenu = new RoomServiceMenuImpl();
 		return roomServiceMenu;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public ServiceManager createServiceManager() {
-		return ServiceManagerImpl.INSTANCE;
 	}
 
 	/**
@@ -106,25 +80,4 @@ public class ServicesFactoryImpl extends EFactoryImpl implements ServicesFactory
 		RoomServiceOrderImpl roomServiceOrder = new RoomServiceOrderImpl();
 		return roomServiceOrder;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ServicesPackage getServicesPackage() {
-		return (ServicesPackage)getEPackage();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
-	@Deprecated
-	public static ServicesPackage getPackage() {
-		return ServicesPackage.eINSTANCE;
-	}
-
 } //ServicesFactoryImpl

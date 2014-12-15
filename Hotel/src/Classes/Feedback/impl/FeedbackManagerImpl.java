@@ -28,13 +28,6 @@ import Classes.Feedback.FeedbackPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Manager</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Feedback.impl.FeedbackManagerImpl#getFeedbacks <em>Feedbacks</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements FeedbackManager {

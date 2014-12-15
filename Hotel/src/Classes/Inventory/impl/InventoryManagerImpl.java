@@ -3,8 +3,12 @@
 package Classes.Inventory.impl;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.regex.Pattern;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -14,6 +18,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import Classes.InvalidIDException;
+import Classes.Bills.Bill;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToItemMapImpl;
 import Classes.Inventory.InventoryFactory;
@@ -133,12 +138,43 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> searchItems(String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchItems(String keyword) {
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
+
+		// Exact ID match. First Order!
+		if (items.containsKey(keyword)) {
+			searchResult.add(keyword);
+		}
+
+		Collection<Item> c = items.values();
+		
+		// Some property match exactly. Second Order!
+		for (Item b : c) {
+			if (b.getName().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getId());
+			} 
+		}
+		
+		// ID match somewhat. Third Order!
+		for (Item b : c) {			
+			if (regexPattern.matcher(b.getId()).matches()) {
+				searchResult.add(b.getId());
+			} 
+		}
+
+		// Some property match somewhat. Fourth Order.
+		for (Item b : c) {
+			if (regexPattern.matcher(b.getName()).matches()) {
+				searchResult.add(b.getId());
+			}
+		}
+		
+
+		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
 	}
 
 	/**

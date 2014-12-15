@@ -18,65 +18,10 @@ import Classes.Accounts.AccountsPackage;
  * @generated
  */
 class AccountImpl extends MinimalEObjectImpl.Container implements Account {
-	/**
-	 * The default value of the '{@link #getAccountType() <em>Account Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAccountType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final AccountType ACCOUNT_TYPE_EDEFAULT = AccountType.MANAGER;
-
-	/**
-	 * The cached value of the '{@link #getAccountType() <em>Account Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAccountType()
-	 * @generated
-	 * @ordered
-	 */
-	protected AccountType accountType = ACCOUNT_TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getUsername() <em>Username</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUsername()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String USERNAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUsername() <em>Username</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUsername()
-	 * @generated
-	 * @ordered
-	 */
-	protected String username = USERNAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPassword() <em>Password</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPassword()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PASSWORD_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getPassword() <em>Password</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPassword()
-	 * @generated
-	 * @ordered
-	 */
-	protected String password = PASSWORD_EDEFAULT;
+	private static final AccountType ACCOUNT_TYPE_EDEFAULT = AccountType.GUEST;
+	private AccountType accountType = ACCOUNT_TYPE_EDEFAULT;
+	private String username;
+	private String password;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -85,16 +30,6 @@ class AccountImpl extends MinimalEObjectImpl.Container implements Account {
 	 */
 	protected AccountImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return AccountsPackage.Literals.ACCOUNT;
 	}
 
 	/**
@@ -160,51 +95,6 @@ class AccountImpl extends MinimalEObjectImpl.Container implements Account {
 			eNotify(new ENotificationImpl(this, Notification.SET, AccountsPackage.ACCOUNT__PASSWORD, oldPassword, password));
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

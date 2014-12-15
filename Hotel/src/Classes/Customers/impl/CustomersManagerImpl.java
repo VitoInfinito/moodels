@@ -30,13 +30,6 @@ import Classes.Requests.IRequests;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Manager</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Customers.impl.CustomersManagerImpl#getCustomer <em>Customer</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 @NonNullByDefault

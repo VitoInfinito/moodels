@@ -35,16 +35,6 @@ import Classes.Restaurants.RestaurantsPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Restaurant</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Restaurants.impl.RestaurantImpl#getName <em>Name</em>}</li>
- *   <li>{@link Classes.Restaurants.impl.RestaurantImpl#getReservation <em>Reservation</em>}</li>
- *   <li>{@link Classes.Restaurants.impl.RestaurantImpl#getRestaurantTable <em>Restaurant Table</em>}</li>
- *   <li>{@link Classes.Restaurants.impl.RestaurantImpl#getMenu <em>Menu</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 public class RestaurantImpl extends MinimalEObjectImpl.Container implements Restaurant {

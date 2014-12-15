@@ -21,163 +21,19 @@ import Classes.Customers.CustomersPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Customer</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Customers.impl.CustomerImpl#getFirstname <em>Firstname</em>}</li>
- *   <li>{@link Classes.Customers.impl.CustomerImpl#getLastname <em>Lastname</em>}</li>
- *   <li>{@link Classes.Customers.impl.CustomerImpl#getTitle <em>Title</em>}</li>
- *   <li>{@link Classes.Customers.impl.CustomerImpl#getEmail <em>Email</em>}</li>
- *   <li>{@link Classes.Customers.impl.CustomerImpl#getPhone <em>Phone</em>}</li>
- *   <li>{@link Classes.Customers.impl.CustomerImpl#getSsid <em>Ssid</em>}</li>
- *   <li>{@link Classes.Customers.impl.CustomerImpl#getBookings <em>Bookings</em>}</li>
- *   <li>{@link Classes.Customers.impl.CustomerImpl#getRequests <em>Requests</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 public class CustomerImpl extends MinimalEObjectImpl.Container implements Customer {
 	private final Logger logger = LoggerFactory.getLogger(CustomerImpl.class);
-	/**
-	 * The default value of the '{@link #getFirstname() <em>Firstname</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFirstname()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FIRSTNAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getFirstname() <em>Firstname</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFirstname()
-	 * @generated
-	 * @ordered
-	 */
-	protected String firstname = FIRSTNAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLastname() <em>Lastname</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastname()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String LASTNAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLastname() <em>Lastname</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastname()
-	 * @generated
-	 * @ordered
-	 */
-	protected String lastname = LASTNAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTitle()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TITLE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTitle()
-	 * @generated
-	 * @ordered
-	 */
-	protected String title = TITLE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getEmail() <em>Email</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEmail()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String EMAIL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getEmail() <em>Email</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEmail()
-	 * @generated
-	 * @ordered
-	 */
-	protected String email = EMAIL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPhone() <em>Phone</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPhone()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PHONE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getPhone() <em>Phone</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPhone()
-	 * @generated
-	 * @ordered
-	 */
-	protected String phone = PHONE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getSsid() <em>Ssid</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSsid()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String SSID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getSsid() <em>Ssid</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSsid()
-	 * @generated
-	 * @ordered
-	 */
-	protected String ssid = SSID_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getBookings() <em>Bookings</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBookings()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> bookings;
-
-	/**
-	 * The cached value of the '{@link #getRequests() <em>Requests</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequests()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> requests;
+	
+	private String firstname;
+	private String lastname;
+	private String title ;
+	private String email;
+	private String phone;
+	private String ssid;
+	private EList<String> bookings;
+	private EList<String> requests;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -186,18 +42,10 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	 */
 	protected CustomerImpl() {
 		super();
+		bookings = new EDataTypeUniqueEList<String>(String.class, this, CustomersPackage.CUSTOMER__BOOKINGS);
+		requests = new EDataTypeUniqueEList<String>(String.class, this, CustomersPackage.CUSTOMER__REQUESTS);
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return CustomersPackage.Literals.CUSTOMER;
-	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -330,9 +178,6 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	 * @generated
 	 */
 	public EList<String> getBookings() {
-		if (bookings == null) {
-			bookings = new EDataTypeUniqueEList<String>(String.class, this, CustomersPackage.CUSTOMER__BOOKINGS);
-		}
 		return bookings;
 	}
 
@@ -342,9 +187,6 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	 * @generated
 	 */
 	public EList<String> getRequests() {
-		if (requests == null) {
-			requests = new EDataTypeUniqueEList<String>(String.class, this, CustomersPackage.CUSTOMER__REQUESTS);
-		}
 		return requests;
 	}
 
@@ -357,7 +199,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 		if(!bookings.contains(bookingID)) {
 			bookings.add(bookingID);
 		} else {
-			logger.warn("A booking with bookingID {} could not be found.", bookingID);
+			logger.warn("A booking with bookingID {} is already added to the booking.", bookingID);
 			throw new InvalidIDException();
 		}
 	}
@@ -385,7 +227,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 		if(!requests.contains(requestID)) {
 			requests.add(requestID);
 		} else {
-			logger.warn("A request with requestID {} could not be found.", requestID);
+			logger.warn("A request with requestID {} is already added to the booking.", requestID);
 			throw new InvalidIDException();
 		}
 	}
@@ -402,62 +244,6 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 			logger.warn("A request with requestID {} could not be found.", requestID);
 			throw new InvalidIDException();
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		throw new UnsupportedOperationException();
 	}
 
 	/**

@@ -22,15 +22,6 @@ public interface RestaurantsFactory extends EFactory {
 	RestaurantsFactory eINSTANCE = Classes.Restaurants.impl.RestaurantsFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Manager</em>'.
-	 * @generated
-	 */
-	RestaurantsManager createRestaurantsManager();
-
-	/**
 	 * Returns a new object of class '<em>Restaurant</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,14 +56,4 @@ public interface RestaurantsFactory extends EFactory {
 	 * @generated
 	 */
 	RestaurantMenu createRestaurantMenu();
-
-	/**
-	 * Returns the package supported by this factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
-	 */
-	RestaurantsPackage getRestaurantsPackage();
-
 } //RestaurantsFactory

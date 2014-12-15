@@ -411,9 +411,29 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9MC8npsEeST-65JbGUt8g" name="requests" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0VA5gISqEeS3564cm2u74w"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0VNGwISqEeS3564cm2u74w" value="*"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MC-HpsEeST-65JbGUt8g" name="addBookedStay" visibility="package"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MC-XpsEeST-65JbGUt8g" name="cancelBookedStay" visibility="package"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MC-HpsEeST-65JbGUt8g" name="addBookedStay" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5YyVYISqEeS3564cm2u74w" name="stayID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MC-XpsEeST-65JbGUt8g" name="cancelBookedStay" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6IZNYISqEeS3564cm2u74w" name="stayID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_7dgmMISqEeS3564cm2u74w" name="addRequest">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_BuQLgISrEeS3564cm2u74w" name="requestID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_8I-lEISqEeS3564cm2u74w" name="removeRequest">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Dq6sgISrEeS3564cm2u74w" name="requestID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9MC_HpsEeST-65JbGUt8g" name="BookingsManager" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9MC_XpsEeST-65JbGUt8g" name="booking" visibility="private" type="_w9MC53psEeST-65JbGUt8g" association="_w9MDMHpsEeST-65JbGUt8g">

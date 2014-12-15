@@ -45,32 +45,8 @@ public class GuestsFactoryImpl extends EFactoryImpl implements GuestsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GuestsFactoryImpl() {
+	private GuestsFactoryImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case GuestsPackage.GUESTS_MANAGER: return createGuestsManager();
-			case GuestsPackage.GUEST: return createGuest();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public GuestsManager createGuestsManager() {
-		return GuestsManagerImpl.INSTANCE;
 	}
 
 	/**
@@ -82,25 +58,4 @@ public class GuestsFactoryImpl extends EFactoryImpl implements GuestsFactory {
 		GuestImpl guest = new GuestImpl();
 		return guest;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GuestsPackage getGuestsPackage() {
-		return (GuestsPackage)getEPackage();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
-	@Deprecated
-	public static GuestsPackage getPackage() {
-		return GuestsPackage.eINSTANCE;
-	}
-
 } //GuestsFactoryImpl

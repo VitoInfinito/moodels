@@ -45,34 +45,10 @@ public class RequestsFactoryImpl extends EFactoryImpl implements RequestsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RequestsFactoryImpl() {
+	private RequestsFactoryImpl() {
 		super();
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case RequestsPackage.REQUESTS_MANAGER: return createRequestsManager();
-			case RequestsPackage.REQUEST: return createRequest();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public RequestsManager createRequestsManager() {
-		return RequestsManagerImpl.INSTANCE;
-	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -82,25 +58,4 @@ public class RequestsFactoryImpl extends EFactoryImpl implements RequestsFactory
 		RequestImpl request = new RequestImpl();
 		return request;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RequestsPackage getRequestsPackage() {
-		return (RequestsPackage)getEPackage();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
-	@Deprecated
-	public static RequestsPackage getPackage() {
-		return RequestsPackage.eINSTANCE;
-	}
-
 } //RequestsFactoryImpl

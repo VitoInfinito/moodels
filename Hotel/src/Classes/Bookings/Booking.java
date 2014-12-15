@@ -192,17 +192,7 @@ public interface Booking extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getRequests();
-
-	/**
-	 * Sets the value of the '{@link Classes.Bookings.Booking#getRequests <em>Requests</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Requests</em>' attribute.
-	 * @see #getRequests()
-	 * @generated
-	 */
-	void setRequests(String value);
+	EList<String> getRequests();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,7 +200,7 @@ public interface Booking extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void addBookedStay();
+	void addBookedStay(String stayID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -218,6 +208,9 @@ public interface Booking extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void cancelBookedStay();
+	void cancelBookedStay(String stayID);
+	
+	void addRequest(String requestID);
 
+	void removeRequest(String requestID);
 } // Booking

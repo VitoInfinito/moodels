@@ -38,23 +38,4 @@ public interface StaysFactory extends EFactory {
 	 * @generated
 	 */
 	CreditCard createCreditCard();
-
-	/**
-	 * Returns a new object of class '<em>Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Manager</em>'.
-	 * @generated
-	 */
-	StaysManager createStaysManager();
-
-	/**
-	 * Returns the package supported by this factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
-	 */
-	StaysPackage getStaysPackage();
-
 } //StaysFactory

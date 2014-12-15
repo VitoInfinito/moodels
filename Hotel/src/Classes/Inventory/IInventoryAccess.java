@@ -77,6 +77,6 @@ public interface IInventoryAccess extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated
 	 */
-	EList<String> searchItems(String keyword);
+	List<String> searchItems(String keyword);
 
 } // IInventoryAccess

@@ -45,32 +45,8 @@ public class FeedbackFactoryImpl extends EFactoryImpl implements FeedbackFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FeedbackFactoryImpl() {
+	private FeedbackFactoryImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case FeedbackPackage.FEEDBACK_MANAGER: return createFeedbackManager();
-			case FeedbackPackage.FEEDBACK: return createFeedback();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public FeedbackManager createFeedbackManager() {
-		return FeedbackManagerImpl.INSTANCE;
 	}
 
 	/**
@@ -82,25 +58,4 @@ public class FeedbackFactoryImpl extends EFactoryImpl implements FeedbackFactory
 		FeedbackImpl feedback = new FeedbackImpl();
 		return feedback;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FeedbackPackage getFeedbackPackage() {
-		return (FeedbackPackage)getEPackage();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
-	@Deprecated
-	public static FeedbackPackage getPackage() {
-		return FeedbackPackage.eINSTANCE;
-	}
-
 } //FeedbackFactoryImpl

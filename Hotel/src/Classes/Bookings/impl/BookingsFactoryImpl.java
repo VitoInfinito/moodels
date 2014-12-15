@@ -45,23 +45,8 @@ public class BookingsFactoryImpl extends EFactoryImpl implements BookingsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BookingsFactoryImpl() {
+	private BookingsFactoryImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case BookingsPackage.BOOKING: return createBooking();
-			case BookingsPackage.BOOKINGS_MANAGER: return createBookingsManager();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
 	}
 
 	/**
@@ -73,34 +58,4 @@ public class BookingsFactoryImpl extends EFactoryImpl implements BookingsFactory
 		BookingImpl booking = new BookingImpl();
 		return booking;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public BookingsManager createBookingsManager() {
-		return BookingsManagerImpl.INSTANCE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BookingsPackage getBookingsPackage() {
-		return (BookingsPackage)getEPackage();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
-	@Deprecated
-	public static BookingsPackage getPackage() {
-		return BookingsPackage.eINSTANCE;
-	}
-
 } //BookingsFactoryImpl

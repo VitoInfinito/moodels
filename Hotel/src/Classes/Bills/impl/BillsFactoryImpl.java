@@ -51,27 +51,6 @@ public class BillsFactoryImpl extends EFactoryImpl implements BillsFactory {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public EObject create(EClass eClass) {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public BillsManager createBillsManager() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -79,26 +58,4 @@ public class BillsFactoryImpl extends EFactoryImpl implements BillsFactory {
 		BillImpl bill = new BillImpl();
 		return bill;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public BillsPackage getBillsPackage() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Deprecated
-	public static BillsPackage getPackage() {
-		throw new UnsupportedOperationException();
-	}
-
 } //BillsFactoryImpl

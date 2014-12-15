@@ -45,32 +45,8 @@ public class InventoryFactoryImpl extends EFactoryImpl implements InventoryFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InventoryFactoryImpl() {
+	private InventoryFactoryImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case InventoryPackage.INVENTORY_MANAGER: return createInventoryManager();
-			case InventoryPackage.ITEM: return createItem();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public InventoryManager createInventoryManager() {
-		return InventoryManagerImpl.INSTANCE;
 	}
 
 	/**
@@ -82,25 +58,4 @@ public class InventoryFactoryImpl extends EFactoryImpl implements InventoryFacto
 		ItemImpl item = new ItemImpl();
 		return item;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InventoryPackage getInventoryPackage() {
-		return (InventoryPackage)getEPackage();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
-	@Deprecated
-	public static InventoryPackage getPackage() {
-		return InventoryPackage.eINSTANCE;
-	}
-
 } //InventoryFactoryImpl

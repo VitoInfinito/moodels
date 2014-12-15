@@ -22,14 +22,6 @@ public interface BillsFactory extends EFactory {
 	BillsFactory eINSTANCE = Classes.Bills.impl.BillsFactoryImpl.init();
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	BillsManager createBillsManager();
-
-	/**
 	 * Returns a new object of class '<em>Bill</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -37,13 +29,4 @@ public interface BillsFactory extends EFactory {
 	 * @generated
 	 */
 	Bill createBill();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * NOT SUPPORTED. EMF CRAP!
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	BillsPackage getBillsPackage();
-
 } //BillsFactory

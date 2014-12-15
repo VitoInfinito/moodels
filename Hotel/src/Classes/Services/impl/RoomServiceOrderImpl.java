@@ -22,17 +22,6 @@ import Classes.Services.ServicesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Services.impl.RoomServiceOrderImpl#getService <em>Service</em>}</li>
- *   <li>{@link Classes.Services.impl.RoomServiceOrderImpl#isDelivered <em>Is Delivered</em>}</li>
- *   <li>{@link Classes.Services.impl.RoomServiceOrderImpl#getDeliveryDate <em>Delivery Date</em>}</li>
- *   <li>{@link Classes.Services.impl.RoomServiceOrderImpl#getBookable <em>Bookable</em>}</li>
- *   <li>{@link Classes.Services.impl.RoomServiceOrderImpl#getItems <em>Items</em>}</li>
- *   <li>{@link Classes.Services.impl.RoomServiceOrderImpl#getId <em>Id</em>}</li>
- *   <li>{@link Classes.Services.impl.RoomServiceOrderImpl#getBill <em>Bill</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implements RoomServiceOrder {

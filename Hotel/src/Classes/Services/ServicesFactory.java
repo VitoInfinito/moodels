@@ -31,14 +31,6 @@ public interface ServicesFactory extends EFactory {
 	RoomServiceMenu createRoomServiceMenu();
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * // NOT USED, throws UnsupportedOperationException
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	ServiceManager createServiceManager();
-
-	/**
 	 * Returns a new object of class '<em>Service</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -55,13 +47,4 @@ public interface ServicesFactory extends EFactory {
 	 * @generated
 	 */
 	RoomServiceOrder createRoomServiceOrder();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * // NOT USED, throws UnsupportedOperationException
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	ServicesPackage getServicesPackage();
-
 } //ServicesFactory

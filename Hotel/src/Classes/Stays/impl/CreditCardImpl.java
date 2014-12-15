@@ -29,125 +29,13 @@ import Classes.Stays.StaysPackage;
  * @generated
  */
 public class CreditCardImpl extends MinimalEObjectImpl.Container implements CreditCard {
-	/**
-	 * The default value of the '{@link #getCcNumber() <em>Cc Number</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCcNumber()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CC_NUMBER_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCcNumber() <em>Cc Number</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCcNumber()
-	 * @generated
-	 * @ordered
-	 */
-	protected String ccNumber = CC_NUMBER_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getCcv() <em>Ccv</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCcv()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CCV_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCcv() <em>Ccv</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCcv()
-	 * @generated
-	 * @ordered
-	 */
-	protected String ccv = CCV_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getExpiryMonth() <em>Expiry Month</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExpiryMonth()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int EXPIRY_MONTH_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getExpiryMonth() <em>Expiry Month</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExpiryMonth()
-	 * @generated
-	 * @ordered
-	 */
-	protected int expiryMonth = EXPIRY_MONTH_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getExpiryYear() <em>Expiry Year</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExpiryYear()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int EXPIRY_YEAR_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getExpiryYear() <em>Expiry Year</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExpiryYear()
-	 * @generated
-	 * @ordered
-	 */
-	protected int expiryYear = EXPIRY_YEAR_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFirstName() <em>First Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFirstName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FIRST_NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getFirstName() <em>First Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFirstName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String firstName = FIRST_NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLastName() <em>Last Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String LAST_NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLastName() <em>Last Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String lastName = LAST_NAME_EDEFAULT;
+	
+	private String ccNumber;
+	private String ccv;
+	private int expiryMonth;
+	private int expiryYear;
+	private String firstName;
+	private String lastName;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -156,16 +44,6 @@ public class CreditCardImpl extends MinimalEObjectImpl.Container implements Cred
 	 */
 	protected CreditCardImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return StaysPackage.Literals.CREDIT_CARD;
 	}
 
 	/**
@@ -292,114 +170,6 @@ public class CreditCardImpl extends MinimalEObjectImpl.Container implements Cred
 		lastName = newLastName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StaysPackage.CREDIT_CARD__LAST_NAME, oldLastName, lastName));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case StaysPackage.CREDIT_CARD__CC_NUMBER:
-				return getCcNumber();
-			case StaysPackage.CREDIT_CARD__CCV:
-				return getCcv();
-			case StaysPackage.CREDIT_CARD__EXPIRY_MONTH:
-				return getExpiryMonth();
-			case StaysPackage.CREDIT_CARD__EXPIRY_YEAR:
-				return getExpiryYear();
-			case StaysPackage.CREDIT_CARD__FIRST_NAME:
-				return getFirstName();
-			case StaysPackage.CREDIT_CARD__LAST_NAME:
-				return getLastName();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case StaysPackage.CREDIT_CARD__CC_NUMBER:
-				setCcNumber((String)newValue);
-				return;
-			case StaysPackage.CREDIT_CARD__CCV:
-				setCcv((String)newValue);
-				return;
-			case StaysPackage.CREDIT_CARD__EXPIRY_MONTH:
-				setExpiryMonth((Integer)newValue);
-				return;
-			case StaysPackage.CREDIT_CARD__EXPIRY_YEAR:
-				setExpiryYear((Integer)newValue);
-				return;
-			case StaysPackage.CREDIT_CARD__FIRST_NAME:
-				setFirstName((String)newValue);
-				return;
-			case StaysPackage.CREDIT_CARD__LAST_NAME:
-				setLastName((String)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case StaysPackage.CREDIT_CARD__CC_NUMBER:
-				setCcNumber(CC_NUMBER_EDEFAULT);
-				return;
-			case StaysPackage.CREDIT_CARD__CCV:
-				setCcv(CCV_EDEFAULT);
-				return;
-			case StaysPackage.CREDIT_CARD__EXPIRY_MONTH:
-				setExpiryMonth(EXPIRY_MONTH_EDEFAULT);
-				return;
-			case StaysPackage.CREDIT_CARD__EXPIRY_YEAR:
-				setExpiryYear(EXPIRY_YEAR_EDEFAULT);
-				return;
-			case StaysPackage.CREDIT_CARD__FIRST_NAME:
-				setFirstName(FIRST_NAME_EDEFAULT);
-				return;
-			case StaysPackage.CREDIT_CARD__LAST_NAME:
-				setLastName(LAST_NAME_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case StaysPackage.CREDIT_CARD__CC_NUMBER:
-				return CC_NUMBER_EDEFAULT == null ? ccNumber != null : !CC_NUMBER_EDEFAULT.equals(ccNumber);
-			case StaysPackage.CREDIT_CARD__CCV:
-				return CCV_EDEFAULT == null ? ccv != null : !CCV_EDEFAULT.equals(ccv);
-			case StaysPackage.CREDIT_CARD__EXPIRY_MONTH:
-				return expiryMonth != EXPIRY_MONTH_EDEFAULT;
-			case StaysPackage.CREDIT_CARD__EXPIRY_YEAR:
-				return expiryYear != EXPIRY_YEAR_EDEFAULT;
-			case StaysPackage.CREDIT_CARD__FIRST_NAME:
-				return FIRST_NAME_EDEFAULT == null ? firstName != null : !FIRST_NAME_EDEFAULT.equals(firstName);
-			case StaysPackage.CREDIT_CARD__LAST_NAME:
-				return LAST_NAME_EDEFAULT == null ? lastName != null : !LAST_NAME_EDEFAULT.equals(lastName);
-		}
-		return super.eIsSet(featureID);
 	}
 
 	/**

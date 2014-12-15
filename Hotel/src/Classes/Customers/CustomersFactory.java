@@ -22,15 +22,6 @@ public interface CustomersFactory extends EFactory {
 	CustomersFactory eINSTANCE = Classes.Customers.impl.CustomersFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Manager</em>'.
-	 * @generated
-	 */
-	CustomersManager createCustomersManager();
-
-	/**
 	 * Returns a new object of class '<em>Customer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,14 +29,5 @@ public interface CustomersFactory extends EFactory {
 	 * @generated
 	 */
 	Customer createCustomer();
-
-	/**
-	 * Returns the package supported by this factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
-	 */
-	CustomersPackage getCustomersPackage();
 
 } //CustomersFactory

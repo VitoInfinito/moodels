@@ -3,9 +3,13 @@
 package Classes.Staff.impl;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Date;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.regex.Pattern;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -15,6 +19,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import Classes.InvalidIDException;
+import Classes.Bills.Bill;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToStaffMapImpl;
 import Classes.Staff.SalaryContract;
@@ -28,14 +33,6 @@ import Classes.Statistics.IStatisticsGenerator;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Manager</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * <ul>
- *   <li>{@link Classes.Staff.impl.StaffManagerImpl#getStaff <em>Staff</em>}</li>
- *   <li>{@link Classes.Staff.impl.StaffManagerImpl#getIStatisticsGenerator <em>IStatistics Generator</em>}</li>
- * </ul>
- * </p>
- *
  * @generated
  */
 public class StaffManagerImpl extends MinimalEObjectImpl.Container implements StaffManager {
@@ -70,10 +67,63 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> searchStaff(String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchStaff(String keyword) {
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
+
+		// Exact ID match. First Order!
+		if (employees.containsKey(keyword)) {
+			searchResult.add(keyword);
+		}
+
+		Collection<Staff> c = employees.values();
+		
+		// Some property match exactly. Second Order!
+		for (Staff b : c) {
+			if (b.getFirstName().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getSsid());
+			} else if (b.getLastName().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getSsid());
+			} else if (b.getJob().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getSsid());
+			} else if (b.getEmail().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getSsid());
+			} else if (b.getPhone().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getSsid());
+			} else if (b.getSalaryContract().getType().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getSsid());
+			}
+		}
+		
+		// ID match somewhat. Third Order!
+		for (Staff b : c) {			
+			if (regexPattern.matcher(b.getSsid()).matches()) {
+				searchResult.add(b.getSsid());
+			} 
+		}
+
+		// Some property match somewhat. Fourth Order.
+		for (Staff b : c) {
+			if (regexPattern.matcher(b.getFirstName()).matches()) {
+				searchResult.add(b.getSsid());
+			} else if (regexPattern.matcher(b.getLastName()).matches()) {
+				searchResult.add(b.getSsid());
+			} else if (regexPattern.matcher(b.getJob()).matches()) {
+				searchResult.add(b.getSsid());
+			} else if (regexPattern.matcher(b.getEmail()).matches()) {
+				searchResult.add(b.getSsid());
+			} else if (regexPattern.matcher(b.getPhone()).matches()) {
+				searchResult.add(b.getSsid());
+			} else if (regexPattern.matcher(b.getPhone()).matches()) {
+				searchResult.add(b.getSsid());
+			} else if (regexPattern.matcher(b.getSalaryContract().getType()).matches()) {
+				searchResult.add(b.getSsid());
+			}
+		}
+		
+
+		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
 	}
 
 	/**
