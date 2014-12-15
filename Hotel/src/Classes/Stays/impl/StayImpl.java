@@ -5,6 +5,7 @@ package Classes.Stays.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -289,9 +290,9 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getCheckedOutGuests() {
+	public List<String> getCheckedOutGuests() {
 		if (checkedOutGuests == null) {
 			checkedOutGuests = new EDataTypeUniqueEList<String>(String.class, this, StaysPackage.STAY__CHECKED_OUT_GUESTS);
 		}

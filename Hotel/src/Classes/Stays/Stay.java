@@ -3,6 +3,7 @@
 package Classes.Stays;
 
 import java.util.Date;
+import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -154,9 +155,9 @@ public interface Stay extends EObject {
 	 * @return the value of the '<em>Checked Out Guests</em>' attribute list.
 	 * @see Classes.Stays.StaysPackage#getStay_CheckedOutGuests()
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getCheckedOutGuests();
+	List<String> getCheckedOutGuests();
 
 	/**
 	 * Returns the value of the '<em><b>From Date</b></em>' attribute.
