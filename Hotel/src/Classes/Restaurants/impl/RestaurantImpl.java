@@ -2,6 +2,7 @@
  */
 package Classes.Restaurants.impl;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -197,7 +198,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	}
 
 	@Override
-	public List<String> getAvailableTables(Date to, Date from) {
+	public List<String> getAvailableTables(LocalDateTime to, LocalDateTime from) {
 		List<String> available = new ArrayList<String>();
 		List<String> notAvailable = new ArrayList<String>();
 		for(Reservation reservation : reservations.values()) {
@@ -308,7 +309,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	}
 
 	@Override
-	public void addReservation(List<String> tables, String guestID, Date to, Date from) {
+	public void addReservation(List<String> tables, String guestID, LocalDateTime to, LocalDateTime from) {
 		Reservation reservation = RestaurantsFactory.eINSTANCE.createReservation();
 		
 		reservation.setId(generateReservationID());
@@ -361,7 +362,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	}
 
 	@Override
-	public List<String> getAvailableTablesByNbrGuests(Date to, Date from, int nbrGuests) {
+	public List<String> getAvailableTablesByNbrGuests(LocalDateTime to, LocalDateTime from, int nbrGuests) {
 		List<String> availableTables = getAvailableTables(to, from);
 		List<String> newList = new ArrayList<String>();
 		
@@ -375,7 +376,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	}
 
 	@Override
-	public List<String> searchReservationsWithTime(String keyword, Date from, Date to) {
+	public List<String> searchReservationsWithTime(String keyword, LocalDateTime from, LocalDateTime to) {
 		keyword = keyword.trim();
 		Set<String> searchResult = new LinkedHashSet<String>();
 		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");

@@ -37,7 +37,6 @@ import Classes.Services.ServicesPackage;
 import Classes.Services.impl.ServicesPackageImpl;
 import Classes.Staff.StaffPackage;
 import Classes.Staff.impl.StaffPackageImpl;
-import Classes.Statistics.Date;
 import Classes.Statistics.IStatisticsGenerator;
 import Classes.Statistics.Statistic;
 import Classes.Statistics.StatisticEntry;
@@ -457,8 +456,6 @@ public class StatisticsPackageImpl extends EPackageImpl implements StatisticsPac
 		initEClass(statisticEntryEClass, StatisticEntry.class, "StatisticEntry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStatisticEntry_Value(), theTypesPackage.getReal(), "value", null, 1, 1, StatisticEntry.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getStatisticEntry_DateOfEntry(), this.getDate(), null, "dateOfEntry", null, 1, 1, StatisticEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(dateEClass, Date.class, "Date", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iStatisticsGeneratorEClass, IStatisticsGenerator.class, "IStatisticsGenerator", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

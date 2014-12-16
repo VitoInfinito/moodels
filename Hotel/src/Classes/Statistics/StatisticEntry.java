@@ -2,21 +2,14 @@
  */
 package Classes.Statistics;
 
+import java.time.LocalDateTime;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Statistic Entry</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Statistics.StatisticEntry#getValue <em>Value</em>}</li>
- *   <li>{@link Classes.Statistics.StatisticEntry#getDateOfEntry <em>Date Of Entry</em>}</li>
- * </ul>
- * </p>
- *
  * @see Classes.Statistics.StatisticsPackage#getStatisticEntry()
  * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='Statistic Entry'"
  * @generated
@@ -51,7 +44,7 @@ public interface StatisticEntry extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Date getDateOfEntry();
+	LocalDateTime getDateOfEntry();
 
 	/**
 	 * Sets the value of the '{@link Classes.Statistics.StatisticEntry#getDateOfEntry <em>Date Of Entry</em>}' reference.
@@ -61,6 +54,6 @@ public interface StatisticEntry extends EObject {
 	 * @see #getDateOfEntry()
 	 * @generated
 	 */
-	void setDateOfEntry(Date value);
+	void setDateOfEntry(LocalDateTime value);
 
 } // StatisticEntry

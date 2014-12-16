@@ -2,7 +2,7 @@
  */
 package Classes.Stays;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.xml.soap.SOAPException;
@@ -48,7 +48,7 @@ public interface IStays extends EObject {
 	 * @model bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false" bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false" fromDateRequired="true" fromDateOrdered="false" toDateRequired="true" toDateOrdered="false"
 	 * @generated
 	 */
-	void addNewStay(String bookableID, String bookingID, Date fromDate, Date toDate);
+	void addNewStay(String bookableID, String bookingID, LocalDateTime fromDate, LocalDateTime toDate);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -162,7 +162,7 @@ public interface IStays extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	EList<String> searchHotelStaysWithinPeriod(String keyword, Date from, Date to);
+	EList<String> searchHotelStaysWithinPeriod(String keyword, LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -170,7 +170,7 @@ public interface IStays extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated NOT
 	 */
-	List<String> getAllHotelStaysWithinPeriod(Date from, Date to);
+	List<String> getAllHotelStaysWithinPeriod(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -203,7 +203,7 @@ public interface IStays extends EObject {
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	void changePeriodOfStay(String stayID, Date from, Date to);
+	void changePeriodOfStay(String stayID, LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->

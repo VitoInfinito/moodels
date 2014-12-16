@@ -2,10 +2,10 @@
  */
 package Classes.Staff.impl;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -299,7 +299,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> scheduleStaff(Date from, Date to) {
+	public List<String> scheduleStaff(LocalDateTime from, LocalDateTime to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

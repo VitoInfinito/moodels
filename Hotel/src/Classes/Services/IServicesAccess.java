@@ -2,7 +2,7 @@
  */
 package Classes.Services;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
@@ -93,7 +93,7 @@ public interface IServicesAccess extends EObject {
 	 * @model required="true" ordered="false" orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false"
 	 * @generated
 	 */
-	Date getRSODeliveryDate(String orderID);
+	LocalDateTime getRSODeliveryDate(String orderID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,7 +133,7 @@ public interface IServicesAccess extends EObject {
 	 * @model orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false" dateRequired="true" dateOrdered="false"
 	 * @generated
 	 */
-	void changeRSODeliveryDate(String orderID, Date date);
+	void changeRSODeliveryDate(String orderID, LocalDateTime date);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -173,6 +173,6 @@ public interface IServicesAccess extends EObject {
 	 * @model itemsDataType="org.eclipse.uml2.types.String" itemsMany="true" itemsOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false" billDataType="org.eclipse.uml2.types.String" billRequired="true" billOrdered="false" bookableDataType="org.eclipse.uml2.types.String" bookableRequired="true" bookableOrdered="false" deliveryDateRequired="true" deliveryDateOrdered="false" isDeliveredDataType="org.eclipse.uml2.types.Boolean" isDeliveredRequired="true" isDeliveredOrdered="false"
 	 * @generated
 	 */
-	void makeRoomServiceOrder(List<String> items, List<String> services, String bill, String bookable, Date deliveryDate, boolean isDelivered);
+	void makeRoomServiceOrder(List<String> items, List<String> services, String bill, String bookable, LocalDateTime deliveryDate, boolean isDelivered);
 
 } // IServicesAccess

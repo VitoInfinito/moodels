@@ -38,30 +38,4 @@ public interface StatisticsFactory extends EFactory {
 	 * @generated
 	 */
 	StatisticEntry createStatisticEntry();
-
-	/**
-	 * Returns a new object of class '<em>Date</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Date</em>'.
-	 * @generated
-	 */
-	Date createDate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * // NOT USED, throws UnsupportedOperationException
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	StatisticsGenerator createStatisticsGenerator();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * // NOT USED, throws UnsupportedOperationException
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	StatisticsPackage getStatisticsPackage();
-
 } //StatisticsFactory

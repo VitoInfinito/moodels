@@ -2,7 +2,8 @@
  */
 package Classes.Bookings.impl;
 
-import java.util.Date;
+
+import java.time.LocalDateTime;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -31,7 +32,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	private String customer;
 	private String bookingNbr;
 	private int nbrGuests;
-	private Date issueDate;
+	private LocalDateTime issueDate;
 	private CreditCard creditCard;
 	private EList<String> requests;
 
@@ -123,7 +124,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getIssueDate() {
+	public LocalDateTime getIssueDate() {
 		return issueDate;
 	}
 
@@ -132,8 +133,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIssueDate(Date newIssueDate) {
-		Date oldIssueDate = issueDate;
+	public void setIssueDate(LocalDateTime newIssueDate) {
+		LocalDateTime oldIssueDate = issueDate;
 		issueDate = newIssueDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BookingsPackage.BOOKING__ISSUE_DATE, oldIssueDate, issueDate));

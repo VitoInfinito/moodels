@@ -2,6 +2,8 @@
  */
 package Classes.Statistics;
 
+import java.time.LocalDateTime;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -9,17 +11,6 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Statistic</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Statistics.Statistic#getType <em>Type</em>}</li>
- *   <li>{@link Classes.Statistics.Statistic#getStatisticEntry <em>Statistic Entry</em>}</li>
- *   <li>{@link Classes.Statistics.Statistic#getFromDate <em>From Date</em>}</li>
- *   <li>{@link Classes.Statistics.Statistic#getToDate <em>To Date</em>}</li>
- * </ul>
- * </p>
- *
  * @see Classes.Statistics.StatisticsPackage#getStatistic()
  * @model
  * @generated
@@ -71,7 +62,7 @@ public interface Statistic extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Date getFromDate();
+	LocalDateTime getFromDate();
 
 	/**
 	 * Sets the value of the '{@link Classes.Statistics.Statistic#getFromDate <em>From Date</em>}' reference.
@@ -81,7 +72,7 @@ public interface Statistic extends EObject {
 	 * @see #getFromDate()
 	 * @generated
 	 */
-	void setFromDate(Date value);
+	void setFromDate(LocalDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>To Date</b></em>' reference.
@@ -97,7 +88,7 @@ public interface Statistic extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Date getToDate();
+	LocalDateTime getToDate();
 
 	/**
 	 * Sets the value of the '{@link Classes.Statistics.Statistic#getToDate <em>To Date</em>}' reference.
@@ -107,6 +98,6 @@ public interface Statistic extends EObject {
 	 * @see #getToDate()
 	 * @generated
 	 */
-	void setToDate(Date value);
+	void setToDate(LocalDateTime value);
 
 } // Statistic

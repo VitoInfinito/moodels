@@ -2,7 +2,7 @@
  */
 package Classes.Stays;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
@@ -12,22 +12,6 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Stay</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Stays.Stay#getID <em>ID</em>}</li>
- *   <li>{@link Classes.Stays.Stay#getBookable <em>Bookable</em>}</li>
- *   <li>{@link Classes.Stays.Stay#getBills <em>Bills</em>}</li>
- *   <li>{@link Classes.Stays.Stay#getCheckedInGuests <em>Checked In Guests</em>}</li>
- *   <li>{@link Classes.Stays.Stay#getBooking <em>Booking</em>}</li>
- *   <li>{@link Classes.Stays.Stay#getCheckedOutGuests <em>Checked Out Guests</em>}</li>
- *   <li>{@link Classes.Stays.Stay#getFromDate <em>From Date</em>}</li>
- *   <li>{@link Classes.Stays.Stay#getToDate <em>To Date</em>}</li>
- *   <li>{@link Classes.Stays.Stay#getCreditCard <em>Credit Card</em>}</li>
- * </ul>
- * </p>
- *
  * @see Classes.Stays.StaysPackage#getStay()
  * @model
  * @generated
@@ -173,7 +157,7 @@ public interface Stay extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Date getFromDate();
+	LocalDateTime getFromDate();
 
 	/**
 	 * Sets the value of the '{@link Classes.Stays.Stay#getFromDate <em>From Date</em>}' attribute.
@@ -183,7 +167,7 @@ public interface Stay extends EObject {
 	 * @see #getFromDate()
 	 * @generated
 	 */
-	void setFromDate(Date value);
+	void setFromDate(LocalDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>To Date</b></em>' attribute.
@@ -199,7 +183,7 @@ public interface Stay extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Date getToDate();
+	LocalDateTime getToDate();
 
 	/**
 	 * Sets the value of the '{@link Classes.Stays.Stay#getToDate <em>To Date</em>}' attribute.
@@ -209,7 +193,7 @@ public interface Stay extends EObject {
 	 * @see #getToDate()
 	 * @generated
 	 */
-	void setToDate(Date value);
+	void setToDate(LocalDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>Credit Card</b></em>' reference.

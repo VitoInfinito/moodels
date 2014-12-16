@@ -2,7 +2,7 @@
  */
 package Classes.Staff;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
@@ -142,7 +142,7 @@ public interface IStaff extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	EList<String> scheduleStaff(Date from, Date to);
+	List<String> scheduleStaff(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->

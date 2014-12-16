@@ -2,6 +2,7 @@
  */
 package Classes.Bills.impl;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -27,8 +28,8 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	private EList<String> items;
 	private EList<String> services;
 	private String bookable;
-	private Date issueDate;
-	private Date paymentDate;
+	private LocalDateTime issueDate;
+	private LocalDateTime paymentDate;
 	private double totalAmount;
 
 	/**
@@ -149,7 +150,7 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getIssueDate() {
+	public LocalDateTime getIssueDate() {
 		return issueDate;
 	}
 
@@ -158,8 +159,8 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIssueDate(Date newIssueDate) {
-		Date oldIssueDate = issueDate;
+	public void setIssueDate(LocalDateTime newIssueDate) {
+		LocalDateTime oldIssueDate = issueDate;
 		issueDate = newIssueDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BillsPackage.BILL__ISSUE_DATE, oldIssueDate, issueDate));
@@ -170,7 +171,7 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getPaymentDate() {
+	public LocalDateTime getPaymentDate() {
 		return paymentDate;
 	}
 
@@ -179,8 +180,8 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPaymentDate(Date newPaymentDate) {
-		Date oldPaymentDate = paymentDate;
+	public void setPaymentDate(LocalDateTime newPaymentDate) {
+		LocalDateTime oldPaymentDate = paymentDate;
 		paymentDate = newPaymentDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BillsPackage.BILL__PAYMENT_DATE, oldPaymentDate, paymentDate));

@@ -2,7 +2,8 @@
  */
 package Classes.Statistics;
 
-import java.util.Date;
+
+import java.time.LocalDateTime;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
@@ -28,7 +29,7 @@ public interface IStatisticsGenerator extends EObject {
 	 * @model required="true" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	Statistic getOccupancyStatistics(Date from, Date to);
+	Statistic getOccupancyStatistics(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -36,7 +37,7 @@ public interface IStatisticsGenerator extends EObject {
 	 * @model required="true" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	Statistic getRevenueStatistics(Date from, Date to);
+	Statistic getRevenueStatistics(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,6 +45,6 @@ public interface IStatisticsGenerator extends EObject {
 	 * @model required="true" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	Statistic getProfitStatistics(Date from, Date to);
+	Statistic getProfitStatistics(LocalDateTime from, LocalDateTime to);
 
 } // IStatisticsGenerator

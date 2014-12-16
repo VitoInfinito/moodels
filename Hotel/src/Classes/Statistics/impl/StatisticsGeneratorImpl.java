@@ -2,7 +2,8 @@
  */
 package Classes.Statistics.impl;
 
-import java.util.Date;
+
+import java.time.LocalDateTime;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -71,7 +72,7 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Statistic getOccupancyStatistics(Date from, Date to) {
+	public Statistic getOccupancyStatistics(LocalDateTime from, LocalDateTime to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -82,7 +83,7 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Statistic getRevenueStatistics(Date from, Date to) {
+	public Statistic getRevenueStatistics(LocalDateTime from, LocalDateTime to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -93,7 +94,7 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Statistic getProfitStatistics(Date from, Date to) {
+	public Statistic getProfitStatistics(LocalDateTime from, LocalDateTime to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

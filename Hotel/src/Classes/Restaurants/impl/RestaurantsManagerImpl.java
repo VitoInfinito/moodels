@@ -2,10 +2,10 @@
  */
 package Classes.Restaurants.impl;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -82,7 +82,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<String> getAvailableTables(Date to, Date from, String restaurantID) {
+	public List<String> getAvailableTables(LocalDateTime to, LocalDateTime from, String restaurantID) {
 		return getRestaurantByID(restaurantID).getAvailableTables( to, from);
 	}
 
@@ -185,7 +185,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void makeReservation(String restaurantID, List<String> tables, String guestID, Date to, Date from) {
+	public void makeReservation(String restaurantID, List<String> tables, String guestID, LocalDateTime to, LocalDateTime from) {
 		getRestaurantByID(restaurantID).addReservation(tables, guestID, to, from);
 	}
 
@@ -213,7 +213,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<String> getAvailableTablesByNbrGuests(String restaurantID, Date to, Date from, int nbrGuests) {
+	public List<String> getAvailableTablesByNbrGuests(String restaurantID, LocalDateTime to, LocalDateTime from, int nbrGuests) {
 		return getRestaurantByID(restaurantID).getAvailableTablesByNbrGuests(to, from, nbrGuests);
 	}
 
@@ -231,7 +231,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public Date getReservationFromTime(String restaurantID, String reservationID) {
+	public LocalDateTime getReservationFromTime(String restaurantID, String reservationID) {
 		return getReservationByID(restaurantID, reservationID).getFrom();
 	}
 
@@ -240,7 +240,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public Date getReservationToTime(String restaurantID, String reservationID) {
+	public LocalDateTime getReservationToTime(String restaurantID, String reservationID) {
 		return getReservationByID(restaurantID, reservationID).getTo();
 	}
 
@@ -249,7 +249,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<String> searchRestaurantReservationsWithTime(String restaurantID, String keyword, Date from, Date to) {
+	public List<String> searchRestaurantReservationsWithTime(String restaurantID, String keyword, LocalDateTime from, LocalDateTime to) {
 		return getRestaurantByID(restaurantID).searchReservationsWithTime(keyword, from, to);
 	}
 

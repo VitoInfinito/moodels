@@ -2,7 +2,8 @@
  */
 package Classes.Services;
 
-import java.util.Date;
+
+import java.time.LocalDateTime;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -11,20 +12,6 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Room Service Order</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Services.RoomServiceOrder#getService <em>Service</em>}</li>
- *   <li>{@link Classes.Services.RoomServiceOrder#isDelivered <em>Is Delivered</em>}</li>
- *   <li>{@link Classes.Services.RoomServiceOrder#getDeliveryDate <em>Delivery Date</em>}</li>
- *   <li>{@link Classes.Services.RoomServiceOrder#getBookable <em>Bookable</em>}</li>
- *   <li>{@link Classes.Services.RoomServiceOrder#getItems <em>Items</em>}</li>
- *   <li>{@link Classes.Services.RoomServiceOrder#getId <em>Id</em>}</li>
- *   <li>{@link Classes.Services.RoomServiceOrder#getBill <em>Bill</em>}</li>
- * </ul>
- * </p>
- *
  * @see Classes.Services.ServicesPackage#getRoomServiceOrder()
  * @model
  * @generated
@@ -86,7 +73,7 @@ public interface RoomServiceOrder extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Date getDeliveryDate();
+	LocalDateTime getDeliveryDate();
 
 	/**
 	 * Sets the value of the '{@link Classes.Services.RoomServiceOrder#getDeliveryDate <em>Delivery Date</em>}' attribute.
@@ -96,7 +83,7 @@ public interface RoomServiceOrder extends EObject {
 	 * @see #getDeliveryDate()
 	 * @generated
 	 */
-	void setDeliveryDate(Date value);
+	void setDeliveryDate(LocalDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>Bookable</b></em>' attribute.

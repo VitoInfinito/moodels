@@ -2,10 +2,10 @@
  */
 package Classes.Bills.impl;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -97,7 +97,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public Date getBillPaymentDate(String billID) {
+	public LocalDateTime getBillPaymentDate(String billID) {
 		if (bills.containsKey(billID)) {
 			return bills.get(billID).getIssueDate();
 		} else {
@@ -194,7 +194,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 		
 		bill.setId(ID);
 		bill.setIsPaid(false);
-		bill.setIssueDate(new Date());
+		bill.setIssueDate(LocalDateTime.now());
 		
 		// Calculate total cost
 		double totalCost = 0;
@@ -252,7 +252,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 		for (String billID : billss) {
 			Bill bill = bills.get(billID);
 			bill.setIsPaid(true);
-			bill.setPaymentDate(new Date());
+			bill.setPaymentDate(LocalDateTime.now());
 			bill.setPaymentType("Credit Card");
 		}
 	}
@@ -308,7 +308,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public Date getBillIssueDate(String billID) {
+	public LocalDateTime getBillIssueDate(String billID) {
 		if (bills.containsKey(billID)) {
 			return bills.get(billID).getIssueDate();
 		} else {
@@ -340,7 +340,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 		for (String billID : billss) {
 			Bill bill = bills.get(billID);
 			bill.setIsPaid(true);
-			bill.setPaymentDate(new Date());
+			bill.setPaymentDate(LocalDateTime.now());
 			bill.setPaymentType("Cash");
 		}
 	}

@@ -2,7 +2,7 @@
  */
 package Classes.Stays.impl;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -29,8 +29,8 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 	private EList<String> checkedInGuests;
 	private String booking;
 	private EList<String> checkedOutGuests;
-	private Date fromDate;
-	private Date toDate;
+	private LocalDateTime fromDate;
+	private LocalDateTime toDate;
 	private CreditCard creditCard;
 
 	/**
@@ -140,7 +140,7 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getFromDate() {
+	public LocalDateTime getFromDate() {
 		return fromDate;
 	}
 
@@ -149,8 +149,8 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFromDate(Date newFromDate) {
-		Date oldFromDate = fromDate;
+	public void setFromDate(LocalDateTime newFromDate) {
+		LocalDateTime oldFromDate = fromDate;
 		fromDate = newFromDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StaysPackage.STAY__FROM_DATE, oldFromDate, fromDate));
@@ -161,7 +161,7 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getToDate() {
+	public LocalDateTime getToDate() {
 		return toDate;
 	}
 
@@ -170,8 +170,8 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setToDate(Date newToDate) {
-		Date oldToDate = toDate;
+	public void setToDate(LocalDateTime newToDate) {
+		LocalDateTime oldToDate = toDate;
 		toDate = newToDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StaysPackage.STAY__TO_DATE, oldToDate, toDate));

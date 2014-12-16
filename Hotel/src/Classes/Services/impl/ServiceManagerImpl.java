@@ -2,10 +2,10 @@
  */
 package Classes.Services.impl;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -228,7 +228,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getRSODeliveryDate(String orderID) {
+	public LocalDateTime getRSODeliveryDate(String orderID) {
 		if (roomServiceOrders.containsKey(orderID)) {
 			return roomServiceOrders.get(orderID).getDeliveryDate();
 		} else {
@@ -304,7 +304,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeRSODeliveryDate(String orderID, Date date) {
+	public void changeRSODeliveryDate(String orderID, LocalDateTime date) {
 		if (roomServiceOrders.containsKey(orderID)) {
 			roomServiceOrders.get(orderID).setDeliveryDate(date);
 		} else {
@@ -364,7 +364,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void makeRoomServiceOrder(List<String> items, List<String> services, String bill, String bookable, Date deliveryDate, boolean isDelivered) {
+	public void makeRoomServiceOrder(List<String> items, List<String> services, String bill, String bookable, LocalDateTime deliveryDate, boolean isDelivered) {
 		
 		RoomServiceOrder order = ServicesFactory.eINSTANCE.createRoomServiceOrder();
 		

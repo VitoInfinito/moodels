@@ -2,7 +2,7 @@
  */
 package Classes.Restaurants;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
@@ -11,17 +11,6 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Restaurant</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Restaurants.Restaurant#getName <em>Name</em>}</li>
- *   <li>{@link Classes.Restaurants.Restaurant#getReservation <em>Reservation</em>}</li>
- *   <li>{@link Classes.Restaurants.Restaurant#getRestaurantTable <em>Restaurant Table</em>}</li>
- *   <li>{@link Classes.Restaurants.Restaurant#getMenu <em>Menu</em>}</li>
- * </ul>
- * </p>
- *
  * @see Classes.Restaurants.RestaurantsPackage#getRestaurant()
  * @model
  * @generated NOT
@@ -79,7 +68,7 @@ public interface Restaurant extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void addReservation(List<String> tables, String guestID, Date to, Date from);
+	void addReservation(List<String> tables, String guestID, LocalDateTime to, LocalDateTime from);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -103,7 +92,7 @@ public interface Restaurant extends EObject {
 
 	int getTableNumberOfSeats(String tableNbr);
 
-	List<String> getAvailableTables(Date to, Date from);
+	List<String> getAvailableTables(LocalDateTime to, LocalDateTime from);
 
 	List<String> searchReservations(String keyword);
 
@@ -113,9 +102,9 @@ public interface Restaurant extends EObject {
 
 	void changeReservedTables(String reservationID, List<String> tables);
 
-	List<String> getAvailableTablesByNbrGuests(Date to, Date from, int nbrGuests);
+	List<String> getAvailableTablesByNbrGuests(LocalDateTime to, LocalDateTime from, int nbrGuests);
 
-	List<String> searchReservationsWithTime(String keyword, Date from, Date to);
+	List<String> searchReservationsWithTime(String keyword, LocalDateTime from, LocalDateTime to);
 
 
 } // Restaurant

@@ -2,7 +2,7 @@
  */
 package Classes.Restaurants.impl;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -28,8 +28,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	private String id;
 	private String reservedBy;
 	private EList<RestaurantTable> restaurantTable;
-	private Date from;
-	private Date to;
+	private LocalDateTime from;
+	private LocalDateTime to;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -88,7 +88,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getFrom() {
+	public LocalDateTime getFrom() {
 		return from;
 	}
 
@@ -97,8 +97,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFrom(Date newFrom) {
-		Date oldFrom = from;
+	public void setFrom(LocalDateTime newFrom) {
+		LocalDateTime oldFrom = from;
 		from = newFrom;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, RestaurantsPackage.RESERVATION__FROM, oldFrom, from));
@@ -109,7 +109,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getTo() {
+	public LocalDateTime getTo() {
 		return to;
 	}
 
@@ -118,8 +118,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTo(Date newTo) {
-		Date oldTo = to;
+	public void setTo(LocalDateTime newTo) {
+		LocalDateTime oldTo = to;
 		to = newTo;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, RestaurantsPackage.RESERVATION__TO, oldTo, to));

@@ -2,7 +2,8 @@
  */
 package Classes.Services.impl;
 
-import java.util.Date;
+
+import java.time.LocalDateTime;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -28,7 +29,7 @@ public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implement
 	private final Logger logger = LoggerFactory.getLogger(RoomServiceOrderImpl.class);
 	private EList<Service> service;
 	private boolean isDelivered;
-	private Date deliveryDate;
+	private LocalDateTime deliveryDate;
 	private String bookable;
 	private EList<String> items;
 	private String id;
@@ -71,7 +72,7 @@ public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getDeliveryDate() {
+	public LocalDateTime getDeliveryDate() {
 		return deliveryDate;
 	}
 
@@ -80,8 +81,8 @@ public class RoomServiceOrderImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDeliveryDate(Date newDeliveryDate) {
-		Date oldDeliveryDate = deliveryDate;
+	public void setDeliveryDate(LocalDateTime newDeliveryDate) {
+		LocalDateTime oldDeliveryDate = deliveryDate;
 		deliveryDate = newDeliveryDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ServicesPackage.ROOM_SERVICE_ORDER__DELIVERY_DATE, oldDeliveryDate, deliveryDate));

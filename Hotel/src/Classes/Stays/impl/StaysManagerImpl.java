@@ -2,9 +2,9 @@
  */
 package Classes.Stays.impl;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 
 import javax.xml.soap.SOAPException;
@@ -89,7 +89,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addNewStay(String bookableID, String bookingID, Date fromDate, Date toDate) {
+	public void addNewStay(String bookableID, String bookingID, LocalDateTime fromDate, LocalDateTime toDate) {
 		String id = generateID();
 		
 		Stay stay = StaysFactory.eINSTANCE.createStay();
@@ -310,7 +310,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> searchHotelStaysWithinPeriod(String keyword, Date from, Date to) {
+	public EList<String> searchHotelStaysWithinPeriod(String keyword, LocalDateTime from, LocalDateTime to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -321,7 +321,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public List<String> getAllHotelStaysWithinPeriod(Date from, Date to) {
+	public List<String> getAllHotelStaysWithinPeriod(LocalDateTime from, LocalDateTime to) {
 		
 		List<String> searchResults = new ArrayList<String>();
 		
@@ -329,7 +329,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 			
 			Stay tmp = (Stay) stays.get(i);
 			
-			if (tmp.getFromDate().after(from) && tmp.getToDate().before(to)) {
+			if (tmp.getFromDate().isAfter(from) && tmp.getToDate().isBefore(to)) {
 				searchResults.add(tmp.getID());
 			}
 			
@@ -401,7 +401,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changePeriodOfStay(String stayID, Date from, Date to) {
+	public void changePeriodOfStay(String stayID, LocalDateTime from, LocalDateTime to) {
 		Stay stay = stays.get(stayID);
 		
 		if (stay != null) {

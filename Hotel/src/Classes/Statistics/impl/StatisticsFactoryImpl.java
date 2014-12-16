@@ -8,7 +8,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import Classes.Statistics.Date;
 import Classes.Statistics.Statistic;
 import Classes.Statistics.StatisticEntry;
 import Classes.Statistics.StatisticsFactory;
@@ -47,25 +46,8 @@ public class StatisticsFactoryImpl extends EFactoryImpl implements StatisticsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StatisticsFactoryImpl() {
+	private StatisticsFactoryImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case StatisticsPackage.STATISTIC: return createStatistic();
-			case StatisticsPackage.STATISTIC_ENTRY: return createStatisticEntry();
-			case StatisticsPackage.DATE: return createDate();
-			case StatisticsPackage.STATISTICS_GENERATOR: return createStatisticsGenerator();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
 	}
 
 	/**
@@ -87,44 +69,4 @@ public class StatisticsFactoryImpl extends EFactoryImpl implements StatisticsFac
 		StatisticEntryImpl statisticEntry = new StatisticEntryImpl();
 		return statisticEntry;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date createDate() {
-		DateImpl date = new DateImpl();
-		return date;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public StatisticsGenerator createStatisticsGenerator() {
-		return StatisticsGeneratorImpl.INSTANCE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StatisticsPackage getStatisticsPackage() {
-		return (StatisticsPackage)getEPackage();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
-	@Deprecated
-	public static StatisticsPackage getPackage() {
-		return StatisticsPackage.eINSTANCE;
-	}
-
 } //StatisticsFactoryImpl

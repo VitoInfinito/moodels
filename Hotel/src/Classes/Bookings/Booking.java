@@ -2,7 +2,8 @@
  */
 package Classes.Bookings;
 
-import java.util.Date;
+
+import java.time.LocalDateTime;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -13,20 +14,6 @@ import Classes.Stays.CreditCard;
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Booking</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Bookings.Booking#getBookedStays <em>Booked Stays</em>}</li>
- *   <li>{@link Classes.Bookings.Booking#getCustomer <em>Customer</em>}</li>
- *   <li>{@link Classes.Bookings.Booking#getBookingNbr <em>Booking Nbr</em>}</li>
- *   <li>{@link Classes.Bookings.Booking#getNbrGuests <em>Nbr Guests</em>}</li>
- *   <li>{@link Classes.Bookings.Booking#getIssueDate <em>Issue Date</em>}</li>
- *   <li>{@link Classes.Bookings.Booking#getCreditCard <em>Credit Card</em>}</li>
- *   <li>{@link Classes.Bookings.Booking#getRequests <em>Requests</em>}</li>
- * </ul>
- * </p>
- *
  * @see Classes.Bookings.BookingsPackage#getBooking()
  * @model
  * @generated
@@ -140,7 +127,7 @@ public interface Booking extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Date getIssueDate();
+	LocalDateTime getIssueDate();
 
 	/**
 	 * Sets the value of the '{@link Classes.Bookings.Booking#getIssueDate <em>Issue Date</em>}' attribute.
@@ -150,7 +137,7 @@ public interface Booking extends EObject {
 	 * @see #getIssueDate()
 	 * @generated
 	 */
-	void setIssueDate(Date value);
+	void setIssueDate(LocalDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>Credit Card</b></em>' reference.
