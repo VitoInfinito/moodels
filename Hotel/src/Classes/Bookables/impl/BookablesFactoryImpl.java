@@ -2,21 +2,15 @@
  */
 package Classes.Bookables.impl;
 
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import Classes.Bookables.BookablesFactory;
-import Classes.Bookables.BookablesManager;
 import Classes.Bookables.BookablesPackage;
 import Classes.Bookables.ConferenceRoom;
-import Classes.Bookables.ConferenceRoomCategory;
 import Classes.Bookables.HostelBed;
 import Classes.Bookables.HotelRoom;
-import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.RoomLocation;
 
 /**

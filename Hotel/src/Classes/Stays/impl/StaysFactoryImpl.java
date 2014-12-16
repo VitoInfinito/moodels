@@ -2,8 +2,6 @@
  */
 package Classes.Stays.impl;
 
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
@@ -11,7 +9,6 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import Classes.Stays.CreditCard;
 import Classes.Stays.Stay;
 import Classes.Stays.StaysFactory;
-import Classes.Stays.StaysManager;
 import Classes.Stays.StaysPackage;
 
 /**
