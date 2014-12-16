@@ -5,6 +5,8 @@ package Classes.Accounts;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
+import Classes.InvalidIDException;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -64,6 +66,6 @@ public interface IAccountsAccess extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" usernameDataType="org.eclipse.uml2.types.String" usernameRequired="true" usernameOrdered="false" passwordDataType="org.eclipse.uml2.types.String" passwordRequired="true" passwordOrdered="false"
 	 * @generated
 	 */
-	AccountType getAccountType(String username);
+	AccountType getAccountType(String username) throws InvalidIDException;
 
 } // IAccountsAccess
