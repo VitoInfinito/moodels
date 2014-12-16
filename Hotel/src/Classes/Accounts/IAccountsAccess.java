@@ -23,6 +23,13 @@ public interface IAccountsAccess extends EObject {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		username != null && password != null
+	 * Ensures:
+	 * 		if there exists an account acc such that acc.username == username && acc.password == password
+	 * 			true is returned
+	 * 		otherwise
+	 * 			false is returned
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" usernameDataType="org.eclipse.uml2.types.String" usernameRequired="true" usernameOrdered="false" passwordDataType="org.eclipse.uml2.types.String" passwordRequired="true" passwordOrdered="false"
 	 * @generated
@@ -31,6 +38,13 @@ public interface IAccountsAccess extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		username != null && password != null
+	 * Ensures:
+	 * 		if there exists an account acc such that acc.username == username && acc.password == password
+	 * 			true is returned
+	 * 		otherwise
+	 * 			false is returned
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" usernameDataType="org.eclipse.uml2.types.String" usernameRequired="true" usernameOrdered="false" passwordDataType="org.eclipse.uml2.types.String" passwordRequired="true" passwordOrdered="false"
 	 * @generated
@@ -39,6 +53,13 @@ public interface IAccountsAccess extends EObject {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		username != null
+	 * Ensures:
+	 * 		if there exists an account acc such that acc.username == username
+	 * 			the non null accountType of acc is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" usernameDataType="org.eclipse.uml2.types.String" usernameRequired="true" usernameOrdered="false" passwordDataType="org.eclipse.uml2.types.String" passwordRequired="true" passwordOrdered="false"
 	 * @generated

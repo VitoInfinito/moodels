@@ -1,158 +1,57 @@
-/**
- */
 package Classes.Accounts.tests;
 
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import Classes.Accounts.AccountType;
 import Classes.Accounts.IManageAccounts;
 
-import junit.framework.TestCase;
-
-/**
- * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>IManage Accounts</b></em>'.
- * <!-- end-user-doc -->
- * <p>
- * The following operations are tested:
- * <ul>
- *   <li>{@link Classes.Accounts.IManageAccounts#addAccount(java.lang.String, java.lang.String, Classes.Accounts.AccountType) <em>Add Account</em>}</li>
- *   <li>{@link Classes.Accounts.IManageAccounts#deleteAccount(java.lang.String) <em>Delete Account</em>}</li>
- *   <li>{@link Classes.Accounts.IManageAccounts#renameAccount(java.lang.String, java.lang.String) <em>Rename Account</em>}</li>
- *   <li>{@link Classes.Accounts.IManageAccounts#changePassword(java.lang.String, java.lang.String) <em>Change Password</em>}</li>
- *   <li>{@link Classes.Accounts.IManageAccounts#getAccountPassword(java.lang.String) <em>Get Account Password</em>}</li>
- *   <li>{@link Classes.Accounts.IManageAccounts#getAccountName(java.lang.String) <em>Get Account Name</em>}</li>
- *   <li>{@link Classes.Accounts.IManageAccounts#searchAccounts(java.lang.String) <em>Search Accounts</em>}</li>
- * </ul>
- * </p>
- * @generated
- */
-public abstract class IManageAccountsTest extends TestCase {
-
-	/**
-	 * The fixture for this IManage Accounts test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IManageAccounts fixture = null;
-
-	/**
-	 * Constructs a new IManage Accounts test case with the given name.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IManageAccountsTest(String name) {
-		super(name);
+public class IManageAccountsTest {
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
 	}
 
-	/**
-	 * Sets the fixture for this IManage Accounts test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(IManageAccounts fixture) {
-		this.fixture = fixture;
+	@Before
+	public void setUp() throws Exception {
 	}
 
-	/**
-	 * Returns the fixture for this IManage Accounts test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IManageAccounts getFixture() {
-		return fixture;
+	@Test
+	public void testAddAccount() {
+		fail("Not yet implemented");
 	}
 
-	/**
-	 * Tests the '{@link Classes.Accounts.IManageAccounts#addAccount(java.lang.String, java.lang.String, Classes.Accounts.AccountType) <em>Add Account</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.Accounts.IManageAccounts#addAccount(java.lang.String, java.lang.String, Classes.Accounts.AccountType)
-	 * @generated
-	 */
-	public void testAddAccount__String_String_AccountType() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
+	@Test
+	public void testDeleteAccount() {
+		fail("Not yet implemented");
 	}
 
-	/**
-	 * Tests the '{@link Classes.Accounts.IManageAccounts#deleteAccount(java.lang.String) <em>Delete Account</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.Accounts.IManageAccounts#deleteAccount(java.lang.String)
-	 * @generated
-	 */
-	public void testDeleteAccount__String() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
+	@Test
+	public void testRenameAccount() {
+		fail("Not yet implemented");
 	}
 
-	/**
-	 * Tests the '{@link Classes.Accounts.IManageAccounts#renameAccount(java.lang.String, java.lang.String) <em>Rename Account</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.Accounts.IManageAccounts#renameAccount(java.lang.String, java.lang.String)
-	 * @generated
-	 */
-	public void testRenameAccount__String_String() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
+	@Test
+	public void testChangePassword() {
+		fail("Not yet implemented");
 	}
 
-	/**
-	 * Tests the '{@link Classes.Accounts.IManageAccounts#changePassword(java.lang.String, java.lang.String) <em>Change Password</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.Accounts.IManageAccounts#changePassword(java.lang.String, java.lang.String)
-	 * @generated
-	 */
-	public void testChangePassword__String_String() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
+	@Test
+	public void testGetAccountPassword() {
+		fail("Not yet implemented");
 	}
 
-	/**
-	 * Tests the '{@link Classes.Accounts.IManageAccounts#getAccountPassword(java.lang.String) <em>Get Account Password</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.Accounts.IManageAccounts#getAccountPassword(java.lang.String)
-	 * @generated
-	 */
-	public void testGetAccountPassword__String() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
+	@Test
+	public void testGetAccountName() {
+		fail("Not yet implemented");
 	}
 
-	/**
-	 * Tests the '{@link Classes.Accounts.IManageAccounts#getAccountName(java.lang.String) <em>Get Account Name</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.Accounts.IManageAccounts#getAccountName(java.lang.String)
-	 * @generated
-	 */
-	public void testGetAccountName__String() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
+	@Test
+	public void testSearchAccounts() {
+		fail("Not yet implemented");
 	}
 
-	/**
-	 * Tests the '{@link Classes.Accounts.IManageAccounts#searchAccounts(java.lang.String) <em>Search Accounts</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.Accounts.IManageAccounts#searchAccounts(java.lang.String)
-	 * @generated
-	 */
-	public void testSearchAccounts__String() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
-
-} //IManageAccountsTest
+}

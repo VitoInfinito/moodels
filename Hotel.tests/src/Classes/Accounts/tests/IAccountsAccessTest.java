@@ -1,88 +1,99 @@
-/**
- */
 package Classes.Accounts.tests;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import Classes.InvalidIDException;
+import Classes.Accounts.AccountType;
 import Classes.Accounts.IAccountsAccess;
+import Classes.Accounts.IManageAccounts;
 
-import junit.framework.TestCase;
+public class IAccountsAccessTest {
 
-/**
- * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>IAccounts Access</b></em>'.
- * <!-- end-user-doc -->
- * <p>
- * The following operations are tested:
- * <ul>
- *   <li>{@link Classes.Accounts.IAccountsAccess#validateAccount(java.lang.String, java.lang.String) <em>Validate Account</em>}</li>
- *   <li>{@link Classes.Accounts.IAccountsAccess#login(java.lang.String, java.lang.String) <em>Login</em>}</li>
- * </ul>
- * </p>
- * @generated
- */
-public abstract class IAccountsAccessTest extends TestCase {
-
-	/**
-	 * The fixture for this IAccounts Access test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IAccountsAccess fixture = null;
-
-	/**
-	 * Constructs a new IAccounts Access test case with the given name.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IAccountsAccessTest(String name) {
-		super(name);
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		IManageAccounts.INSTANCE.addAccount("Pelle", "s7hhhds", AccountType.GUEST);
+		IManageAccounts.INSTANCE.addAccount("Patrik", "ssdass", AccountType.CUSTOMER_SERVICE);
+		IManageAccounts.INSTANCE.addAccount("Erik", "hfghfghf", AccountType.MANAGER);
+		IManageAccounts.INSTANCE.addAccount("Göran", "hfdbcbv", AccountType.STAFF);
+	}
+	
+	@Before
+	public void setUp() throws Exception {
 	}
 
-	/**
-	 * Sets the fixture for this IAccounts Access test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(IAccountsAccess fixture) {
-		this.fixture = fixture;
+	@Test
+	public void testValidateAccount_username_not_exists() {
+		boolean result = IAccountsAccess.INSTANCE.validateAccount("Arne", "");
+		assertFalse(result);
+	}
+	
+	@Test
+	public void testValidateAccount_username_exists_wrong_password() {
+		boolean result = IAccountsAccess.INSTANCE.validateAccount("Pelle", "s7hh56");
+		assertFalse(result);
+	}
+	
+	@Test
+	public void testValidateAccount_username_exists_correct_password() {
+		boolean result = IAccountsAccess.INSTANCE.validateAccount("Pelle", "s7hhhds");
+		assertTrue(result);
 	}
 
-	/**
-	 * Returns the fixture for this IAccounts Access test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IAccountsAccess getFixture() {
-		return fixture;
+	@Test
+	public void testLogin_username_not_exists() {
+		boolean result = IAccountsAccess.INSTANCE.validateAccount("Pelle", "");
+		assertFalse(result);
+	}
+	
+	@Test
+	public void testLogin_username_exists_wrong_password() {
+		boolean result = IAccountsAccess.INSTANCE.validateAccount("Pelle", "s7hh56");
+		assertFalse(result);
+	}
+	
+	@Test
+	public void testLogin_username_exists_correct_password() {
+		boolean result = IAccountsAccess.INSTANCE.validateAccount("Pelle", "s7hhhds");
+		assertTrue(result);
 	}
 
-	/**
-	 * Tests the '{@link Classes.Accounts.IAccountsAccess#validateAccount(java.lang.String, java.lang.String) <em>Validate Account</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.Accounts.IAccountsAccess#validateAccount(java.lang.String, java.lang.String)
-	 * @generated
-	 */
-	public void testValidateAccount__String_String() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
+	@Test(expected=InvalidIDException.class)
+	public void testGetAccountType_username_not_exists() {
+		IAccountsAccess.INSTANCE.getAccountType("Arne");
 	}
-
-	/**
-	 * Tests the '{@link Classes.Accounts.IAccountsAccess#login(java.lang.String, java.lang.String) <em>Login</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.Accounts.IAccountsAccess#login(java.lang.String, java.lang.String)
-	 * @generated
-	 */
-	public void testLogin__String_String() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
+	
+	@Test
+	public void testGetAccountType_username_exists_nonNull_expected() {
+		AccountType result = IAccountsAccess.INSTANCE.getAccountType("Pelle");
+		assertTrue(result != null);
 	}
-
-} //IAccountsAccessTest
+	
+	@Test
+	public void testGetAccountType_username_exists_Guest_expected() {
+		AccountType result = IAccountsAccess.INSTANCE.getAccountType("Pelle");
+		assertTrue(result == AccountType.GUEST);
+	}
+	
+	@Test
+	public void testGetAccountType_username_exists_CustomerService_expected() {
+		AccountType result = IAccountsAccess.INSTANCE.getAccountType("Patrik");
+		assertTrue(result == AccountType.CUSTOMER_SERVICE);
+	}
+	
+	@Test
+	public void testGetAccountType_username_exists_Manager_expected() {
+		AccountType result = IAccountsAccess.INSTANCE.getAccountType("Erik");
+		assertTrue(result == AccountType.MANAGER);
+	}
+	
+	@Test
+	public void testGetAccountType_username_exists_Staff_expected() {
+		AccountType result = IAccountsAccess.INSTANCE.getAccountType("Göran");
+		assertTrue(result == AccountType.STAFF);
+	}
+}
