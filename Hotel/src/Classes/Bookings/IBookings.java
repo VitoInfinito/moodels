@@ -11,6 +11,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
+import Classes.InsufficientFundsException;
+import Classes.InvalidCreditCardException;
 import Classes.Bookables.ConferenceRoomCategory;
 import Classes.Bookables.HotelRoomCategory;
 
@@ -188,16 +190,16 @@ public interface IBookings extends EObject {
 	 * @model bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false"
 	 * @generated
 	 */
-	void payBookingBills(String bookingID) throws SOAPException;
+	void payBookingBills(String bookingID) throws SOAPException, InvalidCreditCardException, InsufficientFundsException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @throws SOAPException 
+	 * @throws SOAPException, InvalidCreditCardException, InsufficientFundsException 
 	 * @model bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated
 	 */
-	void payStayBills(String bookingID, String stayID) throws SOAPException;
+	void payStayBills(String bookingID, String stayID) throws SOAPException, InvalidCreditCardException, InsufficientFundsException;
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -20,6 +20,8 @@ import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import Classes.InsufficientFundsException;
+import Classes.InvalidCreditCardException;
 import Classes.InvalidIDException;
 import Classes.StringUtils;
 import Classes.Banking.CustomerProvides;
@@ -468,10 +470,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @throws SOAPException 
+	 * @throws SOAPException, InvalidCreditCardException, InsufficientFundsException
 	 * @generated NOT
 	 */
-	public void payBookingBills(String bookingID) throws SOAPException {
+	public void payBookingBills(String bookingID) throws SOAPException, InvalidCreditCardException, InsufficientFundsException {
 		if (bookings.containsKey(bookingID)) {
 			List<String> bills = new ArrayList<String>();
 			Booking booking = bookings.get(bookingID);
@@ -489,10 +491,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @throws SOAPException 
+	 * @throws SOAPException, InvalidCreditCardException, InsufficientFundsException
 	 * @generated NOT
 	 */
-	public void payStayBills(String bookingID, String stayID) throws SOAPException {
+	public void payStayBills(String bookingID, String stayID) throws SOAPException, InvalidCreditCardException, InsufficientFundsException {
 		if (bookings.containsKey(bookingID)) {
 			Booking booking = bookings.get(bookingID);
 			if (!booking.getBookedStays().contains(stayID)) {

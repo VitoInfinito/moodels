@@ -21,6 +21,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
+import Classes.InsufficientFundsException;
 import Classes.InvalidCreditCardException;
 import Classes.InvalidIDException;
 import Classes.Bills.Bill;
@@ -224,10 +225,10 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @throws SOAPException, InvalidCreditCardException
+	 * @throws SOAPException, InvalidCreditCardException, InsufficientFundsException
 	 * @generated NOT
 	 */
-	public void payBillsWithCreditCard(List<String> billss, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException, InvalidCreditCardException {
+	public void payBillsWithCreditCard(List<String> billss, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException, InvalidCreditCardException, InsufficientFundsException {
 		CustomerRequires bank = CustomerRequires.instance();
 		
 		// Validate card
@@ -246,7 +247,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 		// Pay
 		if (!bank.makePayment(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, sum)) {
 			logger.warn("The card passed had insufficient funds to pay the amount {}.", sum);
-			throw new InvalidCreditCardException("Insufficient funds!");
+			throw new InsufficientFundsException("Insufficient funds!");
 		}
 		
 		for (String billID : billss) {

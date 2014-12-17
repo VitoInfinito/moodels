@@ -17,6 +17,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
+import Classes.InsufficientFundsException;
 import Classes.InvalidCreditCardException;
 import Classes.InvalidIDException;
 import Classes.Bills.IBills;
@@ -151,10 +152,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- begin-user-doc -->
 	 * Add a new resposinble credit card to an existing stay
 	 * <!-- end-user-doc -->
-	 * @throws SOAPException 
+	 * @throws SOAPException, InvalidCreditCardException
 	 * @generated NOT
 	 */
-	public void addResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException {
+	public void addResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException, InvalidCreditCardException {
 		if (!stays.contains(stayID)) {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
@@ -181,10 +182,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- begin-user-doc -->
 	 * Change the responsible credit card of an existing stay
 	 * <!-- end-user-doc -->
-	 * @throws SOAPException 
+	 * @throws SOAPException, InvalidCreditCardException
 	 * @generated NOT
 	 */
-	public void changeResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException {
+	public void changeResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException, InvalidCreditCardException {
 		if (!stays.contains(stayID)) {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
@@ -364,10 +365,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @throws SOAPException 
+	 * @throws SOAPException, InvalidCreditCardException, InsufficientFundsException
 	 * @generated NOT
 	 */
-	public void billCreditCardWithAllUnpaidBillsOfHotelStay(String stayID) throws SOAPException {
+	public void billCreditCardWithAllUnpaidBillsOfHotelStay(String stayID) throws SOAPException, InvalidCreditCardException, InsufficientFundsException {
 		if (stays.contains(stayID)) {
 			CreditCard creditCard = stays.get(stayID).getCreditCard();
 			if (creditCard != null) {
