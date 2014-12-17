@@ -5,6 +5,7 @@ package Classes.Restaurants;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -123,5 +124,7 @@ public interface Reservation extends EObject {
 	void addTable(RestaurantTable restaurantTable);
 
 	void changeTables(List<RestaurantTable> tables);
+	
+	EList<RestaurantTable> getTables();
 
 } // Reservation

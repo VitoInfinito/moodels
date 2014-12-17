@@ -27,7 +27,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	private final Logger logger = LoggerFactory.getLogger(ReservationImpl.class);
 	private String id;
 	private String reservedBy;
-	private EList<RestaurantTable> restaurantTable;
+	private EList<RestaurantTable> restaurantTables;
 	private LocalDateTime from;
 	private LocalDateTime to;
 
@@ -38,7 +38,11 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 */
 	protected ReservationImpl() {
 		super();
-		restaurantTable = new EObjectResolvingEList<RestaurantTable>(RestaurantTable.class, this, RestaurantsPackage.RESERVATION__RESTAURANT_TABLE);
+		restaurantTables = new EObjectResolvingEList<RestaurantTable>(RestaurantTable.class, this, RestaurantsPackage.RESERVATION__RESTAURANT_TABLE);
+	}
+	
+	public EList<RestaurantTable> getTables() {
+		return restaurantTables;
 	}
 
 	/**
@@ -149,8 +153,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 
 	@Override
 	public void addTable(RestaurantTable table) {
-		if (!restaurantTable.contains(table)) {
-			restaurantTable.add(table);
+		if (!restaurantTables.contains(table)) {
+			restaurantTables.add(table);
 		} else {
 			logger.warn("The table {} is already added to the reservation.", table);
 			throw new IllegalArgumentException();
@@ -159,8 +163,8 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 
 	@Override
 	public void changeTables(List<RestaurantTable> tables) {
-		restaurantTable.clear();
-		restaurantTable.addAll(tables);
+		restaurantTables.clear();
+		restaurantTables.addAll(tables);
 	}
 
 } //ReservationImpl

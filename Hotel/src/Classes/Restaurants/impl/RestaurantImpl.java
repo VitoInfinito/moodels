@@ -2,7 +2,9 @@
  */
 package Classes.Restaurants.impl;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -199,11 +201,11 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	@Override
 	public List<String> getAvailableTables(LocalDateTime to, LocalDateTime from) {
 		List<String> available = new ArrayList<String>();
-		List<String> notAvailable = new ArrayList<String>();
+		Set<String> notAvailable = new LinkedHashSet<String>();
 		for(Reservation reservation : reservations.values()) {
-			if((reservation.getFrom().compareTo(from) >= 0 && reservation.getFrom().compareTo(to) <= 0)
-					|| (reservation.getTo().compareTo(from) >= 0 && reservation.getTo().compareTo(to) <= 0)) {
-				for(RestaurantTable table : restaurantTables.values()) {
+			if((reservation.getFrom().isAfter(from) && reservation.getFrom().isBefore(to))
+					|| (reservation.getTo().isAfter(from) && reservation.getTo().isBefore(to))) {
+				for(RestaurantTable table : reservation.getTables()) {
 					if(!notAvailable.contains(table.getTableNumber())) {
 						notAvailable.add(table.getTableNumber());
 					}
