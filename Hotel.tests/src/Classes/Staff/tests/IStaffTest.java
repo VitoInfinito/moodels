@@ -14,7 +14,7 @@ import junit.framework.TestCase;
  * The following operations are tested:
  * <ul>
  *   <li>{@link Classes.Staff.IStaff#getAllStaff() <em>Get All Staff</em>}</li>
- *   <li>{@link Classes.Staff.IStaff#searchStaff() <em>Search Staff</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#searchStaff(java.lang.String) <em>Search Staff</em>}</li>
  *   <li>{@link Classes.Staff.IStaff#getStaffFirstName(java.lang.String) <em>Get Staff First Name</em>}</li>
  *   <li>{@link Classes.Staff.IStaff#getStaffLastName(java.lang.String) <em>Get Staff Last Name</em>}</li>
  *   <li>{@link Classes.Staff.IStaff#getStaffJob(java.lang.String) <em>Get Staff Job</em>}</li>
@@ -26,8 +26,9 @@ import junit.framework.TestCase;
  *   <li>{@link Classes.Staff.IStaff#changeStaffLastName(java.lang.String, java.lang.String) <em>Change Staff Last Name</em>}</li>
  *   <li>{@link Classes.Staff.IStaff#changeStaffJob(java.lang.String, java.lang.String) <em>Change Staff Job</em>}</li>
  *   <li>{@link Classes.Staff.IStaff#changeStaffPhone(java.lang.String, java.lang.String) <em>Change Staff Phone</em>}</li>
- *   <li>{@link Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, java.lang.String) <em>Change Staff Salary Contract</em>}</li>
- *   <li>{@link Classes.Staff.IStaff#scheduleStaff() <em>Schedule Staff</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, Classes.Staff.SalaryContract) <em>Change Staff Salary Contract</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#scheduleStaff(java.util.Date, java.util.Date) <em>Schedule Staff</em>}</li>
+ *   <li>{@link Classes.Staff.IStaff#addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double) <em>Add Employee</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -86,13 +87,13 @@ public abstract class IStaffTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Staff.IStaff#searchStaff() <em>Search Staff</em>}' operation.
+	 * Tests the '{@link Classes.Staff.IStaff#searchStaff(java.lang.String) <em>Search Staff</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Staff.IStaff#searchStaff()
+	 * @see Classes.Staff.IStaff#searchStaff(java.lang.String)
 	 * @generated
 	 */
-	public void testSearchStaff() {
+	public void testSearchStaff__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -242,26 +243,39 @@ public abstract class IStaffTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, java.lang.String) <em>Change Staff Salary Contract</em>}' operation.
+	 * Tests the '{@link Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, Classes.Staff.SalaryContract) <em>Change Staff Salary Contract</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, java.lang.String)
+	 * @see Classes.Staff.IStaff#changeStaffSalaryContract(java.lang.String, Classes.Staff.SalaryContract)
 	 * @generated
 	 */
-	public void testChangeStaffSalaryContract__String_String() {
+	public void testChangeStaffSalaryContract__String_SalaryContract() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Staff.IStaff#scheduleStaff() <em>Schedule Staff</em>}' operation.
+	 * Tests the '{@link Classes.Staff.IStaff#scheduleStaff(java.util.Date, java.util.Date) <em>Schedule Staff</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Staff.IStaff#scheduleStaff()
+	 * @see Classes.Staff.IStaff#scheduleStaff(java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	public void testScheduleStaff() {
+	public void testScheduleStaff__Date_Date() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link Classes.Staff.IStaff#addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double) <em>Add Employee</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.Staff.IStaff#addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double)
+	 * @generated
+	 */
+	public void testAddEmployee__String_String_String_String_String_String_String_double() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

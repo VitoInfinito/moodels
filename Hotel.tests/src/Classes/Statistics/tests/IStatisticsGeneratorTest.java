@@ -13,9 +13,9 @@ import junit.framework.TestCase;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link Classes.Statistics.IStatisticsGenerator#getOccupancyStatistics() <em>Get Occupancy Statistics</em>}</li>
- *   <li>{@link Classes.Statistics.IStatisticsGenerator#getRevenueStatistics() <em>Get Revenue Statistics</em>}</li>
- *   <li>{@link Classes.Statistics.IStatisticsGenerator#getProfitStatistics() <em>Get Profit Statistics</em>}</li>
+ *   <li>{@link Classes.Statistics.IStatisticsGenerator#getOccupancyStatistics(java.util.Date, java.util.Date) <em>Get Occupancy Statistics</em>}</li>
+ *   <li>{@link Classes.Statistics.IStatisticsGenerator#getRevenueStatistics(java.util.Date, java.util.Date) <em>Get Revenue Statistics</em>}</li>
+ *   <li>{@link Classes.Statistics.IStatisticsGenerator#getProfitStatistics(java.util.Date, java.util.Date) <em>Get Profit Statistics</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -61,39 +61,39 @@ public abstract class IStatisticsGeneratorTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Statistics.IStatisticsGenerator#getOccupancyStatistics() <em>Get Occupancy Statistics</em>}' operation.
+	 * Tests the '{@link Classes.Statistics.IStatisticsGenerator#getOccupancyStatistics(java.util.Date, java.util.Date) <em>Get Occupancy Statistics</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Statistics.IStatisticsGenerator#getOccupancyStatistics()
+	 * @see Classes.Statistics.IStatisticsGenerator#getOccupancyStatistics(java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	public void testGetOccupancyStatistics() {
+	public void testGetOccupancyStatistics__Date_Date() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Statistics.IStatisticsGenerator#getRevenueStatistics() <em>Get Revenue Statistics</em>}' operation.
+	 * Tests the '{@link Classes.Statistics.IStatisticsGenerator#getRevenueStatistics(java.util.Date, java.util.Date) <em>Get Revenue Statistics</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Statistics.IStatisticsGenerator#getRevenueStatistics()
+	 * @see Classes.Statistics.IStatisticsGenerator#getRevenueStatistics(java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	public void testGetRevenueStatistics() {
+	public void testGetRevenueStatistics__Date_Date() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Statistics.IStatisticsGenerator#getProfitStatistics() <em>Get Profit Statistics</em>}' operation.
+	 * Tests the '{@link Classes.Statistics.IStatisticsGenerator#getProfitStatistics(java.util.Date, java.util.Date) <em>Get Profit Statistics</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Statistics.IStatisticsGenerator#getProfitStatistics()
+	 * @see Classes.Statistics.IStatisticsGenerator#getProfitStatistics(java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	public void testGetProfitStatistics() {
+	public void testGetProfitStatistics__Date_Date() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

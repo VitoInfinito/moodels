@@ -13,21 +13,24 @@ import junit.framework.TestCase;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getReservationId() <em>Get Reservation Id</em>}</li>
- *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getAllReservationIds() <em>Get All Reservation Ids</em>}</li>
- *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getEmptyTables() <em>Get Empty Tables</em>}</li>
- *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getEmptySeats() <em>Get Empty Seats</em>}</li>
- *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getEmptyTablesWithNbrOfSeats() <em>Get Empty Tables With Nbr Of Seats</em>}</li>
- *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getReservationIdByGuestName() <em>Get Reservation Id By Guest Name</em>}</li>
- *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getMenuInformation() <em>Get Menu Information</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getRestaurantReservations(java.lang.String) <em>Get Restaurant Reservations</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getRestaurantTables(java.lang.String) <em>Get Restaurant Tables</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getRestaurantTableNumberOfSeats(java.lang.String, java.lang.String) <em>Get Restaurant Table Number Of Seats</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getAvailableTables(java.util.Date, java.util.Date, java.lang.String) <em>Get Available Tables</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getReservationGuest(java.lang.String, java.lang.String) <em>Get Reservation Guest</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getRestaurantMenuName(java.lang.String) <em>Get Restaurant Menu Name</em>}</li>
  *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getAllRestaurantNames() <em>Get All Restaurant Names</em>}</li>
- *   <li>{@link Classes.Restaurants.IRestaurantsAccess#searchRestaurants() <em>Search Restaurants</em>}</li>
- *   <li>{@link Classes.Restaurants.IRestaurantsAccess#searchRestaurantReservations() <em>Search Restaurant Reservations</em>}</li>
- *   <li>{@link Classes.Restaurants.IRestaurantsAccess#searchRestaurantTables() <em>Search Restaurant Tables</em>}</li>
- *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getMenuName() <em>Get Menu Name</em>}</li>
- *   <li>{@link Classes.Restaurants.IRestaurantsAccess#makeReservation() <em>Make Reservation</em>}</li>
- *   <li>{@link Classes.Restaurants.IRestaurantsAccess#removeReservation() <em>Remove Reservation</em>}</li>
- *   <li>{@link Classes.Restaurants.IRestaurantsAccess#changeReservationTables() <em>Change Reservation Tables</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#searchRestaurants(java.lang.String) <em>Search Restaurants</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#searchRestaurantReservations(java.lang.String, java.lang.String) <em>Search Restaurant Reservations</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#searchRestaurantTables(java.lang.String, java.lang.String) <em>Search Restaurant Tables</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#makeReservation(java.lang.String, org.eclipse.emf.common.util.EList, java.lang.String, java.util.Date, java.util.Date) <em>Make Reservation</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#cancelReservation(java.lang.String, java.lang.String) <em>Cancel Reservation</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#changeReservedTables(java.lang.String, java.lang.String, org.eclipse.emf.common.util.EList) <em>Change Reserved Tables</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getAvailableTablesByNbrGuests(java.lang.String, java.util.Date, java.util.Date, int) <em>Get Available Tables By Nbr Guests</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getRestaurantMenuItems(java.lang.String) <em>Get Restaurant Menu Items</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getReservationFromTime(java.lang.String, java.lang.String) <em>Get Reservation From Time</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#getReservationToTime(java.lang.String, java.lang.String) <em>Get Reservation To Time</em>}</li>
+ *   <li>{@link Classes.Restaurants.IRestaurantsAccess#searchRestaurantReservationsWithTime(java.lang.String, java.lang.String, java.util.Date, java.util.Date) <em>Search Restaurant Reservations With Time</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -73,91 +76,78 @@ public abstract class IRestaurantsAccessTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getReservationId() <em>Get Reservation Id</em>}' operation.
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getRestaurantReservations(java.lang.String) <em>Get Restaurant Reservations</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Restaurants.IRestaurantsAccess#getReservationId()
+	 * @see Classes.Restaurants.IRestaurantsAccess#getRestaurantReservations(java.lang.String)
 	 * @generated
 	 */
-	public void testGetReservationId() {
+	public void testGetRestaurantReservations__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getAllReservationIds() <em>Get All Reservation Ids</em>}' operation.
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getRestaurantTables(java.lang.String) <em>Get Restaurant Tables</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Restaurants.IRestaurantsAccess#getAllReservationIds()
+	 * @see Classes.Restaurants.IRestaurantsAccess#getRestaurantTables(java.lang.String)
 	 * @generated
 	 */
-	public void testGetAllReservationIds() {
+	public void testGetRestaurantTables__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getEmptyTables() <em>Get Empty Tables</em>}' operation.
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getRestaurantTableNumberOfSeats(java.lang.String, java.lang.String) <em>Get Restaurant Table Number Of Seats</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Restaurants.IRestaurantsAccess#getEmptyTables()
+	 * @see Classes.Restaurants.IRestaurantsAccess#getRestaurantTableNumberOfSeats(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testGetEmptyTables() {
+	public void testGetRestaurantTableNumberOfSeats__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getEmptySeats() <em>Get Empty Seats</em>}' operation.
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getAvailableTables(java.util.Date, java.util.Date, java.lang.String) <em>Get Available Tables</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Restaurants.IRestaurantsAccess#getEmptySeats()
+	 * @see Classes.Restaurants.IRestaurantsAccess#getAvailableTables(java.util.Date, java.util.Date, java.lang.String)
 	 * @generated
 	 */
-	public void testGetEmptySeats() {
+	public void testGetAvailableTables__Date_Date_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getEmptyTablesWithNbrOfSeats() <em>Get Empty Tables With Nbr Of Seats</em>}' operation.
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getReservationGuest(java.lang.String, java.lang.String) <em>Get Reservation Guest</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Restaurants.IRestaurantsAccess#getEmptyTablesWithNbrOfSeats()
+	 * @see Classes.Restaurants.IRestaurantsAccess#getReservationGuest(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testGetEmptyTablesWithNbrOfSeats() {
+	public void testGetReservationGuest__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getReservationIdByGuestName() <em>Get Reservation Id By Guest Name</em>}' operation.
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getRestaurantMenuName(java.lang.String) <em>Get Restaurant Menu Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Restaurants.IRestaurantsAccess#getReservationIdByGuestName()
+	 * @see Classes.Restaurants.IRestaurantsAccess#getRestaurantMenuName(java.lang.String)
 	 * @generated
 	 */
-	public void testGetReservationIdByGuestName() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
-
-	/**
-	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getMenuInformation() <em>Get Menu Information</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.Restaurants.IRestaurantsAccess#getMenuInformation()
-	 * @generated
-	 */
-	public void testGetMenuInformation() {
+	public void testGetRestaurantMenuName__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -177,91 +167,143 @@ public abstract class IRestaurantsAccessTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#searchRestaurants() <em>Search Restaurants</em>}' operation.
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#searchRestaurants(java.lang.String) <em>Search Restaurants</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Restaurants.IRestaurantsAccess#searchRestaurants()
+	 * @see Classes.Restaurants.IRestaurantsAccess#searchRestaurants(java.lang.String)
 	 * @generated
 	 */
-	public void testSearchRestaurants() {
+	public void testSearchRestaurants__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#searchRestaurantReservations() <em>Search Restaurant Reservations</em>}' operation.
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#searchRestaurantReservations(java.lang.String, java.lang.String) <em>Search Restaurant Reservations</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Restaurants.IRestaurantsAccess#searchRestaurantReservations()
+	 * @see Classes.Restaurants.IRestaurantsAccess#searchRestaurantReservations(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testSearchRestaurantReservations() {
+	public void testSearchRestaurantReservations__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#searchRestaurantTables() <em>Search Restaurant Tables</em>}' operation.
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#searchRestaurantTables(java.lang.String, java.lang.String) <em>Search Restaurant Tables</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Restaurants.IRestaurantsAccess#searchRestaurantTables()
+	 * @see Classes.Restaurants.IRestaurantsAccess#searchRestaurantTables(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testSearchRestaurantTables() {
+	public void testSearchRestaurantTables__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getMenuName() <em>Get Menu Name</em>}' operation.
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#makeReservation(java.lang.String, org.eclipse.emf.common.util.EList, java.lang.String, java.util.Date, java.util.Date) <em>Make Reservation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Restaurants.IRestaurantsAccess#getMenuName()
+	 * @see Classes.Restaurants.IRestaurantsAccess#makeReservation(java.lang.String, org.eclipse.emf.common.util.EList, java.lang.String, java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	public void testGetMenuName() {
+	public void testMakeReservation__String_EList_String_Date_Date() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#makeReservation() <em>Make Reservation</em>}' operation.
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#cancelReservation(java.lang.String, java.lang.String) <em>Cancel Reservation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Restaurants.IRestaurantsAccess#makeReservation()
+	 * @see Classes.Restaurants.IRestaurantsAccess#cancelReservation(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testMakeReservation() {
+	public void testCancelReservation__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#removeReservation() <em>Remove Reservation</em>}' operation.
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#changeReservedTables(java.lang.String, java.lang.String, org.eclipse.emf.common.util.EList) <em>Change Reserved Tables</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Restaurants.IRestaurantsAccess#removeReservation()
+	 * @see Classes.Restaurants.IRestaurantsAccess#changeReservedTables(java.lang.String, java.lang.String, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	public void testRemoveReservation() {
+	public void testChangeReservedTables__String_String_EList() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#changeReservationTables() <em>Change Reservation Tables</em>}' operation.
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getAvailableTablesByNbrGuests(java.lang.String, java.util.Date, java.util.Date, int) <em>Get Available Tables By Nbr Guests</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Restaurants.IRestaurantsAccess#changeReservationTables()
+	 * @see Classes.Restaurants.IRestaurantsAccess#getAvailableTablesByNbrGuests(java.lang.String, java.util.Date, java.util.Date, int)
 	 * @generated
 	 */
-	public void testChangeReservationTables() {
+	public void testGetAvailableTablesByNbrGuests__String_Date_Date_int() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getRestaurantMenuItems(java.lang.String) <em>Get Restaurant Menu Items</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.Restaurants.IRestaurantsAccess#getRestaurantMenuItems(java.lang.String)
+	 * @generated
+	 */
+	public void testGetRestaurantMenuItems__String() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getReservationFromTime(java.lang.String, java.lang.String) <em>Get Reservation From Time</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.Restaurants.IRestaurantsAccess#getReservationFromTime(java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	public void testGetReservationFromTime__String_String() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#getReservationToTime(java.lang.String, java.lang.String) <em>Get Reservation To Time</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.Restaurants.IRestaurantsAccess#getReservationToTime(java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	public void testGetReservationToTime__String_String() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link Classes.Restaurants.IRestaurantsAccess#searchRestaurantReservationsWithTime(java.lang.String, java.lang.String, java.util.Date, java.util.Date) <em>Search Restaurant Reservations With Time</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.Restaurants.IRestaurantsAccess#searchRestaurantReservationsWithTime(java.lang.String, java.lang.String, java.util.Date, java.util.Date)
+	 * @generated
+	 */
+	public void testSearchRestaurantReservationsWithTime__String_String_Date_Date() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

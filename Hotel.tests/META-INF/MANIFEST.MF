@@ -8,7 +8,6 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: Classes.Accounts.tests,
- Classes.Banking.tests,
  Classes.Bills.tests,
  Classes.Bookables.tests,
  Classes.Bookings.tests,
@@ -21,8 +20,7 @@ Export-Package: Classes.Accounts.tests,
  Classes.Services.tests,
  Classes.Staff.tests,
  Classes.Statistics.tests,
- Classes.Stays.tests,
- org.eclipse.uml2.types.tests
+ Classes.Stays.tests
 Require-Bundle: org.eclipse.core.runtime,
  Hotel;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,

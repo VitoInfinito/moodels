@@ -13,8 +13,8 @@ import junit.framework.TestCase;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link Classes.Guests.IGuests#getAllGuests() <em>Get All Guests</em>}</li>
- *   <li>{@link Classes.Guests.IGuests#addGuest() <em>Add Guest</em>}</li>
+ *   <li>{@link Classes.Guests.IGuests#getAllGuestIDs() <em>Get All Guest IDs</em>}</li>
+ *   <li>{@link Classes.Guests.IGuests#addGuest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Add Guest</em>}</li>
  *   <li>{@link Classes.Guests.IGuests#changeGuestFirstName(java.lang.String, java.lang.String) <em>Change Guest First Name</em>}</li>
  *   <li>{@link Classes.Guests.IGuests#changeGuestLastName(java.lang.String, java.lang.String) <em>Change Guest Last Name</em>}</li>
  *   <li>{@link Classes.Guests.IGuests#changeGuestTitle(java.lang.String, java.lang.String) <em>Change Guest Title</em>}</li>
@@ -25,16 +25,16 @@ import junit.framework.TestCase;
  *   <li>{@link Classes.Guests.IGuests#getGuestTitle(java.lang.String) <em>Get Guest Title</em>}</li>
  *   <li>{@link Classes.Guests.IGuests#getGuestEmail(java.lang.String) <em>Get Guest Email</em>}</li>
  *   <li>{@link Classes.Guests.IGuests#getGuestPhone(java.lang.String) <em>Get Guest Phone</em>}</li>
- *   <li>{@link Classes.Guests.IGuests#searchGuests() <em>Search Guests</em>}</li>
+ *   <li>{@link Classes.Guests.IGuests#searchGuests(java.lang.String) <em>Search Guests</em>}</li>
  *   <li>{@link Classes.Guests.IGuests#getGuestStays(java.lang.String) <em>Get Guest Stays</em>}</li>
  *   <li>{@link Classes.Guests.IGuests#getGuestRequests(java.lang.String) <em>Get Guest Requests</em>}</li>
- *   <li>{@link Classes.Guests.IGuests#removeGuestStay() <em>Remove Guest Stay</em>}</li>
- *   <li>{@link Classes.Guests.IGuests#addGuestRequest() <em>Add Guest Request</em>}</li>
- *   <li>{@link Classes.Guests.IGuests#removeGuestRequest() <em>Remove Guest Request</em>}</li>
+ *   <li>{@link Classes.Guests.IGuests#removeGuestStay(java.lang.String, java.lang.String) <em>Remove Guest Stay</em>}</li>
+ *   <li>{@link Classes.Guests.IGuests#addGuestRequest(java.lang.String, java.lang.String, java.lang.String) <em>Add Guest Request</em>}</li>
+ *   <li>{@link Classes.Guests.IGuests#removeGuestRequest(java.lang.String, java.lang.String) <em>Remove Guest Request</em>}</li>
  *   <li>{@link Classes.Guests.IGuests#getGuestAccountUsername(java.lang.String) <em>Get Guest Account Username</em>}</li>
  *   <li>{@link Classes.Guests.IGuests#getGuestAccountPassword(java.lang.String) <em>Get Guest Account Password</em>}</li>
- *   <li>{@link Classes.Guests.IGuests#generateGuestAccount() <em>Generate Guest Account</em>}</li>
- *   <li>{@link Classes.Guests.IGuests#removeGuestAccount() <em>Remove Guest Account</em>}</li>
+ *   <li>{@link Classes.Guests.IGuests#generateGuestAccount(java.lang.String) <em>Generate Guest Account</em>}</li>
+ *   <li>{@link Classes.Guests.IGuests#removeGuestAccount(java.lang.String) <em>Remove Guest Account</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -80,26 +80,26 @@ public abstract class IGuestsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Guests.IGuests#getAllGuests() <em>Get All Guests</em>}' operation.
+	 * Tests the '{@link Classes.Guests.IGuests#getAllGuestIDs() <em>Get All Guest IDs</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Guests.IGuests#getAllGuests()
+	 * @see Classes.Guests.IGuests#getAllGuestIDs()
 	 * @generated
 	 */
-	public void testGetAllGuests() {
+	public void testGetAllGuestIDs() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Guests.IGuests#addGuest() <em>Add Guest</em>}' operation.
+	 * Tests the '{@link Classes.Guests.IGuests#addGuest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Add Guest</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Guests.IGuests#addGuest()
+	 * @see Classes.Guests.IGuests#addGuest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testAddGuest() {
+	public void testAddGuest__String_String_String_String_String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -236,13 +236,13 @@ public abstract class IGuestsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Guests.IGuests#searchGuests() <em>Search Guests</em>}' operation.
+	 * Tests the '{@link Classes.Guests.IGuests#searchGuests(java.lang.String) <em>Search Guests</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Guests.IGuests#searchGuests()
+	 * @see Classes.Guests.IGuests#searchGuests(java.lang.String)
 	 * @generated
 	 */
-	public void testSearchGuests() {
+	public void testSearchGuests__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -275,39 +275,39 @@ public abstract class IGuestsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Guests.IGuests#removeGuestStay() <em>Remove Guest Stay</em>}' operation.
+	 * Tests the '{@link Classes.Guests.IGuests#removeGuestStay(java.lang.String, java.lang.String) <em>Remove Guest Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Guests.IGuests#removeGuestStay()
+	 * @see Classes.Guests.IGuests#removeGuestStay(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testRemoveGuestStay() {
+	public void testRemoveGuestStay__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Guests.IGuests#addGuestRequest() <em>Add Guest Request</em>}' operation.
+	 * Tests the '{@link Classes.Guests.IGuests#addGuestRequest(java.lang.String, java.lang.String, java.lang.String) <em>Add Guest Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Guests.IGuests#addGuestRequest()
+	 * @see Classes.Guests.IGuests#addGuestRequest(java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testAddGuestRequest() {
+	public void testAddGuestRequest__String_String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Guests.IGuests#removeGuestRequest() <em>Remove Guest Request</em>}' operation.
+	 * Tests the '{@link Classes.Guests.IGuests#removeGuestRequest(java.lang.String, java.lang.String) <em>Remove Guest Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Guests.IGuests#removeGuestRequest()
+	 * @see Classes.Guests.IGuests#removeGuestRequest(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testRemoveGuestRequest() {
+	public void testRemoveGuestRequest__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -340,26 +340,26 @@ public abstract class IGuestsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Guests.IGuests#generateGuestAccount() <em>Generate Guest Account</em>}' operation.
+	 * Tests the '{@link Classes.Guests.IGuests#generateGuestAccount(java.lang.String) <em>Generate Guest Account</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Guests.IGuests#generateGuestAccount()
+	 * @see Classes.Guests.IGuests#generateGuestAccount(java.lang.String)
 	 * @generated
 	 */
-	public void testGenerateGuestAccount() {
+	public void testGenerateGuestAccount__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Guests.IGuests#removeGuestAccount() <em>Remove Guest Account</em>}' operation.
+	 * Tests the '{@link Classes.Guests.IGuests#removeGuestAccount(java.lang.String) <em>Remove Guest Account</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Guests.IGuests#removeGuestAccount()
+	 * @see Classes.Guests.IGuests#removeGuestAccount(java.lang.String)
 	 * @generated
 	 */
-	public void testRemoveGuestAccount() {
+	public void testRemoveGuestAccount__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

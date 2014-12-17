@@ -20,8 +20,8 @@ import junit.framework.TestCase;
  *   <li>{@link Classes.Feedback.IFeedback#setFeedbackDescription(java.lang.String, java.lang.String) <em>Set Feedback Description</em>}</li>
  *   <li>{@link Classes.Feedback.IFeedback#setFeedbackIsResolved(java.lang.String, boolean) <em>Set Feedback Is Resolved</em>}</li>
  *   <li>{@link Classes.Feedback.IFeedback#setFeedbackIsNoted(java.lang.String, boolean) <em>Set Feedback Is Noted</em>}</li>
- *   <li>{@link Classes.Feedback.IFeedback#searchFeedback() <em>Search Feedback</em>}</li>
- *   <li>{@link Classes.Feedback.IFeedback#addFeedback(java.lang.String, java.lang.String) <em>Add Feedback</em>}</li>
+ *   <li>{@link Classes.Feedback.IFeedback#searchFeedback(java.lang.String) <em>Search Feedback</em>}</li>
+ *   <li>{@link Classes.Feedback.IFeedback#addFeedback(java.lang.String) <em>Add Feedback</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -158,26 +158,26 @@ public abstract class IFeedbackTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Feedback.IFeedback#searchFeedback() <em>Search Feedback</em>}' operation.
+	 * Tests the '{@link Classes.Feedback.IFeedback#searchFeedback(java.lang.String) <em>Search Feedback</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Feedback.IFeedback#searchFeedback()
+	 * @see Classes.Feedback.IFeedback#searchFeedback(java.lang.String)
 	 * @generated
 	 */
-	public void testSearchFeedback() {
+	public void testSearchFeedback__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Feedback.IFeedback#addFeedback(java.lang.String, java.lang.String) <em>Add Feedback</em>}' operation.
+	 * Tests the '{@link Classes.Feedback.IFeedback#addFeedback(java.lang.String) <em>Add Feedback</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Feedback.IFeedback#addFeedback(java.lang.String, java.lang.String)
+	 * @see Classes.Feedback.IFeedback#addFeedback(java.lang.String)
 	 * @generated
 	 */
-	public void testAddFeedback__String_String() {
+	public void testAddFeedback__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

@@ -14,24 +14,24 @@ import junit.framework.TestCase;
  * The following operations are tested:
  * <ul>
  *   <li>{@link Classes.Customers.ICustomers#getAllCustomers() <em>Get All Customers</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#addCustomer() <em>Add Customer</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#changeCustomerFirstName() <em>Change Customer First Name</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#changeCustomerLastName() <em>Change Customer Last Name</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#changeCustomerTitle() <em>Change Customer Title</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#changeCustomerEmail() <em>Change Customer Email</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#changeCustomerPhone() <em>Change Customer Phone</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#getCustomerFirstName() <em>Get Customer First Name</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#getCustomerLastName() <em>Get Customer Last Name</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#getCustomerTitle() <em>Get Customer Title</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#getCustomerEmail() <em>Get Customer Email</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#getCustomerPhone() <em>Get Customer Phone</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#searchCustomers() <em>Search Customers</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#getCustomerBookings() <em>Get Customer Bookings</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#getCustomerRequests() <em>Get Customer Requests</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#addCustomerBooking() <em>Add Customer Booking</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#removeCustomerBooking() <em>Remove Customer Booking</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#addCustomerRequest() <em>Add Customer Request</em>}</li>
- *   <li>{@link Classes.Customers.ICustomers#removeCustomerRequest() <em>Remove Customer Request</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Add Customer</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#changeCustomerFirstName(java.lang.String, java.lang.String) <em>Change Customer First Name</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#changeCustomerLastName(java.lang.String, java.lang.String) <em>Change Customer Last Name</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#changeCustomerTitle(java.lang.String, java.lang.String) <em>Change Customer Title</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#changeCustomerEmail(java.lang.String, java.lang.String) <em>Change Customer Email</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#changeCustomerPhone(java.lang.String, java.lang.String) <em>Change Customer Phone</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#getCustomerFirstName(java.lang.String) <em>Get Customer First Name</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#getCustomerLastName(java.lang.String) <em>Get Customer Last Name</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#getCustomerTitle(java.lang.String) <em>Get Customer Title</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#getCustomerEmail(java.lang.String) <em>Get Customer Email</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#getCustomerPhone(java.lang.String) <em>Get Customer Phone</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#searchCustomers(java.lang.String) <em>Search Customers</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#getCustomerBookings(java.lang.String) <em>Get Customer Bookings</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#getCustomerRequests(java.lang.String) <em>Get Customer Requests</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#addCustomerBooking(java.lang.String, java.lang.String) <em>Add Customer Booking</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#removeCustomerBooking(java.lang.String, java.lang.String) <em>Remove Customer Booking</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#addCustomerRequest(java.lang.String, java.lang.String) <em>Add Customer Request</em>}</li>
+ *   <li>{@link Classes.Customers.ICustomers#removeCustomerRequest(java.lang.String, java.lang.String) <em>Remove Customer Request</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -90,234 +90,234 @@ public abstract class ICustomersTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#addCustomer() <em>Add Customer</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Add Customer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#addCustomer()
+	 * @see Classes.Customers.ICustomers#addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testAddCustomer() {
+	public void testAddCustomer__String_String_String_String_String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#changeCustomerFirstName() <em>Change Customer First Name</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#changeCustomerFirstName(java.lang.String, java.lang.String) <em>Change Customer First Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#changeCustomerFirstName()
+	 * @see Classes.Customers.ICustomers#changeCustomerFirstName(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testChangeCustomerFirstName() {
+	public void testChangeCustomerFirstName__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#changeCustomerLastName() <em>Change Customer Last Name</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#changeCustomerLastName(java.lang.String, java.lang.String) <em>Change Customer Last Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#changeCustomerLastName()
+	 * @see Classes.Customers.ICustomers#changeCustomerLastName(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testChangeCustomerLastName() {
+	public void testChangeCustomerLastName__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#changeCustomerTitle() <em>Change Customer Title</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#changeCustomerTitle(java.lang.String, java.lang.String) <em>Change Customer Title</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#changeCustomerTitle()
+	 * @see Classes.Customers.ICustomers#changeCustomerTitle(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testChangeCustomerTitle() {
+	public void testChangeCustomerTitle__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#changeCustomerEmail() <em>Change Customer Email</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#changeCustomerEmail(java.lang.String, java.lang.String) <em>Change Customer Email</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#changeCustomerEmail()
+	 * @see Classes.Customers.ICustomers#changeCustomerEmail(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testChangeCustomerEmail() {
+	public void testChangeCustomerEmail__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#changeCustomerPhone() <em>Change Customer Phone</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#changeCustomerPhone(java.lang.String, java.lang.String) <em>Change Customer Phone</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#changeCustomerPhone()
+	 * @see Classes.Customers.ICustomers#changeCustomerPhone(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testChangeCustomerPhone() {
+	public void testChangeCustomerPhone__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#getCustomerFirstName() <em>Get Customer First Name</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#getCustomerFirstName(java.lang.String) <em>Get Customer First Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#getCustomerFirstName()
+	 * @see Classes.Customers.ICustomers#getCustomerFirstName(java.lang.String)
 	 * @generated
 	 */
-	public void testGetCustomerFirstName() {
+	public void testGetCustomerFirstName__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#getCustomerLastName() <em>Get Customer Last Name</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#getCustomerLastName(java.lang.String) <em>Get Customer Last Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#getCustomerLastName()
+	 * @see Classes.Customers.ICustomers#getCustomerLastName(java.lang.String)
 	 * @generated
 	 */
-	public void testGetCustomerLastName() {
+	public void testGetCustomerLastName__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#getCustomerTitle() <em>Get Customer Title</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#getCustomerTitle(java.lang.String) <em>Get Customer Title</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#getCustomerTitle()
+	 * @see Classes.Customers.ICustomers#getCustomerTitle(java.lang.String)
 	 * @generated
 	 */
-	public void testGetCustomerTitle() {
+	public void testGetCustomerTitle__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#getCustomerEmail() <em>Get Customer Email</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#getCustomerEmail(java.lang.String) <em>Get Customer Email</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#getCustomerEmail()
+	 * @see Classes.Customers.ICustomers#getCustomerEmail(java.lang.String)
 	 * @generated
 	 */
-	public void testGetCustomerEmail() {
+	public void testGetCustomerEmail__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#getCustomerPhone() <em>Get Customer Phone</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#getCustomerPhone(java.lang.String) <em>Get Customer Phone</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#getCustomerPhone()
+	 * @see Classes.Customers.ICustomers#getCustomerPhone(java.lang.String)
 	 * @generated
 	 */
-	public void testGetCustomerPhone() {
+	public void testGetCustomerPhone__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#searchCustomers() <em>Search Customers</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#searchCustomers(java.lang.String) <em>Search Customers</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#searchCustomers()
+	 * @see Classes.Customers.ICustomers#searchCustomers(java.lang.String)
 	 * @generated
 	 */
-	public void testSearchCustomers() {
+	public void testSearchCustomers__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#getCustomerBookings() <em>Get Customer Bookings</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#getCustomerBookings(java.lang.String) <em>Get Customer Bookings</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#getCustomerBookings()
+	 * @see Classes.Customers.ICustomers#getCustomerBookings(java.lang.String)
 	 * @generated
 	 */
-	public void testGetCustomerBookings() {
+	public void testGetCustomerBookings__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#getCustomerRequests() <em>Get Customer Requests</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#getCustomerRequests(java.lang.String) <em>Get Customer Requests</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#getCustomerRequests()
+	 * @see Classes.Customers.ICustomers#getCustomerRequests(java.lang.String)
 	 * @generated
 	 */
-	public void testGetCustomerRequests() {
+	public void testGetCustomerRequests__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#addCustomerBooking() <em>Add Customer Booking</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#addCustomerBooking(java.lang.String, java.lang.String) <em>Add Customer Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#addCustomerBooking()
+	 * @see Classes.Customers.ICustomers#addCustomerBooking(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testAddCustomerBooking() {
+	public void testAddCustomerBooking__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#removeCustomerBooking() <em>Remove Customer Booking</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#removeCustomerBooking(java.lang.String, java.lang.String) <em>Remove Customer Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#removeCustomerBooking()
+	 * @see Classes.Customers.ICustomers#removeCustomerBooking(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testRemoveCustomerBooking() {
+	public void testRemoveCustomerBooking__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#addCustomerRequest() <em>Add Customer Request</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#addCustomerRequest(java.lang.String, java.lang.String) <em>Add Customer Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#addCustomerRequest()
+	 * @see Classes.Customers.ICustomers#addCustomerRequest(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testAddCustomerRequest() {
+	public void testAddCustomerRequest__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Customers.ICustomers#removeCustomerRequest() <em>Remove Customer Request</em>}' operation.
+	 * Tests the '{@link Classes.Customers.ICustomers#removeCustomerRequest(java.lang.String, java.lang.String) <em>Remove Customer Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Customers.ICustomers#removeCustomerRequest()
+	 * @see Classes.Customers.ICustomers#removeCustomerRequest(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testRemoveCustomerRequest() {
+	public void testRemoveCustomerRequest__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

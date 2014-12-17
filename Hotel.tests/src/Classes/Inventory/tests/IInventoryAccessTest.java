@@ -19,7 +19,7 @@ import junit.framework.TestCase;
  *   <li>{@link Classes.Inventory.IInventoryAccess#getItemStock(java.lang.String) <em>Get Item Stock</em>}</li>
  *   <li>{@link Classes.Inventory.IInventoryAccess#getItemExpense(java.lang.String) <em>Get Item Expense</em>}</li>
  *   <li>{@link Classes.Inventory.IInventoryAccess#getAllItemIDs() <em>Get All Item IDs</em>}</li>
- *   <li>{@link Classes.Inventory.IInventoryAccess#searchItems() <em>Search Items</em>}</li>
+ *   <li>{@link Classes.Inventory.IInventoryAccess#searchItems(java.lang.String) <em>Search Items</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -143,13 +143,13 @@ public abstract class IInventoryAccessTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Inventory.IInventoryAccess#searchItems() <em>Search Items</em>}' operation.
+	 * Tests the '{@link Classes.Inventory.IInventoryAccess#searchItems(java.lang.String) <em>Search Items</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Inventory.IInventoryAccess#searchItems()
+	 * @see Classes.Inventory.IInventoryAccess#searchItems(java.lang.String)
 	 * @generated
 	 */
-	public void testSearchItems() {
+	public void testSearchItems__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

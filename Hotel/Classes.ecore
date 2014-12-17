@@ -885,8 +885,18 @@
   </eSubpackages>
   <eSubpackages name="Bookings" nsURI="http:///Classes/Bookings.ecore" nsPrefix="Classes.Bookings">
     <eClassifiers xsi:type="ecore:EClass" name="Booking">
-      <eOperations name="addBookedStay" ordered="false" lowerBound="1"/>
-      <eOperations name="cancelBookedStay" ordered="false" lowerBound="1"/>
+      <eOperations name="addBookedStay" ordered="false" lowerBound="1">
+        <eParameters name="stayID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="cancelBookedStay" ordered="false" lowerBound="1">
+        <eParameters name="stayID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="addRequest" ordered="false" lowerBound="1">
+        <eParameters name="requestID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
+      <eOperations name="removeRequest" ordered="false" lowerBound="1">
+        <eParameters name="requestID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookedStays" ordered="false"
           upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="customer" ordered="false"
@@ -900,7 +910,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="creditCard" ordered="false"
           lowerBound="1" eType="#//Stays/CreditCard"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="requests" ordered="false"
-          lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+          upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BookingsManager" eSuperTypes="#//Bookings/IBookings">
       <eStructuralFeatures xsi:type="ecore:EReference" name="booking" ordered="false"
@@ -1137,7 +1147,7 @@
       </eOperations>
       <eOperations name="addCustomerRequest" ordered="false" lowerBound="1">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="requestID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="removeCustomerRequest" ordered="false" lowerBound="1">
         <eParameters name="SSID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
@@ -1198,7 +1208,7 @@
   </eSubpackages>
   <eSubpackages name="Staff" nsURI="http:///Classes/Staff.ecore" nsPrefix="Classes.Staff">
     <eClassifiers xsi:type="ecore:EClass" name="StaffManager" eSuperTypes="#//Staff/IStaff">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="staff" ordered="false"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="employees" ordered="false"
           upperBound="-1" eType="#//Staff/Staff"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="iStatisticsGenerator"
           ordered="false" lowerBound="1" eType="#//Statistics/IStatisticsGenerator"/>
@@ -1229,14 +1239,10 @@
     <eClassifiers xsi:type="ecore:EClass" name="MonthlySalaryContract" eSuperTypes="#//Staff/SalaryContract">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="salary" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="HourlySalaryContract" eSuperTypes="#//Staff/SalaryContract">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="salary" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IStaff" abstract="true" interface="true">
       <eOperations name="getAllStaff" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
@@ -1433,6 +1439,9 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Restaurant">
       <eOperations name="addReservation" ordered="false" lowerBound="1"/>
+      <eOperations name="getReservation" ordered="false" lowerBound="1">
+        <eParameters name="reservationID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="reservation" ordered="false"

@@ -16,10 +16,10 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link Classes.Guests.Guest#addStay() <em>Add Stay</em>}</li>
- *   <li>{@link Classes.Guests.Guest#removeStay() <em>Remove Stay</em>}</li>
- *   <li>{@link Classes.Guests.Guest#addRequest() <em>Add Request</em>}</li>
- *   <li>{@link Classes.Guests.Guest#removeRequest() <em>Remove Request</em>}</li>
+ *   <li>{@link Classes.Guests.Guest#addStay(java.lang.String, java.lang.String, java.util.Date, java.util.Date) <em>Add Stay</em>}</li>
+ *   <li>{@link Classes.Guests.Guest#removeStay(java.lang.String) <em>Remove Stay</em>}</li>
+ *   <li>{@link Classes.Guests.Guest#addRequest(java.lang.String, java.lang.String) <em>Add Request</em>}</li>
+ *   <li>{@link Classes.Guests.Guest#removeRequest(java.lang.String) <em>Remove Request</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -96,52 +96,52 @@ public class GuestTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Guests.Guest#addStay() <em>Add Stay</em>}' operation.
+	 * Tests the '{@link Classes.Guests.Guest#addStay(java.lang.String, java.lang.String, java.util.Date, java.util.Date) <em>Add Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Guests.Guest#addStay()
+	 * @see Classes.Guests.Guest#addStay(java.lang.String, java.lang.String, java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	public void testAddStay() {
+	public void testAddStay__String_String_Date_Date() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Guests.Guest#removeStay() <em>Remove Stay</em>}' operation.
+	 * Tests the '{@link Classes.Guests.Guest#removeStay(java.lang.String) <em>Remove Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Guests.Guest#removeStay()
+	 * @see Classes.Guests.Guest#removeStay(java.lang.String)
 	 * @generated
 	 */
-	public void testRemoveStay() {
+	public void testRemoveStay__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Guests.Guest#addRequest() <em>Add Request</em>}' operation.
+	 * Tests the '{@link Classes.Guests.Guest#addRequest(java.lang.String, java.lang.String) <em>Add Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Guests.Guest#addRequest()
+	 * @see Classes.Guests.Guest#addRequest(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testAddRequest() {
+	public void testAddRequest__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Guests.Guest#removeRequest() <em>Remove Request</em>}' operation.
+	 * Tests the '{@link Classes.Guests.Guest#removeRequest(java.lang.String) <em>Remove Request</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Guests.Guest#removeRequest()
+	 * @see Classes.Guests.Guest#removeRequest(java.lang.String)
 	 * @generated
 	 */
-	public void testRemoveRequest() {
+	public void testRemoveRequest__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

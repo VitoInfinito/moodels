@@ -833,8 +833,18 @@
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Bookings/Booking/creditCard"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Bookings/Booking/requests"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/Booking/addBookedStay"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/Booking/cancelBookedStay"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/Booking/addBookedStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/Booking/addBookedStay/stayID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/Booking/cancelBookedStay">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/Booking/cancelBookedStay/stayID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/Booking/addRequest">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/Booking/addRequest/requestID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Bookings/Booking/removeRequest">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Bookings/Booking/removeRequest/requestID"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Bookings/BookingsManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -1051,7 +1061,7 @@
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/addCustomerRequest">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/addCustomerRequest/SSID"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/addCustomerRequest/requestID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/addCustomerRequest/description"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Customers/ICustomers/removeCustomerRequest">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Customers/ICustomers/removeCustomerRequest/SSID"/>
@@ -1106,7 +1116,7 @@
         disposableProviderFactory="true" ecorePackage="Classes.ecore#//Staff">
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Staff/StaffManager">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Staff/StaffManager/staff"/>
+            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Staff/StaffManager/employees"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Staff/StaffManager/iStatisticsGenerator"/>
       </genClasses>
@@ -1129,11 +1139,9 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Staff/MonthlySalaryContract">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Staff/MonthlySalaryContract/salary"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Staff/MonthlySalaryContract/type"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Staff/HourlySalaryContract">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Staff/HourlySalaryContract/salary"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Staff/HourlySalaryContract/type"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Staff/IStaff">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Staff/IStaff/getAllStaff"/>
@@ -1330,6 +1338,9 @@
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Restaurants/Restaurant/menu"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/Restaurant/addReservation"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Restaurants/Restaurant/getReservation">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Restaurants/Restaurant/getReservation/reservationID"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Restaurants/Reservation">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Restaurants/Reservation/id"/>

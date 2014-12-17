@@ -22,6 +22,7 @@ import junit.framework.TestCase;
  *   <li>{@link Classes.Requests.IRequests#getAllRequestIDs() <em>Get All Request IDs</em>}</li>
  *   <li>{@link Classes.Requests.IRequests#setRequestDescription(java.lang.String, java.lang.String) <em>Set Request Description</em>}</li>
  *   <li>{@link Classes.Requests.IRequests#addRequest(java.lang.String, java.lang.String) <em>Add Request</em>}</li>
+ *   <li>{@link Classes.Requests.IRequests#createRequest(java.lang.String) <em>Create Request</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -178,6 +179,19 @@ public abstract class IRequestsTest extends TestCase {
 	 * @generated
 	 */
 	public void testAddRequest__String_String() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link Classes.Requests.IRequests#createRequest(java.lang.String) <em>Create Request</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.Requests.IRequests#createRequest(java.lang.String)
+	 * @generated
+	 */
+	public void testCreateRequest__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

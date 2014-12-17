@@ -13,29 +13,29 @@ import junit.framework.TestCase;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link Classes.Stays.IStays#checkInGuest() <em>Check In Guest</em>}</li>
- *   <li>{@link Classes.Stays.IStays#changeBookableOfStay() <em>Change Bookable Of Stay</em>}</li>
- *   <li>{@link Classes.Stays.IStays#addNewStay() <em>Add New Stay</em>}</li>
- *   <li>{@link Classes.Stays.IStays#removeStay() <em>Remove Stay</em>}</li>
- *   <li>{@link Classes.Stays.IStays#addBillToStay() <em>Add Bill To Stay</em>}</li>
- *   <li>{@link Classes.Stays.IStays#checkOutGuest() <em>Check Out Guest</em>}</li>
- *   <li>{@link Classes.Stays.IStays#addResponsibleCreditCard() <em>Add Responsible Credit Card</em>}</li>
- *   <li>{@link Classes.Stays.IStays#changeResponsibleCreditCard() <em>Change Responsible Credit Card</em>}</li>
- *   <li>{@link Classes.Stays.IStays#getGuestsOfHotelStay() <em>Get Guests Of Hotel Stay</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#checkInGuest(java.lang.String, java.lang.String) <em>Check In Guest</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#changeBookableOfStay(java.lang.String, java.lang.String) <em>Change Bookable Of Stay</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#addNewStay(java.lang.String, java.lang.String, java.util.Date, java.util.Date) <em>Add New Stay</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#removeStay(java.lang.String) <em>Remove Stay</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#addBillToStay(java.lang.String, java.lang.String) <em>Add Bill To Stay</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#checkOutGuest(java.lang.String, java.lang.String) <em>Check Out Guest</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#addResponsibleCreditCard(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Add Responsible Credit Card</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#changeResponsibleCreditCard(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Change Responsible Credit Card</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#getGuestsOfHotelStay(java.lang.String) <em>Get Guests Of Hotel Stay</em>}</li>
  *   <li>{@link Classes.Stays.IStays#getBillsOfHotelStay(java.lang.String) <em>Get Bills Of Hotel Stay</em>}</li>
- *   <li>{@link Classes.Stays.IStays#getBookableOfHotelStay() <em>Get Bookable Of Hotel Stay</em>}</li>
- *   <li>{@link Classes.Stays.IStays#getBookingOfHotelStay() <em>Get Booking Of Hotel Stay</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#getBookableOfHotelStay(java.lang.String) <em>Get Bookable Of Hotel Stay</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#getBookingOfHotelStay(java.lang.String) <em>Get Booking Of Hotel Stay</em>}</li>
  *   <li>{@link Classes.Stays.IStays#getAllHotelStayIDs() <em>Get All Hotel Stay IDs</em>}</li>
- *   <li>{@link Classes.Stays.IStays#getCheckedInGuestsOfHotelStay() <em>Get Checked In Guests Of Hotel Stay</em>}</li>
- *   <li>{@link Classes.Stays.IStays#getCheckedOutGuestsOfHotelStay() <em>Get Checked Out Guests Of Hotel Stay</em>}</li>
- *   <li>{@link Classes.Stays.IStays#searchHotelStays() <em>Search Hotel Stays</em>}</li>
- *   <li>{@link Classes.Stays.IStays#searchHotelStaysWithinPeriod() <em>Search Hotel Stays Within Period</em>}</li>
- *   <li>{@link Classes.Stays.IStays#getAllHotelStaysWithinPeriod() <em>Get All Hotel Stays Within Period</em>}</li>
- *   <li>{@link Classes.Stays.IStays#getAllUnpayedBillsOfHotelStay() <em>Get All Unpayed Bills Of Hotel Stay</em>}</li>
- *   <li>{@link Classes.Stays.IStays#billCreditCardWithAllUnpaidBillsOfHotelStay() <em>Bill Credit Card With All Unpaid Bills Of Hotel Stay</em>}</li>
- *   <li>{@link Classes.Stays.IStays#isResponsibleCreditCardAdded() <em>Is Responsible Credit Card Added</em>}</li>
- *   <li>{@link Classes.Stays.IStays#changePeriodOfStay() <em>Change Period Of Stay</em>}</li>
- *   <li>{@link Classes.Stays.IStays#removeBillFromStay() <em>Remove Bill From Stay</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#getCheckedInGuestsOfHotelStay(java.lang.String) <em>Get Checked In Guests Of Hotel Stay</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#getCheckedOutGuestsOfHotelStay(java.lang.String) <em>Get Checked Out Guests Of Hotel Stay</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#searchHotelStays(java.lang.String) <em>Search Hotel Stays</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#searchHotelStaysWithinPeriod(java.lang.String, java.util.Date, java.util.Date) <em>Search Hotel Stays Within Period</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#getAllHotelStaysWithinPeriod(java.util.Date, java.util.Date) <em>Get All Hotel Stays Within Period</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#getAllUnpayedBillsOfHotelStay(java.lang.String) <em>Get All Unpayed Bills Of Hotel Stay</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#billCreditCardWithAllUnpaidBillsOfHotelStay(java.lang.String) <em>Bill Credit Card With All Unpaid Bills Of Hotel Stay</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#isResponsibleCreditCardAdded(java.lang.String) <em>Is Responsible Credit Card Added</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#changePeriodOfStay(java.lang.String, java.util.Date, java.util.Date) <em>Change Period Of Stay</em>}</li>
+ *   <li>{@link Classes.Stays.IStays#removeBillFromStay(java.lang.String, java.lang.String) <em>Remove Bill From Stay</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -81,117 +81,117 @@ public abstract class IStaysTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#checkInGuest() <em>Check In Guest</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#checkInGuest(java.lang.String, java.lang.String) <em>Check In Guest</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#checkInGuest()
+	 * @see Classes.Stays.IStays#checkInGuest(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testCheckInGuest() {
+	public void testCheckInGuest__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#changeBookableOfStay() <em>Change Bookable Of Stay</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#changeBookableOfStay(java.lang.String, java.lang.String) <em>Change Bookable Of Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#changeBookableOfStay()
+	 * @see Classes.Stays.IStays#changeBookableOfStay(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testChangeBookableOfStay() {
+	public void testChangeBookableOfStay__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#addNewStay() <em>Add New Stay</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#addNewStay(java.lang.String, java.lang.String, java.util.Date, java.util.Date) <em>Add New Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#addNewStay()
+	 * @see Classes.Stays.IStays#addNewStay(java.lang.String, java.lang.String, java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	public void testAddNewStay() {
+	public void testAddNewStay__String_String_Date_Date() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#removeStay() <em>Remove Stay</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#removeStay(java.lang.String) <em>Remove Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#removeStay()
+	 * @see Classes.Stays.IStays#removeStay(java.lang.String)
 	 * @generated
 	 */
-	public void testRemoveStay() {
+	public void testRemoveStay__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#addBillToStay() <em>Add Bill To Stay</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#addBillToStay(java.lang.String, java.lang.String) <em>Add Bill To Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#addBillToStay()
+	 * @see Classes.Stays.IStays#addBillToStay(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testAddBillToStay() {
+	public void testAddBillToStay__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#checkOutGuest() <em>Check Out Guest</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#checkOutGuest(java.lang.String, java.lang.String) <em>Check Out Guest</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#checkOutGuest()
+	 * @see Classes.Stays.IStays#checkOutGuest(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testCheckOutGuest() {
+	public void testCheckOutGuest__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#addResponsibleCreditCard() <em>Add Responsible Credit Card</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#addResponsibleCreditCard(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Add Responsible Credit Card</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#addResponsibleCreditCard()
+	 * @see Classes.Stays.IStays#addResponsibleCreditCard(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testAddResponsibleCreditCard() {
+	public void testAddResponsibleCreditCard__String_String_String_int_int_String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#changeResponsibleCreditCard() <em>Change Responsible Credit Card</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#changeResponsibleCreditCard(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Change Responsible Credit Card</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#changeResponsibleCreditCard()
+	 * @see Classes.Stays.IStays#changeResponsibleCreditCard(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testChangeResponsibleCreditCard() {
+	public void testChangeResponsibleCreditCard__String_String_String_int_int_String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#getGuestsOfHotelStay() <em>Get Guests Of Hotel Stay</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#getGuestsOfHotelStay(java.lang.String) <em>Get Guests Of Hotel Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#getGuestsOfHotelStay()
+	 * @see Classes.Stays.IStays#getGuestsOfHotelStay(java.lang.String)
 	 * @generated
 	 */
-	public void testGetGuestsOfHotelStay() {
+	public void testGetGuestsOfHotelStay__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -211,26 +211,26 @@ public abstract class IStaysTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#getBookableOfHotelStay() <em>Get Bookable Of Hotel Stay</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#getBookableOfHotelStay(java.lang.String) <em>Get Bookable Of Hotel Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#getBookableOfHotelStay()
+	 * @see Classes.Stays.IStays#getBookableOfHotelStay(java.lang.String)
 	 * @generated
 	 */
-	public void testGetBookableOfHotelStay() {
+	public void testGetBookableOfHotelStay__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#getBookingOfHotelStay() <em>Get Booking Of Hotel Stay</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#getBookingOfHotelStay(java.lang.String) <em>Get Booking Of Hotel Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#getBookingOfHotelStay()
+	 * @see Classes.Stays.IStays#getBookingOfHotelStay(java.lang.String)
 	 * @generated
 	 */
-	public void testGetBookingOfHotelStay() {
+	public void testGetBookingOfHotelStay__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -250,130 +250,130 @@ public abstract class IStaysTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#getCheckedInGuestsOfHotelStay() <em>Get Checked In Guests Of Hotel Stay</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#getCheckedInGuestsOfHotelStay(java.lang.String) <em>Get Checked In Guests Of Hotel Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#getCheckedInGuestsOfHotelStay()
+	 * @see Classes.Stays.IStays#getCheckedInGuestsOfHotelStay(java.lang.String)
 	 * @generated
 	 */
-	public void testGetCheckedInGuestsOfHotelStay() {
+	public void testGetCheckedInGuestsOfHotelStay__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#getCheckedOutGuestsOfHotelStay() <em>Get Checked Out Guests Of Hotel Stay</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#getCheckedOutGuestsOfHotelStay(java.lang.String) <em>Get Checked Out Guests Of Hotel Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#getCheckedOutGuestsOfHotelStay()
+	 * @see Classes.Stays.IStays#getCheckedOutGuestsOfHotelStay(java.lang.String)
 	 * @generated
 	 */
-	public void testGetCheckedOutGuestsOfHotelStay() {
+	public void testGetCheckedOutGuestsOfHotelStay__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#searchHotelStays() <em>Search Hotel Stays</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#searchHotelStays(java.lang.String) <em>Search Hotel Stays</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#searchHotelStays()
+	 * @see Classes.Stays.IStays#searchHotelStays(java.lang.String)
 	 * @generated
 	 */
-	public void testSearchHotelStays() {
+	public void testSearchHotelStays__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#searchHotelStaysWithinPeriod() <em>Search Hotel Stays Within Period</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#searchHotelStaysWithinPeriod(java.lang.String, java.util.Date, java.util.Date) <em>Search Hotel Stays Within Period</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#searchHotelStaysWithinPeriod()
+	 * @see Classes.Stays.IStays#searchHotelStaysWithinPeriod(java.lang.String, java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	public void testSearchHotelStaysWithinPeriod() {
+	public void testSearchHotelStaysWithinPeriod__String_Date_Date() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#getAllHotelStaysWithinPeriod() <em>Get All Hotel Stays Within Period</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#getAllHotelStaysWithinPeriod(java.util.Date, java.util.Date) <em>Get All Hotel Stays Within Period</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#getAllHotelStaysWithinPeriod()
+	 * @see Classes.Stays.IStays#getAllHotelStaysWithinPeriod(java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	public void testGetAllHotelStaysWithinPeriod() {
+	public void testGetAllHotelStaysWithinPeriod__Date_Date() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#getAllUnpayedBillsOfHotelStay() <em>Get All Unpayed Bills Of Hotel Stay</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#getAllUnpayedBillsOfHotelStay(java.lang.String) <em>Get All Unpayed Bills Of Hotel Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#getAllUnpayedBillsOfHotelStay()
+	 * @see Classes.Stays.IStays#getAllUnpayedBillsOfHotelStay(java.lang.String)
 	 * @generated
 	 */
-	public void testGetAllUnpayedBillsOfHotelStay() {
+	public void testGetAllUnpayedBillsOfHotelStay__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#billCreditCardWithAllUnpaidBillsOfHotelStay() <em>Bill Credit Card With All Unpaid Bills Of Hotel Stay</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#billCreditCardWithAllUnpaidBillsOfHotelStay(java.lang.String) <em>Bill Credit Card With All Unpaid Bills Of Hotel Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#billCreditCardWithAllUnpaidBillsOfHotelStay()
+	 * @see Classes.Stays.IStays#billCreditCardWithAllUnpaidBillsOfHotelStay(java.lang.String)
 	 * @generated
 	 */
-	public void testBillCreditCardWithAllUnpaidBillsOfHotelStay() {
+	public void testBillCreditCardWithAllUnpaidBillsOfHotelStay__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#isResponsibleCreditCardAdded() <em>Is Responsible Credit Card Added</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#isResponsibleCreditCardAdded(java.lang.String) <em>Is Responsible Credit Card Added</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#isResponsibleCreditCardAdded()
+	 * @see Classes.Stays.IStays#isResponsibleCreditCardAdded(java.lang.String)
 	 * @generated
 	 */
-	public void testIsResponsibleCreditCardAdded() {
+	public void testIsResponsibleCreditCardAdded__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#changePeriodOfStay() <em>Change Period Of Stay</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#changePeriodOfStay(java.lang.String, java.util.Date, java.util.Date) <em>Change Period Of Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#changePeriodOfStay()
+	 * @see Classes.Stays.IStays#changePeriodOfStay(java.lang.String, java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	public void testChangePeriodOfStay() {
+	public void testChangePeriodOfStay__String_Date_Date() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Stays.IStays#removeBillFromStay() <em>Remove Bill From Stay</em>}' operation.
+	 * Tests the '{@link Classes.Stays.IStays#removeBillFromStay(java.lang.String, java.lang.String) <em>Remove Bill From Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Stays.IStays#removeBillFromStay()
+	 * @see Classes.Stays.IStays#removeBillFromStay(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	public void testRemoveBillFromStay() {
+	public void testRemoveBillFromStay__String_String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

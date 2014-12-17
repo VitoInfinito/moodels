@@ -18,8 +18,8 @@ import junit.framework.TestCase;
  *   <li>{@link Classes.Accounts.IManageAccounts#renameAccount(java.lang.String, java.lang.String) <em>Rename Account</em>}</li>
  *   <li>{@link Classes.Accounts.IManageAccounts#changePassword(java.lang.String, java.lang.String) <em>Change Password</em>}</li>
  *   <li>{@link Classes.Accounts.IManageAccounts#getAccountPassword(java.lang.String) <em>Get Account Password</em>}</li>
- *   <li>{@link Classes.Accounts.IManageAccounts#getAccount(java.lang.String) <em>Get Account</em>}</li>
- *   <li>{@link Classes.Accounts.IManageAccounts#searchAccounts() <em>Search Accounts</em>}</li>
+ *   <li>{@link Classes.Accounts.IManageAccounts#getAccountName(java.lang.String) <em>Get Account Name</em>}</li>
+ *   <li>{@link Classes.Accounts.IManageAccounts#searchAccounts(java.lang.String) <em>Search Accounts</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -130,26 +130,26 @@ public abstract class IManageAccountsTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link Classes.Accounts.IManageAccounts#getAccount(java.lang.String) <em>Get Account</em>}' operation.
+	 * Tests the '{@link Classes.Accounts.IManageAccounts#getAccountName(java.lang.String) <em>Get Account Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Accounts.IManageAccounts#getAccount(java.lang.String)
+	 * @see Classes.Accounts.IManageAccounts#getAccountName(java.lang.String)
 	 * @generated
 	 */
-	public void testGetAccount__String() {
+	public void testGetAccountName__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link Classes.Accounts.IManageAccounts#searchAccounts() <em>Search Accounts</em>}' operation.
+	 * Tests the '{@link Classes.Accounts.IManageAccounts#searchAccounts(java.lang.String) <em>Search Accounts</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Classes.Accounts.IManageAccounts#searchAccounts()
+	 * @see Classes.Accounts.IManageAccounts#searchAccounts(java.lang.String)
 	 * @generated
 	 */
-	public void testSearchAccounts() {
+	public void testSearchAccounts__String() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
