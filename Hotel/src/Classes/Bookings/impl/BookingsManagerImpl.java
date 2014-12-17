@@ -24,6 +24,8 @@ import Classes.InvalidIDException;
 import Classes.StringUtils;
 import Classes.Banking.CustomerProvides;
 import Classes.Bills.IBills;
+import Classes.Bookables.ConferenceRoomCategory;
+import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.IBookablesAccess;
 import Classes.Bookings.Booking;
 import Classes.Bookings.BookingsManager;
@@ -384,10 +386,18 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> searchBookingsWithStaysInPeriod(String keyword, LocalDateTime from, LocalDateTime to) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchBookingsWithStaysInPeriod(String keyword, LocalDateTime from, LocalDateTime to) {
+		List<String> result = searchBookings(keyword);
+		List<String> copy = new ArrayList<String>(result);
+		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
+		for (String bookingID : copy) {
+			List<String> staysInPeriodCopy = new ArrayList<String>(staysInPeriod);
+			staysInPeriodCopy.removeAll(bookings.get(bookingID).getBookedStays());
+			if (staysInPeriodCopy.size() == staysInPeriod.size()) {
+				result.remove(bookingID);
+			}
+		}
+		return result;
 	}
 
 	/**
@@ -501,67 +511,85 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> searchForAvailableHotelRoomsInPeriod(LocalDateTime from, LocalDateTime to, String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchForAvailableHotelRoomsInPeriod(LocalDateTime from, LocalDateTime to, String keyword, HotelRoomCategory category) {
+		List<String> result = iBookableAccess.searchHotelRooms(keyword, category);
+		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
+		for (String stayID : staysInPeriod) {
+			result.remove(iHotelStayManager.getBookableOfHotelStay(stayID));
+		}
+		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> searchForAvailableHostelBedsInPeriod(LocalDateTime from, LocalDateTime to, String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchForAvailableHostelBedsInPeriod(LocalDateTime from, LocalDateTime to, String keyword) {
+		List<String> result = iBookableAccess.searchHostelBeds(keyword);
+		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
+		for (String stayID : staysInPeriod) {
+			result.remove(iHotelStayManager.getBookableOfHotelStay(stayID));
+		}
+		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> searchForAvailableConferenceRoomsInPeriod(LocalDateTime from, LocalDateTime to, String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchForAvailableConferenceRoomsInPeriod(LocalDateTime from, LocalDateTime to, String keyword, ConferenceRoomCategory category) {
+		List<String> result = iBookableAccess.searchConferenceRooms(keyword, category);
+		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
+		for (String stayID : staysInPeriod) {
+			result.remove(iHotelStayManager.getBookableOfHotelStay(stayID));
+		}
+		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAvailableHotelRoomsInPeriod(LocalDateTime from, LocalDateTime to) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAvailableHotelRoomsInPeriod(LocalDateTime from, LocalDateTime to) {
+		List<String> result = iBookableAccess.getAllHotelRoomIDs();
+		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
+		for (String stayID : staysInPeriod) {
+			result.remove(iHotelStayManager.getBookableOfHotelStay(stayID));
+		}
+		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAvailableConferenceRoomsInPeriod(LocalDateTime from, LocalDateTime to) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAvailableConferenceRoomsInPeriod(LocalDateTime from, LocalDateTime to) {
+		List<String> result = iBookableAccess.getAllConferenceRoomIDs();
+		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
+		for (String stayID : staysInPeriod) {
+			result.remove(iHotelStayManager.getBookableOfHotelStay(stayID));
+		}
+		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAvailableHostelBedsInPeriod(LocalDateTime from, LocalDateTime to) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAvailableHostelBedsInPeriod(LocalDateTime from, LocalDateTime to) {
+		List<String> result = iBookableAccess.getAllHostelBedIDs();
+		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
+		for (String stayID : staysInPeriod) {
+			result.remove(iHotelStayManager.getBookableOfHotelStay(stayID));
+		}
+		return result;
 	}
 
 } //BookingsManagerImpl
