@@ -395,5 +395,4 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 		}
 		return reservation;
 	}
-
 } //RestaurantsManagerImpl
