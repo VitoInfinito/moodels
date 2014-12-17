@@ -4,7 +4,12 @@ package Classes.Bookings.impl;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.regex.Pattern;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -14,6 +19,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import Classes.InvalidIDException;
+import Classes.StringUtils;
 import Classes.Banking.CustomerProvides;
 import Classes.Bills.IBills;
 import Classes.Bookables.IBookablesAccess;
@@ -36,8 +42,8 @@ import Classes.Stays.IStays;
 public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements BookingsManager {
 	private final Logger logger = LoggerFactory.getLogger(BookingsManagerImpl.class);
 	public static BookingsManagerImpl INSTANCE = new BookingsManagerImpl();
-	
-	private EMap<String, Booking> booking;
+
+	private EMap<String, Booking> bookings;
 
 	private IBookablesAccess iBookableAccess;
 	private IStays iHotelStayManager;
@@ -54,7 +60,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 */
 	private BookingsManagerImpl() {
 		super();
-		booking = new EcoreEMap<String,Booking>(ECoreMapEntriesPackage.Literals.STRING_TO_BOOKING_MAP, StringToBookingMapImpl.class, this, BookingsPackage.BOOKINGS_MANAGER__BOOKING);
+		bookings = new EcoreEMap<String,Booking>(ECoreMapEntriesPackage.Literals.STRING_TO_BOOKING_MAP, StringToBookingMapImpl.class, this, BookingsPackage.BOOKINGS_MANAGER__BOOKING);
 		iBookableAccess = IBookablesAccess.INSTANCE;
 		iHotelStayManager = IStays.INSTANCE;
 		iGuest = IGuests.INSTANCE;
@@ -77,12 +83,75 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> searchBookings(String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchBookings(String keyword) {
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
+
+		// Exact ID match. First Order!
+		if (bookings.contains(keyword)) {
+			searchResult.add(keyword);
+		}
+
+		Collection<Booking> c = bookings.values();
+
+		// Some property match exactly. Second Order!
+		for (Booking b : c) {
+			if (b.getCustomer().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getBookingNbr());
+			} else if (iGuest.getGuestFirstName(b.getCustomer()).equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getBookingNbr());
+			} else if (iGuest.getGuestLastName(b.getCustomer()).equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getBookingNbr());
+			} else if (iGuest.getGuestEmail(b.getCustomer()).equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getBookingNbr());
+			} else if (iGuest.getGuestPhone(b.getCustomer()).equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getBookingNbr());
+			} else if (b.getBookedStays().contains(keyword)) {
+				searchResult.add(b.getBookingNbr());
+			} else if (keyword.matches(StringUtils.IntOnlyRegex) && Integer.valueOf(keyword) == b.getNbrGuests()) {
+				searchResult.add(b.getBookingNbr());
+			} else {
+				for (String stay : b.getBookedStays()) {
+					if (iHotelStayManager.getBookableOfHotelStay(stay).equalsIgnoreCase(keyword)) {
+						searchResult.add(b.getBookingNbr());
+					}
+				}
+			}
+
+		}		
+
+		// ID match somewhat. Third Order!
+		for (Booking b : c) {			
+			if (regexPattern.matcher(b.getBookingNbr()).matches()) {
+				searchResult.add(b.getBookingNbr());
+			} 
+		}
+
+		// Some property match somewhat. Fourth Order.
+		for (Booking b : c) {
+			if (regexPattern.matcher(b.getCustomer()).matches()) {
+				searchResult.add(b.getBookingNbr());
+			} else if (regexPattern.matcher(iGuest.getGuestFirstName(b.getCustomer())).matches()){
+				searchResult.add(b.getBookingNbr());
+			} else if (regexPattern.matcher(iGuest.getGuestLastName(b.getCustomer())).matches()){
+				searchResult.add(b.getBookingNbr());
+			} else if (regexPattern.matcher(iGuest.getGuestEmail(b.getCustomer())).matches()){
+				searchResult.add(b.getBookingNbr());
+			} else if (regexPattern.matcher(iGuest.getGuestPhone(b.getCustomer())).matches()){
+				searchResult.add(b.getBookingNbr());
+			} else {
+				for (String stay : b.getBookedStays()) {
+					if (regexPattern.matcher(iHotelStayManager.getBookableOfHotelStay(stay)).matches()) {
+						searchResult.add(b.getBookingNbr());
+					}
+				}
+			}
+		}
+
+		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
 	}
 
 	/**
@@ -103,11 +172,11 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public String getCustomerOfBooking(String bookingID) {
-		if (!booking.contains(bookingID)) {
+		if (!bookings.contains(bookingID)) {
 			logger.warn("A booking with ID {} does not exist.", bookingID);
 			throw new InvalidIDException();
 		} else {
-			return booking.get(bookingID).getCustomer();
+			return bookings.get(bookingID).getCustomer();
 		}
 	}
 
@@ -118,11 +187,11 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int getNbrGuestOfBooking(String bookingID) {
-		if (!booking.contains(bookingID)) {
+		if (!bookings.contains(bookingID)) {
 			logger.warn("A booking with ID {} does not exist.", bookingID);
 			throw new InvalidIDException();
 		} else {
-			return booking.get(bookingID).getNbrGuests();
+			return bookings.get(bookingID).getNbrGuests();
 		}
 	}
 
@@ -166,11 +235,11 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public void changeNbrGuestsOfBooking(String bookingID, int nbrGuests) {
-		if (!booking.contains(bookingID)) {
+		if (!bookings.contains(bookingID)) {
 			logger.warn("A booking with ID {} does not exist.", bookingID);
 			throw new InvalidIDException();
 		} else {
-			booking.get(bookingID).setNbrGuests(nbrGuests);
+			bookings.get(bookingID).setNbrGuests(nbrGuests);
 		}
 	}
 
@@ -181,7 +250,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<String> getAllBookings() {
-		return new ArrayList<String>(booking.keySet());
+		return new ArrayList<String>(bookings.keySet());
 	}
 
 	/**
@@ -278,9 +347,9 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<String> getBookingRequests(String bookingID) {
-		
+
 		//TODO Check whether or not there could be multiple requests, change method in booking
-		
+
 		//return new ArrayList<String>(booking.get(bookingID).getRequests());
 		return null;
 	}

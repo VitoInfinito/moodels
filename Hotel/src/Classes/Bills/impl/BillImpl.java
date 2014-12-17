@@ -3,7 +3,6 @@
 package Classes.Bills.impl;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;

@@ -38,7 +38,7 @@ public interface IBookings extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated
 	 */
-	EList<String> searchBookings(String keyword);
+	List<String> searchBookings(String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
