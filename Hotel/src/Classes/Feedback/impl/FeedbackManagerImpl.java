@@ -67,7 +67,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<String> getAllFeedbackIDs() {
-		return Collections.unmodifiableList(new ArrayList<String>(feedbacks.keySet()));
+		return new ArrayList<String>(feedbacks.keySet());
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 			}
 		}
 
-		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**

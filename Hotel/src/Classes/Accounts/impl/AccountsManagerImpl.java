@@ -164,7 +164,7 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 			}
 		}
 		
-		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**

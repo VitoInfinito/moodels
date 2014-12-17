@@ -57,7 +57,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public List<String> getAllStaff() {
-		return Collections.unmodifiableList(new ArrayList<String>(employees.keySet()));
+		return new ArrayList<String>(employees.keySet());
 	}
 
 	/**
@@ -121,7 +121,7 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 		}
 		
 
-		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**

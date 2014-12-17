@@ -301,7 +301,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 		}
 		
 
-		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -311,7 +311,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public List<String> getCustomerBookings(String SSID) {
 		if (customer.containsKey(SSID)) {
-			return Collections.unmodifiableList(customer.get(SSID).getBookings());
+			return new ArrayList<String>(customer.get(SSID).getBookings());
 		} else {
 			logger.warn("A customer with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -325,7 +325,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public List<String> getCustomerRequests(String SSID) {
 		if (customer.containsKey(SSID)) {
-			return Collections.unmodifiableList(customer.get(SSID).getRequests());
+			return new ArrayList<String>(customer.get(SSID).getRequests());
 		} else {
 			logger.warn("A customer with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();

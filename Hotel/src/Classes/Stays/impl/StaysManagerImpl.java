@@ -214,7 +214,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public List<String> getGuestsOfHotelStay(String stayID) {
-		return Collections.unmodifiableList(new ArrayList<String>(stays.get(stayID).getCheckedInGuests()));
+		return new ArrayList<String>(stays.get(stayID).getCheckedInGuests());
 	}
 
 	/**
@@ -224,7 +224,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public List<String> getBillsOfHotelStay(String stayID) {
-		return Collections.unmodifiableList(new ArrayList<String>(stays.get(stayID).getBills()));
+		return new ArrayList<String>(stays.get(stayID).getBills());
 	}
 
 	/**
@@ -263,7 +263,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public List<String> getAllHotelStayIDs() {
-		return Collections.unmodifiableList(new ArrayList<String>(stays.keySet()));
+		return new ArrayList<String>(stays.keySet());
 	}
 
 	/**
@@ -273,7 +273,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	public List<String> getCheckedInGuestsOfHotelStay(String stayID) {
 		if (stays.contains(stayID)) {
-			return Collections.unmodifiableList(stays.get(stayID).getCheckedInGuests());
+			return new ArrayList<String>(stays.get(stayID).getCheckedInGuests());
 		} else {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
@@ -287,7 +287,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	public List<String> getCheckedOutGuestsOfHotelStay(String stayID) {
 		if (stays.contains(stayID)) {
-			return Collections.unmodifiableList(stays.get(stayID).getCheckedOutGuests());
+			return new ArrayList<String>(stays.get(stayID).getCheckedOutGuests());
 		} else {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
@@ -354,7 +354,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 					unpaid.add(billID);
 			}
 			
-			return Collections.unmodifiableList(unpaid);
+			return unpaid;
 		} else {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();

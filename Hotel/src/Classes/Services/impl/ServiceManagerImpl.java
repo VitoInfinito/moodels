@@ -63,7 +63,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public List<String> getAllServiceIDs() {
-		return Collections.unmodifiableList(new ArrayList<String>(services.keySet()));
+		return new ArrayList<String>(services.keySet());
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public List<String> getAllRoomServiceOrderIDs() {
-		return Collections.unmodifiableList(new ArrayList<String>(roomServiceOrders.keySet()));
+		return new ArrayList<String>(roomServiceOrders.keySet());
 	}
 
 	/**
@@ -114,7 +114,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 		}
 		
 
-		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -164,7 +164,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 		}
 		
 
-		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -258,7 +258,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public List<String> getRSOItems(String orderID) {
 		if (roomServiceOrders.containsKey(orderID)) {
-			return Collections.unmodifiableList(roomServiceOrders.get(orderID).getItems());
+			return new ArrayList<String>(roomServiceOrders.get(orderID).getItems());
 		} else {
 			logger.warn("A order with id {} could not be found.", orderID);
 			throw new InvalidIDException();
@@ -278,7 +278,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 				tmp.add(se.getId());
 			}
 			
-			return Collections.unmodifiableList(tmp);
+			return tmp;
 		} else {
 			logger.warn("A order with id {} could not be found.", orderID);
 			throw new InvalidIDException();
@@ -328,7 +328,7 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public List<String> getRoomServiceMenuItems() {
-		return Collections.unmodifiableList(roomServiceMenu.getItems());
+		return new ArrayList<String>(roomServiceMenu.getItems());
 	}
 
 	/**

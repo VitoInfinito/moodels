@@ -254,7 +254,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 			}
 		}
 		
-		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
+		return new ArrayList<String>(searchResult);
 	}
 
 	@Override
@@ -286,7 +286,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 			}
 		}
 		
-		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
+		return new ArrayList<String>(searchResult);
 	}
 	
 	/**
@@ -371,7 +371,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 			}
 		}
 		
-		return Collections.unmodifiableList(new ArrayList<String>(newList));
+		return new ArrayList<String>(newList);
 	}
 
 	@Override
@@ -423,6 +423,6 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 			}*/
 		}
 		
-		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
+		return new ArrayList<String>(searchResult);
 	}
 } //RestaurantImpl

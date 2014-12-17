@@ -89,7 +89,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 			if(!b.isPaid()) 
 				notPaid.add(b.getId());
 		}
-		return Collections.unmodifiableList(notPaid);
+		return notPaid;
 	}
 
 	/**
@@ -112,7 +112,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * @generated NOT
 	 */
 	public List<String> getAllBillIDs() {
-		return Collections.unmodifiableList(new ArrayList<String>(bills.keySet()));
+		return new ArrayList<String>(bills.keySet());
 	}
 
 	/**
@@ -158,7 +158,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 		}
 		
 
-		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -173,7 +173,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 			if(b.isPaid())
 				paidBills.add(b.getId());
 		}
-		return Collections.unmodifiableList(paidBills);
+		return paidBills;
 	}
 
 
@@ -268,7 +268,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 */
 	public List<String> getBillItems(String billID) {
 		if (bills.containsKey(billID)) {
-			return Collections.unmodifiableList(bills.get(billID).getItems());
+			return new ArrayList<String>(bills.get(billID).getItems());
 		} else {
 			logger.warn("A bill with id {} could not be found.", billID);
 			throw new InvalidIDException();
@@ -296,7 +296,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 */
 	public List<String> getBillServices(String billID) {
 		if (bills.containsKey(billID)) {
-			return Collections.unmodifiableList(bills.get(billID).getServices());
+			return new ArrayList<String>(bills.get(billID).getServices());
 		} else {
 			logger.warn("A bill with id {} could not be found.", billID);
 			throw new InvalidIDException();

@@ -56,7 +56,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated NOT
 	 */
 	public List<String> getRestaurantReservations(String restaurantID) {
-		return Collections.unmodifiableList(getRestaurantByID(restaurantID).getReservationIDs());
+		return getRestaurantByID(restaurantID).getReservationIDs();
 	}
 
 	/**
@@ -65,7 +65,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated NOT
 	 */
 	public List<String> getRestaurantTables(String restaurantID) {
-		return Collections.unmodifiableList(getRestaurantByID(restaurantID).getRestaurantTableIDs());
+		return getRestaurantByID(restaurantID).getRestaurantTableIDs();
 	}
 
 	/**
@@ -118,7 +118,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated NOT
 	 */
 	public List<String> getAllRestaurantNames() {
-		return Collections.unmodifiableList(new ArrayList<String>(restaurant.keySet()));
+		return new ArrayList<String>(restaurant.keySet());
 	}
 
 	/**
@@ -159,7 +159,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 			}
 		}
 		
-		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -223,7 +223,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated NOT
 	 */
 	public List<String> getRestaurantMenuItems(String restaurantID) {
-		return Collections.unmodifiableList(new ArrayList<String>(getRestaurantByID(restaurantID).getMenu().getItems()));
+		return new ArrayList<String>(getRestaurantByID(restaurantID).getMenu().getItems());
 	}
 
 	/**

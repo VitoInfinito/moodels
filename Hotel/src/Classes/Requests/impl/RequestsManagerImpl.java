@@ -146,7 +146,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 			}
 		}
 		
-		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -155,7 +155,7 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<String> getAllRequestIDs() {
-		return Collections.unmodifiableList(new ArrayList<String>(specialRequest.keySet()));
+		return new ArrayList<String>(specialRequest.keySet());
 	}
 
 	/**

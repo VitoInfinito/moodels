@@ -65,7 +65,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated NOT
 	 */
 	public List<String> getAllGuestIDs() {
-		return Collections.unmodifiableList(new ArrayList<String>(guests.keySet()));
+		return new ArrayList<String>(guests.keySet());
 	}
 
 	/**
@@ -306,7 +306,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 		}
 		
 
-		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -316,7 +316,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 */
 	public List<String> getGuestStays(String SSID) {
 		if(guests.containsKey(SSID)) {
-			return Collections.unmodifiableList(guests.get(SSID).getStays());
+			return new ArrayList<String>(guests.get(SSID).getStays());
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
@@ -330,7 +330,7 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 */
 	public List<String> getGuestRequests(String SSID) {
 		if(guests.containsKey(SSID)) {
-			return Collections.unmodifiableList(guests.get(SSID).getRequests());
+			return new ArrayList<String>(guests.get(SSID).getRequests());
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();

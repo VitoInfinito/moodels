@@ -130,7 +130,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated NOT
 	 */
 	public List<String> getAllItemIDs() {
-		return Collections.unmodifiableList(new ArrayList<String>(items.keySet()));
+		return new ArrayList<String>(items.keySet());
 	}
 
 	/**
@@ -172,7 +172,7 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 		}
 		
 
-		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
