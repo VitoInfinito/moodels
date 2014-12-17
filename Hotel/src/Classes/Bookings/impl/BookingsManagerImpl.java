@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 
+import javax.xml.soap.SOAPException;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -31,6 +33,7 @@ import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToBookingMapImpl;
 import Classes.Guests.IGuests;
 import Classes.Requests.IRequests;
+import Classes.Stays.CreditCard;
 import Classes.Stays.IStays;
 
 /**
@@ -151,18 +154,21 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 			}
 		}
 
-		return Collections.unmodifiableList(new ArrayList<String>(searchResult));
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getBookedStaysOfBooking(String bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getBookedStaysOfBooking(String bookingID) {
+		if (bookings.containsKey(bookingID)) {
+			return new ArrayList<String>(bookings.get(bookingID).getBookedStays());
+		} else {
+			logger.warn("A booking with bookingID {} could not be found.", bookingID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -256,34 +262,121 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllBookingsWithinPeriod(LocalDateTime from, LocalDateTime to) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAllBookingsWithinPeriod(LocalDateTime from, LocalDateTime to) {
+		List<String> result = new ArrayList<String>();
+		for (Booking b : bookings.values()) {
+			if (b.getIssueDate().isAfter(from) && b.getIssueDate().isBefore(to)) {
+				result.add(b.getBookingNbr());
+			}
+		}
+		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getAllBookingsWithStaysInPeriod(LocalDateTime from, LocalDateTime to) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAllBookingsWithStaysInPeriod(LocalDateTime from, LocalDateTime to) {
+		List<String> stays = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
+
+		Set<String> result = new LinkedHashSet<String>();
+		for (Booking b : bookings.values()) {
+			for (String stayID : b.getBookedStays()) {
+				if (stays.contains(stayID)) {
+					result.add(b.getBookingNbr());
+				}
+			}
+		}
+
+		return new ArrayList<String>(result);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> searchBookingsMadeInPeriod(String keyword, LocalDateTime from, LocalDateTime to) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchBookingsMadeInPeriod(String keyword, LocalDateTime from, LocalDateTime to) {
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
+
+		// Exact ID match. First Order!
+		if (bookings.contains(keyword)) {
+			LocalDateTime date = bookings.get(keyword).getIssueDate();
+			if (date.isAfter(from) && date.isBefore(to)) {
+				searchResult.add(keyword);
+			}
+		}
+
+		Collection<Booking> c = bookings.values();
+
+		// Some property match exactly. Second Order!
+		for (Booking b : c) {
+			LocalDateTime date = bookings.get(keyword).getIssueDate();
+			if (date.isAfter(from) && date.isBefore(to)) {
+				if (b.getCustomer().equalsIgnoreCase(keyword)) {
+					searchResult.add(b.getBookingNbr());
+				} else if (iGuest.getGuestFirstName(b.getCustomer()).equalsIgnoreCase(keyword)) {
+					searchResult.add(b.getBookingNbr());
+				} else if (iGuest.getGuestLastName(b.getCustomer()).equalsIgnoreCase(keyword)) {
+					searchResult.add(b.getBookingNbr());
+				} else if (iGuest.getGuestEmail(b.getCustomer()).equalsIgnoreCase(keyword)) {
+					searchResult.add(b.getBookingNbr());
+				} else if (iGuest.getGuestPhone(b.getCustomer()).equalsIgnoreCase(keyword)) {
+					searchResult.add(b.getBookingNbr());
+				} else if (b.getBookedStays().contains(keyword)) {
+					searchResult.add(b.getBookingNbr());
+				} else if (keyword.matches(StringUtils.IntOnlyRegex) && Integer.valueOf(keyword) == b.getNbrGuests()) {
+					searchResult.add(b.getBookingNbr());
+				} else {
+					for (String stay : b.getBookedStays()) {
+						if (iHotelStayManager.getBookableOfHotelStay(stay).equalsIgnoreCase(keyword)) {
+							searchResult.add(b.getBookingNbr());
+						}
+					}
+				}
+			}
+		}		
+
+		// ID match somewhat. Third Order!
+		for (Booking b : c) {	
+			LocalDateTime date = bookings.get(keyword).getIssueDate();
+			if (date.isAfter(from) && date.isBefore(to)) {
+				if (regexPattern.matcher(b.getBookingNbr()).matches()) {
+					searchResult.add(b.getBookingNbr());
+				} 
+			}
+		}
+
+		// Some property match somewhat. Fourth Order.
+		for (Booking b : c) {
+			LocalDateTime date = bookings.get(keyword).getIssueDate();
+			if (date.isAfter(from) && date.isBefore(to)) {
+				if (regexPattern.matcher(b.getCustomer()).matches()) {
+					searchResult.add(b.getBookingNbr());
+				} else if (regexPattern.matcher(iGuest.getGuestFirstName(b.getCustomer())).matches()){
+					searchResult.add(b.getBookingNbr());
+				} else if (regexPattern.matcher(iGuest.getGuestLastName(b.getCustomer())).matches()){
+					searchResult.add(b.getBookingNbr());
+				} else if (regexPattern.matcher(iGuest.getGuestEmail(b.getCustomer())).matches()){
+					searchResult.add(b.getBookingNbr());
+				} else if (regexPattern.matcher(iGuest.getGuestPhone(b.getCustomer())).matches()){
+					searchResult.add(b.getBookingNbr());
+				} else {
+					for (String stay : b.getBookedStays()) {
+						if (regexPattern.matcher(iHotelStayManager.getBookableOfHotelStay(stay)).matches()) {
+							searchResult.add(b.getBookingNbr());
+						}
+					}
+				}
+			}
+		}
+
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -302,10 +395,13 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> searchForAvailableBookablesInPeriod(LocalDateTime from, LocalDateTime to, String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> searchForAvailableBookablesInPeriod(LocalDateTime from, LocalDateTime to, String keyword) {
+		List<String> result = iBookableAccess.searchForBookable(keyword);
+		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
+		for (String stayID : staysInPeriod) {
+			result.remove(iHotelStayManager.getBookableOfHotelStay(stayID));
+		}
+		return result;
 	}
 
 	/**
@@ -313,10 +409,13 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getAvailableBookablesInPeriod(LocalDateTime from, LocalDateTime to) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List<String> getAvailableBookablesInPeriod(LocalDateTime from, LocalDateTime to) {
+		List<String> result = iBookableAccess.getAllBookableIDs();
+		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
+		for (String stayID : staysInPeriod) {
+			result.remove(iHotelStayManager.getBookableOfHotelStay(stayID));
+		}
+		return result;
 	}
 
 	/**
@@ -325,9 +424,12 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public void addBookingRequest(String bookingID, String description) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (bookings.containsKey(bookingID)) {
+			bookings.get(bookingID).addRequest(iRequests.addRequest(description));
+		} else {
+			logger.warn("A booking with bookingID {} could not be found.", bookingID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -336,9 +438,12 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public void removeBookingRequest(String bookingID, String requestID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (bookings.containsKey(bookingID)) {
+			bookings.get(bookingID).removeRequest(requestID);
+		} else {
+			logger.warn("A booking with bookingID {} could not be found.", bookingID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
@@ -347,33 +452,50 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<String> getBookingRequests(String bookingID) {
-
-		//TODO Check whether or not there could be multiple requests, change method in booking
-
-		//return new ArrayList<String>(booking.get(bookingID).getRequests());
-		return null;
+		return new ArrayList<String>(bookings.get(bookingID).getRequests());
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @throws SOAPException 
+	 * @generated NOT
 	 */
-	public void payBookingBills(String bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void payBookingBills(String bookingID) throws SOAPException {
+		if (bookings.containsKey(bookingID)) {
+			List<String> bills = new ArrayList<String>();
+			Booking booking = bookings.get(bookingID);
+			CreditCard card = booking.getCreditCard();
+			for (String stayID : booking.getBookedStays()) {
+				bills.addAll(iHotelStayManager.getAllUnpayedBillsOfHotelStay(stayID));
+			}
+			iBills.payBillsWithCreditCard(bills, card.getCcNumber(), card.getCcv(), card.getExpiryMonth(), card.getExpiryYear(), card.getFirstName(), card.getLastName());
+		} else {
+			logger.warn("A booking with bookingID {} could not be found.", bookingID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @throws SOAPException 
+	 * @generated NOT
 	 */
-	public void payStayBills(String bookingID, String stayID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void payStayBills(String bookingID, String stayID) throws SOAPException {
+		if (bookings.containsKey(bookingID)) {
+			Booking booking = bookings.get(bookingID);
+			if (!booking.getBookedStays().contains(stayID)) {
+				logger.warn("The stayID {} does not belong to the specified booking.", bookingID);
+				throw new InvalidIDException("The stayID does not belong to the specified booking.");
+			}
+			CreditCard card = booking.getCreditCard();
+			List<String> bills = iHotelStayManager.getAllUnpayedBillsOfHotelStay(stayID);
+			iBills.payBillsWithCreditCard(bills, card.getCcNumber(), card.getCcv(), card.getExpiryMonth(), card.getExpiryYear(), card.getFirstName(), card.getLastName());
+		} else {
+			logger.warn("A booking with bookingID {} could not be found.", bookingID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**

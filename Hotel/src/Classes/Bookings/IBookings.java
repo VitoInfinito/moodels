@@ -5,6 +5,8 @@ package Classes.Bookings;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import javax.xml.soap.SOAPException;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
@@ -46,7 +48,7 @@ public interface IBookings extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false"
 	 * @generated
 	 */
-	EList<String> getBookedStaysOfBooking(String bookingID);
+	List<String> getBookedStaysOfBooking(String bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -110,7 +112,7 @@ public interface IBookings extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	EList<String> getAllBookingsWithinPeriod(LocalDateTime from, LocalDateTime to);
+	List<String> getAllBookingsWithinPeriod(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,7 +120,7 @@ public interface IBookings extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	EList<String> getAllBookingsWithStaysInPeriod(LocalDateTime from, LocalDateTime to);
+	List<String> getAllBookingsWithStaysInPeriod(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,7 +128,7 @@ public interface IBookings extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	EList<String> searchBookingsMadeInPeriod(String keyword, LocalDateTime from, LocalDateTime to);
+	List<String> searchBookingsMadeInPeriod(String keyword, LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -142,7 +144,7 @@ public interface IBookings extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated
 	 */
-	EList<String> searchForAvailableBookablesInPeriod(LocalDateTime from, LocalDateTime to, String keyword);
+	List<String> searchForAvailableBookablesInPeriod(LocalDateTime from, LocalDateTime to, String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -150,7 +152,7 @@ public interface IBookings extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	EList<String> getAvailableBookablesInPeriod(LocalDateTime from, LocalDateTime to);
+	List<String> getAvailableBookablesInPeriod(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -179,18 +181,20 @@ public interface IBookings extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws SOAPException 
 	 * @model bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false"
 	 * @generated
 	 */
-	void payBookingBills(String bookingID);
+	void payBookingBills(String bookingID) throws SOAPException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws SOAPException 
 	 * @model bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated
 	 */
-	void payStayBills(String bookingID, String stayID);
+	void payStayBills(String bookingID, String stayID) throws SOAPException;
 
 	/**
 	 * <!-- begin-user-doc -->
