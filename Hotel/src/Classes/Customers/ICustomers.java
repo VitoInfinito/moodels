@@ -118,6 +118,13 @@ public interface ICustomers extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		SSID != null
+	 * Ensures:
+	 * 		if there exists an customer such that customer.SSID == SSID
+	 * 			the non null title of customer is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
@@ -126,6 +133,13 @@ public interface ICustomers extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		SSID != null
+	 * Ensures:
+	 * 		if there exists an customer such that customer.SSID == SSID
+	 * 			the non null email of customer is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
@@ -134,6 +148,13 @@ public interface ICustomers extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		SSID != null
+	 * Ensures:
+	 * 		if there exists an customer such that customer.SSID == SSID
+	 * 			the non null phone of customer is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
 	 * @generated

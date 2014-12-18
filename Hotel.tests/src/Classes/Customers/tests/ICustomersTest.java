@@ -83,17 +83,20 @@ public class ICustomersTest {
 
 	@Test
 	public void testGetCustomerTitle() {
-		fail("Not yet implemented");
+		boolean result = ICustomers.INSTANCE.getCustomerTitle("010101-0101").equals("Mr");
+		assertTrue(result);
 	}
 
 	@Test
 	public void testGetCustomerEmail() {
-		fail("Not yet implemented");
+		boolean result = ICustomers.INSTANCE.getCustomerEmail("010101-0101").equals("sven.svensson@gmail.com");
+		assertTrue(result);
 	}
 
 	@Test
 	public void testGetCustomerPhone() {
-		fail("Not yet implemented");
+		boolean result = ICustomers.INSTANCE.getCustomerPhone("010101-0101").equals("0707-777777");
+		assertTrue(result);
 	}
 
 	@Test
