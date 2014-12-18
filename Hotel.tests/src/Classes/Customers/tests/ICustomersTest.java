@@ -2,9 +2,12 @@ package Classes.Customers.tests;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import Classes.Customers.ICustomers;
 
 public class ICustomersTest {
 	
@@ -14,6 +17,7 @@ public class ICustomersTest {
 
 	@Before
 	public void setUp() throws Exception {
+		ICustomers.INSTANCE.addCustomer("010101-0101", "Sven", "Svensson", "Mr", "sven.svensson@gmail.com", "0707-777777");
 	}
 
 	@Test
@@ -53,7 +57,8 @@ public class ICustomersTest {
 
 	@Test
 	public void testGetCustomerFirstName() {
-		fail("Not yet implemented");
+		boolean result = ICustomers.INSTANCE.getCustomerFirstName("010101-0101").equals("Sven");
+		assertTrue(result);
 	}
 
 	@Test
@@ -109,6 +114,11 @@ public class ICustomersTest {
 	@Test
 	public void testRemoveCustomerRequest() {
 		fail("Not yet implemented");
+	}
+	
+	@After
+	public void tearDown() throws Exception {
+		ICustomers.INSTANCE.removeCustomer("010101-0101");
 	}
 
 }
