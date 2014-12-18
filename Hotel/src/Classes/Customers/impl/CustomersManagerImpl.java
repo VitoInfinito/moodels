@@ -36,9 +36,9 @@ import Classes.Requests.IRequests;
 public class CustomersManagerImpl extends MinimalEObjectImpl.Container implements CustomersManager {
 	private final Logger logger = LoggerFactory.getLogger(CustomersManagerImpl.class);
 	public static CustomersManagerImpl INSTANCE = new CustomersManagerImpl();
-	
+
 	private IRequests iRequests;
-	
+
 	private EMap<String, Customer> customer;
 
 	/**
@@ -74,21 +74,34 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	 public void addCustomer(String SSID, String firstname, String lastname, String title, String email, String phone) throws InvalidIDException {
+	public void addCustomer(String SSID, String firstname, String lastname, String title, String email, String phone) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			logger.warn("There is already a customer added with the SSID {}. The SSID can not be used as a unique ID!", SSID);
 			throw new InvalidIDException("There is already a customer added with the SSID " + SSID + ". The SSID can not be used as a unique ID!");
 		}
-		
+
 		Customer cus = CustomersFactory.eINSTANCE.createCustomer();
-		
+
 		cus.setSsid(SSID);
 		cus.setFirstname(firstname);
 		cus.setLastname(lastname);
 		cus.setPhone(phone);
 		cus.setTitle(title);
-		
+
 		customer.put(SSID, cus);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		
+	 * Ensures:
+	 *		
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void removeCustomer(String SSID) {
+		
 	}
 
 	/**
@@ -250,7 +263,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 		}
 
 		Collection<Customer> c = customer.values();
-		
+
 		// Some property match exactly. Second Order!
 		for (Customer b : c) {
 			if (b.getFirstname().equalsIgnoreCase(keyword)) {
@@ -269,7 +282,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 				searchResult.add(b.getSsid());
 			}
 		}
-		
+
 		// ID match somewhat. Third Order!
 		for (Customer b : c) {			
 			if (regexPattern.matcher(b.getSsid()).matches()) {
@@ -299,7 +312,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 				}
 			}
 		}
-		
+
 
 		return new ArrayList<String>(searchResult);
 	}

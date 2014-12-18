@@ -37,6 +37,14 @@ public interface ICustomers extends EObject {
 	 * @generated
 	 */
 	void addCustomer(String SSID, String firstname, String lastname, String title, String email, String phone);
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" firstnameDataType="org.eclipse.uml2.types.String" firstnameRequired="true" firstnameOrdered="false" lastnameDataType="org.eclipse.uml2.types.String" lastnameRequired="true" lastnameOrdered="false" titleDataType="org.eclipse.uml2.types.String" titleRequired="true" titleOrdered="false" emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false" phoneDataType="org.eclipse.uml2.types.String" phoneRequired="true" phoneOrdered="false"
+	 * @generated
+	 */
+	void removeCustomer(String SSID);
 
 	/**
 	 * <!-- begin-user-doc -->
