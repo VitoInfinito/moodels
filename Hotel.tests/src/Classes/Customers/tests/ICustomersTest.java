@@ -18,6 +18,15 @@ public class ICustomersTest {
 	@Before
 	public void setUp() throws Exception {
 		ICustomers.INSTANCE.addCustomer("010101-0101", "Sven", "Svensson", "Mr", "sven.svensson@gmail.com", "0707-777777");
+		ICustomers.INSTANCE.addCustomer("010101-0102", "Bengt", "Bengtsson", "Dr", "bengt.bengtsson@gmail.com", "0707-777778");
+		ICustomers.INSTANCE.addCustomer("010101-0103", "Maja", "Andersson", "Ms", "maja.andersson@gmail.com", "0707-777779");
+	}
+	
+	@After
+	public void tearDown() throws Exception {
+		for(String SSID : ICustomers.INSTANCE.getAllCustomers()) {
+			ICustomers.INSTANCE.removeCustomer(SSID);
+		}
 	}
 
 	@Test
@@ -27,6 +36,11 @@ public class ICustomersTest {
 
 	@Test
 	public void testAddCustomer() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testRemoveCustomer() {
 		fail("Not yet implemented");
 	}
 
@@ -63,7 +77,8 @@ public class ICustomersTest {
 
 	@Test
 	public void testGetCustomerLastName() {
-		fail("Not yet implemented");
+		boolean result = ICustomers.INSTANCE.getCustomerLastName("010101-0101").equals("Svensson");
+		assertTrue(result);
 	}
 
 	@Test
@@ -114,11 +129,6 @@ public class ICustomersTest {
 	@Test
 	public void testRemoveCustomerRequest() {
 		fail("Not yet implemented");
-	}
-	
-	@After
-	public void tearDown() throws Exception {
-		ICustomers.INSTANCE.removeCustomer("010101-0101");
 	}
 
 }
