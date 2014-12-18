@@ -26,7 +26,14 @@ public interface IBookablesAccess extends EObject {
 	IBookablesAccess INSTANCE = Classes.Bookables.impl.BookablesManagerImpl.INSTANCE;
 	
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * Requires:
+	 * 		bookableID != null
+	 * Ensures:
+	 * 		if there dosen't exist a bookable object such as bookable.bookableID != bookableID 
+	 * 			InvalidIDException is thrown
+	 * 		otherwise
+	 * 			returns a non null double that is the base price of the specific bookable
 	 * <!-- end-user-doc -->
 	 * @model required="true" ordered="false" exceptions="org.eclipse.uml2.types.InvalidIDException" bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false"
 	 * @generated NOT
@@ -35,6 +42,13 @@ public interface IBookablesAccess extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		roomID != null
+	 * Ensures:
+	 * 		if there exists a roomID such that room.roomID == roomID
+	 * 			return a non null string containing information about the specific room
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" exceptions="org.eclipse.uml2.types.InvalidIDException" roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
@@ -43,6 +57,13 @@ public interface IBookablesAccess extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		bookableID != null
+	 * Ensures:
+	 * 		if there dosen't exist a bookable object such as bookable.bookableID == bookableID 
+	 * 			InvalidIDException is thrown
+	 * 		otherwise
+	 * 			returns a non null double that is the description of the specific bookable
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" exceptions="org.eclipse.uml2.types.InvalidIDException" bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false"
 	 * @generated NOT
@@ -51,6 +72,10 @@ public interface IBookablesAccess extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		nothing
+	 * Ensures:
+	 * 		return a non null list off all bookableIDs in string form
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -59,6 +84,7 @@ public interface IBookablesAccess extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" exceptions="org.eclipse.uml2.types.InvalidIDException" hostelBedIDDataType="org.eclipse.uml2.types.String" hostelBedIDRequired="true" hostelBedIDOrdered="false"
 	 * @generated NOT
