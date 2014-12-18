@@ -101,7 +101,12 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated NOT
 	 */
 	public void removeCustomer(String SSID) {
-		
+		if (customer.containsKey(SSID)) {
+			customer.remove(SSID);
+		} else {
+			logger.warn("There is no costumer with the SSID {}", SSID);
+			throw new InvalidIDException("There is no costumer with the SSID " + SSID);
+		}
 	}
 
 	/**
