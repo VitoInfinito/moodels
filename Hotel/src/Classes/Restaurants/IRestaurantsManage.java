@@ -4,6 +4,8 @@ package Classes.Restaurants;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
+import Classes.InvalidIDException;
+
 
 
 /**
@@ -23,6 +25,13 @@ public interface IRestaurantsManage extends IRestaurantsAccess {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		restaurantID != null
+	 * Ensures:
+	 * 		if there exists a restaurant rest such that rest.getName() == name
+	 * 			InvalidIDException is thrown
+	 * 		otherwise
+	 * 			the restaurant is added
 	 * <!-- end-user-doc -->
 	 * @model nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
 	 * @generated
@@ -30,7 +39,14 @@ public interface IRestaurantsManage extends IRestaurantsAccess {
 	void addRestaurant(String name);
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * * * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		name != null
+	 * Ensures:
+	 * 		if the restaurant with the restaurantID is not found
+	 * 			InvalidIDException is thrown
+	 * 		otherwise
+	 * 			the restaurant is removed
 	 * <!-- end-user-doc -->
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false"
 	 * @generated

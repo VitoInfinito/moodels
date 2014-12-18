@@ -1393,25 +1393,6 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_AvF2cIE7EeSRHohs3wWePg" name="searchRestaurantReservationsWithTime" visibility="public">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SHTfcIE7EeSRHohs3wWePg" name="restaurantID">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_T8OZsIE7EeSRHohs3wWePg" name="keyword">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_VU_jcIE7EeSRHohs3wWePg" name="from">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_dvGB8IE7EeSRHohs3wWePg" name="to">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PL4lQIE9EeSRHohs3wWePg" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QFyowIE9EeSRHohs3wWePg"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QFzP0IE9EeSRHohs3wWePg" value="*"/>
-        </ownedParameter>
-      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9NQ6npsEeST-65JbGUt8g" name="RestaurantsManager" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9NQ7npsEeST-65JbGUt8g" name="restaurant" visibility="private" type="_w9NQ8npsEeST-65JbGUt8g" association="_w9NRJHpsEeST-65JbGUt8g">
@@ -2584,9 +2565,6 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_POfsUH_oEeS5IpkkkJsVew" name="requestID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_zATyQIE6EeSiatlbNJveRQ" name="desctiption">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGB3psEeST-65JbGUt8g" name="removeGuestRequest">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_IvXFsH_oEeS5IpkkkJsVew" name="SSID">
@@ -2666,33 +2644,13 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9PGIXpsEeST-65JbGUt8g" name="account" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGLXpsEeST-65JbGUt8g" name="addStay" visibility="package">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_XkFjIIE5EeSiatlbNJveRQ" name="bookableID">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_aucmUIE5EeSiatlbNJveRQ" name="bookingID">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-LIhYIE5EeSiatlbNJveRQ" name="fromDate">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_H1HTYIE6EeSiatlbNJveRQ" name="toDate">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
-        </ownedParameter>
-      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGLXpsEeST-65JbGUt8g" name="addStay" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGLnpsEeST-65JbGUt8g" name="removeStay" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_MUeskIE4EeSiatlbNJveRQ" name="stayID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGL3psEeST-65JbGUt8g" name="addRequest" visibility="package">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_UJpAEIE6EeSiatlbNJveRQ" name="requestID">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_VyOHcIE6EeSiatlbNJveRQ" name="description">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGL3psEeST-65JbGUt8g" name="addRequest" visibility="package"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9PGMXpsEeST-65JbGUt8g" name="removeRequest" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_KVbl8IE4EeSiatlbNJveRQ" name="requestID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>

@@ -2,28 +2,37 @@ package Classes.Restaurants.tests;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
+import Classes.Restaurants.IRestaurantsAccess;
+import Classes.Restaurants.IRestaurantsManage;
+
 public class IRestaurantsManageTest {
-	
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
 
 	@Before
 	public void setUp() throws Exception {
+		IRestaurantsManage.INSTANCE.addRestaurant("abcd");
+	}
+	
+	@After
+	public void teardown() {
+		for(String id : IRestaurantsAccess.INSTANCE.getAllRestaurantNames())
+			IRestaurantsManage.INSTANCE.removeRestaurant(id);
 	}
 
 	@Test
 	public void testAddRestaurant() {
-		fail("Not yet implemented");
+		boolean result = IRestaurantsAccess.INSTANCE.getAllRestaurantNames().size() == 0;
+		assertFalse(result);
 	}
 
 	@Test
 	public void testRemoveRestaurant() {
-		fail("Not yet implemented");
+		teardown();
+		boolean result = IRestaurantsAccess.INSTANCE.getAllRestaurantNames().size() == 0;
+		assertTrue(result);
 	}
 
 	@Test

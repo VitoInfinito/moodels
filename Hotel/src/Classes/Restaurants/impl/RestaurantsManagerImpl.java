@@ -278,7 +278,7 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 		Restaurant rest = restaurant.removeKey(restaurantID);
 		if(rest == null) {
 			logger.warn("The Restaurant with ID {} could not be found. Invalid ID", restaurantID);
-			throw new InvalidIDException("Restaurant ID already exists");
+			throw new InvalidIDException("Restaurant ID do not exist");
 		}
 	}
 
