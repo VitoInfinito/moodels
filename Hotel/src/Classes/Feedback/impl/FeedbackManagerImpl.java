@@ -210,6 +210,16 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 
 		feedbacks.put(id, feedback);
 	}
+	
+	@Override
+	public void removeFeedback(String id) {
+		if (feedbacks.containsKey(id)) {
+			feedbacks.remove(id);
+		} else {
+			logger.warn("A feedback with id {} could not be found.", id);
+			throw new InvalidIDException();
+		}
+	}
 
 	private String generateID() {
 		return String.format("fe%06d", IDCounter++);

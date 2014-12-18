@@ -23,6 +23,13 @@ public interface IFeedback extends EObject {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		Nothing
+	 * Ensures:
+	 * 		if there are more than zero stored feedbacks
+	 * 			return a list of all the stored feedbacks IDs
+	 * 		otherwise
+	 * 			return an empty list
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -31,6 +38,13 @@ public interface IFeedback extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a feedback such that feedback.id == id
+	 * 			the non null description of the feedback is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
 	 * @generated
@@ -39,6 +53,13 @@ public interface IFeedback extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a feedback such that feedback.id == id
+	 * 			the non null resolved status of the feedback is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
 	 * @generated
@@ -47,6 +68,13 @@ public interface IFeedback extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a feedback such that feedback.id == id
+	 * 			the non null noted status of the feedback is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
 	 * @generated
@@ -55,6 +83,14 @@ public interface IFeedback extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * 		desc = !null
+	 * Ensures:
+	 * 		if there exists a feedback such that feedback.id == id
+	 * 			the desc of the feedback is set to the desc
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" descDataType="org.eclipse.uml2.types.String" descRequired="true" descOrdered="false"
 	 * @generated
@@ -63,6 +99,13 @@ public interface IFeedback extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a feedback such that feedback.id == id
+	 * 			the resolved status of the feedback is set to status
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" statusDataType="org.eclipse.uml2.types.Boolean" statusRequired="true" statusOrdered="false"
 	 * @generated
@@ -71,6 +114,13 @@ public interface IFeedback extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a feedback such that feedback.id == id
+	 * 			the noted status of the feedback is set to status
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" statusDataType="org.eclipse.uml2.types.Boolean" statusRequired="true" statusOrdered="false"
 	 * @generated
@@ -87,10 +137,26 @@ public interface IFeedback extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		desc != null
+	 * Ensures:
+	 * 		that there are a feedback f with f.desc == desc
 	 * <!-- end-user-doc -->
 	 * @model descDataType="org.eclipse.uml2.types.String" descRequired="true" descOrdered="false"
 	 * @generated
 	 */
 	void addFeedback(String desc);
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		that the feedback f with f.id == id are no more
+	 * <!-- end-user-doc -->
+	 * @model descDataType="org.eclipse.uml2.types.String" descRequired="true" descOrdered="false"
+	 * @generated
+	 */
+	void removeFeedback(String id);
 
 } // IFeedback
