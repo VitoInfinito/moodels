@@ -85,6 +85,7 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 		cus.setSsid(SSID);
 		cus.setFirstname(firstname);
 		cus.setLastname(lastname);
+		cus.setEmail(email);
 		cus.setPhone(phone);
 		cus.setTitle(title);
 
