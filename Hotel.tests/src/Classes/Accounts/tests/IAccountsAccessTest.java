@@ -5,7 +5,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import Classes.InvalidIDException;
@@ -13,13 +12,7 @@ import Classes.Accounts.AccountType;
 import Classes.Accounts.IAccountsAccess;
 import Classes.Accounts.IManageAccounts;
 
-public class IAccountsAccessTest {
-
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-		
-	}
-	
+public class IAccountsAccessTest {	
 	@Before
 	public void setUp() throws Exception {
 		IManageAccounts.INSTANCE.addAccount("Pelle", "s7hhhds", AccountType.GUEST);
@@ -31,10 +24,9 @@ public class IAccountsAccessTest {
 	
 	@After
 	public void tearDown() {
-		IManageAccounts.INSTANCE.deleteAccount("Pelle");
-		IManageAccounts.INSTANCE.deleteAccount("Patrik");
-		IManageAccounts.INSTANCE.deleteAccount("Erik");
-		IManageAccounts.INSTANCE.deleteAccount("Orvar");
+		for (String id : IManageAccounts.INSTANCE.getAllAccountIDs()) {
+			IManageAccounts.INSTANCE.deleteAccount(id);
+		}
 	}
 
 	@Test

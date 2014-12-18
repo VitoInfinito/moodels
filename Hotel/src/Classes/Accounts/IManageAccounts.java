@@ -119,12 +119,25 @@ public interface IManageAccounts extends EObject {
 	 * Requires:
 	 * 		keyword != null
 	 * Ensures:
-	 * 		a non null list of account usernames is returned. 
-	 * 			(ordering: 1st acc.ssid == keyword, 2nd acc.property == keyword, 3rd acc.ssid.contains(keyword), 4rth acc.ssid.property.contains(keyword))
+	 * 	 	returns a non-null list of all accounts ids matching something in the following order:
+	 * 			1. Accounts with id that exactly matches the keyword
+	 * 			2. Accounts with id that has some matching to the keyword
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
 	 */
 	List<String> searchAccounts(String keyword);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		nothing
+	 * Ensures:
+	 * 	 	A non null list of all accounts usernames is returned.
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
+	 * @generated NOT
+	 */
+	List<String> getAllAccountIDs();
 
 } // IManageAccounts

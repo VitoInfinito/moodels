@@ -4,7 +4,6 @@ package Classes.Accounts.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -91,7 +90,10 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 				logger.warn("An account with username {} already exists.", newUsername);
 				throw new InvalidIDException();
 			} else {
-				accounts.get(oldUsername).setUsername(newUsername);
+				Account acc = accounts.get(oldUsername);
+				acc.setUsername(newUsername);
+				accounts.removeKey(oldUsername);
+				accounts.put(newUsername, acc);
 			}
 		} else {
 			logger.warn("An account with username {} could not be found.", oldUsername);
@@ -197,5 +199,15 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 			logger.warn("An account with username {} could not be found.", username);
 			throw new InvalidIDException();
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public List<String> getAllAccountIDs() {
+		return new ArrayList<String>(accounts.keySet());
 	}
 } //AccountsManagerImpl

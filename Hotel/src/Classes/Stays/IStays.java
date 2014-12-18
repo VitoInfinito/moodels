@@ -277,8 +277,8 @@ public interface IStays extends EObject {
 	 * 		keyword != null
 	 * Ensures:
 	 * 		returns a non-null list of all stays matching something in the following order:
-	 * 			1. Stays with exact matches to keyword
-	 * 			2. Stays with some matching to the keyword
+	 * 			1. Stays with id that exactly matches the keyword
+	 * 			2. Stays with id that has some matching to the keyword
 	 * 			3. Stays with attributes that exactly matches the keyword
 	 * 			4. Stays with attributes that has some matching to the keyword
 	 * <!-- end-user-doc -->
