@@ -39,7 +39,7 @@ public interface IRestaurantsManage extends IRestaurantsAccess {
 	void addRestaurant(String name);
 
 	/**
-	 * * * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		name != null
 	 * Ensures:
@@ -55,6 +55,10 @@ public interface IRestaurantsManage extends IRestaurantsAccess {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		restaurantID != null && nbrSeats != null && tableNbr != null
+	 * Ensures:
+	 * 		that a restaurant table is added
 	 * <!-- end-user-doc -->
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" nbrSeatsDataType="org.eclipse.uml2.types.Integer" nbrSeatsRequired="true" nbrSeatsOrdered="false" tableNbrDataType="org.eclipse.uml2.types.String" tableNbrRequired="true" tableNbrOrdered="false"
 	 * @generated
@@ -63,6 +67,10 @@ public interface IRestaurantsManage extends IRestaurantsAccess {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		restaurantID != null && tableNbr != null
+	 * Ensures:
+	 * 		that a restaurant table is removed
 	 * <!-- end-user-doc -->
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" tableNbrDataType="org.eclipse.uml2.types.String" tableNbrRequired="true" tableNbrOrdered="false"
 	 * @generated
