@@ -31,54 +31,117 @@ public interface IStays extends EObject {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null && guestID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID && there exists a guest in that stay such that guest.id == guestID
+	 * 			Guest is checked in to the stay
+	 * 		else if there exists a stay such that stay.id == stayID && there does not exist a guest in that stay such that guest.id == guestID
+	 * 			InvalidIDException is received
+	 * 		else if there does not exist a stay such that stay.id == stayID
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" guestIDDataType="org.eclipse.uml2.types.String" guestIDRequired="true" guestIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void checkInGuest(String stayID, String guestID);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null && bookableID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID && there exists a bookable with bookable.id == bookableID
+	 * 			The bookableID is set as the bookable belonging to the stay
+	 * 		else if there exists a stay such that stay.id == stayID && there does not exist a bookable such that bookable.id == bookableID
+	 * 			InvalidIDException is received
+	 * 		else if there does not exist a stay such that stay.id == stayID
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void changeBookableOfStay(String stayID, String bookableID);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		bookableID != null && bookingID != null && fromDate != null && toDate != null && time of from < time of to
+	 * Ensures:
+	 * 		if there exists a bookable such that bookable.id == bookableID && there exists a booking such that booking.id == bookingID
+	 * 			A new stay is added with the bookable belonging to bookableID and the booking belonging to bookingID with the dates fromDate as stay.fromDate and toDate as stay.toDate
+	 * 		else if there exists a bookable such that bookable.id == bookableID && there does not exist a booking such that booking.id == bookingID
+	 * 			InvalidIDException is received
+	 * 		else if there does not exist a bookable such that bookable.id == bookableID
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @model bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false" bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false" fromDateRequired="true" fromDateOrdered="false" toDateRequired="true" toDateOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void addNewStay(String bookableID, String bookingID, LocalDateTime fromDate, LocalDateTime toDate);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID
+	 * 			The stay is removed from the map of stays
+	 * 		otherwise
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void removeStay(String stayID);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null && billID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID && there exists a bill such that bill.id == billID
+	 * 			The bill is added to the stay
+	 * 		else if there exists a stay such that stay.id == stayID && there does not exist a bill such that bill.id == billID
+	 * 			InvalidIDException is received
+	 * 		else if there does not exist a stay such that stay.id == stayID
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void addBillToStay(String stayID, String billID);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null && guestID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID && there exists a guest in that stay such that guest.id == guestID
+	 * 			The guest is checked out of the stay
+	 * 		else if there exists a stay such that stay.id == stayID && there does not exist a guest in that stay such that guest.id == guestID
+	 * 			InvalidIDException is received
+	 * 		else if there does not exist a stay such that stay.id == stayID
+	 *			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" guestIDDataType="org.eclipse.uml2.types.String" guestIDRequired="true" guestIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void checkOutGuest(String stayID, String guestID);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null && ccNumber != null && ccv != null && expiryMonth != null && expiryYear != null && firstName != null && lastName != null
+	 * Ensures:
+	 * 		if there does not exist a connection to the bank
+	 * 			SOAPException
+	 * 		else if there exists a stay such that stay.id == stayID && ccNumber, ccv, expiryMonth, expiryYear, firstName and lastName are all belonging to the same valid creditcard
+	 * 			The creditcard is added with its information is added to the stay
+	 * 		else if there does not exist a stay such that stay.id == stayID
+	 * 			InvalidIDException is received
+	 * 		else if there does exist a stay such that stay.id == stayID && the information ccNumber, ccv, expiryDate, expiryMonth, firstName and Lastname does not belong to  valid creditcard
+	 * 			InvalidCreditCardException
 	 * <!-- end-user-doc -->
 	 * @throws SOAPException, InvalidCreditCardException
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
@@ -88,6 +151,17 @@ public interface IStays extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null && ccNumber != null && ccv != null && expiryMonth != null && expiryYear != null && firstName != null && lastName != null
+	 * Ensures:
+	 * 		if there does not exist a connection to the bank
+	 * 			SOAPException
+	 * 		else if there exists a stay such that stay.id == stayID && ccNumber, ccv, expiryMonth, expiryYear, firstName and lastName are all belonging to the same valid creditcard
+	 * 			The creditcard belonging to the stay is changed with its information
+	 * 		else if there does not exist a stay such that stay.id == stayID
+	 * 			InvalidIDException is received
+	 * 		else if there does exist a stay such that stay.id == stayID && the information ccNumber, ccv, expiryDate, expiryMonth, firstName and Lastname does not belong to  valid creditcard
+	 * 			InvalidCreditCardException
 	 * <!-- end-user-doc -->
 	 * @throws SOAPException, InvalidCreditCardException
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
@@ -97,6 +171,13 @@ public interface IStays extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID
+	 * 			returns the guests belonging to the stay
+	 * 		otherwise
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
@@ -105,6 +186,13 @@ public interface IStays extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID
+	 * 			returns the bills belonging to the stay
+	 * 		otherwise
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
@@ -113,22 +201,40 @@ public interface IStays extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID
+	 * 			returns the bookables belonging to the stay
+	 * 		otherwise
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getBookableOfHotelStay(String stayID);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID
+	 * 			returns the booking belonging to the stay
+	 * 		otherwise
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getBookingOfHotelStay(String stayID);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		Nothing
+	 * Ensures:
+	 * 		returns a non-null list with all the stays
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -137,6 +243,13 @@ public interface IStays extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID
+	 * 			returns a non-null list with all checked in guests belonging to the stay
+	 * 		otherwise
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
@@ -145,6 +258,13 @@ public interface IStays extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID
+	 * 			returns a non-null list with all checked out guests belonging to the stay
+	 * 		otherwise
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
@@ -153,22 +273,42 @@ public interface IStays extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		keyword != null
+	 * Ensures:
+	 * 		returns a non-null list of all stays matching something in the following order:
+	 * 			1. Stays with exact matches to keyword
+	 * 			2. Stays with some matching to the keyword
+	 * 			3. Stays with attributes that exactly matches the keyword
+	 * 			4. Stays with attributes that has some matching to the keyword
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchHotelStays(String keyword);
+	List<String> searchHotelStays(String keyword);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		keyword != null && from != null &&  to != null && time of from < time of to
+	 * Ensures:
+	 * 		returns a non-null list of all stays within the time period of from to to matching something in the following order:
+	 * 			1. Stays with exact matches to keyword
+	 * 			2. Stays with some matching to the keyword
+	 * 			3. Stays with attributes that exactly matches the keyword
+	 * 			4. Stays with attributes that has some matching to the keyword
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> searchHotelStaysWithinPeriod(String keyword, LocalDateTime from, LocalDateTime to);
+	List<String> searchHotelStaysWithinPeriod(String keyword, LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		from != null && to != null && time of from < time of to
+	 * Ensures:
+	 * 		returns a non-null list of all stays within the time period of from to to
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated NOT
@@ -177,6 +317,13 @@ public interface IStays extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID
+	 * 			returns a non-null list with all unpayed bills belongin to the stay
+	 * 		otherwise
+	 * 			InvalidIDException
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
@@ -185,6 +332,17 @@ public interface IStays extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null
+	 * Ensures:
+	 * 		if there does not exist a connection to the bank
+	 * 			SOAPException
+	 * 		else if there exists a stay such that stay.id == stayID && the stay has a creditcard
+	 * 			The credit card is billed and the bills are set as payed
+	 * 		else if there exists a stay such that stay.id == stayID && the stay does not have a creditcard
+	 * 			InvalidCreditCardException
+	 * 		else if there does not exist a stay such that stay.id == stayID
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @throws SOAPException, InvalidCreditCardException, InsufficientFundsException 
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
@@ -194,25 +352,50 @@ public interface IStays extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID && that stay has a creditcard
+	 * 			return true
+	 * 		else if there exists a stay such that stay.id == stayID && that stay does not have a creditcard
+	 * 			return false
+	 * 		else if there does not exist a stay such that stay.id == stayID
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean isResponsibleCreditCardAdded(String stayID);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null && from != null && to != null && time of from < time of to
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID
+	 * 			Changes the time period of the stay to be between from and to
+	 * 		otherwise
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void changePeriodOfStay(String stayID, LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null && billID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID && there exists a bill such that bill.id == billID
+	 * 			The bill is removed from the stay
+	 * 		else if there exists a stay such that stay.id == stayID && there does not exist a bill such that bill.id == billID
+	 * 			InvalidIDException is received
+	 * 		else if there does not exist a stay such that stay.id == stayID
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void removeBillFromStay(String stayID, String billID);
 
