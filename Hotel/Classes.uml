@@ -2396,6 +2396,11 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_832toIa1EeSt9OAMYRCFag" name="removeFeedback">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_O3oF4Ia2EeSt9OAMYRCFag" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9PF3HpsEeST-65JbGUt8g" name="FeedbackManager" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9PF3XpsEeST-65JbGUt8g" name="feedbacks" visibility="private" type="_w9PF4XpsEeST-65JbGUt8g" association="_w9PF7npsEeST-65JbGUt8g">
