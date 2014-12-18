@@ -31,7 +31,8 @@ public class ICustomersTest {
 
 	@Test
 	public void testGetAllCustomers() {
-		fail("Not yet implemented");
+		boolean result = ICustomers.INSTANCE.getAllCustomers().size() == 3;
+		assertTrue(result);
 	}
 
 	@Test

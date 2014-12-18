@@ -24,6 +24,13 @@ public interface ICustomers extends EObject {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		nothing
+	 * Ensures:
+	 * 		if there exists at least 1 customer in customers
+	 * 			returns a list of all customers
+	 * 		otherwise
+	 * 			an empty list is returned
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
