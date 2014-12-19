@@ -2,12 +2,9 @@
  */
 package Classes.Restaurants.impl;
 
-import java.time.Duration;
 import java.time.LocalDateTime;
-import java.time.Period;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -378,53 +375,14 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 
 	@Override
 	public List<String> searchReservationsWithTime(String keyword, LocalDateTime from, LocalDateTime to) {
-		keyword = keyword.trim();
-		Set<String> searchResult = new LinkedHashSet<String>();
-		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
-		
-		//Exact ID match
-		Reservation reservation = reservations.get(keyword);
-		if(reservation != null) {
-			searchResult.add(reservation.getId());
+		List<String> temp = searchReservations(keyword);
+		List<String> result = new ArrayList<String>(temp.size());
+		for (String resID : temp) {
+			Reservation res = getReservation(resID);
+			if (res.getFrom().isAfter(from) && res.getFrom().isBefore(to) && res.getTo().isAfter(from) && res.getTo().isBefore(to)) {
+				result.add(resID);
+			}	
 		}
-		
-		//ID match somewhat
-		Collection<Reservation> c = reservations.values();
-		for(Reservation r : c) {
-			if(regexPattern.matcher(r.getId()).matches()) {
-				searchResult.add(r.getId());
-			}
-		}
-		
-		//Time match exactly
-		for(Reservation r : c) {
-			if(r.getFrom().compareTo(from) == 0 && r.getTo().compareTo(to) == 0) {
-				searchResult.add(r.getId());
-			}
-		}
-		
-		//Some property match exactly
-		for(Reservation r : c) {
-			if(r.getReservedBy().equalsIgnoreCase(keyword)) {
-				searchResult.add(r.getId());
-			}
-		}
-		
-		//Some property match somewhat
-		for(Reservation r : c) {
-			if(regexPattern.matcher(r.getReservedBy()).matches()) {
-				searchResult.add(r.getId());
-			}
-		}
-		
-		//Some Time match somewhat
-		for(Reservation r : c) {
-			//TODO Implement replacement of date
-			/*if(r.getFrom()) {
-				searchResult.add(r.getId());
-			}*/
-		}
-		
-		return new ArrayList<String>(searchResult);
+		return result;
 	}
 } //RestaurantImpl

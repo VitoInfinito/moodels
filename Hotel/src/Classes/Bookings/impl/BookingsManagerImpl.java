@@ -87,13 +87,16 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @throws SOAPException 
 	 * @generated NOT
 	 */
-	public String makeBooking(List<String> bookables, String customerID, LocalDateTime from, LocalDateTime to, int nbrGuests, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, int discount) throws SOAPException, InvalidIDException, IllegalArgumentException {
+	public String makeBooking(List<String> bookables, String customerID, LocalDateTime from, LocalDateTime to, int nbrGuests, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, double discount) throws SOAPException, InvalidIDException, IllegalArgumentException {
 		if (bookables.isEmpty()) {
 			logger.warn("Tried to make a booking when no bookable IDs were provided.");
 			throw new InvalidIDException();
 		} else if (nbrGuests < 1) {
 			logger.warn("Tried to make a booking with {} nbr of guests. 0 or less is not a valid nbr of guests!", nbrGuests);
 			throw new IllegalArgumentException();
+		} else if (discount < 0 || discount > 1) {
+			logger.warn("The discount {} is not in [0,1].", discount);
+			throw new IllegalArgumentException("Discount should be in [0,1]!");
 		} else if (from.isAfter(to)) {
 			logger.warn("Tried to make a booking when the from date: {} is after the to date: {}!", from, to);
 			throw new IllegalArgumentException();

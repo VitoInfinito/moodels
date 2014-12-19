@@ -200,10 +200,6 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9LbsXpsEeST-65JbGUt8g"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9LbsnpsEeST-65JbGUt8g" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_w9Lbs3psEeST-65JbGUt8g" name="iHotelStayManager" visibility="private" type="_w9PtGnpsEeST-65JbGUt8g">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w9LbtHpsEeST-65JbGUt8g" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w9LbtXpsEeST-65JbGUt8g" value="1"/>
-      </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_w9LbtnpsEeST-65JbGUt8g" client="_w9Lbr3psEeST-65JbGUt8g" supplier="_w9LbpXpsEeST-65JbGUt8g" contract="_w9LbpXpsEeST-65JbGUt8g"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_w9Lbt3psEeST-65JbGUt8g" name="IBookablesAccess">
@@ -476,15 +472,11 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Gdl0MH_kEeS5IpkkkJsVew" name="customerID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KTPQEH_kEeS5IpkkkJsVew" name="guests">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OUA94H_kEeS5IpkkkJsVew"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OUBk8H_kEeS5IpkkkJsVew" value="*"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_U6toEIcWEeScJq4NWu3qng" name="from">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_t88TcH_kEeS5IpkkkJsVew" name="requests">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wl0aMH_kEeS5IpkkkJsVew"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wl0aMX_kEeS5IpkkkJsVew" value="*"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_WT1-MIcWEeScJq4NWu3qng" name="to">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_b0AYIH_kEeS5IpkkkJsVew" name="ccNumber">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -503,6 +495,9 @@
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_b0TTEH_kEeS5IpkkkJsVew" name="lastName">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YxqrgIcWEeScJq4NWu3qng" name="discount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9MDGHpsEeST-65JbGUt8g" name="searchBookings">

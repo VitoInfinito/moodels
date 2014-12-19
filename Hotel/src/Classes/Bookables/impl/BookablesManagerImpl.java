@@ -4,7 +4,6 @@ package Classes.Bookables.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -30,7 +29,6 @@ import Classes.Bookables.HotelRoom;
 import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.Room;
 import Classes.Bookables.RoomLocation;
-import Classes.Stays.IStays;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +41,6 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	public static BookablesManagerImpl INSTANCE = new BookablesManagerImpl();
 
 	private EMap<String, Bookable> bookables;
-	private IStays iHotelStayManager;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -53,7 +50,6 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 	private BookablesManagerImpl() {
 		super();
 		bookables = new EcoreEMap<String,Bookable>(Classes.ECoreMapEntries.ECoreMapEntriesPackage.Literals.STRING_TO_BOOKABLE_MAP, Classes.ECoreMapEntries.impl.StringToBookableMapImpl.class, this, BookablesPackage.BOOKABLES_MANAGER__BOOKABLES);
-		iHotelStayManager = IStays.INSTANCE;
 	}
 
 	/**
