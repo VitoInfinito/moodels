@@ -183,7 +183,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addBill(List<String> items, List<String> services, String bookable, double discount) {
+	public String addBill(List<String> items, List<String> services, String bookable, double discount) {
 		if (discount < 0 || discount > 1) {
 			logger.warn("The discount {} is not in [0,1].", discount);
 			throw new IllegalArgumentException("Discount should be in [0,1]!");
@@ -220,6 +220,8 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 		bill.setTotalAmount(totalCost);
 		
 		bills.put(ID, bill);
+		
+		return ID;
 	}
 
 	/**

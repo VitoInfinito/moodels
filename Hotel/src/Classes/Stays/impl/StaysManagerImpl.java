@@ -88,9 +88,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- begin-user-doc -->
 	 * Add a new stay
 	 * <!-- end-user-doc -->
+	 * @return 
 	 * @generated NOT
 	 */
-	public void addNewStay(String bookableID, String bookingID, LocalDateTime fromDate, LocalDateTime toDate) {
+	public String addNewStay(String bookableID, String bookingID, LocalDateTime fromDate, LocalDateTime toDate) {
 		String id = generateID();
 		
 		Stay stay = StaysFactory.eINSTANCE.createStay();
@@ -101,6 +102,8 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 		stay.setToDate(toDate);
 		
 		stays.put(id, stay);
+		
+		return id;
 	}
 	
 	private String generateID() {

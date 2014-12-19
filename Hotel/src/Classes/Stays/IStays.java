@@ -69,16 +69,19 @@ public interface IStays extends EObject {
 	 * 		bookableID != null && bookingID != null && fromDate != null && toDate != null && time of from < time of to
 	 * Ensures:
 	 * 		if there exists a bookable such that bookable.id == bookableID && there exists a booking such that booking.id == bookingID
-	 * 			A new stay is added with the bookable belonging to bookableID and the booking belonging to bookingID with the dates fromDate as stay.fromDate and toDate as stay.toDate
+	 * 			A new stay is added with the bookable belonging to bookableID 
+	 * 			and the booking belonging to bookingID with the dates fromDate 
+	 * 			as stay.fromDate and toDate as stay.toDate && the generated stayID is returned
 	 * 		else if there exists a bookable such that bookable.id == bookableID && there does not exist a booking such that booking.id == bookingID
 	 * 			InvalidIDException is received
 	 * 		else if there does not exist a bookable such that bookable.id == bookableID
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
+	 * @return 
 	 * @model bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false" bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false" fromDateRequired="true" fromDateOrdered="false" toDateRequired="true" toDateOrdered="false"
 	 * @generated NOT
 	 */
-	void addNewStay(String bookableID, String bookingID, LocalDateTime fromDate, LocalDateTime toDate);
+	String addNewStay(String bookableID, String bookingID, LocalDateTime fromDate, LocalDateTime toDate);
 
 	/**
 	 * <!-- begin-user-doc -->

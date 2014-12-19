@@ -82,10 +82,11 @@ public interface IBills extends EObject {
 	 * NOTE the the bookable is supplied if the bill is including a bookable, not if the bill is put on a room etc.
 	 * Discount is between 0 and 1.
 	 * <!-- end-user-doc -->
+	 * @return 
 	 * @model itemsDataType="org.eclipse.uml2.types.String" itemsMany="true" itemsOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false" bookableDataType="org.eclipse.uml2.types.String" bookableRequired="true" bookableOrdered="false"
 	 * @generated NOT
 	 */
-	void addBill(List<String> items, List<String> services, @Nullable String bookable, double discount);
+	String addBill(List<String> items, List<String> services, @Nullable String bookable, double discount);
 
 	/**
 	 * <!-- begin-user-doc -->
