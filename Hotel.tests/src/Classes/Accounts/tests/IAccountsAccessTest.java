@@ -3,6 +3,7 @@ package Classes.Accounts.tests;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -16,14 +17,24 @@ public class IAccountsAccessTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		IManageAccounts.INSTANCE.addAccount("Pelle", "s7hhhds", AccountType.GUEST);
-		IManageAccounts.INSTANCE.addAccount("Patrik", "ssdass", AccountType.CUSTOMER_SERVICE);
-		IManageAccounts.INSTANCE.addAccount("Erik", "hfghfghf", AccountType.MANAGER);
-		IManageAccounts.INSTANCE.addAccount("Göran", "hfdbcbv", AccountType.STAFF);
+		
 	}
 	
 	@Before
 	public void setUp() throws Exception {
+		IManageAccounts.INSTANCE.addAccount("Pelle", "s7hhhds", AccountType.GUEST);
+		IManageAccounts.INSTANCE.addAccount("Patrik", "ssdass", AccountType.CUSTOMER_SERVICE);
+		IManageAccounts.INSTANCE.addAccount("Erik", "hfghfghf", AccountType.MANAGER);
+		IManageAccounts.INSTANCE.addAccount("Orvar", "hfdbcbv", AccountType.STAFF);
+	}
+	
+	
+	@After
+	public void tearDown() {
+		IManageAccounts.INSTANCE.deleteAccount("Pelle");
+		IManageAccounts.INSTANCE.deleteAccount("Patrik");
+		IManageAccounts.INSTANCE.deleteAccount("Erik");
+		IManageAccounts.INSTANCE.deleteAccount("Orvar");
 	}
 
 	@Test
@@ -46,19 +57,19 @@ public class IAccountsAccessTest {
 
 	@Test
 	public void testLogin_username_not_exists() {
-		boolean result = IAccountsAccess.INSTANCE.validateAccount("Pelle", "");
+		boolean result = IAccountsAccess.INSTANCE.login("Pelle", "");
 		assertFalse(result);
 	}
 	
 	@Test
 	public void testLogin_username_exists_wrong_password() {
-		boolean result = IAccountsAccess.INSTANCE.validateAccount("Pelle", "s7hh56");
+		boolean result = IAccountsAccess.INSTANCE.login("Pelle", "s7hh56");
 		assertFalse(result);
 	}
 	
 	@Test
 	public void testLogin_username_exists_correct_password() {
-		boolean result = IAccountsAccess.INSTANCE.validateAccount("Pelle", "s7hhhds");
+		boolean result = IAccountsAccess.INSTANCE.login("Pelle", "s7hhhds");
 		assertTrue(result);
 	}
 
@@ -93,7 +104,7 @@ public class IAccountsAccessTest {
 	
 	@Test
 	public void testGetAccountType_username_exists_Staff_expected() {
-		AccountType result = IAccountsAccess.INSTANCE.getAccountType("Göran");
+		AccountType result = IAccountsAccess.INSTANCE.getAccountType("Orvar");
 		assertTrue(result == AccountType.STAFF);
 	}
 }

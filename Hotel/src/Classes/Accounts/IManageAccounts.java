@@ -24,6 +24,9 @@ public interface IManageAccounts extends EObject {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		username != null && password != null
+	 * Ensures:
 	 * <!-- end-user-doc -->
 	 * @model usernameDataType="org.eclipse.uml2.types.String" usernameRequired="true" usernameOrdered="false" passwordDataType="org.eclipse.uml2.types.String" passwordRequired="true" passwordOrdered="false" typeRequired="true" typeOrdered="false"
 	 * @generated

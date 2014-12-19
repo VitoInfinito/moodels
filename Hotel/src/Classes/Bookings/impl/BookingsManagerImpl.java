@@ -81,7 +81,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void makeBooking(EList<String> bookables, String customerID, EList<String> guests, EList<String> requests, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
+	public void makeBooking(List<String> bookables, String customerID, List<String> guests, List<String> requests, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
