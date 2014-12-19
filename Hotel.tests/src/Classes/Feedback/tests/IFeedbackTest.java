@@ -24,20 +24,14 @@ public class IFeedbackTest {
 	}
 	
 	@After
-	public void tearDown() throws Exception {
+	public void tearDown() {
 		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
 		IFeedback.INSTANCE.removeFeedback(id);
 	}
 	
 	@Test
 	public void testGetAllFeedbackIDsEmptyExpectEmpty() {
-		try {
-			tearDown();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+		tearDown();
 		int result = IFeedback.INSTANCE.getAllFeedbackIDs().size();
 		assertTrue(result == 0);
 	}
@@ -131,12 +125,7 @@ public class IFeedbackTest {
 
 	@Test
 	public void testAddFeedback() {
-		try {
-			tearDown();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		tearDown();
 		
 		IFeedback.INSTANCE.addFeedback("bcbcbcbcbc");
 		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);

@@ -326,20 +326,15 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public List<String> getAllHotelStaysWithinPeriod(LocalDateTime from, LocalDateTime to) {
+		List<String> result = new ArrayList<String>();
 		
-		List<String> searchResults = new ArrayList<String>();
-		
-		for (int i = 0; i < stays.keySet().toArray().length; i++) {
-			
-			Stay tmp = (Stay) stays.get(i);
-			
-			if (tmp.getFromDate().isAfter(from) && tmp.getToDate().isBefore(to)) {
-				searchResults.add(tmp.getID());
+		for (Stay stay : stays.values()) {
+			if (stay.getFromDate().isAfter(from) && stay.getFromDate().isBefore(to) && stay.getToDate().isAfter(from) && stay.getToDate().isBefore(to)) {
+				result.add(stay.getID());
 			}
-			
 		}
 		
-		return searchResults;
+		return result;
 	}
 
 	/**
