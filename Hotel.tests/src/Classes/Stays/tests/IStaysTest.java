@@ -2,9 +2,21 @@ package Classes.Stays.tests;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import Classes.Accounts.IManageAccounts;
+import Classes.Bookables.HotelRoom;
+import Classes.Bookables.HotelRoomCategory;
+import Classes.Bookables.IBookablesAccess;
+import Classes.Bookables.IBookablesManage;
+import Classes.Bookings.IBookings;
+import Classes.Stays.IStays;
 
 public class IStaysTest {
 	
@@ -14,6 +26,18 @@ public class IStaysTest {
 
 	@Before
 	public void setUp() throws Exception {
+		String bookable1ID = IBookablesManage.INSTANCE.addHotelRoom("1", 100, "desc", 1, "info", HotelRoomCategory.STANDARD_ROOM, 2);
+		List<String> bookableList1 = new ArrayList<String>();
+		bookableList1.add(bookable1ID);
+		//String booking1ID = IBookings.INSTANCE.makeBooking(bookableList1, customerID, from, to, nbrGuests, ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, discountFactor)
+		//IStays.INSTANCE.addNewStay(room1ID, bookingID, fromDate, toDate)
+	}
+	
+	@After
+	public void tearDown() {
+		for (String id : IStays.INSTANCE.getAllHotelStayIDs()) {
+			IStays.INSTANCE.removeStay(id);
+		}
 	}
 
 	@Test
