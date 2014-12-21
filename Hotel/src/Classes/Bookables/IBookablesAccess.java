@@ -84,7 +84,14 @@ public interface IBookablesAccess extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 
+	 * Requires:
+	 * 		hostelBedID != null
+	 * Ensures:
+	 * 		if there exist an hostelRoomID suchs that hostelRoomID == hostelBedID and that the specific
+	 * 				room is a room containing hostelbeds.
+	 * 			return a non null string id of the room that the hostelbed is placed in
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" exceptions="org.eclipse.uml2.types.InvalidIDException" hostelBedIDDataType="org.eclipse.uml2.types.String" hostelBedIDRequired="true" hostelBedIDOrdered="false"
 	 * @generated NOT
@@ -93,6 +100,14 @@ public interface IBookablesAccess extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		roomID != null
+	 * Ensures:
+	 * 		if there exist an hotelRoomID suchs that hotelRoomID == roomID and that the specific
+	 * 				room is a hotelroom.
+	 * 			return a non null string id of hotel room
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model required="true" ordered="false" exceptions="org.eclipse.uml2.types.InvalidIDException" roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
@@ -101,6 +116,14 @@ public interface IBookablesAccess extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		roomID != null
+	 * Ensures:
+	 * 		if there exist an conferenceRoomID suchs that  conferenceRoomID == roomID and that the specific
+	 * 				room is a conferenceRoom.
+	 * 			return a non null integer of the capacity of the conference room
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
@@ -109,6 +132,14 @@ public interface IBookablesAccess extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		ID != null
+	 * Ensures:
+	 * 		if there exist an hotelRoomID suchs that hotelRoomID == ID and that the specific
+	 * 				room is a hotelroom.
+	 * 			return a non null integer of the number of beds in the specific hotel room
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" IDDataType="org.eclipse.uml2.types.String" IDRequired="true" IDOrdered="false"
 	 * @generated NOT
