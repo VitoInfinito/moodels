@@ -388,7 +388,9 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 		if (stays.contains(keyword)) {
 			LocalDateTime sFrom = stays.get(keyword).getFromDate();
 			LocalDateTime sTo = stays.get(keyword).getToDate();
-			if (sFrom.isAfter(from) && sFrom.isBefore(to) || sTo.isAfter(from) && sTo.isBefore(to)) {
+			if ((sFrom.isAfter(from) && sFrom.isBefore(to)) ||  // Stay begins within period
+				(sTo.isAfter(from) && sTo.isBefore(to))     ||  // Stay ends within period
+				(sFrom.isBefore(from) && sTo.isAfter(to))) {	// Stay starts before the period and ends after the period
 				searchResult.add(keyword);
 			}
 			searchResult.add(keyword);
@@ -398,7 +400,9 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 
 		// Some property match exactly. Second Order!
 		for (Stay b : c) {
-			if (b.getFromDate().isAfter(from) && b.getFromDate().isBefore(to) || b.getToDate().isAfter(from) && b.getToDate().isBefore(to)) {
+			if ((b.getFromDate().isAfter(from) && b.getFromDate().isBefore(to)) ||  // Stay begins within period
+				(b.getToDate().isAfter(from) && b.getToDate().isBefore(to))     ||  // Stay ends within period
+				(b.getFromDate().isBefore(from) && b.getToDate().isAfter(to))) {	  // Stay starts before the period and ends after the period
 				if (b.getBookable().equalsIgnoreCase(keyword)) {
 					searchResult.add(b.getID());
 				} else if (b.getBooking().equalsIgnoreCase(keyword)) {
@@ -425,7 +429,9 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 
 		// ID match somewhat. Third Order!
 		for (Stay b : c) {			
-			if (b.getFromDate().isAfter(from) && b.getFromDate().isBefore(to) || b.getToDate().isAfter(from) && b.getToDate().isBefore(to)) {
+			if ((b.getFromDate().isAfter(from) && b.getFromDate().isBefore(to)) ||  // Stay begins within period
+				(b.getToDate().isAfter(from) && b.getToDate().isBefore(to))     ||  // Stay ends within period
+				(b.getFromDate().isBefore(from) && b.getToDate().isAfter(to))) {	  // Stay starts before the period and ends after the period
 				if (regexPattern.matcher(b.getID()).matches()) {
 					searchResult.add(b.getID());
 				} 
@@ -434,7 +440,9 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 
 		// Some property match somewhat. Fourth Order.
 		for (Stay b : c) {
-			if (b.getFromDate().isAfter(from) && b.getFromDate().isBefore(to) || b.getToDate().isAfter(from) && b.getToDate().isBefore(to)) {
+			if ((b.getFromDate().isAfter(from) && b.getFromDate().isBefore(to)) ||  // Stay begins within period
+				(b.getToDate().isAfter(from) && b.getToDate().isBefore(to))     ||  // Stay ends within period
+				(b.getFromDate().isBefore(from) && b.getToDate().isAfter(to))) {	// Stay starts before the period and ends after the period
 				if (regexPattern.matcher(b.getBookable()).matches()) {
 					searchResult.add(b.getID());
 				} else if (regexPattern.matcher((b.getBooking())).matches()) {
@@ -467,7 +475,9 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 		List<String> result = new ArrayList<String>();
 
 		for (Stay stay : stays.values()) {
-			if (stay.getFromDate().isAfter(from) && stay.getFromDate().isBefore(to) && stay.getToDate().isAfter(from) && stay.getToDate().isBefore(to)) {
+			if ((stay.getFromDate().isAfter(from) && stay.getFromDate().isBefore(to)) ||  // Stay begins within period
+				(stay.getToDate().isAfter(from) && stay.getToDate().isBefore(to))     ||  // Stay ends within period
+				(stay.getFromDate().isBefore(from) && stay.getToDate().isAfter(to))) {	  // Stay starts before the period and ends after the period
 				result.add(stay.getID());
 			}
 		}

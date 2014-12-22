@@ -200,8 +200,9 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 		List<String> available = new ArrayList<String>();
 		Set<String> notAvailable = new LinkedHashSet<String>();
 		for(Reservation reservation : reservations.values()) {
-			if((reservation.getFrom().isAfter(from) && reservation.getFrom().isBefore(to))
-					|| (reservation.getTo().isAfter(from) && reservation.getTo().isBefore(to))) {
+			if ((reservation.getFrom().isAfter(from) && reservation.getFrom().isBefore(to)) ||  // Reservation begins within period
+				(reservation.getTo().isAfter(from) && reservation.getTo().isBefore(to))     ||  // Reservation ends within period
+				(reservation.getFrom().isBefore(from) && reservation.getTo().isAfter(to))) {    // Reservation starts before the period and ends after the period
 				for(RestaurantTable table : reservation.getTables()) {
 					if(!notAvailable.contains(table.getTableNumber())) {
 						notAvailable.add(table.getTableNumber());
@@ -378,8 +379,10 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 		List<String> temp = searchReservations(keyword);
 		List<String> result = new ArrayList<String>(temp.size());
 		for (String resID : temp) {
-			Reservation res = getReservation(resID);
-			if (res.getFrom().isAfter(from) && res.getFrom().isBefore(to) && res.getTo().isAfter(from) && res.getTo().isBefore(to)) {
+			Reservation reservation = getReservation(resID);
+			if ((reservation.getFrom().isAfter(from) && reservation.getFrom().isBefore(to)) ||  // Reservation begins within period
+				(reservation.getTo().isAfter(from) && reservation.getTo().isBefore(to))     ||  // Reservation ends within period
+				(reservation.getFrom().isBefore(from) && reservation.getTo().isAfter(to))) {    // Reservation starts before the period and ends after the period
 				result.add(resID);
 			}	
 		}

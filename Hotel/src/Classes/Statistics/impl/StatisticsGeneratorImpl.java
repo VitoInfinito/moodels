@@ -4,6 +4,7 @@ package Classes.Statistics.impl;
 
 
 import java.time.LocalDateTime;
+import java.util.LinkedHashMap;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -14,9 +15,9 @@ import org.slf4j.LoggerFactory;
 import Classes.Bills.IBills;
 import Classes.Bookings.IBookings;
 import Classes.Staff.IStaff;
-import Classes.Statistics.Statistic;
 import Classes.Statistics.StatisticsGenerator;
 import Classes.Statistics.StatisticsPackage;
+import Classes.Stays.IStays;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,6 +32,7 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	private IBills iBillsAccess;
 	private IBookings iBooking;
 	private IStaff iStaff;
+	private IStays iStays;
 	private double staticExpenses;
 
 	/**
@@ -43,6 +45,7 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 		iBillsAccess = IBills.INSTANCE;
 		iBooking = IBookings.INSTANCE;
 		iStaff = IStaff.INSTANCE;
+		iStays = IStays.INSTANCE;
 	}
 
 
@@ -72,10 +75,23 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Statistic getOccupancyStatistics(LocalDateTime from, LocalDateTime to) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public LinkedHashMap<LocalDateTime, Integer> getOccupancyStatistics(LocalDateTime from, LocalDateTime to) {
+		LinkedHashMap<LocalDateTime, Integer> map = new LinkedHashMap<LocalDateTime, Integer>();
+		
+		LocalDateTime entryDate = LocalDateTime.of(from.getYear(), from.getMonth(), from.getDayOfMonth(), 0, 0);
+		int entryValue = 0;
+		
+		while (entryDate.isBefore(to)) {
+			for (String booking : iBooking.getAllBookingsWithStaysInPeriod(entryDate, entryDate.plusDays(1).minusNanos(1))) {
+				entryValue += iBooking.getNbrGuestOfBooking(booking);
+			}
+			map.put(entryDate, entryValue);
+			
+			entryDate = entryDate.plusDays(1);
+			entryValue = 0;
+		}
+		
+		return map;
 	}
 
 	/**
@@ -83,10 +99,26 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Statistic getRevenueStatistics(LocalDateTime from, LocalDateTime to) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public LinkedHashMap<LocalDateTime, Double> getRevenueStatistics(LocalDateTime from, LocalDateTime to) {
+		LinkedHashMap<LocalDateTime, Double> map = new LinkedHashMap<LocalDateTime, Double>();
+		
+		LocalDateTime entryDate = LocalDateTime.of(from.getYear(), from.getMonth(), from.getDayOfMonth(), 0, 0);
+		double entryValue = 0;
+		
+		while (entryDate.isBefore(to)) {
+			for (String bill : iBillsAccess.getAllPayedBills()) {
+				LocalDateTime paymentDate = iBillsAccess.getBillPaymentDate(bill);
+				if (paymentDate.isAfter(entryDate) && paymentDate.isBefore(entryDate.plusDays(1).minusNanos(1))) { // Payed within period
+					entryValue += iBillsAccess.getBillTotalAmount(bill);
+				}
+			}
+			map.put(entryDate, entryValue);
+			
+			entryDate = entryDate.plusDays(1);
+			entryValue = 0;
+		}
+		
+		return map;
 	}
 
 	/**
@@ -94,7 +126,7 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Statistic getProfitStatistics(LocalDateTime from, LocalDateTime to) {
+	public LinkedHashMap<LocalDateTime, Double> getProfitStatistics(LocalDateTime from, LocalDateTime to) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

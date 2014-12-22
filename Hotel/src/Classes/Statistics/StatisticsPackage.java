@@ -55,7 +55,7 @@ public interface StatisticsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	StatisticsPackage eINSTANCE = Classes.Statistics.impl.StatisticsPackageImpl.init();
+	StatisticsPackage eINSTANCE = null;
 
 	/**
 	 * The meta object id for the '{@link Classes.Statistics.impl.StatisticImpl <em>Statistic</em>}' class.
@@ -531,15 +531,6 @@ public interface StatisticsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getStatisticsGenerator_StaticExpenses();
-
-	/**
-	 * Returns the factory that creates the instances of the model.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the factory that creates the instances of the model.
-	 * @generated
-	 */
-	StatisticsFactory getStatisticsFactory();
 
 	/**
 	 * <!-- begin-user-doc -->

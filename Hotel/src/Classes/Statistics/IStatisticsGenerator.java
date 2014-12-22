@@ -4,6 +4,7 @@ package Classes.Statistics;
 
 
 import java.time.LocalDateTime;
+import java.util.LinkedHashMap;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
@@ -29,7 +30,7 @@ public interface IStatisticsGenerator extends EObject {
 	 * @model required="true" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	Statistic getOccupancyStatistics(LocalDateTime from, LocalDateTime to);
+	LinkedHashMap<LocalDateTime, Integer> getOccupancyStatistics(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -37,7 +38,7 @@ public interface IStatisticsGenerator extends EObject {
 	 * @model required="true" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	Statistic getRevenueStatistics(LocalDateTime from, LocalDateTime to);
+	LinkedHashMap<LocalDateTime, Double> getRevenueStatistics(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,6 +46,6 @@ public interface IStatisticsGenerator extends EObject {
 	 * @model required="true" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	Statistic getProfitStatistics(LocalDateTime from, LocalDateTime to);
+	LinkedHashMap<LocalDateTime, Double> getProfitStatistics(LocalDateTime from, LocalDateTime to);
 
 } // IStatisticsGenerator
