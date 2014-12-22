@@ -4,12 +4,14 @@ package Classes.Stays.impl;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Collection;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.regex.Pattern;
 
 import javax.xml.soap.SOAPException;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreEMap;
@@ -40,9 +42,9 @@ import Classes.Stays.StaysPackage;
 public class StaysManagerImpl extends MinimalEObjectImpl.Container implements StaysManager {
 	private final Logger logger = LoggerFactory.getLogger(StaysManagerImpl.class);
 	public static StaysManagerImpl INSTANCE = new StaysManagerImpl();
-	
+
 	private static int IDCounter = 0;
-	
+
 	private EMap<String, Stay> stays;
 	private IBills iBills;
 	private IGuests iGuests;
@@ -93,19 +95,19 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	public String addNewStay(String bookableID, String bookingID, LocalDateTime fromDate, LocalDateTime toDate) {
 		String id = generateID();
-		
+
 		Stay stay = StaysFactory.eINSTANCE.createStay();
 		stay.setID(id);
 		stay.setBookable(bookableID);
 		stay.setBooking(bookingID);
 		stay.setFromDate(fromDate);
 		stay.setToDate(toDate);
-		
+
 		stays.put(id, stay);
-		
+
 		return id;
 	}
-	
+
 	private String generateID() {
 		return String.format("st%06d", IDCounter++);
 	}
@@ -163,13 +165,13 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
 		} else {
-			
+
 			CustomerRequires customerReq = CustomerRequires.instance();
 			if (!customerReq.isCreditCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName)) {
 				logger.warn("This credit card is not valid.");
 				throw new InvalidCreditCardException();
 			}
-			
+
 			CreditCard creditCard = StaysFactory.eINSTANCE.createCreditCard();
 			creditCard.setCcNumber(ccNumber);
 			creditCard.setCcv(ccv);
@@ -193,13 +195,13 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
 		} else {
-			
+
 			CustomerRequires customerReq = CustomerRequires.instance();
 			if (!customerReq.isCreditCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName)) {
 				logger.warn("This credit card is not valid.");
 				throw new InvalidCreditCardException();
 			}
-			
+
 			CreditCard creditCard = StaysFactory.eINSTANCE.createCreditCard();
 			creditCard.setCcNumber(ccNumber);
 			creditCard.setCcv(ccv);
@@ -304,9 +306,72 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public List<String> searchHotelStays(String keyword) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
+
+		// Exact ID match. First Order!
+		if (stays.contains(keyword)) {
+			searchResult.add(keyword);
+		}
+
+		Collection<Stay> c = stays.values();
+
+		// Some property match exactly. Second Order!
+		for (Stay b : c) {
+			if (b.getBookable().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getID());
+			} else if (b.getBooking().equalsIgnoreCase(keyword)) {
+				searchResult.add(b.getID());
+			} else if (b.getCheckedInGuests().contains(keyword)) {
+				searchResult.add(b.getID());
+			} else if (b.getCheckedOutGuests().contains(keyword)) {
+				searchResult.add(b.getID());
+			} else {
+				for (String guest : b.getCheckedInGuests()) {
+					if (iGuests.getGuestFirstName(guest).equalsIgnoreCase(keyword)) {
+						searchResult.add(b.getID());
+					} else if (iGuests.getGuestLastName(guest).equalsIgnoreCase(keyword)) {
+						searchResult.add(b.getID());
+					} else if (iGuests.getGuestEmail(guest).equalsIgnoreCase(keyword)) {
+						searchResult.add(b.getID());
+					} else if (iGuests.getGuestPhone(guest).equalsIgnoreCase(keyword)) {
+						searchResult.add(b.getID());
+					} 
+				}
+			}
+
+		}		
+
+		// ID match somewhat. Third Order!
+		for (Stay b : c) {			
+			if (regexPattern.matcher(b.getID()).matches()) {
+				searchResult.add(b.getID());
+			} 
+		}
+
+		// Some property match somewhat. Fourth Order.
+		for (Stay b : c) {
+			if (regexPattern.matcher(b.getBookable()).matches()) {
+				searchResult.add(b.getID());
+			} else if (regexPattern.matcher((b.getBooking())).matches()) {
+				searchResult.add(b.getID());
+			} else {
+				for (String guest : b.getCheckedInGuests()) {
+					if (regexPattern.matcher(iGuests.getGuestFirstName(guest)).matches()) {
+						searchResult.add(b.getID());
+					} else if (regexPattern.matcher(iGuests.getGuestLastName(guest)).matches()) {
+						searchResult.add(b.getID());
+					} else if (regexPattern.matcher(iGuests.getGuestEmail(guest)).matches()) {
+						searchResult.add(b.getID());
+					} else if (regexPattern.matcher(iGuests.getGuestPhone(guest)).matches()) {
+						searchResult.add(b.getID());
+					} 
+				}
+			}
+		}
+
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -315,9 +380,82 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated NOT
 	 */
 	public List<String> searchHotelStaysWithinPeriod(String keyword, LocalDateTime from, LocalDateTime to) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		keyword = keyword.trim();
+		Set<String> searchResult = new LinkedHashSet<String>();
+		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
+
+		// Exact ID match. First Order!
+		if (stays.contains(keyword)) {
+			LocalDateTime sFrom = stays.get(keyword).getFromDate();
+			LocalDateTime sTo = stays.get(keyword).getToDate();
+			if (sFrom.isAfter(from) && sFrom.isBefore(to) || sTo.isAfter(from) && sTo.isBefore(to)) {
+				searchResult.add(keyword);
+			}
+			searchResult.add(keyword);
+		}
+
+		Collection<Stay> c = stays.values();
+
+		// Some property match exactly. Second Order!
+		for (Stay b : c) {
+			if (b.getFromDate().isAfter(from) && b.getFromDate().isBefore(to) || b.getToDate().isAfter(from) && b.getToDate().isBefore(to)) {
+				if (b.getBookable().equalsIgnoreCase(keyword)) {
+					searchResult.add(b.getID());
+				} else if (b.getBooking().equalsIgnoreCase(keyword)) {
+					searchResult.add(b.getID());
+				} else if (b.getCheckedInGuests().contains(keyword)) {
+					searchResult.add(b.getID());
+				} else if (b.getCheckedOutGuests().contains(keyword)) {
+					searchResult.add(b.getID());
+				} else {
+					for (String guest : b.getCheckedInGuests()) {
+						if (iGuests.getGuestFirstName(guest).equalsIgnoreCase(keyword)) {
+							searchResult.add(b.getID());
+						} else if (iGuests.getGuestLastName(guest).equalsIgnoreCase(keyword)) {
+							searchResult.add(b.getID());
+						} else if (iGuests.getGuestEmail(guest).equalsIgnoreCase(keyword)) {
+							searchResult.add(b.getID());
+						} else if (iGuests.getGuestPhone(guest).equalsIgnoreCase(keyword)) {
+							searchResult.add(b.getID());
+						} 
+					}
+				}
+			}
+		}		
+
+		// ID match somewhat. Third Order!
+		for (Stay b : c) {			
+			if (b.getFromDate().isAfter(from) && b.getFromDate().isBefore(to) || b.getToDate().isAfter(from) && b.getToDate().isBefore(to)) {
+				if (regexPattern.matcher(b.getID()).matches()) {
+					searchResult.add(b.getID());
+				} 
+			}
+		}
+
+		// Some property match somewhat. Fourth Order.
+		for (Stay b : c) {
+			if (b.getFromDate().isAfter(from) && b.getFromDate().isBefore(to) || b.getToDate().isAfter(from) && b.getToDate().isBefore(to)) {
+				if (regexPattern.matcher(b.getBookable()).matches()) {
+					searchResult.add(b.getID());
+				} else if (regexPattern.matcher((b.getBooking())).matches()) {
+					searchResult.add(b.getID());
+				} else {
+					for (String guest : b.getCheckedInGuests()) {
+						if (regexPattern.matcher(iGuests.getGuestFirstName(guest)).matches()) {
+							searchResult.add(b.getID());
+						} else if (regexPattern.matcher(iGuests.getGuestLastName(guest)).matches()) {
+							searchResult.add(b.getID());
+						} else if (regexPattern.matcher(iGuests.getGuestEmail(guest)).matches()) {
+							searchResult.add(b.getID());
+						} else if (regexPattern.matcher(iGuests.getGuestPhone(guest)).matches()) {
+							searchResult.add(b.getID());
+						} 
+					}
+				}
+			}
+		}
+
+		return new ArrayList<String>(searchResult);
 	}
 
 	/**
@@ -327,13 +465,13 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	public List<String> getAllHotelStaysWithinPeriod(LocalDateTime from, LocalDateTime to) {
 		List<String> result = new ArrayList<String>();
-		
+
 		for (Stay stay : stays.values()) {
 			if (stay.getFromDate().isAfter(from) && stay.getFromDate().isBefore(to) && stay.getToDate().isAfter(from) && stay.getToDate().isBefore(to)) {
 				result.add(stay.getID());
 			}
 		}
-		
+
 		return result;
 	}
 
@@ -345,14 +483,14 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	public List<String> getAllUnpayedBillsOfHotelStay(String stayID) {
 		if (stays.contains(stayID)) {
 			List<String> unpaid = new ArrayList<String>();
-			
+
 			List<String> bills = stays.get(stayID).getBills();
-			
+
 			for (String billID : bills) {
 				if (!iBills.getIsBillPaid(billID))
 					unpaid.add(billID);
 			}
-			
+
 			return unpaid;
 		} else {
 			logger.warn("A stay with ID {} does not exist.", stayID);
@@ -402,7 +540,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	public void changePeriodOfStay(String stayID, LocalDateTime from, LocalDateTime to) {
 		Stay stay = stays.get(stayID);
-		
+
 		if (stay != null) {
 			stay.setFromDate(from);
 			stay.setToDate(to);
