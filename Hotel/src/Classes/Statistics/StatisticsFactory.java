@@ -20,22 +20,4 @@ public interface StatisticsFactory extends EFactory {
 	 * @generated
 	 */
 	StatisticsFactory eINSTANCE = Classes.Statistics.impl.StatisticsFactoryImpl.init();
-
-	/**
-	 * Returns a new object of class '<em>Statistic</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Statistic</em>'.
-	 * @generated
-	 */
-	Statistic createStatistic();
-
-	/**
-	 * Returns a new object of class '<em>Statistic Entry</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Statistic Entry</em>'.
-	 * @generated
-	 */
-	StatisticEntry createStatisticEntry();
 } //StatisticsFactory

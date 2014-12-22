@@ -38,7 +38,6 @@ import Classes.Services.impl.ServicesPackageImpl;
 import Classes.Staff.StaffPackage;
 import Classes.Staff.impl.StaffPackageImpl;
 import Classes.Statistics.IStatisticsGenerator;
-import Classes.Statistics.Statistic;
 import Classes.Statistics.StatisticEntry;
 import Classes.Statistics.StatisticsFactory;
 import Classes.Statistics.StatisticsGenerator;
@@ -447,16 +446,6 @@ public class StatisticsPackageImpl extends EPackageImpl implements StatisticsPac
 		statisticsGeneratorEClass.getESuperTypes().add(this.getIStatisticsGenerator());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(statisticEClass, Statistic.class, "Statistic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStatistic_Type(), theTypesPackage.getString(), "type", null, 1, 1, Statistic.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getStatistic_StatisticEntry(), this.getStatisticEntry(), null, "statisticEntry", null, 0, -1, Statistic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getStatistic_FromDate(), this.getDate(), null, "fromDate", null, 1, 1, Statistic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getStatistic_ToDate(), this.getDate(), null, "toDate", null, 1, 1, Statistic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(statisticEntryEClass, StatisticEntry.class, "StatisticEntry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStatisticEntry_Value(), theTypesPackage.getReal(), "value", null, 1, 1, StatisticEntry.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getStatisticEntry_DateOfEntry(), this.getDate(), null, "dateOfEntry", null, 1, 1, StatisticEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
 		initEClass(iStatisticsGeneratorEClass, IStatisticsGenerator.class, "IStatisticsGenerator", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getIStatisticsGenerator__GetOccupancyStatistics__Date_Date(), this.getStatistic(), "getOccupancyStatistics", 1, 1, IS_UNIQUE, !IS_ORDERED);

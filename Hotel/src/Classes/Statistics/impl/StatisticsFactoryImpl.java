@@ -6,8 +6,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import Classes.Statistics.Statistic;
-import Classes.Statistics.StatisticEntry;
 import Classes.Statistics.StatisticsFactory;
 import Classes.Statistics.StatisticsPackage;
 
@@ -45,25 +43,5 @@ public class StatisticsFactoryImpl extends EFactoryImpl implements StatisticsFac
 	 */
 	private StatisticsFactoryImpl() {
 		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Statistic createStatistic() {
-		StatisticImpl statistic = new StatisticImpl();
-		return statistic;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StatisticEntry createStatisticEntry() {
-		StatisticEntryImpl statisticEntry = new StatisticEntryImpl();
-		return statisticEntry;
 	}
 } //StatisticsFactoryImpl
