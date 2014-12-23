@@ -57,7 +57,7 @@ public class HourlySalaryContractImpl extends SalaryContractImpl implements Hour
 	 */
 	@Override
 	public String getType() {
-		return this.getClass().getName();
+		return "Hourly";
 	}
 
 	/**

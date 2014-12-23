@@ -57,7 +57,7 @@ public class MonthlySalaryContractImpl extends SalaryContractImpl implements Mon
 	 */
 	@Override
 	public String getType() {
-		return this.getClass().getName();
+		return "Monthly";
 	}
 
 	/**
