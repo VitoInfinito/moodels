@@ -3,9 +3,9 @@
 package Classes.Bills.impl;
 
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -183,7 +183,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public String addBill(List<String> items, List<String> services, String bookable, double discount) {
+	public String addBill(List<String> items, List<String> services, String bookable, LocalDateTime from, LocalDateTime to, double discount) {
 		if (discount < 0 || discount > 1) {
 			logger.warn("The discount {} is not in [0,1].", discount);
 			throw new IllegalArgumentException("Discount should be in [0,1]!");
@@ -196,12 +196,13 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 		bill.setId(ID);
 		bill.setIsPaid(false);
 		bill.setIssueDate(LocalDateTime.now());
+		bill.setDiscount(discount);
 		
 		// Calculate total cost
 		double totalCost = 0;
 		
 		if (bookable != null) {
-			totalCost += bookablesAccess.getBookableBasePrice(bookable);
+			totalCost += bookablesAccess.getBookableBasePrice(bookable) * from.until(to, ChronoUnit.DAYS);
 			bill.setBookable(bookable);
 		}
 		
@@ -381,6 +382,16 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	public double getBillTotalAmount(String billID) {
 		if (bills.containsKey(billID)) {
 			return bills.get(billID).getTotalAmount();
+		} else {
+			logger.warn("A bill with id {} could not be found.", billID);
+			throw new InvalidIDException();
+		}
+	}
+
+	@Override
+	public double getBillDiscount(String billID) {
+		if (bills.containsKey(billID)) {
+			return bills.get(billID).getDiscount();
 		} else {
 			logger.warn("A bill with id {} could not be found.", billID);
 			throw new InvalidIDException();

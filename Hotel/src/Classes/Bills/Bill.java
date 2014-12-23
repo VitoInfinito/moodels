@@ -261,5 +261,19 @@ public interface Bill extends EObject {
 	 * @generated
 	 */
 	void addService(String serviceID);
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	double getDiscount();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	void setDiscount(double newDiscount);
 
 } // Bill

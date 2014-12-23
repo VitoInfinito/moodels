@@ -57,7 +57,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	private ICustomers iCustomer;
 	private IBills iBills;
 	private IRequests iRequests;
-	
+
 	private static int IDCounter = 1;
 
 	/**
@@ -103,21 +103,23 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 			logger.warn("Tried to make a booking when one or more of the bookables is already booked in the specified period!");
 			throw new InvalidIDException();
 		}
-		
+
 		Booking booking = BookingsFactory.eINSTANCE.createBooking();
-		
+
 		String bookingNbr = generateBookingNbr();
-		
+
 		booking.setBookingNbr(bookingNbr);
-		
+
 		for (String bookableID : bookables) {
 			String stayID = iHotelStayManager.addNewStay(bookableID, bookingNbr, from, to);
 			booking.addBookedStay(stayID);
-			iHotelStayManager.addBillToStay(stayID, iBills.addBill(new ArrayList<String>(), new ArrayList<String>(), bookableID, discount));
+			iHotelStayManager.addBillToStay(stayID, iBills.addBill(new ArrayList<String>(), new ArrayList<String>(), bookableID, from, to, discount));
 		}
-		
+
 		iCustomer.addCustomerBooking(customerID, bookingNbr);
-		
+
+		bookings.put(bookingNbr, booking);
+
 		return bookingNbr;
 	}
 
@@ -268,12 +270,26 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void addBookedStayToBooking(String bookingID, String stayID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void addBookedStayToBooking(String bookingID, String bookableID, LocalDateTime from, LocalDateTime to, double discount) {
+		if (!bookings.containsKey(bookingID)) {
+			logger.warn("A booking with bookingID {} could not be found.", bookingID);
+			throw new InvalidIDException();
+		} else if (discount < 0 || discount > 1) {
+			logger.warn("The discount {} is not in [0,1].", discount);
+			throw new IllegalArgumentException("Discount should be in [0,1]!");
+		} else if (from.isAfter(to)) {
+			logger.warn("Tried to add a new stay to an existing booking when the from date: {} is after the to date: {}!", from, to);
+			throw new IllegalArgumentException();
+		} else if (!getAvailableBookablesInPeriod(from, to).contains(bookableID)) {
+			logger.warn("Tried to add a new stay to an existing booking when the supplies bookables is already booked in the specified period!");
+			throw new InvalidIDException();
+		}
+
+		String stayID = iHotelStayManager.addNewStay(bookableID, bookingID, from, to);
+		bookings.get(bookingID).addBookedStay(stayID);
+		iHotelStayManager.addBillToStay(stayID, iBills.addBill(new ArrayList<String>(), new ArrayList<String>(), bookableID, from, to, discount));
 	}
 
 	/**

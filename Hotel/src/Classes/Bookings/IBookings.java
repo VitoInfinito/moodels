@@ -94,7 +94,7 @@ public interface IBookings extends EObject {
 	 * @model bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated
 	 */
-	void addBookedStayToBooking(String bookingID, String stayID);
+	void addBookedStayToBooking(String bookingID, String bookableID, LocalDateTime from, LocalDateTime to, double discount);
 
 	/**
 	 * <!-- begin-user-doc -->

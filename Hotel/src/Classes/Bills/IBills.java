@@ -79,14 +79,16 @@ public interface IBills extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * NOTE the the bookable is supplied if the bill is including a bookable, not if the bill is put on a room etc.
+	 * NOTE the the bookable and the from and to dates are supplied if the bill is including a bookable, not if the bill is put on a room etc.
 	 * Discount is between 0 and 1.
 	 * <!-- end-user-doc -->
+	 * @param to 
+	 * @param from 
 	 * @return 
 	 * @model itemsDataType="org.eclipse.uml2.types.String" itemsMany="true" itemsOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false" bookableDataType="org.eclipse.uml2.types.String" bookableRequired="true" bookableOrdered="false"
 	 * @generated NOT
 	 */
-	String addBill(List<String> items, List<String> services, @Nullable String bookable, double discount);
+	String addBill(List<String> items, List<String> services, @Nullable String bookable, @Nullable LocalDateTime from, @Nullable LocalDateTime to, double discount);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -168,5 +170,13 @@ public interface IBills extends EObject {
 	 * @generated
 	 */
 	double getBillTotalAmount(String billID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
+	 * @generated
+	 */
+	double getBillDiscount(String billID);
 
 } // IBills

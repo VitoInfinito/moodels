@@ -30,6 +30,7 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	private LocalDateTime issueDate;
 	private LocalDateTime paymentDate;
 	private double totalAmount;
+	private double discount;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -205,6 +206,24 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 		totalAmount = newTotalAmount;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BillsPackage.BILL__TOTAL_AMOUNT, oldTotalAmount, totalAmount));
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public double getDiscount() {
+		return totalAmount;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDiscount(double newDiscount) {
+		discount = newDiscount;
 	}
 
 	/**

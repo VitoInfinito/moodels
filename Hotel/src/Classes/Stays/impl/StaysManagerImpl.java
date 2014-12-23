@@ -23,6 +23,7 @@ import Classes.InsufficientFundsException;
 import Classes.InvalidCreditCardException;
 import Classes.InvalidIDException;
 import Classes.Bills.IBills;
+import Classes.Bookings.IBookings;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToStayMapImpl;
 import Classes.Guests.IGuests;
@@ -48,6 +49,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	private EMap<String, Stay> stays;
 	private IBills iBills;
 	private IGuests iGuests;
+	private IBookings iBookings;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -59,6 +61,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 		stays = new EcoreEMap<String,Stay>(ECoreMapEntriesPackage.Literals.STRING_TO_STAY_MAP, StringToStayMapImpl.class, this, StaysPackage.STAYS_MANAGER__STAYS);
 		iBills = IBills.INSTANCE;
 		iGuests = IGuests.INSTANCE;
+		iBookings = IBookings.INSTANCE;
 	}
 
 	/**
@@ -79,6 +82,26 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 */
 	public void changeBookableOfStay(String stayID, String bookableID) {
 		if (stays.contains(stayID)) {
+			Stay stay = stays.get(stayID);
+			if (!iBookings.getAvailableBookablesInPeriod(stay.getFromDate(), stay.getToDate()).contains(bookableID)) {
+				logger.warn("Tried to change the bookable of a stay when the bookable is already booked within the period of the stay!");
+				throw new InvalidIDException();
+			}
+
+			// Remove the old bill for the old bookable
+			String oldBill = "";
+			for (String bill : stay.getBills()) {
+				if (iBills.getBillBookable(bill) != null) {
+					removeBillFromStay(stayID, bill);
+					oldBill = bill;
+					// There can only be one such bill per stay so just break..
+					break;
+				}
+			}
+
+			// Add a new bill for the new bookable
+			addBillToStay(stayID, iBills.addBill(new ArrayList<String>(), new ArrayList<String>(), bookableID, stay.getFromDate(), stay.getToDate(), iBills.getBillDiscount(oldBill)));
+
 			stays.get(stayID).setBookable(bookableID);
 		} else {
 			logger.warn("A stay with ID {} could not be found.", stayID);
@@ -389,8 +412,8 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 			LocalDateTime sFrom = stays.get(keyword).getFromDate();
 			LocalDateTime sTo = stays.get(keyword).getToDate();
 			if ((sFrom.isAfter(from) && sFrom.isBefore(to)) ||  // Stay begins within period
-				(sTo.isAfter(from) && sTo.isBefore(to))     ||  // Stay ends within period
-				(sFrom.isBefore(from) && sTo.isAfter(to))) {	// Stay starts before the period and ends after the period
+					(sTo.isAfter(from) && sTo.isBefore(to))     ||  // Stay ends within period
+					(sFrom.isBefore(from) && sTo.isAfter(to))) {	// Stay starts before the period and ends after the period
 				searchResult.add(keyword);
 			}
 			searchResult.add(keyword);
@@ -401,8 +424,8 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 		// Some property match exactly. Second Order!
 		for (Stay b : c) {
 			if ((b.getFromDate().isAfter(from) && b.getFromDate().isBefore(to)) ||  // Stay begins within period
-				(b.getToDate().isAfter(from) && b.getToDate().isBefore(to))     ||  // Stay ends within period
-				(b.getFromDate().isBefore(from) && b.getToDate().isAfter(to))) {	  // Stay starts before the period and ends after the period
+					(b.getToDate().isAfter(from) && b.getToDate().isBefore(to))     ||  // Stay ends within period
+					(b.getFromDate().isBefore(from) && b.getToDate().isAfter(to))) {	  // Stay starts before the period and ends after the period
 				if (b.getBookable().equalsIgnoreCase(keyword)) {
 					searchResult.add(b.getID());
 				} else if (b.getBooking().equalsIgnoreCase(keyword)) {
@@ -430,8 +453,8 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 		// ID match somewhat. Third Order!
 		for (Stay b : c) {			
 			if ((b.getFromDate().isAfter(from) && b.getFromDate().isBefore(to)) ||  // Stay begins within period
-				(b.getToDate().isAfter(from) && b.getToDate().isBefore(to))     ||  // Stay ends within period
-				(b.getFromDate().isBefore(from) && b.getToDate().isAfter(to))) {	  // Stay starts before the period and ends after the period
+					(b.getToDate().isAfter(from) && b.getToDate().isBefore(to))     ||  // Stay ends within period
+					(b.getFromDate().isBefore(from) && b.getToDate().isAfter(to))) {	  // Stay starts before the period and ends after the period
 				if (regexPattern.matcher(b.getID()).matches()) {
 					searchResult.add(b.getID());
 				} 
@@ -441,8 +464,8 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 		// Some property match somewhat. Fourth Order.
 		for (Stay b : c) {
 			if ((b.getFromDate().isAfter(from) && b.getFromDate().isBefore(to)) ||  // Stay begins within period
-				(b.getToDate().isAfter(from) && b.getToDate().isBefore(to))     ||  // Stay ends within period
-				(b.getFromDate().isBefore(from) && b.getToDate().isAfter(to))) {	// Stay starts before the period and ends after the period
+					(b.getToDate().isAfter(from) && b.getToDate().isBefore(to))     ||  // Stay ends within period
+					(b.getFromDate().isBefore(from) && b.getToDate().isAfter(to))) {	// Stay starts before the period and ends after the period
 				if (regexPattern.matcher(b.getBookable()).matches()) {
 					searchResult.add(b.getID());
 				} else if (regexPattern.matcher((b.getBooking())).matches()) {
@@ -476,8 +499,8 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 
 		for (Stay stay : stays.values()) {
 			if ((stay.getFromDate().isAfter(from) && stay.getFromDate().isBefore(to)) ||  // Stay begins within period
-				(stay.getToDate().isAfter(from) && stay.getToDate().isBefore(to))     ||  // Stay ends within period
-				(stay.getFromDate().isBefore(from) && stay.getToDate().isAfter(to))) {	  // Stay starts before the period and ends after the period
+					(stay.getToDate().isAfter(from) && stay.getToDate().isBefore(to))     ||  // Stay ends within period
+					(stay.getFromDate().isBefore(from) && stay.getToDate().isAfter(to))) {	  // Stay starts before the period and ends after the period
 				result.add(stay.getID());
 			}
 		}
@@ -552,8 +575,54 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 		Stay stay = stays.get(stayID);
 
 		if (stay != null) {
+			// Check if period is outside of the old period
+			if (stay.getFromDate().isBefore(from) && stay.getToDate().isBefore(from) || stay.getFromDate().isAfter(to) && stay.getToDate().isAfter(to)) {
+				// Ensure that the bookable is free in the new period
+				if (!iBookings.getAvailableBookablesInPeriod(from, to).contains(stay.getBookable())) {
+					logger.warn("Tried to change the period of a stay when the bookable is already booked in the requested period!");
+					throw new InvalidIDException();
+				}
+				// Check if new period interleaves the old period with a sooner start time
+			} else if (stay.getFromDate().isBefore(from) && stay.getToDate().isAfter(from) && stay.getToDate().isBefore(to)) {
+				// Ensure that the bookable is free for the new earlier days
+				if (!iBookings.getAvailableBookablesInPeriod(from, stay.getFromDate().minusNanos(1)).contains(stay.getBookable())) {
+					logger.warn("Tried to change the period of a stay when the bookable is already booked in the requested period!");
+					throw new InvalidIDException();
+				}
+				// Check if new period interleaves the old period with a later end time
+			} else if (stay.getFromDate().isAfter(from) && stay.getFromDate().isBefore(to) && stay.getToDate().isAfter(to)) {
+				// Ensure that the bookable is free for the new later days
+				if (!iBookings.getAvailableBookablesInPeriod(stay.getToDate().plusNanos(1), to).contains(stay.getBookable())) {
+					logger.warn("Tried to change the period of a stay when the bookable is already booked in the requested period!");
+					throw new InvalidIDException();
+				}
+				// Check if new period interleaves the old period with a sooner start time and a later end time
+			} else if (stay.getFromDate().isBefore(from) && stay.getToDate().isAfter(to)) {
+				// Ensure that the bookable is free for the new days outside the old booked period
+				if (!iBookings.getAvailableBookablesInPeriod(stay.getToDate().plusNanos(1), to).contains(stay.getBookable()) || !iBookings.getAvailableBookablesInPeriod(from, stay.getFromDate().minusNanos(1)).contains(stay.getBookable())) {
+					logger.warn("Tried to change the period of a stay when the bookable is already booked in the requested period!");
+					throw new InvalidIDException();
+				}
+			}
+
+			// Checks passed.. Conclusion -> The room is free for the specified period and the period can be changed accordingly.
+
 			stay.setFromDate(from);
 			stay.setToDate(to);
+
+			// Remove the old bill for the old bookable
+			String oldBill = "";
+			for (String bill : stay.getBills()) {
+				if (iBills.getBillBookable(bill) != null) {
+					removeBillFromStay(stayID, bill);
+					oldBill = bill;
+					// There can only be one such bill per stay so just break..
+					break;
+				}
+			}
+
+			// Add a new bill for the new bookable
+			addBillToStay(stayID, iBills.addBill(new ArrayList<String>(), new ArrayList<String>(), stay.getBookable(), from, to, iBills.getBillDiscount(oldBill)));
 		} else {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
