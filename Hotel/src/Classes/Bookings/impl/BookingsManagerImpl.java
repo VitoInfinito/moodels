@@ -251,9 +251,29 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public void cancelBooking(String bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (!bookings.containsKey(bookingID)) {
+			logger.warn("A booking with bookingID {} could not be found.", bookingID);
+			throw new InvalidIDException();
+		} 
+		
+		Booking booking = bookings.get(bookingID);
+		List<String> stays = booking.getBookedStays();
+		for (String stay : stays) {
+			if (!iHotelStayManager.getCheckedInGuestsOfHotelStay(stay).isEmpty()) {
+				logger.warn("There are checked in guests of the booking, hence cancellation of the booking is prohibited!");
+				throw new InvalidIDException();
+			} else if (!iHotelStayManager.getCheckedOutGuestsOfHotelStay(stay).isEmpty()) {
+				logger.warn("The booking has already taken place, hence cancellation of the booking is prohibited!");
+				throw new InvalidIDException();
+			}
+		}
+		
+		for (String stay : stays) {
+			booking.cancelBookedStay(stay);
+			iHotelStayManager.removeStay(stay);
+		}
+		
+		bookings.removeKey(bookingID);
 	}
 
 	/**
