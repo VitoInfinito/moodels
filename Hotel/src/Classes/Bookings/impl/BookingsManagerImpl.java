@@ -248,14 +248,14 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void cancelBooking(String bookingID) {
 		if (!bookings.containsKey(bookingID)) {
 			logger.warn("A booking with bookingID {} could not be found.", bookingID);
 			throw new InvalidIDException();
 		} 
-		
+
 		Booking booking = bookings.get(bookingID);
 		List<String> stays = booking.getBookedStays();
 		for (String stay : stays) {
@@ -267,24 +267,49 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 				throw new InvalidIDException();
 			}
 		}
-		
+
 		for (String stay : stays) {
 			booking.cancelBookedStay(stay);
 			iHotelStayManager.removeStay(stay);
 		}
-		
+
 		bookings.removeKey(bookingID);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void cancelStayOfBooking(String bookingID, String stayID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (!bookings.containsKey(bookingID)) {
+			logger.warn("A booking with bookingID {} could not be found.", bookingID);
+			throw new InvalidIDException();
+		} 
+
+		Booking booking = bookings.get(bookingID);
+
+		if (!booking.getBookedStays().contains(stayID)) {
+			logger.warn("A stay with stayID {} could not be found for the specified booking.", stayID);
+			throw new InvalidIDException();
+		}
+		
+		// If last stay -> cancel the booking and return.
+		if (booking.getBookedStays().size() == 1) {
+			cancelBooking(bookingID);
+			return;
+		}
+
+		if (!iHotelStayManager.getCheckedInGuestsOfHotelStay(stayID).isEmpty()) {
+			logger.warn("There are checked in guests of the stay, hence cancellation of the stay is prohibited!");
+			throw new InvalidIDException();
+		} else if (!iHotelStayManager.getCheckedOutGuestsOfHotelStay(stayID).isEmpty()) {
+			logger.warn("The stay has already taken place, hence cancellation of the stay is prohibited!");
+			throw new InvalidIDException();
+		}
+		
+		booking.cancelBookedStay(stayID);
+		iHotelStayManager.removeStay(stayID);
 	}
 
 	/**
