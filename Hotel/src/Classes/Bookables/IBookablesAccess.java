@@ -156,6 +156,14 @@ public interface IBookablesAccess extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		ID != null
+	 * Ensures:
+	 * 		if there exist an hotelRoomID suchs that roomID == ID and that the specific
+	 * 				room is a hotelroom.
+	 * 			return a non null integer of the floor number of the specific hotel room
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
@@ -164,6 +172,10 @@ public interface IBookablesAccess extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 
+	 * Ensures:
+	 * 		return a non null List of strings of all the room IDs that is a HotelRoom
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -172,6 +184,10 @@ public interface IBookablesAccess extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 
+	 * Ensures:
+	 * 		return a non null List of strings of all the room IDs that is a ConferenceRoom
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -180,6 +196,10 @@ public interface IBookablesAccess extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 
+	 * Ensures:
+	 * 		return a non null List of strings of all the bookable objects IDs that is a hostelbed
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -188,6 +208,14 @@ public interface IBookablesAccess extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		roomID != null
+	 * Ensures:
+	 * 		if there exist an conferenceRoomID suchs that  conferenceRoomID == roomID and that the specific
+	 * 				room is a conferenceRoom.
+	 * 			return a non null ConferenceRoomCategory of the specific conference room that was linked with the id
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @model required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
