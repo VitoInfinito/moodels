@@ -235,7 +235,7 @@ public interface Stay extends EObject {
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
 	 * @generated
 	 */
-	void addCheckedInGuest(String SSID);
+	void addCheckedInGuest(String guestID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -243,6 +243,6 @@ public interface Stay extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void checkOutGuest();
+	void checkOutGuest(String guestID);
 
 } // Stay

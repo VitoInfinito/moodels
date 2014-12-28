@@ -230,8 +230,8 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addCheckedInGuest(String SSID) {
-		checkedInGuests.add(SSID);
+	public void addCheckedInGuest(String guestID) {
+		checkedInGuests.add(guestID);
 	}
 
 	/**
@@ -239,10 +239,9 @@ public class StayImpl extends MinimalEObjectImpl.Container implements Stay {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void checkOutGuest() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void checkOutGuest(String guestID) {
+		checkedInGuests.remove(guestID);
+		checkedOutGuests.add(guestID);
 	}
 
 	/**

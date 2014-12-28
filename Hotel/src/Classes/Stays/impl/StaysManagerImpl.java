@@ -19,11 +19,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
+import Classes.GuestAlreadyCheckedInException;
+import Classes.GuestAlreadyCheckedOutException;
+import Classes.GuestNotCheckedInException;
 import Classes.InsufficientFundsException;
+import Classes.InvalidCheckInDateException;
 import Classes.InvalidCreditCardException;
 import Classes.InvalidIDException;
 import Classes.ResponsibleCreditCardNotAddedException;
+import Classes.StayAlreadyFullyCheckedInException;
 import Classes.Bills.IBills;
+import Classes.Bookables.IBookablesAccess;
 import Classes.Bookings.IBookings;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
 import Classes.ECoreMapEntries.impl.StringToStayMapImpl;
@@ -37,7 +43,7 @@ import Classes.Stays.StaysPackage;
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Manager</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- end-user-doc -->	
 
  * @generated
  */
@@ -51,6 +57,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	private IBills iBills;
 	private IGuests iGuests;
 	private IBookings iBookings;
+	private IBookablesAccess iBookables;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -63,6 +70,7 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 		iBills = IBills.INSTANCE;
 		iGuests = IGuests.INSTANCE;
 		iBookings = IBookings.INSTANCE;
+		iBookables = IBookablesAccess.INSTANCE;
 	}
 
 	/**
@@ -70,13 +78,73 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @throws ResponsibleCreditCardNotAddedException 
 	 * @throws InvalidIDException 
+	 * @throws GuestAlreadyCheckedInException 
+	 * @throws StayAlreadyFullyCheckedInException 
+	 * @throws InvalidCheckInDateException 
+	 * @throws GuestAlreadyCheckedOutException 
 	 * @generated
 	 */
-	public void checkInGuest(String stayID, String guestID) throws ResponsibleCreditCardNotAddedException, InvalidIDException {
-		if (!isResponsibleCreditCardAdded(stayID)) {
+	public void checkInGuest(String stayID, String guestID) throws ResponsibleCreditCardNotAddedException, InvalidIDException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		if (!stays.contains(stayID)) {
+			logger.warn("A stay with ID {} could not be found.", stayID);
+			throw new InvalidIDException();
+		} else if (!isResponsibleCreditCardAdded(stayID)) {
 			logger.warn("Tried to check in a guest to the stay with id: {} when a responsible credit card has not been supplied yet!");
 			throw new ResponsibleCreditCardNotAddedException();
+		} else if (!iGuests.getAllGuestIDs().contains(guestID)) {
+			logger.warn("A guest with ID {} could not be found.", guestID);
+			throw new InvalidIDException();
+		} 
+
+		Stay stay = stays.get(stayID);
+		String bookableID = stay.getBookable();
+
+		// Validate so the day of the check in matches a day of the stay period.
+		LocalDateTime dateTimeFrom = stay.getFromDate();
+		LocalDateTime dateFrom = LocalDateTime.of(dateTimeFrom.getYear(), dateTimeFrom.getMonth(), dateTimeFrom.getDayOfMonth(), 0, 0);
+		LocalDateTime dateTimeTo = stay.getToDate();
+		LocalDateTime dateTo = LocalDateTime.of(dateTimeTo.getYear(), dateTimeTo.getMonth(), dateTimeTo.getDayOfMonth(), 0, 0);
+		LocalDateTime now = LocalDateTime.now();
+		if (now.isBefore(dateFrom) || now.isAfter(dateTo)) {
+			logger.warn("The guest {} can not check in to the stay {}, since the current date {} is not within the booked stay date period from: {}, to: {}.", guestID, stayID, now, dateFrom, dateTo);
+			throw new InvalidCheckInDateException();
 		}
+
+		// Validate so the guest is not already checked in
+		List<String> alreadyCheckedIn = stay.getCheckedInGuests();
+		if (alreadyCheckedIn.contains(guestID)) {
+			logger.warn("The guest {} has already checked in to the stay with id {}!", guestID, stayID);
+			throw new GuestAlreadyCheckedInException();
+		}
+
+		// Validate so the guest is not already checked out
+		List<String> checkedOutGuests = stay.getCheckedOutGuests();
+		if (checkedOutGuests.contains(guestID)) {
+			logger.warn("The guest {} has already checked out from the stay with id {}!", guestID, stayID);
+			throw new GuestAlreadyCheckedOutException();
+		}
+
+		// Figure out which kind of bookable the guest should be checked in to
+		if (iBookables.getAllHotelRoomIDs().contains(bookableID)) {
+			// Validate so not full
+			if (alreadyCheckedIn.size() >= iBookables.getHotelRoomNbrBeds(bookableID)) {
+				logger.warn("The hotel room is already fully checked in for stay {}, the guest {} can not be checked in!", stayID, guestID);
+				throw new StayAlreadyFullyCheckedInException();
+			}
+		} else if (iBookables.getAllHostelBedIDs().contains(bookableID)) {
+			// Validate so no person is checked in already
+			if (alreadyCheckedIn.size() >= 1) {
+				logger.warn("The hostel bed of stay {} already has a checked in guest, the guest {} can not be checked in!", stayID, guestID);
+				throw new StayAlreadyFullyCheckedInException();
+			}
+		} else {
+			logger.warn("The stay with id: {} is for a conference room! One can not check in to a conference room.", stayID);
+			throw new InvalidIDException();
+		}
+
+		// Check in guest
+		stay.addCheckedInGuest(guestID);
+		iGuests.generateGuestAccount(guestID);
 	}
 
 	/**
@@ -175,12 +243,48 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws GuestNotCheckedInException 
+	 * @throws GuestAlreadyCheckedOutException 
+	 * @throws InsufficientFundsException 
+	 * @throws InvalidCreditCardException 
+	 * @throws SOAPException 
 	 * @generated
 	 */
-	public void checkOutGuest(String stayID, String guestID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void checkOutGuest(String stayID, String guestID) throws InvalidIDException, GuestNotCheckedInException, GuestAlreadyCheckedOutException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		if (!stays.contains(stayID)) {
+			logger.warn("A stay with ID {} could not be found.", stayID);
+			throw new InvalidIDException();
+		} else if (!iGuests.getAllGuestIDs().contains(guestID)) {
+			logger.warn("A guest with ID {} could not be found.", guestID);
+			throw new InvalidIDException();
+		} 
+
+		Stay stay = stays.get(stayID);
+
+		// Validate so the guest is checked in
+		List<String> checkedInGuests = stay.getCheckedInGuests();
+		if (!checkedInGuests.contains(guestID)) {
+			logger.warn("The guest {} is not checked in to the stay with id {}!", guestID, stayID);
+			throw new GuestNotCheckedInException();
+		}
+
+		// Validate so the guest is not already checked out
+		List<String> alreadyCheckedOut = stay.getCheckedOutGuests();
+		if (alreadyCheckedOut.contains(guestID)) {
+			logger.warn("The guest {} has already checked out from the stay with id {}!", guestID, stayID);
+			throw new GuestAlreadyCheckedOutException();
+		}
+
+		// If last guest checking out and bills unpaid bills exist we bill the responsible credit card for those.
+		if (checkedInGuests.size() == 1) {
+			List<String> bills = getAllUnpayedBillsOfHotelStay(stayID);
+			if (!bills.isEmpty()) {
+				CreditCard card = stay.getCreditCard();
+				iBills.payBillsWithCreditCard(bills, card.getCcNumber(), card.getCcv(), card.getExpiryMonth(), card.getExpiryYear(), card.getFirstName(), card.getLastName());
+			}
+		}
+		
+		stay.checkOutGuest(guestID);
 	}
 
 	/**

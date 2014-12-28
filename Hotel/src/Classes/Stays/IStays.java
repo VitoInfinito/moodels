@@ -11,10 +11,15 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
+import Classes.GuestAlreadyCheckedInException;
+import Classes.GuestAlreadyCheckedOutException;
+import Classes.GuestNotCheckedInException;
 import Classes.InsufficientFundsException;
+import Classes.InvalidCheckInDateException;
 import Classes.InvalidCreditCardException;
 import Classes.InvalidIDException;
 import Classes.ResponsibleCreditCardNotAddedException;
+import Classes.StayAlreadyFullyCheckedInException;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,10 +50,14 @@ public interface IStays extends EObject {
 	 * <!-- end-user-doc -->
 	 * @throws ResponsibleCreditCardNotAddedException 
 	 * @throws InvalidIDException 
+	 * @throws GuestAlreadyCheckedInException 
+	 * @throws StayAlreadyFullyCheckedInException 
+	 * @throws InvalidCheckInDateException 
+	 * @throws GuestAlreadyCheckedOutException 
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" guestIDDataType="org.eclipse.uml2.types.String" guestIDRequired="true" guestIDOrdered="false"
 	 * @generated NOT
 	 */
-	void checkInGuest(String stayID, String guestID) throws ResponsibleCreditCardNotAddedException, InvalidIDException;
+	void checkInGuest(String stayID, String guestID) throws ResponsibleCreditCardNotAddedException, InvalidIDException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,10 +143,16 @@ public interface IStays extends EObject {
 	 * 		else if there does not exist a stay such that stay.id == stayID
 	 *			InvalidIDException is received
 	 * <!-- end-user-doc -->
+	 * @throws GuestNotCheckedInException 
+	 * @throws GuestAlreadyCheckedOutException 
+	 * @throws InvalidIDException 
+	 * @throws InsufficientFundsException 
+	 * @throws InvalidCreditCardException 
+	 * @throws SOAPException 
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" guestIDDataType="org.eclipse.uml2.types.String" guestIDRequired="true" guestIDOrdered="false"
 	 * @generated NOT
 	 */
-	void checkOutGuest(String stayID, String guestID);
+	void checkOutGuest(String stayID, String guestID) throws InvalidIDException, GuestNotCheckedInException, GuestAlreadyCheckedOutException, SOAPException, InvalidCreditCardException, InsufficientFundsException;
 
 	/**
 	 * <!-- begin-user-doc -->

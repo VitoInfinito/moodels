@@ -84,7 +84,7 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * @throws InvalidCreditCardException 
 	 * @generated NOT
 	 */
-	public String makeBooking(List<String> bookables, String customerID, LocalDateTime from, LocalDateTime to, int nbrGuests, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, double discount) throws SOAPException, InvalidIDException, IllegalArgumentException, InvalidCreditCardException {
+	public String makeBooking(List<String> bookables, String customerID, LocalDateTime from, LocalDateTime to, int nbrGuests, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, double discount, boolean isResponsibleCreditCard) throws SOAPException, InvalidIDException, IllegalArgumentException, InvalidCreditCardException {
 		if (bookables.isEmpty()) {
 			logger.warn("Tried to make a booking when no bookable IDs were provided.");
 			throw new InvalidIDException();
@@ -115,6 +115,9 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 			String stayID = iHotelStayManager.addNewStay(bookableID, bookingNbr, from, to);
 			booking.addBookedStay(stayID);
 			iHotelStayManager.addBillToStay(stayID, iBills.addBill(new ArrayList<String>(), new ArrayList<String>(), bookableID, from, to, discount));
+			if (isResponsibleCreditCard) {
+				iHotelStayManager.addResponsibleCreditCard(stayID, ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName);
+			}
 		}
 
 		iCustomer.addCustomerBooking(customerID, bookingNbr);
