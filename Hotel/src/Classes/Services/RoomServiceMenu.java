@@ -5,6 +5,8 @@ package Classes.Services;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
+import Classes.InvalidIDException;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Room Service Menu</b></em>'.
@@ -68,17 +70,19 @@ public interface RoomServiceMenu extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model itemIDDataType="org.eclipse.uml2.types.String" itemIDRequired="true" itemIDOrdered="false"
 	 * @generated
 	 */
-	void addItem(String itemID);
+	void addItem(String itemID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model itemIDDataType="org.eclipse.uml2.types.String" itemIDRequired="true" itemIDOrdered="false"
 	 * @generated
 	 */
-	void removeItem(String itemID);
+	void removeItem(String itemID) throws InvalidIDException;
 
 } // RoomServiceMenu

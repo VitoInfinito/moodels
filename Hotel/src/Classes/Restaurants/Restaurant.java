@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 
+import Classes.InvalidIDException;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Restaurant</b></em>'.
@@ -73,42 +75,47 @@ public interface Restaurant extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model
 	 * @generated
 	 */
-	Reservation getReservation(String reservationID);
+	Reservation getReservation(String reservationID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model
 	 * @generated
 	 */
-	void changeTableNumber(String oldTableNbr, String newTableNbr);
+	void changeTableNumber(String oldTableNbr, String newTableNbr) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model
 	 * @generated
 	 */
-	void changeTableNumberOfSeats(String tableNbr, int nbrSeats);
+	void changeTableNumberOfSeats(String tableNbr, int nbrSeats) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model
 	 * @generated
 	 */
-	void removeTable(String tableNbr);
+	void removeTable(String tableNbr) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model
 	 * @generated
 	 */
-	void addTable(String tableNbr, int nbrSeats);
+	void addTable(String tableNbr, int nbrSeats) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,10 +136,11 @@ public interface Restaurant extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model
 	 * @generated
 	 */
-	int getTableNumberOfSeats(String tableNbr);
+	int getTableNumberOfSeats(String tableNbr) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,18 +169,20 @@ public interface Restaurant extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model
 	 * @generated
 	 */
-	void cancelReservation(String reservationID);
+	void cancelReservation(String reservationID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model
 	 * @generated
 	 */
-	void changeReservedTables(String reservationID, List<String> tables);
+	void changeReservedTables(String reservationID, List<String> tables) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -185,8 +195,9 @@ public interface Restaurant extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model
 	 * @generated
 	 */
-	List<String> searchReservationsWithTime(String keyword, LocalDateTime from, LocalDateTime to);
+	List<String> searchReservationsWithTime(String keyword, LocalDateTime from, LocalDateTime to) throws InvalidIDException;
 } // Restaurant

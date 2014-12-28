@@ -57,9 +57,10 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeItemStock(String id, int stock) {
+	public void changeItemStock(String id, int stock) throws InvalidIDException {
 		if (items.containsKey(id)) {
 			items.get(id).setStock(stock);
 		} else {
@@ -71,9 +72,10 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public double getItemPrice(String id) {
+	public double getItemPrice(String id) throws InvalidIDException {
 		if (items.containsKey(id)) {
 			return items.get(id).getPrice();
 		} else {
@@ -85,9 +87,10 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getItemName(String id) {
+	public String getItemName(String id) throws InvalidIDException {
 		if (items.containsKey(id)) {
 			return items.get(id).getName();
 		} else {
@@ -99,9 +102,10 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public int getItemStock(String id) {
+	public int getItemStock(String id) throws InvalidIDException {
 		if (items.containsKey(id)) {
 			return items.get(id).getStock();
 		} else {
@@ -113,9 +117,10 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public double getItemExpense(String id) {
+	public double getItemExpense(String id) throws InvalidIDException {
 		if (items.containsKey(id)) {
 			return items.get(id).getExpense();
 		} else {
@@ -178,9 +183,10 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeItemName(String id, String name) {
+	public void changeItemName(String id, String name) throws InvalidIDException {
 		if (items.containsKey(id)) {
 			items.get(id).setName(name);
 		} else {
@@ -192,9 +198,10 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeItemPrice(String id, double price) {
+	public void changeItemPrice(String id, double price) throws InvalidIDException {
 		if (items.containsKey(id)) {
 			items.get(id).setPrice(price);
 		} else {
@@ -206,9 +213,10 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeItemExpense(String id, double expense) {
+	public void changeItemExpense(String id, double expense) throws InvalidIDException {
 		if (items.containsKey(id)) {
 			items.get(id).setExpense(expense);
 		} else {
@@ -243,9 +251,10 @@ public class InventoryManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void removeItem(String id) {
+	public void removeItem(String id) throws InvalidIDException {
 		if (items.containsKey(id)) {
 			items.remove(id);
 		} else {

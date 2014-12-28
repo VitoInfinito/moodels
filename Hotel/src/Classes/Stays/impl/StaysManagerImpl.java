@@ -22,6 +22,7 @@ import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
 import Classes.InsufficientFundsException;
 import Classes.InvalidCreditCardException;
 import Classes.InvalidIDException;
+import Classes.ResponsibleCreditCardNotAddedException;
 import Classes.Bills.IBills;
 import Classes.Bookings.IBookings;
 import Classes.ECoreMapEntries.ECoreMapEntriesPackage;
@@ -67,20 +68,24 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws ResponsibleCreditCardNotAddedException 
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void checkInGuest(String stayID, String guestID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void checkInGuest(String stayID, String guestID) throws ResponsibleCreditCardNotAddedException, InvalidIDException {
+		if (!isResponsibleCreditCardAdded(stayID)) {
+			logger.warn("Tried to check in a guest to the stay with id: {} when a responsible credit card has not been supplied yet!");
+			throw new ResponsibleCreditCardNotAddedException();
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeBookableOfStay(String stayID, String bookableID) {
+	public void changeBookableOfStay(String stayID, String bookableID) throws InvalidIDException {
 		if (stays.contains(stayID)) {
 			Stay stay = stays.get(stayID);
 			if (!iBookings.getAvailableBookablesInPeriod(stay.getFromDate(), stay.getToDate()).contains(bookableID)) {
@@ -139,9 +144,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- begin-user-doc -->
 	 * Remove an existing stay
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void removeStay(String stayID) {
+	public void removeStay(String stayID) throws InvalidIDException {
 		if (!stays.contains(stayID)) {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
@@ -154,9 +160,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- begin-user-doc -->
 	 * Add a bill to an existing stay
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void addBillToStay(String stayID, String billID) {
+	public void addBillToStay(String stayID, String billID) throws InvalidIDException {
 		if (!stays.contains(stayID)) {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
@@ -181,9 +188,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * Add a new resposinble credit card to an existing stay
 	 * <!-- end-user-doc -->
 	 * @throws SOAPException, InvalidCreditCardException
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void addResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException, InvalidCreditCardException {
+	public void addResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException, InvalidCreditCardException, InvalidIDException {
 		if (!stays.contains(stayID)) {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
@@ -211,9 +219,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * Change the responsible credit card of an existing stay
 	 * <!-- end-user-doc -->
 	 * @throws SOAPException, InvalidCreditCardException
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException, InvalidCreditCardException {
+	public void changeResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException, InvalidCreditCardException, InvalidIDException {
 		if (!stays.contains(stayID)) {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
@@ -259,9 +268,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getBookableOfHotelStay(String stayID) {
+	public String getBookableOfHotelStay(String stayID) throws InvalidIDException {
 		if (stays.contains(stayID)) {
 			return stays.get(stayID).getBookable();
 		} else {
@@ -274,9 +284,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- begin-user-doc -->
 	 * Get all the booking of an existing stay
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getBookingOfHotelStay(String stayID) {
+	public String getBookingOfHotelStay(String stayID) throws InvalidIDException {
 		if (stays.contains(stayID)) {
 			return stays.get(stayID).getBooking();
 		} else {
@@ -298,9 +309,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getCheckedInGuestsOfHotelStay(String stayID) {
+	public List<String> getCheckedInGuestsOfHotelStay(String stayID) throws InvalidIDException {
 		if (stays.contains(stayID)) {
 			return new ArrayList<String>(stays.get(stayID).getCheckedInGuests());
 		} else {
@@ -312,9 +324,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getCheckedOutGuestsOfHotelStay(String stayID) {
+	public List<String> getCheckedOutGuestsOfHotelStay(String stayID) throws InvalidIDException {
 		if (stays.contains(stayID)) {
 			return new ArrayList<String>(stays.get(stayID).getCheckedOutGuests());
 		} else {
@@ -326,9 +339,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> searchHotelStays(String keyword) {
+	public List<String> searchHotelStays(String keyword) throws InvalidIDException {
 		keyword = keyword.trim();
 		Set<String> searchResult = new LinkedHashSet<String>();
 		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
@@ -400,9 +414,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> searchHotelStaysWithinPeriod(String keyword, LocalDateTime from, LocalDateTime to) {
+	public List<String> searchHotelStaysWithinPeriod(String keyword, LocalDateTime from, LocalDateTime to) throws InvalidIDException {
 		keyword = keyword.trim();
 		Set<String> searchResult = new LinkedHashSet<String>();
 		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
@@ -511,9 +526,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getAllUnpayedBillsOfHotelStay(String stayID) {
+	public List<String> getAllUnpayedBillsOfHotelStay(String stayID) throws InvalidIDException {
 		if (stays.contains(stayID)) {
 			List<String> unpaid = new ArrayList<String>();
 
@@ -535,9 +551,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @throws SOAPException, InvalidCreditCardException, InsufficientFundsException
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void billCreditCardWithAllUnpaidBillsOfHotelStay(String stayID) throws SOAPException, InvalidCreditCardException, InsufficientFundsException {
+	public void billCreditCardWithAllUnpaidBillsOfHotelStay(String stayID) throws SOAPException, InvalidCreditCardException, InsufficientFundsException, InvalidIDException {
 		if (stays.contains(stayID)) {
 			CreditCard creditCard = stays.get(stayID).getCreditCard();
 			if (creditCard != null) {
@@ -555,9 +572,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public boolean isResponsibleCreditCardAdded(String stayID) {
+	public boolean isResponsibleCreditCardAdded(String stayID) throws InvalidIDException {
 		if (stays.contains(stayID)) {
 			return stays.get(stayID).getCreditCard() != null;
 		} else {
@@ -569,9 +587,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changePeriodOfStay(String stayID, LocalDateTime from, LocalDateTime to) {
+	public void changePeriodOfStay(String stayID, LocalDateTime from, LocalDateTime to) throws InvalidIDException {
 		Stay stay = stays.get(stayID);
 
 		if (stay != null) {
@@ -632,9 +651,10 @@ public class StaysManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void removeBillFromStay(String stayID, String billID) {
+	public void removeBillFromStay(String stayID, String billID) throws InvalidIDException {
 		if (stays.contains(stayID)) {
 			iBills.removeBill(billID);
 		} else {

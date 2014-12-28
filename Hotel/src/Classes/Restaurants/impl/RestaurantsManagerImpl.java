@@ -53,54 +53,60 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getRestaurantReservations(String restaurantID) {
+	public List<String> getRestaurantReservations(String restaurantID) throws InvalidIDException {
 		return getRestaurantByID(restaurantID).getReservationIDs();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getRestaurantTables(String restaurantID) {
+	public List<String> getRestaurantTables(String restaurantID) throws InvalidIDException {
 		return getRestaurantByID(restaurantID).getRestaurantTableIDs();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public int getRestaurantTableNumberOfSeats(String restaurantID, String tableNbr) {		
+	public int getRestaurantTableNumberOfSeats(String restaurantID, String tableNbr) throws InvalidIDException {		
 		return getRestaurantByID(restaurantID).getTableNumberOfSeats(tableNbr);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getAvailableTables(LocalDateTime to, LocalDateTime from, String restaurantID) {
+	public List<String> getAvailableTables(LocalDateTime to, LocalDateTime from, String restaurantID) throws InvalidIDException {
 		return getRestaurantByID(restaurantID).getAvailableTables( to, from);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getReservationGuest(String restaurantID, String reservationID) {		
+	public String getReservationGuest(String restaurantID, String reservationID) throws InvalidIDException {		
 		return getReservationByID(restaurantID, reservationID).getReservedBy();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getRestaurantMenuName(String restaurantID) {
+	public String getRestaurantMenuName(String restaurantID) throws InvalidIDException {
 		Restaurant rest = getRestaurantByID(restaurantID);
 		
 		RestaurantMenu restaurantMenu = rest.getMenu();
@@ -165,45 +171,50 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> searchRestaurantReservations(String restaurantID, String keyword) {
+	public List<String> searchRestaurantReservations(String restaurantID, String keyword) throws InvalidIDException {
 		return getRestaurantByID(restaurantID).searchReservations(keyword);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> searchRestaurantTables(String restaurantID, String keyword) {
+	public List<String> searchRestaurantTables(String restaurantID, String keyword) throws InvalidIDException {
 		return getRestaurantByID(restaurantID).searchTables(keyword);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void makeReservation(String restaurantID, List<String> tables, String guestID, LocalDateTime to, LocalDateTime from) {
+	public void makeReservation(String restaurantID, List<String> tables, String guestID, LocalDateTime to, LocalDateTime from) throws InvalidIDException {
 		getRestaurantByID(restaurantID).addReservation(tables, guestID, to, from);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void cancelReservation(String restaurantID, String reservationID) {
+	public void cancelReservation(String restaurantID, String reservationID) throws InvalidIDException {
 		getRestaurantByID(restaurantID).cancelReservation(reservationID);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeReservedTables(String restaurantID, String reservationID, List<String> tables) {
+	public void changeReservedTables(String restaurantID, String reservationID, List<String> tables) throws InvalidIDException {
 		getRestaurantByID(restaurantID).changeReservedTables(reservationID, tables);
 		Reservation reservation = getReservationByID(restaurantID, reservationID);
 	}
@@ -211,45 +222,50 @@ public class RestaurantsManagerImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getAvailableTablesByNbrGuests(String restaurantID, LocalDateTime to, LocalDateTime from, int nbrGuests) {
+	public List<String> getAvailableTablesByNbrGuests(String restaurantID, LocalDateTime to, LocalDateTime from, int nbrGuests) throws InvalidIDException {
 		return getRestaurantByID(restaurantID).getAvailableTablesByNbrGuests(to, from, nbrGuests);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getRestaurantMenuItems(String restaurantID) {
+	public List<String> getRestaurantMenuItems(String restaurantID) throws InvalidIDException {
 		return new ArrayList<String>(getRestaurantByID(restaurantID).getMenu().getItems());
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public LocalDateTime getReservationFromTime(String restaurantID, String reservationID) {
+	public LocalDateTime getReservationFromTime(String restaurantID, String reservationID) throws InvalidIDException {
 		return getReservationByID(restaurantID, reservationID).getFrom();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public LocalDateTime getReservationToTime(String restaurantID, String reservationID) {
+	public LocalDateTime getReservationToTime(String restaurantID, String reservationID) throws InvalidIDException {
 		return getReservationByID(restaurantID, reservationID).getTo();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> searchRestaurantReservationsWithTime(String restaurantID, String keyword, LocalDateTime from, LocalDateTime to) {
+	public List<String> searchRestaurantReservationsWithTime(String restaurantID, String keyword, LocalDateTime from, LocalDateTime to) throws InvalidIDException {
 		return getRestaurantByID(restaurantID).searchReservationsWithTime(keyword, from, to);
 	}
 

@@ -13,6 +13,8 @@ import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import Classes.InsufficientFundsException;
 import Classes.InvalidCreditCardException;
+import Classes.InvalidIDException;
+import Classes.ResponsibleCreditCardNotAddedException;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,10 +43,12 @@ public interface IStays extends EObject {
 	 * 		else if there does not exist a stay such that stay.id == stayID
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
+	 * @throws ResponsibleCreditCardNotAddedException 
+	 * @throws InvalidIDException 
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" guestIDDataType="org.eclipse.uml2.types.String" guestIDRequired="true" guestIDOrdered="false"
 	 * @generated NOT
 	 */
-	void checkInGuest(String stayID, String guestID);
+	void checkInGuest(String stayID, String guestID) throws ResponsibleCreditCardNotAddedException, InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -58,10 +62,11 @@ public interface IStays extends EObject {
 	 * 		else if there does not exist a stay such that stay.id == stayID
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false"
 	 * @generated NOT
 	 */
-	void changeBookableOfStay(String stayID, String bookableID);
+	void changeBookableOfStay(String stayID, String bookableID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -93,10 +98,11 @@ public interface IStays extends EObject {
 	 * 		otherwise
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */
-	void removeStay(String stayID);
+	void removeStay(String stayID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -110,10 +116,11 @@ public interface IStays extends EObject {
 	 * 		else if there does not exist a stay such that stay.id == stayID
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
 	 * @generated NOT
 	 */
-	void addBillToStay(String stayID, String billID);
+	void addBillToStay(String stayID, String billID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -147,10 +154,11 @@ public interface IStays extends EObject {
 	 * 			InvalidCreditCardException
 	 * <!-- end-user-doc -->
 	 * @throws SOAPException, InvalidCreditCardException
+	 * @throws InvalidIDException 
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
 	 * @generated NOT
 	 */
-	void addResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException, InvalidCreditCardException;
+	void addResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException, InvalidCreditCardException, InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -167,10 +175,11 @@ public interface IStays extends EObject {
 	 * 			InvalidCreditCardException
 	 * <!-- end-user-doc -->
 	 * @throws SOAPException, InvalidCreditCardException
+	 * @throws InvalidIDException 
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
 	 * @generated NOT
 	 */
-	void changeResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException, InvalidCreditCardException;
+	void changeResponsibleCreditCard(String stayID, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) throws SOAPException, InvalidCreditCardException, InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -212,10 +221,11 @@ public interface IStays extends EObject {
 	 * 		otherwise
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */
-	String getBookableOfHotelStay(String stayID);
+	String getBookableOfHotelStay(String stayID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -227,10 +237,11 @@ public interface IStays extends EObject {
 	 * 		otherwise
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */
-	String getBookingOfHotelStay(String stayID);
+	String getBookingOfHotelStay(String stayID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -254,10 +265,11 @@ public interface IStays extends EObject {
 	 * 		otherwise
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */
-	List<String> getCheckedInGuestsOfHotelStay(String stayID);
+	List<String> getCheckedInGuestsOfHotelStay(String stayID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -269,10 +281,11 @@ public interface IStays extends EObject {
 	 * 		otherwise
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */
-	List<String> getCheckedOutGuestsOfHotelStay(String stayID);
+	List<String> getCheckedOutGuestsOfHotelStay(String stayID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -285,10 +298,11 @@ public interface IStays extends EObject {
 	 * 			3. Stays with attributes that exactly matches the keyword
 	 * 			4. Stays with attributes that has some matching to the keyword
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
 	 */
-	List<String> searchHotelStays(String keyword);
+	List<String> searchHotelStays(String keyword) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -301,10 +315,11 @@ public interface IStays extends EObject {
 	 * 			3. Stays with attributes that exactly matches the keyword
 	 * 			4. Stays with attributes that has some matching to the keyword
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated NOT
 	 */
-	List<String> searchHotelStaysWithinPeriod(String keyword, LocalDateTime from, LocalDateTime to);
+	List<String> searchHotelStaysWithinPeriod(String keyword, LocalDateTime from, LocalDateTime to) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -328,10 +343,11 @@ public interface IStays extends EObject {
 	 * 		otherwise
 	 * 			InvalidIDException
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */
-	List<String> getAllUnpayedBillsOfHotelStay(String stayID);
+	List<String> getAllUnpayedBillsOfHotelStay(String stayID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -348,10 +364,11 @@ public interface IStays extends EObject {
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @throws SOAPException, InvalidCreditCardException, InsufficientFundsException 
+	 * @throws InvalidIDException 
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */
-	void billCreditCardWithAllUnpaidBillsOfHotelStay(String stayID) throws SOAPException, InvalidCreditCardException, InsufficientFundsException;
+	void billCreditCardWithAllUnpaidBillsOfHotelStay(String stayID) throws SOAPException, InvalidCreditCardException, InsufficientFundsException, InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -365,10 +382,11 @@ public interface IStays extends EObject {
 	 * 		else if there does not exist a stay such that stay.id == stayID
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */
-	boolean isResponsibleCreditCardAdded(String stayID);
+	boolean isResponsibleCreditCardAdded(String stayID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -380,10 +398,11 @@ public interface IStays extends EObject {
 	 * 		otherwise
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated NOT
 	 */
-	void changePeriodOfStay(String stayID, LocalDateTime from, LocalDateTime to);
+	void changePeriodOfStay(String stayID, LocalDateTime from, LocalDateTime to) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -397,9 +416,10 @@ public interface IStays extends EObject {
 	 * 		else if there does not exist a stay such that stay.id == stayID
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
 	 * @generated NOT
 	 */
-	void removeBillFromStay(String stayID, String billID);
+	void removeBillFromStay(String stayID, String billID) throws InvalidIDException;
 
 } // IStays

@@ -97,10 +97,11 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
 	@Override
-	public Reservation getReservation(String reservationID) {
+	public Reservation getReservation(String reservationID) throws InvalidIDException {
 		if (reservations.containsKey(reservationID)) {
 			return reservations.get(reservationID);
 		} else {
@@ -127,7 +128,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	}
 
 	@Override
-	public void changeTableNumber(String oldTableNbr, String newTableNbr) {
+	public void changeTableNumber(String oldTableNbr, String newTableNbr) throws InvalidIDException {
 		if (restaurantTables.containsKey(oldTableNbr)) {
 			RestaurantTable table = restaurantTables.get(oldTableNbr);
 			table.setTableNumber(newTableNbr);
@@ -140,7 +141,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	}
 
 	@Override
-	public void changeTableNumberOfSeats(String tableNbr, int nbrSeats) {
+	public void changeTableNumberOfSeats(String tableNbr, int nbrSeats) throws InvalidIDException {
 		if (restaurantTables.containsKey(tableNbr)) {
 			RestaurantTable table = restaurantTables.get(tableNbr);
 			table.setNumberOfSeats(nbrSeats);
@@ -151,7 +152,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	}
 
 	@Override
-	public void removeTable(String tableNbr) {
+	public void removeTable(String tableNbr) throws InvalidIDException {
 		if (restaurantTables.containsKey(tableNbr)) {
 			restaurantTables.removeKey(tableNbr);
 		} else {
@@ -161,7 +162,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	}
 
 	@Override
-	public void addTable(String tableNbr, int nbrSeats) {
+	public void addTable(String tableNbr, int nbrSeats) throws InvalidIDException {
 		if (!restaurantTables.containsKey(tableNbr)) {
 			
 			RestaurantTable table = RestaurantsFactory.eINSTANCE.createRestaurantTable();
@@ -186,7 +187,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	}
 
 	@Override
-	public int getTableNumberOfSeats(String tableNbr) {
+	public int getTableNumberOfSeats(String tableNbr) throws InvalidIDException {
 		if (restaurantTables.containsKey(tableNbr)) {
 			return restaurantTables.get(tableNbr).getNumberOfSeats();
 		} else {
@@ -332,7 +333,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	}
 
 	@Override
-	public void cancelReservation(String reservationID) {
+	public void cancelReservation(String reservationID) throws InvalidIDException {
 		if (reservations.containsKey(reservationID)) {
 			reservations.removeKey(reservationID);
 		} else {
@@ -342,7 +343,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	}
 
 	@Override
-	public void changeReservedTables(String reservationID, List<String> tables) {
+	public void changeReservedTables(String reservationID, List<String> tables) throws InvalidIDException {
 		if (reservations.containsKey(reservationID)) {
 			List<RestaurantTable> tab = new ArrayList<RestaurantTable>();
 			for (String table : tables) {
@@ -375,7 +376,7 @@ public class RestaurantImpl extends MinimalEObjectImpl.Container implements Rest
 	}
 
 	@Override
-	public List<String> searchReservationsWithTime(String keyword, LocalDateTime from, LocalDateTime to) {
+	public List<String> searchReservationsWithTime(String keyword, LocalDateTime from, LocalDateTime to) throws InvalidIDException {
 		List<String> temp = searchReservations(keyword);
 		List<String> result = new ArrayList<String>(temp.size());
 		for (String resID : temp) {

@@ -79,10 +79,11 @@ public interface IManageAccounts extends EObject {
 	 * 		otherwise
 	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model newPasswordDataType="org.eclipse.uml2.types.String" newPasswordRequired="true" newPasswordOrdered="false" usernameDataType="org.eclipse.uml2.types.String" usernameRequired="true" usernameOrdered="false"
 	 * @generated
 	 */
-	void changePassword(String newPassword, String username);
+	void changePassword(String newPassword, String username) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->

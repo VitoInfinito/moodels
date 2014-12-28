@@ -7,7 +7,7 @@ package Classes;
  * @author ekman
  *
  */
-public class InvalidCreditCardException extends RuntimeException {
+public class InvalidCreditCardException extends Exception {
 
 	/**
 	 * 

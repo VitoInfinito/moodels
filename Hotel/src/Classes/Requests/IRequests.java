@@ -7,6 +7,8 @@ import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
+import Classes.InvalidIDException;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>IRequests</b></em>'.
@@ -25,42 +27,47 @@ public interface IRequests extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" specialRequestIdDataType="org.eclipse.uml2.types.String" specialRequestIdRequired="true" specialRequestIdOrdered="false"
 	 * @generated
 	 */
-	String getRequestDescription(String specialRequestId);
+	String getRequestDescription(String specialRequestId) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" specialRequestIdDataType="org.eclipse.uml2.types.String" specialRequestIdRequired="true" specialRequestIdOrdered="false"
 	 * @generated
 	 */
-	boolean hasRequestBeenResolved(String specialRequestId);
+	boolean hasRequestBeenResolved(String specialRequestId) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model SpecialRequestIdDataType="org.eclipse.uml2.types.String" SpecialRequestIdRequired="true" SpecialRequestIdOrdered="false"
 	 * @generated
 	 */
-	void setRequestResolved(String SpecialRequestId);
+	void setRequestResolved(String SpecialRequestId) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model specialRequestIdDataType="org.eclipse.uml2.types.String" specialRequestIdRequired="true" specialRequestIdOrdered="false"
 	 * @generated
 	 */
-	void deleteRequest(String specialRequestId);
+	void deleteRequest(String specialRequestId) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model specialRequestIdDataType="org.eclipse.uml2.types.String" specialRequestIdRequired="true" specialRequestIdOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
 	 * @generated
 	 */
-	void changeRequestDesc(String specialRequestId, String description);
+	void changeRequestDesc(String specialRequestId, String description) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,10 +88,11 @@ public interface IRequests extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model specialRequestIdDataType="org.eclipse.uml2.types.String" specialRequestIdRequired="true" specialRequestIdOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
 	 * @generated
 	 */
-	void setRequestDescription(String specialRequestId, String description);
+	void setRequestDescription(String specialRequestId, String description) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->

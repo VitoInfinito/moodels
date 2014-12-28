@@ -23,52 +23,52 @@ public class IManageAccountsTest {
 	}
 	
 	@After
-	public void tearDown() {
+	public void tearDown() throws InvalidIDException {
 		for (String id : IManageAccounts.INSTANCE.getAllAccountIDs()) {
 			IManageAccounts.INSTANCE.deleteAccount(id);
 		}
 	}
 
 	@Test
-	public void testAddAccount_username_not_exists_expects_username_added() {
+	public void testAddAccount_username_not_exists_expects_username_added() throws InvalidIDException {
 		IManageAccounts.INSTANCE.addAccount("Fisken", "s7hhhds", AccountType.GUEST);
 		List<String> accounts = IManageAccounts.INSTANCE.getAllAccountIDs();
 		assertTrue(accounts.contains("Fisken"));
 	}
 	
 	@Test
-	public void testAddAccount_username_not_exists_expects_password_set() {
+	public void testAddAccount_username_not_exists_expects_password_set() throws InvalidIDException {
 		IManageAccounts.INSTANCE.addAccount("Fisken", "s7hhhds", AccountType.GUEST);
 		String result = IManageAccounts.INSTANCE.getAccountPassword("Fisken");
 		assertEquals("s7hhhds", result);
 	}
 	
 	@Test
-	public void testAddAccount_username_not_exists_expects_type_set() {
+	public void testAddAccount_username_not_exists_expects_type_set() throws InvalidIDException {
 		IManageAccounts.INSTANCE.addAccount("Fisken", "s7hhhds", AccountType.GUEST);
 		AccountType result = IAccountsAccess.INSTANCE.getAccountType("Fisken");
 		assertTrue(result == AccountType.GUEST);
 	}
 	
 	@Test(expected=InvalidIDException.class)
-	public void testAddAccount_username_exists() {
+	public void testAddAccount_username_exists() throws InvalidIDException {
 		IManageAccounts.INSTANCE.addAccount("Pelle", "asd", AccountType.GUEST);
 	}
 
 	@Test
-	public void testDeleteAccount_username_exists() {
+	public void testDeleteAccount_username_exists() throws InvalidIDException {
 		IManageAccounts.INSTANCE.deleteAccount("Pelle");
 		List<String> accounts = IManageAccounts.INSTANCE.getAllAccountIDs();
 		assertFalse(accounts.contains("Pelle"));
 	}
 	
 	@Test(expected=InvalidIDException.class)
-	public void testDeleteAccount_username_not_exists() {
+	public void testDeleteAccount_username_not_exists() throws InvalidIDException {
 		IManageAccounts.INSTANCE.deleteAccount("Arne");
 	}
 
 	@Test
-	public void testRenameAccount_username_exists() {
+	public void testRenameAccount_username_exists() throws InvalidIDException {
 		IManageAccounts.INSTANCE.renameAccount("Pelle", "Torsten");
 		List<String> accounts = IManageAccounts.INSTANCE.getAllAccountIDs();
 		assertTrue(accounts.contains("Torsten"));
@@ -76,12 +76,12 @@ public class IManageAccountsTest {
 	}
 	
 	@Test(expected=InvalidIDException.class)
-	public void testRenameAccount_username_not_exists() {
+	public void testRenameAccount_username_not_exists() throws InvalidIDException {
 		IManageAccounts.INSTANCE.renameAccount("Torsten", "Pelle");
 	}
 
 	@Test
-	public void testChangePassword_username_exists() {
+	public void testChangePassword_username_exists() throws InvalidIDException {
 		IManageAccounts.INSTANCE.changePassword("sdads", "Pelle");
 		String result = IManageAccounts.INSTANCE.getAccountPassword("Pelle");
 		assertEquals("sdads", result);
@@ -93,41 +93,41 @@ public class IManageAccountsTest {
 	}
 
 	@Test
-	public void testGetAccountPassword_username_exists() {
+	public void testGetAccountPassword_username_exists() throws InvalidIDException {
 		String result = IManageAccounts.INSTANCE.getAccountPassword("Pelle");
 		assertEquals("s7hhhds", result);
 	}
 	
 	@Test
-	public void testGetAccountPassword_username_exists_expects_non_null() {
+	public void testGetAccountPassword_username_exists_expects_non_null() throws InvalidIDException {
 		String result = IManageAccounts.INSTANCE.getAccountPassword("Pelle");
 		assertNotNull(result);
 	}
 	
 	@Test(expected=InvalidIDException.class)
-	public void testGetAccountPassword_username_not_exists() {
+	public void testGetAccountPassword_username_not_exists() throws InvalidIDException {
 		IManageAccounts.INSTANCE.getAccountPassword("Olle");
 	}
 
 	@Test
-	public void testGetAccountName_username_exists() {
+	public void testGetAccountName_username_exists() throws InvalidIDException {
 		String result = IManageAccounts.INSTANCE.getAccountName("Pelle");
 		assertEquals("Pelle", result);
 	}
 	
 	@Test
-	public void testGetAccountName_username_exists_expects_non_null() {
+	public void testGetAccountName_username_exists_expects_non_null() throws InvalidIDException {
 		String result = IManageAccounts.INSTANCE.getAccountName("Pelle");
 		assertNotNull(result);
 	}
 	
 	@Test(expected=InvalidIDException.class)
-	public void testGetAccountName_username_not_exists() {
+	public void testGetAccountName_username_not_exists() throws InvalidIDException {
 		IManageAccounts.INSTANCE.getAccountName("Olle");
 	}
 	
 	@Test
-	public void testSearchAccounts_accounts_empty_expects_empty_list() {
+	public void testSearchAccounts_accounts_empty_expects_empty_list() throws InvalidIDException {
 		tearDown();
 		List<String> result = IManageAccounts.INSTANCE.searchAccounts("Pelle");
 		assertTrue(result.isEmpty());
@@ -177,7 +177,7 @@ public class IManageAccountsTest {
 	}
 	
 	@Test
-	public void testGetAllAccountIDs_expects_empty_list() {
+	public void testGetAllAccountIDs_expects_empty_list() throws InvalidIDException {
 		tearDown();
 		List<String> result = IManageAccounts.INSTANCE.getAllAccountIDs();
 		assertTrue(result.isEmpty());

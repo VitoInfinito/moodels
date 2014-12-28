@@ -49,9 +49,10 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void addAccount(String username, String password, AccountType type) {
+	public void addAccount(String username, String password, AccountType type) throws InvalidIDException {
 		if (accounts.containsKey(username)) {
 			logger.warn("An account with username {} already exists.", username);
 			throw new InvalidIDException();
@@ -69,9 +70,10 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void deleteAccount(String username) {
+	public void deleteAccount(String username) throws InvalidIDException {
 		Account acc = accounts.removeKey(username);
 		if (acc == null) {
 			logger.warn("An account with username {} could not be found.", username);
@@ -82,9 +84,10 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void renameAccount(String oldUsername, String newUsername) {
+	public void renameAccount(String oldUsername, String newUsername) throws InvalidIDException {
 		if (accounts.containsKey(oldUsername)) {
 			if (accounts.containsKey(newUsername)) {
 				logger.warn("An account with username {} already exists.", newUsername);
@@ -104,9 +107,10 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changePassword(String newPassword, String username) {
+	public void changePassword(String newPassword, String username) throws InvalidIDException {
 		if (accounts.containsKey(username)) {
 			accounts.get(username).setPassword(newPassword);
 		} else {
@@ -118,9 +122,10 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getAccountPassword(String username) {
+	public String getAccountPassword(String username) throws InvalidIDException {
 		if (accounts.containsKey(username)) {
 			return accounts.get(username).getPassword();
 		} else {
@@ -132,9 +137,10 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getAccountName(String username) {
+	public String getAccountName(String username) throws InvalidIDException {
 		if (accounts.containsKey(username)) {
 			return accounts.get(username).getUsername();
 		} else {
@@ -190,9 +196,10 @@ public class AccountsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public AccountType getAccountType(String username) {
+	public AccountType getAccountType(String username) throws InvalidIDException {
 		if (accounts.containsKey(username)) {
 			return accounts.get(username).getAccountType();
 		} else {

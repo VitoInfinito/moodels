@@ -69,9 +69,10 @@ public class RestaurantMenuImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void addItem(String itemID) {
+	public void addItem(String itemID) throws InvalidIDException {
 		if(!items.contains(itemID)) {
 			items.add(itemID);
 		} else {
@@ -83,9 +84,10 @@ public class RestaurantMenuImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void removeItem(String itemID) {
+	public void removeItem(String itemID) throws InvalidIDException {
 		if(items.contains(itemID)) {
 			items.remove(itemID);
 		} else {

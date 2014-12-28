@@ -78,9 +78,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	 * 		Otherwise
 	 * 			A new guest is added.
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void addGuest(String SSID, String firstname, String lastname, String title, String email, String phone) {
+	public void addGuest(String SSID, String firstname, String lastname, String title, String email, String phone) throws InvalidIDException {
 		
 		if (guests.containsKey(SSID)) {
 			logger.warn("There is already a guest added with the SSID {}. The SSID can not be used as a unique ID!", SSID);
@@ -102,9 +103,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeGuestFirstName(String SSID, String firstName) {
+	public void changeGuestFirstName(String SSID, String firstName) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			guests.get(SSID).setFirstname(firstName);
 		} else {
@@ -116,9 +118,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeGuestLastName(String SSID, String lastName) {
+	public void changeGuestLastName(String SSID, String lastName) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			guests.get(SSID).setLastname(lastName);
 		} else {
@@ -130,9 +133,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeGuestTitle(String SSID, String title) {
+	public void changeGuestTitle(String SSID, String title) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			guests.get(SSID).setTitle(title);
 		} else {
@@ -144,9 +148,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeGuestEmail(String SSID, String eMail) {
+	public void changeGuestEmail(String SSID, String eMail) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			guests.get(SSID).setEmail(eMail);
 		} else {
@@ -158,9 +163,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeGuestPhone(String SSID, String phoneNr) {
+	public void changeGuestPhone(String SSID, String phoneNr) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			guests.get(SSID).setPhone(phoneNr);
 		} else {
@@ -172,9 +178,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getGuestFirstName(String SSID) {
+	public String getGuestFirstName(String SSID) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			return guests.get(SSID).getFirstname();
 		} else {
@@ -186,9 +193,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getGuestLastName(String SSID) {
+	public String getGuestLastName(String SSID) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			return guests.get(SSID).getLastname();
 		} else {
@@ -200,9 +208,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getGuestTitle(String SSID) {
+	public String getGuestTitle(String SSID) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			return guests.get(SSID).getTitle();
 		} else {
@@ -214,9 +223,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getGuestEmail(String SSID) {
+	public String getGuestEmail(String SSID) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			return guests.get(SSID).getEmail();
 		} else {
@@ -228,9 +238,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getGuestPhone(String SSID) {
+	public String getGuestPhone(String SSID) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			return guests.get(SSID).getPhone();
 		} else {
@@ -312,9 +323,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getGuestStays(String SSID) {
+	public List<String> getGuestStays(String SSID) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			return new ArrayList<String>(guests.get(SSID).getStays());
 		} else {
@@ -326,9 +338,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getGuestRequests(String SSID) {
+	public List<String> getGuestRequests(String SSID) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			return new ArrayList<String>(guests.get(SSID).getRequests());
 		} else {
@@ -340,9 +353,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void removeGuestStay(String SSID, String stayID) {
+	public void removeGuestStay(String SSID, String stayID) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			guests.get(SSID).removeStay(stayID);
 		} else {
@@ -355,9 +369,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void addGuestRequest(String SSID, String description) {
+	public void addGuestRequest(String SSID, String description) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			guests.get(SSID).addRequest(iRequests.addRequest(description));
 		} else {
@@ -370,9 +385,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void removeGuestRequest(String SSID, String requestID) {
+	public void removeGuestRequest(String SSID, String requestID) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			iRequests.deleteRequest(requestID);
 			guests.get(SSID).removeRequest(requestID);
@@ -385,9 +401,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getGuestAccountUsername(String SSID) {
+	public String getGuestAccountUsername(String SSID) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			return guests.get(SSID).getAccount();
 		} else {
@@ -399,9 +416,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getGuestAccountPassword(String SSID) {
+	public String getGuestAccountPassword(String SSID) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			return iManageAccounts.getAccountPassword(guests.get(SSID).getAccount());
 		} else {
@@ -413,9 +431,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void generateGuestAccount(String SSID) {
+	public void generateGuestAccount(String SSID) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			iManageAccounts.addAccount(SSID, StringUtils.generateRandomPassword(6) , AccountType.GUEST);
 			guests.get(SSID).setAccount(SSID);
@@ -428,9 +447,10 @@ public class GuestsManagerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void removeGuestAccount(String SSID) {
+	public void removeGuestAccount(String SSID) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
 			iManageAccounts.deleteAccount(SSID);
 			guests.get(SSID).setAccount("");

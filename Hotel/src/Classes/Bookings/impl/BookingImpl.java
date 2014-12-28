@@ -190,9 +190,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void addBookedStay(String stayID) {
+	public void addBookedStay(String stayID) throws InvalidIDException {
 		if(!bookedStays.contains(stayID)) {
 			bookedStays.add(stayID);
 		} else {
@@ -204,9 +205,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void cancelBookedStay(String stayID) {
+	public void cancelBookedStay(String stayID) throws InvalidIDException {
 		if(bookedStays.contains(stayID)) {
 			bookedStays.remove(stayID);
 		} else {
@@ -216,7 +218,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}	
 	
 	@Override
-	public void addRequest(String requestID) {
+	public void addRequest(String requestID) throws InvalidIDException {
 		if(!requests.contains(requestID)) {
 			requests.add(requestID);
 		} else {
@@ -226,7 +228,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	@Override
-	public void removeRequest(String requestID) {
+	public void removeRequest(String requestID) throws InvalidIDException {
 		if(requests.contains(requestID)) {
 			requests.remove(requestID);
 		} else {

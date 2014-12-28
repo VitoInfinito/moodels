@@ -49,9 +49,10 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getRequestDescription(String specialRequestId) {
+	public String getRequestDescription(String specialRequestId) throws InvalidIDException {
 		Request req = specialRequest.get(specialRequestId);
 		if(req == null){
 			logger.warn("The id do not beong to a special request!");
@@ -63,9 +64,10 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public boolean hasRequestBeenResolved(String specialRequestId) {
+	public boolean hasRequestBeenResolved(String specialRequestId) throws InvalidIDException {
 		Request req = specialRequest.get(specialRequestId);
 		if(req == null){
 			logger.warn("The id do not beong to a special request!");
@@ -77,9 +79,10 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void setRequestResolved(String specialRequestId) {
+	public void setRequestResolved(String specialRequestId) throws InvalidIDException {
 		Request req = specialRequest.get(specialRequestId);
 		if(req == null){
 			logger.warn("The id do not beong to a special request!");
@@ -92,9 +95,10 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void deleteRequest(String specialRequestId) {
+	public void deleteRequest(String specialRequestId) throws InvalidIDException {
 		Request req = specialRequest.removeKey(specialRequestId);
 		if(req == null){
 			logger.warn("The bookable with ID {} could not be found. Invalid ID!", specialRequestId);
@@ -105,9 +109,10 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeRequestDesc(String specialRequestId, String description) {
+	public void changeRequestDesc(String specialRequestId, String description) throws InvalidIDException {
 		setRequestDescription(specialRequestId, description);
 	}
 
@@ -161,9 +166,10 @@ public class RequestsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void setRequestDescription(String specialRequestId, String description) {
+	public void setRequestDescription(String specialRequestId, String description) throws InvalidIDException {
 		Request req = specialRequest.get(specialRequestId);
 		if(req == null){
 			logger.warn("The id do not beong to a special request!");

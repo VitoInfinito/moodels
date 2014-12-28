@@ -68,9 +68,10 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public boolean getIsBillPaid(String billID) {
+	public boolean getIsBillPaid(String billID) throws InvalidIDException {
 		if (bills.containsKey(billID)) {
 			return bills.get(billID).isPaid();
 		} else {
@@ -96,9 +97,10 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public LocalDateTime getBillPaymentDate(String billID) {
+	public LocalDateTime getBillPaymentDate(String billID) throws InvalidIDException {
 		if (bills.containsKey(billID)) {
 			return bills.get(billID).getIssueDate();
 		} else {
@@ -181,9 +183,10 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String addBill(List<String> items, List<String> services, String bookable, LocalDateTime from, LocalDateTime to, double discount) {
+	public String addBill(List<String> items, List<String> services, String bookable, LocalDateTime from, LocalDateTime to, double discount) throws InvalidIDException {
 		if (discount < 0 || discount > 1) {
 			logger.warn("The discount {} is not in [0,1].", discount);
 			throw new IllegalArgumentException("Discount should be in [0,1]!");
@@ -268,9 +271,10 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getBillItems(String billID) {
+	public List<String> getBillItems(String billID) throws InvalidIDException {
 		if (bills.containsKey(billID)) {
 			return new ArrayList<String>(bills.get(billID).getItems());
 		} else {
@@ -282,9 +286,10 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getBillBookable(String billID) {
+	public String getBillBookable(String billID) throws InvalidIDException {
 		if (bills.containsKey(billID)) {
 			return bills.get(billID).getBookable();
 		} else {
@@ -296,9 +301,10 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getBillServices(String billID) {
+	public List<String> getBillServices(String billID) throws InvalidIDException {
 		if (bills.containsKey(billID)) {
 			return new ArrayList<String>(bills.get(billID).getServices());
 		} else {
@@ -310,9 +316,10 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public LocalDateTime getBillIssueDate(String billID) {
+	public LocalDateTime getBillIssueDate(String billID) throws InvalidIDException {
 		if (bills.containsKey(billID)) {
 			return bills.get(billID).getIssueDate();
 		} else {
@@ -324,9 +331,10 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getBillPaymentType(String billID) {
+	public String getBillPaymentType(String billID) throws InvalidIDException {
 		if (bills.containsKey(billID)) {
 			return bills.get(billID).getPaymentType();
 		} else {
@@ -363,9 +371,10 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void removeBill(String billID) {
+	public void removeBill(String billID) throws InvalidIDException {
 		if (bills.containsKey(billID)) {
 			bills.removeKey(billID);
 		} else {
@@ -377,9 +386,10 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public double getBillTotalAmount(String billID) {
+	public double getBillTotalAmount(String billID) throws InvalidIDException {
 		if (bills.containsKey(billID)) {
 			return bills.get(billID).getTotalAmount();
 		} else {
@@ -389,7 +399,7 @@ public class BillsManagerImpl extends MinimalEObjectImpl.Container implements Bi
 	}
 
 	@Override
-	public double getBillDiscount(String billID) {
+	public double getBillDiscount(String billID) throws InvalidIDException {
 		if (bills.containsKey(billID)) {
 			return bills.get(billID).getDiscount();
 		} else {

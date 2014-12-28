@@ -190,9 +190,10 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void addBooking(String bookingID) {
+	public void addBooking(String bookingID) throws InvalidIDException {
 		if(!bookings.contains(bookingID)) {
 			bookings.add(bookingID);
 		} else {
@@ -204,9 +205,10 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void removeBooking(String bookingID) {
+	public void removeBooking(String bookingID) throws InvalidIDException {
 		if(bookings.contains(bookingID)) {
 			bookings.remove(bookingID);
 		} else {
@@ -218,9 +220,10 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void addRequest(String requestID) {
+	public void addRequest(String requestID) throws InvalidIDException {
 		if(!requests.contains(requestID)) {
 			requests.add(requestID);
 		} else {
@@ -232,9 +235,10 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void removeRequest(String requestID) {
+	public void removeRequest(String requestID) throws InvalidIDException {
 		if(requests.contains(requestID)) {
 			requests.remove(requestID);
 		} else {

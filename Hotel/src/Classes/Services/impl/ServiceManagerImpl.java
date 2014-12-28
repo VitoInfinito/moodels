@@ -170,9 +170,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public String getServiceName(String serviceID) {
+	public String getServiceName(String serviceID) throws InvalidIDException {
 		if (services.containsKey(serviceID)) {
 			return services.get(serviceID).getName();
 		} else {
@@ -184,9 +185,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public double getServicePrice(String serviceID) {
+	public double getServicePrice(String serviceID) throws InvalidIDException {
 		if (services.containsKey(serviceID)) {
 			return services.get(serviceID).getPrice();
 		} else {
@@ -198,9 +200,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public double getServiceExpense(String serviceID) {
+	public double getServiceExpense(String serviceID) throws InvalidIDException {
 		if (services.containsKey(serviceID)) {
 			return services.get(serviceID).getExpense();
 		} else {
@@ -212,9 +215,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public boolean isRSODelivered(String orderID) {
+	public boolean isRSODelivered(String orderID) throws InvalidIDException {
 		if (roomServiceOrders.containsKey(orderID)) {
 			return roomServiceOrders.get(orderID).isDelivered();
 		} else {
@@ -226,9 +230,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public LocalDateTime getRSODeliveryDate(String orderID) {
+	public LocalDateTime getRSODeliveryDate(String orderID) throws InvalidIDException {
 		if (roomServiceOrders.containsKey(orderID)) {
 			return roomServiceOrders.get(orderID).getDeliveryDate();
 		} else {
@@ -240,9 +245,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public String getRSOBookable(String orderID) {
+	public String getRSOBookable(String orderID) throws InvalidIDException {
 		if (roomServiceOrders.containsKey(orderID)) {
 			return roomServiceOrders.get(orderID).getBookable();
 		} else {
@@ -254,9 +260,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public List<String> getRSOItems(String orderID) {
+	public List<String> getRSOItems(String orderID) throws InvalidIDException {
 		if (roomServiceOrders.containsKey(orderID)) {
 			return new ArrayList<String>(roomServiceOrders.get(orderID).getItems());
 		} else {
@@ -268,9 +275,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public List<String> getRSOServices(String orderID) {
+	public List<String> getRSOServices(String orderID) throws InvalidIDException {
 		if (roomServiceOrders.containsKey(orderID)) {
 			List<Service> services = roomServiceOrders.get(orderID).getService();
 			List<String> tmp = new ArrayList<String>();
@@ -288,9 +296,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void changeRSOISDelivered(String orderID, boolean isDelivered) {
+	public void changeRSOISDelivered(String orderID, boolean isDelivered) throws InvalidIDException {
 		if (roomServiceOrders.containsKey(orderID)) {
 			roomServiceOrders.get(orderID).setIsDelivered(isDelivered);
 		} else {
@@ -302,9 +311,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void changeRSODeliveryDate(String orderID, LocalDateTime date) {
+	public void changeRSODeliveryDate(String orderID, LocalDateTime date) throws InvalidIDException {
 		if (roomServiceOrders.containsKey(orderID)) {
 			roomServiceOrders.get(orderID).setDeliveryDate(date);
 		} else {
@@ -334,9 +344,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void setRSOBill(String orderID, String billID) {
+	public void setRSOBill(String orderID, String billID) throws InvalidIDException {
 		if (roomServiceOrders.containsKey(orderID)) {
 			roomServiceOrders.get(orderID).setBill(billID);
 		} else {
@@ -348,9 +359,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public String getRSOBill(String orderID) {
+	public String getRSOBill(String orderID) throws InvalidIDException {
 		if (roomServiceOrders.containsKey(orderID)) {
 			return roomServiceOrders.get(orderID).getBill();
 		} else {
@@ -362,9 +374,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void makeRoomServiceOrder(List<String> items, List<String> services, String bill, String bookable, LocalDateTime deliveryDate, boolean isDelivered) {
+	public void makeRoomServiceOrder(List<String> items, List<String> services, String bill, String bookable, LocalDateTime deliveryDate, boolean isDelivered) throws InvalidIDException {
 		
 		RoomServiceOrder order = ServicesFactory.eINSTANCE.createRoomServiceOrder();
 		
@@ -399,9 +412,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void changeServiceName(String serviceID, String name) {
+	public void changeServiceName(String serviceID, String name) throws InvalidIDException {
 		if (services.containsKey(serviceID)) {
 			services.get(serviceID).setName(name);
 		} else {
@@ -413,9 +427,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void changeServicePrice(String serviceID, double price) {
+	public void changeServicePrice(String serviceID, double price) throws InvalidIDException {
 		if (services.containsKey(serviceID)) {
 			services.get(serviceID).setPrice(price);
 		} else {
@@ -427,9 +442,10 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void changeServiceExpense(String serviceID, double expense) {
+	public void changeServiceExpense(String serviceID, double expense) throws InvalidIDException {
 		if (services.containsKey(serviceID)) {
 			services.get(serviceID).setExpense(expense);
 		} else {
@@ -441,18 +457,20 @@ public class ServiceManagerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void addRoomServiceMenuItem(String itemID) {
+	public void addRoomServiceMenuItem(String itemID) throws InvalidIDException {
 		roomServiceMenu.addItem(itemID);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void removeRoomServiceMenuItem(String itemID) {
+	public void removeRoomServiceMenuItem(String itemID) throws InvalidIDException {
 		roomServiceMenu.removeItem(itemID);
 	}
 

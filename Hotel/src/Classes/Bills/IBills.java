@@ -13,6 +13,7 @@ import org.eclipse.jdt.annotation.Nullable;
 
 import Classes.InsufficientFundsException;
 import Classes.InvalidCreditCardException;
+import Classes.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,10 +33,11 @@ public interface IBills extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
 	 * @generated
 	 */
-	boolean getIsBillPaid(String billID);
+	boolean getIsBillPaid(String billID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -48,10 +50,11 @@ public interface IBills extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
 	 * @generated
 	 */
-	LocalDateTime getBillPaymentDate(String billID);
+	LocalDateTime getBillPaymentDate(String billID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -85,10 +88,11 @@ public interface IBills extends EObject {
 	 * @param to 
 	 * @param from 
 	 * @return 
+	 * @throws InvalidIDException 
 	 * @model itemsDataType="org.eclipse.uml2.types.String" itemsMany="true" itemsOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false" bookableDataType="org.eclipse.uml2.types.String" bookableRequired="true" bookableOrdered="false"
 	 * @generated NOT
 	 */
-	String addBill(List<String> items, List<String> services, @Nullable String bookable, @Nullable LocalDateTime from, @Nullable LocalDateTime to, double discount);
+	String addBill(List<String> items, List<String> services, @Nullable String bookable, @Nullable LocalDateTime from, @Nullable LocalDateTime to, double discount) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -102,42 +106,47 @@ public interface IBills extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
 	 * @generated NOT
 	 */
-	List<String> getBillItems(String billID);
+	List<String> getBillItems(String billID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
 	 * @generated
 	 */
-	String getBillBookable(String billID);
+	String getBillBookable(String billID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
 	 * @generated NOT
 	 */
-	List<String> getBillServices(String billID);
+	List<String> getBillServices(String billID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
 	 * @generated
 	 */
-	LocalDateTime getBillIssueDate(String billID);
+	LocalDateTime getBillIssueDate(String billID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
 	 * @generated
 	 */
-	String getBillPaymentType(String billID);
+	String getBillPaymentType(String billID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -158,25 +167,28 @@ public interface IBills extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
 	 * @generated
 	 */
-	void removeBill(String billID);
+	void removeBill(String billID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
 	 * @generated
 	 */
-	double getBillTotalAmount(String billID);
+	double getBillTotalAmount(String billID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
 	 * @generated
 	 */
-	double getBillDiscount(String billID);
+	double getBillDiscount(String billID) throws InvalidIDException;
 
 } // IBills

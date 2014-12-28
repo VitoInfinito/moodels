@@ -4,6 +4,8 @@ package Classes.Inventory;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
+import Classes.InvalidIDException;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>IManage Inventory</b></em>'.
@@ -22,26 +24,29 @@ public interface IManageInventory extends IInventoryAccess {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
 	 * @generated
 	 */
-	void changeItemName(String id, String name);
+	void changeItemName(String id, String name) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" priceRequired="true" priceOrdered="false"
 	 * @generated
 	 */
-	void changeItemPrice(String id, double price);
+	void changeItemPrice(String id, double price) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" expenseRequired="true" expenseOrdered="false"
 	 * @generated
 	 */
-	void changeItemExpense(String id, double expense);
+	void changeItemExpense(String id, double expense) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -54,9 +59,10 @@ public interface IManageInventory extends IInventoryAccess {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
 	 * @generated
 	 */
-	void removeItem(String id);
+	void removeItem(String id) throws InvalidIDException;
 
 } // IManageInventory

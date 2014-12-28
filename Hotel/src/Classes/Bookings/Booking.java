@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
+import Classes.InvalidIDException;
 import Classes.Stays.CreditCard;
 
 /**
@@ -184,20 +185,22 @@ public interface Booking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model
 	 * @generated
 	 */
-	void addBookedStay(String stayID);
+	void addBookedStay(String stayID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model
 	 * @generated
 	 */
-	void cancelBookedStay(String stayID);
+	void cancelBookedStay(String stayID) throws InvalidIDException;
 	
-	void addRequest(String requestID);
+	void addRequest(String requestID) throws InvalidIDException;
 
-	void removeRequest(String requestID);
+	void removeRequest(String requestID) throws InvalidIDException;
 } // Booking

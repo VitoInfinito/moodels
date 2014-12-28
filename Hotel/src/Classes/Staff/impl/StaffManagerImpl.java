@@ -127,9 +127,10 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getStaffFirstName(String SSID) {
+	public String getStaffFirstName(String SSID) throws InvalidIDException {
 		if(employees.contains(SSID)) {
 			return employees.get(SSID).getFirstName();
 		} else {
@@ -142,9 +143,10 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getStaffLastName(String SSID) {
+	public String getStaffLastName(String SSID) throws InvalidIDException {
 		if(employees.contains(SSID)) {
 			return employees.get(SSID).getLastName();
 		} else {
@@ -156,9 +158,10 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getStaffJob(String SSID) {
+	public String getStaffJob(String SSID) throws InvalidIDException {
 		if(employees.contains(SSID)) {
 			return employees.get(SSID).getJob();
 		} else {
@@ -170,9 +173,10 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getStaffPhone(String SSID) {
+	public String getStaffPhone(String SSID) throws InvalidIDException {
 		if(employees.contains(SSID)) {
 			return employees.get(SSID).getPhone();
 		} else {
@@ -184,9 +188,10 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getStaffEmail(String SSID) {
+	public String getStaffEmail(String SSID) throws InvalidIDException {
 		if(employees.contains(SSID)) {
 			return employees.get(SSID).getEmail();
 		} else {
@@ -198,9 +203,10 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getStaffSalaryContractType(String SSID) {
+	public String getStaffSalaryContractType(String SSID) throws InvalidIDException {
 		if(employees.contains(SSID)){
 			return employees.get(SSID).getSalaryContract().getType();
 		} else {
@@ -212,9 +218,10 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public double getStaffSalary(String SSID) {
+	public double getStaffSalary(String SSID) throws InvalidIDException {
 		if(employees.contains(SSID)) {
 			return employees.get(SSID).getSalaryContract().getSalary();
 		} else {
@@ -226,9 +233,10 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeStaffFirstName(String SSID, String firstName) {
+	public void changeStaffFirstName(String SSID, String firstName) throws InvalidIDException {
 		if(employees.contains(SSID)) {
 			employees.get(SSID).setFirstName(firstName);
 		} else {
@@ -240,9 +248,10 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeStaffLastName(String SSID, String lastName) {
+	public void changeStaffLastName(String SSID, String lastName) throws InvalidIDException {
 		if(employees.contains(SSID)) {
 			employees.get(SSID).setLastName(lastName);
 		} else {
@@ -254,9 +263,10 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeStaffJob(String SSID, String job) {
+	public void changeStaffJob(String SSID, String job) throws InvalidIDException {
 		if(employees.contains(SSID)) {
 			employees.get(SSID).setJob(job);
 		} else {
@@ -268,9 +278,10 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeStaffPhone(String SSID, String phoneNumber) {
+	public void changeStaffPhone(String SSID, String phoneNumber) throws InvalidIDException {
 		if(employees.contains(SSID)) {
 			employees.get(SSID).setPhone(phoneNumber);
 		} else {
@@ -282,9 +293,10 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeStaffSalaryContract(String SSID, SalaryContract salaryContract) {
+	public void changeStaffSalaryContract(String SSID, SalaryContract salaryContract) throws InvalidIDException {
 		if(employees.contains(SSID)) {
 			employees.get(SSID).setSalaryContract(salaryContract);
 		} else {
@@ -307,10 +319,11 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	/**
 	* <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	* @generated NOT
 	*/
 
-	public void addEmployee(String firstname, String lastname, String job, String phone, String email, String SSID, String salaryContractType, double salary) {
+	public void addEmployee(String firstname, String lastname, String job, String phone, String email, String SSID, String salaryContractType, double salary) throws InvalidIDException {
 		if (employees.containsKey(SSID)) {
 			logger.warn("There is already an employee added with the SSID {}. The SSID can not be used as a unique ID!", SSID);
 			throw new InvalidIDException("There is already an employee added with the SSID " + SSID + ". The SSID can not be used as a unique ID!");

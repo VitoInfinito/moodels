@@ -4,6 +4,8 @@ package Classes.Services;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
+import Classes.InvalidIDException;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -23,42 +25,47 @@ public interface IServicesManage extends IServicesAccess {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model serviceIDDataType="org.eclipse.uml2.types.String" serviceIDRequired="true" serviceIDOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
 	 * @generated
 	 */
-	void changeServiceName(String serviceID, String name);
+	void changeServiceName(String serviceID, String name) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model serviceIDDataType="org.eclipse.uml2.types.String" serviceIDRequired="true" serviceIDOrdered="false" priceRequired="true" priceOrdered="false"
 	 * @generated
 	 */
-	void changeServicePrice(String serviceID, double price);
+	void changeServicePrice(String serviceID, double price) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model serviceIDDataType="org.eclipse.uml2.types.String" serviceIDRequired="true" serviceIDOrdered="false" expenseRequired="true" expenseOrdered="false"
 	 * @generated
 	 */
-	void changeServiceExpense(String serviceID, double expense);
+	void changeServiceExpense(String serviceID, double expense) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model itemIDDataType="org.eclipse.uml2.types.String" itemIDRequired="true" itemIDOrdered="false"
 	 * @generated
 	 */
-	void addRoomServiceMenuItem(String itemID);
+	void addRoomServiceMenuItem(String itemID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model itemIDDataType="org.eclipse.uml2.types.String" itemIDRequired="true" itemIDOrdered="false"
 	 * @generated
 	 */
-	void removeRoomServiceMenuItem(String itemID);
+	void removeRoomServiceMenuItem(String itemID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->

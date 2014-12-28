@@ -50,9 +50,10 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public Feedback getFeedback(String id) {
+	public Feedback getFeedback(String id) throws InvalidIDException {
 		if (feedbacks.containsKey(id)) {
 			return feedbacks.get(id);
 		} else {
@@ -73,9 +74,10 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getFeedbackDescription(String id) {
+	public String getFeedbackDescription(String id) throws InvalidIDException {
 		if (feedbacks.containsKey(id)) {
 			return feedbacks.get(id).getDescription();
 		} else {
@@ -87,9 +89,10 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public boolean getFeedbackIsResolved(String id) {
+	public boolean getFeedbackIsResolved(String id) throws InvalidIDException {
 		if (feedbacks.containsKey(id)) {
 			return feedbacks.get(id).isResolved();
 		} else {
@@ -101,9 +104,10 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public boolean getFeedbackIsNoted(String id) {
+	public boolean getFeedbackIsNoted(String id) throws InvalidIDException {
 		if (feedbacks.containsKey(id)) {
 			return feedbacks.get(id).isNoted();
 		} else {
@@ -115,9 +119,10 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void setFeedbackDescription(String id, String desc) {
+	public void setFeedbackDescription(String id, String desc) throws InvalidIDException {
 		if (feedbacks.containsKey(id)) {
 			feedbacks.get(id).setDescription(desc);
 		} else {
@@ -129,9 +134,10 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void setFeedbackIsResolved(String id, boolean status) {
+	public void setFeedbackIsResolved(String id, boolean status) throws InvalidIDException {
 		if (feedbacks.containsKey(id)) {
 			feedbacks.get(id).setIsResolved(status);
 		} else {
@@ -143,9 +149,10 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void setFeedbackIsNoted(String id, boolean status) {
+	public void setFeedbackIsNoted(String id, boolean status) throws InvalidIDException {
 		if (feedbacks.containsKey(id)) {
 			feedbacks.get(id).setIsNoted(status);
 		} else {
@@ -212,7 +219,7 @@ public class FeedbackManagerImpl extends MinimalEObjectImpl.Container implements
 	}
 	
 	@Override
-	public void removeFeedback(String id) {
+	public void removeFeedback(String id) throws InvalidIDException {
 		if (feedbacks.containsKey(id)) {
 			feedbacks.remove(id);
 		} else {

@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import Classes.InvalidIDException;
 import Classes.Bills.IBills;
 import Classes.Bookings.IBookings;
 import Classes.Inventory.IInventoryAccess;
@@ -80,9 +81,10 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public LinkedHashMap<LocalDateTime, Integer> getOccupancyStatistics(LocalDateTime from, LocalDateTime to) {
+	public LinkedHashMap<LocalDateTime, Integer> getOccupancyStatistics(LocalDateTime from, LocalDateTime to) throws InvalidIDException {
 		LinkedHashMap<LocalDateTime, Integer> map = new LinkedHashMap<LocalDateTime, Integer>();
 		
 		LocalDateTime entryDate = LocalDateTime.of(from.getYear(), from.getMonth(), from.getDayOfMonth(), 0, 0);
@@ -104,9 +106,10 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public LinkedHashMap<LocalDateTime, Double> getRevenueStatistics(LocalDateTime from, LocalDateTime to) {
+	public LinkedHashMap<LocalDateTime, Double> getRevenueStatistics(LocalDateTime from, LocalDateTime to) throws InvalidIDException {
 		LinkedHashMap<LocalDateTime, Double> map = new LinkedHashMap<LocalDateTime, Double>();
 		
 		LocalDateTime entryDate = LocalDateTime.of(from.getYear(), from.getMonth(), from.getDayOfMonth(), 0, 0);
@@ -131,9 +134,10 @@ public class StatisticsGeneratorImpl extends MinimalEObjectImpl.Container implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public LinkedHashMap<LocalDateTime, Double> getProfitStatistics(LocalDateTime from, LocalDateTime to) {
+	public LinkedHashMap<LocalDateTime, Double> getProfitStatistics(LocalDateTime from, LocalDateTime to) throws InvalidIDException {
 		LinkedHashMap<LocalDateTime, Double> map = new LinkedHashMap<LocalDateTime, Double>();
 		
 		LocalDateTime entryDate = LocalDateTime.of(from.getYear(), from.getMonth(), from.getDayOfMonth(), 0, 0);

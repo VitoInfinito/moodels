@@ -5,6 +5,8 @@ package Classes.Customers;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
+import Classes.InvalidIDException;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Customer</b></em>'.
@@ -220,33 +222,37 @@ public interface Customer extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model
 	 * @generated NOT
 	 */
-	void addBooking(String bookingID);
+	void addBooking(String bookingID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model
 	 * @generated NOT
 	 */
-	void removeBooking(String bookingID);
+	void removeBooking(String bookingID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model
 	 * @generated NOT
 	 */
-	void addRequest(String requestID);
+	void addRequest(String requestID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model
 	 * @generated NOT
 	 */
-	void removeRequest(String requestID);
+	void removeRequest(String requestID) throws InvalidIDException;
 
 } // Customer

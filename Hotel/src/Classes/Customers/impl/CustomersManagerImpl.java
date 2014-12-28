@@ -99,9 +99,10 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	 * Ensures:
 	 *		
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void removeCustomer(String SSID) {
+	public void removeCustomer(String SSID) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			customer.remove(SSID);
 		} else {
@@ -113,9 +114,10 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeCustomerFirstName(String SSID, String firstName) {
+	public void changeCustomerFirstName(String SSID, String firstName) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			customer.get(SSID).setFirstname(firstName);
 		} else {
@@ -127,9 +129,10 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeCustomerLastName(String SSID, String lastName) {
+	public void changeCustomerLastName(String SSID, String lastName) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			customer.get(SSID).setLastname(lastName);
 		} else {
@@ -141,9 +144,10 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeCustomerTitle(String SSID, String title) {
+	public void changeCustomerTitle(String SSID, String title) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			customer.get(SSID).setTitle(title);
 		} else {
@@ -155,9 +159,10 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeCustomerEmail(String SSID, String eMail) {
+	public void changeCustomerEmail(String SSID, String eMail) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			customer.get(SSID).setEmail(eMail);
 		} else {
@@ -169,10 +174,11 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
 	@NonNullByDefault
-	public void changeCustomerPhone(String SSID, String phoneNr) {
+	public void changeCustomerPhone(String SSID, String phoneNr) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			customer.get(SSID).setPhone(phoneNr);
 		} else {
@@ -184,10 +190,11 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
 	@NonNullByDefault
-	public String getCustomerFirstName(String SSID) {
+	public String getCustomerFirstName(String SSID) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			return customer.get(SSID).getFirstname();
 		} else {
@@ -199,10 +206,11 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
 	@NonNullByDefault
-	public String getCustomerLastName(String SSID) {
+	public String getCustomerLastName(String SSID) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			return customer.get(SSID).getLastname();
 		} else {
@@ -214,9 +222,10 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getCustomerTitle(String SSID) {
+	public String getCustomerTitle(String SSID) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			return customer.get(SSID).getTitle();
 		} else {
@@ -228,9 +237,10 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getCustomerEmail(String SSID) {
+	public String getCustomerEmail(String SSID) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			return customer.get(SSID).getEmail();
 		} else {
@@ -242,9 +252,10 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getCustomerPhone(String SSID) {
+	public String getCustomerPhone(String SSID) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			return customer.get(SSID).getPhone();
 		} else {
@@ -326,9 +337,10 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getCustomerBookings(String SSID) {
+	public List<String> getCustomerBookings(String SSID) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			return new ArrayList<String>(customer.get(SSID).getBookings());
 		} else {
@@ -340,9 +352,10 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getCustomerRequests(String SSID) {
+	public List<String> getCustomerRequests(String SSID) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			return new ArrayList<String>(customer.get(SSID).getRequests());
 		} else {
@@ -354,9 +367,10 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void addCustomerBooking(String SSID, String bookingID) {
+	public void addCustomerBooking(String SSID, String bookingID) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			customer.get(SSID).addBooking(bookingID);
 		} else {
@@ -368,9 +382,10 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void removeCustomerBooking(String SSID, String bookingID) {
+	public void removeCustomerBooking(String SSID, String bookingID) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			customer.get(SSID).removeBooking(bookingID);
 		} else {
@@ -382,9 +397,10 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void addCustomerRequest(String SSID, String description) {
+	public void addCustomerRequest(String SSID, String description) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			customer.get(SSID).addRequest(iRequests.addRequest(description));
 		} else {
@@ -396,9 +412,10 @@ public class CustomersManagerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void removeCustomerRequest(String SSID, String requestID) {
+	public void removeCustomerRequest(String SSID, String requestID) throws InvalidIDException {
 		if (customer.containsKey(SSID)) {
 			iRequests.deleteRequest(requestID);
 			customer.get(SSID).removeRequest(requestID);

@@ -81,9 +81,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @return 
 	 * @throws SOAPException 
+	 * @throws InvalidCreditCardException 
 	 * @generated NOT
 	 */
-	public String makeBooking(List<String> bookables, String customerID, LocalDateTime from, LocalDateTime to, int nbrGuests, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, double discount) throws SOAPException, InvalidIDException, IllegalArgumentException {
+	public String makeBooking(List<String> bookables, String customerID, LocalDateTime from, LocalDateTime to, int nbrGuests, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, double discount) throws SOAPException, InvalidIDException, IllegalArgumentException, InvalidCreditCardException {
 		if (bookables.isEmpty()) {
 			logger.warn("Tried to make a booking when no bookable IDs were provided.");
 			throw new InvalidIDException();
@@ -130,9 +131,11 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
+	 * @throws NumberFormatException 
 	 * @generated NOT
 	 */
-	public List<String> searchBookings(String keyword) {
+	public List<String> searchBookings(String keyword) throws NumberFormatException, InvalidIDException {
 		keyword = keyword.trim();
 		Set<String> searchResult = new LinkedHashSet<String>();
 		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
@@ -204,9 +207,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getBookedStaysOfBooking(String bookingID) {
+	public List<String> getBookedStaysOfBooking(String bookingID) throws InvalidIDException {
 		if (bookings.containsKey(bookingID)) {
 			return new ArrayList<String>(bookings.get(bookingID).getBookedStays());
 		} else {
@@ -219,9 +223,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc -->
 	 * Get the customer for a specific booking
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public String getCustomerOfBooking(String bookingID) {
+	public String getCustomerOfBooking(String bookingID) throws InvalidIDException {
 		if (!bookings.contains(bookingID)) {
 			logger.warn("A booking with ID {} does not exist.", bookingID);
 			throw new InvalidIDException();
@@ -234,9 +239,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc -->
 	 * get the number of guests of a specific booking
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public int getNbrGuestOfBooking(String bookingID) {
+	public int getNbrGuestOfBooking(String bookingID) throws InvalidIDException {
 		if (!bookings.contains(bookingID)) {
 			logger.warn("A booking with ID {} does not exist.", bookingID);
 			throw new InvalidIDException();
@@ -248,9 +254,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void cancelBooking(String bookingID) {
+	public void cancelBooking(String bookingID) throws InvalidIDException {
 		if (!bookings.containsKey(bookingID)) {
 			logger.warn("A booking with bookingID {} could not be found.", bookingID);
 			throw new InvalidIDException();
@@ -279,9 +286,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void cancelStayOfBooking(String bookingID, String stayID) {
+	public void cancelStayOfBooking(String bookingID, String stayID) throws InvalidIDException {
 		if (!bookings.containsKey(bookingID)) {
 			logger.warn("A booking with bookingID {} could not be found.", bookingID);
 			throw new InvalidIDException();
@@ -315,9 +323,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void addBookedStayToBooking(String bookingID, String bookableID, LocalDateTime from, LocalDateTime to, double discount) {
+	public void addBookedStayToBooking(String bookingID, String bookableID, LocalDateTime from, LocalDateTime to, double discount) throws InvalidIDException {
 		if (!bookings.containsKey(bookingID)) {
 			logger.warn("A booking with bookingID {} could not be found.", bookingID);
 			throw new InvalidIDException();
@@ -341,9 +350,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc -->
 	 * Change the number of guests on a specific booking
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeNbrGuestsOfBooking(String bookingID, int nbrGuests) {
+	public void changeNbrGuestsOfBooking(String bookingID, int nbrGuests) throws InvalidIDException {
 		if (!bookings.contains(bookingID)) {
 			logger.warn("A booking with ID {} does not exist.", bookingID);
 			throw new InvalidIDException();
@@ -400,9 +410,11 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
+	 * @throws NumberFormatException 
 	 * @generated NOT
 	 */
-	public List<String> searchBookingsMadeInPeriod(String keyword, LocalDateTime from, LocalDateTime to) {
+	public List<String> searchBookingsMadeInPeriod(String keyword, LocalDateTime from, LocalDateTime to) throws NumberFormatException, InvalidIDException {
 		keyword = keyword.trim();
 		Set<String> searchResult = new LinkedHashSet<String>();
 		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
@@ -485,9 +497,11 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
+	 * @throws NumberFormatException 
 	 * @generated
 	 */
-	public List<String> searchBookingsWithStaysInPeriod(String keyword, LocalDateTime from, LocalDateTime to) {
+	public List<String> searchBookingsWithStaysInPeriod(String keyword, LocalDateTime from, LocalDateTime to) throws NumberFormatException, InvalidIDException {
 		List<String> result = searchBookings(keyword);
 		List<String> copy = new ArrayList<String>(result);
 		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
@@ -504,9 +518,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public List<String> searchForAvailableBookablesInPeriod(LocalDateTime from, LocalDateTime to, String keyword) {
+	public List<String> searchForAvailableBookablesInPeriod(LocalDateTime from, LocalDateTime to, String keyword) throws InvalidIDException {
 		List<String> result = iBookableAccess.searchForBookable(keyword);
 		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
 		for (String stayID : staysInPeriod) {
@@ -518,9 +533,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public List<String> getAvailableBookablesInPeriod(LocalDateTime from, LocalDateTime to) {
+	public List<String> getAvailableBookablesInPeriod(LocalDateTime from, LocalDateTime to) throws InvalidIDException {
 		List<String> result = iBookableAccess.getAllBookableIDs();
 		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
 		for (String stayID : staysInPeriod) {
@@ -532,9 +548,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void addBookingRequest(String bookingID, String description) {
+	public void addBookingRequest(String bookingID, String description) throws InvalidIDException {
 		if (bookings.containsKey(bookingID)) {
 			bookings.get(bookingID).addRequest(iRequests.addRequest(description));
 		} else {
@@ -546,9 +563,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void removeBookingRequest(String bookingID, String requestID) {
+	public void removeBookingRequest(String bookingID, String requestID) throws InvalidIDException {
 		if (bookings.containsKey(bookingID)) {
 			bookings.get(bookingID).removeRequest(requestID);
 		} else {
@@ -570,9 +588,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @throws SOAPException, InvalidCreditCardException, InsufficientFundsException
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void payBookingBills(String bookingID) throws SOAPException, InvalidCreditCardException, InsufficientFundsException {
+	public void payBookingBills(String bookingID) throws SOAPException, InvalidCreditCardException, InsufficientFundsException, InvalidIDException {
 		if (bookings.containsKey(bookingID)) {
 			List<String> bills = new ArrayList<String>();
 			Booking booking = bookings.get(bookingID);
@@ -591,9 +610,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @throws SOAPException, InvalidCreditCardException, InsufficientFundsException
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void payStayBills(String bookingID, String stayID) throws SOAPException, InvalidCreditCardException, InsufficientFundsException {
+	public void payStayBills(String bookingID, String stayID) throws SOAPException, InvalidCreditCardException, InsufficientFundsException, InvalidIDException {
 		if (bookings.containsKey(bookingID)) {
 			Booking booking = bookings.get(bookingID);
 			if (!booking.getBookedStays().contains(stayID)) {
@@ -612,9 +632,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> searchForAvailableHotelRoomsInPeriod(LocalDateTime from, LocalDateTime to, String keyword, HotelRoomCategory category) {
+	public List<String> searchForAvailableHotelRoomsInPeriod(LocalDateTime from, LocalDateTime to, String keyword, HotelRoomCategory category) throws InvalidIDException {
 		List<String> result = iBookableAccess.searchHotelRooms(keyword, category);
 		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
 		for (String stayID : staysInPeriod) {
@@ -626,9 +647,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> searchForAvailableHostelBedsInPeriod(LocalDateTime from, LocalDateTime to, String keyword) {
+	public List<String> searchForAvailableHostelBedsInPeriod(LocalDateTime from, LocalDateTime to, String keyword) throws InvalidIDException {
 		List<String> result = iBookableAccess.searchHostelBeds(keyword);
 		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
 		for (String stayID : staysInPeriod) {
@@ -640,9 +662,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> searchForAvailableConferenceRoomsInPeriod(LocalDateTime from, LocalDateTime to, String keyword, ConferenceRoomCategory category) {
+	public List<String> searchForAvailableConferenceRoomsInPeriod(LocalDateTime from, LocalDateTime to, String keyword, ConferenceRoomCategory category) throws InvalidIDException {
 		List<String> result = iBookableAccess.searchConferenceRooms(keyword, category);
 		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
 		for (String stayID : staysInPeriod) {
@@ -654,9 +677,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getAvailableHotelRoomsInPeriod(LocalDateTime from, LocalDateTime to) {
+	public List<String> getAvailableHotelRoomsInPeriod(LocalDateTime from, LocalDateTime to) throws InvalidIDException {
 		List<String> result = iBookableAccess.getAllHotelRoomIDs();
 		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
 		for (String stayID : staysInPeriod) {
@@ -668,9 +692,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getAvailableConferenceRoomsInPeriod(LocalDateTime from, LocalDateTime to) {
+	public List<String> getAvailableConferenceRoomsInPeriod(LocalDateTime from, LocalDateTime to) throws InvalidIDException {
 		List<String> result = iBookableAccess.getAllConferenceRoomIDs();
 		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
 		for (String stayID : staysInPeriod) {
@@ -682,9 +707,10 @@ public class BookingsManagerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public List<String> getAvailableHostelBedsInPeriod(LocalDateTime from, LocalDateTime to) {
+	public List<String> getAvailableHostelBedsInPeriod(LocalDateTime from, LocalDateTime to) throws InvalidIDException {
 		List<String> result = iBookableAccess.getAllHostelBedIDs();
 		List<String> staysInPeriod = iHotelStayManager.getAllHotelStaysWithinPeriod(from, to);
 		for (String stayID : staysInPeriod) {

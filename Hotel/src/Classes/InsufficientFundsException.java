@@ -1,6 +1,6 @@
 package Classes;
 
-public class InsufficientFundsException extends RuntimeException {
+public class InsufficientFundsException extends Exception {
 
 	/**
 	 * 

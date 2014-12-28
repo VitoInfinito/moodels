@@ -5,6 +5,8 @@ package Classes.Guests;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
+import Classes.InvalidIDException;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Guest</b></em>'.
@@ -247,33 +249,37 @@ public interface Guest extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" 
 	 * @generated
 	 */
-	void addStay(String stayID);
+	void addStay(String stayID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated
 	 */
-	void removeStay(String stayID);
+	void removeStay(String stayID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false" 
 	 * @generated
 	 */
-	void addRequest(String requestID);
+	void addRequest(String requestID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @model requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false"
 	 * @generated
 	 */
-	void removeRequest(String requestID);
+	void removeRequest(String requestID) throws InvalidIDException;
 
 } // Guest

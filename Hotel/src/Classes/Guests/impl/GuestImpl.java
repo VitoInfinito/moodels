@@ -212,9 +212,10 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void addStay(String stayID) {
+	public void addStay(String stayID) throws InvalidIDException {
 		if(!stays.contains(stayID)) {
 			stays.add(stayID);
 		} else {
@@ -226,9 +227,10 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void removeStay(String stayID) {
+	public void removeStay(String stayID) throws InvalidIDException {
 		if(stays.contains(stayID)) {
 			stays.remove(stayID);
 		} else {
@@ -240,9 +242,10 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void addRequest(String requestID) {
+	public void addRequest(String requestID) throws InvalidIDException {
 		if(!requests.contains(requestID)) {
 			requests.add(requestID);
 		} else {
@@ -254,9 +257,10 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void removeRequest(String requestID) {
+	public void removeRequest(String requestID) throws InvalidIDException {
 		if(requests.contains(requestID)) {
 			requests.remove(requestID);
 		} else {
