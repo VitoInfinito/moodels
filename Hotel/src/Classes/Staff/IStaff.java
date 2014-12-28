@@ -3,6 +3,7 @@
 package Classes.Staff;
 
 import java.time.LocalDateTime;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
@@ -155,7 +156,7 @@ public interface IStaff extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	List<String> scheduleStaff(LocalDateTime from, LocalDateTime to);
+	LinkedHashMap<LocalDateTime, List<String>> scheduleStaff(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->

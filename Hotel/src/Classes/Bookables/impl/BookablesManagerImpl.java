@@ -499,7 +499,7 @@ public class BookablesManagerImpl extends MinimalEObjectImpl.Container implement
 			logger.warn("The bookable with ID {} could not be found. Invalid ID!", bookableID);
 			throw new InvalidIDException();
 		}
-		// TODO might need to notify so that stays in this bookable get another bookable. (maybe EMap does this though)
+		// TODO might need to notify so that stays in this bookable get another bookable.
 	}
 
 	/**

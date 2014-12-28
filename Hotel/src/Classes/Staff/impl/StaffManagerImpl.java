@@ -6,8 +6,11 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.regex.Pattern;
 
@@ -310,10 +313,24 @@ public class StaffManagerImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public List<String> scheduleStaff(LocalDateTime from, LocalDateTime to) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public LinkedHashMap<LocalDateTime, List<String>> scheduleStaff(LocalDateTime from, LocalDateTime to) {
+		// TODO implement this better...
+		LinkedHashMap<LocalDateTime, List<String>> dailyWorkers = new LinkedHashMap<LocalDateTime, List<String>>();
+		LinkedHashMap<LocalDateTime, Integer> stat = iStatisticsGenerator.getOccupancyStatistics(from, to);
+		List<Staff> allEmplyees = new ArrayList<Staff>(employees.values());
+		for (Map.Entry<LocalDateTime, Integer> entry : stat.entrySet()) {
+			int requiredWorkers = entry.getValue()/10;  // Hardcoded... lacked time to implement in a more advanced way
+			HashSet<String> working = new HashSet<String>();
+			Collections.shuffle(allEmplyees);
+			for (Staff employee : employees.values()) {
+				if (working.size() == requiredWorkers) {
+					break;
+				}
+				working.add(employee.getSsid());
+			}
+			dailyWorkers.put(entry.getKey(), new ArrayList<String>(working));
+		}
+		return dailyWorkers;
 	}
 
 	/**
