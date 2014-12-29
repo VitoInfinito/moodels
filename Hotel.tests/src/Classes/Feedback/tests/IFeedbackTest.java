@@ -9,8 +9,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import Classes.InvalidIDException;
 import Classes.Feedback.IFeedback;
+import Classes.Utils.InvalidIDException;
 
 public class IFeedbackTest {
 	

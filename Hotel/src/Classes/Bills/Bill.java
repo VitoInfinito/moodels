@@ -2,278 +2,249 @@
  */
 package Classes.Bills;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
-
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Bill</b></em>'.
+ * An implementation of the model object '<em><b>Bill</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Bills.Bill#isPaid <em>Is Paid</em>}</li>
- *   <li>{@link Classes.Bills.Bill#getPaymentType <em>Payment Type</em>}</li>
- *   <li>{@link Classes.Bills.Bill#getId <em>Id</em>}</li>
- *   <li>{@link Classes.Bills.Bill#getItems <em>Items</em>}</li>
- *   <li>{@link Classes.Bills.Bill#getServices <em>Services</em>}</li>
- *   <li>{@link Classes.Bills.Bill#getBookable <em>Bookable</em>}</li>
- *   <li>{@link Classes.Bills.Bill#getIssueDate <em>Issue Date</em>}</li>
- *   <li>{@link Classes.Bills.Bill#getPaymentDate <em>Payment Date</em>}</li>
- *   <li>{@link Classes.Bills.Bill#getTotalAmount <em>Total Amount</em>}</li>
- * </ul>
- * </p>
- *
- * @see Classes.Bills.BillsPackage#getBill()
- * @model
  * @generated
  */
-public interface Bill extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Is Paid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Is Paid</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Paid</em>' attribute.
-	 * @see #setIsPaid(boolean)
-	 * @see Classes.Bills.BillsPackage#getBill_IsPaid()
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
-	 * @generated
-	 */
-	boolean isPaid();
+class Bill implements Serializable {
 
-	/**
-	 * Sets the value of the '{@link Classes.Bills.Bill#isPaid <em>Is Paid</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Paid</em>' attribute.
-	 * @see #isPaid()
-	 * @generated
-	 */
-	void setIsPaid(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Payment Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Payment Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Payment Type</em>' attribute.
-	 * @see #setPaymentType(String)
-	 * @see Classes.Bills.BillsPackage#getBill_PaymentType()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getPaymentType();
-
-	/**
-	 * Sets the value of the '{@link Classes.Bills.Bill#getPaymentType <em>Payment Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Payment Type</em>' attribute.
-	 * @see #getPaymentType()
-	 * @generated
-	 */
-	void setPaymentType(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see Classes.Bills.BillsPackage#getBill_Id()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getId();
-
-	/**
-	 * Sets the value of the '{@link Classes.Bills.Bill#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Items</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Items</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Items</em>' attribute list.
-	 * @see Classes.Bills.BillsPackage#getBill_Items()
-	 * @model dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
-	 */
-	EList<String> getItems();
-
-	/**
-	 * Returns the value of the '<em><b>Services</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Services</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Services</em>' attribute list.
-	 * @see Classes.Bills.BillsPackage#getBill_Services()
-	 * @model dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
-	 */
-	EList<String> getServices();
-
-	/**
-	 * Returns the value of the '<em><b>Bookable</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Bookable</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bookable</em>' attribute.
-	 * @see #setBookable(String)
-	 * @see Classes.Bills.BillsPackage#getBill_Bookable()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getBookable();
-
-	/**
-	 * Sets the value of the '{@link Classes.Bills.Bill#getBookable <em>Bookable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bookable</em>' attribute.
-	 * @see #getBookable()
-	 * @generated
-	 */
-	void setBookable(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Issue Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Issue Date</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Issue Date</em>' attribute.
-	 * @see #setIssueDate(LocalDateTime)
-	 * @see Classes.Bills.BillsPackage#getBill_IssueDate()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	LocalDateTime getIssueDate();
-
-	/**
-	 * Sets the value of the '{@link Classes.Bills.Bill#getIssueDate <em>Issue Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Issue Date</em>' attribute.
-	 * @see #getIssueDate()
-	 * @generated
-	 */
-	void setIssueDate(LocalDateTime value);
-
-	/**
-	 * Returns the value of the '<em><b>Payment Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Payment Date</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Payment Date</em>' attribute.
-	 * @see #setPaymentDate(LocalDateTime)
-	 * @see Classes.Bills.BillsPackage#getBill_PaymentDate()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	LocalDateTime getPaymentDate();
-
-	/**
-	 * Sets the value of the '{@link Classes.Bills.Bill#getPaymentDate <em>Payment Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Payment Date</em>' attribute.
-	 * @see #getPaymentDate()
-	 * @generated
-	 */
-	void setPaymentDate(LocalDateTime value);
-
-	/**
-	 * Returns the value of the '<em><b>Total Amount</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Total Amount</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Total Amount</em>' attribute.
-	 * @see #setTotalAmount(double)
-	 * @see Classes.Bills.BillsPackage#getBill_TotalAmount()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	double getTotalAmount();
-
-	/**
-	 * Sets the value of the '{@link Classes.Bills.Bill#getTotalAmount <em>Total Amount</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Total Amount</em>' attribute.
-	 * @see #getTotalAmount()
-	 * @generated
-	 */
-	void setTotalAmount(double value);
+	private static final long serialVersionUID = 5901451234757714595L;	
+	private boolean isPaid;
+	private String paymentType;
+	private String id;
+	private List<String> items;
+	private List<String> services;
+	private String bookable;
+	private LocalDateTime issueDate;
+	private LocalDateTime paymentDate;
+	private double totalAmount;
+	private double discount;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model itemIDDataType="org.eclipse.uml2.types.String" itemIDRequired="true" itemIDOrdered="false"
 	 * @generated
 	 */
-	void addItem(String itemID);
+	protected Bill() {
+		items = new ArrayList<String>();
+		services = new ArrayList<String>();
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model serviceIDDataType="org.eclipse.uml2.types.String" serviceIDRequired="true" serviceIDOrdered="false"
 	 * @generated
 	 */
-	void addService(String serviceID);
+	public boolean isPaid() {
+		return isPaid;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsPaid(boolean newIsPaid) {
+		isPaid = newIsPaid;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPaymentType() {
+		return paymentType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPaymentType(String newPaymentType) {
+		paymentType = newPaymentType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		id = newId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<String> getItems() {
+		return items;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<String> getServices() {
+		return services;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getBookable() {
+		return bookable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBookable(String newBookable) {
+		bookable = newBookable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LocalDateTime getIssueDate() {
+		return issueDate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIssueDate(LocalDateTime newIssueDate) {
+		issueDate = newIssueDate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LocalDateTime getPaymentDate() {
+		return paymentDate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPaymentDate(LocalDateTime newPaymentDate) {
+		paymentDate = newPaymentDate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public double getTotalAmount() {
+		return totalAmount;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTotalAmount(double newTotalAmount) {
+		totalAmount = newTotalAmount;
+	}
 	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	double getDiscount();
+	public double getDiscount() {
+		return discount;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	void setDiscount(double newDiscount);
+	public void setDiscount(double newDiscount) {
+		discount = newDiscount;
+	}
 
-} // Bill
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void addItem(String itemID) {
+		items.add(itemID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void addService(String serviceID) {
+		services.add(serviceID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (isPaid: ");
+		result.append(isPaid);
+		result.append(", paymentType: ");
+		result.append(paymentType);
+		result.append(", id: ");
+		result.append(id);
+		result.append(", items: ");
+		result.append(items);
+		result.append(", services: ");
+		result.append(services);
+		result.append(", bookable: ");
+		result.append(bookable);
+		result.append(", issueDate: ");
+		result.append(issueDate);
+		result.append(", paymentDate: ");
+		result.append(paymentDate);
+		result.append(", totalAmount: ");
+		result.append(totalAmount);
+		result.append(')');
+		return result.toString();
+	}
+
+} //BillImpl

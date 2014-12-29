@@ -2,31 +2,37 @@
  */
 package Classes.Feedback;
 
-import org.eclipse.emf.ecore.EFactory;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Factory</b> for the model.
- * It provides a create method for each non-abstract class of the model.
+ * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
- * @see Classes.Feedback.FeedbackPackage
  * @generated
  */
-public interface FeedbackFactory extends EFactory {
-	/**
-	 * The singleton instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	FeedbackFactory eINSTANCE = Classes.Feedback.impl.FeedbackFactoryImpl.init();
+class FeedbackFactory implements Serializable {
+
+	private static final long serialVersionUID = -3992807685375113300L;
+	
+	static FeedbackFactory INSTANCE = new FeedbackFactory();
 
 	/**
-	 * Returns a new object of class '<em>Feedback</em>'.
+	 * Creates an instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Feedback</em>'.
 	 * @generated
 	 */
-	Feedback createFeedback();
-} //FeedbackFactory
+	private FeedbackFactory() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Feedback createFeedback() {
+		Feedback feedback = new Feedback();
+		return feedback;
+	}
+} //FeedbackFactoryImpl

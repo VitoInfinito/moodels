@@ -2,87 +2,108 @@
  */
 package Classes.Services;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
-import Classes.InvalidIDException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Room Service Menu</b></em>'.
+ * An implementation of the model object '<em><b>Room Service Menu</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Services.RoomServiceMenu#getName <em>Name</em>}</li>
- *   <li>{@link Classes.Services.RoomServiceMenu#getItems <em>Items</em>}</li>
- * </ul>
- * </p>
- *
- * @see Classes.Services.ServicesPackage#getRoomServiceMenu()
- * @model
  * @generated
  */
-public interface RoomServiceMenu extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see Classes.Services.ServicesPackage#getRoomServiceMenu_Name()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link Classes.Services.RoomServiceMenu#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Items</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Items</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Items</em>' attribute list.
-	 * @see Classes.Services.ServicesPackage#getRoomServiceMenu_Items()
-	 * @model dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
-	 */
-	EList<String> getItems();
+ class RoomServiceMenu implements Serializable {
+	private static final long serialVersionUID = -2856270243032291736L;
+	private final Logger logger = LoggerFactory.getLogger(RoomServiceMenu.class);
+	private String name;
+	private List<String> items;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @throws InvalidIDException 
-	 * @model itemIDDataType="org.eclipse.uml2.types.String" itemIDRequired="true" itemIDOrdered="false"
 	 * @generated
 	 */
-	void addItem(String itemID) throws InvalidIDException;
+	protected RoomServiceMenu() {
+		super();
+		items = new ArrayList<String>();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		name = newName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<String> getItems() {
+		return items;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
-	 * @model itemIDDataType="org.eclipse.uml2.types.String" itemIDRequired="true" itemIDOrdered="false"
 	 * @generated
 	 */
-	void removeItem(String itemID) throws InvalidIDException;
+	public void addItem(String itemID) throws InvalidIDException {
+		if (!items.contains(itemID)) {
+			items.add(itemID);
+		} else {
+			logger.warn("An item with ID {} is already added to the menu.", itemID);
+			throw new InvalidIDException();
+		}
+	}
 
-} // RoomServiceMenu
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
+	 * @generated
+	 */
+	public void removeItem(String itemID) throws InvalidIDException {
+		if (items.contains(itemID)) {
+			items.remove(itemID);
+		} else {
+			logger.warn("An item with ID {} could not be found.", itemID);
+			throw new InvalidIDException();
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", items: ");
+		result.append(items);
+		result.append(')');
+		return result.toString();
+	}
+
+} //RoomServiceMenuImpl

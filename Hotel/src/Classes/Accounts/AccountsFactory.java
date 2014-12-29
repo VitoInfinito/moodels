@@ -2,27 +2,34 @@
  */
 package Classes.Accounts;
 
-import org.eclipse.emf.ecore.EFactory;
+import java.io.Serializable;
+
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Factory</b> for the model.
- * It provides a create method for each non-abstract class of the model.
+ * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
- * @see Classes.Accounts.AccountsPackage
  * @generated
  */
-public interface AccountsFactory extends EFactory {
-	/**
-	 * The singleton instance of the factory.
-	 * @generated
-	 */
-	AccountsFactory eINSTANCE = Classes.Accounts.impl.AccountsFactoryImpl.init();
+class AccountsFactory implements Serializable {
+	static AccountsFactory INSTANCE = new AccountsFactory();
 
 	/**
-	 * Returns a new object of class '<em>Account</em>'.
-	 * @return a new object of class '<em>Account</em>'.
+	 * Creates an instance of the factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Account createAccount();
-} //AccountsFactory
+	private AccountsFactory() {
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Account createAccount() {
+		Account account = new Account();
+		return account;
+	}
+} //AccountsFactoryImpl

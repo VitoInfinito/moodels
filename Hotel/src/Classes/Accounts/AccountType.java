@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * @model
  * @generated
  */
-public enum AccountType implements Enumerator {
+public enum AccountType {
 	/**
 	 * The '<em><b>Manager</b></em>' literal object.
 	 * <!-- begin-user-doc -->

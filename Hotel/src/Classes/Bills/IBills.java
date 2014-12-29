@@ -11,9 +11,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.eclipse.jdt.annotation.Nullable;
 
-import Classes.InsufficientFundsException;
-import Classes.InvalidCreditCardException;
-import Classes.InvalidIDException;
+import Classes.Utils.InsufficientFundsException;
+import Classes.Utils.InvalidCreditCardException;
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,9 +26,9 @@ import Classes.InvalidIDException;
  * @generated
  */
 @NonNullByDefault
-public interface IBills extends EObject {
+public interface IBills {
 	
-	IBills INSTANCE = Classes.Bills.impl.BillsManagerImpl.INSTANCE;
+	IBills INSTANCE = Classes.Bills.BillsManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

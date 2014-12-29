@@ -5,75 +5,85 @@ package Classes.Bookables;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Hotel Room</b></em>'.
+ * An implementation of the model object '<em><b>Hotel Room</b></em>'.
  * <!-- end-user-doc -->
- *
  * <p>
- * The following features are supported:
+ * The following features are implemented:
  * <ul>
  *   <li>{@link Classes.Bookables.HotelRoom#getCategory <em>Category</em>}</li>
  *   <li>{@link Classes.Bookables.HotelRoom#getNbrBeds <em>Nbr Beds</em>}</li>
  * </ul>
  * </p>
  *
- * @see Classes.Bookables.BookablesPackage#getHotelRoom()
- * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='Hotel Room'"
  * @generated
  */
-public interface HotelRoom extends Room {
-	/**
-	 * Returns the value of the '<em><b>Category</b></em>' attribute.
-	 * The literals are from the enumeration {@link Classes.Bookables.HotelRoomCategory}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Category</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Category</em>' attribute.
-	 * @see Classes.Bookables.HotelRoomCategory
-	 * @see #setCategory(HotelRoomCategory)
-	 * @see Classes.Bookables.BookablesPackage#getHotelRoom_Category()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	HotelRoomCategory getCategory();
+class HotelRoom extends Room {
+
+	private static final long serialVersionUID = -1582245312990038143L;
+	
+	private static final HotelRoomCategory CATEGORY_EDEFAULT = HotelRoomCategory.STANDARD_ROOM;
+	private HotelRoomCategory category = CATEGORY_EDEFAULT;
+	private int nbrBeds;
 
 	/**
-	 * Sets the value of the '{@link Classes.Bookables.HotelRoom#getCategory <em>Category</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Category</em>' attribute.
-	 * @see Classes.Bookables.HotelRoomCategory
-	 * @see #getCategory()
 	 * @generated
 	 */
-	void setCategory(HotelRoomCategory value);
+	protected HotelRoom() {
+		super();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HotelRoomCategory getCategory() {
+		return category;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Nbr Beds</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Nbr Beds</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nbr Beds</em>' attribute.
-	 * @see #setNbrBeds(int)
-	 * @see Classes.Bookables.BookablesPackage#getHotelRoom_NbrBeds()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
-	int getNbrBeds();
+	public void setCategory(HotelRoomCategory newCategory) {
+		category = newCategory == null ? CATEGORY_EDEFAULT : newCategory;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Bookables.HotelRoom#getNbrBeds <em>Nbr Beds</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nbr Beds</em>' attribute.
-	 * @see #getNbrBeds()
 	 * @generated
 	 */
-	void setNbrBeds(int value);
+	public int getNbrBeds() {
+		return nbrBeds;
+	}
 
-} // HotelRoom
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNbrBeds(int newNbrBeds) {
+		nbrBeds = newNbrBeds;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (category: ");
+		result.append(category);
+		result.append(", nbrBeds: ");
+		result.append(nbrBeds);
+		result.append(')');
+		return result.toString();
+	}
+
+} //HotelRoomImpl

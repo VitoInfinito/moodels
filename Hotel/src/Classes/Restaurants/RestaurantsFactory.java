@@ -2,58 +2,67 @@
  */
 package Classes.Restaurants;
 
-import org.eclipse.emf.ecore.EFactory;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Factory</b> for the model.
- * It provides a create method for each non-abstract class of the model.
+ * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
- * @see Classes.Restaurants.RestaurantsPackage
  * @generated
  */
-public interface RestaurantsFactory extends EFactory {
-	/**
-	 * The singleton instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	RestaurantsFactory eINSTANCE = Classes.Restaurants.impl.RestaurantsFactoryImpl.init();
+ class RestaurantsFactory implements Serializable {
+
+	private static final long serialVersionUID = 5591998307554643982L;
+
+	static RestaurantsFactory INSTANCE = new RestaurantsFactory();
 
 	/**
-	 * Returns a new object of class '<em>Restaurant</em>'.
+	 * Creates an instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Restaurant</em>'.
 	 * @generated
 	 */
-	Restaurant createRestaurant();
+	private RestaurantsFactory() {
+		super();
+	}
 
 	/**
-	 * Returns a new object of class '<em>Reservation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reservation</em>'.
 	 * @generated
 	 */
-	Reservation createReservation();
+	public Restaurant createRestaurant() {
+		Restaurant restaurant = new Restaurant();
+		return restaurant;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Restaurant Table</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Restaurant Table</em>'.
 	 * @generated
 	 */
-	RestaurantTable createRestaurantTable();
+	public Reservation createReservation() {
+		Reservation reservation = new Reservation();
+		return reservation;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Restaurant Menu</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Restaurant Menu</em>'.
 	 * @generated
 	 */
-	RestaurantMenu createRestaurantMenu();
-} //RestaurantsFactory
+	public RestaurantTable createRestaurantTable() {
+		RestaurantTable restaurantTable = new RestaurantTable();
+		return restaurantTable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RestaurantMenu createRestaurantMenu() {
+		RestaurantMenu restaurantMenu = new RestaurantMenu();
+		return restaurantMenu;
+	}
+} //RestaurantsFactoryImpl

@@ -2,14 +2,14 @@
  */
 package Classes.Staff;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,9 +22,9 @@ import Classes.InvalidIDException;
  * @generated NOT
  */
 @NonNullByDefault
-public interface IStaff extends EObject {
+public interface IStaff extends Serializable {
 	
-	IStaff INSTANCE = Classes.Staff.impl.StaffManagerImpl.INSTANCE;
+	IStaff INSTANCE = Classes.Staff.StaffManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

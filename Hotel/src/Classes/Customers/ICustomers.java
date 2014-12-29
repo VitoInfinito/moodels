@@ -2,12 +2,12 @@
  */
 package Classes.Customers;
 
+import java.io.Serializable;
 import java.util.List;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +20,9 @@ import Classes.InvalidIDException;
  * @generated
  */
 @NonNullByDefault
-public interface ICustomers extends EObject {
+public interface ICustomers extends Serializable {
 	
-	ICustomers INSTANCE = Classes.Customers.impl.CustomersManagerImpl.INSTANCE;
+	ICustomers INSTANCE = Classes.Customers.CustomersManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

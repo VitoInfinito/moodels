@@ -2,32 +2,36 @@
  */
 package Classes.Customers;
 
-import org.eclipse.emf.ecore.EFactory;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Factory</b> for the model.
- * It provides a create method for each non-abstract class of the model.
+ * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
- * @see Classes.Customers.CustomersPackage
  * @generated
  */
-public interface CustomersFactory extends EFactory {
+class CustomersFactory implements Serializable {
+	private static final long serialVersionUID = 4429344991355880398L;
+	
+	static CustomersFactory INSTANCE = new CustomersFactory();
+
 	/**
-	 * The singleton instance of the factory.
+	 * Creates an instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	CustomersFactory eINSTANCE = Classes.Customers.impl.CustomersFactoryImpl.init();
+	private CustomersFactory() {
+		super();
+	}
 
 	/**
-	 * Returns a new object of class '<em>Customer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Customer</em>'.
 	 * @generated
 	 */
-	Customer createCustomer();
-
-} //CustomersFactory
+	public Customer createCustomer() {
+		Customer customer = new Customer();
+		return customer;
+	}
+} //CustomersFactoryImpl

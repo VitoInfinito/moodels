@@ -7,7 +7,7 @@ import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +20,9 @@ import Classes.InvalidIDException;
  * @generated
  */
 @NonNullByDefault
-public interface IManageAccounts extends EObject {
+public interface IManageAccounts extends IAccountsAccess {
 	
-	IManageAccounts INSTANCE = Classes.Accounts.impl.AccountsManagerImpl.INSTANCE;
+	IManageAccounts INSTANCE = Classes.Accounts.AccountsManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

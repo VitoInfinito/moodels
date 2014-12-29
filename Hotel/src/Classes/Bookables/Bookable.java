@@ -2,103 +2,101 @@
  */
 package Classes.Bookables;
 
-import org.eclipse.emf.ecore.EObject;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Bookable</b></em>'.
+ * An implementation of the model object '<em><b>Bookable</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Bookables.Bookable#getBaseprice <em>Baseprice</em>}</li>
- *   <li>{@link Classes.Bookables.Bookable#getId <em>Id</em>}</li>
- *   <li>{@link Classes.Bookables.Bookable#getDescription <em>Description</em>}</li>
- * </ul>
- * </p>
- *
- * @see Classes.Bookables.BookablesPackage#getBookable()
- * @model abstract="true"
  * @generated
  */
-public interface Bookable extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Baseprice</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Baseprice</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Baseprice</em>' attribute.
-	 * @see #setBaseprice(double)
-	 * @see Classes.Bookables.BookablesPackage#getBookable_Baseprice()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	double getBaseprice();
+abstract class Bookable implements Serializable {
+
+	private static final long serialVersionUID = 5257584459322543791L;
+	
+	private double baseprice;
+	private String id;
+	private String description;
 
 	/**
-	 * Sets the value of the '{@link Classes.Bookables.Bookable#getBaseprice <em>Baseprice</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Baseprice</em>' attribute.
-	 * @see #getBaseprice()
 	 * @generated
 	 */
-	void setBaseprice(double value);
+	protected Bookable() {
+		super();
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see Classes.Bookables.BookablesPackage#getBookable_Id()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getId();
+	public double getBaseprice() {
+		return baseprice;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Bookables.Bookable#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
 	 * @generated
 	 */
-	void setId(String value);
+	public void setBaseprice(double newBaseprice) {
+		baseprice = newBaseprice;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see Classes.Bookables.BookablesPackage#getBookable_Description()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getDescription();
+	public String getId() {
+		return id;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Bookables.Bookable#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(String value);
+	public void setId(String newId) {
+		id = newId;
+	}
 
-} // Bookable
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		description = newDescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (baseprice: ");
+		result.append(baseprice);
+		result.append(", id: ");
+		result.append(id);
+		result.append(", description: ");
+		result.append(description);
+		result.append(')');
+		return result.toString();
+	}
+
+} //BookableImpl

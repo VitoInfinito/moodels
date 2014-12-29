@@ -2,12 +2,12 @@
  */
 package Classes.Guests;
 
+import java.io.Serializable;
 import java.util.List;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +20,9 @@ import Classes.InvalidIDException;
  * @generated
  */
 @NonNullByDefault
-public interface IGuests extends EObject {
+public interface IGuests extends Serializable {
 	
-	IGuests INSTANCE = Classes.Guests.impl.GuestsManagerImpl.INSTANCE;
+	IGuests INSTANCE = Classes.Guests.GuestsManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

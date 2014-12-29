@@ -4,7 +4,7 @@ package Classes.Inventory;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,7 @@ import Classes.InvalidIDException;
 @NonNullByDefault
 public interface IManageInventory extends IInventoryAccess {
 	
-	IManageInventory INSTANCE = Classes.Inventory.impl.InventoryManagerImpl.INSTANCE;
+	IManageInventory INSTANCE = Classes.Inventory.InventoryManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

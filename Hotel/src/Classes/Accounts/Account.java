@@ -2,106 +2,94 @@
  */
 package Classes.Accounts;
 
-import org.eclipse.emf.ecore.EObject;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Account</b></em>'.
+ * An implementation of the model object '<em><b>Account</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Accounts.Account#getAccountType <em>Account Type</em>}</li>
- *   <li>{@link Classes.Accounts.Account#getUsername <em>Username</em>}</li>
- *   <li>{@link Classes.Accounts.Account#getPassword <em>Password</em>}</li>
- * </ul>
- * </p>
- *
- * @see Classes.Accounts.AccountsPackage#getAccount()
- * @model
  * @generated
  */
-public interface Account extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Account Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link Classes.Accounts.AccountType}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Account Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Account Type</em>' attribute.
-	 * @see Classes.Accounts.AccountType
-	 * @see #setAccountType(AccountType)
-	 * @see Classes.Accounts.AccountsPackage#getAccount_AccountType()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	AccountType getAccountType();
+class Account implements Serializable {
+	private static final AccountType ACCOUNT_TYPE_EDEFAULT = AccountType.GUEST;
+	private AccountType accountType = ACCOUNT_TYPE_EDEFAULT;
+	private String username;
+	private String password;
+
 
 	/**
-	 * Sets the value of the '{@link Classes.Accounts.Account#getAccountType <em>Account Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Account Type</em>' attribute.
-	 * @see Classes.Accounts.AccountType
-	 * @see #getAccountType()
 	 * @generated
 	 */
-	void setAccountType(AccountType value);
+	public AccountType getAccountType() {
+		return accountType;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Username</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Username</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Username</em>' attribute.
-	 * @see #setUsername(String)
-	 * @see Classes.Accounts.AccountsPackage#getAccount_Username()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getUsername();
+	public void setAccountType(AccountType newAccountType) {
+		AccountType oldAccountType = accountType;
+		accountType = newAccountType == null ? ACCOUNT_TYPE_EDEFAULT : newAccountType;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Accounts.Account#getUsername <em>Username</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Username</em>' attribute.
-	 * @see #getUsername()
 	 * @generated
 	 */
-	void setUsername(String value);
+	public String getUsername() {
+		return username;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Password</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Password</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Password</em>' attribute.
-	 * @see #setPassword(String)
-	 * @see Classes.Accounts.AccountsPackage#getAccount_Password()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getPassword();
+	public void setUsername(String newUsername) {
+		String oldUsername = username;
+		username = newUsername;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Accounts.Account#getPassword <em>Password</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Password</em>' attribute.
-	 * @see #getPassword()
 	 * @generated
 	 */
-	void setPassword(String value);
+	public String getPassword() {
+		return password;
+	}
 
-} // Account
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPassword(String newPassword) {
+		String oldPassword = password;
+		password = newPassword;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (accountType: ");
+		result.append(accountType);
+		result.append(", username: ");
+		result.append(username);
+		result.append(", password: ");
+		result.append(password);
+		result.append(')');
+		return result.toString();
+	}
+
+} //AccountImpl

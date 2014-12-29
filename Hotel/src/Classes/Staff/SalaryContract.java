@@ -2,41 +2,44 @@
  */
 package Classes.Staff;
 
-import org.eclipse.emf.ecore.EObject;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Salary Contract</b></em>'.
+ * An implementation of the model object '<em><b>Salary Contract</b></em>'.
  * <!-- end-user-doc -->
- *
- *
- * @see Classes.Staff.StaffPackage#getSalaryContract()
- * @model abstract="true"
  * @generated
  */
-public interface SalaryContract extends EObject {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation" required="true" ordered="false"
-	 * @generated
-	 */
-	double getSalary();
+ abstract class SalaryContract implements Serializable {
+	private static final long serialVersionUID = -2264012237471483737L;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" required="true" ordered="false"
 	 * @generated
 	 */
-	String getType();
+	protected SalaryContract() {
+		super();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public abstract double getSalary();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model salaryRequired="true" salaryOrdered="false"
 	 * @generated
 	 */
-	void setSalary(double salary);
+	public abstract String getType();
 
-} // SalaryContract
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public abstract void setSalary(double salary);
+} //SalaryContractImpl

@@ -2,129 +2,147 @@
  */
 package Classes.Restaurants;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Reservation</b></em>'.
+ * An implementation of the model object '<em><b>Reservation</b></em>'.
  * <!-- end-user-doc -->
- * @see Classes.Restaurants.RestaurantsPackage#getReservation()
- * @model
  * @generated
  */
-public interface Reservation extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see Classes.Restaurants.RestaurantsPackage#getReservation_Id()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getId();
+ class Reservation implements Serializable {
+	private static final long serialVersionUID = -5059876696465110928L;
+	private final Logger logger = LoggerFactory.getLogger(Reservation.class);
+	private String id;
+	private String reservedBy;
+	private List<RestaurantTable> restaurantTables;
+	private LocalDateTime from;
+	private LocalDateTime to;
 
 	/**
-	 * Sets the value of the '{@link Classes.Restaurants.Reservation#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
 	 * @generated
 	 */
-	void setId(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Reserved By</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Reserved By</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reserved By</em>' attribute.
-	 * @see #setReservedBy(String)
-	 * @see Classes.Restaurants.RestaurantsPackage#getReservation_ReservedBy()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getReservedBy();
-
-	/**
-	 * Sets the value of the '{@link Classes.Restaurants.Reservation#getReservedBy <em>Reserved By</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reserved By</em>' attribute.
-	 * @see #getReservedBy()
-	 * @generated
-	 */
-	void setReservedBy(String value);
-
-	/**
-	 * Returns the value of the '<em><b>From</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>From</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>From</em>' attribute.
-	 * @see #setFrom(Date)
-	 * @see Classes.Restaurants.RestaurantsPackage#getReservation_From()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	LocalDateTime getFrom();
-
-	/**
-	 * Sets the value of the '{@link Classes.Restaurants.Reservation#getFrom <em>From</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>From</em>' attribute.
-	 * @see #getFrom()
-	 * @generated
-	 */
-	void setFrom(LocalDateTime value);
-
-	/**
-	 * Returns the value of the '<em><b>To</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>To</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>To</em>' attribute.
-	 * @see #setTo(Date)
-	 * @see Classes.Restaurants.RestaurantsPackage#getReservation_To()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	LocalDateTime getTo();
-
-	/**
-	 * Sets the value of the '{@link Classes.Restaurants.Reservation#getTo <em>To</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>To</em>' attribute.
-	 * @see #getTo()
-	 * @generated
-	 */
-	void setTo(LocalDateTime value);
-
-	void addTable(RestaurantTable restaurantTable);
-
-	void changeTables(List<RestaurantTable> tables);
+	protected Reservation() {
+		super();
+		restaurantTables = new ArrayList<RestaurantTable>();
+	}
 	
-	EList<RestaurantTable> getTables();
+	public List<RestaurantTable> getTables() {
+		return restaurantTables;
+	}
 
-} // Reservation
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		id = newId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getReservedBy() {
+		return reservedBy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReservedBy(String newReservedBy) {
+		reservedBy = newReservedBy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LocalDateTime getFrom() {
+		return from;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFrom(LocalDateTime newFrom) {
+		from = newFrom;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LocalDateTime getTo() {
+		return to;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTo(LocalDateTime newTo) {
+		to = newTo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", reservedBy: ");
+		result.append(reservedBy);
+		result.append(", from: ");
+		result.append(from);
+		result.append(", to: ");
+		result.append(to);
+		result.append(')');
+		return result.toString();
+	}
+
+	public void addTable(RestaurantTable table) {
+		if (!restaurantTables.contains(table)) {
+			restaurantTables.add(table);
+		} else {
+			logger.warn("The table {} is already added to the reservation.", table);
+			throw new IllegalArgumentException();
+		}
+	}
+
+	public void changeTables(List<RestaurantTable> tables) {
+		restaurantTables.clear();
+		restaurantTables.addAll(tables);
+	}
+
+} //ReservationImpl

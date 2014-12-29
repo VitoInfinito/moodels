@@ -2,76 +2,80 @@
  */
 package Classes.Bookables;
 
-import org.eclipse.emf.ecore.EObject;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Room Location</b></em>'.
+ * An implementation of the model object '<em><b>Room Location</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Bookables.RoomLocation#getFloor <em>Floor</em>}</li>
- *   <li>{@link Classes.Bookables.RoomLocation#getAddtionalInfo <em>Addtional Info</em>}</li>
- * </ul>
- * </p>
- *
- * @see Classes.Bookables.BookablesPackage#getRoomLocation()
- * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='Room Location'"
  * @generated
  */
-public interface RoomLocation extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Floor</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Floor</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Floor</em>' attribute.
-	 * @see #setFloor(int)
-	 * @see Classes.Bookables.BookablesPackage#getRoomLocation_Floor()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
-	 * @generated
-	 */
-	int getFloor();
+class RoomLocation implements Serializable {
+
+	private static final long serialVersionUID = 3590396218832615270L;
+
+	private int floor;
+	private String addtionalInfo;
 
 	/**
-	 * Sets the value of the '{@link Classes.Bookables.RoomLocation#getFloor <em>Floor</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Floor</em>' attribute.
-	 * @see #getFloor()
 	 * @generated
 	 */
-	void setFloor(int value);
+	protected RoomLocation() {
+		super();
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Addtional Info</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Addtional Info</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Addtional Info</em>' attribute.
-	 * @see #setAddtionalInfo(String)
-	 * @see Classes.Bookables.BookablesPackage#getRoomLocation_AddtionalInfo()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getAddtionalInfo();
+	public int getFloor() {
+		return floor;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Bookables.RoomLocation#getAddtionalInfo <em>Addtional Info</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Addtional Info</em>' attribute.
-	 * @see #getAddtionalInfo()
 	 * @generated
 	 */
-	void setAddtionalInfo(String value);
+	public void setFloor(int newFloor) {
+		floor = newFloor;
+	}
 
-} // RoomLocation
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAddtionalInfo() {
+		return addtionalInfo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAddtionalInfo(String newAddtionalInfo) {
+		addtionalInfo = newAddtionalInfo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (floor: ");
+		result.append(floor);
+		result.append(", addtionalInfo: ");
+		result.append(addtionalInfo);
+		result.append(')');
+		return result.toString();
+	}
+
+} //RoomLocationImpl

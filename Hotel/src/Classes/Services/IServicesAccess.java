@@ -2,13 +2,13 @@
  */
 package Classes.Services;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,9 +21,9 @@ import Classes.InvalidIDException;
  * @generated NOT
  */
 @NonNullByDefault
-public interface IServicesAccess extends EObject {
+public interface IServicesAccess extends Serializable {
 	
-	IServicesAccess INSTANCE = Classes.Services.impl.ServiceManagerImpl.INSTANCE;
+	IServicesAccess INSTANCE = Classes.Services.ServiceManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

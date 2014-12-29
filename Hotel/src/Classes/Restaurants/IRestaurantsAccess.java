@@ -2,13 +2,13 @@
  */
 package Classes.Restaurants;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,9 +21,9 @@ import Classes.InvalidIDException;
  * @generated
  */
 @NonNullByDefault
-public interface IRestaurantsAccess extends EObject {
+public interface IRestaurantsAccess extends Serializable {
 	
-	IRestaurantsAccess INSTANCE = Classes.Restaurants.impl.RestaurantsManagerImpl.INSTANCE;
+	IRestaurantsAccess INSTANCE = Classes.Restaurants.RestaurantsManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

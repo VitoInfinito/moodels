@@ -4,7 +4,7 @@ package Classes.Services;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 
 /**
@@ -20,7 +20,7 @@ import Classes.InvalidIDException;
 @NonNullByDefault
 public interface IServicesManage extends IServicesAccess {
 	
-	IServicesManage INSTANCE = Classes.Services.impl.ServiceManagerImpl.INSTANCE;
+	IServicesManage INSTANCE = Classes.Services.ServiceManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

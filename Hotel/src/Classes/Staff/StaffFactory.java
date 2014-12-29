@@ -2,49 +2,54 @@
  */
 package Classes.Staff;
 
-import org.eclipse.emf.ecore.EFactory;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Factory</b> for the model.
- * It provides a create method for each non-abstract class of the model.
+ * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
- * @see Classes.Staff.StaffPackage
  * @generated
  */
-public interface StaffFactory extends EFactory {
-	/**
-	 * The singleton instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	StaffFactory eINSTANCE = Classes.Staff.impl.StaffFactoryImpl.init();
+ class StaffFactory implements Serializable{
+	private static final long serialVersionUID = 1088489696036529955L;
+	static StaffFactory INSTANCE = new StaffFactory();
 
 	/**
-	 * Returns a new object of class '<em>Staff</em>'.
+	 * Creates an instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Staff</em>'.
 	 * @generated
 	 */
-	Staff createStaff();
+	private StaffFactory() {
+	}
 
 	/**
-	 * Returns a new object of class '<em>Monthly Salary Contract</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Monthly Salary Contract</em>'.
 	 * @generated
 	 */
-	MonthlySalaryContract createMonthlySalaryContract();
+	public Staff createStaff() {
+		Staff staff = new Staff();
+		return staff;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Hourly Salary Contract</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Hourly Salary Contract</em>'.
 	 * @generated
 	 */
-	HourlySalaryContract createHourlySalaryContract();
-} //StaffFactory
+	public MonthlySalaryContract createMonthlySalaryContract() {
+		MonthlySalaryContract monthlySalaryContract = new MonthlySalaryContract();
+		return monthlySalaryContract;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HourlySalaryContract createHourlySalaryContract() {
+		HourlySalaryContract hourlySalaryContract = new HourlySalaryContract();
+		return hourlySalaryContract;
+	}
+} //StaffFactoryImpl

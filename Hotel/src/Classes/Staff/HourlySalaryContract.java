@@ -5,62 +5,67 @@ package Classes.Staff;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Hourly Salary Contract</b></em>'.
+ * An implementation of the model object '<em><b>Hourly Salary Contract</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Staff.HourlySalaryContract#getSalary <em>Salary</em>}</li>
- *   <li>{@link Classes.Staff.HourlySalaryContract#getType <em>Type</em>}</li>
- * </ul>
- * </p>
- *
- * @see Classes.Staff.StaffPackage#getHourlySalaryContract()
- * @model
- * @generated
+ * @generated NOT
  */
-public interface HourlySalaryContract extends SalaryContract {
-	/**
-	 * Returns the value of the '<em><b>Salary</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Salary</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Salary</em>' attribute.
-	 * @see #setSalary(double)
-	 * @see Classes.Staff.StaffPackage#getHourlySalaryContract_Salary()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	double getSalary();
+ class HourlySalaryContract extends SalaryContract {
+	private static final long serialVersionUID = 2122385879663964171L;
+	private double salary;
 
 	/**
-	 * Sets the value of the '{@link Classes.Staff.HourlySalaryContract#getSalary <em>Salary</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Salary</em>' attribute.
-	 * @see #getSalary()
 	 * @generated
 	 */
-	void setSalary(double value);
+	protected HourlySalaryContract() {
+		super();
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see #setType(String)
-	 * @see Classes.Staff.StaffPackage#getHourlySalaryContract_Type()
-	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	String getType();
+	@Override
+	public double getSalary() {
+		return salary;
+	}
 
-} // HourlySalaryContract
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSalary(double newSalary) {
+		salary = newSalary;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getType() {
+		return "Hourly";
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (salary: ");
+		result.append(salary);
+		result.append(", type: ");
+		result.append(getType());
+		result.append(')');
+		return result.toString();
+	}
+
+} //HourlySalaryContractImpl

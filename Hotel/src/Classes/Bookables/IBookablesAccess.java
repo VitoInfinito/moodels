@@ -2,13 +2,13 @@
  */
 package Classes.Bookables;
 
+import java.io.Serializable;
 import java.util.List;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.eclipse.jdt.annotation.Nullable;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,9 +21,9 @@ import Classes.InvalidIDException;
  * @generated
  */
 @NonNullByDefault
-public interface IBookablesAccess extends EObject {
+public interface IBookablesAccess extends Serializable {
 	
-	IBookablesAccess INSTANCE = Classes.Bookables.impl.BookablesManagerImpl.INSTANCE;
+	IBookablesAccess INSTANCE = Classes.Bookables.BookablesManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc --> 

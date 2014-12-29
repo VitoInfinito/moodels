@@ -1,6 +1,6 @@
 package Classes.Stays.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,12 +10,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import Classes.Accounts.IManageAccounts;
-import Classes.Bookables.HotelRoom;
 import Classes.Bookables.HotelRoomCategory;
-import Classes.Bookables.IBookablesAccess;
 import Classes.Bookables.IBookablesManage;
-import Classes.Bookings.IBookings;
 import Classes.Stays.IStays;
 
 public class IStaysTest {

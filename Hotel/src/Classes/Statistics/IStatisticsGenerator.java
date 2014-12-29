@@ -3,13 +3,14 @@
 package Classes.Statistics;
 
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,9 +23,9 @@ import Classes.InvalidIDException;
  * @generated
  */
 @NonNullByDefault
-public interface IStatisticsGenerator extends EObject {
+public interface IStatisticsGenerator extends Serializable {
 	
-	IStatisticsGenerator INSTANCE = Classes.Statistics.impl.StatisticsGeneratorImpl.INSTANCE;
+	IStatisticsGenerator INSTANCE = Classes.Statistics.StatisticsGenerator.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

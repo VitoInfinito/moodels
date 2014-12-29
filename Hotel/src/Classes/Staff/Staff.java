@@ -2,211 +2,191 @@
  */
 package Classes.Staff;
 
-import org.eclipse.emf.ecore.EObject;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Staff</b></em>'.
+ * An implementation of the model object '<em><b>Staff</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Staff.Staff#getSalaryContract <em>Salary Contract</em>}</li>
- *   <li>{@link Classes.Staff.Staff#getFirstName <em>First Name</em>}</li>
- *   <li>{@link Classes.Staff.Staff#getLastName <em>Last Name</em>}</li>
- *   <li>{@link Classes.Staff.Staff#getJob <em>Job</em>}</li>
- *   <li>{@link Classes.Staff.Staff#getPhone <em>Phone</em>}</li>
- *   <li>{@link Classes.Staff.Staff#getEmail <em>Email</em>}</li>
- *   <li>{@link Classes.Staff.Staff#getSsid <em>Ssid</em>}</li>
- * </ul>
- * </p>
- *
- * @see Classes.Staff.StaffPackage#getStaff()
- * @model
  * @generated
  */
-public interface Staff extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Salary Contract</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Salary Contract</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Salary Contract</em>' reference.
-	 * @see #setSalaryContract(SalaryContract)
-	 * @see Classes.Staff.StaffPackage#getStaff_SalaryContract()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	SalaryContract getSalaryContract();
+ class Staff implements Serializable {
+	private static final long serialVersionUID = -3350768945873511994L;
+	private SalaryContract salaryContract;
+	private String firstName;
+	private String lastName;
+	private String job;
+	private String phone;
+	private String email;
+	private String ssid;
 
 	/**
-	 * Sets the value of the '{@link Classes.Staff.Staff#getSalaryContract <em>Salary Contract</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Salary Contract</em>' reference.
-	 * @see #getSalaryContract()
 	 * @generated
 	 */
-	void setSalaryContract(SalaryContract value);
+	protected Staff() {
+		super();
+	}
+
 
 	/**
-	 * Returns the value of the '<em><b>First Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>First Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>First Name</em>' attribute.
-	 * @see #setFirstName(String)
-	 * @see Classes.Staff.StaffPackage#getStaff_FirstName()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getFirstName();
+	public SalaryContract getSalaryContract() {
+		return salaryContract;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Staff.Staff#getFirstName <em>First Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>First Name</em>' attribute.
-	 * @see #getFirstName()
 	 * @generated
 	 */
-	void setFirstName(String value);
+	public SalaryContract basicGetSalaryContract() {
+		return salaryContract;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Last Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Last Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Last Name</em>' attribute.
-	 * @see #setLastName(String)
-	 * @see Classes.Staff.StaffPackage#getStaff_LastName()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getLastName();
+	public void setSalaryContract(SalaryContract newSalaryContract) {
+		salaryContract = newSalaryContract;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Staff.Staff#getLastName <em>Last Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Last Name</em>' attribute.
-	 * @see #getLastName()
 	 * @generated
 	 */
-	void setLastName(String value);
+	public String getFirstName() {
+		return firstName;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Job</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Job</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Job</em>' attribute.
-	 * @see #setJob(String)
-	 * @see Classes.Staff.StaffPackage#getStaff_Job()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getJob();
+	public void setFirstName(String newFirstName) {
+		firstName = newFirstName;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Staff.Staff#getJob <em>Job</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Job</em>' attribute.
-	 * @see #getJob()
 	 * @generated
 	 */
-	void setJob(String value);
+	public String getLastName() {
+		return lastName;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Phone</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Phone</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Phone</em>' attribute.
-	 * @see #setPhone(String)
-	 * @see Classes.Staff.StaffPackage#getStaff_Phone()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getPhone();
+	public void setLastName(String newLastName) {
+		lastName = newLastName;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Staff.Staff#getPhone <em>Phone</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Phone</em>' attribute.
-	 * @see #getPhone()
 	 * @generated
 	 */
-	void setPhone(String value);
+	public String getJob() {
+		return job;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Email</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Email</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Email</em>' attribute.
-	 * @see #setEmail(String)
-	 * @see Classes.Staff.StaffPackage#getStaff_Email()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getEmail();
+	public void setJob(String newJob) {
+		job = newJob;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Staff.Staff#getEmail <em>Email</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Email</em>' attribute.
-	 * @see #getEmail()
 	 * @generated
 	 */
-	void setEmail(String value);
+	public String getPhone() {
+		return phone;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Ssid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ssid</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ssid</em>' attribute.
-	 * @see #setSsid(String)
-	 * @see Classes.Staff.StaffPackage#getStaff_Ssid()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getSsid();
+	public void setPhone(String newPhone) {
+		phone = newPhone;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Staff.Staff#getSsid <em>Ssid</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ssid</em>' attribute.
-	 * @see #getSsid()
 	 * @generated
 	 */
-	void setSsid(String value);
+	public String getEmail() {
+		return email;
+	}
 
-} // Staff
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEmail(String newEmail) {
+		email = newEmail;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getSsid() {
+		return ssid;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSsid(String newSsid) {
+		ssid = newSsid;
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (firstName: ");
+		result.append(firstName);
+		result.append(", lastName: ");
+		result.append(lastName);
+		result.append(", job: ");
+		result.append(job);
+		result.append(", phone: ");
+		result.append(phone);
+		result.append(", email: ");
+		result.append(email);
+		result.append(", ssid: ");
+		result.append(ssid);
+		result.append(')');
+		return result.toString();
+	}
+
+} //StaffImpl

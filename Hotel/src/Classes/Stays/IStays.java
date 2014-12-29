@@ -2,24 +2,23 @@
  */
 package Classes.Stays;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.xml.soap.SOAPException;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.GuestAlreadyCheckedInException;
-import Classes.GuestAlreadyCheckedOutException;
-import Classes.GuestNotCheckedInException;
-import Classes.InsufficientFundsException;
-import Classes.InvalidCheckInDateException;
-import Classes.InvalidCreditCardException;
-import Classes.InvalidIDException;
-import Classes.ResponsibleCreditCardNotAddedException;
-import Classes.StayAlreadyFullyCheckedInException;
+import Classes.Utils.GuestAlreadyCheckedInException;
+import Classes.Utils.GuestAlreadyCheckedOutException;
+import Classes.Utils.GuestNotCheckedInException;
+import Classes.Utils.InsufficientFundsException;
+import Classes.Utils.InvalidCheckInDateException;
+import Classes.Utils.InvalidCreditCardException;
+import Classes.Utils.InvalidIDException;
+import Classes.Utils.ResponsibleCreditCardNotAddedException;
+import Classes.Utils.StayAlreadyFullyCheckedInException;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,9 +31,9 @@ import Classes.StayAlreadyFullyCheckedInException;
  * @generated
  */
 @NonNullByDefault
-public interface IStays extends EObject {
+public interface IStays extends Serializable {
 	
-	IStays INSTANCE = Classes.Stays.impl.StaysManagerImpl.INSTANCE;
+	IStays INSTANCE = Classes.Stays.StaysManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

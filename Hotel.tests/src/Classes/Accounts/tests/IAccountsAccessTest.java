@@ -7,10 +7,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import Classes.InvalidIDException;
 import Classes.Accounts.AccountType;
 import Classes.Accounts.IAccountsAccess;
 import Classes.Accounts.IManageAccounts;
+import Classes.Utils.InvalidIDException;
 
 public class IAccountsAccessTest {	
 	@Before

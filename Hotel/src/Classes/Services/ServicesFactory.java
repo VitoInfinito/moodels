@@ -2,49 +2,55 @@
  */
 package Classes.Services;
 
-import org.eclipse.emf.ecore.EFactory;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Factory</b> for the model.
- * It provides a create method for each non-abstract class of the model.
+ * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
- * @see Classes.Services.ServicesPackage
  * @generated
  */
-public interface ServicesFactory extends EFactory {
-	/**
-	 * The singleton instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	ServicesFactory eINSTANCE = Classes.Services.impl.ServicesFactoryImpl.init();
+ class ServicesFactory implements Serializable {
+	private static final long serialVersionUID = -4221591119508106627L;
+	static ServicesFactory INSTANCE = new ServicesFactory();
 
 	/**
-	 * Returns a new object of class '<em>Room Service Menu</em>'.
+	 * Creates an instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Room Service Menu</em>'.
 	 * @generated
 	 */
-	RoomServiceMenu createRoomServiceMenu();
+	private ServicesFactory() {
+		super();
+	}
 
 	/**
-	 * Returns a new object of class '<em>Service</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Service</em>'.
 	 * @generated
 	 */
-	Service createService();
+	public RoomServiceMenu createRoomServiceMenu() {
+		RoomServiceMenu roomServiceMenu = new RoomServiceMenu();
+		return roomServiceMenu;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Room Service Order</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Room Service Order</em>'.
 	 * @generated
 	 */
-	RoomServiceOrder createRoomServiceOrder();
-} //ServicesFactory
+	public Service createService() {
+		Service service = new Service();
+		return service;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomServiceOrder createRoomServiceOrder() {
+		RoomServiceOrder roomServiceOrder = new RoomServiceOrder();
+		return roomServiceOrder;
+	}
+} //ServicesFactoryImpl

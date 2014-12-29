@@ -2,20 +2,19 @@
  */
 package Classes.Bookings;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.xml.soap.SOAPException;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InsufficientFundsException;
-import Classes.InvalidCreditCardException;
-import Classes.InvalidIDException;
 import Classes.Bookables.ConferenceRoomCategory;
 import Classes.Bookables.HotelRoomCategory;
+import Classes.Utils.InsufficientFundsException;
+import Classes.Utils.InvalidCreditCardException;
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,9 +27,9 @@ import Classes.Bookables.HotelRoomCategory;
  * @generated
  */
 @NonNullByDefault
-public interface IBookings extends EObject {
+public interface IBookings extends Serializable {
 	
-	IBookings INSTANCE = Classes.Bookings.impl.BookingsManagerImpl.INSTANCE;
+	IBookings INSTANCE = Classes.Bookings.BookingsManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

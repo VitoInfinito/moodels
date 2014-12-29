@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='Conference Room Category'"
  * @generated
  */
-public enum ConferenceRoomCategory implements Enumerator {
+public enum ConferenceRoomCategory {
 	/**
 	 * The '<em><b>Dining Room</b></em>' literal object.
 	 * <!-- begin-user-doc -->

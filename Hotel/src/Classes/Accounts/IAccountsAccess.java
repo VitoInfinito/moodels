@@ -2,10 +2,12 @@
  */
 package Classes.Accounts;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 
 /**
@@ -19,9 +21,9 @@ import Classes.InvalidIDException;
  * @generated
  */
 @NonNullByDefault
-public interface IAccountsAccess extends EObject {
+public interface IAccountsAccess extends Serializable {
 	
-	IAccountsAccess INSTANCE = Classes.Accounts.impl.AccountsManagerImpl.INSTANCE;
+	IAccountsAccess INSTANCE = Classes.Accounts.AccountsManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

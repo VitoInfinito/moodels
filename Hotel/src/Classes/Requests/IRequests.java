@@ -2,12 +2,12 @@
  */
 package Classes.Requests;
 
+import java.io.Serializable;
 import java.util.List;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +20,9 @@ import Classes.InvalidIDException;
  * @generated
  */
 @NonNullByDefault
-public interface IRequests extends EObject {
+public interface IRequests extends Serializable {
 	
-	IRequests INSTANCE = Classes.Requests.impl.RequestsManagerImpl.INSTANCE;
+	IRequests INSTANCE = Classes.Requests.RequestsManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

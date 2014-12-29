@@ -2,31 +2,37 @@
  */
 package Classes.Bookings;
 
-import org.eclipse.emf.ecore.EFactory;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Factory</b> for the model.
- * It provides a create method for each non-abstract class of the model.
+ * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
- * @see Classes.Bookings.BookingsPackage
  * @generated
  */
-public interface BookingsFactory extends EFactory {
-	/**
-	 * The singleton instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	BookingsFactory eINSTANCE = Classes.Bookings.impl.BookingsFactoryImpl.init();
+public class BookingsFactory implements Serializable {
+
+	private static final long serialVersionUID = 6880183006044578998L;
+	
+	static BookingsFactory INSTANCE = new BookingsFactory();
 
 	/**
-	 * Returns a new object of class '<em>Booking</em>'.
+	 * Creates an instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Booking</em>'.
 	 * @generated
 	 */
-	Booking createBooking();
-} //BookingsFactory
+	private BookingsFactory() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Booking createBooking() {
+		Booking booking = new Booking();
+		return booking;
+	}
+} //BookingsFactoryImpl

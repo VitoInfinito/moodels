@@ -4,7 +4,7 @@ package Classes.Restaurants;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 
 
@@ -21,7 +21,7 @@ import Classes.InvalidIDException;
 @NonNullByDefault
 public interface IRestaurantsManage extends IRestaurantsAccess {
 	
-	IRestaurantsManage INSTANCE = Classes.Restaurants.impl.RestaurantsManagerImpl.INSTANCE;
+	IRestaurantsManage INSTANCE = Classes.Restaurants.RestaurantsManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

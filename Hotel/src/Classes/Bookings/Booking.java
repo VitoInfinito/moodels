@@ -3,204 +3,229 @@
 package Classes.Bookings;
 
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import Classes.InvalidIDException;
 import Classes.Stays.CreditCard;
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Booking</b></em>'.
+ * An implementation of the model object '<em><b>Booking</b></em>'.
  * <!-- end-user-doc -->
- * @see Classes.Bookings.BookingsPackage#getBooking()
- * @model
  * @generated
  */
-public interface Booking extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Booked Stays</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Booked Stays</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Booked Stays</em>' attribute list.
-	 * @see Classes.Bookings.BookingsPackage#getBooking_BookedStays()
-	 * @model dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
-	 */
-	EList<String> getBookedStays();
+public class Booking implements Serializable {
 
-	/**
-	 * Returns the value of the '<em><b>Customer</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Customer</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Customer</em>' attribute.
-	 * @see #setCustomer(String)
-	 * @see Classes.Bookings.BookingsPackage#getBooking_Customer()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getCustomer();
+	private static final long serialVersionUID = 2228793076798270219L;
 
-	/**
-	 * Sets the value of the '{@link Classes.Bookings.Booking#getCustomer <em>Customer</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Customer</em>' attribute.
-	 * @see #getCustomer()
-	 * @generated
-	 */
-	void setCustomer(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Booking Nbr</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Booking Nbr</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Booking Nbr</em>' attribute.
-	 * @see #setBookingNbr(String)
-	 * @see Classes.Bookings.BookingsPackage#getBooking_BookingNbr()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getBookingNbr();
-
-	/**
-	 * Sets the value of the '{@link Classes.Bookings.Booking#getBookingNbr <em>Booking Nbr</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Booking Nbr</em>' attribute.
-	 * @see #getBookingNbr()
-	 * @generated
-	 */
-	void setBookingNbr(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Nbr Guests</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Nbr Guests</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nbr Guests</em>' attribute.
-	 * @see #setNbrGuests(int)
-	 * @see Classes.Bookings.BookingsPackage#getBooking_NbrGuests()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
-	 * @generated
-	 */
-	int getNbrGuests();
-
-	/**
-	 * Sets the value of the '{@link Classes.Bookings.Booking#getNbrGuests <em>Nbr Guests</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nbr Guests</em>' attribute.
-	 * @see #getNbrGuests()
-	 * @generated
-	 */
-	void setNbrGuests(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Issue Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Issue Date</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Issue Date</em>' attribute.
-	 * @see #setIssueDate(Date)
-	 * @see Classes.Bookings.BookingsPackage#getBooking_IssueDate()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	LocalDateTime getIssueDate();
-
-	/**
-	 * Sets the value of the '{@link Classes.Bookings.Booking#getIssueDate <em>Issue Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Issue Date</em>' attribute.
-	 * @see #getIssueDate()
-	 * @generated
-	 */
-	void setIssueDate(LocalDateTime value);
-
-	/**
-	 * Returns the value of the '<em><b>Credit Card</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Credit Card</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Credit Card</em>' reference.
-	 * @see #setCreditCard(CreditCard)
-	 * @see Classes.Bookings.BookingsPackage#getBooking_CreditCard()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	CreditCard getCreditCard();
-
-	/**
-	 * Sets the value of the '{@link Classes.Bookings.Booking#getCreditCard <em>Credit Card</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Credit Card</em>' reference.
-	 * @see #getCreditCard()
-	 * @generated
-	 */
-	void setCreditCard(CreditCard value);
-
-	/**
-	 * Returns the value of the '<em><b>Requests</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Requests</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Requests</em>' attribute.
-	 * @see #setRequests(String)
-	 * @see Classes.Bookings.BookingsPackage#getBooking_Requests()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	EList<String> getRequests();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @throws InvalidIDException 
-	 * @model
-	 * @generated
-	 */
-	void addBookedStay(String stayID) throws InvalidIDException;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @throws InvalidIDException 
-	 * @model
-	 * @generated
-	 */
-	void cancelBookedStay(String stayID) throws InvalidIDException;
+	private final Logger logger = LoggerFactory.getLogger(Booking.class);
 	
-	void addRequest(String requestID) throws InvalidIDException;
+	private List<String> bookedStays;
+	private String customer;
+	private String bookingNbr;
+	private int nbrGuests;
+	private LocalDateTime issueDate;
+	private CreditCard creditCard;
+	private List<String> requests;
 
-	void removeRequest(String requestID) throws InvalidIDException;
-} // Booking
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Booking() {
+		super();
+		bookedStays = new ArrayList<String>();
+		requests = new ArrayList<String>();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<String> getBookedStays() {
+		return bookedStays;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getCustomer() {
+		return customer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCustomer(String newCustomer) {
+		customer = newCustomer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getBookingNbr() {
+		return bookingNbr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBookingNbr(String newBookingNbr) {
+		bookingNbr = newBookingNbr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getNbrGuests() {
+		return nbrGuests;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNbrGuests(int newNbrGuests) {
+		nbrGuests = newNbrGuests;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LocalDateTime getIssueDate() {
+		return issueDate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIssueDate(LocalDateTime newIssueDate) {
+		issueDate = newIssueDate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CreditCard getCreditCard() {
+		return creditCard;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCreditCard(CreditCard newCreditCard) {
+		creditCard = newCreditCard;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<String> getRequests() {
+		return requests;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
+	 * @generated
+	 */
+	public void addBookedStay(String stayID) throws InvalidIDException {
+		if(!bookedStays.contains(stayID)) {
+			bookedStays.add(stayID);
+		} else {
+			logger.warn("A stay with stayID {} is already added to the booking.", stayID);
+			throw new InvalidIDException();
+		}	
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
+	 * @generated
+	 */
+	public void cancelBookedStay(String stayID) throws InvalidIDException {
+		if(bookedStays.contains(stayID)) {
+			bookedStays.remove(stayID);
+		} else {
+			logger.warn("A stay with stayID {} could not be found.", stayID);
+			throw new InvalidIDException();
+		}
+	}	
+	
+	public void addRequest(String requestID) throws InvalidIDException {
+		if(!requests.contains(requestID)) {
+			requests.add(requestID);
+		} else {
+			logger.warn("A request with requestID {} is already added to the booking.", requestID);
+			throw new InvalidIDException();
+		}	
+	}
+
+	public void removeRequest(String requestID) throws InvalidIDException {
+		if(requests.contains(requestID)) {
+			requests.remove(requestID);
+		} else {
+			logger.warn("A request with requestID {} could not be found.", requestID);
+			throw new InvalidIDException();
+		}
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (bookedStays: ");
+		result.append(bookedStays);
+		result.append(", customer: ");
+		result.append(customer);
+		result.append(", bookingNbr: ");
+		result.append(bookingNbr);
+		result.append(", nbrGuests: ");
+		result.append(nbrGuests);
+		result.append(", issueDate: ");
+		result.append(issueDate);
+		result.append(", requests: ");
+		result.append(requests);
+		result.append(')');
+		return result.toString();
+	}
+
+
+
+} //BookingImpl

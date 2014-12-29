@@ -2,12 +2,12 @@
  */
 package Classes.Inventory;
 
+import java.io.Serializable;
 import java.util.List;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +20,9 @@ import Classes.InvalidIDException;
  * @generated
  */
 @NonNullByDefault
-public interface IInventoryAccess extends EObject {
+public interface IInventoryAccess extends Serializable {
 	
-	IInventoryAccess INSTANCE = Classes.Inventory.impl.InventoryManagerImpl.INSTANCE;
+	IInventoryAccess INSTANCE = Classes.Inventory.InventoryManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

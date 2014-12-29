@@ -2,58 +2,67 @@
  */
 package Classes.Bookables;
 
-import org.eclipse.emf.ecore.EFactory;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Factory</b> for the model.
- * It provides a create method for each non-abstract class of the model.
+ * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
- * @see Classes.Bookables.BookablesPackage
  * @generated
  */
-public interface BookablesFactory extends EFactory {
+class BookablesFactory implements Serializable {
+
+	private static final long serialVersionUID = -7206774618500268436L;
+	
+	static BookablesFactory INSTANCE = new BookablesFactory();
+
 	/**
-	 * The singleton instance of the factory.
+	 * Creates an instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	BookablesFactory eINSTANCE = Classes.Bookables.impl.BookablesFactoryImpl.init();
+	private BookablesFactory() {
+		super();
+	}
 
 	/**
-	 * Returns a new object of class '<em>Room Location</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Room Location</em>'.
 	 * @generated
 	 */
-	RoomLocation createRoomLocation();
+	public RoomLocation createRoomLocation() {
+		RoomLocation roomLocation = new RoomLocation();
+		return roomLocation;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Hostel Bed</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Hostel Bed</em>'.
 	 * @generated
 	 */
-	HostelBed createHostelBed();
+	public HostelBed createHostelBed() {
+		HostelBed hostelBed = new HostelBed();
+		return hostelBed;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Conference Room</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Conference Room</em>'.
 	 * @generated
 	 */
-	ConferenceRoom createConferenceRoom();
+	public ConferenceRoom createConferenceRoom() {
+		ConferenceRoom conferenceRoom = new ConferenceRoom();
+		return conferenceRoom;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Hotel Room</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Hotel Room</em>'.
-	 * @generated NOT
+	 * @generated
 	 */
-	HotelRoom createHotelRoom();
-} //BookablesFactory
+	public HotelRoom createHotelRoom() {
+		HotelRoom hotelRoom = new HotelRoom();
+		return hotelRoom;
+	}
+} //BookablesFactoryImpl

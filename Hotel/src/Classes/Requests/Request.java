@@ -2,103 +2,99 @@
  */
 package Classes.Requests;
 
-import org.eclipse.emf.ecore.EObject;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Request</b></em>'.
+ * An implementation of the model object '<em><b>Request</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Requests.Request#getId <em>Id</em>}</li>
- *   <li>{@link Classes.Requests.Request#getDescription <em>Description</em>}</li>
- *   <li>{@link Classes.Requests.Request#isResolved <em>Is Resolved</em>}</li>
- * </ul>
- * </p>
- *
- * @see Classes.Requests.RequestsPackage#getRequest()
- * @model
  * @generated
  */
-public interface Request extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see Classes.Requests.RequestsPackage#getRequest_Id()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getId();
+ class Request implements Serializable {
+	private static final long serialVersionUID = 4443014007312815761L;
+	protected String id;
+	protected String description;
+	protected boolean isResolved;
 
 	/**
-	 * Sets the value of the '{@link Classes.Requests.Request#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
 	 * @generated
 	 */
-	void setId(String value);
+	protected Request() {
+		super();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see Classes.Requests.RequestsPackage#getRequest_Description()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getDescription();
+	public void setId(String newId) {
+		id = newId;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Requests.Request#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(String value);
+	public String getDescription() {
+		return description;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Is Resolved</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Is Resolved</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Resolved</em>' attribute.
-	 * @see #setIsResolved(boolean)
-	 * @see Classes.Requests.RequestsPackage#getRequest_IsResolved()
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
-	boolean isResolved();
+	public void setDescription(String newDescription) {
+		description = newDescription;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Requests.Request#isResolved <em>Is Resolved</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Resolved</em>' attribute.
-	 * @see #isResolved()
 	 * @generated
 	 */
-	void setIsResolved(boolean value);
+	public boolean isResolved() {
+		return isResolved;
+	}
 
-} // Request
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsResolved(boolean newIsResolved) {
+		isResolved = newIsResolved;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", description: ");
+		result.append(description);
+		result.append(", isResolved: ");
+		result.append(isResolved);
+		result.append(')');
+		return result.toString();
+	}
+
+} //RequestImpl

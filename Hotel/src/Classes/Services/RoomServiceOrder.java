@@ -3,214 +3,202 @@
 package Classes.Services;
 
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
-
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Room Service Order</b></em>'.
+ * An implementation of the model object '<em><b>Room Service Order</b></em>'.
  * <!-- end-user-doc -->
- * @see Classes.Services.ServicesPackage#getRoomServiceOrder()
- * @model
+ * <p>
+ * The following features are implemented:
  * @generated
  */
-public interface RoomServiceOrder extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Service</b></em>' reference list.
-	 * The list contents are of type {@link Classes.Services.Service}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Service</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Service</em>' reference list.
-	 * @see Classes.Services.ServicesPackage#getRoomServiceOrder_Service()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	EList<Service> getService();
-
-	/**
-	 * Returns the value of the '<em><b>Is Delivered</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Is Delivered</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Delivered</em>' attribute.
-	 * @see #setIsDelivered(boolean)
-	 * @see Classes.Services.ServicesPackage#getRoomServiceOrder_IsDelivered()
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
-	 * @generated
-	 */
-	boolean isDelivered();
-
-	/**
-	 * Sets the value of the '{@link Classes.Services.RoomServiceOrder#isDelivered <em>Is Delivered</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Delivered</em>' attribute.
-	 * @see #isDelivered()
-	 * @generated
-	 */
-	void setIsDelivered(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Delivery Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Delivery Date</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Delivery Date</em>' attribute.
-	 * @see #setDeliveryDate(Date)
-	 * @see Classes.Services.ServicesPackage#getRoomServiceOrder_DeliveryDate()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	LocalDateTime getDeliveryDate();
-
-	/**
-	 * Sets the value of the '{@link Classes.Services.RoomServiceOrder#getDeliveryDate <em>Delivery Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Delivery Date</em>' attribute.
-	 * @see #getDeliveryDate()
-	 * @generated
-	 */
-	void setDeliveryDate(LocalDateTime value);
-
-	/**
-	 * Returns the value of the '<em><b>Bookable</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Bookable</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bookable</em>' attribute.
-	 * @see #setBookable(String)
-	 * @see Classes.Services.ServicesPackage#getRoomServiceOrder_Bookable()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getBookable();
-
-	/**
-	 * Sets the value of the '{@link Classes.Services.RoomServiceOrder#getBookable <em>Bookable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bookable</em>' attribute.
-	 * @see #getBookable()
-	 * @generated
-	 */
-	void setBookable(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Items</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Items</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Items</em>' attribute list.
-	 * @see Classes.Services.ServicesPackage#getRoomServiceOrder_Items()
-	 * @model dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
-	 */
-	EList<String> getItems();
-
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see Classes.Services.ServicesPackage#getRoomServiceOrder_Id()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getId();
-
-	/**
-	 * Sets the value of the '{@link Classes.Services.RoomServiceOrder#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Bill</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Bill</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bill</em>' attribute.
-	 * @see #setBill(String)
-	 * @see Classes.Services.ServicesPackage#getRoomServiceOrder_Bill()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getBill();
-
-	/**
-	 * Sets the value of the '{@link Classes.Services.RoomServiceOrder#getBill <em>Bill</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bill</em>' attribute.
-	 * @see #getBill()
-	 * @generated
-	 */
-	void setBill(String value);
+ class RoomServiceOrder implements Serializable {
+	private static final long serialVersionUID = 2087502679560309770L;
+	private List<Service> service;
+	private boolean isDelivered;
+	private LocalDateTime deliveryDate;
+	private String bookable;
+	private List<String> items;
+	private String id;
+	private String bill;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param service 
-	 * @model
 	 * @generated
 	 */
-	void addService(Service service);
+	protected RoomServiceOrder() {
+		super();
+		service = new ArrayList<Service>();
+		items = new ArrayList<String>();
+	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param item 
-	 * @model
 	 * @generated
 	 */
-	void addItem(String itemID);
+	public boolean isDelivered() {
+		return isDelivered;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
 	 * @generated
 	 */
-	void removeItem(String itemID);
+	public void setIsDelivered(boolean newIsDelivered) {
+		isDelivered = newIsDelivered;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
 	 * @generated
 	 */
-	void removeService(Service service);
+	public LocalDateTime getDeliveryDate() {
+		return deliveryDate;
+	}
 
-} // RoomServiceOrder
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDeliveryDate(LocalDateTime newDeliveryDate) {
+		deliveryDate = newDeliveryDate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getBookable() {
+		return bookable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBookable(String newBookable) {
+		bookable = newBookable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<String> getItems() {
+		return items;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		id = newId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getBill() {
+		return bill;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBill(String newBill) {
+		bill = newBill;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void addService(Service ser) {
+		service.add(ser);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void addItem(String itemID) {
+		items.add(itemID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void removeItem(String itemID) {
+		items.remove(itemID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void removeService(Service ser) {
+		service.remove(ser);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (isDelivered: ");
+		result.append(isDelivered);
+		result.append(", deliveryDate: ");
+		result.append(deliveryDate);
+		result.append(", bookable: ");
+		result.append(bookable);
+		result.append(", items: ");
+		result.append(items);
+		result.append(", id: ");
+		result.append(id);
+		result.append(", bill: ");
+		result.append(bill);
+		result.append(')');
+		return result.toString();
+	}
+
+	public List<Service> getService() {
+		return service;
+	}
+
+} //RoomServiceOrderImpl

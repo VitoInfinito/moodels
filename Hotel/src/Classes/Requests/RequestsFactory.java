@@ -2,31 +2,35 @@
  */
 package Classes.Requests;
 
-import org.eclipse.emf.ecore.EFactory;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Factory</b> for the model.
- * It provides a create method for each non-abstract class of the model.
+ * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
- * @see Classes.Requests.RequestsPackage
  * @generated
  */
-public interface RequestsFactory extends EFactory {
-	/**
-	 * The singleton instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	RequestsFactory eINSTANCE = Classes.Requests.impl.RequestsFactoryImpl.init();
+ class RequestsFactory implements Serializable {
+	private static final long serialVersionUID = 1032355465048622733L;
+	static RequestsFactory INSTANCE = new RequestsFactory();
 
 	/**
-	 * Returns a new object of class '<em>Request</em>'.
+	 * Creates an instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Request</em>'.
 	 * @generated
 	 */
-	Request createRequest();
-} //RequestsFactory
+	private RequestsFactory() {
+		super();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Request createRequest() {
+		Request request = new Request();
+		return request;
+	}
+} //RequestsFactoryImpl

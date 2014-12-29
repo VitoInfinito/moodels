@@ -2,31 +2,37 @@
  */
 package Classes.Bills;
 
-import org.eclipse.emf.ecore.EFactory;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Factory</b> for the model.
- * It provides a create method for each non-abstract class of the model.
+ * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
- * @see Classes.Bills.BillsPackage
  * @generated
  */
-public interface BillsFactory extends EFactory {
-	/**
-	 * The singleton instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	BillsFactory eINSTANCE = Classes.Bills.impl.BillsFactoryImpl.init();
+class BillsFactory implements Serializable {
+
+	private static final long serialVersionUID = 3917258725752262235L;
+	
+	static BillsFactory INSTANCE = new BillsFactory();
 
 	/**
-	 * Returns a new object of class '<em>Bill</em>'.
+	 * Creates an instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Bill</em>'.
+	 * @generated NOT
+	 */
+	private BillsFactory() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Bill createBill();
-} //BillsFactory
+	public Bill createBill() {
+		Bill bill = new Bill();
+		return bill;
+	}
+} //BillsFactoryImpl

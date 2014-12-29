@@ -2,15 +2,14 @@
  */
 package Classes.Stays;
 
-import org.eclipse.emf.ecore.EObject;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Credit Card</b></em>'.
+ * An implementation of the model object '<em><b>Credit Card</b></em>'.
  * <!-- end-user-doc -->
- *
  * <p>
- * The following features are supported:
+ * The following features are implemented:
  * <ul>
  *   <li>{@link Classes.Stays.CreditCard#getCcNumber <em>Cc Number</em>}</li>
  *   <li>{@link Classes.Stays.CreditCard#getCcv <em>Ccv</em>}</li>
@@ -21,165 +20,156 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see Classes.Stays.StaysPackage#getCreditCard()
- * @model
  * @generated
  */
-public interface CreditCard extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Cc Number</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Cc Number</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cc Number</em>' attribute.
-	 * @see #setCcNumber(String)
-	 * @see Classes.Stays.StaysPackage#getCreditCard_CcNumber()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getCcNumber();
+public class CreditCard implements Serializable {
+	private static final long serialVersionUID = 448100270906663086L;
+	private String ccNumber;
+	private String ccv;
+	private int expiryMonth;
+	private int expiryYear;
+	private String firstName;
+	private String lastName;
 
 	/**
-	 * Sets the value of the '{@link Classes.Stays.CreditCard#getCcNumber <em>Cc Number</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cc Number</em>' attribute.
-	 * @see #getCcNumber()
 	 * @generated
 	 */
-	void setCcNumber(String value);
+	protected CreditCard() {
+		super();
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Ccv</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ccv</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ccv</em>' attribute.
-	 * @see #setCcv(String)
-	 * @see Classes.Stays.StaysPackage#getCreditCard_Ccv()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getCcv();
+	public String getCcNumber() {
+		return ccNumber;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Stays.CreditCard#getCcv <em>Ccv</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ccv</em>' attribute.
-	 * @see #getCcv()
 	 * @generated
 	 */
-	void setCcv(String value);
+	public void setCcNumber(String newCcNumber) {
+		ccNumber = newCcNumber;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Expiry Month</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Expiry Month</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expiry Month</em>' attribute.
-	 * @see #setExpiryMonth(int)
-	 * @see Classes.Stays.StaysPackage#getCreditCard_ExpiryMonth()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
-	int getExpiryMonth();
+	public String getCcv() {
+		return ccv;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Stays.CreditCard#getExpiryMonth <em>Expiry Month</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Expiry Month</em>' attribute.
-	 * @see #getExpiryMonth()
 	 * @generated
 	 */
-	void setExpiryMonth(int value);
+	public void setCcv(String newCcv) {
+		ccv = newCcv;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Expiry Year</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Expiry Year</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expiry Year</em>' attribute.
-	 * @see #setExpiryYear(int)
-	 * @see Classes.Stays.StaysPackage#getCreditCard_ExpiryYear()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
-	int getExpiryYear();
+	public int getExpiryMonth() {
+		return expiryMonth;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Stays.CreditCard#getExpiryYear <em>Expiry Year</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Expiry Year</em>' attribute.
-	 * @see #getExpiryYear()
 	 * @generated
 	 */
-	void setExpiryYear(int value);
+	public void setExpiryMonth(int newExpiryMonth) {
+		expiryMonth = newExpiryMonth;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>First Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>First Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>First Name</em>' attribute.
-	 * @see #setFirstName(String)
-	 * @see Classes.Stays.StaysPackage#getCreditCard_FirstName()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getFirstName();
+	public int getExpiryYear() {
+		return expiryYear;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Stays.CreditCard#getFirstName <em>First Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>First Name</em>' attribute.
-	 * @see #getFirstName()
 	 * @generated
 	 */
-	void setFirstName(String value);
+	public void setExpiryYear(int newExpiryYear) {
+		expiryYear = newExpiryYear;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Last Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Last Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Last Name</em>' attribute.
-	 * @see #setLastName(String)
-	 * @see Classes.Stays.StaysPackage#getCreditCard_LastName()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getLastName();
+	public String getFirstName() {
+		return firstName;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Stays.CreditCard#getLastName <em>Last Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Last Name</em>' attribute.
-	 * @see #getLastName()
 	 * @generated
 	 */
-	void setLastName(String value);
+	public void setFirstName(String newFirstName) {
+		firstName = newFirstName;
+	}
 
-} // CreditCard
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLastName() {
+		return lastName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLastName(String newLastName) {
+		lastName = newLastName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (ccNumber: ");
+		result.append(ccNumber);
+		result.append(", ccv: ");
+		result.append(ccv);
+		result.append(", expiryMonth: ");
+		result.append(expiryMonth);
+		result.append(", expiryYear: ");
+		result.append(expiryYear);
+		result.append(", firstName: ");
+		result.append(firstName);
+		result.append(", lastName: ");
+		result.append(lastName);
+		result.append(')');
+		return result.toString();
+	}
+
+} //CreditCardImpl

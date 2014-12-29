@@ -2,257 +2,259 @@
  */
 package Classes.Customers;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
-import Classes.InvalidIDException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Customer</b></em>'.
+ * An implementation of the model object '<em><b>Customer</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Customers.Customer#getFirstname <em>Firstname</em>}</li>
- *   <li>{@link Classes.Customers.Customer#getLastname <em>Lastname</em>}</li>
- *   <li>{@link Classes.Customers.Customer#getTitle <em>Title</em>}</li>
- *   <li>{@link Classes.Customers.Customer#getEmail <em>Email</em>}</li>
- *   <li>{@link Classes.Customers.Customer#getPhone <em>Phone</em>}</li>
- *   <li>{@link Classes.Customers.Customer#getSsid <em>Ssid</em>}</li>
- *   <li>{@link Classes.Customers.Customer#getBookings <em>Bookings</em>}</li>
- *   <li>{@link Classes.Customers.Customer#getRequests <em>Requests</em>}</li>
- * </ul>
- * </p>
- *
- * @see Classes.Customers.CustomersPackage#getCustomer()
- * @model
  * @generated
  */
-public interface Customer extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Firstname</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Firstname</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Firstname</em>' attribute.
-	 * @see #setFirstname(String)
-	 * @see Classes.Customers.CustomersPackage#getCustomer_Firstname()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getFirstname();
+class Customer implements Serializable {
+	
+	private static final long serialVersionUID = -6471791488852827978L;
+
+	private final Logger logger = LoggerFactory.getLogger(Customer.class);
+	
+	private String firstname;
+	private String lastname;
+	private String title ;
+	private String email;
+	private String phone;
+	private String ssid;
+	private List<String> bookings;
+	private List<String> requests;
 
 	/**
-	 * Sets the value of the '{@link Classes.Customers.Customer#getFirstname <em>Firstname</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Firstname</em>' attribute.
-	 * @see #getFirstname()
 	 * @generated
 	 */
-	void setFirstname(String value);
+	protected Customer() {
+		super();
+		bookings = new ArrayList<String>();
+		requests = new ArrayList<String>();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getFirstname() {
+		return firstname;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Lastname</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Lastname</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lastname</em>' attribute.
-	 * @see #setLastname(String)
-	 * @see Classes.Customers.CustomersPackage#getCustomer_Lastname()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getLastname();
+	public void setFirstname(String newFirstname) {
+		firstname = newFirstname;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Customers.Customer#getLastname <em>Lastname</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Lastname</em>' attribute.
-	 * @see #getLastname()
 	 * @generated
 	 */
-	void setLastname(String value);
+	public String getLastname() {
+		return lastname;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Title</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Title</em>' attribute.
-	 * @see #setTitle(String)
-	 * @see Classes.Customers.CustomersPackage#getCustomer_Title()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getTitle();
+	public void setLastname(String newLastname) {
+		lastname = newLastname;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Customers.Customer#getTitle <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Title</em>' attribute.
-	 * @see #getTitle()
 	 * @generated
 	 */
-	void setTitle(String value);
+	public String getTitle() {
+		return title;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Email</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Email</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Email</em>' attribute.
-	 * @see #setEmail(String)
-	 * @see Classes.Customers.CustomersPackage#getCustomer_Email()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getEmail();
+	public void setTitle(String newTitle) {
+		title = newTitle;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Customers.Customer#getEmail <em>Email</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Email</em>' attribute.
-	 * @see #getEmail()
 	 * @generated
 	 */
-	void setEmail(String value);
+	public String getEmail() {
+		return email;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Phone</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Phone</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Phone</em>' attribute.
-	 * @see #setPhone(String)
-	 * @see Classes.Customers.CustomersPackage#getCustomer_Phone()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getPhone();
+	public void setEmail(String newEmail) {
+		email = newEmail;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Customers.Customer#getPhone <em>Phone</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Phone</em>' attribute.
-	 * @see #getPhone()
 	 * @generated
 	 */
-	void setPhone(String value);
+	public String getPhone() {
+		return phone;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Ssid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ssid</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ssid</em>' attribute.
-	 * @see #setSsid(String)
-	 * @see Classes.Customers.CustomersPackage#getCustomer_Ssid()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getSsid();
+	public void setPhone(String newPhone) {
+		phone = newPhone;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Customers.Customer#getSsid <em>Ssid</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ssid</em>' attribute.
-	 * @see #getSsid()
 	 * @generated
 	 */
-	void setSsid(String value);
+	public String getSsid() {
+		return ssid;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Bookings</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Bookings</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bookings</em>' attribute list.
-	 * @see Classes.Customers.CustomersPackage#getCustomer_Bookings()
-	 * @model dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
-	EList<String> getBookings();
+	public void setSsid(String newSsid) {
+		ssid = newSsid;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Requests</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Requests</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Requests</em>' attribute list.
-	 * @see Classes.Customers.CustomersPackage#getCustomer_Requests()
-	 * @model dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
-	EList<String> getRequests();
+	public List<String> getBookings() {
+		return bookings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<String> getRequests() {
+		return requests;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
-	 * @model
 	 * @generated NOT
 	 */
-	void addBooking(String bookingID) throws InvalidIDException;
+	public void addBooking(String bookingID) throws InvalidIDException {
+		if(!bookings.contains(bookingID)) {
+			bookings.add(bookingID);
+		} else {
+			logger.warn("A booking with bookingID {} is already added to the booking.", bookingID);
+			throw new InvalidIDException();
+		}
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
-	 * @model
 	 * @generated NOT
 	 */
-	void removeBooking(String bookingID) throws InvalidIDException;
+	public void removeBooking(String bookingID) throws InvalidIDException {
+		if(bookings.contains(bookingID)) {
+			bookings.remove(bookingID);
+		} else {
+			logger.warn("A booking with bookingID {} could not be found.", bookingID);
+			throw new InvalidIDException();
+		}
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
-	 * @model
 	 * @generated NOT
 	 */
-	void addRequest(String requestID) throws InvalidIDException;
+	public void addRequest(String requestID) throws InvalidIDException {
+		if(!requests.contains(requestID)) {
+			requests.add(requestID);
+		} else {
+			logger.warn("A request with requestID {} is already added to the booking.", requestID);
+			throw new InvalidIDException();
+		}
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
-	 * @model
 	 * @generated NOT
 	 */
-	void removeRequest(String requestID) throws InvalidIDException;
+	public void removeRequest(String requestID) throws InvalidIDException {
+		if(requests.contains(requestID)) {
+			requests.remove(requestID);
+		} else {
+			logger.warn("A request with requestID {} could not be found.", requestID);
+			throw new InvalidIDException();
+		}
+	}
 
-} // Customer
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (firstname: ");
+		result.append(firstname);
+		result.append(", lastname: ");
+		result.append(lastname);
+		result.append(", title: ");
+		result.append(title);
+		result.append(", email: ");
+		result.append(email);
+		result.append(", phone: ");
+		result.append(phone);
+		result.append(", ssid: ");
+		result.append(ssid);
+		result.append(", bookings: ");
+		result.append(bookings);
+		result.append(", requests: ");
+		result.append(requests);
+		result.append(')');
+		return result.toString();
+	}
+
+} //CustomerImpl

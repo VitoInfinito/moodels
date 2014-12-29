@@ -2,12 +2,12 @@
  */
 package Classes.Feedback;
 
+import java.io.Serializable;
 import java.util.List;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,8 +20,8 @@ import Classes.InvalidIDException;
  * @generated
  */
 @NonNullByDefault
-public interface IFeedback extends EObject {
-	IFeedback INSTANCE = Classes.Feedback.impl.FeedbackManagerImpl.INSTANCE;
+public interface IFeedback extends Serializable {
+	IFeedback INSTANCE = Classes.Feedback.FeedbackManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->

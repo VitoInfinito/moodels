@@ -2,130 +2,120 @@
  */
 package Classes.Services;
 
-import org.eclipse.emf.ecore.EObject;
+import java.io.Serializable;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Service</b></em>'.
+ * An implementation of the model object '<em><b>Service</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Services.Service#getName <em>Name</em>}</li>
- *   <li>{@link Classes.Services.Service#getPrice <em>Price</em>}</li>
- *   <li>{@link Classes.Services.Service#getExpense <em>Expense</em>}</li>
- *   <li>{@link Classes.Services.Service#getId <em>Id</em>}</li>
- * </ul>
- * </p>
- *
- * @see Classes.Services.ServicesPackage#getService()
- * @model
  * @generated
  */
-public interface Service extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see Classes.Services.ServicesPackage#getService_Name()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getName();
+ class Service implements Serializable {
+	private static final long serialVersionUID = -5619291932787853806L;
+	private String name;
+	private double price;
+	private double expense;
+	private String id;
 
 	/**
-	 * Sets the value of the '{@link Classes.Services.Service#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
 	 * @generated
 	 */
-	void setName(String value);
+	protected Service() {
+		super();
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Price</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Price</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Price</em>' attribute.
-	 * @see #setPrice(double)
-	 * @see Classes.Services.ServicesPackage#getService_Price()
-	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	double getPrice();
+	public String getName() {
+		return name;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Services.Service#getPrice <em>Price</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Price</em>' attribute.
-	 * @see #getPrice()
 	 * @generated
 	 */
-	void setPrice(double value);
+	public void setName(String newName) {
+		name = newName;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Expense</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Expense</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expense</em>' attribute.
-	 * @see #setExpense(double)
-	 * @see Classes.Services.ServicesPackage#getService_Expense()
-	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	double getExpense();
+	public double getPrice() {
+		return price;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Services.Service#getExpense <em>Expense</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Expense</em>' attribute.
-	 * @see #getExpense()
 	 * @generated
 	 */
-	void setExpense(double value);
+	public void setPrice(double newPrice) {
+		price = newPrice;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see Classes.Services.ServicesPackage#getService_Id()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getId();
+	public double getExpense() {
+		return expense;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Services.Service#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
 	 * @generated
 	 */
-	void setId(String value);
+	public void setExpense(double newExpense) {
+		expense = newExpense;
+	}
 
-} // Service
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		id = newId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", price: ");
+		result.append(price);
+		result.append(", expense: ");
+		result.append(expense);
+		result.append(", id: ");
+		result.append(id);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ServiceImpl

@@ -2,284 +2,279 @@
  */
 package Classes.Guests;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
-import Classes.InvalidIDException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import Classes.Utils.InvalidIDException;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Guest</b></em>'.
+ * An implementation of the model object '<em><b>Guest</b></em>'.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link Classes.Guests.Guest#getFirstname <em>Firstname</em>}</li>
- *   <li>{@link Classes.Guests.Guest#getLastname <em>Lastname</em>}</li>
- *   <li>{@link Classes.Guests.Guest#getTitle <em>Title</em>}</li>
- *   <li>{@link Classes.Guests.Guest#getEmail <em>Email</em>}</li>
- *   <li>{@link Classes.Guests.Guest#getPhone <em>Phone</em>}</li>
- *   <li>{@link Classes.Guests.Guest#getSsid <em>Ssid</em>}</li>
- *   <li>{@link Classes.Guests.Guest#getRequests <em>Requests</em>}</li>
- *   <li>{@link Classes.Guests.Guest#getStays <em>Stays</em>}</li>
- *   <li>{@link Classes.Guests.Guest#getAccount <em>Account</em>}</li>
- * </ul>
- * </p>
- *
- * @see Classes.Guests.GuestsPackage#getGuest()
- * @model
  * @generated
  */
-public interface Guest extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Firstname</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Firstname</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Firstname</em>' attribute.
-	 * @see #setFirstname(String)
-	 * @see Classes.Guests.GuestsPackage#getGuest_Firstname()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getFirstname();
+ class Guest implements Serializable {
+	private static final long serialVersionUID = 5963341371465359490L;
+
+	private final Logger logger = LoggerFactory.getLogger(Guest.class);
+
+	private String firstname;
+	private String lastname;
+	private String title;
+	private String email;
+	private String phone;
+	private String ssid;
+	private List<String> requests;
+	private List<String> stays;
+	private String account;
 
 	/**
-	 * Sets the value of the '{@link Classes.Guests.Guest#getFirstname <em>Firstname</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Firstname</em>' attribute.
-	 * @see #getFirstname()
 	 * @generated
 	 */
-	void setFirstname(String value);
+	protected Guest() {
+		super();
+		requests = new ArrayList<String>();
+		stays = new ArrayList<String>();
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Lastname</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Lastname</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lastname</em>' attribute.
-	 * @see #setLastname(String)
-	 * @see Classes.Guests.GuestsPackage#getGuest_Lastname()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getLastname();
+	public String getFirstname() {
+		return firstname;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Guests.Guest#getLastname <em>Lastname</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Lastname</em>' attribute.
-	 * @see #getLastname()
 	 * @generated
 	 */
-	void setLastname(String value);
+	public void setFirstname(String newFirstname) {
+		firstname = newFirstname;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Title</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Title</em>' attribute.
-	 * @see #setTitle(String)
-	 * @see Classes.Guests.GuestsPackage#getGuest_Title()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getTitle();
+	public String getLastname() {
+		return lastname;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Guests.Guest#getTitle <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Title</em>' attribute.
-	 * @see #getTitle()
 	 * @generated
 	 */
-	void setTitle(String value);
+	public void setLastname(String newLastname) {
+		lastname = newLastname;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Email</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Email</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Email</em>' attribute.
-	 * @see #setEmail(String)
-	 * @see Classes.Guests.GuestsPackage#getGuest_Email()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getEmail();
+	public String getTitle() {
+		return title;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Guests.Guest#getEmail <em>Email</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Email</em>' attribute.
-	 * @see #getEmail()
 	 * @generated
 	 */
-	void setEmail(String value);
+	public void setTitle(String newTitle) {
+		title = newTitle;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Phone</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Phone</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Phone</em>' attribute.
-	 * @see #setPhone(String)
-	 * @see Classes.Guests.GuestsPackage#getGuest_Phone()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getPhone();
+	public String getEmail() {
+		return email;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Guests.Guest#getPhone <em>Phone</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Phone</em>' attribute.
-	 * @see #getPhone()
 	 * @generated
 	 */
-	void setPhone(String value);
+	public void setEmail(String newEmail) {
+		email = newEmail;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Ssid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ssid</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ssid</em>' attribute.
-	 * @see #setSsid(String)
-	 * @see Classes.Guests.GuestsPackage#getGuest_Ssid()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getSsid();
+	public String getPhone() {
+		return phone;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Guests.Guest#getSsid <em>Ssid</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ssid</em>' attribute.
-	 * @see #getSsid()
 	 * @generated
 	 */
-	void setSsid(String value);
+	public void setPhone(String newPhone) {
+		phone = newPhone;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Requests</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Requests</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Requests</em>' attribute list.
-	 * @see Classes.Guests.GuestsPackage#getGuest_Requests()
-	 * @model dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
-	EList<String> getRequests();
+	public String getSsid() {
+		return ssid;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Stays</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Stays</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Stays</em>' attribute list.
-	 * @see Classes.Guests.GuestsPackage#getGuest_Stays()
-	 * @model dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
-	EList<String> getStays();
+	public void setSsid(String newSsid) {
+		ssid = newSsid;
+	}
 
 	/**
-	 * Returns the value of the '<em><b>Account</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Account</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Account</em>' attribute.
-	 * @see #setAccount(String)
-	 * @see Classes.Guests.GuestsPackage#getGuest_Account()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getAccount();
+	public List<String> getRequests() {
+		return requests;
+	}
 
 	/**
-	 * Sets the value of the '{@link Classes.Guests.Guest#getAccount <em>Account</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Account</em>' attribute.
-	 * @see #getAccount()
 	 * @generated
 	 */
-	void setAccount(String value);
+	public List<String> getStays() {
+		return stays;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAccount() {
+		return account;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAccount(String newAccount) {
+		account = newAccount;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
-	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" 
 	 * @generated
 	 */
-	void addStay(String stayID) throws InvalidIDException;
+	public void addStay(String stayID) throws InvalidIDException {
+		if(!stays.contains(stayID)) {
+			stays.add(stayID);
+		} else {
+			logger.warn("A stay with stayID {} is already added.", stayID);
+			throw new InvalidIDException();
+		}
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
-	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void removeStay(String stayID) throws InvalidIDException;
+	public void removeStay(String stayID) throws InvalidIDException {
+		if(stays.contains(stayID)) {
+			stays.remove(stayID);
+		} else {
+			logger.warn("A stay with stayID {} could not be found.", stayID);
+			throw new InvalidIDException();
+		}
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
-	 * @model requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false" 
 	 * @generated
 	 */
-	void addRequest(String requestID) throws InvalidIDException;
+	public void addRequest(String requestID) throws InvalidIDException {
+		if(!requests.contains(requestID)) {
+			requests.add(requestID);
+		} else {
+			logger.warn("A request with requestID {} is already added.", requestID);
+			throw new InvalidIDException();
+		}
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
-	 * @model requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false"
+	 * @generated NOT
+	 */
+	public void removeRequest(String requestID) throws InvalidIDException {
+		if(requests.contains(requestID)) {
+			requests.remove(requestID);
+		} else {
+			logger.warn("A request with requestID {} could not be found.", requestID);
+			throw new InvalidIDException();
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	void removeRequest(String requestID) throws InvalidIDException;
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (firstname: ");
+		result.append(firstname);
+		result.append(", lastname: ");
+		result.append(lastname);
+		result.append(", title: ");
+		result.append(title);
+		result.append(", email: ");
+		result.append(email);
+		result.append(", phone: ");
+		result.append(phone);
+		result.append(", ssid: ");
+		result.append(ssid);
+		result.append(", requests: ");
+		result.append(requests);
+		result.append(", stays: ");
+		result.append(stays);
+		result.append(", account: ");
+		result.append(account);
+		result.append(')');
+		return result.toString();
+	}
 
-} // Guest
+} //GuestImpl

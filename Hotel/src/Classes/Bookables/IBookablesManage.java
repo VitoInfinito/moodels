@@ -4,7 +4,7 @@ package Classes.Bookables;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
-import Classes.InvalidIDException;
+import Classes.Utils.InvalidIDException;
 
 
 /**
@@ -20,7 +20,7 @@ import Classes.InvalidIDException;
 @NonNullByDefault
 public interface IBookablesManage extends IBookablesAccess {
 	
-	IBookablesManage INSTANCE = Classes.Bookables.impl.BookablesManagerImpl.INSTANCE;
+	IBookablesManage INSTANCE = Classes.Bookables.BookablesManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->
