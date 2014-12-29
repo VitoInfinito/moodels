@@ -3,26 +3,35 @@ package com.gaylord;
 
 import java.io.IOException;
 
-import com.gaylord.view.LoginController;
-
+import Classes.Accounts.AccountType;
+import Classes.Accounts.IManageAccounts;
+import Classes.Restaurants.IRestaurantsManage;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class MainApp extends Application {
-
-    private Stage primaryStage;
+    public static Stage STAGE;
     private AnchorPane loginLayout;
 
-    @Override
+    @SuppressWarnings("static-access")
+	@Override
     public void start(Stage primaryStage) {
-        this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("Hotel Management");
+        this.STAGE = primaryStage;
+        this.STAGE.setTitle("Login");
 
+		// TODO remove this when persistance works
+		IManageAccounts.INSTANCE.addAccount("guest", "guest", AccountType.GUEST);
+		IManageAccounts.INSTANCE.addAccount("customerservice", "customerservice", AccountType.CUSTOMER_SERVICE);
+		IManageAccounts.INSTANCE.addAccount("staff", "staff", AccountType.STAFF);
+		IManageAccounts.INSTANCE.addAccount("manager", "manager", AccountType.MANAGER);
+		IRestaurantsManage.INSTANCE.addRestaurant("Anders korvmoj");
+		IRestaurantsManage.INSTANCE.addRestaurant("Tikkas bögkäk");
+		IRestaurantsManage.INSTANCE.addRestaurant("Charlies bordellklubb");
+        
         initLoginLayout();
     }
 
@@ -38,26 +47,18 @@ public class MainApp extends Application {
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(loginLayout);
-            primaryStage.initStyle(StageStyle.UNDECORATED);
-            primaryStage.setScene(scene);
-            primaryStage.show();
-            primaryStage.setResizable(false);
-            primaryStage.centerOnScreen();
+            STAGE.initStyle(StageStyle.DECORATED);
+            STAGE.setScene(scene);
+            STAGE.show();
+            STAGE.setResizable(false);
+            STAGE.centerOnScreen();
             
             
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-    /**
-     * Returns the main stage.
-     * @return
-     */
-    public Stage getPrimaryStage() {
-        return primaryStage;
-    }
-
+    
     public static void main(String[] args) {
         launch(args);
     }

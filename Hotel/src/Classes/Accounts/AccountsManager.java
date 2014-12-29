@@ -172,7 +172,7 @@ class AccountsManager implements IManageAccounts {
 	 * @generated NOT
 	 */
 	public boolean validateAccount(String username, String password) {
-		return accounts.containsKey(username) && accounts.get(username).getPassword() == password;
+		return accounts.containsKey(username) && accounts.get(username).getPassword().equals(password);
 	}
 
 	/**
