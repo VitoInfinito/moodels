@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane minHeight="400.0" minWidth="600.0" prefHeight="768.0" prefWidth="1366.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gaylord.view.ServiceMainController">
+   <center>
+      <BorderPane fx:id="pane" style="-fx-background-color: #DACDC0;" stylesheets="@DarkTheme.css" BorderPane.alignment="CENTER">
+         <bottom>
+            <ImageView fx:id="footerImage" fitHeight="199.0" fitWidth="1367.0" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../../../images/bell.jpg" />
+               </image>
+            </ImageView>
+         </bottom>
+         <top>
+            <AnchorPane prefHeight="53.0" prefWidth="1367.0" style="-fx-background-color: #1d1d1d;" BorderPane.alignment="CENTER">
+               <children>
+                <Button fx:id="restaurantsButton" layoutX="852.0" layoutY="5.0" minWidth="130.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Restaurants" textAlignment="CENTER">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="guestsButton" layoutX="432.0" layoutY="5.0" minWidth="130.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Guests" textAlignment="CENTER" textFill="#dadada">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="servicesButton" layoutX="14.0" layoutY="5.0" minWidth="130.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Services" textAlignment="CENTER" textFill="#dadada">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="logOutButton" layoutX="1153.0" layoutY="5.0" minWidth="130.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Log Out" textAlignment="CENTER" textFill="#dadada" AnchorPane.rightAnchor="14.0">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="inventoryButton" layoutX="713.0" layoutY="5.0" minWidth="130.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Inventory" textAlignment="CENTER" textFill="#dadada">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="customersButton" layoutX="293.0" layoutY="5.0" minWidth="130.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Customers" textAlignment="CENTER" textFill="#dadada">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="feedbackButton" layoutX="572.0" layoutY="5.0" minWidth="130.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Feedback" textAlignment="CENTER" textFill="#dadada">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="bookingsButton" layoutX="153.0" layoutY="5.0" minWidth="130.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Bookings" textAlignment="CENTER" textFill="#dadada">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="roomsButton" layoutX="989.0" layoutY="5.0" minWidth="130.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Rooms" textAlignment="CENTER" textFill="#dadada">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top></BorderPane>
+   </center>
+   <top>
+      <ImageView fx:id="headerImage" fitHeight="133.0" fitWidth="1366.0" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../../../images/grand-budapest-banner-1.jpg" />
+         </image>
+      </ImageView>
+   </top>
+</BorderPane>

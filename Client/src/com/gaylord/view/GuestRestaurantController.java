@@ -29,5 +29,7 @@ public class GuestRestaurantController {
 		restaurants.getSelectionModel().selectedItemProperty().addListener((event) -> {
 			restaurantName.textProperty().set(restaurants.getSelectionModel().selectedItemProperty().get());
 		});
+		
+		restaurants.getSelectionModel().select(0);
 	}
 }

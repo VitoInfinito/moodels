@@ -9,8 +9,8 @@
 
 <AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #F6F3F0;" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gaylord.view.LoginController">
    <children>
-      <Button fx:id="loginButton" layoutX="248.0" layoutY="171.0" mnemonicParsing="false" text="Login" />
-      <Button fx:id="cancelButton" layoutX="155.0" layoutY="171.0" mnemonicParsing="false" text="Cancel" />
+      <Button fx:id="loginButton" layoutX="262.0" layoutY="171.0" mnemonicParsing="false" text="Login" />
+      <Button fx:id="cancelButton" layoutX="175.0" layoutY="171.0" mnemonicParsing="false" text="Cancel" />
       <PasswordField fx:id="password" layoutX="126.0" layoutY="125.0" promptText="Password" />
       <TextField fx:id="username" layoutX="126.0" layoutY="82.0" promptText="Username" />
    </children>

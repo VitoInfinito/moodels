@@ -38,34 +38,50 @@ public class LoginController {
 	@SuppressWarnings("deprecation")
 	@FXML
 	private void initialize() {
-		
+		// get a handle to the stage
+		Stage stage = MainApp.STAGE;
+		stage.setTitle("Login");
 		loginButton.setOnAction((event) -> {
 			if (IAccountsAccess.INSTANCE.login(username.getText(), password.getText())) {
 				try {
-					// get a handle to the stage
-					Stage stage = MainApp.STAGE;
 					
-		            // Load root layout from fxml file.
-		            FXMLLoader loader = new FXMLLoader();
-		            loader.setLocation(LoginController.class.getResource("GuestRootLayout.fxml"));
-		            BorderPane loginLayout = (BorderPane) loader.load();
 
-		            // Show the scene containing the root layout.
-		            Scene scene = new Scene(loginLayout);
-		            stage.hide();
-		            stage.setScene(scene);
-		            stage.setResizable(true);
-		            stage.setMinHeight(800);
-		            stage.setMinWidth(1000);
-		            stage.setWidth(loginLayout.getWidth());
-		            stage.setHeight(loginLayout.getHeight());
-		            MainApp.STAGE.setTitle("Guest services");
-		            stage.show();
-		            stage.centerOnScreen();
-		            
-		        } catch (IOException e) {
-		            e.printStackTrace();
-		        }
+					stage.hide();
+					// Load root layout from fxml file.
+					FXMLLoader loader = new FXMLLoader();
+
+					switch (IAccountsAccess.INSTANCE.getAccountType(username.getText())) {
+					case GUEST:
+						loader.setLocation(LoginController.class.getResource("GuestRootLayout.fxml"));
+						break;
+					case CUSTOMER_SERVICE:
+						loader.setLocation(LoginController.class.getResource("ServiceRootLayout.fxml"));
+						break;
+					case MANAGER:
+						loader.setLocation(LoginController.class.getResource("ManagerRootLayout.fxml"));
+						break;
+					case STAFF:
+						loader.setLocation(LoginController.class.getResource("StaffRootLayout.fxml"));
+						break;
+					default:
+						break;
+					}
+					BorderPane loginLayout = (BorderPane) loader.load();
+
+					// Show the scene containing the root layout.
+					Scene scene = new Scene(loginLayout);
+					stage.setScene(scene);
+					stage.setResizable(true);
+					stage.setMinHeight(800);
+					stage.setMinWidth(1300);
+					stage.setWidth(loginLayout.getPrefWidth());
+					stage.setHeight(loginLayout.getPrefHeight());
+					stage.show();
+					stage.centerOnScreen();
+
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			} else {
 				Dialogs.create()
 				.owner((Stage) loginButton.getScene().getWindow())
@@ -78,9 +94,7 @@ public class LoginController {
 
 
 		cancelButton.setOnAction((event) -> {
-			// get a handle to the stage
-			Stage stage = (Stage) cancelButton.getScene().getWindow();
-			// do what you have to do
+			// close
 			stage.close();
 		});
 	}

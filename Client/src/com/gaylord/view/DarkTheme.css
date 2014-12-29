@@ -1,15 +1,4 @@
-.background {
-    -fx-background-color: #1d1d1d;
-}
 
-.split-pane:horizontal > .split-pane-divider {
-    -fx-border-color: transparent #1d1d1d transparent #1d1d1d;
-    -fx-background-color: transparent, derive(#1d1d1d,20%);
-}
-
-.split-pane {
-    -fx-padding: 1 0 0 0;
-}
 
 .menu-bar {
     -fx-background-color: derive(#1d1d1d,20%);
@@ -28,21 +17,28 @@
     -fx-font-family: "Segoe UI Semibold";
 }
 
+.split-pane {
+	-fx-padding: 0em ;
+}
+
 /* 
  * Metro style Push Button
  * Author: Pedro Duque Vieira
  * http://pixelduke.wordpress.com/2012/10/23/jmetro-windows-8-controls-on-java/
  */
 .button {
-    -fx-padding: 5 22 5 22;   
-    -fx-border-color: #e2e2e2;
-    -fx-border-width: 2;
-    -fx-background-radius: 0;
-    -fx-background-color: #1d1d1d;
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 11pt;
-    -fx-text-fill: #d8d8d8;
-    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+     -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-padding: 10 20 10 20;
 }
 
 .button:hover {
@@ -52,14 +48,6 @@
 .button:pressed, .button:default:hover:pressed {
   -fx-background-color: white;
   -fx-text-fill: #1d1d1d;
-}
-
-.button:focused {
-    -fx-border-color: white, white;
-    -fx-border-width: 1, 1;
-    -fx-border-style: solid, segments(1, 1);
-    -fx-border-radius: 0, 0;
-    -fx-border-insets: 1 1 1 1, 0;
 }
 
 .button:disabled, .button:default:disabled {
@@ -83,7 +71,11 @@
 }
 
 .list-cell:even { /* <=== changed to even */
-    -fx-background-color: white;
+    -fx-background-color: #F7F7F7;
+}
+
+.list-cell:odd { /* <=== changed to even */
+    -fx-background-color: #DBDBDB;
 }
 
 .list-cell { 
@@ -94,3 +86,4 @@
     -fx-background-color: #1d1d1d;
     -fx-text-fill: white;
 }
+

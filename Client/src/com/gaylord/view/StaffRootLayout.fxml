@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane minHeight="400.0" minWidth="600.0" prefHeight="768.0" prefWidth="1366.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gaylord.view.GuestMainController">
+<BorderPane minHeight="400.0" minWidth="600.0" prefHeight="768.0" prefWidth="1366.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gaylord.view.StaffMainController">
    <center>
       <BorderPane fx:id="pane" style="-fx-background-color: #DACDC0;" stylesheets="@DarkTheme.css" BorderPane.alignment="CENTER">
          <bottom>
@@ -21,22 +21,12 @@
          <top>
             <AnchorPane prefHeight="53.0" prefWidth="1367.0" style="-fx-background-color: #1d1d1d;" BorderPane.alignment="CENTER">
                <children>
-                <Button fx:id="restaurantButton" layoutX="14.0" layoutY="5.0" minWidth="130.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Restaurants" textAlignment="CENTER">
+                <Button fx:id="inventoryButton" layoutX="14.0" layoutY="5.0" minWidth="100.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="100.0" text="Inventory" textAlignment="CENTER">
                      <effect>
                         <Glow />
                      </effect>
                   </Button>
-                  <Button fx:id="billsButton" layoutX="298.0" layoutY="5.0" minWidth="130.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Bills" textAlignment="CENTER" textFill="#dadada">
-                     <effect>
-                        <Glow />
-                     </effect>
-                  </Button>
-                  <Button fx:id="roomServiceButton" layoutX="156.0" layoutY="5.0" minWidth="130.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Room Service" textAlignment="CENTER" textFill="#dadada">
-                     <effect>
-                        <Glow />
-                     </effect>
-                  </Button>
-                  <Button fx:id="logOutButton" layoutX="1153.0" layoutY="5.0" minWidth="130.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Log Out" textAlignment="CENTER" textFill="#dadada" AnchorPane.rightAnchor="14.0">
+                  <Button fx:id="logOutButton" layoutX="1153.0" layoutY="5.0" minWidth="100.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="100.0" text="Log Out" textAlignment="CENTER" textFill="#dadada" AnchorPane.rightAnchor="14.0">
                      <effect>
                         <Glow />
                      </effect>

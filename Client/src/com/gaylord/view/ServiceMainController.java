@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 import com.gaylord.MainApp;
 
-public class GuestMainController {
+public class ServiceMainController {
 	@FXML
 	private ImageView headerImage;
 
@@ -24,13 +24,28 @@ public class GuestMainController {
 	private BorderPane pane;
 
 	@FXML
-	private Button restaurantButton;
+	private Button restaurantsButton;
 
 	@FXML
-	private Button roomServiceButton;
+	private Button servicesButton;
+	
+	@FXML
+	private Button customersButton;
+	
+	@FXML
+	private Button guestsButton;
 
 	@FXML
-	private Button billsButton;
+	private Button roomsButton;
+	
+	@FXML
+	private Button bookingsButton;
+	
+	@FXML
+	private Button feedbackButton;
+	
+	@FXML
+	private Button inventoryButton;
 
 	@FXML
 	private Button logOutButton;
@@ -43,7 +58,7 @@ public class GuestMainController {
 	@FXML
 	private void initialize() {
 		Stage stage = MainApp.STAGE;
-		stage.setTitle("Guest services");
+		stage.setTitle("Customer service");
 		headerImage.fitWidthProperty().bind(stage.widthProperty()); 
 		footerImage.fitWidthProperty().bind(stage.widthProperty());
 
@@ -54,6 +69,7 @@ public class GuestMainController {
 				FXMLLoader loader = new FXMLLoader();
 				loader.setLocation(MainApp.class.getResource("view/Login.fxml"));
 				AnchorPane loginLayout = (AnchorPane) loader.load();
+
 				
 				// Show the scene containing the root layout.
 				Scene scene = new Scene(loginLayout);
@@ -75,24 +91,36 @@ public class GuestMainController {
 			}
 		});
 
-		restaurantButton.setOnAction((event) -> {
-			try {
-				FXMLLoader loader = new FXMLLoader();
-				loader.setLocation(MainApp.class.getResource("view/GuestRestaurantLayout.fxml"));
-				BorderPane layout = (BorderPane) loader.load();
-				
-				pane.setCenter(layout);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+		restaurantsButton.setOnAction((event) -> {
+			// TODO
 		});
 
-		roomServiceButton.setOnAction((event) -> {
-
+		servicesButton.setOnAction((event) -> {
+			// TODO
 		});
 
-		billsButton.setOnAction((event) -> {
-
+		customersButton.setOnAction((event) -> {
+			// TODO
+		});
+		
+		guestsButton.setOnAction((event) -> {
+			// TODO
+		});
+		
+		roomsButton.setOnAction((event) -> {
+			// TODO
+		});
+		
+		bookingsButton.setOnAction((event) -> {
+			// TODO
+		});
+		
+		feedbackButton.setOnAction((event) -> {
+			// TODO
+		});
+		
+		inventoryButton.setOnAction((event) -> {
+			// TODO
 		});
 	}
 }

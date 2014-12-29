@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 import com.gaylord.MainApp;
 
-public class GuestMainController {
+public class StaffMainController {
 	@FXML
 	private ImageView headerImage;
 
@@ -24,13 +24,7 @@ public class GuestMainController {
 	private BorderPane pane;
 
 	@FXML
-	private Button restaurantButton;
-
-	@FXML
-	private Button roomServiceButton;
-
-	@FXML
-	private Button billsButton;
+	private Button inventoryButton;
 
 	@FXML
 	private Button logOutButton;
@@ -43,7 +37,7 @@ public class GuestMainController {
 	@FXML
 	private void initialize() {
 		Stage stage = MainApp.STAGE;
-		stage.setTitle("Guest services");
+		stage.setTitle("Inventory");
 		headerImage.fitWidthProperty().bind(stage.widthProperty()); 
 		footerImage.fitWidthProperty().bind(stage.widthProperty());
 
@@ -54,6 +48,7 @@ public class GuestMainController {
 				FXMLLoader loader = new FXMLLoader();
 				loader.setLocation(MainApp.class.getResource("view/Login.fxml"));
 				AnchorPane loginLayout = (AnchorPane) loader.load();
+
 				
 				// Show the scene containing the root layout.
 				Scene scene = new Scene(loginLayout);
@@ -75,24 +70,8 @@ public class GuestMainController {
 			}
 		});
 
-		restaurantButton.setOnAction((event) -> {
-			try {
-				FXMLLoader loader = new FXMLLoader();
-				loader.setLocation(MainApp.class.getResource("view/GuestRestaurantLayout.fxml"));
-				BorderPane layout = (BorderPane) loader.load();
-				
-				pane.setCenter(layout);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		});
-
-		roomServiceButton.setOnAction((event) -> {
-
-		});
-
-		billsButton.setOnAction((event) -> {
-
+		inventoryButton.setOnAction((event) -> {
+			// TODO
 		});
 	}
 }
