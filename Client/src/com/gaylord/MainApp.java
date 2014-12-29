@@ -3,6 +3,8 @@ package com.gaylord;
 
 import java.io.IOException;
 
+import com.gaylord.view.LoginController;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,7 +13,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class Main extends Application {
+public class MainApp extends Application {
 
     private Stage primaryStage;
     private AnchorPane loginLayout;
@@ -31,7 +33,7 @@ public class Main extends Application {
         try {
             // Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/Login.fxml"));
+            loader.setLocation(MainApp.class.getResource("view/Login.fxml"));
             loginLayout = (AnchorPane) loader.load();
 
             // Show the scene containing the root layout.
@@ -41,6 +43,8 @@ public class Main extends Application {
             primaryStage.show();
             primaryStage.setResizable(false);
             primaryStage.centerOnScreen();
+            
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
