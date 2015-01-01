@@ -26,6 +26,13 @@ public interface IInventoryAccess extends Serializable {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:</br>
+	 * 		id != null</br></br>
+	 * Ensures:</br>
+	 * 		If there is an inventory item <i>item</i> such that <i>item.id == id && 0 <= stock</i></br>
+	 * 			sets <i>item.stock = stock</i></br>
+	 * 		otherwise</br>
+	 * 			InvalidIDException is thrown</br>
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" stockDataType="org.eclipse.uml2.types.Integer" stockRequired="true" stockOrdered="false"
@@ -35,6 +42,13 @@ public interface IInventoryAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:</br>
+	 * 		id != null</br></br>
+	 * Ensures:</br>
+	 * 		If there is an inventory item <i>item</i> such that <i>item.id == id</i></br>
+	 * 			returns <i>item.price</i></br>
+	 * 		otherwise</br>
+	 * 			InvalidIDException is thrown</br>
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
@@ -44,6 +58,13 @@ public interface IInventoryAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:</br>
+	 * 		id != null</br></br>
+	 * Ensures:</br>
+	 * 		If there is an inventory item <i>item</i> such that <i>item.id == id</i></br>
+	 * 			returns <i>item.name</i></br>
+	 * 		otherwise</br>
+	 * 			InvalidIDException is thrown</br>
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
@@ -53,6 +74,13 @@ public interface IInventoryAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:</br>
+	 * 		id != null</br></br>
+	 * Ensures:</br>
+	 * 		If there is an inventory item <i>item</i> such that <i>item.id == id</i></br>
+	 * 			returns <i>item.stock</i></br>
+	 * 		otherwise</br>
+	 * 			InvalidIDException is thrown</br>
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
@@ -62,6 +90,13 @@ public interface IInventoryAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:</br>
+	 * 		id != null</br></br>
+	 * Ensures:</br>
+	 * 		If there is an inventory item <i>item</i> such that <i>item.id == id</i></br>
+	 * 			returns <i>item.expense</i></br>
+	 * 		otherwise</br>
+	 * 			InvalidIDException is thrown</br>
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
@@ -71,6 +106,10 @@ public interface IInventoryAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		Nothing
+	 * Ensures:
+	 * 		returns a non-null list with all the items
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -79,6 +118,14 @@ public interface IInventoryAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		keyword != null
+	 * Ensures:
+	 * 		returns a non-null list of all items matching something in the following order:
+	 * 			1. Items with id that exactly matches <i>keyword</i>
+	 * 			2. Items with id that has some matching to <i>keyword</i>
+	 * 			3. Items with attributes that exactly matches <i>keyword</i>
+	 * 			4. Items with attributes that has some matching to <i>keyword</i>
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated
