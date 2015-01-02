@@ -15,8 +15,8 @@ public class IRestaurantsManageTest {
 
 	@Before
 	public void setUp() throws Exception {
-		IRestaurantsManage.INSTANCE.addRestaurant("abcd");
-		IRestaurantsManage.INSTANCE.addRestaurantTable("abcd", 2, "5");
+		IRestaurantsManage.INSTANCE.addRestaurant("testaurant");
+		IRestaurantsManage.INSTANCE.addRestaurantTable("testaurant", 2, "5");
 	}
 	
 	@After
@@ -33,7 +33,7 @@ public class IRestaurantsManageTest {
 	
 	@Test(expected=InvalidIDException.class)
 	public void testAddRestaurant_notExists_throwsException(){
-		IRestaurantsManage.INSTANCE.addRestaurant("abcd");
+		IRestaurantsManage.INSTANCE.addRestaurant("testaurant");
 	}
 
 	@Test
@@ -45,51 +45,61 @@ public class IRestaurantsManageTest {
 
 	@Test
 	public void testAddRestaurantTable() {
-		boolean result = IRestaurantsManage.INSTANCE.getRestaurantTableNumberOfSeats("abcd", "5") == 2;
+		boolean result = IRestaurantsManage.INSTANCE.getRestaurantTableNumberOfSeats("testaurant", "5") == 2;
 		assertTrue(result);
 	}
 
 	@Test
 	public void testRemoveRestaurantTable() {
-		IRestaurantsManage.INSTANCE.removeRestaurantTable("abcd", "5");
-		boolean result = IRestaurantsManage.INSTANCE.getRestaurantTables("abcd").isEmpty();
+		IRestaurantsManage.INSTANCE.removeRestaurantTable("testaurant", "5");
+		boolean result = IRestaurantsManage.INSTANCE.getRestaurantTables("testaurant").isEmpty();
 		assertTrue(result);
 		
 	}
 
 	@Test
 	public void testChangeRestaurantName() {
-		IRestaurantsManage.INSTANCE.changeRestaurantName("abcd", "efgh");
-		boolean result = 	!(IRestaurantsManage.INSTANCE.getAllRestaurantNames().contains("abcd")) && 
+		IRestaurantsManage.INSTANCE.changeRestaurantName("testaurant", "efgh");
+		boolean result = 	!(IRestaurantsManage.INSTANCE.getAllRestaurantNames().contains("testaurant")) && 
 							IRestaurantsManage.INSTANCE.getAllRestaurantNames().contains("efgh");
 		assertTrue(result);
 	}
 
 	@Test
 	public void testChangeTableNumberOfSeats() {
-		IRestaurantsManage.INSTANCE.changeTableNumberOfSeats("abcd", "5", 3);
-		boolean result = IRestaurantsManage.INSTANCE.getRestaurantTableNumberOfSeats("abcd", "5") == 3;
+		IRestaurantsManage.INSTANCE.changeTableNumberOfSeats("testaurant", "5", 3);
+		boolean result = IRestaurantsManage.INSTANCE.getRestaurantTableNumberOfSeats("testaurant", "5") == 3;
 		assertTrue(result);
 	}
 
 	@Test
 	public void testAddMenuItem() {
-		fail("Not yet implemented");
+		IRestaurantsManage.INSTANCE.addMenuItem("testaurant", "banana");
+		boolean result = IRestaurantsManage.INSTANCE.getRestaurantMenuItems("testaurant").contains("banana");
+		assertTrue(result);
+			
 	}
 
 	@Test
 	public void testRemoveMenuItem() {
-		fail("Not yet implemented");
+		IRestaurantsManage.INSTANCE.addMenuItem("testaurant", "banana");
+		IRestaurantsManage.INSTANCE.removeMenuItem("testaurant", "banana");
+		boolean result = IRestaurantsManage.INSTANCE.getRestaurantMenuItems("testaurant").isEmpty();
+		assertTrue(result);
 	}
 
 	@Test
 	public void testChangeMenuName() {
-		fail("Not yet implemented");
+		IRestaurantsManage.INSTANCE.changeMenuName("testaurant", "theName");
+		boolean result = IRestaurantsManage.INSTANCE.getRestaurantMenuName("testaurant") == "theName";
+		assertTrue(result);
 	}
 
 	@Test
 	public void testChangeTableNumber() {
-		fail("Not yet implemented");
+		IRestaurantsManage.INSTANCE.changeTableNumber("testaurant", "5", "1");
+		boolean result = IRestaurantsManage.INSTANCE.getRestaurantTables("testaurant").contains("1");
+		assertTrue(result);
 	}
 
 }
