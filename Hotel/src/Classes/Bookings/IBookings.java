@@ -171,6 +171,19 @@ public interface IBookings extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		bookables != null && customerID != null && from != null && to != null && ccNumber != null && ccv != null && firstName != null && lastName != null
+	 * Ensures:
+	 * 		if there does not exists a booking such that booking.id == bookingID
+	 * 			InvalidIDException is thrown.
+	 * 		otherwise
+	 * 			if discount < 0 || discount > 1 || from.isAfter(to)
+	 * 				IllegalArgumentException is thrown.
+	 * 			otherwise
+	 * 					if the bookable is already booked in the specified period
+	 * 						InvalidIDException is thrown
+	 * 					otherwise
+	 * 						A stay for the specified bookable is created and added to the booking for the specified period and with the specified discount.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
@@ -268,6 +281,14 @@ public interface IBookings extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		keyword != null && from != null && to != null && from.isBefore(to)
+	 * Ensures:
+	 * 		returns a non-null id list of all bookables that has no stay booked within the specified period matching something in the following order:
+	 * 			1. Bookables with id that exactly matches the keyword
+	 * 			2. Bookables with attributes that exactly matches the keyword
+	 * 			3. Bookables with id that has some matching to the keyword
+	 * 			4. Bookables with attributes that has some matching to the keyword
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
@@ -277,6 +298,10 @@ public interface IBookings extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		from != null && to != null && from.isBefore(to)
+	 * Ensures:
+	 * 		returns a non-null id list of all bookables that has no stay booked within the specified period
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
@@ -333,7 +358,22 @@ public interface IBookings extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 
+	 * Requires:
+	 * 		bookingID != null
+	 * Ensures:
+	 * 		if there exists a booking such that booking.id == bookingID
+	 * 			if there are communication issues with the bank service
+	 * 				SOAPException is thrown.
+	 * 			otherwise
+	 * 				if the credit card of the booking is invalid 
+	 * 					InvalidCreditCardException is thrown.
+	 * 				otherwise
+	 * 					if the credit card of the booking do not have the funds to pay all the unpaid bills of the booked stays
+	 * 						InsufficientFundsException is thrown.
+	 * 					otherwise
+	 * 						all the unpaid bills of the booked stays of the booking are paid
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws SOAPException 
 	 * @throws InvalidIDException 
@@ -344,6 +384,22 @@ public interface IBookings extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		bookingID != null && stayID != null
+	 * Ensures:
+	 * 		if there exists a booking such that booking.id == bookingID && the booking contains a stay such that stay.id == stayID
+	 * 			if there are communication issues with the bank service
+	 * 				SOAPException is thrown.
+	 * 			otherwise
+	 * 				if the credit card of the booking is invalid 
+	 * 					InvalidCreditCardException is thrown.
+	 * 				otherwise
+	 * 					if the credit card of the booking do not have the funds to pay all the unpaid bills of the booked stay
+	 * 						InsufficientFundsException is thrown.
+	 * 					otherwise
+	 * 						all the unpaid bills of the booked stay of the booking are paid
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws SOAPException, InvalidCreditCardException, InsufficientFundsException 
 	 * @throws InvalidIDException 
@@ -354,6 +410,14 @@ public interface IBookings extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		keyword != null && from != null && to != null && from.isBefore(to)
+	 * Ensures:
+	 * 		returns a non-null id list of all hotel rooms that has no stay booked within the specified period matching something in the following order:
+	 * 			1. Hotel rooms with id that exactly matches the keyword
+	 * 			2. Hotel rooms with attributes that exactly matches the keyword
+	 * 			3. Hotel rooms with id that has some matching to the keyword
+	 * 			4. Hotel rooms with attributes that has some matching to the keyword
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
@@ -363,6 +427,14 @@ public interface IBookings extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		keyword != null && from != null && to != null && from.isBefore(to)
+	 * Ensures:
+	 * 		returns a non-null id list of all hostel beds that has no stay booked within the specified period matching something in the following order:
+	 * 			1. Hostel beds with id that exactly matches the keyword
+	 * 			2. Hostel beds with attributes that exactly matches the keyword
+	 * 			3. Hostel beds with id that has some matching to the keyword
+	 * 			4. Hostel beds with attributes that has some matching to the keyword
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
@@ -372,6 +444,14 @@ public interface IBookings extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		keyword != null && from != null && to != null && from.isBefore(to)
+	 * Ensures:
+	 * 		returns a non-null id list of all conference rooms that has no stay booked within the specified period matching something in the following order:
+	 * 			1. Conference rooms with id that exactly matches the keyword
+	 * 			2. Conference rooms with attributes that exactly matches the keyword
+	 * 			3. Conference rooms with id that has some matching to the keyword
+	 * 			4. Conference rooms with attributes that has some matching to the keyword
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
@@ -381,6 +461,10 @@ public interface IBookings extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		from != null && to != null && from.isBefore(to)
+	 * Ensures:
+	 * 		returns a non-null id list of all hotel rooms that has no stay booked within the specified period
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
@@ -390,6 +474,10 @@ public interface IBookings extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		from != null && to != null && from.isBefore(to)
+	 * Ensures:
+	 * 		returns a non-null id list of all conference rooms that has no stay booked within the specified period
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
@@ -399,6 +487,10 @@ public interface IBookings extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		from != null && to != null && from.isBefore(to)
+	 * Ensures:
+	 * 		returns a non-null id list of all hostel beds that has no stay booked within the specified period
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
