@@ -25,13 +25,16 @@ public class IFeedbackTest {
 	
 	@After
 	public void tearDown() throws Exception {
-		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
-		IFeedback.INSTANCE.removeFeedback(id);
+		if (IFeedback.INSTANCE.getAllFeedbackIDs().size() > 0) {
+			String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
+			IFeedback.INSTANCE.removeFeedback(id);
+		}
 	}
 	
 	@Test
 	public void testGetAllFeedbackIDsEmptyExpectEmpty() throws Exception {
 		tearDown();
+		
 		int result = IFeedback.INSTANCE.getAllFeedbackIDs().size();
 		assertTrue(result == 0);
 	}
