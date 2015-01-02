@@ -219,5 +219,14 @@ public interface IGuests extends Serializable {
 	 * @generated
 	 */
 	void removeGuestAccount(String SSID) throws InvalidIDException;
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
+	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
+	 * @generated NOT
+	 */
+	void removeGuest(String id) throws InvalidIDException;
 
 } // IGuests

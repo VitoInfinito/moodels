@@ -25,13 +25,13 @@ import Classes.Utils.StringUtils;
  * <!-- end-user-doc -->
  * @generated
  */
- class GuestsManager implements IGuests {
+class GuestsManager implements IGuests {
 
 	private static final long serialVersionUID = -3915831233250231125L;
-	
+
 	private final Logger logger = LoggerFactory.getLogger(GuestsManager.class);
 	public static GuestsManager INSTANCE = new GuestsManager();
-	
+
 	private HashMap<String, Guest> guests;
 
 	private IManageAccounts iManageAccounts;
@@ -48,7 +48,7 @@ import Classes.Utils.StringUtils;
 		iManageAccounts = IManageAccounts.INSTANCE;
 		iRequests = IRequests.INSTANCE;
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * Requires: 
@@ -76,21 +76,21 @@ import Classes.Utils.StringUtils;
 	 * @generated NOT
 	 */
 	public void addGuest(String SSID, String firstname, String lastname, String title, String email, String phone) throws InvalidIDException {
-		
+
 		if (guests.containsKey(SSID)) {
 			logger.warn("There is already a guest added with the SSID {}. The SSID can not be used as a unique ID!", SSID);
 			throw new InvalidIDException("There is already a SSID added with the SSID " + SSID + ". The SSID can not be used as a unique ID!");
 		}
-		
+
 		Guest guest = GuestsFactory.INSTANCE.createGuest();
-		
+
 		guest.setSsid(SSID);
 		guest.setFirstname(firstname);
 		guest.setLastname(lastname);
 		guest.setTitle(title);
 		guest.setEmail(email);
 		guest.setPhone(phone);
-		
+
 		guests.put(SSID, guest);
 	}
 
@@ -260,7 +260,7 @@ import Classes.Utils.StringUtils;
 		}
 
 		Collection<Guest> c = guests.values();
-		
+
 		// Some property match exactly. Second Order!
 		for (Guest b : c) {
 			if (b.getFirstname().equalsIgnoreCase(keyword)) {
@@ -279,7 +279,7 @@ import Classes.Utils.StringUtils;
 				searchResult.add(b.getSsid());
 			}
 		}
-		
+
 		// ID match somewhat. Third Order!
 		for (Guest b : c) {			
 			if (regexPattern.matcher(b.getSsid()).matches()) {
@@ -309,7 +309,7 @@ import Classes.Utils.StringUtils;
 				}
 			}
 		}
-		
+
 
 		return new ArrayList<String>(searchResult);
 	}
@@ -358,7 +358,7 @@ import Classes.Utils.StringUtils;
 			throw new InvalidIDException();
 		}
 	}
-	
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -374,7 +374,7 @@ import Classes.Utils.StringUtils;
 			throw new InvalidIDException();
 		}
 	}
-	
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -452,5 +452,23 @@ import Classes.Utils.StringUtils;
 			logger.warn("A guest with SSID {} could not be found");
 			throw new InvalidIDException();
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
+	 * @generated NOT
+	 */
+	public void removeGuest(String id) throws InvalidIDException {
+		if(guests.containsKey(id)){
+			guests.remove(id);
+		}
+		else{
+			logger.warn("A guest with SSID {} could not be found");
+			throw new InvalidIDException();
+		}
+		
+
 	}
 } //GuestsManagerImpl
