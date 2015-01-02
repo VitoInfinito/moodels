@@ -117,6 +117,11 @@ public class ICustomersTest {
 		boolean result = ICustomers.INSTANCE.getCustomerPhone("010101-0101").equals("070-7777775");
 		assertTrue(result);
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeCustomerPhone_notExists_throwsException() {
+		ICustomers.INSTANCE.changeCustomerPhone("0", "0707-77777");
+	}
 
 	@Test
 	public void testGetCustomerFirstName() {
@@ -162,9 +167,8 @@ public class ICustomersTest {
 
 	@Test
 	public void testGetCustomerRequests() {
-		
-		// TODO 
-		fail("Not yet implemented");
+		boolean result = ICustomers.INSTANCE.getCustomerRequests("010101-0101").size() == 2;
+		assertTrue(result);
 	}
 
 	@Test
@@ -180,15 +184,41 @@ public class ICustomersTest {
 	}
 
 	@Test
-	public void testAddCustomerRequest() {
-		// TODO 
-		fail("Not yet implemented");
+	public void testAddCustomerRequest_exists_requestAdded() {
+		ICustomers.INSTANCE.addCustomerRequest("010101-0101", "I want cake");
+		boolean result = ICustomers.INSTANCE.getCustomerRequests("010101-0101").size() == 3;
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testAddCustomerRequest_notExists_throwsException() {
+		ICustomers.INSTANCE.addCustomerRequest("0", "I want cake");
 	}
 
 	@Test
-	public void testRemoveCustomerRequest() {
-		// TODO 
-		fail("Not yet implemented");
+	public void testRemoveCustomerRequest_customerExistsListNotEmpty_requestRemoved() {
+		String reqID = ICustomers.INSTANCE.getCustomerRequests("010101-0101").get(0);
+		ICustomers.INSTANCE.removeCustomerRequest("010101-0101", reqID);
+		boolean result = ICustomers.INSTANCE.getCustomerRequests("010101-0101").size() == 1;
+		assertTrue(result);
+	}
+	
+	@Test(expected=IndexOutOfBoundsException.class)
+	public void testRemoveCustomerRequest_customerExistsListEmpty_throwsException() {
+		for(String reqID : ICustomers.INSTANCE.getCustomerRequests("010101-0101")) {
+			ICustomers.INSTANCE.removeCustomerRequest("010101-0101", reqID);
+		}
+		ICustomers.INSTANCE.getCustomerRequests("010101-0101").get(0);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testRemoveCustomerRequest_customerExistsRequestNotExists_throwsException() {
+		ICustomers.INSTANCE.removeCustomerRequest("010101-0101", "0");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testRemoveCustomerRequest_customerNotExistsRequestNotExists_throwsException() {
+		ICustomers.INSTANCE.removeCustomerRequest("0", "0");
 	}
 
 }
