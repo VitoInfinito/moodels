@@ -1662,6 +1662,11 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jLCagJKEEeSfMZ33GfKZUQ" name="removeEmployee">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_oKjogJKEEeSfMZ33GfKZUQ" name="SSIS">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9N3wnpsEeST-65JbGUt8g" name="StaffManager" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9N3w3psEeST-65JbGUt8g" name="employees" visibility="private" type="_w9N3ynpsEeST-65JbGUt8g" association="_w9N36npsEeST-65JbGUt8g">

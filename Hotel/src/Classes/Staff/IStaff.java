@@ -245,6 +245,19 @@ public interface IStaff extends Serializable {
 	 * @generated
 	 */
 	void changeStaffSalaryContract(String SSID, SalaryContract salaryContract) throws InvalidIDException;
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		that the staff s with s.ssid == ssid are no more
+	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
+	 * @model SSIDRequired="true" SSIDOrdered="false" salaryContractRequired="true" salaryContractOrdered="false"
+	 * @generated
+	 */
+	void removeStaff(String SSID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->

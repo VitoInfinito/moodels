@@ -345,6 +345,7 @@ import Classes.Utils.InvalidIDException;
 		staff.setLastName(lastname);
 		staff.setJob(job);
 		staff.setPhone(phone);
+		staff.setEmail(email);
 		staff.setSsid(SSID);
 
 		SalaryContract contract;
@@ -362,5 +363,15 @@ import Classes.Utils.InvalidIDException;
 		}
 		
 		employees.put(SSID, staff);
+	}
+
+	@Override
+	public void removeStaff(String SSID) throws InvalidIDException {
+		if(employees.containsKey(SSID)) {
+			employees.remove(SSID);
+		} else {
+			logger.warn("A staff with SSID {} could not be found.", SSID);
+			throw new InvalidIDException();
+		}
 	}
 } //StaffManagerImpl
