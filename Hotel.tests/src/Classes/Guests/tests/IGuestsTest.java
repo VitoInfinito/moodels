@@ -80,8 +80,9 @@ public class IGuestsTest {
 
 	@Test
 	public void testChangeGuestPhone() {
-		fail("Not yet implemented");
-		//TODO: write it
+		assertTrue(IGuests.INSTANCE.getGuestPhone("010101-0101") == "0101010101");
+		IGuests.INSTANCE.changeGuestPhone("010101-0101", "0101010102");
+		assertTrue(IGuests.INSTANCE.getGuestPhone("010101-0101") == "0101010102");
 	}
 
 	@Test
