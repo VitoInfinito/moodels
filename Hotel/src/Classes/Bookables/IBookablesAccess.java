@@ -148,6 +148,14 @@ public interface IBookablesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		keyword !=null
+	 * Expected:
+	 * 		Returns a non null list containing bookables that matches the keyword in a specific order
+	 * 		1. Exact ID Match between keyword and the BookableID if there is one
+	 * 		2. ID matches in some way between keyword and BookableID
+	 * 		3. Keyword matches to property exactly
+	 * 		4. Keyword matches to property in some way (maybe just a part of the keyword matches)
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
@@ -228,22 +236,13 @@ public interface IBookablesAccess extends Serializable {
 	 * Requires:
 	 * 		keyword !=null
 	 * Expected:
-	 * 		if there exist an bookableObject.id = keyword AND that the bookableObject.id is an id of an hotel room 
-	 * 				AND that the category = null or the category = hotelroom.category
-	 * 			add the bookableObject.id to the not null list A
-	 * 		otherwise 
-	 * 			Continue
-	 * 		Goes throw all rooms 
-	 * 			if the bookableObject is a hotel room and the hotelroom.category = category or category = null
-	 * 				if the keyword matches a hotel room id 
-	 * 					add the bookableObject.id to the not null list A
-	 * 				otherwise
-	 * 					add bookableObject.id to the a new non null list B unsorted rooms
-	 * 			otherwise
-	 * 				Continue
-	 * 		Sorts the unsorted list B according to how the description contains the keyword
-	 * 		Adds the List B after List A
-	 * 		Returns a non null List (List A) containing bookableObject.id that matches the keyword
+	 * 		Returns a non null list containing Hotel rooms that matches the keyword in a specific order
+	 * 		(All object is checked if the object.category = category if you don't pass null in the category,
+	 * 		passing null can limit the search function to not get results)
+	 * 		1. Exact ID Match between keyword and the BookableID(also checks that the id=HotelRoomID) if there is one
+	 * 		2. ID matches in some way between keyword and BookableID(also checks that the id=HotelRoomID)
+	 * 		3. Keyword matches to property exactly
+	 * 		4. Keyword matches to property in some way (maybe just a part of the keyword matches)
 	 * 			
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
@@ -256,22 +255,13 @@ public interface IBookablesAccess extends Serializable {
 	 *Requires:
 	 * 		keyword !=null
 	 * Expected:
-	 * 		if there exist an bookableObject.id = keyword AND that the bookableObject.id is an id of an hostel bed 
-	 * 			add the bookableObject.id to the not null list A
-	 * 		otherwise 
-	 * 			Continue
-	 * 		Goes throw all rooms 
-	 * 			if the bookableObject is a hostel bed
-	 * 				if the keyword matches a hostel bed id 
-	 * 					add the bookableObject.id to the not null list A
-	 * 				otherwise
-	 * 					add bookableObject.id to the a new non null list B unsorted rooms
-	 * 			otherwise
-	 * 				Continue
-	 * 		Sorts the unsorted list B according to how the description contains the keyword
-	 * 		Adds the List B after List A
-	 * 		Returns a non null List (List A) containing bookableObject.id that matches the keyword
-	 *
+	 * 		Returns a non null list containing Hostelbeds that matches the keyword in a specific order
+	 * 		(All object is checked if the object.category = category if you don't pass null in the category,
+	 * 		passing null can limit the search function to not get results)
+	 * 		1. Exact ID Match between keyword and the BookableID(also checks that the id=HostelBedID) if there is one
+	 * 		2. ID matches in some way between keyword and BookableID(also checks that the id=HostelBedID)
+	 * 		3. Keyword matches to property exactly
+	 * 		4. Keyword matches to property in some way (maybe just a part of the keyword matches)
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
@@ -284,23 +274,13 @@ public interface IBookablesAccess extends Serializable {
 	 * Requires:
 	 * 		keyword !=null
 	 * Expected:
-	 * 		if there exist an bookableObject.id = keyword AND that the bookableObject.id is an id of an confrence room 
-	 * 				AND that the category = null or the category = conferenceroom.category
-	 * 			add the bookableObject.id to the not null list A
-	 * 		otherwise 
-	 * 			Continue
-	 * 		Goes throw all rooms 
-	 * 			if the bookableObject is a conference room room and the conferenceroom.category = category or category = null
-	 * 				if the keyword matches a hotel room id 
-	 * 					add the bookableObject.id to the not null list A
-	 * 				otherwise
-	 * 					add bookableObject.id to the a new non null list B unsorted rooms
-	 * 			otherwise
-	 * 				Continue
-	 * 		Sorts the unsorted list B according to how the description contains the keyword
-	 * 		Adds the List B after List A
-	 * 		Returns a non null List (List A) containing bookableObject.id that matches the keyword
-	 *
+	 * 		Returns a non null list containing Conference rooms that matches the keyword in a specific order
+	 * 		(All object is checked if the object.category = category if you don't pass null in the category,
+	 * 		passing null can limit the search function to not get results)
+	 * 		1. Exact ID Match between keyword and the BookableID(also checks that the id=ConferenceRoomID) if there is one
+	 * 		2. ID matches in some way between keyword and BookableID(also checks that the id=ConferenceRoomID)
+	 * 		3. Keyword matches to property exactly
+	 * 		4. Keyword matches to property in some way (maybe just a part of the keyword matches)
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
