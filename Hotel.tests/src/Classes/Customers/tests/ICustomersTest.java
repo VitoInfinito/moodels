@@ -21,6 +21,9 @@ public class ICustomersTest {
 		ICustomers.INSTANCE.addCustomer("010101-0101", "Sven", "Svensson", "Mr", "sven.svensson@gmail.com", "0707-777776");
 		ICustomers.INSTANCE.addCustomer("010101-0102", "Bengt", "Bengtsson", "Dr", "bengt.bengtsson@gmail.com", "0707-777777");
 		ICustomers.INSTANCE.addCustomer("010101-0103", "Maja", "Andersson", "Ms", "maja.andersson@gmail.com", "0707-777778");
+		
+		ICustomers.INSTANCE.addCustomerRequest("010101-0101", "I want food");
+		ICustomers.INSTANCE.addCustomerRequest("010101-0101", "I want drinks");
 	}
 	
 	@After
@@ -85,21 +88,34 @@ public class ICustomersTest {
 	}
 
 	@Test
-	public void testChangeCustomerTitle() {
-		// TODO 
-		fail("Not yet implemented");
+	public void testChangeCustomerTitle_exists_titleChanged() {
+		ICustomers.INSTANCE.changeCustomerTitle("010101-0101", "Ms");
+		boolean result = ICustomers.INSTANCE.getCustomerTitle("010101-0101").equals("Ms");
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeCustomerTitle_notExists_throwsException() {
+		ICustomers.INSTANCE.changeCustomerTitle("0", "Ms");
 	}
 
 	@Test
-	public void testChangeCustomerEmail() {
-		// TODO 
-		fail("Not yet implemented");
+	public void testChangeCustomerEmail_exists_emailChanged() {
+		ICustomers.INSTANCE.changeCustomerEmail("010101-0101", "sven.svensson@hotmail.com");
+		boolean result = ICustomers.INSTANCE.getCustomerEmail("010101-0101").equals("sven.svensson@hotmail.com");
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeCustomerEmail_notExists_throwsException() {
+		ICustomers.INSTANCE.changeCustomerEmail("0", "sven.svenssn@hotmail.com");
 	}
 
 	@Test
-	public void testChangeCustomerPhone() {
-		// TODO 
-		fail("Not yet implemented");
+	public void testChangeCustomerPhone_exists_phoneChanged() {
+		ICustomers.INSTANCE.changeCustomerPhone("010101-0101", "070-7777775");
+		boolean result = ICustomers.INSTANCE.getCustomerPhone("010101-0101").equals("070-7777775");
+		assertTrue(result);
 	}
 
 	@Test
@@ -146,6 +162,7 @@ public class ICustomersTest {
 
 	@Test
 	public void testGetCustomerRequests() {
+		
 		// TODO 
 		fail("Not yet implemented");
 	}
