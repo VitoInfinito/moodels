@@ -7,7 +7,6 @@ import java.util.List;
 
 import javax.xml.soap.SOAPException;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.eclipse.jdt.annotation.Nullable;
 
@@ -134,7 +133,14 @@ public interface IBills {
 	String addBill(List<String> items, List<String> services, @Nullable String bookable, @Nullable LocalDateTime from, @Nullable LocalDateTime to, double discount) throws InvalidIDException;
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> TODO: This needs polish
+	 * Requires:
+	 * 		bills != null && ccNumber != null && ccv != null && expiryMonth != null && expiryYear != null && firstName != null && lastName != null
+	 * Ensures:
+	 * 	 	if !bill.getBillIsPayed() && requirements are met
+	 * 			Changes the status of the bill
+	 * 		otherwise
+	 * 			SOAPException, InvalidCreditCardException, InsufficientFundsException may be thrown.
 	 * <!-- end-user-doc -->
 	 * @throws SOAPException, InvalidCreditCardException, InsufficientFundsException
 	 * @model billsDataType="org.eclipse.uml2.types.String" billsMany="true" billsOrdered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
@@ -224,6 +230,10 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		bills != null
+	 * Ensures:
+	 * 	 	The payed status of the bills is updated to payed.
 	 * <!-- end-user-doc -->
 	 * @model billsDataType="org.eclipse.uml2.types.String" billsMany="true" billsOrdered="false"
 	 * @generated NOT
@@ -232,6 +242,11 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		billID != null && email != null
+	 * Ensures:
+	 * 	 	if there a bill satisfying billID == bill.id && email != null
+	 * 			The invoice is sent by email
 	 * <!-- end-user-doc -->
 	 * @model billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false" emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false"
 	 * @generated
@@ -240,6 +255,13 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		billID != null
+	 * Ensures:
+	 * 	 	if there a bill satisfying billID == bill.id
+	 * 			The bill is removed.
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
