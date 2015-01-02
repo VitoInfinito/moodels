@@ -1,10 +1,12 @@
 package Classes.Bookings.tests;
 
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.xml.soap.SOAPException;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -18,6 +20,7 @@ import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.IBookablesManage;
 import Classes.Bookings.IBookings;
 import Classes.Customers.ICustomers;
+import Classes.Utils.InvalidCreditCardException;
 import Classes.Utils.InvalidIDException;
 
 public class IBookingsTest {
@@ -106,10 +109,79 @@ public class IBookingsTest {
 		bankingAdmin.removeCreditCard("475367456", "567", 7, 17, "Anders","Hallgren");
 	}
 
-	@Test
-	public void testMakeBooking() {
-		fail("Not yet implemented");
+	@Test(expected=InvalidIDException.class)
+	public void testMakeBooking_bookables_empty_expects_exception() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		IBookings.INSTANCE.makeBooking(new ArrayList<String>(), "861104-0078", LocalDateTime.of(2015, 3, 12, 15, 0), LocalDateTime.of(2015, 3, 16, 10, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
 	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testMakeBooking_nbr_guests_less_than_one_expects_exception() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables5 = new ArrayList<String>();
+		bookables5.add("23");
+		bookables5.add("24");
+		IBookings.INSTANCE.makeBooking(bookables5, "861104-0078", LocalDateTime.of(2015, 3, 12, 15, 0), LocalDateTime.of(2015, 3, 16, 10, 0), 0, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testMakeBooking_discount_less_then_zero_expects_exception() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables5 = new ArrayList<String>();
+		bookables5.add("23");
+		bookables5.add("24");
+		IBookings.INSTANCE.makeBooking(bookables5, "861104-0078", LocalDateTime.of(2015, 3, 12, 15, 0), LocalDateTime.of(2015, 3, 16, 10, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", -1, true);
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testMakeBooking_discount_greater_than_one_expects_exception() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables5 = new ArrayList<String>();
+		bookables5.add("23");
+		bookables5.add("24");
+		IBookings.INSTANCE.makeBooking(bookables5, "861104-0078", LocalDateTime.of(2015, 3, 12, 15, 0), LocalDateTime.of(2015, 3, 16, 10, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 2, true);
+	}
+	
+	@Test(expected=InvalidCreditCardException.class)
+	public void testMakeBooking_invalid_credit_card_expects_exception() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables5 = new ArrayList<String>();
+		bookables5.add("23");
+		IBookings.INSTANCE.makeBooking(bookables5, "861104-0078", LocalDateTime.of(2015, 3, 12, 15, 0), LocalDateTime.of(2015, 3, 16, 10, 0), 4, "34116534", "655", 10, 18, "Greger","Gregersson", 0, true);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testMakeBooking_bookable_already_booked_period_overlaps_right_expects_exception() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables5 = new ArrayList<String>();
+		bookables5.add("23");
+		IBookings.INSTANCE.makeBooking(bookables5, "861104-0078", LocalDateTime.of(2015, 2, 22, 8, 0), LocalDateTime.of(2015, 2, 24, 17, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testMakeBooking_bookable_already_booked_period_overlaps_left_expects_exception() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables5 = new ArrayList<String>();
+		bookables5.add("23");
+		IBookings.INSTANCE.makeBooking(bookables5, "861104-0078", LocalDateTime.of(2015, 2, 20, 8, 0), LocalDateTime.of(2015, 2, 22, 17, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testMakeBooking_bookable_already_booked_period_within_expects_exception() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables5 = new ArrayList<String>();
+		bookables5.add("23");
+		IBookings.INSTANCE.makeBooking(bookables5, "861104-0078", LocalDateTime.of(2015, 2, 22, 8, 0), LocalDateTime.of(2015, 2, 22, 17, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
+	}
+	
+	@Test
+	public void testMakeBooking_valid_parameters_responsiblecard_true_expects_non_null_result() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables1 = new ArrayList<String>();
+		bookables1.add("202");
+		String bookingNbr = IBookings.INSTANCE.makeBooking(bookables1, "861104-0078", LocalDateTime.of(2015, 3, 4, 15, 0), LocalDateTime.of(2015, 3, 10, 10, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
+		assertTrue(bookingNbr != null);
+	}
+	
+	@Test
+	public void testMakeBooking_valid_parameters_responsiblecard_false_expects_non_null_result() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables1 = new ArrayList<String>();
+		bookables1.add("202");
+		String bookingNbr = IBookings.INSTANCE.makeBooking(bookables1, "861104-0078", LocalDateTime.of(2015, 3, 4, 15, 0), LocalDateTime.of(2015, 3, 10, 10, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, false);
+		assertTrue(bookingNbr != null);
+	}
+
 
 	@Test
 	public void testSearchBookings() {
