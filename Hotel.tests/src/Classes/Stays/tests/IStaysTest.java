@@ -2,6 +2,9 @@ package Classes.Stays.tests;
 
 import static org.junit.Assert.fail;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,9 +15,12 @@ import org.junit.Test;
 
 import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.IBookablesManage;
+import Classes.Bookings.IBookings;
+import Classes.Customers.ICustomers;
 import Classes.Stays.IStays;
 
 public class IStaysTest {
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -25,14 +31,28 @@ public class IStaysTest {
 		String bookable1ID = IBookablesManage.INSTANCE.addHotelRoom("1", 100, "desc", 1, "info", HotelRoomCategory.STANDARD_ROOM, 2);
 		List<String> bookableList1 = new ArrayList<String>();
 		bookableList1.add(bookable1ID);
-		//String booking1ID = IBookings.INSTANCE.makeBooking(bookableList1, customerID, from, to, nbrGuests, ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, discountFactor)
-		//IStays.INSTANCE.addNewStay(room1ID, bookingID, fromDate, toDate)
+		String customer1ID = "010101-0502";
+		ICustomers.INSTANCE.addCustomer(customer1ID, "a", "b", "Mr", "someemail@email.com", "1234");
+		String booking1ID = IBookings.INSTANCE.makeBooking(bookableList1, customer1ID, 
+				LocalDateTime.parse("2014-10-19 08:29", formatter), LocalDateTime.parse("2014-10-22 12:00", formatter), 
+				4, "123", "111", 11, 2016, "a", "b", 1.0, true);
+		IStays.INSTANCE.addNewStay(bookable1ID, booking1ID, LocalDateTime.parse("2014-10-19 08:29", formatter), LocalDateTime.parse("2014-10-22 12:00", formatter));
+		
 	}
 	
 	@After
 	public void tearDown() {
 		for (String id : IStays.INSTANCE.getAllHotelStayIDs()) {
 			IStays.INSTANCE.removeStay(id);
+		}
+		for(String id : IBookings.INSTANCE.getAllBookings()) {
+			IBookings.INSTANCE.cancelBooking(id);
+		}
+		for(String id : ICustomers.INSTANCE.getAllCustomers()) {
+			ICustomers.INSTANCE.removeCustomer(id);
+		}
+		for(String id : IBookablesManage.INSTANCE.getAllBookableIDs()) {
+			IBookablesManage.INSTANCE.deleteBookable(id);
 		}
 	}
 
