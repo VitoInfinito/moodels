@@ -28,6 +28,13 @@ public interface IStaff extends Serializable {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		Nothing
+	 * Ensures:
+	 * 		if there are more than zero staff
+	 * 			return a list of all the staffs SSIDs
+	 * 		otherwise
+	 * 			return an empty list
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -44,6 +51,13 @@ public interface IStaff extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a staff such that staff.ssid == ssid
+	 * 			the non null first name of the staff is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDRequired="true" SSIDOrdered="false"
@@ -53,6 +67,13 @@ public interface IStaff extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a staff such that staff.ssid == ssid
+	 * 			the non null last name of the staff is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDRequired="true" SSIDOrdered="false"
@@ -62,6 +83,13 @@ public interface IStaff extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a staff such that staff.ssid == ssid
+	 * 			the non null job of the staff is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDRequired="true" SSIDOrdered="false"
@@ -71,6 +99,13 @@ public interface IStaff extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a staff such that staff.ssid == ssid
+	 * 			the non null phone number of the staff is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDRequired="true" SSIDOrdered="false"
@@ -80,6 +115,13 @@ public interface IStaff extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a staff such that staff.ssid == ssid
+	 * 			the non null email of the staff is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDRequired="true" SSIDOrdered="false"
@@ -89,6 +131,13 @@ public interface IStaff extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a staff such that staff.ssid == ssid
+	 * 			the non null contract type of the staff is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDRequired="true" SSIDOrdered="false"
@@ -98,6 +147,13 @@ public interface IStaff extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a staff such that staff.ssid == ssid
+	 * 			the non null salary of the staff is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.Real" required="true" ordered="false" SSIDRequired="true" SSIDOrdered="false"
@@ -107,6 +163,14 @@ public interface IStaff extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * 		firstname = !null
+	 * Ensures:
+	 * 		if there exists a staff such that staff.ssid == ssid
+	 * 			the firstname of the staff is set to the firstname
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDRequired="true" SSIDOrdered="false" firstNameRequired="true" firstNameOrdered="false"
@@ -116,6 +180,14 @@ public interface IStaff extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * 		lastname = !null
+	 * Ensures:
+	 * 		if there exists a staff such that staff.ssid == ssid
+	 * 			the lastname of the staff is set to the lastname
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDRequired="true" SSIDOrdered="false" lastNameRequired="true" lastNameOrdered="false"
@@ -125,6 +197,14 @@ public interface IStaff extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * 		job = !null
+	 * Ensures:
+	 * 		if there exists a staff such that staff.ssid == ssid
+	 * 			the job of the staff is set to the job
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDRequired="true" SSIDOrdered="false" jobRequired="true" jobOrdered="false"
@@ -134,6 +214,14 @@ public interface IStaff extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * 		phone = !null
+	 * Ensures:
+	 * 		if there exists a staff such that staff.ssid == ssid
+	 * 			the phone of the staff is set to the phone
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDRequired="true" SSIDOrdered="false" phoneNumberRequired="true" phoneNumberOrdered="false"
@@ -143,6 +231,14 @@ public interface IStaff extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * 		contract = !null
+	 * Ensures:
+	 * 		if there exists a staff such that staff.ssid == ssid
+	 * 			the contract of the staff is set to the contract
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDRequired="true" SSIDOrdered="false" salaryContractRequired="true" salaryContractOrdered="false"
@@ -160,6 +256,25 @@ public interface IStaff extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		firstname	!= null
+	 * 		lastname 	!= null
+	 * 		job 		!= null
+	 * 		phone 		!= null
+	 * 		email 		!= null
+	 * 		SSID 		!= null
+	 * 		contract 	!= null
+	 * 		salary 		!= null
+	 * Ensures:
+	 * 		that there are a staff s with
+	 * 			s.firstname	== firstname
+	 * 			s.lastname 	== lastname
+	 * 			s.job 		== job
+	 * 			s.phone 	== phone
+	 * 			s.email		== email
+	 * 			s.SSID 		== SSID
+	 * 			s.contract	== contract
+	 * 			s.salary 	== salary
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model firstnameDataType="org.eclipse.uml2.types.String" firstnameRequired="true" firstnameOrdered="false" lastnameDataType="org.eclipse.uml2.types.String" lastnameRequired="true" lastnameOrdered="false" jobDataType="org.eclipse.uml2.types.String" jobRequired="true" jobOrdered="false" phoneDataType="org.eclipse.uml2.types.String" phoneRequired="true" phoneOrdered="false" emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" salaryContractTypeDataType="org.eclipse.uml2.types.String" salaryContractTypeRequired="true" salaryContractTypeOrdered="false" salaryRequired="true" salaryOrdered="false"
