@@ -32,6 +32,13 @@ public interface IBills {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		billID != null
+	 * Ensures:
+	 * 		if there exists an bill such that bill.id == billID
+	 * 			it returns the paid status for that bill
+	 * 		otherwise
+	 * 			An InvalidIDException is thrown 
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
