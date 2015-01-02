@@ -18,6 +18,7 @@ import Classes.Bookables.IBookablesManage;
 import Classes.Bookings.IBookings;
 import Classes.Customers.ICustomers;
 import Classes.Stays.IStays;
+import Classes.Utils.InvalidIDException;
 
 public class IStaysTest {
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
@@ -41,7 +42,7 @@ public class IStaysTest {
 	}
 	
 	@After
-	public void tearDown() {
+	public void tearDown() throws InvalidIDException {
 		for (String id : IStays.INSTANCE.getAllHotelStayIDs()) {
 			IStays.INSTANCE.removeStay(id);
 		}
@@ -57,17 +58,42 @@ public class IStaysTest {
 	}
 
 	@Test
-	public void testCheckInGuest() {
+	public void testCheckInGuest_customer_not_exist() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testCheckInGuest_customer_exist() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testCheckInGuest_customer_already_checked_in() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testCheckInGuest_customer_already_checked_out() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testChangeBookableOfStay() {
+	public void testChangeBookableOfStay_bookable_not_exists() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testChangeBookableOfStay_bookable_exists() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testAddNewStay() {
+	public void testAddNewStay_with_all_information() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testAddNewStay_without_all_information() {
 		fail("Not yet implemented");
 	}
 
