@@ -66,8 +66,9 @@ public class IGuestsTest {
 
 	@Test
 	public void testChangeGuestTitle() {
-		fail("Not yet implemented");
-		//TODO: write it
+		assertTrue(IGuests.INSTANCE.getGuestTitle("010101-0101") == "Mr");
+		IGuests.INSTANCE.changeGuestTitle("010101-0101", "Mrs");
+		assertTrue(IGuests.INSTANCE.getGuestTitle("010101-0101") == "Mrs");
 	}
 
 	@Test
