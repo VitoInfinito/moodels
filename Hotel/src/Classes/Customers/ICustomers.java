@@ -41,6 +41,13 @@ public interface ICustomers extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		nothing
+	 * Ensures:
+	 * 		if no customer exists with the given SSID
+	 * 			adds a new customer to the list
+	 * 		otherwise
+	 * 			throws InvalidIDException
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" firstnameDataType="org.eclipse.uml2.types.String" firstnameRequired="true" firstnameOrdered="false" lastnameDataType="org.eclipse.uml2.types.String" lastnameRequired="true" lastnameOrdered="false" titleDataType="org.eclipse.uml2.types.String" titleRequired="true" titleOrdered="false" emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false" phoneDataType="org.eclipse.uml2.types.String" phoneRequired="true" phoneOrdered="false"
@@ -50,6 +57,13 @@ public interface ICustomers extends Serializable {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		nothing
+	 * Ensures:
+	 * 		if a customer exists with the given SSID
+	 * 			removes the customer from the list
+	 * 		otherwise
+	 * 			throws InvalidIDException
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" firstnameDataType="org.eclipse.uml2.types.String" firstnameRequired="true" firstnameOrdered="false" lastnameDataType="org.eclipse.uml2.types.String" lastnameRequired="true" lastnameOrdered="false" titleDataType="org.eclipse.uml2.types.String" titleRequired="true" titleOrdered="false" emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false" phoneDataType="org.eclipse.uml2.types.String" phoneRequired="true" phoneOrdered="false"
