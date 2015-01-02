@@ -48,6 +48,10 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		nothing
+	 * Ensures:
+	 * 	 	A non null list of all bills that are not payed.
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -56,6 +60,13 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		billID != null
+	 * Ensures:
+	 * 		if there exists an bill such that bill.id == billID
+	 * 			it returns the payment date of the specified bill
+	 * 		otherwise
+	 * 			An InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
@@ -65,6 +76,10 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		nothing
+	 * Ensures:
+	 * 	 	A non null list of all bills IDs.
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -73,6 +88,12 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		keyword != null
+	 * Ensures:
+	 * 	 	returns a non-null list of all bill IDs matching something in the following order:
+	 * 			1. Bills with id that exactly matches the keyword
+	 * 			2. Bills with id that has some matching to the keyword
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
@@ -81,6 +102,10 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		nothing
+	 * Ensures:
+	 * 	 	A non null list of all bills that are payed.
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -89,6 +114,13 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		items != null && services != null TODO: not done yet.. more not nulls?
+	 * Ensures:
+	 * 		if the requirements are satisfied 
+	 * 			a bill is added
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * NOTE the the bookable and the from and to dates are supplied if the bill is including a bookable, not if the bill is put on a room etc.
 	 * Discount is between 0 and 1.
 	 * <!-- end-user-doc -->
@@ -112,6 +144,13 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		billID != null
+	 * Ensures:
+	 * 	 	if there exists items to a bill satisfying billID == bill.id
+	 * 			non null list of items belonging to that bill is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
@@ -121,6 +160,13 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		billID != null
+	 * Ensures:
+	 * 	 	if there a bill satisfying billID == bill.id
+	 * 			returns the bookable of that bill
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
@@ -130,6 +176,13 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		billID != null
+	 * Ensures:
+	 * 	 	if there exists a bill satisfying billID == bill.id
+	 * 			the bookable of that bill is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
@@ -139,6 +192,13 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		billID != null
+	 * Ensures:
+	 * 	 	if there a bill satisfying billID == bill.id
+	 * 			returns the issue date of that bill
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
@@ -148,6 +208,13 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		billID != null
+	 * Ensures:
+	 * 	 	if there a bill satisfying billID == bill.id
+	 * 			returns the payment type of that bill
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
@@ -182,6 +249,13 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		billID != null
+	 * Ensures:
+	 * 	 	if there a bill satisfying billID == bill.id
+	 * 			returns the total amount of that bill
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
@@ -191,6 +265,13 @@ public interface IBills {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		billID != null
+	 * Ensures:
+	 * 	 	if there a bill satisfying billID == bill.id
+	 * 			returns the discount of that bill
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
