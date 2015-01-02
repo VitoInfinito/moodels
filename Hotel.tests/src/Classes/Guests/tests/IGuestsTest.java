@@ -73,8 +73,9 @@ public class IGuestsTest {
 
 	@Test
 	public void testChangeGuestEmail() {
-		fail("Not yet implemented");
-		//TODO: write it
+		assertTrue(IGuests.INSTANCE.getGuestEmail("010101-0101") == "kalle.karlsson@mail.mail");
+		IGuests.INSTANCE.changeGuestEmail("010101-0101", "karl.karlsson@mail.mail");
+		assertTrue(IGuests.INSTANCE.getGuestEmail("010101-0101") == "karl.karlsson@mail.mail");
 	}
 
 	@Test
