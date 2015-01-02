@@ -24,13 +24,13 @@ public class IFeedbackTest {
 	}
 	
 	@After
-	public void tearDown() {
+	public void tearDown() throws Exception {
 		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
 		IFeedback.INSTANCE.removeFeedback(id);
 	}
 	
 	@Test
-	public void testGetAllFeedbackIDsEmptyExpectEmpty() {
+	public void testGetAllFeedbackIDsEmptyExpectEmpty() throws Exception {
 		tearDown();
 		int result = IFeedback.INSTANCE.getAllFeedbackIDs().size();
 		assertTrue(result == 0);
@@ -124,7 +124,7 @@ public class IFeedbackTest {
 	}
 
 	@Test
-	public void testAddFeedback() {
+	public void testAddFeedback() throws Exception {
 		tearDown();
 		
 		IFeedback.INSTANCE.addFeedback("bcbcbcbcbc");
