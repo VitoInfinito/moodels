@@ -225,6 +225,26 @@ public interface IBookablesAccess extends Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * NOTE: category == null implies that all categories are searched.
+	 * Requires:
+	 * 		keyword !=null
+	 * Expected:
+	 * 		if there exist an bookableObject.id = keyword AND that the bookableObject.id is an id of an hotel room 
+	 * 				AND that the category = null or the category = hotelroom.category
+	 * 			add the bookableObject.id to the not null list A
+	 * 		otherwise 
+	 * 			Continue
+	 * 		Goes throw all rooms 
+	 * 			if the bookableObject is a hotel room and the hotelroom.category = category or category = null
+	 * 				if the keyword matches a hotel room id 
+	 * 					add the bookableObject.id to the not null list A
+	 * 				otherwise
+	 * 					add bookableObject.id to the a new non null list B unsorted rooms
+	 * 			otherwise
+	 * 				Continue
+	 * 		Sorts the unsorted list B according to how the description contains the keyword
+	 * 		Adds the List B after List A
+	 * 		Returns a non null List (List A) containing bookableObject.id that matches the keyword
+	 * 			
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
@@ -233,6 +253,25 @@ public interface IBookablesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 *Requires:
+	 * 		keyword !=null
+	 * Expected:
+	 * 		if there exist an bookableObject.id = keyword AND that the bookableObject.id is an id of an hostel bed 
+	 * 			add the bookableObject.id to the not null list A
+	 * 		otherwise 
+	 * 			Continue
+	 * 		Goes throw all rooms 
+	 * 			if the bookableObject is a hostel bed
+	 * 				if the keyword matches a hostel bed id 
+	 * 					add the bookableObject.id to the not null list A
+	 * 				otherwise
+	 * 					add bookableObject.id to the a new non null list B unsorted rooms
+	 * 			otherwise
+	 * 				Continue
+	 * 		Sorts the unsorted list B according to how the description contains the keyword
+	 * 		Adds the List B after List A
+	 * 		Returns a non null List (List A) containing bookableObject.id that matches the keyword
+	 *
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
@@ -242,6 +281,26 @@ public interface IBookablesAccess extends Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * NOTE: category == null implies that all categories are searched.
+	 * Requires:
+	 * 		keyword !=null
+	 * Expected:
+	 * 		if there exist an bookableObject.id = keyword AND that the bookableObject.id is an id of an confrence room 
+	 * 				AND that the category = null or the category = conferenceroom.category
+	 * 			add the bookableObject.id to the not null list A
+	 * 		otherwise 
+	 * 			Continue
+	 * 		Goes throw all rooms 
+	 * 			if the bookableObject is a conference room room and the conferenceroom.category = category or category = null
+	 * 				if the keyword matches a hotel room id 
+	 * 					add the bookableObject.id to the not null list A
+	 * 				otherwise
+	 * 					add bookableObject.id to the a new non null list B unsorted rooms
+	 * 			otherwise
+	 * 				Continue
+	 * 		Sorts the unsorted list B according to how the description contains the keyword
+	 * 		Adds the List B after List A
+	 * 		Returns a non null List (List A) containing bookableObject.id that matches the keyword
+	 *
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
