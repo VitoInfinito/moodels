@@ -83,6 +83,10 @@ public interface IRestaurantsManage extends IRestaurantsAccess {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		restaurantID != null && name != null
+	 * Ensures:
+	 * 		that the restaurant with id restaurantID will be renamed to the value of the variable name.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
@@ -92,6 +96,10 @@ public interface IRestaurantsManage extends IRestaurantsAccess {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		restaurantID != null && name != null
+	 * Ensures:
+	 * 		that the restaurant with id restaurantID will be renamed to the value of the variable name. 
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" tableNbrDataType="org.eclipse.uml2.types.String" tableNbrRequired="true" tableNbrOrdered="false" nbrSeatsDataType="org.eclipse.uml2.types.Integer" nbrSeatsRequired="true" nbrSeatsOrdered="false"
@@ -101,6 +109,10 @@ public interface IRestaurantsManage extends IRestaurantsAccess {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		restaurantID != null && itemID != null
+	 * Ensures:
+	 * 		that a menu item is added
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" itemIDDataType="org.eclipse.uml2.types.String" itemIDRequired="true" itemIDOrdered="false"
@@ -110,6 +122,10 @@ public interface IRestaurantsManage extends IRestaurantsAccess {
 
 	/**
 	 * <!-- begin-user-doc -->
+	  * Requires:
+	 * 		restaurantID != null && itemID != null
+	 * Ensures:
+	 * 		that a menu item is removed
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" itemIDDataType="org.eclipse.uml2.types.String" itemIDRequired="true" itemIDOrdered="false"
@@ -119,6 +135,10 @@ public interface IRestaurantsManage extends IRestaurantsAccess {
 
 	/**
 	 * <!-- begin-user-doc -->
+	  * Requires:
+	 * 		restaurantID != null && name != null
+	 * Ensures:
+	 * 		that a menu name is changed
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
@@ -128,6 +148,10 @@ public interface IRestaurantsManage extends IRestaurantsAccess {
 
 	/**
 	 * <!-- begin-user-doc -->
+	  * Requires:
+	 * 		restaurantID != null && oldTableNbr != null && newTableNbr != null
+	 * Ensures:
+	 * 		that the table number is changed
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" oldTableNbrDataType="org.eclipse.uml2.types.String" oldTableNbrRequired="true" oldTableNbrOrdered="false" newTableNbrDataType="org.eclipse.uml2.types.String" newTableNbrRequired="true" newTableNbrOrdered="false"
