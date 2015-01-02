@@ -87,26 +87,22 @@ public class IGuestsTest {
 
 	@Test
 	public void testGetGuestFirstName() {
-		fail("Not yet implemented");
-		//TODO: write it
+		assertTrue(IGuests.INSTANCE.getGuestFirstName("010101-0101") == "Kalle");
 	}
 
 	@Test
 	public void testGetGuestLastName() {
-		fail("Not yet implemented");
-		//TODO: write it
+		assertTrue(IGuests.INSTANCE.getGuestLastName("010101-0101") == "Karlsson");
 	}
 
 	@Test
 	public void testGetGuestTitle() {
-		fail("Not yet implemented");
-		//TODO: write it
+		assertTrue(IGuests.INSTANCE.getGuestTitle("010101-0101") == "Mr");
 	}
 
 	@Test
 	public void testGetGuestEmail() {
-		fail("Not yet implemented");
-		//TODO: write it
+		assertTrue(IGuests.INSTANCE.getGuestEmail("010101-0101") == "kalle.karlsson@mail.mail");
 	}
 
 	@Test
