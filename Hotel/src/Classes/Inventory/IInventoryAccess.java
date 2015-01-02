@@ -27,7 +27,7 @@ public interface IInventoryAccess extends Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * Requires:</br>
-	 * 		id != null</br></br>
+	 * 		<i>id != null</i></br></br>
 	 * Ensures:</br>
 	 * 		If there is an inventory item <i>item</i> such that <i>item.id == id && 0 <= stock</i></br>
 	 * 			sets <i>item.stock = stock</i></br>
@@ -43,7 +43,7 @@ public interface IInventoryAccess extends Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * Requires:</br>
-	 * 		id != null</br></br>
+	 * 		<i>id != null</i></br></br>
 	 * Ensures:</br>
 	 * 		If there is an inventory item <i>item</i> such that <i>item.id == id</i></br>
 	 * 			returns <i>item.price</i></br>
@@ -59,7 +59,7 @@ public interface IInventoryAccess extends Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * Requires:</br>
-	 * 		id != null</br></br>
+	 * 		<i>id != null</i></br></br>
 	 * Ensures:</br>
 	 * 		If there is an inventory item <i>item</i> such that <i>item.id == id</i></br>
 	 * 			returns <i>item.name</i></br>
@@ -75,7 +75,7 @@ public interface IInventoryAccess extends Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * Requires:</br>
-	 * 		id != null</br></br>
+	 * 		<i>id != null</i></br></br>
 	 * Ensures:</br>
 	 * 		If there is an inventory item <i>item</i> such that <i>item.id == id</i></br>
 	 * 			returns <i>item.stock</i></br>
@@ -91,7 +91,7 @@ public interface IInventoryAccess extends Serializable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * Requires:</br>
-	 * 		id != null</br></br>
+	 * 		<i>id != null</i></br></br>
 	 * Ensures:</br>
 	 * 		If there is an inventory item <i>item</i> such that <i>item.id == id</i></br>
 	 * 			returns <i>item.expense</i></br>
@@ -106,10 +106,10 @@ public interface IInventoryAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Requires:
-	 * 		Nothing
-	 * Ensures:
-	 * 		returns a non-null list with all the items
+	 * Requires:</br>
+	 * 		Nothing</br></br>
+	 * Ensures:</br>
+	 * 		returns a non-null list with all the items</br>
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -118,14 +118,14 @@ public interface IInventoryAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Requires:
-	 * 		keyword != null
-	 * Ensures:
-	 * 		returns a non-null list of all items matching something in the following order:
-	 * 			1. Items with id that exactly matches <i>keyword</i>
-	 * 			2. Items with id that has some matching to <i>keyword</i>
-	 * 			3. Items with attributes that exactly matches <i>keyword</i>
-	 * 			4. Items with attributes that has some matching to <i>keyword</i>
+	 * Requires:</br>
+	 * 		<i>keyword != null</i></br></br>
+	 * Ensures:</br>
+	 * 		returns a non-null list of all items matching something in the following order:</br>
+	 * 			1. Items with id that exactly matches <i>keyword</i></br>
+	 * 			2. Items with id that has some matching to <i>keyword</i></br>
+	 * 			3. Items with attributes that exactly matches <i>keyword</i></br>
+	 * 			4. Items with attributes that has some matching to <i>keyword</i></br>
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated

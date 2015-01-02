@@ -23,6 +23,13 @@ public interface IManageInventory extends IInventoryAccess {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:</br>
+	 * 		<i>id != null && name != null</i></br></br>
+	 * Ensures:</br>
+	 * 		if there exists an item <i>item</i> such that <i>item.id == id</i></br>
+	 * 			Changes the name of the item</br>
+	 * 		otherwise</br>
+	 * 			InvalidIDException is thrown</br>
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
@@ -32,6 +39,13 @@ public interface IManageInventory extends IInventoryAccess {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:</br>
+	 * 		<i>id != null && price != null</i></br></br>
+	 * Ensures:</br>
+	 * 		if there exists an item <i>item</i> such that <i>item.id == id</i></br>
+	 * 			Changes the price of the item</br>
+	 * 		otherwise</br>
+	 * 			InvalidIDException is thrown</br>
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" priceRequired="true" priceOrdered="false"
@@ -41,6 +55,13 @@ public interface IManageInventory extends IInventoryAccess {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:</br>
+	 * 		<i>id != null && expense != null</i></br></br>
+	 * Ensures:</br>
+	 * 		if there exists an item <i>item</i> such that <i>item.id == id</i></br>
+	 * 			Changes the expense of the item</br>
+	 * 		otherwise</br>
+	 * 			InvalidIDException is thrown</br>
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false" expenseRequired="true" expenseOrdered="false"
@@ -50,6 +71,12 @@ public interface IManageInventory extends IInventoryAccess {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:</br>
+	 * 		<i>name != null && price != null && expense != null && stock != null</i></br></br>
+	 * Ensures:</br>
+	 * 		Generates a new ID for the new item</br>
+	 * 		Creates a new item with the generated ID and sets all attributes</br>
+	 * 		Adds item into inventory</br>
 	 * <!-- end-user-doc -->
 	 * @model nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" priceRequired="true" priceOrdered="false" expenseRequired="true" expenseOrdered="false" stockDataType="org.eclipse.uml2.types.Integer" stockRequired="true" stockOrdered="false"
 	 * @generated
@@ -58,6 +85,13 @@ public interface IManageInventory extends IInventoryAccess {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:</br>
+	 * 		<i>id != null</i></br></br>
+	 * Ensures:</br>
+	 * 		if there exists an item <i>item</i> such that <i>item.id == id</i></br>
+	 * 			<i>item</i> is removed from the inventory</br>
+	 * 		otherwise</br>
+	 * 			InvalidIDException is thrown</br> 
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model idDataType="org.eclipse.uml2.types.String" idRequired="true" idOrdered="false"
