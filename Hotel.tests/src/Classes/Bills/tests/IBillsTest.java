@@ -24,6 +24,12 @@ public class IBillsTest {
 		
 	}
 	
+	public void removeAllBills() {
+		while (!IBills.INSTANCE.getAllBillIDs().isEmpty()) {
+			IBills.INSTANCE.removeBill(IBills.INSTANCE.getAllBillIDs().get(0));
+		}
+	}
+	
 	@Test
 	public void testAddBill() {
 		int preSize = IBills.INSTANCE.getAllBillIDs().size();
@@ -51,14 +57,11 @@ public class IBillsTest {
 	@Test
 	public void testGetAllBillsNotPaid_expects_nonePaid() {
 		
-		while (!IBills.INSTANCE.getAllBillIDs().isEmpty()) {
-			IBills.INSTANCE.removeBill(IBills.INSTANCE.getAllBillIDs().get(0));
-		}
+		removeAllBills();
 		
 		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
 		
 		int size = IBills.INSTANCE.getAllBillsNotPaid().size();
-		System.out.println(size);
 		assertTrue(size == 1);
 	}
 	
@@ -67,7 +70,6 @@ public class IBillsTest {
 		IBills.INSTANCE.payBillsWithCash(IBills.INSTANCE.getAllBillIDs());
 		
 		int size = IBills.INSTANCE.getAllBillsNotPaid().size();
-		System.out.println(size);
 		assertTrue(size == 0);
 	}
 
@@ -88,12 +90,25 @@ public class IBillsTest {
 
 	@Test
 	public void testGetAllPayedBills() {
-		fail("Not yet implemented");
+		removeAllBills();
+		
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		
+		IBills.INSTANCE.payBillsWithCash(IBills.INSTANCE.getAllBillIDs());
+		
+		assertTrue(IBills.INSTANCE.getAllPayedBills().size() == 2);
 	}
 
 	@Test
 	public void testPayBillsWithCreditCard() {
-		fail("Not yet implemented");
+		removeAllBills();
+		
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		
+		//IBills.INSTANCE.payBillsWithCreditCard(IBills.INSTANCE.getAllBillIDs(), ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName);
+		
+		assertTrue(IBills.INSTANCE.getAllBillsNotPaid().size() == 0);
 	}
 
 	@Test
@@ -123,7 +138,13 @@ public class IBillsTest {
 
 	@Test
 	public void testPayBillsWithCash() {
-		fail("Not yet implemented");
+		removeAllBills();
+		
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		
+		IBills.INSTANCE.payBillsWithCash(IBills.INSTANCE.getAllBillIDs());
+		
+		assertTrue(IBills.INSTANCE.getAllBillsNotPaid().size() == 0);
 	}
 
 	@Test
@@ -133,7 +154,13 @@ public class IBillsTest {
 
 	@Test
 	public void testRemoveBill() {
-		fail("Not yet implemented");
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		
+		removeAllBills();
+		
+		assertTrue(IBills.INSTANCE.getAllBillIDs().size() == 0);
 	}
 
 	@Test
