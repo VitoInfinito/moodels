@@ -13,6 +13,7 @@ Export-Package:
  Classes.Bookables,
  Classes.Bookings,
  Classes.Customers,
+ Classes.Examples,
  Classes.Feedback,
  Classes.Guests,
  Classes.Inventory,
@@ -22,8 +23,8 @@ Export-Package:
  Classes.Staff,
  Classes.Statistics,
  Classes.Stays,
- Classes.Examples,
- Classes.Utils
+ Classes.Utils,
+ se.chalmers.cse.mdsd1415.banking.administratorRequires
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.uml2.types;visibility:=reexport
