@@ -26,6 +26,13 @@ public interface IRequests extends Serializable {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a request such that request.id == id
+	 * 			the non null description of the request is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" specialRequestIdDataType="org.eclipse.uml2.types.String" specialRequestIdRequired="true" specialRequestIdOrdered="false"
@@ -35,7 +42,13 @@ public interface IRequests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a request such that request.id == id
+	 * 			the non null resolved status of the request is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" specialRequestIdDataType="org.eclipse.uml2.types.String" specialRequestIdRequired="true" specialRequestIdOrdered="false"
 	 * @generated
@@ -44,7 +57,13 @@ public interface IRequests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a request such that request.id == id
+	 * 			the resolved status of the request is set to resolved
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * @throws InvalidIDException 
 	 * @model SpecialRequestIdDataType="org.eclipse.uml2.types.String" SpecialRequestIdRequired="true" SpecialRequestIdOrdered="false"
 	 * @generated
@@ -53,6 +72,10 @@ public interface IRequests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		that the request r with r.id == id are no more
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model specialRequestIdDataType="org.eclipse.uml2.types.String" specialRequestIdRequired="true" specialRequestIdOrdered="false"
@@ -62,6 +85,14 @@ public interface IRequests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * 		desc = !null
+	 * Ensures:
+	 * 		if there exists a request such that request.id == id
+	 * 			the desc of the request is set to the desc
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model specialRequestIdDataType="org.eclipse.uml2.types.String" specialRequestIdRequired="true" specialRequestIdOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
@@ -79,6 +110,13 @@ public interface IRequests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		Nothing
+	 * Ensures:
+	 * 		if there are more than zero stored request
+	 * 			return a list of all the stored request IDs
+	 * 		otherwise
+	 * 			return an empty list
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -87,6 +125,14 @@ public interface IRequests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * 		desc = !null
+	 * Ensures:
+	 * 		if there exists a request such that request.id == id
+	 * 			the desc of the request is set to the desc
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model specialRequestIdDataType="org.eclipse.uml2.types.String" specialRequestIdRequired="true" specialRequestIdOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
@@ -96,6 +142,10 @@ public interface IRequests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		desc != null
+	 * Ensures:
+	 * 		that there are a request r with r.desc == desc
 	 * <!-- end-user-doc -->
 	 * @return 
 	 * @model specialRequestIdDataType="org.eclipse.uml2.types.String" specialRequestIdRequired="true" specialRequestIdOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
