@@ -22,6 +22,9 @@ public class ICustomersTest {
 		ICustomers.INSTANCE.addCustomer("010101-0102", "Bengt", "Bengtsson", "Dr", "bengt.bengtsson@gmail.com", "0707-777777");
 		ICustomers.INSTANCE.addCustomer("010101-0103", "Maja", "Andersson", "Ms", "maja.andersson@gmail.com", "0707-777778");
 		
+		ICustomers.INSTANCE.addCustomerBooking("010101-0101", "001");
+		ICustomers.INSTANCE.addCustomerBooking("010101-0101", "002");
+		
 		ICustomers.INSTANCE.addCustomerRequest("010101-0101", "I want food");
 		ICustomers.INSTANCE.addCustomerRequest("010101-0101", "I want drinks");
 	}
@@ -160,15 +163,25 @@ public class ICustomersTest {
 	}
 
 	@Test
-	public void testGetCustomerBookings() {
-		// TODO 
-		fail("Not yet implemented");
+	public void testGetCustomerBookings_exists_returnsList() {
+		boolean result = ICustomers.INSTANCE.getCustomerBookings("010101-0101").size() == 2;
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetCustomerBookings_notExists_throwsException() {
+		ICustomers.INSTANCE.getCustomerBookings("0");
 	}
 
 	@Test
-	public void testGetCustomerRequests() {
+	public void testGetCustomerRequests_exists_returnsList() {
 		boolean result = ICustomers.INSTANCE.getCustomerRequests("010101-0101").size() == 2;
 		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetCustomerRequest_notExists_throwsException() {
+		ICustomers.INSTANCE.getCustomerRequests("0");
 	}
 
 	@Test
