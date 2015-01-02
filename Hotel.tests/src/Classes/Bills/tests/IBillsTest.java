@@ -2,9 +2,15 @@ package Classes.Bills.tests;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import Classes.Bills.IBills;
+import Classes.Inventory.IInventoryAccess;
 
 public class IBillsTest {
 	
@@ -14,16 +20,55 @@ public class IBillsTest {
 
 	@Before
 	public void setUp() throws Exception {
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		
+	}
+	
+	@Test
+	public void testAddBill() {
+		int preSize = IBills.INSTANCE.getAllBillIDs().size();
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.5);
+		
+		assertTrue(IBills.INSTANCE.getAllBillIDs().size() == (preSize + 1));
 	}
 
 	@Test
-	public void testGetIsBillPaid() {
-		fail("Not yet implemented");
+	public void testGetIsBillPaid_expects_billIsNotPaid() {
+		String billid = IBills.INSTANCE.getAllBillIDs().get(0);
+		
+		assertFalse(IBills.INSTANCE.getIsBillPaid(billid));
+	}
+	
+	@Test
+	public void testGetIsBillPaid_expects_billIsPaid() {
+		IBills.INSTANCE.payBillsWithCash(IBills.INSTANCE.getAllBillIDs());
+		
+		String billid = IBills.INSTANCE.getAllBillIDs().get(0);
+		
+		assertTrue(IBills.INSTANCE.getIsBillPaid(billid));
 	}
 
 	@Test
-	public void testGetAllBillsNotPaid() {
-		fail("Not yet implemented");
+	public void testGetAllBillsNotPaid_expects_nonePaid() {
+		
+		while (!IBills.INSTANCE.getAllBillIDs().isEmpty()) {
+			IBills.INSTANCE.removeBill(IBills.INSTANCE.getAllBillIDs().get(0));
+		}
+		
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		
+		int size = IBills.INSTANCE.getAllBillsNotPaid().size();
+		System.out.println(size);
+		assertTrue(size == 1);
+	}
+	
+	@Test
+	public void testGetAllBillsNotPaid_expects_allPaid() {
+		IBills.INSTANCE.payBillsWithCash(IBills.INSTANCE.getAllBillIDs());
+		
+		int size = IBills.INSTANCE.getAllBillsNotPaid().size();
+		System.out.println(size);
+		assertTrue(size == 0);
 	}
 
 	@Test
@@ -43,11 +88,6 @@ public class IBillsTest {
 
 	@Test
 	public void testGetAllPayedBills() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testAddBill() {
 		fail("Not yet implemented");
 	}
 
