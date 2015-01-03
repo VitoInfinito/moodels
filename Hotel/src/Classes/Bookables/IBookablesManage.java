@@ -163,11 +163,15 @@ public interface IBookablesManage extends IBookablesAccess {
 	 * Requires:
 	 * 		bedNumber != null AND basePrice != null AND description != null AND roomID!= null
 	 * Ensures: 
-	 * 		if basePrice < 0 or nbrBeds <0
+	 * 		if basePrice < 0
 	 * 			IllegalArgumentException is thrown
 	 * 		otherwise
 	 * 			Contiune
 	 * 		if there already exist a room.number = roomNumber
+	 * 			InvalidIdExceptions is thrown
+	 * 		otherWise
+	 * 			Contiune
+	 * 		if there already exist a ID = bedNumber
 	 * 			InvalidIdExceptions is thrown
 	 * 		otherWise
 	 * 			Contiune

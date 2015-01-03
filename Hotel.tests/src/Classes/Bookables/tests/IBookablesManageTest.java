@@ -56,6 +56,11 @@ public class IBookablesManageTest {
 		boolean result = IBookablesManage.INSTANCE.getRoomOfHostelBed("101").equals("004");
 		assertTrue(result);
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeNoneExistingHostelBedRoom() {
+		IBookablesManage.INSTANCE.changeHostelBedRoom("000", "004");
+	}
 
 	@Test
 	public void testDeleteBookable() {
@@ -89,6 +94,12 @@ public class IBookablesManageTest {
 		boolean result = IBookablesManage.INSTANCE.getRoomLocationInfo("002").equals(tmp);
 		assertTrue(result);
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeNoneExistingHotelRoomCategory() {
+		String ID = "000";
+		IBookablesManage.INSTANCE.changeHotelRoomCategory(ID, HotelRoomCategory.SUITE);
+	}
 
 	@Test
 	public void testChangeHotelRoomCategory() {
@@ -98,7 +109,14 @@ public class IBookablesManageTest {
 		result = result && IBookablesManage.INSTANCE.getHotelRoomCategory(ID).equals(HotelRoomCategory.SUITE);
 		assertTrue(result);
 	}
-
+	
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeNotExistingConferenceRoomCategory() {
+		String ID = "000";
+		IBookablesManage.INSTANCE.changeConferenceRoomCategory(ID, ConferenceRoomCategory.DINING_ROOM);
+	}
+	
 	@Test
 	public void testChangeConferenceRoomCategory() {
 		String ID = "005";
@@ -106,6 +124,7 @@ public class IBookablesManageTest {
 		boolean result = IBookablesManage.INSTANCE.getConferenceRoomCategory(ID).equals(ConferenceRoomCategory.DINING_ROOM);
 		assertTrue(result);
 	}
+	
 
 	@Test
 	public void testChangeBookableBasePrice() {
@@ -115,10 +134,23 @@ public class IBookablesManageTest {
 		assertTrue(result);
 	}
 	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeNotExistingBookableBasePrice() {
+		String ID = "000";
+		IBookablesManage.INSTANCE.changeBookableBasePrice(ID, 1337);
+	}
+	
+	
 	@Test(expected=IllegalArgumentException.class)
 	public void testChangeBookableBasePriceToLessThanZero() {
 		String ID = "005";
 		IBookablesManage.INSTANCE.changeBookableBasePrice(ID, -1);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeNotExistingBookableDescription() {
+		String ID = "000";
+		IBookablesManage.INSTANCE.changeBookableDescription(ID, "");
 	}
 
 	@Test
@@ -138,6 +170,24 @@ public class IBookablesManageTest {
 		result = !result && IBookablesManage.INSTANCE.getAllHotelRoomIDs().contains(ID);
 		assertTrue(result);
 	}
+	
+	@Test (expected=IllegalArgumentException.class)
+	public void testAddHostelBedWithToLowPrice() {
+		String ID = "010";
+		IBookablesManage.INSTANCE.addHostelBed(ID, -1, "desc", "001");
+	}
+	
+	@Test (expected=InvalidIDException.class)
+	public void testAddHostelBedToExistingID() {
+		String ID = "001";
+		IBookablesManage.INSTANCE.addHostelBed(ID, 1, "desc", "009");
+	}
+	
+	@Test (expected=InvalidIDException.class)
+	public void testAddHostelBedToNoneExistingRoom() {
+		String ID = "010";
+		IBookablesManage.INSTANCE.addHostelBed(ID, 1, "desc", "009");
+	}
 
 	@Test
 	public void testAddHostelBed() {
@@ -147,6 +197,26 @@ public class IBookablesManageTest {
 		result = !result && IBookablesManage.INSTANCE.getAllHostelBedIDs().contains(ID);
 		assertTrue(result);
 	}
+	
+	@Test (expected=InvalidIDException.class)
+	public void testAddConferenceRoomWithExistingID() {
+		String ID = "001";
+		IBookablesManage.INSTANCE.addConferenceRoom(ID, 10000, "Conf", 100, "Heaven", ConferenceRoomCategory.OTHER, 100000);
+
+	}
+
+	@Test (expected=IllegalArgumentException.class)
+	public void testAddConferenceRoomPriceToLow() {
+		String ID = "010";
+		IBookablesManage.INSTANCE.addConferenceRoom(ID, -1, "Conf", 100, "Heaven", ConferenceRoomCategory.OTHER, 100000);
+	}
+	
+	@Test (expected=IllegalArgumentException.class)
+	public void testAddConferenceRoomNbrOfBedsToLow() {
+		String ID = "010";
+		IBookablesManage.INSTANCE.addConferenceRoom(ID, 10000, "Conf", 100, "Heaven", ConferenceRoomCategory.OTHER, -1);
+	}
+
 
 	@Test
 	public void testAddConferenceRoom() {
@@ -156,13 +226,39 @@ public class IBookablesManageTest {
 		result = !result && IBookablesManage.INSTANCE.getAllConferenceRoomIDs().contains(ID);
 		assertTrue(result);
 	}
+	
+	@Test (expected=IllegalArgumentException.class)
+	public void testChangeHotelRoomNumberBedsToLessThanZero() {
+		String ID = "002";
+		IBookablesManage.INSTANCE.changeHotelRoomNumberBeds(ID, -1337);
 
+	}
+	
+	@Test (expected=InvalidIDException.class)
+	public void testChangeNotExtistingHotelRoomNumberBeds() {
+		String ID = "000";
+		IBookablesManage.INSTANCE.changeHotelRoomNumberBeds(ID, 1337);
+	}
+	
 	@Test
 	public void testChangeHotelRoomNumberBeds() {
 		String ID = "002";
 		IBookablesManage.INSTANCE.changeHotelRoomNumberBeds(ID, 1337);
 		boolean result = IBookablesManage.INSTANCE.getHotelRoomNbrBeds(ID) == 1337;
 		assertTrue(result);
+	}
+	
+	@Test (expected=InvalidIDException.class)
+	public void testChangeNotExistingConferenceRoomCapacity() {
+		String ID = "000";
+		IBookablesManage.INSTANCE.changeConferenceRoomCapacity(ID, 1337);
+	}
+	
+
+	@Test (expected=IllegalArgumentException.class)
+	public void testChangeConferenceRoomCapacityToLessThanZero() {
+		String ID = "005";
+		IBookablesManage.INSTANCE.changeConferenceRoomCapacity(ID, -1337);
 	}
 
 	@Test
