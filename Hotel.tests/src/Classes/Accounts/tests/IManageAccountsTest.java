@@ -76,6 +76,11 @@ public class IManageAccountsTest {
 	}
 	
 	@Test(expected=InvalidIDException.class)
+	public void testRenameAccount_new_username_exists() throws InvalidIDException {
+		IManageAccounts.INSTANCE.renameAccount("Pelle", "Patrik");
+	}
+	
+	@Test(expected=InvalidIDException.class)
 	public void testRenameAccount_username_not_exists() throws InvalidIDException {
 		IManageAccounts.INSTANCE.renameAccount("Torsten", "Pelle");
 	}

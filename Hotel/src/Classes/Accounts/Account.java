@@ -11,6 +11,7 @@ import java.io.Serializable;
  * @generated
  */
 class Account implements Serializable {
+	private static final long serialVersionUID = 8533391467540742242L;
 	private static final AccountType ACCOUNT_TYPE_EDEFAULT = AccountType.GUEST;
 	private AccountType accountType = ACCOUNT_TYPE_EDEFAULT;
 	private String username;

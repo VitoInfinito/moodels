@@ -12,6 +12,7 @@ import java.io.Serializable;
  * @generated
  */
 class AccountsFactory implements Serializable {
+	private static final long serialVersionUID = 662595441016800307L;
 	static AccountsFactory INSTANCE = new AccountsFactory();
 
 	/**

@@ -292,20 +292,59 @@ public class IBookingsTest {
 		assertTrue(result.contains(booking5));
 		assertTrue(result.contains(booking6));
 	}
-
+	
 	@Test
-	public void testGetBookedStaysOfBooking() {
-		fail("Not yet implemented");
+	public void testSearchBookings_empty_string_expects_all_bookings() {
+		List<String> result = IBookings.INSTANCE.searchBookings(booking1);
+		assertTrue(result.contains(booking1));
+		assertTrue(result.contains(booking2));
+		assertTrue(result.contains(booking3));
+		assertTrue(result.contains(booking4));
+		assertTrue(result.contains(booking5));
+		assertTrue(result.contains(booking6));
+		assertTrue(result.size() == 6);
 	}
 
 	@Test
-	public void testGetCustomerOfBooking() {
-		fail("Not yet implemented");
+	public void testGetBookedStaysOfBooking_booking_with_single_bookable_expects_bookables_of_booking_correct() {
+		List<String> stays = IBookings.INSTANCE.getBookedStaysOfBooking(booking2);
+		assertTrue(stays.size() == 1);
+		assertTrue(IStays.INSTANCE.getBookableOfHotelStay(stays.get(0)).equals("202"));
+	}
+	
+	@Test
+	public void testGetBookedStaysOfBooking_booking_with_many_bookables_expects_bookables_of_booking_correct() {
+		List<String> stays = IBookings.INSTANCE.getBookedStaysOfBooking(booking3);
+		assertTrue(stays.size() == 3);
+		assertTrue(IStays.INSTANCE.getBookableOfHotelStay(stays.get(0)).equals("101"));
+		assertTrue(IStays.INSTANCE.getBookableOfHotelStay(stays.get(1)).equals("202"));
+		assertTrue(IStays.INSTANCE.getBookableOfHotelStay(stays.get(2)).equals("303"));
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetBookedStaysOfBooking_invalid_booking_expects_exception() {
+		IBookings.INSTANCE.getBookedStaysOfBooking("dontExist");
 	}
 
 	@Test
-	public void testGetNbrGuestOfBooking() {
-		fail("Not yet implemented");
+	public void testGetCustomerOfBooking_valid_booking_expects_customer_currect() {
+		String customerID = IBookings.INSTANCE.getCustomerOfBooking(booking1);
+		assertTrue(customerID.equals("861104-0078"));
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetCustomerOfBooking_invalid_booking_expects_exception() {
+		IBookings.INSTANCE.getCustomerOfBooking("korv");
+	}
+
+	@Test
+	public void testGetNbrGuestOfBooking_valid_booking_expects_nbrGuests_currect() {
+		assertTrue(IBookings.INSTANCE.getNbrGuestOfBooking(booking6) == 100);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetNbrGuestOfBooking_invalid_booking_expects_exception() {
+		IBookings.INSTANCE.getNbrGuestOfBooking("finnsEj");
 	}
 
 	@Test

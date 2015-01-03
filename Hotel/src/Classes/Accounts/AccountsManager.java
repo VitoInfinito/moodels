@@ -22,6 +22,7 @@ import Classes.Utils.InvalidIDException;
  * @generated
  */
 class AccountsManager implements IManageAccounts {
+	private static final long serialVersionUID = -1577970188488699669L;
 	private final Logger logger = LoggerFactory.getLogger(AccountsManager.class);
 	public static AccountsManager INSTANCE = new AccountsManager();
 
