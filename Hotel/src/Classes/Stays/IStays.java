@@ -46,6 +46,10 @@ public interface IStays extends Serializable {
 	 * 			InvalidIDException is received
 	 * 		else if there does not exist a stay such that stay.id == stayID
 	 * 			InvalidIDException is received
+	 * 		else if the guest is already checked in to the stay
+	 * 			InvalidIDException is received
+	 * 		else if the guest is already checked out of the stay
+	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @throws ResponsibleCreditCardNotAddedException 
 	 * @throws InvalidIDException 

@@ -63,22 +63,22 @@ public class IStaysTest {
 	}
 	
 	@Test(expected=InvalidIDException.class)
-	public void testCheckInGuest_guest_not_exist_expects_InvalidIDException() {
+	public void testCheckInGuest_guest_not_exist() throws InvalidIDException {
 		fail("Not yet implemented");
 	}
 
 	@Test(expected=InvalidIDException.class)
-	public void testCheckInGuest_stay_not_exist_expects_InvalidIDException() {
+	public void testCheckInGuest_stay_not_exist() throws InvalidIDException {
 		fail("Not yet implemented");
 	}
 	
 	@Test(expected=InvalidIDException.class)
-	public void testCheckInGuest_guest_already_checked_in_() {
+	public void testCheckInGuest_guest_already_checked_in() throws InvalidIDException {
 		fail("Not yet implemented");
 	}
 	
 	@Test(expected=InvalidIDException.class)
-	public void testCheckInGuest_guest_already_checked_out() {
+	public void testCheckInGuest_guest_already_checked_out() throws InvalidIDException {
 		fail("Not yet implemented");
 	}
 
@@ -90,27 +90,44 @@ public class IStaysTest {
 	}
 	
 	@Test(expected=InvalidIDException.class)
-	public void testChangeBookableOfStay_bookable_not_exist_expects_InvalidIDException() {
+	public void testChangeBookableOfStay_bookable_not_exist() throws InvalidIDException {
 		fail("Not yet implemented");
 	}
 	
 	@Test(expected=InvalidIDException.class)
-	public void testChangeBookableOfStay_stay_not_exist_expects_InvalidIDException() {
+	public void testChangeBookableOfStay_stay_not_exist() throws InvalidIDException {
 		fail("Not yet implemented");
 	}
 
+	
+	
+	
+	
 	@Test
-	public void testAddNewStay_with_all_information() {
+	public void testAddNewStay_bookable_and_booking_exists_expects_stay_is_added() {
 		fail("Not yet implemented");
 	}
 	
-	@Test
-	public void testAddNewStay_without_all_information() {
+	@Test(expected=InvalidIDException.class)
+	public void testAddNewStay_booking_not_exists() throws InvalidIDException {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testAddNewStay_bookable_not_exists() throws InvalidIDException {
 		fail("Not yet implemented");
 	}
 
+	
+	
+	
 	@Test
-	public void testRemoveStay() {
+	public void testRemoveStay_stay_exists_expects_stay_removed() {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testRemoveStay_stay_not_exist() throws InvalidIDException {
 		fail("Not yet implemented");
 	}
 
