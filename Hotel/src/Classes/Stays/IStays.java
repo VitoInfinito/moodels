@@ -46,10 +46,18 @@ public interface IStays extends Serializable {
 	 * 			InvalidIDException is received
 	 * 		else if there does not exist a stay such that stay.id == stayID
 	 * 			InvalidIDException is received
+	 * 		else if a responsible credit card is not added
+	 * 			ResponsibleCreditCardNotAddedException is received
 	 * 		else if the guest is already checked in to the stay
-	 * 			InvalidIDException is received
+	 * 			GuestAlreadyCheckedInException is received
 	 * 		else if the guest is already checked out of the stay
-	 * 			InvalidIDException is received
+	 * 			GuestAlreadyCheckedOutException is received
+	 * 		else if the guest tried to check in before the check in time
+	 * 			InvalidCheckInDateException is received
+	 * 		else if the guest tried to check in after the check out time
+	 * 			InvalidCheckInDateException is received
+	 * 		else if the amount of checked in guests are already at capacity
+	 * 			StayAlreadyFullyCheckedInException is received
 	 * <!-- end-user-doc -->
 	 * @throws ResponsibleCreditCardNotAddedException 
 	 * @throws InvalidIDException 
@@ -94,7 +102,8 @@ public interface IStays extends Serializable {
 	 * 		else if there does not exist a bookable such that bookable.id == bookableID
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
-	 * @return 
+	 * @throws InvalidIDException
+	 * @return The ID of the added Stay
 	 * @model bookableIDDataType="org.eclipse.uml2.types.String" bookableIDRequired="true" bookableIDOrdered="false" bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false" fromDateRequired="true" fromDateOrdered="false" toDateRequired="true" toDateOrdered="false"
 	 * @generated NOT
 	 */
@@ -146,9 +155,11 @@ public interface IStays extends Serializable {
 	 * 		else if there does not exist a stay such that stay.id == stayID
 	 *			InvalidIDException is received
 	 *		else if guest is already checked out
-	 *			InvalidIDException is received
+	 *			GuestAlreadyCheckedOutException is received
 	 *		else if guest is not checked in yet
-	 *			InvalidIDException is received
+	 *			GuestNotCheckedInException is received
+	 *		else if all bills have not been paid
+	 *			InsufficientFundsException is received
 	 * <!-- end-user-doc -->
 	 * @throws GuestNotCheckedInException 
 	 * @throws GuestAlreadyCheckedOutException 
@@ -211,6 +222,7 @@ public interface IStays extends Serializable {
 	 * 		otherwise
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
+	 * @return List of guests belonging to stay
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */
@@ -226,6 +238,7 @@ public interface IStays extends Serializable {
 	 * 		otherwise
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
+	 * @return List of bills belonging to stay
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */
@@ -242,6 +255,7 @@ public interface IStays extends Serializable {
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
+	 * @return ID of bookable belonging to stay
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */
@@ -258,6 +272,7 @@ public interface IStays extends Serializable {
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
+	 * @return ID of booking belonging to stay
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */
@@ -270,6 +285,7 @@ public interface IStays extends Serializable {
 	 * Ensures:
 	 * 		returns a non-null list with all the stays
 	 * <!-- end-user-doc -->
+	 * @return List of all stays
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
 	 */
@@ -285,7 +301,8 @@ public interface IStays extends Serializable {
 	 * 		otherwise
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
-	 * @throws InvalidIDException 
+	 * @throws InvalidIDException
+	 * @return List of all checked in guests belonging to stay
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */
@@ -302,6 +319,7 @@ public interface IStays extends Serializable {
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
+	 * @return List of all checked out guests belonging to stay
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */
@@ -318,7 +336,8 @@ public interface IStays extends Serializable {
 	 * 			3. Stays with attributes that exactly matches the keyword
 	 * 			4. Stays with attributes that has some matching to the keyword
 	 * <!-- end-user-doc -->
-	 * @throws InvalidIDException 
+	 * @throws InvalidIDException
+	 * @return List of stays matching or somewhat matching the keyword
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
 	 */
@@ -336,6 +355,7 @@ public interface IStays extends Serializable {
 	 * 			4. Stays with attributes that has some matching to the keyword
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
+	 * @return List of stays matching or somewhat matching the keyword
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated NOT
 	 */
@@ -348,6 +368,7 @@ public interface IStays extends Serializable {
 	 * Ensures:
 	 * 		returns a non-null list of all stays within the time period of from to to
 	 * <!-- end-user-doc -->
+	 * @return List of all stays within time period
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated NOT
 	 */
@@ -364,6 +385,7 @@ public interface IStays extends Serializable {
 	 * 			InvalidIDException
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
+	 * @return List of all unpaid bills belonging to stay
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */
@@ -403,6 +425,7 @@ public interface IStays extends Serializable {
 	 * 			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
+	 * @return boolean of whether or not a creditcard has been set as responsible for the stay
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
 	 * @generated NOT
 	 */

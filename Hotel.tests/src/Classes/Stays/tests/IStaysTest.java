@@ -20,8 +20,15 @@ import Classes.Bookables.IBookablesManage;
 import Classes.Bookings.IBookings;
 import Classes.Customers.ICustomers;
 import Classes.Stays.IStays;
+import Classes.Utils.GuestAlreadyCheckedInException;
+import Classes.Utils.GuestAlreadyCheckedOutException;
+import Classes.Utils.GuestNotCheckedInException;
+import Classes.Utils.InsufficientFundsException;
+import Classes.Utils.InvalidCheckInDateException;
 import Classes.Utils.InvalidCreditCardException;
 import Classes.Utils.InvalidIDException;
+import Classes.Utils.ResponsibleCreditCardNotAddedException;
+import Classes.Utils.StayAlreadyFullyCheckedInException;
 
 public class IStaysTest {
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
@@ -75,16 +82,37 @@ public class IStaysTest {
 		fail("Not yet implemented");
 	}
 	
-	@Test(expected=InvalidIDException.class)
-	public void testCheckInGuest_guest_already_checked_in() throws InvalidIDException {
+	@Test(expected=ResponsibleCreditCardNotAddedException.class)
+	public void testCheckInGuest_responsible_creditcard_not_added() throws ResponsibleCreditCardNotAddedException {
 		fail("Not yet implemented");
 	}
 	
-	@Test(expected=InvalidIDException.class)
-	public void testCheckInGuest_guest_already_checked_out() throws InvalidIDException {
+	@Test(expected=GuestAlreadyCheckedInException.class)
+	public void testCheckInGuest_guest_already_checked_in() throws GuestAlreadyCheckedInException {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=GuestAlreadyCheckedOutException.class)
+	public void testCheckInGuest_guest_already_checked_out() throws GuestAlreadyCheckedOutException {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidCheckInDateException.class)
+	public void testCheckInGuest_check_in_before_check_in_time() throws InvalidCheckInDateException {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidCheckInDateException.class)
+	public void testCheckInGuest_check_in_after_check_out_time() throws InvalidCheckInDateException {
 		fail("Not yet implemented");
 	}
 
+	@Test(expected=StayAlreadyFullyCheckedInException.class)
+	public void testCheckInGuest_exceed_amount_of_checked_in_guests() throws StayAlreadyFullyCheckedInException {
+		fail("Not yet implemented");
+	}
+	
+	
 	
 	
 	@Test
@@ -168,13 +196,18 @@ public class IStaysTest {
 		fail("Not yet implemented");
 	}
 	
-	@Test(expected=InvalidIDException.class)
-	public void testCheckOutGuest_guest_already_checked_out() throws InvalidIDException {
+	@Test(expected=GuestAlreadyCheckedOutException.class)
+	public void testCheckOutGuest_guest_already_checked_out() throws GuestAlreadyCheckedOutException {
 		fail("Not yet implemented");
 	}
 	
-	@Test(expected=InvalidIDException.class)
-	public void testCheckOutGuest_guest_not_checked_in() throws InvalidIDException {
+	@Test(expected=GuestNotCheckedInException.class)
+	public void testCheckOutGuest_guest_not_checked_in() throws GuestNotCheckedInException {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InsufficientFundsException.class)
+	public void testCheckOutGuest_bills_not_paid() throws InsufficientFundsException {
 		fail("Not yet implemented");
 	}
 	
