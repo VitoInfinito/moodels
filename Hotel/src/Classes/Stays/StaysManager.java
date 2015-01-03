@@ -751,8 +751,39 @@ public class StaysManager implements IStays {
 	 * @generated NOT
 	 */
 	public void removeBillFromStay(String stayID, String billID) throws InvalidIDException {
-		if (stays.containsKey(stayID)) {
+		if (stays.containsKey(stayID) && stays.get(stayID).getBills().contains(billID)) {
 			iBills.removeBill(billID);
+			stays.get(stayID).removeBill(billID);
+		} else {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
+	 * @generated NOT
+	 */
+	public LocalDateTime getFromDateOfHotelStay(String stayID) throws InvalidIDException {
+		if (stays.containsKey(stayID)) {
+			return stays.get(stayID).getFromDate();
+		} else {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
+	 * @generated NOT
+	 */
+	public LocalDateTime getToDateOfHotelStay(String stayID) throws InvalidIDException {
+		if (stays.containsKey(stayID)) {
+			return stays.get(stayID).getToDate();
 		} else {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();

@@ -13,13 +13,16 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.omg.CORBA.IntHolder;
 
 import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires;
+import Classes.Bills.IBills;
 import Classes.Bookables.ConferenceRoomCategory;
 import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.IBookablesManage;
 import Classes.Bookings.IBookings;
 import Classes.Customers.ICustomers;
+import Classes.Stays.IStays;
 import Classes.Utils.InvalidCreditCardException;
 import Classes.Utils.InvalidIDException;
 
@@ -175,17 +178,119 @@ public class IBookingsTest {
 	}
 	
 	@Test
-	public void testMakeBooking_valid_parameters_responsiblecard_false_expects_non_null_result() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+	public void testMakeBooking_valid_parameters_responsiblecard_true_expects_booking_exists() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables1 = new ArrayList<String>();
+		bookables1.add("202");
+		String bookingNbr = IBookings.INSTANCE.makeBooking(bookables1, "861104-0078", LocalDateTime.of(2015, 3, 4, 15, 0), LocalDateTime.of(2015, 3, 10, 10, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
+		assertTrue(IBookings.INSTANCE.getAllBookings().contains(bookingNbr));
+	}
+	
+	@Test
+	public void testMakeBooking_valid_parameters_responsiblecard_true_expects_stay_in_room_exist() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables1 = new ArrayList<String>();
+		bookables1.add("202");
+		String bookingNbr = IBookings.INSTANCE.makeBooking(bookables1, "861104-0078", LocalDateTime.of(2015, 3, 4, 15, 0), LocalDateTime.of(2015, 3, 10, 10, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
+		List<String> stays = IBookings.INSTANCE.getBookedStaysOfBooking(bookingNbr);
+		assertTrue(stays.size() == 1);
+		assertTrue(IStays.INSTANCE.getBookableOfHotelStay(stays.get(0)).equals("202"));
+	}
+	
+	@Test
+	public void testMakeBooking_valid_parameters_responsiblecard_true_expects_bill_added_to_each_stay() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables1 = new ArrayList<String>();
+		bookables1.add("202");
+		String bookingNbr = IBookings.INSTANCE.makeBooking(bookables1, "861104-0078", LocalDateTime.of(2015, 3, 4, 15, 0), LocalDateTime.of(2015, 3, 10, 10, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
+		List<String> stays = IBookings.INSTANCE.getBookedStaysOfBooking(bookingNbr);
+		List<String> bills = IStays.INSTANCE.getBillsOfHotelStay(stays.get(0));
+		assertTrue(bills.size() == 1);
+		assertTrue(IBills.INSTANCE.getBillBookable(bills.get(0)).equals("202"));
+		assertFalse(IBills.INSTANCE.getIsBillPaid(bills.get(0)));
+		assertTrue(IBills.INSTANCE.getBillDiscount(bills.get(0)) == 0);
+		assertTrue(IBills.INSTANCE.getBillTotalAmount(bills.get(0)) >= 0);
+	}
+	
+	@Test
+	public void testMakeBooking_valid_parameters_many_rooms_responsiblecard_true_expects_stay_in_room_exist() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables1 = new ArrayList<String>();
+		bookables1.add("202");
+		bookables1.add("303");
+		String bookingNbr = IBookings.INSTANCE.makeBooking(bookables1, "861104-0078", LocalDateTime.of(2015, 3, 4, 15, 0), LocalDateTime.of(2015, 3, 10, 10, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
+		List<String> stays = IBookings.INSTANCE.getBookedStaysOfBooking(bookingNbr);
+		assertTrue(stays.size() == 2);
+		assertTrue(IStays.INSTANCE.getBookableOfHotelStay(stays.get(0)).equals("202"));
+		assertTrue(IStays.INSTANCE.getBookableOfHotelStay(stays.get(1)).equals("303"));
+	}
+	
+	@Test
+	public void testMakeBooking_valid_parameters_responsiblecard_true_expects_stay_period_correct() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables1 = new ArrayList<String>();
+		bookables1.add("202");
+		String bookingNbr = IBookings.INSTANCE.makeBooking(bookables1, "861104-0078", LocalDateTime.of(2015, 3, 4, 15, 0), LocalDateTime.of(2015, 3, 10, 10, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
+		List<String> stays = IBookings.INSTANCE.getBookedStaysOfBooking(bookingNbr);
+		assertTrue(IStays.INSTANCE.getToDateOfHotelStay(stays.get(0)).equals(LocalDateTime.of(2015, 3, 10, 10, 0)));
+		assertTrue(IStays.INSTANCE.getFromDateOfHotelStay(stays.get(0)).equals(LocalDateTime.of(2015, 3, 4, 15, 0)));
+	}
+	
+	@Test
+	public void testMakeBooking_valid_parameters_responsiblecard_true_expects_stay_responsible_card_added() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables1 = new ArrayList<String>();
+		bookables1.add("202");
+		String bookingNbr = IBookings.INSTANCE.makeBooking(bookables1, "861104-0078", LocalDateTime.of(2015, 3, 4, 15, 0), LocalDateTime.of(2015, 3, 10, 10, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
+		List<String> stays = IBookings.INSTANCE.getBookedStaysOfBooking(bookingNbr);
+		assertTrue(IStays.INSTANCE.isResponsibleCreditCardAdded(stays.get(0)));
+	}
+	
+	@Test
+	public void testMakeBooking_valid_parameters_responsiblecard_false_expects_stay_responsible_card_not_added() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
 		List<String> bookables1 = new ArrayList<String>();
 		bookables1.add("202");
 		String bookingNbr = IBookings.INSTANCE.makeBooking(bookables1, "861104-0078", LocalDateTime.of(2015, 3, 4, 15, 0), LocalDateTime.of(2015, 3, 10, 10, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, false);
-		assertTrue(bookingNbr != null);
+		List<String> stays = IBookings.INSTANCE.getBookedStaysOfBooking(bookingNbr);
+		assertFalse(IStays.INSTANCE.isResponsibleCreditCardAdded(stays.get(0)));
 	}
-
-
+	
 	@Test
-	public void testSearchBookings() {
-		fail("Not yet implemented");
+	public void testMakeBooking_valid_parameters_responsiblecard_true_expects_customer_correct() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables1 = new ArrayList<String>();
+		bookables1.add("202");
+		String bookingNbr = IBookings.INSTANCE.makeBooking(bookables1, "861104-0078", LocalDateTime.of(2015, 3, 4, 15, 0), LocalDateTime.of(2015, 3, 10, 10, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
+		String customerID = IBookings.INSTANCE.getCustomerOfBooking(bookingNbr);
+		assertTrue(customerID.equals("861104-0078"));
+	}
+	
+	@Test
+	public void testMakeBooking_valid_parameters_responsiblecard_true_expects_booking_added_to_customer() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
+		List<String> bookables1 = new ArrayList<String>();
+		bookables1.add("202");
+		String bookingNbr = IBookings.INSTANCE.makeBooking(bookables1, "861104-0078", LocalDateTime.of(2015, 3, 4, 15, 0), LocalDateTime.of(2015, 3, 10, 10, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
+		assertTrue(ICustomers.INSTANCE.getCustomerBookings("861104-0078").contains(bookingNbr));
+	}
+	
+	@Test
+	public void testSearchBookings_exact_id_match_expects_first_element_in_result() {
+		List<String> result = IBookings.INSTANCE.searchBookings(booking1);
+		assertTrue(result.get(0).equals(booking1));
+		assertTrue(result.size() == 1);
+	}
+	
+	@Test
+	public void testSearchBookings_id_match_somewhat_expects_booking_in_result() {
+		List<String> result = IBookings.INSTANCE.searchBookings(booking1.substring(2));
+		assertTrue(result.contains(booking1));
+	}
+	
+	@Test
+	public void testSearchBookings_on_customer_id_expects_customer_bookings_found() {
+		List<String> result = IBookings.INSTANCE.searchBookings("861104-0058");
+		assertTrue(result.contains(booking5));
+		assertTrue(result.contains(booking6));
+	}
+	
+	@Test
+	public void testSearchBookings_on_part_of_customer_id_expects_customer_bookings_found() {
+		List<String> result = IBookings.INSTANCE.searchBookings("104");
+		assertTrue(result.contains(booking5));
+		assertTrue(result.contains(booking6));
 	}
 
 	@Test

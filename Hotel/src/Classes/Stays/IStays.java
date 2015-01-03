@@ -262,6 +262,38 @@ public interface IStays extends Serializable {
 	 * @generated NOT
 	 */
 	String getBookingOfHotelStay(String stayID) throws InvalidIDException;
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID
+	 * 			returns the from date of the stay
+	 * 		otherwise
+	 * 			InvalidIDException is received
+	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
+	 * @generated NOT
+	 */
+	LocalDateTime getFromDateOfHotelStay(String stayID) throws InvalidIDException;
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		stayID != null
+	 * Ensures:
+	 * 		if there exists a stay such that stay.id == stayID
+	 * 			returns the to date of the stay
+	 * 		otherwise
+	 * 			InvalidIDException is received
+	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
+	 * @generated NOT
+	 */
+	LocalDateTime getToDateOfHotelStay(String stayID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->

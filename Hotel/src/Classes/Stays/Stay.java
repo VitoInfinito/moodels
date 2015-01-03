@@ -181,6 +181,17 @@ public class Stay implements Serializable {
 	public void addBill(String billID) {
 		bills.add(billID);
 	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Adds a bill to the list of bills
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void removeBill(String billID) {
+		bills.remove(billID);
+	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
