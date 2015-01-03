@@ -132,32 +132,45 @@ public class IBookablesManageTest {
 
 	@Test
 	public void testAddHotelRoom() {
-		fail("Not yet implemented");
-		//TODO
+		String ID = "010";
+		boolean result = IBookablesManage.INSTANCE.getAllBookableIDs().contains(ID);
+		IBookablesManage.INSTANCE.addHotelRoom(ID, 5, "empty", 3, "hell", HotelRoomCategory.SUITE, 1);
+		result = !result && IBookablesManage.INSTANCE.getAllHotelRoomIDs().contains(ID);
+		assertTrue(result);
 	}
 
 	@Test
 	public void testAddHostelBed() {
-		fail("Not yet implemented");
-		//TODO
+		String ID = "010";
+		boolean result = IBookablesManage.INSTANCE.getAllBookableIDs().contains(ID);
+		IBookablesManage.INSTANCE.addHostelBed(ID, 1, "desc", "001");
+		result = !result && IBookablesManage.INSTANCE.getAllHostelBedIDs().contains(ID);
+		assertTrue(result);
 	}
 
 	@Test
 	public void testAddConferenceRoom() {
-		fail("Not yet implemented");
-		//TODO
+		String ID = "010";
+		boolean result = IBookablesManage.INSTANCE.getAllBookableIDs().contains(ID);
+		IBookablesManage.INSTANCE.addConferenceRoom(ID, 10000, "Conf", 100, "Heaven", ConferenceRoomCategory.OTHER, 100000);
+		result = !result && IBookablesManage.INSTANCE.getAllConferenceRoomIDs().contains(ID);
+		assertTrue(result);
 	}
 
 	@Test
 	public void testChangeHotelRoomNumberBeds() {
-		fail("Not yet implemented");
-		//TODO
+		String ID = "002";
+		IBookablesManage.INSTANCE.changeHotelRoomNumberBeds(ID, 1337);
+		boolean result = IBookablesManage.INSTANCE.getHotelRoomNbrBeds(ID) == 1337;
+		assertTrue(result);
 	}
 
 	@Test
 	public void testChangeConferenceRoomCapacity() {
-		fail("Not yet implemented");
-		//TODO
+		String ID = "005";
+		IBookablesManage.INSTANCE.changeConferenceRoomCapacity(ID, 1337);
+		boolean result = IBookablesManage.INSTANCE.getConferenceRoomCapacity(ID) == 1337;
+		assertTrue(result);
 	}
 
 }
