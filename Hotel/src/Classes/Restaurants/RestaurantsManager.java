@@ -205,7 +205,6 @@ import Classes.Utils.InvalidIDException;
 	 */
 	public void changeReservedTables(String restaurantID, String reservationID, List<String> tables) throws InvalidIDException {
 		getRestaurantByID(restaurantID).changeReservedTables(reservationID, tables);
-		Reservation reservation = getReservationByID(restaurantID, reservationID);
 	}
 
 	/**

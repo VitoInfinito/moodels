@@ -33,7 +33,6 @@ class Account implements Serializable {
 	 * @generated
 	 */
 	public void setAccountType(AccountType newAccountType) {
-		AccountType oldAccountType = accountType;
 		accountType = newAccountType == null ? ACCOUNT_TYPE_EDEFAULT : newAccountType;
 	}
 
@@ -52,7 +51,6 @@ class Account implements Serializable {
 	 * @generated
 	 */
 	public void setUsername(String newUsername) {
-		String oldUsername = username;
 		username = newUsername;
 	}
 
@@ -71,7 +69,6 @@ class Account implements Serializable {
 	 * @generated
 	 */
 	public void setPassword(String newPassword) {
-		String oldPassword = password;
 		password = newPassword;
 	}
 

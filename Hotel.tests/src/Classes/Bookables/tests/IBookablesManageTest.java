@@ -1,8 +1,9 @@
 package Classes.Bookables.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,9 +15,6 @@ import org.junit.Test;
 import Classes.Bookables.ConferenceRoomCategory;
 import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.IBookablesManage;
-import Classes.Bookings.IBookings;
-import Classes.Customers.ICustomers;
-import Classes.Stays.IStays;
 import Classes.Utils.InvalidIDException;
 
 public class IBookablesManageTest {

@@ -12,11 +12,9 @@ import javafx.stage.Stage;
 
 import org.controlsfx.dialog.Dialogs;
 
-import com.gaylord.MainApp;
-
-import Classes.Accounts.AccountType;
 import Classes.Accounts.IAccountsAccess;
-import Classes.Accounts.IManageAccounts;
+
+import com.gaylord.MainApp;
 
 public class LoginController {
 
