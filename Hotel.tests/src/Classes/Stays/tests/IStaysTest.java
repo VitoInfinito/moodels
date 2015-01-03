@@ -56,34 +56,46 @@ public class IStaysTest {
 			IBookablesManage.INSTANCE.deleteBookable(id);
 		}
 	}
-
+	
 	@Test
-	public void testCheckInGuest_customer_not_exist() {
+	public void testCheckInGuest_stay_and_guest_exist_expects_checked_in_guest() {
 		fail("Not yet implemented");
 	}
 	
-	@Test
-	public void testCheckInGuest_customer_exist() {
-		fail("Not yet implemented");
-	}
-	
-	@Test
-	public void testCheckInGuest_customer_already_checked_in() {
-		fail("Not yet implemented");
-	}
-	
-	@Test
-	public void testCheckInGuest_customer_already_checked_out() {
+	@Test(expected=InvalidIDException.class)
+	public void testCheckInGuest_guest_not_exist_expects_InvalidIDException() {
 		fail("Not yet implemented");
 	}
 
-	@Test
-	public void testChangeBookableOfStay_bookable_not_exists() {
+	@Test(expected=InvalidIDException.class)
+	public void testCheckInGuest_stay_not_exist_expects_InvalidIDException() {
 		fail("Not yet implemented");
 	}
 	
+	@Test(expected=InvalidIDException.class)
+	public void testCheckInGuest_guest_already_checked_in_() {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testCheckInGuest_guest_already_checked_out() {
+		fail("Not yet implemented");
+	}
+
+	
+	
 	@Test
-	public void testChangeBookableOfStay_bookable_exists() {
+	public void testChangeBookableOfStay_stay_and_bookable_exists_expects_bookable_set_to_stay() {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeBookableOfStay_bookable_not_exist_expects_InvalidIDException() {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeBookableOfStay_stay_not_exist_expects_InvalidIDException() {
 		fail("Not yet implemented");
 	}
 
