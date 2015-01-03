@@ -392,7 +392,12 @@ public class IStaysTest {
 	
 	
 	@Test
-	public void testChangePeriodOfStay() {
+	public void testChangePeriodOfStay_stay_exists_expects_time_period_of_stay_changed() {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangePeriodOfStay_stay_not_exist() throws InvalidIDException {
 		fail("Not yet implemented");
 	}
 
@@ -400,7 +405,17 @@ public class IStaysTest {
 	
 	
 	@Test
-	public void testRemoveBillFromStay() {
+	public void testRemoveBillFromStay_stay_and_bill_exists_expected_bill_removed_from_stay() {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testRemoveBillFromStay_bill_not_exist() throws InvalidIDException {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testRemoveBillFromStay_stay_not_exist() throws InvalidIDException {
 		fail("Not yet implemented");
 	}
 }
