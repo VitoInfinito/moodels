@@ -145,6 +145,10 @@ public interface IStays extends Serializable {
 	 * 			InvalidIDException is received
 	 * 		else if there does not exist a stay such that stay.id == stayID
 	 *			InvalidIDException is received
+	 *		else if guest is already checked out
+	 *			InvalidIDException is received
+	 *		else if guest is not checked in yet
+	 *			InvalidIDException is received
 	 * <!-- end-user-doc -->
 	 * @throws GuestNotCheckedInException 
 	 * @throws GuestAlreadyCheckedOutException 
@@ -168,11 +172,10 @@ public interface IStays extends Serializable {
 	 * 			The creditcard is added with its information is added to the stay
 	 * 		else if there does not exist a stay such that stay.id == stayID
 	 * 			InvalidIDException is received
-	 * 		else if there does exist a stay such that stay.id == stayID && the information ccNumber, ccv, expiryDate, expiryMonth, firstName and Lastname does not belong to  valid creditcard
+	 * 		else if there does exist a stay such that stay.id == stayID && the information ccNumber, ccv, expiryDate, expiryMonth, firstName and Lastname does not belong to valid creditcard
 	 * 			InvalidCreditCardException
 	 * <!-- end-user-doc -->
-	 * @throws SOAPException, InvalidCreditCardException
-	 * @throws InvalidIDException 
+	 * @throws InvalidIDException, InvalidCreditCardException, SOAPException
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
 	 * @generated NOT
 	 */
@@ -192,8 +195,7 @@ public interface IStays extends Serializable {
 	 * 		else if there does exist a stay such that stay.id == stayID && the information ccNumber, ccv, expiryDate, expiryMonth, firstName and Lastname does not belong to  valid creditcard
 	 * 			InvalidCreditCardException
 	 * <!-- end-user-doc -->
-	 * @throws SOAPException, InvalidCreditCardException
-	 * @throws InvalidIDException 
+	 * @throws SOAPException, InvalidCreditCardException, InvalidIDException
 	 * @model stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
 	 * @generated NOT
 	 */

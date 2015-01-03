@@ -8,6 +8,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.soap.SOAPException;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -18,6 +20,7 @@ import Classes.Bookables.IBookablesManage;
 import Classes.Bookings.IBookings;
 import Classes.Customers.ICustomers;
 import Classes.Stays.IStays;
+import Classes.Utils.InvalidCreditCardException;
 import Classes.Utils.InvalidIDException;
 
 public class IStaysTest {
@@ -58,12 +61,12 @@ public class IStaysTest {
 	}
 	
 	@Test
-	public void testCheckInGuest_stay_and_guest_exist_expects_checked_in_guest() {
+	public void testCheckInGuest_stay_exists_and_guest_exist_in_stay_expects_checked_in_guest() {
 		fail("Not yet implemented");
 	}
 	
 	@Test(expected=InvalidIDException.class)
-	public void testCheckInGuest_guest_not_exist() throws InvalidIDException {
+	public void testCheckInGuest_guest_not_exist_in_stay() throws InvalidIDException {
 		fail("Not yet implemented");
 	}
 
@@ -101,8 +104,6 @@ public class IStaysTest {
 
 	
 	
-	
-	
 	@Test
 	public void testAddNewStay_bookable_and_booking_exists_expects_stay_is_added() {
 		fail("Not yet implemented");
@@ -131,99 +132,215 @@ public class IStaysTest {
 		fail("Not yet implemented");
 	}
 
+	
+	
+	
 	@Test
-	public void testAddBillToStay() {
+	public void testAddBillToStay_stay_and_bill_exists_expects_bill_added_to_stay() {
 		fail("Not yet implemented");
 	}
-
-	@Test
-	public void testCheckOutGuest() {
+	
+	@Test(expected=InvalidIDException.class)
+	public void testAddBillToStay_bill_not_exist() throws InvalidIDException {
 		fail("Not yet implemented");
 	}
-
-	@Test
-	public void testAddResponsibleCreditCard() {
+	
+	@Test(expected=InvalidIDException.class)
+	public void testAddBillToStay_stay_not_exist() throws InvalidIDException {
 		fail("Not yet implemented");
 	}
+	
+	
+	
 
 	@Test
-	public void testChangeResponsibleCreditCard() {
+	public void testCheckOutGuest_stay_exists_and_guest_exists_in_stay_expects_guets_checked_out() {
 		fail("Not yet implemented");
 	}
-
+	
+	@Test(expected=InvalidIDException.class)
+	public void testCheckOutGuest_guest_not_exist_in_stay() throws InvalidIDException {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testCheckOutGuest_stay_not_exist() throws InvalidIDException {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testCheckOutGuest_guest_already_checked_out() throws InvalidIDException {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testCheckOutGuest_guest_not_checked_in() throws InvalidIDException {
+		fail("Not yet implemented");
+	}
+	
+	
+	
+	
+	@Test(expected=SOAPException.class)
+	public void testAddResponsibleCreditCard_no_connection_to_bank() throws SOAPException {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testAddResponsibleCreditCard_stay_exists_and_valid_creditcard_expects_card_added_to_stay() {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testAddResponsibleCreditCard_stay_not_exist() throws InvalidIDException {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidCreditCardException.class)
+	public void testAddResponsibleCreditCard_stay_exists_and_not_valid_creditcard() throws InvalidCreditCardException {
+		fail("Not yet implemented");
+	}
+	
+	
+	
+	
+	@Test(expected=SOAPException.class)
+	public void testChangeResponsibleCreditCard_no_connection_to_bank() throws SOAPException {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testChangeResponsibleCreditCard_stay_exists_and_valid_creditcard_expects_card_added_to_stay() {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeResponsibleCreditCard_stay_not_exist() throws InvalidIDException {
+		fail("Not yet implemented");
+	}
+	
+	@Test(expected=InvalidCreditCardException.class)
+	public void testChangeResponsibleCreditCard_stay_exists_and_not_valid_creditcard() throws InvalidCreditCardException {
+		fail("Not yet implemented");
+	}
+	
+	
+	
+	
 	@Test
 	public void testGetGuestsOfHotelStay() {
 		fail("Not yet implemented");
 	}
-
+	
+	
+	
+	
 	@Test
 	public void testGetBillsOfHotelStay() {
 		fail("Not yet implemented");
 	}
-
+	
+	
+	
+	
 	@Test
 	public void testGetBookableOfHotelStay() {
 		fail("Not yet implemented");
 	}
-
+	
+	
+	
+	
 	@Test
 	public void testGetBookingOfHotelStay() {
 		fail("Not yet implemented");
 	}
-
+	
+	
+	
+	
 	@Test
 	public void testGetAllHotelStayIDs() {
 		fail("Not yet implemented");
 	}
 
+	
+	
+	
 	@Test
 	public void testGetCheckedInGuestsOfHotelStay() {
 		fail("Not yet implemented");
 	}
 
+	
+	
+	
 	@Test
 	public void testGetCheckedOutGuestsOfHotelStay() {
 		fail("Not yet implemented");
 	}
 
+	
+	
+	
 	@Test
 	public void testSearchHotelStays() {
 		fail("Not yet implemented");
 	}
 
+	
+	
+	
 	@Test
 	public void testSearchHotelStaysWithinPeriod() {
 		fail("Not yet implemented");
 	}
 
+	
+	
+	
 	@Test
 	public void testGetAllHotelStaysWithinPeriod() {
 		fail("Not yet implemented");
 	}
 
+	
+	
+	
 	@Test
 	public void testGetAllUnpayedBillsOfHotelStay() {
 		fail("Not yet implemented");
 	}
 
+	
+	
+	
 	@Test
 	public void testBillCreditCardWithAllUnpaidBillsOfHotelStay() {
 		fail("Not yet implemented");
 	}
 
+	
+	
+	
 	@Test
 	public void testIsResponsibleCreditCardAdded() {
 		fail("Not yet implemented");
 	}
 
+	
+	
+	
 	@Test
 	public void testChangePeriodOfStay() {
 		fail("Not yet implemented");
 	}
 
+	
+	
+	
 	@Test
 	public void testRemoveBillFromStay() {
 		fail("Not yet implemented");
 	}
-
 }
