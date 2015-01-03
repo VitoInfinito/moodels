@@ -40,9 +40,9 @@ public interface IStays extends Serializable {
 	 * Requires:
 	 * 		stayID != null && guestID != null
 	 * Ensures:
-	 * 		if there exists a stay such that stay.id == stayID && there exists a guest in that stay such that guest.id == guestID
+	 * 		if there exists a stay such that stay.id == stayID && there exists a guest such that guest.id == guestID
 	 * 			Guest is checked in to the stay
-	 * 		else if there exists a stay such that stay.id == stayID && there does not exist a guest in that stay such that guest.id == guestID
+	 * 		else if there exists a stay such that stay.id == stayID && there does not exist a guest such that guest.id == guestID
 	 * 			InvalidIDException is received
 	 * 		else if there does not exist a stay such that stay.id == stayID
 	 * 			InvalidIDException is received
