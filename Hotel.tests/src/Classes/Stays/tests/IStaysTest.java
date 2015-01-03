@@ -80,15 +80,13 @@ public class IStaysTest {
 	}
 	
 	@Test(expected=InvalidIDException.class)
-	public void testCheckInGuest_guest_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testCheckInGuest_guest_not_exist() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "666666-6666");
 	}
 
 	@Test(expected=InvalidIDException.class)
-	public void testCheckInGuest_stay_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testCheckInGuest_stay_not_exist() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest("thisshalltntexist", "666666-6666");
 	}
 	
 	@Test(expected=ResponsibleCreditCardNotAddedException.class)
