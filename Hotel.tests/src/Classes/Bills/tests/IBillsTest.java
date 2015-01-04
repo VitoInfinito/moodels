@@ -107,12 +107,12 @@ public class IBillsTest {
 	public void testGetBillPaymentDate() {
 		removeAllBills();
 		
-		LocalDateTime a = LocalDateTime.of(1991, 11, 30, 0, 0);
-		LocalDateTime b = LocalDateTime.of(2000, 11, 30, 0, 0);
+		LocalDateTime a = LocalDateTime.of(2014, 11, 30, 0, 0);
+		LocalDateTime b = LocalDateTime.of(2015, 11, 30, 0, 0);
 		
 		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, a, b, 0.9);
-	
-		assertTrue(IBills.INSTANCE.getBillPaymentDate(IBills.INSTANCE.getAllBillIDs().get(0)).equals(b));
+		
+		assertTrue(IBills.INSTANCE.getBillPaymentDate(IBills.INSTANCE.getAllBillIDs().get(0)).isEqual(b));
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -230,12 +230,12 @@ public class IBillsTest {
 	public void testGetBillIssueDate() {
 		removeAllBills();
 		
-		LocalDateTime a = LocalDateTime.of(1991, 11, 30, 0, 0);
-		LocalDateTime b = LocalDateTime.of(2000, 11, 30, 0, 0);
+		LocalDateTime a = LocalDateTime.of(2013, 11, 30, 0, 0);
+		LocalDateTime b = LocalDateTime.of(2015, 11, 30, 0, 0);
 		
 		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, a, b, 0.9);
 		
-		assertTrue(IBills.INSTANCE.getBillIssueDate(IBills.INSTANCE.getAllBillIDs().get(0)).equals(a));
+		assertTrue(IBills.INSTANCE.getBillIssueDate(IBills.INSTANCE.getAllBillIDs().get(0)).isEqual(LocalDateTime.now()));
 	}
 	
 	@Test(expected=InvalidIDException.class)

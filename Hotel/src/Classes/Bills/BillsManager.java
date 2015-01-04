@@ -94,7 +94,7 @@ class BillsManager implements IBills {
 	 */
 	public LocalDateTime getBillPaymentDate(String billID) throws InvalidIDException {
 		if (bills.containsKey(billID)) {
-			return bills.get(billID).getIssueDate();
+			return bills.get(billID).getPaymentDate();
 		} else {
 			logger.warn("A bill with id {} could not be found.", billID);
 			throw new InvalidIDException();
@@ -190,6 +190,7 @@ class BillsManager implements IBills {
 		
 		bill.setId(ID);
 		bill.setIsPaid(false);
+		bill.setPaymentDate(to);
 		bill.setIssueDate(LocalDateTime.now());
 		bill.setDiscount(discount);
 		
