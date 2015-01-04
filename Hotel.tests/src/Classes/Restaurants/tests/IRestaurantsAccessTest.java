@@ -214,8 +214,7 @@ public class IRestaurantsAccessTest {
 		
 		IRestaurantsManage.INSTANCE.changeReservedTables("testaurant", reservationID, tables);
 		
-		// TODO		SOMETHING TO ASSERT, BUT WHAT? CAN WE GET RESERVED TABLES FOR A RESERVATION?
-		assertTrue(false);
+		assertTrue(IRestaurantsManage.INSTANCE.getReservationTables("testaurant", reservationID).size() == 1);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -229,11 +228,27 @@ public class IRestaurantsAccessTest {
 	}
 	
 	@Test(expected=InvalidIDException.class)
-	public void testChangeReservedTablesNotExists_throwsException() {
+	public void testChangeReservedTables_reservationNotExists_throwsException() {
 		ArrayList<String> tables = new ArrayList<String>();
 		tables.add("1");
 		
 		IRestaurantsManage.INSTANCE.changeReservedTables("apabepacepa", "", tables);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetReservationTables_notExists_throwsException() {
+		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
+		IRestaurantsManage.INSTANCE.getReservationTables("", reservationID);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetReservationTables_reservationNotExists_throwsException() {
+		IRestaurantsManage.INSTANCE.getReservationTables("testaurant", "");
+	}
+	
+	public void testGetReservationTables() {
+		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
+		assertTrue(IRestaurantsManage.INSTANCE.getReservationTables("testaurant", reservationID).size() == 2);
 	}
 
 	@Test
