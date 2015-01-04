@@ -22,6 +22,8 @@ public class IRestaurantsAccessTest {
 	public void setUp() throws Exception {
 		IRestaurantsManage.INSTANCE.addRestaurant("testaurant");
 		
+		IRestaurantsManage.INSTANCE.changeMenuName("testaurant", "The Menu");
+		
 		IRestaurantsManage.INSTANCE.addRestaurantTable("testaurant", 4, "1");
 		IRestaurantsManage.INSTANCE.addRestaurantTable("testaurant", 6, "2");
 		
@@ -119,14 +121,17 @@ public class IRestaurantsAccessTest {
 
 	@Test
 	public void testGetRestaurantMenuName() {
-		//TODO
-		fail("Not yet implemented");
+		assertTrue(IRestaurantsManage.INSTANCE.getRestaurantMenuName("testaurant") == "The Menu");
+	}
+	
+	@Test
+	public void testGetRestaurantMenuName_notExists_throwsException() {
+		IRestaurantsManage.INSTANCE.getRestaurantMenuName("");
 	}
 
 	@Test
 	public void testGetAllRestaurantNames() {
-		//TODO
-		fail("Not yet implemented");
+		assertTrue(IRestaurantsManage.INSTANCE.getAllRestaurantNames().size() == 1);
 	}
 
 	@Test
@@ -155,14 +160,34 @@ public class IRestaurantsAccessTest {
 
 	@Test
 	public void testCancelReservation() {
-		//TODO
-		fail("Not yet implemented");
+		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
+		IRestaurantsManage.INSTANCE.cancelReservation("testaurant", reservationID);
+		
+		assertTrue(IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").size() == 1);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testCancelReservation_notExists_throwsException(){
+		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
+		IRestaurantsManage.INSTANCE.cancelReservation("apabepacepa", reservationID);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testCancelReservation_reservationNotExists_throwsException() {
+		IRestaurantsManage.INSTANCE.cancelReservation("testaurant", "");
 	}
 
 	@Test
 	public void testChangeReservedTables() {
-		//TODO
-		fail("Not yet implemented");
+		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
+		
+		ArrayList<String> tables = new ArrayList<String>();
+		tables.add("1");
+		
+		IRestaurantsManage.INSTANCE.changeReservedTables("testaurant", reservationID, tables);
+		
+		// TODO		SOMETHING TO ASSERT, BUT WHAT?
+		assertTrue(false);
 	}
 
 	@Test
