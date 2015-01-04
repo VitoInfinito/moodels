@@ -5,14 +5,17 @@ import static org.junit.Assert.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.List;
 
+import javax.xml.soap.SOAPException;
+
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import Classes.Bills.IBills;
-import Classes.Inventory.IInventoryAccess;
+import Classes.Utils.InsufficientFundsException;
+import Classes.Utils.InvalidCreditCardException;
 import Classes.Utils.InvalidIDException;
 
 public class IBillsTest {
@@ -21,6 +24,13 @@ public class IBillsTest {
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+			//AdministratorRequires bankingAdmin = AdministratorRequires.instance();
+			//bankingAdmin.addCreditCard("12345678", "234", 3, 17, "Adolf","Eriksson");
+	}
+		@AfterClass
+		public static void tearDownAfterClass() throws Exception {
+			//AdministratorRequires bankingAdmin = AdministratorRequires.instance();
+			//bankingAdmin.removeCreditCard("12345678", "234", 3, 17, "Adolf","Eriksson");
 	}
 
 	@Before
@@ -87,9 +97,12 @@ public class IBillsTest {
 	public void testGetBillPaymentDate() {
 		removeAllBills();
 		
-		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, LocalDateTime.parse("2014-10-19 08:00", formatter), LocalDateTime.parse("2014-10-19 09:00", formatter), 0.9);
+		LocalDateTime a = LocalDateTime.of(1991, 11, 30, 0, 0);
+		LocalDateTime b = LocalDateTime.of(2000, 11, 30, 0, 0);
+		
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, a, b, 0.9);
 	
-		assertTrue(IBills.INSTANCE.getBillPaymentDate(IBills.INSTANCE.getAllBillIDs().get(0)).equals(LocalDateTime.parse("2014-10-19 09:00", formatter)));
+		assertTrue(IBills.INSTANCE.getBillPaymentDate(IBills.INSTANCE.getAllBillIDs().get(0)).equals(b));
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -132,19 +145,19 @@ public class IBillsTest {
 	}
 
 	@Test
-	public void testPayBillsWithCreditCard() {
+	public void testPayBillsWithCreditCard() throws SOAPException, InvalidCreditCardException, InsufficientFundsException {
 		removeAllBills();
 		
 		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
 		
-		//IBills.INSTANCE.payBillsWithCreditCard(IBills.INSTANCE.getAllBillIDs(), ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName);
+		//IBills.INSTANCE.payBillsWithCreditCard(IBills.INSTANCE.getAllBillIDs(), "12345678", "234", 3, 17, "Adolf", "Eriksson");
 		
 		assertTrue(IBills.INSTANCE.getAllBillsNotPaid().size() == 0);
 	}
 
 	@Test
 	public void testGetBillItems() {
-		//TODO
+		fail("Not yet implemented");
 	}
 	
 	@Test
@@ -169,21 +182,62 @@ public class IBillsTest {
 
 	@Test
 	public void testGetBillBookable() {
-		fail("Not yet implemented");
+		removeAllBills();
+		
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), "Bookable", null, null, 0.9);
+		
+		assertTrue(IBills.INSTANCE.getBillBookable(IBills.INSTANCE.getAllBillIDs().get(0)) == "Bookable");
+	}
+	
+	@Test
+	public void testGetBillBookable_expects_null() {
+		removeAllBills();
+		
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		
+		assertTrue(IBills.INSTANCE.getBillBookable(IBills.INSTANCE.getAllBillIDs().get(0)) == null);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetBillBookable_expects_exception() {
+		IBills.INSTANCE.getBillBookable("ASD");
 	}
 
 	@Test
 	public void testGetBillServices() {
 		fail("Not yet implemented");
 	}
+	
+	@Test
+	public void testGetBillServices_excpets_noItems() {
+		removeAllBills();
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		
+		int count = IBills.INSTANCE.getBillServices(IBills.INSTANCE.getAllBillIDs().get(0)).size();
+		
+		assertTrue(count == 0);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetBillServices_excpets_exception() {
+		removeAllBills();
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		
+		int count = IBills.INSTANCE.getBillServices("nein").size();
+		
+		assertTrue(count == 0);
+	}
 
 	@Test
 	public void testGetBillIssueDate() {
 		removeAllBills();
 		
-		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, LocalDateTime.parse("2014-10-19 08:00", formatter), LocalDateTime.parse("2014-10-19 09:00", formatter), 0.9);
+		LocalDateTime a = LocalDateTime.of(1991, 11, 30, 0, 0);
+		LocalDateTime b = LocalDateTime.of(2000, 11, 30, 0, 0);
 		
-		assertTrue(IBills.INSTANCE.getBillPaymentDate(IBills.INSTANCE.getAllBillIDs().get(0)).equals(LocalDateTime.parse("2014-10-19 08:00", formatter)));
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, a, b, 0.9);
+		
+		assertTrue(IBills.INSTANCE.getBillIssueDate(IBills.INSTANCE.getAllBillIDs().get(0)).equals(a));
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -225,6 +279,30 @@ public class IBillsTest {
 		removeAllBills();
 		
 		assertTrue(IBills.INSTANCE.getAllBillIDs().size() == 0);
+	}
+	
+	@Test
+	public void testRemoveBill_expects_oneBillLeft() {
+		removeAllBills();
+		
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		
+		IBills.INSTANCE.removeBill(IBills.INSTANCE.getAllBillIDs().get(0));
+		
+		assertTrue(IBills.INSTANCE.getAllBillIDs().size() == 1);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testRemoveBill_expects_exception() {
+		removeAllBills();
+		
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		
+		IBills.INSTANCE.removeBill("aslkdh");
+		
+		assertTrue(IBills.INSTANCE.getAllBillIDs().size() == 1);
 	}
 
 	@Test
