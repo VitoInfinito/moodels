@@ -144,7 +144,7 @@ import Classes.Utils.InvalidIDException;
 		// Some property match somewhat. Fourth Order.
 		for (Request sp : tmpC) {
 			if (regexPattern.matcher(sp.getDescription()).matches()) {
-				searchResult.add(sp.getDescription());
+				searchResult.add(sp.getId());
 			}
 		}
 		
