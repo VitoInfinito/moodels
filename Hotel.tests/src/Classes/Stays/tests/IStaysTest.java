@@ -1,7 +1,6 @@
 package Classes.Stays.tests;
 
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

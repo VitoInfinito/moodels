@@ -4,8 +4,6 @@ package Classes.Stays;
 
 import java.io.Serializable;
 
-import Classes.Utils.CreditCard;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Factory</b>.
