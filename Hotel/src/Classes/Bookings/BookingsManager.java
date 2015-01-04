@@ -601,7 +601,12 @@ public class BookingsManager implements IBookings {
 	 * @generated NOT
 	 */
 	public List<String> getBookingRequests(String bookingID) {
-		return new ArrayList<String>(bookings.get(bookingID).getRequests());
+		if (bookings.containsKey(bookingID)) {
+			return new ArrayList<String>(bookings.get(bookingID).getRequests());
+		} else {
+			logger.warn("A booking with bookingID {} could not be found.", bookingID);
+			throw new InvalidIDException();
+		}
 	}
 
 	/**

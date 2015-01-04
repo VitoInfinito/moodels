@@ -669,11 +669,38 @@ public class IBookingsTest {
 		CustomerRequires.instance().makePayment("34336534", "655", 10, 18, "Greger","Gregersson", AdministratorRequires.instance().getBalance("34336534", "655", 10, 18, "Greger","Gregersson"));
 	}
 
-	@Test
-	public void testPayStayBills() {
-		fail("Not yet implemented");
+	@Test(expected=InsufficientFundsException.class)
+	public void testPayStayBills_insufficient_funds_expects_exception() throws InvalidIDException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		IBookings.INSTANCE.payStayBills(booking2, IBookings.INSTANCE.getBookedStaysOfBooking(booking2).get(0));
 	}
-
+	
+	
+	@Test(expected=InvalidIDException.class)
+	public void testPayStayBills_invalid_booking_expects_exception() throws InvalidIDException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		IBookings.INSTANCE.payStayBills("finnsej", IBookings.INSTANCE.getBookedStaysOfBooking(booking2).get(0));
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testPayStayBills_invalid_stay_expects_exception() throws InvalidIDException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		IBookings.INSTANCE.payStayBills(booking2, "finnsej");
+	}
+	
+	@Test
+	public void testPayStayBills_sufficient_funds_expects_bills_payed() throws InvalidIDException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		AdministratorRequires.instance().makeDeposit("34336534", "655", 10, 18, "Greger","Gregersson", 100000);
+		List<String> stays = IBookings.INSTANCE.getBookedStaysOfBooking(booking2);
+		List<String> bills = new ArrayList<String>();
+		bills.addAll(IStays.INSTANCE.getAllUnpayedBillsOfHotelStay(stays.get(0)));
+		IBookings.INSTANCE.payStayBills(booking2, stays.get(0));
+		assertTrue(AdministratorRequires.instance().getBalance("34336534", "655", 10, 18, "Greger","Gregersson") < 100000);
+		for (String bill : bills) {
+			assertTrue(IBills.INSTANCE.getIsBillPaid(bill));
+		}
+		// Cleanup
+		CustomerRequires.instance().makePayment("34336534", "655", 10, 18, "Greger","Gregersson", AdministratorRequires.instance().getBalance("34336534", "655", 10, 18, "Greger","Gregersson"));
+	}
+	
+	
 	@Test
 	public void testSearchForAvailableHotelRoomsInPeriod() {
 		fail("Not yet implemented");
