@@ -1,14 +1,13 @@
 package Classes.Services.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import Classes.Feedback.IFeedback;
-import Classes.Services.IServicesAccess;
 import Classes.Services.IServicesManager;
 
 public class IServicesAccessTest {

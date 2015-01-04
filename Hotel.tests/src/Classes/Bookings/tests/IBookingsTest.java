@@ -1,6 +1,8 @@
 package Classes.Bookings.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -13,7 +15,6 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.omg.CORBA.IntHolder;
 
 import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires;
 import Classes.Bills.IBills;
