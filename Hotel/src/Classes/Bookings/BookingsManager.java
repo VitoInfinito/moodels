@@ -299,6 +299,11 @@ public class BookingsManager implements IBookings {
 			booking.cancelBookedStay(stay);
 			iHotelStayManager.removeStay(stay);
 		}
+		
+		for (String request : booking.getRequests()) {
+			iRequests.deleteRequest(request);
+		}
+
 
 		bookings.remove(bookingID);
 	}

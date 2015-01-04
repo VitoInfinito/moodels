@@ -6,6 +6,7 @@ import static org.junit.Assert.fail;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.xml.soap.SOAPException;
@@ -366,13 +367,50 @@ public class IBookingsTest {
 	}
 
 	@Test
-	public void testCancelBooking() {
-		fail("Not yet implemented");
+	public void testCancelBooking_expects_stays_requests_booking_removed() {
+		List<String> stays = IBookings.INSTANCE.getBookedStaysOfBooking(booking3);
+		String reqID = IRequests.INSTANCE.addRequest("korv");
+		IBookings.INSTANCE.addBookingRequest(booking2, reqID);
+		List<String> requests = IBookings.INSTANCE.getBookingRequests(booking3);
+		IBookings.INSTANCE.cancelBooking(booking3);
+		assertFalse(IBookings.INSTANCE.getAllBookings().contains(booking3));
+		assertTrue(Collections.disjoint(IStays.INSTANCE.getAllHotelStayIDs(), stays));
+		assertTrue(Collections.disjoint(IRequests.INSTANCE.getAllRequestIDs(), requests));
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testCancelBooking_invalid_booking_expects_exception() {
+		IBookings.INSTANCE.cancelBooking("someid");
 	}
 
 	@Test
-	public void testCancelStayOfBooking() {
-		fail("Not yet implemented");
+	public void testCancelStayOfBooking_more_stays_expects_stay_removed() {
+		String stay = IBookings.INSTANCE.getBookedStaysOfBooking(booking3).get(0);
+		IBookings.INSTANCE.cancelStayOfBooking(booking3, stay);
+		assertFalse(IBookings.INSTANCE.getBookedStaysOfBooking(booking3).contains(stay));
+		assertFalse(IStays.INSTANCE.getAllHotelStayIDs().contains(stay));
+	}
+	
+	@Test
+	public void testCancelStayOfBooking_one_stay_expects_stays_requests_booking_removed() {
+		String stay = IBookings.INSTANCE.getBookedStaysOfBooking(booking2).get(0);
+		String reqID = IRequests.INSTANCE.addRequest("korv");
+		IBookings.INSTANCE.addBookingRequest(booking2, reqID);
+		List<String> requests = IBookings.INSTANCE.getBookingRequests(booking2);
+		IBookings.INSTANCE.cancelStayOfBooking(booking2, stay);
+		assertFalse(IBookings.INSTANCE.getAllBookings().contains(booking2));
+		assertFalse(IStays.INSTANCE.getAllHotelStayIDs().contains(stay));
+		assertTrue(Collections.disjoint(IRequests.INSTANCE.getAllRequestIDs(), requests));
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testCancelStayOfBooking_invalid_booking_expects_exception() {
+		IBookings.INSTANCE.cancelStayOfBooking("finnsej", IBookings.INSTANCE.getBookedStaysOfBooking(booking2).get(0));
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testCancelStayOfBooking_invalid_stay_expects_exception() {
+		IBookings.INSTANCE.cancelStayOfBooking(booking2, "finnsej");
 	}
 
 	@Test
@@ -591,9 +629,60 @@ public class IBookingsTest {
 	}
 
 	@Test
-	public void testGetAvailableBookablesInPeriod() {
-		fail("Not yet implemented");
+	public void testGetAvailableBookablesInPeriod_period_intersects_expects_non_intersecting_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableBookablesInPeriod(from, to);
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("202"));
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.contains("655"));
+		assertTrue(bookables.size() == 5);
 	}
+	
+	@Test
+	public void testGetAvailableBookablesInPeriod_period_overlaps_expects_expects_non_intersecting_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableBookablesInPeriod(from, to);
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("202"));
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.contains("655"));
+		assertTrue(bookables.size() == 5);
+	}
+	
+	
+	@Test
+	public void testGetAvailableBookablesInPeriod_period_does_not_intersect_expects_all_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableBookablesInPeriod(from, to);
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("202"));
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.contains("653"));
+		assertTrue(bookables.contains("654"));
+		assertTrue(bookables.contains("655"));
+		assertTrue(bookables.contains("23"));
+		assertTrue(bookables.contains("24"));
+		assertTrue(bookables.contains("25"));
+		assertTrue(bookables.size() == 10);
+	}
+	
+	@Test
+	public void testGetAvailableBookablesInPeriod_period_overlaps_all_bookings_expects_all_unbooked_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 1, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 1, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableBookablesInPeriod(from, to);
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.contains("655"));
+		assertTrue(bookables.size() == 2);
+	}
+	
 
 	@Test
 	public void testAddBookingRequest_expects_request_added() {
