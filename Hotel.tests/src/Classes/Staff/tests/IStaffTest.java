@@ -165,8 +165,13 @@ public class IStaffTest {
 
 	@Test
 	public void testChangeStaffSalaryContract() {
-		// TODO
-		fail("Not yet implemented");
+		IStaff.INSTANCE.changeStaffSalaryContract("010101-0101", "Monthly");
+		assertTrue(IStaff.INSTANCE.getStaffSalaryContractType("010101-0101") == "Monthly");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeStaffSalaryContract_id_not_exists() {
+		IStaff.INSTANCE.getStaffSalaryContractType("");
 	}
 
 	@Test

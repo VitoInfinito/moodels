@@ -233,10 +233,10 @@ public interface IStaff extends Serializable {
 	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		id != null
-	 * 		contract != null
+	 * 		salaryContractType != null
 	 * Ensures:
 	 * 		if there exists a staff such that staff.ssid == ssid
-	 * 			the contract of the staff is set to contract
+	 * 			the contract type of the staff is set to salaryContractType
 	 * 		otherwise
 	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
@@ -244,7 +244,7 @@ public interface IStaff extends Serializable {
 	 * @model SSIDRequired="true" SSIDOrdered="false" salaryContractRequired="true" salaryContractOrdered="false"
 	 * @generated
 	 */
-	void changeStaffSalaryContract(String SSID, SalaryContract salaryContract) throws InvalidIDException;
+	void changeStaffSalaryContract(String SSID, String salaryContractType) throws InvalidIDException;
 	
 	/**
 	 * <!-- begin-user-doc -->

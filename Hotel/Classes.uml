@@ -1621,7 +1621,9 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_34H_kHvFEeSLvtP7wKaE3g" name="SSID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5Ru20HvFEeSLvtP7wKaE3g" name="salaryContract" type="_w9N34XpsEeST-65JbGUt8g"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5Ru20HvFEeSLvtP7wKaE3g" name="salaryContract">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_w9N3wXpsEeST-65JbGUt8g" name="scheduleStaff">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_yU52YH_dEeS5IpkkkJsVew" name="from">
