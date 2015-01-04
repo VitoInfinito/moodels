@@ -95,7 +95,7 @@ public class IStaysTest {
 		String booking1 = IBookings.INSTANCE.makeBooking(bookableList1, "760911-0078", LocalDateTime.of(2015, 1, 1, 15, 0), LocalDateTime.of(2016, 1, 5, 10, 0), 4, "12342352", "523", 9, 17, "Alfred","Johansson", 0, true);
 		String booking2 = IBookings.INSTANCE.makeBooking(bookableList2, "760911-0078", LocalDateTime.of(2016, 1, 6, 15, 0), LocalDateTime.of(2017, 4, 18, 10, 0), 2, "12342352", "523", 9, 17, "Alfred","Johansson", 0.2, false);
 		String booking3 = IBookings.INSTANCE.makeBooking(bookableList3, "750411-0068", LocalDateTime.of(2015, 1, 4, 15, 0), LocalDateTime.of(2017, 4, 20, 10, 0), 2, "23453262", "833", 7, 18, "Sigurd","Matsson", 0.2, true);
-		String booking4 = IBookings.INSTANCE.makeBooking(bookableList4, "930607-0098", LocalDateTime.of(2015, 1, 3, 15, 0), LocalDateTime.of(2017, 4, 22, 10, 0), 2, "34563532", "831", 11, 19, "Yvar","Svensson", 0, false);
+		String booking4 = IBookings.INSTANCE.makeBooking(bookableList4, "930607-0098", LocalDateTime.of(2015, 1, 1, 15, 0), LocalDateTime.of(2015, 1, 2, 10, 0), 2, "34563532", "831", 11, 19, "Yvar","Svensson", 0, false);
 		String booking5 = IBookings.INSTANCE.makeBooking(bookableList5, "861008-0028", LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 23, 17, 0), 4, "45565426", "892", 1, 17, "Anders","Hallgren", 0.2, true);
 		String booking6 = IBookings.INSTANCE.makeBooking(bookableList6, "861008-0028", LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 22, 17, 0), 6, "45565426", "892", 1, 17, "Anders","Hallgren", 0, false);
 		
@@ -103,7 +103,7 @@ public class IStaysTest {
 		stay1 = IStays.INSTANCE.addNewStay("402", booking1, LocalDateTime.of(2015, 1, 1, 15, 0), LocalDateTime.of(2016, 1, 5, 10, 0));
 		stay2 = IStays.INSTANCE.addNewStay("402", booking2, LocalDateTime.of(2016, 1, 6, 15, 0), LocalDateTime.of(2017, 4, 18, 10, 0));
 		stay3 = IStays.INSTANCE.addNewStay("301", booking3, LocalDateTime.of(2015, 1, 4, 15, 0), LocalDateTime.of(2017, 4, 20, 10, 0));
-		stay4 = IStays.INSTANCE.addNewStay("302", booking4, LocalDateTime.of(2015, 1, 3, 15, 0), LocalDateTime.of(2017, 4, 22, 10, 0));
+		stay4 = IStays.INSTANCE.addNewStay("302", booking4, LocalDateTime.of(2015, 1, 1, 15, 0), LocalDateTime.of(2015, 1, 2, 10, 0));
 		stay5 = IStays.INSTANCE.addNewStay("503", booking5, LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 23, 17, 0));
 		stay6 = IStays.INSTANCE.addNewStay("601", booking6, LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 22, 17, 0));
 		
@@ -174,28 +174,30 @@ public class IStaysTest {
 		IStays.INSTANCE.checkInGuest(stay1, "760911-0078");
 	}
 	
-	/*@Test(expected=GuestAlreadyCheckedOutException.class)
-	public void testCheckInGuest_guest_already_checked_out() throws GuestAlreadyCheckedOutException {
-		fail("Not yet implemented");
-		//TODO make test
+	@Test(expected=GuestAlreadyCheckedOutException.class)
+	public void testCheckInGuest_guest_already_checked_out() throws GuestAlreadyCheckedOutException, InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestNotCheckedInException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		IStays.INSTANCE.checkInGuest(stay1, "760911-0078");
+		IStays.INSTANCE.checkOutGuest(stay1, "760911-0078");
+		IStays.INSTANCE.checkInGuest(stay1, "760911-0078");
 	}
 	
 	@Test(expected=InvalidCheckInDateException.class)
-	public void testCheckInGuest_check_in_before_check_in_time() throws InvalidCheckInDateException {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testCheckInGuest_check_in_before_check_in_time() throws InvalidCheckInDateException, InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay2, "760911-0078");
 	}
 	
 	@Test(expected=InvalidCheckInDateException.class)
-	public void testCheckInGuest_check_in_after_check_out_time() throws InvalidCheckInDateException {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testCheckInGuest_check_in_after_check_out_time() throws InvalidCheckInDateException, InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay4, "760911-0078");
 	}
 
 	@Test(expected=StayAlreadyFullyCheckedInException.class)
-	public void testCheckInGuest_exceed_amount_of_checked_in_guests() throws StayAlreadyFullyCheckedInException {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testCheckInGuest_exceed_amount_of_checked_in_guests() throws StayAlreadyFullyCheckedInException, InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "760911-0078");
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkInGuest(stay1, "930607-0098");
+		IStays.INSTANCE.checkInGuest(stay1, "760913-0094");
+		IStays.INSTANCE.checkInGuest(stay1, "760914-0022");
 	}
 	
 	
@@ -207,7 +209,7 @@ public class IStaysTest {
 		//TODO make test
 	}
 	
-	@Test(expected=InvalidIDException.class)
+	/*@Test(expected=InvalidIDException.class)
 	public void testChangeBookableOfStay_bookable_not_exist() throws InvalidIDException {
 		fail("Not yet implemented");
 		//TODO make test
