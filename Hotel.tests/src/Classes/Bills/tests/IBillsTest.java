@@ -138,8 +138,11 @@ public class IBillsTest {
 	}
 
 	@Test
-	public void testSearchBills() {
-		fail("Not yet implemented");
+	public void testSearchBills_expect_empty() {
+		removeAllBills();
+		
+		boolean result = IBills.INSTANCE.searchBills("LOL2k2k2k2kk2k2").isEmpty();
+		assertTrue(result);
 	}
 
 	@Test
@@ -185,13 +188,13 @@ public class IBillsTest {
 		assertTrue(count == 0);
 	}
 
-	@Test
-	public void testGetBillBookable() {
+	@Test(expected=InvalidIDException.class)
+	public void testGetBillBookable_expects_exception() {
 		removeAllBills();
 		
-		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), "Bookable", null, null, 0.9);
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), "202", null, null, 0.9);
 		
-		assertTrue(IBills.INSTANCE.getBillBookable(IBills.INSTANCE.getAllBillIDs().get(0)) == "Bookable");
+		assertTrue(IBills.INSTANCE.getBillBookable(IBills.INSTANCE.getAllBillIDs().get(0)).equals("202"));
 	}
 	
 	@Test
@@ -201,11 +204,6 @@ public class IBillsTest {
 		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
 		
 		assertTrue(IBills.INSTANCE.getBillBookable(IBills.INSTANCE.getAllBillIDs().get(0)) == null);
-	}
-	
-	@Test(expected=InvalidIDException.class)
-	public void testGetBillBookable_expects_exception() {
-		IBills.INSTANCE.getBillBookable("ASD");
 	}
 	
 	@Test
