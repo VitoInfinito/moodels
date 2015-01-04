@@ -23,18 +23,18 @@ public class IBookablesAccessTest {
 
 	@Before
 	public void setUp() throws Exception {
-		String bookableID = IBookablesManage.INSTANCE.addHotelRoom("001", 100, "desc for hotelroom 1", 1, "info", HotelRoomCategory.STANDARD_ROOM, 2);
+		String bookableID = IBookablesManage.INSTANCE.addHotelRoom("001", 100, "desc for hotelroom 1", 1, "info1", HotelRoomCategory.STANDARD_ROOM, 2);
 		List<String> bookableList1 = new ArrayList<String>();
 		bookableList1.add(bookableID);
-		bookableID = IBookablesManage.INSTANCE.addHotelRoom("002", 200, "desc for hotelroom 2", 1, "info", HotelRoomCategory.FAMILY_ROOM, 4);
+		bookableID = IBookablesManage.INSTANCE.addHotelRoom("002", 200, "desc for hotelroom 2", 1, "info2", HotelRoomCategory.FAMILY_ROOM, 4);
 		bookableList1.add(bookableID);
-		bookableID = IBookablesManage.INSTANCE.addHotelRoom("003", 200, "desc for hotelroom 3", 1, "info", HotelRoomCategory.SUITE, 6);
+		bookableID = IBookablesManage.INSTANCE.addHotelRoom("003", 200, "desc for hotelroom 3", 1, "info3", HotelRoomCategory.SUITE, 6);
 		bookableList1.add(bookableID);
-		bookableID = IBookablesManage.INSTANCE.addHotelRoom("004", 200, "desc for hotelroom 3", 1, "info", HotelRoomCategory.SUITE, 6);
+		bookableID = IBookablesManage.INSTANCE.addHotelRoom("004", 200, "desc for hotelroom 3", 1, "info4", HotelRoomCategory.SUITE, 6);
 		bookableList1.add(bookableID);
-		bookableID = IBookablesManage.INSTANCE.addConferenceRoom("005", 1, "desc of conferenceroom", 3, "info", ConferenceRoomCategory.LECTURE_ROOM, 100);
+		bookableID = IBookablesManage.INSTANCE.addConferenceRoom("005", 1, "desc of conferenceroom", 3, "info5", ConferenceRoomCategory.LECTURE_ROOM, 100);
 		bookableList1.add(bookableID);
-		bookableID = IBookablesManage.INSTANCE.addHotelRoom("006", 200, "desc for hotelroom with hostel bed", 1, "info", HotelRoomCategory.STANDARD_ROOM, 2);
+		bookableID = IBookablesManage.INSTANCE.addHotelRoom("006", 200, "desc for hotelroom with hostel bed", 1, "info6", HotelRoomCategory.STANDARD_ROOM, 2);
 		bookableList1.add(bookableID);
 		bookableID = IBookablesManage.INSTANCE.addHostelBed("101", 50, "hostelbed", "006");
 		bookableList1.add(bookableID);
@@ -49,87 +49,171 @@ public class IBookablesAccessTest {
 
 	@Test
 	public void testGetBookableBasePrice() {
-		fail("Not yet implemented");
+		String ID = "001";
+		boolean result = IBookablesManage.INSTANCE.getBookableBasePrice(ID)==100;
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetNotExistingBookableBasePrice() {
+		String ID = "000";
+		IBookablesManage.INSTANCE.getBookableBasePrice(ID);
 	}
 
 	@Test
 	public void testGetRoomLocationInfo() {
-		fail("Not yet implemented");
+		String ID = "001";
+		boolean result = IBookablesManage.INSTANCE.getRoomLocationInfo(ID).equals("info1");
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetNotExistingRoomLocationInfo() {
+		String ID = "000";
+		IBookablesManage.INSTANCE.getRoomLocationInfo(ID);
 	}
 
 	@Test
 	public void testGetBookableDescription() {
-		fail("Not yet implemented");
+		String ID = "001";
+		boolean result = IBookablesManage.INSTANCE.getBookableDescription(ID).equals("desc for hotelroom 1");
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetNotExistingBookableDescription() {
+		String ID = "000";
+		IBookablesManage.INSTANCE.getBookableDescription(ID);
 	}
 
 	@Test
 	public void testGetAllBookableIDs() {
-		fail("Not yet implemented");
+		boolean result = IBookablesManage.INSTANCE.getAllBookableIDs().size() == 7;
+		assertTrue(result);
 	}
 
 	@Test
 	public void testGetRoomOfHostelBed() {
-		fail("Not yet implemented");
+		String ID = "101";
+		boolean result = IBookablesManage.INSTANCE.getRoomOfHostelBed(ID).equals("006");
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetNotExistingRoomOfHostelBed() {
+		String ID = "001";
+		IBookablesManage.INSTANCE.getRoomOfHostelBed(ID);
 	}
 
 	@Test
 	public void testGetHotelRoomCategory() {
-		fail("Not yet implemented");
+		String ID = "001";
+		boolean result = IBookablesManage.INSTANCE.getHotelRoomCategory(ID) == HotelRoomCategory.STANDARD_ROOM;
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetNotExistingHotelRoomCategory() {
+		String ID = "101";
+		IBookablesManage.INSTANCE.getHotelRoomCategory(ID);
 	}
 
 	@Test
 	public void testGetConferenceRoomCapacity() {
-		fail("Not yet implemented");
+		String ID = "005";
+		boolean result = IBookablesManage.INSTANCE.getConferenceRoomCapacity(ID) == 100;
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetNotExistingConferenceRoomCapacity() {
+		String ID = "001";
+		IBookablesManage.INSTANCE.getConferenceRoomCapacity(ID);
 	}
 
 	@Test
 	public void testGetHotelRoomNbrBeds() {
-		fail("Not yet implemented");
+		String ID = "001";
+		boolean result = IBookablesManage.INSTANCE.getHotelRoomNbrBeds(ID) == 2;
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetNotExistingHotelRoomNbrBeds() {
+		String ID = "000";
+		IBookablesManage.INSTANCE.getHotelRoomNbrBeds(ID);
 	}
 
 	@Test
 	public void testSearchForBookable() {
 		fail("Not yet implemented");
+		//TODO
+		//TODO
 	}
 
 	@Test
 	public void testGetRoomLocationFloor() {
-		fail("Not yet implemented");
+		String ID = "001";
+		boolean result = IBookablesManage.INSTANCE.getRoomLocationFloor(ID) == 1;
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetNotExistingRoomLocationFloor() {
+		String ID = "000";
+		IBookablesManage.INSTANCE.getRoomLocationFloor(ID);
 	}
 
 	@Test
 	public void testGetAllHotelRoomIDs() {
-		fail("Not yet implemented");
+		boolean result = IBookablesManage.INSTANCE.getAllHotelRoomIDs().size() == 5;
+		assertTrue(result);
 	}
 
 	@Test
 	public void testGetAllConferenceRoomIDs() {
-		fail("Not yet implemented");
+		boolean result = IBookablesManage.INSTANCE.getAllConferenceRoomIDs().size() == 1;
+		assertTrue(result);
 	}
 
 	@Test
 	public void testGetAllHostelBedIDs() {
-		fail("Not yet implemented");
+		boolean result = IBookablesManage.INSTANCE.getAllHostelBedIDs().size() == 1;
+		assertTrue(result);
 	}
 
 	@Test
 	public void testGetConferenceRoomCategory() {
+		String ID = "005";
+		boolean result = IBookablesManage.INSTANCE.getConferenceRoomCategory(ID) == ConferenceRoomCategory.LECTURE_ROOM;
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetNotExistingConferenceRoomCategory() {
 		fail("Not yet implemented");
+		//TODO
 	}
 
 	@Test
 	public void testSearchHotelRooms() {
 		fail("Not yet implemented");
+		//TODO
+		//TODO
 	}
 
 	@Test
 	public void testSearchHostelBeds() {
 		fail("Not yet implemented");
+		//TODO
+		//TODO
 	}
 
 	@Test
 	public void testSearchConferenceRooms() {
 		fail("Not yet implemented");
+		//TODO
+		//TODO
 	}
 
 }
