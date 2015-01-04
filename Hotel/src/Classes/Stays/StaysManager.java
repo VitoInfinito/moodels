@@ -184,6 +184,10 @@ public class StaysManager implements IStays {
 	 * @generated NOT
 	 */
 	public String addNewStay(String bookableID, String bookingID, LocalDateTime fromDate, LocalDateTime toDate) {
+		//******THIS THING HERE********
+		iBookings.getAllBookings();
+		//***************************
+
 		String id = generateID();
 
 		Stay stay = StaysFactory.INSTANCE.createStay();
