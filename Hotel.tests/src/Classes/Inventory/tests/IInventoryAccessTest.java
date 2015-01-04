@@ -102,10 +102,20 @@ public class IInventoryAccessTest {
 	}
 	
 	@Test
-	public void testSearchItems() {
-		//TODO ?
+	public void testSearchItemsExpectTwoMatches() {
 		boolean result = IInventoryAccess.INSTANCE.searchItems("a").size() == 2;
 		assertTrue(result);
 	}
-
+	
+	@Test
+	public void testSearchItemsExpectOneMatch() {
+		boolean result = IInventoryAccess.INSTANCE.searchItems("na").size() == 1;
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchItemsExpectNoMatches() {
+		boolean result = IInventoryAccess.INSTANCE.searchItems("Banana").size() == 0;
+		assertTrue(result);
+	}
 }
