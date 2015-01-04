@@ -49,17 +49,22 @@ public class IBookablesManageTest {
 			IBookablesManage.INSTANCE.deleteBookable(id);
 		}
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeNotExistingHostelBedRoom() {
+		IBookablesManage.INSTANCE.changeHostelBedRoom("100", "004");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeHostelBedToNotExistingRoom() {
+		IBookablesManage.INSTANCE.changeHostelBedRoom("101", "000");
+	}
 
 	@Test
 	public void testChangeHostelBedRoom() {
 		IBookablesManage.INSTANCE.changeHostelBedRoom("101", "004");
 		boolean result = IBookablesManage.INSTANCE.getRoomOfHostelBed("101").equals("004");
 		assertTrue(result);
-	}
-	
-	@Test(expected=InvalidIDException.class)
-	public void testChangeNoneExistingHostelBedRoom() {
-		IBookablesManage.INSTANCE.changeHostelBedRoom("000", "004");
 	}
 
 	@Test
@@ -71,12 +76,12 @@ public class IBookablesManageTest {
 	
 	@Test(expected=InvalidIDException.class)
 	public void testDeleteNoneExistingBookable() {
-		IBookablesManage.INSTANCE.deleteBookable("009");
+		IBookablesManage.INSTANCE.deleteBookable("000");
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testChangeNoneExistingRoomLocation(){
-		IBookablesManage.INSTANCE.changeRoomLocation("009", 10, "");
+		IBookablesManage.INSTANCE.changeRoomLocation("010", 10, "");
 	}
 
 	@Test
