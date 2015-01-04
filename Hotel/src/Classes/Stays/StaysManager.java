@@ -236,6 +236,9 @@ public class StaysManager implements IStays {
 		if (!stays.containsKey(stayID)) {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();
+		} else if(!IBills.INSTANCE.getAllBillIDs().contains(billID)) {
+			logger.warn("A bill with ID {} does not exist.", billID);
+			throw new InvalidIDException();
 		} else {
 			stays.get(stayID).addBill(billID);
 		}

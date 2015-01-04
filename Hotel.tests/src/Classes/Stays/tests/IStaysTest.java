@@ -17,11 +17,13 @@ import org.junit.Test;
 
 import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires;
 import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
+import Classes.Bills.IBills;
 import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.IBookablesManage;
 import Classes.Bookings.IBookings;
 import Classes.Customers.ICustomers;
 import Classes.Guests.IGuests;
+import Classes.Inventory.IManageInventory;
 import Classes.Stays.IStays;
 import Classes.Utils.GuestAlreadyCheckedInException;
 import Classes.Utils.GuestAlreadyCheckedOutException;
@@ -249,7 +251,7 @@ public class IStaysTest {
 	
 	@Test(expected=InvalidIDException.class)
 	public void testAddNewStay_booking_not_exists() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
-		stay = IStays.INSTANCE.addNewStay("402", "6666", LocalDateTime.of(2018, 1, 1, 15, 0), LocalDateTime.of(2018, 1, 5, 10, 0));
+		IStays.INSTANCE.addNewStay("402", "6666", LocalDateTime.of(2018, 1, 1, 15, 0), LocalDateTime.of(2018, 1, 5, 10, 0));
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -257,7 +259,7 @@ public class IStaysTest {
 		List<String> bookableList = new ArrayList<String>();
 		bookableList.add("667788");
 		IBookings.INSTANCE.makeBooking(bookableList, "760911-0078", LocalDateTime.of(2020, 1, 1, 15, 0), LocalDateTime.of(2020, 1, 5, 10, 0), 4, "12342352", "523", 9, 17, "Alfred","Johansson", 0, true);
-	}*/
+	}
 
 	
 	
@@ -274,10 +276,9 @@ public class IStaysTest {
 		assertTrue(!IStays.INSTANCE.getAllHotelStayIDs().contains(stay1));
 	}
 	
-	/*@Test(expected=InvalidIDException.class)
+	@Test(expected=InvalidIDException.class)
 	public void testRemoveStay_stay_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+		IStays.INSTANCE.removeStay("66666");
 	}
 
 	
@@ -285,30 +286,30 @@ public class IStaysTest {
 	
 	@Test
 	public void testAddBillToStay_stay_and_bill_exists_expects_bill_added_to_stay() {
-		fail("Not yet implemented");
-		//TODO make test
+		String bill = IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 1);
+		IStays.INSTANCE.addBillToStay(stay1, bill);
+		assertTrue(IStays.INSTANCE.getBillsOfHotelStay(stay1).contains(bill));
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testAddBillToStay_bill_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+		IStays.INSTANCE.addBillToStay(stay1, "66666");
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testAddBillToStay_stay_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+		IStays.INSTANCE.addBillToStay("66666", "66666");
 	}
 	
 	
 	
 
 	@Test
-	public void testCheckOutGuest_stay_exists_and_guest_exists_in_stay_expects_guets_checked_out() {
-		fail("Not yet implemented");
-		//TODO make test
-	}
+	public void testCheckOutGuest_stay_exists_and_guest_exists_in_stay_expects_guets_checked_out() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException, GuestNotCheckedInException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		IStays.INSTANCE.checkInGuest(stay1, "760911-0078");
+		IStays.INSTANCE.checkOutGuest(stay1, "760911-0078");
+		assertTrue(IStays.INSTANCE.getCheckedOutGuestsOfHotelStay(stay1).contains("760911-0078"));
+	}*/
 	
 	@Test(expected=InvalidIDException.class)
 	public void testCheckOutGuest_guest_not_exist_in_stay() throws InvalidIDException {
@@ -316,7 +317,7 @@ public class IStaysTest {
 		//TODO make test
 	}
 	
-	@Test(expected=InvalidIDException.class)
+	/*@Test(expected=InvalidIDException.class)
 	public void testCheckOutGuest_stay_not_exist() throws InvalidIDException {
 		fail("Not yet implemented");
 		//TODO make test
