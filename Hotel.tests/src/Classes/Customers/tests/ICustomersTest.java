@@ -172,7 +172,7 @@ public class ICustomersTest {
 	}
 	
 	@Test
-	public void testSearchCustomers_expects_list_non_null() {
+	public void testSearchCustomers_expectsListNonNull() {
 		List<String> list = ICustomers.INSTANCE.searchCustomers("XXX");
 		assertNotNull(list);
 	}
