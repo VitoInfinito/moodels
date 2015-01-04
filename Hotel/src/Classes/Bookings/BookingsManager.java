@@ -171,13 +171,13 @@ public class BookingsManager implements IBookings {
 		for (Booking b : c) {
 			if (b.getCustomer().equalsIgnoreCase(keyword)) {
 				searchResult.add(b.getBookingNbr());
-			} else if (iGuest.getGuestFirstName(b.getCustomer()).equalsIgnoreCase(keyword)) {
+			} else if (iCustomer.getCustomerFirstName(b.getCustomer()).equalsIgnoreCase(keyword)) {
 				searchResult.add(b.getBookingNbr());
-			} else if (iGuest.getGuestLastName(b.getCustomer()).equalsIgnoreCase(keyword)) {
+			} else if (iCustomer.getCustomerLastName(b.getCustomer()).equalsIgnoreCase(keyword)) {
 				searchResult.add(b.getBookingNbr());
-			} else if (iGuest.getGuestEmail(b.getCustomer()).equalsIgnoreCase(keyword)) {
+			} else if (iCustomer.getCustomerEmail(b.getCustomer()).equalsIgnoreCase(keyword)) {
 				searchResult.add(b.getBookingNbr());
-			} else if (iGuest.getGuestPhone(b.getCustomer()).equalsIgnoreCase(keyword)) {
+			} else if (iCustomer.getCustomerPhone(b.getCustomer()).equalsIgnoreCase(keyword)) {
 				searchResult.add(b.getBookingNbr());
 			} else if (b.getBookedStays().contains(keyword)) {
 				searchResult.add(b.getBookingNbr());
@@ -204,13 +204,13 @@ public class BookingsManager implements IBookings {
 		for (Booking b : c) {
 			if (regexPattern.matcher(b.getCustomer()).matches()) {
 				searchResult.add(b.getBookingNbr());
-			} else if (regexPattern.matcher(iGuest.getGuestFirstName(b.getCustomer())).matches()){
+			} else if (regexPattern.matcher(iCustomer.getCustomerFirstName(b.getCustomer())).matches()){
 				searchResult.add(b.getBookingNbr());
-			} else if (regexPattern.matcher(iGuest.getGuestLastName(b.getCustomer())).matches()){
+			} else if (regexPattern.matcher(iCustomer.getCustomerLastName(b.getCustomer())).matches()){
 				searchResult.add(b.getBookingNbr());
-			} else if (regexPattern.matcher(iGuest.getGuestEmail(b.getCustomer())).matches()){
+			} else if (regexPattern.matcher(iCustomer.getCustomerEmail(b.getCustomer())).matches()){
 				searchResult.add(b.getBookingNbr());
-			} else if (regexPattern.matcher(iGuest.getGuestPhone(b.getCustomer())).matches()){
+			} else if (regexPattern.matcher(iCustomer.getCustomerPhone(b.getCustomer())).matches()){
 				searchResult.add(b.getBookingNbr());
 			} else {
 				for (String stay : b.getBookedStays()) {
@@ -451,17 +451,17 @@ public class BookingsManager implements IBookings {
 
 		// Some property match exactly. Second Order!
 		for (Booking b : c) {
-			LocalDateTime date = bookings.get(keyword).getIssueDate();
+			LocalDateTime date = b.getIssueDate();
 			if (date.isAfter(from) && date.isBefore(to)) {
 				if (b.getCustomer().equalsIgnoreCase(keyword)) {
 					searchResult.add(b.getBookingNbr());
-				} else if (iGuest.getGuestFirstName(b.getCustomer()).equalsIgnoreCase(keyword)) {
+				} else if (iCustomer.getCustomerFirstName(b.getCustomer()).equalsIgnoreCase(keyword)) {
 					searchResult.add(b.getBookingNbr());
-				} else if (iGuest.getGuestLastName(b.getCustomer()).equalsIgnoreCase(keyword)) {
+				} else if (iCustomer.getCustomerLastName(b.getCustomer()).equalsIgnoreCase(keyword)) {
 					searchResult.add(b.getBookingNbr());
-				} else if (iGuest.getGuestEmail(b.getCustomer()).equalsIgnoreCase(keyword)) {
+				} else if (iCustomer.getCustomerEmail(b.getCustomer()).equalsIgnoreCase(keyword)) {
 					searchResult.add(b.getBookingNbr());
-				} else if (iGuest.getGuestPhone(b.getCustomer()).equalsIgnoreCase(keyword)) {
+				} else if (iCustomer.getCustomerPhone(b.getCustomer()).equalsIgnoreCase(keyword)) {
 					searchResult.add(b.getBookingNbr());
 				} else if (b.getBookedStays().contains(keyword)) {
 					searchResult.add(b.getBookingNbr());
@@ -479,7 +479,7 @@ public class BookingsManager implements IBookings {
 
 		// ID match somewhat. Third Order!
 		for (Booking b : c) {	
-			LocalDateTime date = bookings.get(keyword).getIssueDate();
+			LocalDateTime date = b.getIssueDate();
 			if (date.isAfter(from) && date.isBefore(to)) {
 				if (regexPattern.matcher(b.getBookingNbr()).matches()) {
 					searchResult.add(b.getBookingNbr());
@@ -489,17 +489,17 @@ public class BookingsManager implements IBookings {
 
 		// Some property match somewhat. Fourth Order.
 		for (Booking b : c) {
-			LocalDateTime date = bookings.get(keyword).getIssueDate();
+			LocalDateTime date = b.getIssueDate();
 			if (date.isAfter(from) && date.isBefore(to)) {
 				if (regexPattern.matcher(b.getCustomer()).matches()) {
 					searchResult.add(b.getBookingNbr());
-				} else if (regexPattern.matcher(iGuest.getGuestFirstName(b.getCustomer())).matches()){
+				} else if (regexPattern.matcher(iCustomer.getCustomerFirstName(b.getCustomer())).matches()){
 					searchResult.add(b.getBookingNbr());
-				} else if (regexPattern.matcher(iGuest.getGuestLastName(b.getCustomer())).matches()){
+				} else if (regexPattern.matcher(iCustomer.getCustomerLastName(b.getCustomer())).matches()){
 					searchResult.add(b.getBookingNbr());
-				} else if (regexPattern.matcher(iGuest.getGuestEmail(b.getCustomer())).matches()){
+				} else if (regexPattern.matcher(iCustomer.getCustomerEmail(b.getCustomer())).matches()){
 					searchResult.add(b.getBookingNbr());
-				} else if (regexPattern.matcher(iGuest.getGuestPhone(b.getCustomer())).matches()){
+				} else if (regexPattern.matcher(iCustomer.getCustomerPhone(b.getCustomer())).matches()){
 					searchResult.add(b.getBookingNbr());
 				} else {
 					for (String stay : b.getBookedStays()) {
