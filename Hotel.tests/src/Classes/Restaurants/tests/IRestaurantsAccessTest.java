@@ -24,6 +24,9 @@ public class IRestaurantsAccessTest {
 		
 		IRestaurantsManage.INSTANCE.changeMenuName("testaurant", "The Menu");
 		
+		IRestaurantsManage.INSTANCE.addMenuItem("testaurant", "10");
+		IRestaurantsManage.INSTANCE.addMenuItem("testaurant", "20");
+		
 		IRestaurantsManage.INSTANCE.addRestaurantTable("testaurant", 4, "1");
 		IRestaurantsManage.INSTANCE.addRestaurantTable("testaurant", 6, "2");
 		
@@ -186,20 +189,57 @@ public class IRestaurantsAccessTest {
 		
 		IRestaurantsManage.INSTANCE.changeReservedTables("testaurant", reservationID, tables);
 		
-		// TODO		SOMETHING TO ASSERT, BUT WHAT?
+		// TODO		SOMETHING TO ASSERT, BUT WHAT? CAN WE GET RESERVED TABLES FOR A RESERVATION?
 		assertTrue(false);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeReservedTables_notExists_throwsException() {
+		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
+		
+		ArrayList<String> tables = new ArrayList<String>();
+		tables.add("1");
+		
+		IRestaurantsManage.INSTANCE.changeReservedTables("apabepacepa", reservationID, tables);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeReservedTablesNotExists_throwsException() {
+		ArrayList<String> tables = new ArrayList<String>();
+		tables.add("1");
+		
+		IRestaurantsManage.INSTANCE.changeReservedTables("apabepacepa", "", tables);
 	}
 
 	@Test
 	public void testGetAvailableTablesByNbrGuests() {
-		//TODO
-		fail("Not yet implemented");
+		int result = IRestaurantsManage.INSTANCE.getAvailableTablesByNbrGuests(
+			"testaurant",
+			LocalDateTime.parse("2014-10-20 12:30", formatter),
+			LocalDateTime.parse("2014-10-20 10:30", formatter),
+			5).size();
+		
+		assertTrue(result == 1);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetAvailableTablesByNbrGuests_notExists_throwsException() {
+		IRestaurantsManage.INSTANCE.getAvailableTablesByNbrGuests(
+			"apabepacepa",
+			LocalDateTime.parse("2014-10-20 12:30", formatter),
+			LocalDateTime.parse("2014-10-20 10:30", formatter),
+			5
+		);
 	}
 
 	@Test
 	public void testGetRestaurantMenuItems() {
-		//TODO
-		fail("Not yet implemented");
+		assertTrue(IRestaurantsManage.INSTANCE.getRestaurantMenuItems("testaurant").size() == 2);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetRestaurantMenuItems_notExists_throwsException() {
+		IRestaurantsManage.INSTANCE.getRestaurantMenuItems("");
 	}
 
 	@Test
