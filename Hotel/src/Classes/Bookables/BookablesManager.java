@@ -319,7 +319,7 @@ class BookablesManager implements IBookablesManage {
 		Collection<Bookable> c = bookables.values();
 		List<HotelRoom> rooms = new ArrayList<HotelRoom>();
 		for (Bookable b : c) {			
-			if (b instanceof HotelRoom && (((HotelRoom)b).getCategory() == category) || category == null) {
+			if (b instanceof HotelRoom && ((((HotelRoom)b).getCategory() == category) || category == null)) {
 				if (regexPattern.matcher(b.getId()).matches()) {
 					searchResult.add(b.getId());
 				} else {
@@ -426,7 +426,7 @@ class BookablesManager implements IBookablesManage {
 		Collection<Bookable> c = bookables.values();
 		List<ConferenceRoom> rooms = new ArrayList<ConferenceRoom>();
 		for (Bookable b : c) {			
-			if (b instanceof ConferenceRoom && (((ConferenceRoom)bookable).getCategory() == category) || category == null) {
+			if (b instanceof ConferenceRoom && ((((ConferenceRoom)b).getCategory() == category) || category == null)) {
 				if (regexPattern.matcher(b.getId()).matches()) {
 					searchResult.add(b.getId());
 				} else {
