@@ -1,8 +1,10 @@
 package Classes.Feedback.tests;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+
+import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
@@ -20,14 +22,15 @@ public class IFeedbackTest {
 
 	@Before
 	public void setUp() {
-		IFeedback.INSTANCE.addFeedback("abababababa");
+		IFeedback.INSTANCE.addFeedback("abababababahej");
+		IFeedback.INSTANCE.addFeedback("lolololololhej");
+		IFeedback.INSTANCE.addFeedback("test");
 	}
 	
 	@After
 	public void tearDown() {
-		if (IFeedback.INSTANCE.getAllFeedbackIDs().size() > 0) {
-			String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
-			IFeedback.INSTANCE.removeFeedback(id);
+		for(String feedID : IFeedback.INSTANCE.getAllFeedbackIDs()) {
+			IFeedback.INSTANCE.removeFeedback(feedID);
 		}
 	}
 	
@@ -42,14 +45,14 @@ public class IFeedbackTest {
 	@Test
 	public void testGetAllFeedbackIDsNotEmpty() {
 		int result = IFeedback.INSTANCE.getAllFeedbackIDs().size();
-		assertTrue(result == 1);
+		assertTrue(result == 3);
 	}
 
 	@Test
 	public void testGetFeedbackDescription() {
 		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
 		String result = IFeedback.INSTANCE.getFeedbackDescription(id);
-		assertTrue(result == "abababababa");
+		assertTrue(result == "abababababahej");
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -137,9 +140,42 @@ public class IFeedbackTest {
 	}
 
 	@Test
-	public void testSearchFeedback() {
-		fail("Not yet implemented");
-		// TODO
+	public void testSearchFeedback_feedbackEmpty_expectEmptyList() {
+		tearDown();
+		boolean result = IFeedback.INSTANCE.searchFeedback("ab").isEmpty();
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchFeedback_feedbackNotEmpty_expectEmptyList() {
+		boolean result = IFeedback.INSTANCE.searchFeedback("xx").isEmpty();
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchFeedback_expectsListNonNull() {
+		List<String> list = IFeedback.INSTANCE.searchFeedback("xx");
+		assertNotNull(list);
+	}
+	
+	@Test
+	public void testSearchFeedback_idMatchExactly() {
+		List<String> list = IFeedback.INSTANCE.searchFeedback("abababababahej");
+		assertTrue(IFeedback.INSTANCE.getFeedbackDescription(list.get(0)).equals("abababababahej"));
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchFeedback_idMatchSomewhat() {
+		List<String> list = IFeedback.INSTANCE.searchFeedback("bab");
+		assertTrue(IFeedback.INSTANCE.getFeedbackDescription(list.get(0)).equals("abababababahej"));
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchFeedback_multipleMatches() {
+		List<String> list = IFeedback.INSTANCE.searchFeedback("hej");
+		assertTrue(list.size() == 2);
 	}
 
 	@Test
@@ -158,7 +194,7 @@ public class IFeedbackTest {
 		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
 		IFeedback.INSTANCE.removeFeedback(id);
 		int result = IFeedback.INSTANCE.getAllFeedbackIDs().size();
-		assertTrue(result == 0);
+		assertTrue(result == 2);
 	}
 	
 	@Test(expected=InvalidIDException.class)
