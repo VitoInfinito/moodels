@@ -363,13 +363,19 @@ public class IBookingsTest {
 	}
 
 	@Test
-	public void testChangeNbrGuestsOfBooking() {
-		fail("Not yet implemented");
+	public void testChangeNbrGuestsOfBooking_valid_booking_expects_nbrGuests_currect() {
+		IBookings.INSTANCE.changeNbrGuestsOfBooking(booking6, 200);
+		assertTrue(IBookings.INSTANCE.getNbrGuestOfBooking(booking6) == 200);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeNbrGuestsOfBooking_invalid_booking_expects_exception() {
+		IBookings.INSTANCE.changeNbrGuestsOfBooking("wtf", 200);
 	}
 
 	@Test
 	public void testGetAllBookings() {
-		fail("Not yet implemented");
+		List<String> bookings = IBookings.INSTANCE.getAllBookings();
 	}
 
 	@Test

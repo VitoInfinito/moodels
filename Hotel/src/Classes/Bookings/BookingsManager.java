@@ -262,7 +262,7 @@ public class BookingsManager implements IBookings {
 		} 
 
 		Booking booking = bookings.get(bookingID);
-		List<String> stays = booking.getBookedStays();
+		List<String> stays = new ArrayList<String>(booking.getBookedStays());
 		for (String stay : stays) {
 			if (!iHotelStayManager.getCheckedInGuestsOfHotelStay(stay).isEmpty()) {
 				logger.warn("There are checked in guests of the booking, hence cancellation of the booking is prohibited!");
