@@ -708,4 +708,18 @@ class BookablesManager implements IBookablesManage {
 		}
 		((ConferenceRoom)room).setCapacity(capacity);
 	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public int getBookableCapacity(String bookableID) {
+		Bookable bookable = bookables.get(bookableID);
+		if (bookable == null) {
+			logger.warn("The bookable with ID {} could not be found. Invalid ID!", bookableID);
+			throw new InvalidIDException();
+		}
+		return bookable.getCapacity();
+	}
 } //BookablesManagerImpl

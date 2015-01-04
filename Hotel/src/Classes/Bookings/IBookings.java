@@ -39,7 +39,7 @@ public interface IBookings extends Serializable {
 	 * 		if bookables is empty
 	 * 			InvalidIDException is thrown.
 	 * 		otherwise
-	 * 			if nbrGuests < 1 || discount < 0 || discount > 1 || from.isAfter(to)
+	 * 			if nbrGuests < 1 || discount < 0 || discount > 1 || from.isAfter(to) || nbrGuests > total capacity of the bookables
 	 * 				IllegalArgumentException is thrown.
 	 * 			otherwise
 	 * 				if credit card is invalid

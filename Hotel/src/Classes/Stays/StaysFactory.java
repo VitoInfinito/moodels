@@ -4,6 +4,8 @@ package Classes.Stays;
 
 import java.io.Serializable;
 
+import Classes.Utils.CreditCard;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Factory</b>.
@@ -32,15 +34,5 @@ public class StaysFactory implements Serializable {
 	public Stay createStay() {
 		Stay stay = new Stay();
 		return stay;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CreditCard createCreditCard() {
-		CreditCard creditCard = new CreditCard();
-		return creditCard;
 	}
 } //StaysFactoryImpl

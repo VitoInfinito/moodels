@@ -287,4 +287,17 @@ public interface IBookablesAccess extends Serializable {
 	 */
 	List<String> searchConferenceRooms(String keyword, @Nullable ConferenceRoomCategory category);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * NOTE: category == null implies that all categories are searched.
+	 * Requires:
+	 * 		bookableID !=null
+	 * Expected:
+	 * 		Returns the capacity of the bookable.
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
+	 * @generated NOT
+	 */
+	int getBookableCapacity(String bookableID);
+
 } // IBookablesAccess

@@ -1,6 +1,6 @@
 /**
  */
-package Classes.Stays;
+package Classes.Utils;
 
 import java.io.Serializable;
 
@@ -11,12 +11,12 @@ import java.io.Serializable;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Classes.Stays.CreditCard#getCcNumber <em>Cc Number</em>}</li>
- *   <li>{@link Classes.Stays.CreditCard#getCcv <em>Ccv</em>}</li>
- *   <li>{@link Classes.Stays.CreditCard#getExpiryMonth <em>Expiry Month</em>}</li>
- *   <li>{@link Classes.Stays.CreditCard#getExpiryYear <em>Expiry Year</em>}</li>
- *   <li>{@link Classes.Stays.CreditCard#getFirstName <em>First Name</em>}</li>
- *   <li>{@link Classes.Stays.CreditCard#getLastName <em>Last Name</em>}</li>
+ *   <li>{@link Classes.Utils.CreditCard#getCcNumber <em>Cc Number</em>}</li>
+ *   <li>{@link Classes.Utils.CreditCard#getCcv <em>Ccv</em>}</li>
+ *   <li>{@link Classes.Utils.CreditCard#getExpiryMonth <em>Expiry Month</em>}</li>
+ *   <li>{@link Classes.Utils.CreditCard#getExpiryYear <em>Expiry Year</em>}</li>
+ *   <li>{@link Classes.Utils.CreditCard#getFirstName <em>First Name</em>}</li>
+ *   <li>{@link Classes.Utils.CreditCard#getLastName <em>Last Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,7 +36,7 @@ public class CreditCard implements Serializable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CreditCard() {
+	public CreditCard() {
 		super();
 	}
 

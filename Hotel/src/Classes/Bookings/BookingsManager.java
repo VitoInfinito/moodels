@@ -24,8 +24,8 @@ import Classes.Bookables.IBookablesAccess;
 import Classes.Customers.ICustomers;
 import Classes.Guests.IGuests;
 import Classes.Requests.IRequests;
-import Classes.Stays.CreditCard;
 import Classes.Stays.IStays;
+import Classes.Utils.CreditCard;
 import Classes.Utils.InsufficientFundsException;
 import Classes.Utils.InvalidCreditCardException;
 import Classes.Utils.InvalidIDException;
@@ -99,12 +99,34 @@ public class BookingsManager implements IBookings {
 			logger.warn("Tried to make a booking when one or more of the bookables is already booked in the specified period!");
 			throw new InvalidIDException();
 		}
+		
+		int totalCapacity = 0;
+		for (String bookableID : bookables) {
+			totalCapacity += iBookableAccess.getBookableCapacity(bookableID);
+		}
+		
+		if (nbrGuests > totalCapacity) {
+			logger.warn("Tried to make a booking when the bookables do not have room for the amount of guests!");
+			throw new IllegalArgumentException();
+		}
 
 		Booking booking = BookingsFactory.INSTANCE.createBooking();
+		
+		CreditCard creditCard = new CreditCard();
+		creditCard.setCcNumber(ccNumber);
+		creditCard.setCcv(ccv);
+		creditCard.setExpiryMonth(expiryMonth);
+		creditCard.setExpiryYear(expiryYear);
+		creditCard.setFirstName(firstName);
+		creditCard.setLastName(lastName);
 
 		String bookingNbr = generateBookingNbr();
 
 		booking.setBookingNbr(bookingNbr);
+		booking.setNbrGuests(nbrGuests);
+		booking.setCustomer(customerID);
+		booking.setCreditCard(creditCard);
+		booking.setIssueDate(LocalDateTime.now());
 
 		for (String bookableID : bookables) {
 			String stayID = iHotelStayManager.addNewStay(bookableID, bookingNbr, from, to);

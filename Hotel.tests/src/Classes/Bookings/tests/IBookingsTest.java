@@ -1,6 +1,8 @@
 package Classes.Bookings.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -13,7 +15,6 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.omg.CORBA.IntHolder;
 
 import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires;
 import Classes.Bills.IBills;
@@ -91,7 +92,7 @@ public class IBookingsTest {
 		booking1 = IBookings.INSTANCE.makeBooking(bookables1, "861104-0078", LocalDateTime.of(2015, 2, 12, 15, 0), LocalDateTime.of(2015, 2, 16, 10, 0), 4, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
 		booking2 = IBookings.INSTANCE.makeBooking(bookables2, "861104-0078", LocalDateTime.of(2015, 2, 16, 15, 0), LocalDateTime.of(2015, 2, 18, 10, 0), 2, "34336534", "655", 10, 18, "Greger","Gregersson", 0.2, false);
 		booking3 = IBookings.INSTANCE.makeBooking(bookables3, "861104-0088", LocalDateTime.of(2015, 2, 18, 15, 0), LocalDateTime.of(2015, 2, 20, 10, 0), 6, "475367456", "567", 7, 17, "Anders","Hallgren", 0.2, true);
-		booking4 = IBookings.INSTANCE.makeBooking(bookables4, "861104-0088", LocalDateTime.of(2015, 2, 21, 15, 0), LocalDateTime.of(2015, 2, 22, 10, 0), 5, "475367456", "567", 7, 17, "Anders","Hallgren", 0, false);
+		booking4 = IBookings.INSTANCE.makeBooking(bookables4, "861104-0088", LocalDateTime.of(2015, 2, 21, 15, 0), LocalDateTime.of(2015, 2, 22, 10, 0), 2, "475367456", "567", 7, 17, "Anders","Hallgren", 0, false);
 		booking5 = IBookings.INSTANCE.makeBooking(bookables5, "861104-0058", LocalDateTime.of(2015, 2, 21, 8, 0), LocalDateTime.of(2015, 2, 23, 17, 0), 20, "12345678", "234", 3, 17, "Adolf","Eriksson", 0.2, true);
 		booking6 = IBookings.INSTANCE.makeBooking(bookables6, "861104-0058", LocalDateTime.of(2015, 2, 21, 8, 0), LocalDateTime.of(2015, 2, 22, 17, 0), 100, "12345678", "234", 3, 17, "Adolf","Eriksson", 0, false);
 	}
@@ -110,6 +111,12 @@ public class IBookingsTest {
 		bankingAdmin.removeCreditCard("643563576", "863", 4, 20, "Pelle","Petterson");
 		bankingAdmin.removeCreditCard("34336534", "655", 10, 18, "Greger","Gregersson");
 		bankingAdmin.removeCreditCard("475367456", "567", 7, 17, "Anders","Hallgren");
+		for (String id : IBookablesManage.INSTANCE.getAllBookableIDs()) {
+			IBookablesManage.INSTANCE.deleteBookable(id);
+		}
+		for (String id : ICustomers.INSTANCE.getAllCustomers()) {
+			ICustomers.INSTANCE.removeCustomer(id);
+		}
 	}
 
 	@Test(expected=InvalidIDException.class)
@@ -376,11 +383,25 @@ public class IBookingsTest {
 	@Test
 	public void testGetAllBookings() {
 		List<String> bookings = IBookings.INSTANCE.getAllBookings();
+		assertTrue(bookings.contains(booking1));
+		assertTrue(bookings.contains(booking2));
+		assertTrue(bookings.contains(booking3));
+		assertTrue(bookings.contains(booking4));
+		assertTrue(bookings.contains(booking5));
+		assertTrue(bookings.contains(booking6));
 	}
 
 	@Test
 	public void testGetAllBookingsWithinPeriod() {
-		fail("Not yet implemented");
+		LocalDateTime now = LocalDateTime.now();
+		LocalDateTime before = now.minusDays(1);
+		List<String> bookings = IBookings.INSTANCE.getAllBookingsWithinPeriod(before, now);
+		assertTrue(bookings.contains(booking1));
+		assertTrue(bookings.contains(booking2));
+		assertTrue(bookings.contains(booking3));
+		assertTrue(bookings.contains(booking4));
+		assertTrue(bookings.contains(booking5));
+		assertTrue(bookings.contains(booking6));
 	}
 
 	@Test

@@ -86,4 +86,13 @@ class HotelRoom extends Room {
 		return result.toString();
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getCapacity() {
+		return nbrBeds;
+	}
+
 } //HotelRoomImpl

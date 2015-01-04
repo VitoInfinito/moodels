@@ -99,4 +99,6 @@ abstract class Bookable implements Serializable {
 		return result.toString();
 	}
 
+	public abstract int getCapacity();
+
 } //BookableImpl

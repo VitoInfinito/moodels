@@ -7,6 +7,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import Classes.Utils.CreditCard;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Stay</b></em>'.

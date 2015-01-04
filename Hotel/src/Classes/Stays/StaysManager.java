@@ -21,6 +21,7 @@ import Classes.Bills.IBills;
 import Classes.Bookables.IBookablesAccess;
 import Classes.Bookings.IBookings;
 import Classes.Guests.IGuests;
+import Classes.Utils.CreditCard;
 import Classes.Utils.GuestAlreadyCheckedInException;
 import Classes.Utils.GuestAlreadyCheckedOutException;
 import Classes.Utils.GuestNotCheckedInException;
@@ -299,7 +300,7 @@ public class StaysManager implements IStays {
 				throw new InvalidCreditCardException();
 			}
 
-			CreditCard creditCard = StaysFactory.INSTANCE.createCreditCard();
+			CreditCard creditCard = new CreditCard();
 			creditCard.setCcNumber(ccNumber);
 			creditCard.setCcv(ccv);
 			creditCard.setExpiryMonth(expiryMonth);
@@ -330,7 +331,7 @@ public class StaysManager implements IStays {
 				throw new InvalidCreditCardException();
 			}
 
-			CreditCard creditCard = StaysFactory.INSTANCE.createCreditCard();
+			CreditCard creditCard = new CreditCard();
 			creditCard.setCcNumber(ccNumber);
 			creditCard.setCcv(ccv);
 			creditCard.setExpiryMonth(expiryMonth);

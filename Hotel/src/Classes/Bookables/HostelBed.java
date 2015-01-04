@@ -41,4 +41,10 @@ class HostelBed extends Bookable{
 	public void setRoom(HotelRoom newRoom) {
 		room = newRoom;
 	}
+
+
+	@Override
+	public int getCapacity() {
+		return 1;
+	}
 } //HostelBedImpl
