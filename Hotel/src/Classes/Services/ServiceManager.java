@@ -418,7 +418,12 @@ import Classes.Utils.InvalidIDException;
 	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void changeServicePrice(String serviceID, double price) throws InvalidIDException {
+	public void changeServicePrice(String serviceID, double price) throws InvalidIDException, IllegalArgumentException {
+		if (price < 0) {
+			logger.warn("The price is negative.");
+			throw new IllegalArgumentException("The price is negative.");
+		}
+		
 		if (services.containsKey(serviceID)) {
 			services.get(serviceID).setPrice(price);
 		} else {
@@ -433,7 +438,12 @@ import Classes.Utils.InvalidIDException;
 	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void changeServiceExpense(String serviceID, double expense) throws InvalidIDException {
+	public void changeServiceExpense(String serviceID, double expense) throws InvalidIDException, IllegalArgumentException {
+		if (expense < 0) {
+			logger.warn("The expense is negative.");
+			throw new IllegalArgumentException("The expense is negative.");
+		}
+		
 		if (services.containsKey(serviceID)) {
 			services.get(serviceID).setExpense(expense);
 		} else {
@@ -492,6 +502,20 @@ import Classes.Utils.InvalidIDException;
 		service.setExpense(expense);
 		
 		services.put(ID, service);
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void removeService(String serviceID) throws InvalidIDException {
+		if (services.containsKey(serviceID)) {
+			services.remove(serviceID);
+		} else {
+			logger.warn("A service with id {} could not be found.", serviceID);
+			throw new InvalidIDException();
+		}
 	}
 
 	private String generateServiceID() {
