@@ -10,8 +10,11 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import Classes.Accounts.IManageAccounts;
 import Classes.Guests.IGuests;
 import Classes.Requests.IRequests;
+import Classes.Stays.IStays;
+import Classes.Utils.InvalidIDException;
 
 public class IManageGuestsTest {
 
@@ -25,16 +28,6 @@ public class IManageGuestsTest {
 		IGuests.INSTANCE.addGuest("010101-0101", "Kalle", "Karlsson", "Mr", "kalle.karlsson@mail.mail", "0101010101");
 		IGuests.INSTANCE.addGuest("020202-0202", "Erik", "Eriksson", "Mr", "erik.eriksson@mail.mail", "0202020202");
 		IGuests.INSTANCE.addGuest("030303-0303", "Anna", "Andersson", "Mrs", "anna.andersson@mail.mail", "0303030303");
-		/*IGuests.INSTANCE.addGuestRequest("010101-0101", "010101-0101");
-		IGuests.INSTANCE.addGuestRequest("020202-0202", "020202-0202");
-		IGuests.INSTANCE.addGuestRequest("030303-0303", "030303-0303");
-		IGuests.INSTANCE.generateGuestAccount("010101-0101");
-		IGuests.INSTANCE.generateGuestAccount("020202-0202");
-		IGuests.INSTANCE.generateGuestAccount("030303-0303");*/
-		
-
-
-
 	}
 
 	@After
@@ -133,7 +126,7 @@ public class IManageGuestsTest {
 		assertTrue(result);
 	}
 
-	@Test
+	@Test 
 	public void testGetGuestStays() {
 		fail("Not yet implemented");
 		//TODO: write it
@@ -170,26 +163,32 @@ public class IManageGuestsTest {
 
 	@Test
 	public void testGetGuestAccountUsername() {
-		fail("Not yet implemented");
-		//TODO: write it
+		IGuests.INSTANCE.generateGuestAccount("010101-0101");
+		boolean result = IGuests.INSTANCE.getGuestAccountUsername("010101-0101") == "010101-0101";
+		assertTrue(result);
+		IGuests.INSTANCE.removeGuestAccount("010101-0101");
 	}
 
 	@Test
 	public void testGetGuestAccountPassword() {
-		fail("Not yet implemented");
-		//TODO: write it
+		IGuests.INSTANCE.generateGuestAccount("020202-0202");
+		String pw = IGuests.INSTANCE.getGuestAccountPassword("020202-0202");
+		assertTrue(pw != "");
 	}
 
 	@Test
 	public void testGenerateGuestAccount() {
-		fail("Not yet implemented");
-		//TODO: write it
+		IGuests.INSTANCE.generateGuestAccount("030303-0303");
+		assertTrue(IManageAccounts.INSTANCE.getAllAccountIDs().contains("030303-0303"));
 	}
 
 	@Test
 	public void testRemoveGuestAccount() {
-		fail("Not yet implemented");
-		//TODO: write it
+		IGuests.INSTANCE.generateGuestAccount("030303-0303");
+		assertTrue(IManageAccounts.INSTANCE.getAllAccountIDs().contains("030303-0303"));
+		IGuests.INSTANCE.removeGuestAccount("030303-0303");
+		assertTrue(!(IManageAccounts.INSTANCE.getAllAccountIDs().contains("030303-0303")));
+		
 	}
 
 }
