@@ -109,7 +109,7 @@ public interface IInventoryAccess extends Serializable {
 	 * Requires:</br>
 	 * 		Nothing</br></br>
 	 * Ensures:</br>
-	 * 		returns a non-null list with all the items</br>
+	 * 		returns a non-null list with all the items IDs</br>
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
