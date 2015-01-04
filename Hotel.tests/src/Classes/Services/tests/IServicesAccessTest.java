@@ -2,28 +2,63 @@ package Classes.Services.tests;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import Classes.Feedback.IFeedback;
+import Classes.Services.IServicesAccess;
+import Classes.Services.IServicesManager;
+
 public class IServicesAccessTest {
 	
 	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
+	public static void setUpBeforeClass() {
 	}
 
 	@Before
 	public void setUp() throws Exception {
+		IServicesManager.INSTANCE.addService("a", 100, 50);
+		IServicesManager.INSTANCE.addService("b", 200, 75);
+		
+		IServicesManager.INSTANCE.addRoomServiceMenuItem("c");
+		IServicesManager.INSTANCE.addRoomServiceMenuItem("d");
+	}
+	
+	@After
+	public void tearDown() {
+		for (String id : IServicesManager.INSTANCE.getAllServiceIDs()) {
+			 IServicesManager.INSTANCE.removeRoomServiceMenuItem(id);
+		}
 	}
 
 	@Test
-	public void testGetAllServiceIDs() {
-		fail("Not yet implemented");
+	public void testGetAllServiceIDsEmptyExpectEmpty() {
+		tearDown();
+		
+		int result = IServicesManager.INSTANCE.getAllServiceIDs().size();
+		assertTrue(result == 0);
 	}
-
+	
 	@Test
-	public void testGetAllRoomServiceOrderIDs() {
-		fail("Not yet implemented");
+	public void testGetAllServiceIDsNotEmpty() {
+		int result = IServicesManager.INSTANCE.getAllServiceIDs().size();
+		assertTrue(result == 2);
+	}
+	
+	@Test
+	public void testGetAllRoomServiceOrderIDsEmptyExpectEmpty() {
+		tearDown();
+		
+		int result = IServicesManager.INSTANCE.getAllRoomServiceOrderIDs().size();
+		assertTrue(result == 0);
+	}
+	
+	@Test
+	public void testGetAllRoomServiceOrderIDsNotEmpty() {
+		int result = IServicesManager.INSTANCE.getAllRoomServiceOrderIDs().size();
+		assertTrue(result == 2);
 	}
 
 	@Test

@@ -2,6 +2,8 @@ package Classes.Customers.tests;
 
 import static org.junit.Assert.*;
 
+import java.util.List;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -20,7 +22,7 @@ public class ICustomersTest {
 	public void setUp() throws Exception {
 		ICustomers.INSTANCE.addCustomer("010101-0101", "Sven", "Svensson", "Mr", "sven.svensson@gmail.com", "0707-777776");
 		ICustomers.INSTANCE.addCustomer("010101-0102", "Bengt", "Bengtsson", "Dr", "bengt.bengtsson@gmail.com", "0707-777777");
-		ICustomers.INSTANCE.addCustomer("010101-0103", "Maja", "Andersson", "Ms", "maja.andersson@gmail.com", "0707-777778");
+		ICustomers.INSTANCE.addCustomer("010101-0103", "Maja", "Andersdotter", "Ms", "maja.andersdotter@gmail.com", "0707-777778");
 		
 		ICustomers.INSTANCE.addCustomerBooking("010101-0101", "001");
 		ICustomers.INSTANCE.addCustomerBooking("010101-0101", "002");
@@ -30,7 +32,7 @@ public class ICustomersTest {
 	}
 	
 	@After
-	public void tearDown() throws Exception {
+	public void tearDown() throws InvalidIDException {
 		for(String SSID : ICustomers.INSTANCE.getAllCustomers()) {
 			ICustomers.INSTANCE.removeCustomer(SSID);
 		}
@@ -152,14 +154,47 @@ public class ICustomersTest {
 
 	@Test
 	public void testGetCustomerPhone() {
-		boolean result = ICustomers.INSTANCE.getCustomerPhone("010101-0101").equals("0707-777777");
+		boolean result = ICustomers.INSTANCE.getCustomerPhone("010101-0101").equals("0707-777776");
 		assertTrue(result);
 	}
 
 	@Test
-	public void testSearchCustomers() {
-		// TODO 
-		fail("Not yet implemented");
+	public void testSearchCustomers_customersEmpty_expectEmptyList() throws InvalidIDException{
+		tearDown();
+		boolean result = ICustomers.INSTANCE.searchCustomers("Sven").isEmpty();
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchCustomers_customersNotEmpty_expectsEmptyList() {
+		boolean result = ICustomers.INSTANCE.searchCustomers("XXX").isEmpty();
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchCustomers_expects_list_non_null() {
+		List<String> list = ICustomers.INSTANCE.searchCustomers("XXX");
+		assertNotNull(list);
+	}
+	
+	@Test
+	public void testSearchCustomers_idMatchExactly() {
+		List<String> list = ICustomers.INSTANCE.searchCustomers("Svensson");
+		assertTrue(list.contains("010101-0101"));
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchCustomers_idMatchSomewhat() {
+		List<String> list = ICustomers.INSTANCE.searchCustomers("ven");
+		assertTrue(list.contains("010101-0101"));
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchCustomers_multipleMatches() {
+		List<String> list = ICustomers.INSTANCE.searchCustomers("son");
+		assertTrue(list.size() == 2);
 	}
 
 	@Test
@@ -185,15 +220,41 @@ public class ICustomersTest {
 	}
 
 	@Test
-	public void testAddCustomerBooking() {
-		// TODO 
-		fail("Not yet implemented");
+	public void testAddCustomerBooking_exists_bookingAdded() {
+		ICustomers.INSTANCE.addCustomerBooking("010101-0101", "003");
+		boolean result = ICustomers.INSTANCE.getCustomerBookings("010101-0101").size() == 3;
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testAddCustomerBooking_exists_bookingAreadyExists_throwsException() {
+		ICustomers.INSTANCE.addCustomerBooking("010101-0101", "001");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testAddCustomerBooking_notExists_throwsException() {
+		ICustomers.INSTANCE.addCustomerBooking("0", "003");
 	}
 
 	@Test
-	public void testRemoveCustomerBooking() {
-		// TODO 
-		fail("Not yet implemented");
+	public void testRemoveCustomerBooking_customerExistsListNotEmpty_bookingRemoved() {
+		String reqID = ICustomers.INSTANCE.getCustomerBookings("010101-0101").get(0);
+		ICustomers.INSTANCE.removeCustomerBooking("010101-0101", reqID);
+		boolean result = ICustomers.INSTANCE.getCustomerBookings("010101-0101").size() == 1;
+		assertTrue(result);
+	}
+	
+	@Test(expected=IndexOutOfBoundsException.class)
+	public void testRemoveCustomerBooking_customerExistsListEmpty_throwsException() {
+		for(String bookID : ICustomers.INSTANCE.getCustomerBookings("010101-0101")) {
+			ICustomers.INSTANCE.removeCustomerBooking("010101-0101", bookID);
+		}
+		ICustomers.INSTANCE.getCustomerBookings("010101-0101").get(0);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testRemoveCustomerBooking_customerExistsBookingNotExists_throwsException() {
+		ICustomers.INSTANCE.removeCustomerBooking("010101-0101", "0");
 	}
 
 	@Test

@@ -165,7 +165,7 @@ public interface IStaff extends Serializable {
 	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		id != null
-	 * 		firstname = !null
+	 * 		firstname != null
 	 * Ensures:
 	 * 		if there exists a staff such that staff.ssid == ssid
 	 * 			the firstname of the staff is set to the firstname
@@ -182,7 +182,7 @@ public interface IStaff extends Serializable {
 	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		id != null
-	 * 		lastname = !null
+	 * 		lastname != null
 	 * Ensures:
 	 * 		if there exists a staff such that staff.ssid == ssid
 	 * 			the lastname of the staff is set to the lastname
@@ -199,7 +199,7 @@ public interface IStaff extends Serializable {
 	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		id != null
-	 * 		job = !null
+	 * 		job != null
 	 * Ensures:
 	 * 		if there exists a staff such that staff.ssid == ssid
 	 * 			the job of the staff is set to the job
@@ -216,7 +216,7 @@ public interface IStaff extends Serializable {
 	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		id != null
-	 * 		phone = !null
+	 * 		phone != null
 	 * Ensures:
 	 * 		if there exists a staff such that staff.ssid == ssid
 	 * 			the phone of the staff is set to the phone
@@ -233,10 +233,10 @@ public interface IStaff extends Serializable {
 	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		id != null
-	 * 		contract = !null
+	 * 		salaryContractType == "Monthly" || "Hourly"
 	 * Ensures:
 	 * 		if there exists a staff such that staff.ssid == ssid
-	 * 			the contract of the staff is set to the contract
+	 * 			the contract type of the staff is set to salaryContractType
 	 * 		otherwise
 	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
@@ -244,7 +244,7 @@ public interface IStaff extends Serializable {
 	 * @model SSIDRequired="true" SSIDOrdered="false" salaryContractRequired="true" salaryContractOrdered="false"
 	 * @generated
 	 */
-	void changeStaffSalaryContract(String SSID, SalaryContract salaryContract) throws InvalidIDException;
+	void changeStaffSalaryContract(String SSID, String salaryContractType) throws InvalidIDException;
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -279,15 +279,18 @@ public interface IStaff extends Serializable {
 	 * 		contract 	!= null
 	 * 		salary 		!= null
 	 * Ensures:
-	 * 		that there are a staff s with
-	 * 			s.firstname	== firstname
-	 * 			s.lastname 	== lastname
-	 * 			s.job 		== job
-	 * 			s.phone 	== phone
-	 * 			s.email		== email
-	 * 			s.SSID 		== SSID
-	 * 			s.contract	== contract
-	 * 			s.salary 	== salary
+	 * 		if there doesn't exists a staff such that staff.ssid == ssid
+	 * 			that there are a staff s with
+	 * 				s.firstname	== firstname
+	 * 				s.lastname 	== lastname
+	 * 				s.job 		== job
+	 * 				s.phone 	== phone
+	 * 				s.email		== email
+	 * 				s.SSID 		== SSID
+	 * 				s.contract	== contract
+	 * 				s.salary 	== salary
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model firstnameDataType="org.eclipse.uml2.types.String" firstnameRequired="true" firstnameOrdered="false" lastnameDataType="org.eclipse.uml2.types.String" lastnameRequired="true" lastnameOrdered="false" jobDataType="org.eclipse.uml2.types.String" jobRequired="true" jobOrdered="false" phoneDataType="org.eclipse.uml2.types.String" phoneRequired="true" phoneOrdered="false" emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" salaryContractTypeDataType="org.eclipse.uml2.types.String" salaryContractTypeRequired="true" salaryContractTypeOrdered="false" salaryRequired="true" salaryOrdered="false"

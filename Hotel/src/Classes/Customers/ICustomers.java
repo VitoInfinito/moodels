@@ -233,6 +233,12 @@ public interface ICustomers extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		keyword != null
+	 * Ensures:
+	 * 	 	returns a non-null list of all customer ids matching something in the following order:
+	 * 			1. Accounts with id that exactly matches the keyword
+	 * 			2. Accounts with id that has some matching to the keyword
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
@@ -241,6 +247,10 @@ public interface ICustomers extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		nothing
+	 * Ensures:
+	 * 	 	A non null list of all customer bookings is returned.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -250,6 +260,10 @@ public interface ICustomers extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		nothing
+	 * Ensures:
+	 * 	 	A non null list of all customer requests is returned.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -259,6 +273,13 @@ public interface ICustomers extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		SSID != null && bookingsID != null
+	 * Ensures:
+	 * 		if there exists a booking such that customer.bookingID == bookingID
+	 * 			InvalidIDException is thrown.
+	 * 		otherwise
+	 * 			a booking is added where customer.SSID == SSID && customer.bookingID == bookingID
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false"
@@ -268,6 +289,13 @@ public interface ICustomers extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		SSID != null && bookingID != null
+	 * Ensures:
+	 * 		if there exists a customer such that customer.SSID == SSID && customer.bookingID == bookingID
+	 * 			booking is removed.
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" bookingIDDataType="org.eclipse.uml2.types.String" bookingIDRequired="true" bookingIDOrdered="false"
@@ -277,6 +305,13 @@ public interface ICustomers extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		SSID != null && description != null
+	 * Ensures:
+	 * 		if there exists a customer such that customer.SSID == SSID
+	 * 			a request is added where customer.SSID == SSID && customer.request.decription == description
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false"
@@ -286,6 +321,13 @@ public interface ICustomers extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		SSID != null && requestID != null
+	 * Ensures:
+	 * 		if there exists a customer such that customer.SSID == SSID && customer.requestID == requestIDD
+	 * 			request is removed.
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false"

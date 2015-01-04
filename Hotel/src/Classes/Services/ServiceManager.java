@@ -22,7 +22,7 @@ import Classes.Utils.InvalidIDException;
  * <!-- end-user-doc -->
  * @generated NOT
  */
- class ServiceManager implements IServicesManage {
+ class ServiceManager implements IServicesManager {
 	private static final long serialVersionUID = -4647702574744833642L;
 	private final Logger logger = LoggerFactory.getLogger(ServiceManager.class);
 	public static ServiceManager INSTANCE = new ServiceManager();

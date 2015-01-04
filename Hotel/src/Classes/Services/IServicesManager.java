@@ -18,12 +18,20 @@ import Classes.Utils.InvalidIDException;
  * @generated
  */
 @NonNullByDefault
-public interface IServicesManage extends IServicesAccess {
+public interface IServicesManager extends IServicesAccess {
 	
-	IServicesManage INSTANCE = Classes.Services.ServiceManager.INSTANCE;
+	IServicesManager INSTANCE = Classes.Services.ServiceManager.INSTANCE;
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * 		name != null
+	 * Ensures:
+	 * 		if there exists a service such that service.id == id
+	 * 			the name of the service is set to name
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model serviceIDDataType="org.eclipse.uml2.types.String" serviceIDRequired="true" serviceIDOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
@@ -33,6 +41,14 @@ public interface IServicesManage extends IServicesAccess {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * 		price != null
+	 * Ensures:
+	 * 		if there exists a service such that service.id == id
+	 * 			the price of the service is set to price
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model serviceIDDataType="org.eclipse.uml2.types.String" serviceIDRequired="true" serviceIDOrdered="false" priceRequired="true" priceOrdered="false"
@@ -42,6 +58,14 @@ public interface IServicesManage extends IServicesAccess {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * 		expense != null
+	 * Ensures:
+	 * 		if there exists a service such that service.id == id
+	 * 			the expense of the service is set to expense
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model serviceIDDataType="org.eclipse.uml2.types.String" serviceIDRequired="true" serviceIDOrdered="false" expenseRequired="true" expenseOrdered="false"
@@ -83,4 +107,4 @@ public interface IServicesManage extends IServicesAccess {
 	 */
 	void addService(String name, double price, double expense);
 
-} // IServicesManage
+} // IServicesManager

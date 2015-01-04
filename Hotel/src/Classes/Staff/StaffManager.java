@@ -291,9 +291,19 @@ import Classes.Utils.InvalidIDException;
 	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void changeStaffSalaryContract(String SSID, SalaryContract salaryContract) throws InvalidIDException {
+	public void changeStaffSalaryContract(String SSID, String salaryContractType) throws InvalidIDException {
 		if(employees.containsKey(SSID)) {
-			employees.get(SSID).setSalaryContract(salaryContract);
+			SalaryContract contract;
+
+			switch (salaryContractType) {
+				case "Monthly": contract = StaffFactory.INSTANCE.createMonthlySalaryContract();
+								employees.get(SSID).setSalaryContract(contract);
+								break;
+				case "Hourly":	contract = StaffFactory.INSTANCE.createHourlySalaryContract();
+								employees.get(SSID).setSalaryContract(contract);
+								break;
+				default:	logger.warn("Invalid salary contract", salaryContractType);
+			}
 		} else {
 			logger.warn("A staff with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();

@@ -15,16 +15,16 @@ import Classes.Utils.InvalidIDException;
 public class IFeedbackTest {
 	
 	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
+	public static void setUpBeforeClass() {
 	}
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 		IFeedback.INSTANCE.addFeedback("abababababa");
 	}
 	
 	@After
-	public void tearDown() throws Exception {
+	public void tearDown() {
 		if (IFeedback.INSTANCE.getAllFeedbackIDs().size() > 0) {
 			String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
 			IFeedback.INSTANCE.removeFeedback(id);
@@ -32,7 +32,7 @@ public class IFeedbackTest {
 	}
 	
 	@Test
-	public void testGetAllFeedbackIDsEmptyExpectEmpty() throws Exception {
+	public void testGetAllFeedbackIDsEmptyExpectEmpty() {
 		tearDown();
 		
 		int result = IFeedback.INSTANCE.getAllFeedbackIDs().size();
@@ -104,6 +104,11 @@ public class IFeedbackTest {
 		String result = IFeedback.INSTANCE.getFeedbackDescription(id);
 		assertTrue(result == "bcbcbcbc");
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testSetFeedbackDescription_id_not_exists() {
+		IFeedback.INSTANCE.setFeedbackDescription("", "");
+	}
 
 	@Test
 	public void testSetFeedbackIsResolved() {
@@ -111,6 +116,11 @@ public class IFeedbackTest {
 		IFeedback.INSTANCE.setFeedbackIsResolved(id, true);
 		Boolean result = IFeedback.INSTANCE.getFeedbackIsResolved(id);
 		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testSetFeedbackIsResolved_id_not_exists() {
+		IFeedback.INSTANCE.setFeedbackIsResolved("", true);
 	}
 
 	@Test
@@ -120,6 +130,11 @@ public class IFeedbackTest {
 		Boolean result = IFeedback.INSTANCE.getFeedbackIsNoted(id);
 		assertTrue(result);
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testSetFeedbackIsNoted_id_not_exists() {
+		IFeedback.INSTANCE.setFeedbackIsNoted("", true);
+	}
 
 	@Test
 	public void testSearchFeedback() {
@@ -128,7 +143,7 @@ public class IFeedbackTest {
 	}
 
 	@Test
-	public void testAddFeedback() throws Exception {
+	public void testAddFeedback() {
 		tearDown();
 		
 		IFeedback.INSTANCE.addFeedback("bcbcbcbcbc");
@@ -144,6 +159,11 @@ public class IFeedbackTest {
 		IFeedback.INSTANCE.removeFeedback(id);
 		int result = IFeedback.INSTANCE.getAllFeedbackIDs().size();
 		assertTrue(result == 0);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testRemoveFeedback_id_not_exists() {
+		IFeedback.INSTANCE.removeFeedback("");
 	}
 
 }

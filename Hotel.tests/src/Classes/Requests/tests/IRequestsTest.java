@@ -15,16 +15,16 @@ import Classes.Utils.InvalidIDException;
 public class IRequestsTest {
 	
 	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
+	public static void setUpBeforeClass() {
 	}
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 		IRequests.INSTANCE.addRequest("abababababa");
 	}
 	
 	@After
-	public void tearDown() throws Exception {
+	public void tearDown() {
 		if (IRequests.INSTANCE.getAllRequestIDs().size() > 0) {
 			String id = IRequests.INSTANCE.getAllRequestIDs().get(0);
 			IRequests.INSTANCE.deleteRequest(id);
@@ -32,7 +32,7 @@ public class IRequestsTest {
 	}
 	
 	@Test
-	public void testGetAllRequestIDsEmptyExpectEmpty() throws Exception {
+	public void testGetAllRequestIDsEmptyExpectEmpty() {
 		tearDown();
 		
 		int result = IRequests.INSTANCE.getAllRequestIDs().size();
@@ -71,6 +71,11 @@ public class IRequestsTest {
 		Boolean result = IRequests.INSTANCE.hasRequestBeenResolved(id);
 		assertTrue(result);
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testHasRequestBeenResolved_id_not_exists() {
+		IRequests.INSTANCE.hasRequestBeenResolved("");
+	}
 
 	@Test
 	public void testSetRequestResolved() {
@@ -78,6 +83,11 @@ public class IRequestsTest {
 		IRequests.INSTANCE.setRequestResolved(id);
 		Boolean result = IRequests.INSTANCE.hasRequestBeenResolved(id);
 		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testSetRequestResolved_id_not_exists() {
+		IRequests.INSTANCE.setRequestResolved("");
 	}
 
 	@Test
@@ -87,6 +97,11 @@ public class IRequestsTest {
 		int result = IRequests.INSTANCE.getAllRequestIDs().size();
 		assertTrue(result == 0);
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testDeleteRequest_id_not_exists() {
+		IRequests.INSTANCE.deleteRequest("");
+	}
 
 	@Test
 	public void testChangeRequestDesc() {
@@ -94,6 +109,11 @@ public class IRequestsTest {
 		IRequests.INSTANCE.changeRequestDesc(id, "bcbcbcbc");
 		String result = IRequests.INSTANCE.getRequestDescription(id);
 		assertTrue(result == "bcbcbcbc");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeRequestDesc_id_not_exists() {
+		IRequests.INSTANCE.changeRequestDesc("", "");
 	}
 
 	@Test
@@ -105,13 +125,18 @@ public class IRequestsTest {
 	@Test
 	public void testSetRequestDescription() {
 		String id = IRequests.INSTANCE.getAllRequestIDs().get(0);
-		IRequests.INSTANCE.changeRequestDesc(id, "bcbcbcbc");
+		IRequests.INSTANCE.setRequestDescription(id, "bcbcbcbc");
 		String result = IRequests.INSTANCE.getRequestDescription(id);
 		assertTrue(result == "bcbcbcbc");
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testSetRequestDescription_id_not_exists() {
+		IRequests.INSTANCE.setRequestDescription("", "");
+	}
 
 	@Test
-	public void testAddRequest() throws Exception {
+	public void testAddRequest() {
 		tearDown();
 		
 		IRequests.INSTANCE.addRequest("bcbcbcbcbc");
