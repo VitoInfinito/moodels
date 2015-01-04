@@ -2,11 +2,14 @@ package Classes.Customers.tests;
 
 import static org.junit.Assert.*;
 
+import java.util.List;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import Classes.Accounts.IManageAccounts;
 import Classes.Customers.ICustomers;
 import Classes.Utils.InvalidIDException;
 
@@ -20,7 +23,7 @@ public class ICustomersTest {
 	public void setUp() throws Exception {
 		ICustomers.INSTANCE.addCustomer("010101-0101", "Sven", "Svensson", "Mr", "sven.svensson@gmail.com", "0707-777776");
 		ICustomers.INSTANCE.addCustomer("010101-0102", "Bengt", "Bengtsson", "Dr", "bengt.bengtsson@gmail.com", "0707-777777");
-		ICustomers.INSTANCE.addCustomer("010101-0103", "Maja", "Andersson", "Ms", "maja.andersson@gmail.com", "0707-777778");
+		ICustomers.INSTANCE.addCustomer("010101-0103", "Maja", "Andersdotter", "Ms", "maja.andersdotter@gmail.com", "0707-777778");
 		
 		ICustomers.INSTANCE.addCustomerBooking("010101-0101", "001");
 		ICustomers.INSTANCE.addCustomerBooking("010101-0101", "002");
@@ -30,7 +33,7 @@ public class ICustomersTest {
 	}
 	
 	@After
-	public void tearDown() throws Exception {
+	public void tearDown() throws InvalidIDException {
 		for(String SSID : ICustomers.INSTANCE.getAllCustomers()) {
 			ICustomers.INSTANCE.removeCustomer(SSID);
 		}
@@ -157,9 +160,42 @@ public class ICustomersTest {
 	}
 
 	@Test
-	public void testSearchCustomers() {
-		// TODO 
-		fail("Not yet implemented");
+	public void testSearchCustomers_customersEmpty_expectEmptyList() throws InvalidIDException{
+		tearDown();
+		boolean result = ICustomers.INSTANCE.searchCustomers("Sven").isEmpty();
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchCustomers_customersNotEmpty_expectsEmptyList() {
+		boolean result = ICustomers.INSTANCE.searchCustomers("XXX").isEmpty();
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchCustomers_expects_list_non_null() {
+		List<String> list = ICustomers.INSTANCE.searchCustomers("XXX");
+		assertNotNull(list);
+	}
+	
+	@Test
+	public void testSearchCustomers_idMatchExactly() {
+		List<String> list = ICustomers.INSTANCE.searchCustomers("Svensson");
+		assertTrue(list.contains("010101-0101"));
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchCustomers_idMatchSomewhat() {
+		List<String> list = ICustomers.INSTANCE.searchCustomers("ven");
+		assertTrue(list.contains("010101-0101"));
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchCustomers_multipleMatches() {
+		List<String> list = ICustomers.INSTANCE.searchCustomers("son");
+		assertTrue(list.size() == 2);
 	}
 
 	@Test
