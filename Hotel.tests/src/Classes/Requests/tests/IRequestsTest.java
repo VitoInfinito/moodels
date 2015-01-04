@@ -149,20 +149,15 @@ public class IRequestsTest {
 	
 	@Test
 	public void testSearchFeedback_idMatchSomewhat() {
-		List<String> list = IFeedback.INSTANCE.searchFeedback("bab");
-		System.out.println(list.size());
-		assertTrue(IFeedback.INSTANCE.getFeedbackDescription(list.get(0)).equals("lolololololhej"));
+		List<String> list = IRequests.INSTANCE.searchRequests("bab");
+		assertTrue(IRequests.INSTANCE.getRequestDescription(list.get(0)).equals("abababababahej"));
 		assertTrue(list.size() == 1);
-		
-		// TODO
 	}
 	
 	@Test
 	public void testSearchFeedback_multipleMatches() {
-		List<String> list = IFeedback.INSTANCE.searchFeedback("hej");
+		List<String> list = IRequests.INSTANCE.searchRequests("hej");
 		assertTrue(list.size() == 2);
-		
-		// TODO
 	}
 
 	@Test
