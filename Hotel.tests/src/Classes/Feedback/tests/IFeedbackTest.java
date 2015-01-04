@@ -15,16 +15,16 @@ import Classes.Utils.InvalidIDException;
 public class IFeedbackTest {
 	
 	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
+	public static void setUpBeforeClass() {
 	}
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 		IFeedback.INSTANCE.addFeedback("abababababa");
 	}
 	
 	@After
-	public void tearDown() throws Exception {
+	public void tearDown() {
 		if (IFeedback.INSTANCE.getAllFeedbackIDs().size() > 0) {
 			String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
 			IFeedback.INSTANCE.removeFeedback(id);
@@ -32,7 +32,7 @@ public class IFeedbackTest {
 	}
 	
 	@Test
-	public void testGetAllFeedbackIDsEmptyExpectEmpty() throws Exception {
+	public void testGetAllFeedbackIDsEmptyExpectEmpty() {
 		tearDown();
 		
 		int result = IFeedback.INSTANCE.getAllFeedbackIDs().size();
@@ -143,7 +143,7 @@ public class IFeedbackTest {
 	}
 
 	@Test
-	public void testAddFeedback() throws Exception {
+	public void testAddFeedback() {
 		tearDown();
 		
 		IFeedback.INSTANCE.addFeedback("bcbcbcbcbc");

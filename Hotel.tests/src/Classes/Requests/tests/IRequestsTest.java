@@ -15,16 +15,16 @@ import Classes.Utils.InvalidIDException;
 public class IRequestsTest {
 	
 	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
+	public static void setUpBeforeClass() {
 	}
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 		IRequests.INSTANCE.addRequest("abababababa");
 	}
 	
 	@After
-	public void tearDown() throws Exception {
+	public void tearDown() {
 		if (IRequests.INSTANCE.getAllRequestIDs().size() > 0) {
 			String id = IRequests.INSTANCE.getAllRequestIDs().get(0);
 			IRequests.INSTANCE.deleteRequest(id);
@@ -32,7 +32,7 @@ public class IRequestsTest {
 	}
 	
 	@Test
-	public void testGetAllRequestIDsEmptyExpectEmpty() throws Exception {
+	public void testGetAllRequestIDsEmptyExpectEmpty() {
 		tearDown();
 		
 		int result = IRequests.INSTANCE.getAllRequestIDs().size();
@@ -136,7 +136,7 @@ public class IRequestsTest {
 	}
 
 	@Test
-	public void testAddRequest() throws Exception {
+	public void testAddRequest() {
 		tearDown();
 		
 		IRequests.INSTANCE.addRequest("bcbcbcbcbc");

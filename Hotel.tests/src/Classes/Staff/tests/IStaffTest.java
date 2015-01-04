@@ -14,24 +14,24 @@ import Classes.Utils.InvalidIDException;
 public class IStaffTest {
 	
 	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
+	public static void setUpBeforeClass() {
 	}
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 		IStaff.INSTANCE.addEmployee("Sven", "Larsson", "Cleaner", "0705-232425", "sven.larsson@mail.com", "010101-0101", "Hourly", 100);
 		IStaff.INSTANCE.addEmployee("Lars", "Svensson", "Chef", "0705-232426", "lars.svensson@mail.com", "010101-0102", "Monthly", 20000);
 	}
 	
 	@After
-	public void tearDown() throws Exception {
+	public void tearDown() {
 		for(String SSID : IStaff.INSTANCE.getAllStaff()) {
 			IStaff.INSTANCE.removeStaff(SSID);
 		}
 	}
 	
 	@Test
-	public void testGetAllStaffEmptyExpectEmpty() throws Exception {
+	public void testGetAllStaffEmptyExpectEmpty() {
 		tearDown();
 		
 		int result = IStaff.INSTANCE.getAllStaff().size();
