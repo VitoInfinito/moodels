@@ -124,24 +124,20 @@ public class IRequestsTest {
 	@Test
 	public void testSearchRequests_requestEmpty_expectEmptyList() {
 		tearDown();
-		System.out.println(IRequests.INSTANCE.searchRequests("ab"));
 		boolean result = IRequests.INSTANCE.searchRequests("ab").isEmpty();
 		assertTrue(result);
-		// TODO
 	}
 	
 	@Test
 	public void testSearchFeedback_feedbackNotEmpty_expectEmptyList() {
 		boolean result = IRequests.INSTANCE.searchRequests("xx").isEmpty();
 		assertTrue(result);
-		// TODO
 	}
 	
 	@Test
 	public void testSearchFeedback_expectsListNonNull() {
 		List<String> list = IRequests.INSTANCE.searchRequests("xx");
 		assertNotNull(list);
-		// TODO
 	}
 	
 	@Test
@@ -149,13 +145,13 @@ public class IRequestsTest {
 		List<String> list = IRequests.INSTANCE.searchRequests("abababababahej");
 		assertTrue(IRequests.INSTANCE.getRequestDescription(list.get(0)).equals("abababababahej"));
 		assertTrue(list.size() == 1);
-		// TODO
 	}
 	
 	@Test
 	public void testSearchFeedback_idMatchSomewhat() {
 		List<String> list = IFeedback.INSTANCE.searchFeedback("bab");
-		assertTrue(IFeedback.INSTANCE.getFeedbackDescription(list.get(0)).equals("abababababahej"));
+		System.out.println(list.size());
+		assertTrue(IFeedback.INSTANCE.getFeedbackDescription(list.get(0)).equals("lolololololhej"));
 		assertTrue(list.size() == 1);
 		
 		// TODO
