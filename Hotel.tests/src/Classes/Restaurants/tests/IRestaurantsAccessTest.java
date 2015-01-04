@@ -62,7 +62,7 @@ public class IRestaurantsAccessTest {
 
 	@Test
 	public void testGetRestaurantTables() {
-		assertTrue(IRestaurantsManage.INSTANCE.getRestaurantTables("testaurant").size() == 1);
+		assertTrue(IRestaurantsManage.INSTANCE.getRestaurantTables("testaurant").size() == 2);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -108,7 +108,7 @@ public class IRestaurantsAccessTest {
 		IRestaurantsManage.INSTANCE.getAvailableTables(
 			LocalDateTime.parse("2014-10-23 12:30", formatter),
 			LocalDateTime.parse("2014-10-23 13:00", formatter),
-			"testaurant");
+			"");
 	}
 
 	@Test
@@ -127,7 +127,7 @@ public class IRestaurantsAccessTest {
 		assertTrue(IRestaurantsManage.INSTANCE.getRestaurantMenuName("testaurant") == "The Menu");
 	}
 	
-	@Test
+	@Test(expected=InvalidIDException.class)
 	public void testGetRestaurantMenuName_notExists_throwsException() {
 		IRestaurantsManage.INSTANCE.getRestaurantMenuName("");
 	}
@@ -191,7 +191,7 @@ public class IRestaurantsAccessTest {
 		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
 		IRestaurantsManage.INSTANCE.cancelReservation("testaurant", reservationID);
 		
-		assertTrue(IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").size() == 1);
+		assertTrue(IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").size() == 0);
 	}
 	
 	@Test(expected=InvalidIDException.class)
