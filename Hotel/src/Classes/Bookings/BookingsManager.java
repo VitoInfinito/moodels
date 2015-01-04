@@ -571,9 +571,9 @@ public class BookingsManager implements IBookings {
 	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void addBookingRequest(String bookingID, String description) throws InvalidIDException {
+	public void addBookingRequest(String bookingID, String requestID) throws InvalidIDException {
 		if (bookings.containsKey(bookingID)) {
-			bookings.get(bookingID).addRequest(iRequests.addRequest(description));
+			bookings.get(bookingID).addRequest(requestID);
 		} else {
 			logger.warn("A booking with bookingID {} could not be found.", bookingID);
 			throw new InvalidIDException();

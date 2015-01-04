@@ -17,13 +17,16 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires;
+import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
 import Classes.Bills.IBills;
 import Classes.Bookables.ConferenceRoomCategory;
 import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.IBookablesManage;
 import Classes.Bookings.IBookings;
 import Classes.Customers.ICustomers;
+import Classes.Requests.IRequests;
 import Classes.Stays.IStays;
+import Classes.Utils.InsufficientFundsException;
 import Classes.Utils.InvalidCreditCardException;
 import Classes.Utils.InvalidIDException;
 
@@ -593,23 +596,77 @@ public class IBookingsTest {
 	}
 
 	@Test
-	public void testAddBookingRequest() {
-		fail("Not yet implemented");
+	public void testAddBookingRequest_expects_request_added() {
+		String reqID = IRequests.INSTANCE.addRequest("korv");
+		IBookings.INSTANCE.addBookingRequest(booking2, reqID);
+		List<String> requests = IBookings.INSTANCE.getBookingRequests(booking2);
+		assertTrue(requests.contains(reqID));
+		assertTrue(requests.size() == 1);
+		IRequests.INSTANCE.deleteRequest(reqID);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testAddBookingRequest_invalid_booking_expects_exception() {
+		IBookings.INSTANCE.addBookingRequest("finnsej", "someid");
 	}
 
 	@Test
-	public void testRemoveBookingRequest() {
-		fail("Not yet implemented");
+	public void testRemoveBookingRequest_expects_request_removed() {
+		String reqID = IRequests.INSTANCE.addRequest("korv");
+		IBookings.INSTANCE.addBookingRequest(booking2, reqID);
+		IBookings.INSTANCE.removeBookingRequest(booking2, reqID);
+		List<String> requests = IBookings.INSTANCE.getBookingRequests(booking2);
+		assertFalse(requests.contains(reqID));
+		assertTrue(requests.size() == 0);
+		IRequests.INSTANCE.deleteRequest(reqID);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testRemoveBookingRequest_invalid_booking_expects_exception() {
+		IBookings.INSTANCE.addBookingRequest(booking2, "someid");
+		IBookings.INSTANCE.removeBookingRequest("finnsej", "someid");
 	}
 
 	@Test
-	public void testGetBookingRequests() {
-		fail("Not yet implemented");
+	public void testGetBookingRequests_expects_requests() {
+		String reqID = IRequests.INSTANCE.addRequest("korv");
+		IBookings.INSTANCE.addBookingRequest(booking2, reqID);
+		List<String> requests = IBookings.INSTANCE.getBookingRequests(booking2);
+		assertTrue(requests.contains(reqID));
+		assertTrue(requests.size() == 1);
+		IRequests.INSTANCE.deleteRequest(reqID);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetBookingRequests_invalid_booking_expects_exception() {
+		IBookings.INSTANCE.getBookingRequests("finnsej");
 	}
 
+	@Test(expected=InsufficientFundsException.class)
+	public void testPayBookingBills_insufficient_funds_expects_exception() throws InvalidIDException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		IBookings.INSTANCE.payBookingBills(booking2);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testPayBookingBills_invalid_booking_expects_exception() throws InvalidIDException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		IBookings.INSTANCE.payBookingBills("finnsej");
+	}
+	
 	@Test
-	public void testPayBookingBills() {
-		fail("Not yet implemented");
+	public void testPayBookingBills_sufficient_funds_expects_bills_payed() throws InvalidIDException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		AdministratorRequires.instance().makeDeposit("34336534", "655", 10, 18, "Greger","Gregersson", 100000);
+		List<String> stays = IBookings.INSTANCE.getBookedStaysOfBooking(booking2);
+		List<String> bills = new ArrayList<String>();
+		for (String stay : stays) {
+			bills.addAll(IStays.INSTANCE.getAllUnpayedBillsOfHotelStay(stay));
+		}
+		IBookings.INSTANCE.payBookingBills(booking2);
+		assertTrue(AdministratorRequires.instance().getBalance("34336534", "655", 10, 18, "Greger","Gregersson") < 100000);
+		for (String bill : bills) {
+			assertTrue(IBills.INSTANCE.getIsBillPaid(bill));
+		}
+		// Cleanup
+		CustomerRequires.instance().makePayment("34336534", "655", 10, 18, "Greger","Gregersson", AdministratorRequires.instance().getBalance("34336534", "655", 10, 18, "Greger","Gregersson"));
 	}
 
 	@Test
