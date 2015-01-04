@@ -137,6 +137,7 @@ public interface IFeedback extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT

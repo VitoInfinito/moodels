@@ -26,6 +26,7 @@ public interface IGuests extends Serializable {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -34,6 +35,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" firstnameDataType="org.eclipse.uml2.types.String" firstnameRequired="true" firstnameOrdered="false" lastnameDataType="org.eclipse.uml2.types.String" lastnameRequired="true" lastnameOrdered="false" titleDataType="org.eclipse.uml2.types.String" titleRequired="true" titleOrdered="false" emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false" phoneDataType="org.eclipse.uml2.types.String" phoneRequired="true" phoneOrdered="false"
@@ -43,6 +45,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false"
@@ -52,6 +55,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
@@ -61,6 +65,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" titleDataType="org.eclipse.uml2.types.String" titleRequired="true" titleOrdered="false"
@@ -70,6 +75,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" eMailDataType="org.eclipse.uml2.types.String" eMailRequired="true" eMailOrdered="false"
@@ -79,6 +85,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" phoneNrDataType="org.eclipse.uml2.types.String" phoneNrRequired="true" phoneNrOrdered="false"
@@ -88,6 +95,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -97,6 +105,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -106,6 +115,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -115,6 +125,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -124,6 +135,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -133,6 +145,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
@@ -141,6 +154,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -150,6 +164,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -159,6 +174,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
@@ -168,6 +184,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false" desctiptionDataType="org.eclipse.uml2.types.String" desctiptionRequired="true" desctiptionOrdered="false"
@@ -177,6 +194,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false"
@@ -186,6 +204,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -195,6 +214,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -204,6 +224,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -213,6 +234,7 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -222,6 +244,7 @@ public interface IGuests extends Serializable {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
