@@ -2317,6 +2317,11 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_hrPf8JQqEeSc9LI1oTU9Uw" name="removeService">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_tdPuYJQqEeSc9LI1oTU9Uw" name="serviceID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9OfXXpsEeST-65JbGUt8g" name="ordered" visibility="private" memberEnd="_w9OfXnpsEeST-65JbGUt8g _w9OfLnpsEeST-65JbGUt8g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9OfXnpsEeST-65JbGUt8g" name="roomServiceOrder" type="_w9OfLXpsEeST-65JbGUt8g" association="_w9OfXXpsEeST-65JbGUt8g">
