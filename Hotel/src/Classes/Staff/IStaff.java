@@ -233,7 +233,7 @@ public interface IStaff extends Serializable {
 	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		id != null
-	 * 		salaryContractType != null
+	 * 		salaryContractType == "Monthly" || "Hourly"
 	 * Ensures:
 	 * 		if there exists a staff such that staff.ssid == ssid
 	 * 			the contract type of the staff is set to salaryContractType
