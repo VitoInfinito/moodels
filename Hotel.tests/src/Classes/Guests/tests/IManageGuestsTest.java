@@ -11,6 +11,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import Classes.Guests.IGuests;
+import Classes.Requests.IRequests;
 
 public class IManageGuestsTest {
 
@@ -24,12 +25,13 @@ public class IManageGuestsTest {
 		IGuests.INSTANCE.addGuest("010101-0101", "Kalle", "Karlsson", "Mr", "kalle.karlsson@mail.mail", "0101010101");
 		IGuests.INSTANCE.addGuest("020202-0202", "Erik", "Eriksson", "Mr", "erik.eriksson@mail.mail", "0202020202");
 		IGuests.INSTANCE.addGuest("030303-0303", "Anna", "Andersson", "Mrs", "anna.andersson@mail.mail", "0303030303");
-		IGuests.INSTANCE.addGuestRequest("010101-0101", "010101-0101");
+		/*IGuests.INSTANCE.addGuestRequest("010101-0101", "010101-0101");
 		IGuests.INSTANCE.addGuestRequest("020202-0202", "020202-0202");
 		IGuests.INSTANCE.addGuestRequest("030303-0303", "030303-0303");
-		/*IGuests.INSTANCE.generateGuestAccount("010101-0101");
+		IGuests.INSTANCE.generateGuestAccount("010101-0101");
 		IGuests.INSTANCE.generateGuestAccount("020202-0202");
 		IGuests.INSTANCE.generateGuestAccount("030303-0303");*/
+		
 
 
 
@@ -139,7 +141,9 @@ public class IManageGuestsTest {
 
 	@Test
 	public void testGetGuestRequests() {
-		assertTrue(IGuests.INSTANCE.getGuestRequests("010101-0101").size() == 1);
+		String requestID = IRequests.INSTANCE.addRequest("abc");
+		IGuests.INSTANCE.addGuestRequest("010101-0101", requestID);
+		assertTrue(IGuests.INSTANCE.getGuestRequests("010101-0101").contains(requestID));
 	}
 
 	@Test
@@ -150,14 +154,18 @@ public class IManageGuestsTest {
 
 	@Test
 	public void testAddGuestRequest() {
-		fail("Not yet implemented");
-		//TODO: write it
+		String requestID = IRequests.INSTANCE.addRequest("abc");
+		IGuests.INSTANCE.addGuestRequest("010101-0101", requestID);
+		assertTrue(IGuests.INSTANCE.getGuestRequests("010101-0101").contains(requestID));
 	}
 
 	@Test
 	public void testRemoveGuestRequest() {
-		fail("Not yet implemented");
-		//TODO: write it
+		String requestID = IRequests.INSTANCE.addRequest("abc");
+		IGuests.INSTANCE.addGuestRequest("010101-0101", requestID);
+		assertTrue(IGuests.INSTANCE.getGuestRequests("010101-0101").contains(requestID));
+		IGuests.INSTANCE.removeGuestRequest("010101-0101", requestID);
+		assertTrue(!(IGuests.INSTANCE.getGuestRequests("010101-0101").contains(requestID)));
 	}
 
 	@Test
