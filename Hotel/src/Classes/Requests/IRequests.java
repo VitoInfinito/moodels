@@ -87,7 +87,7 @@ public interface IRequests extends Serializable {
 	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		id != null
-	 * 		desc = !null
+	 * 		desc != null
 	 * Ensures:
 	 * 		if there exists a request such that request.id == id
 	 * 			the desc of the request is set to the desc
@@ -127,7 +127,7 @@ public interface IRequests extends Serializable {
 	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		id != null
-	 * 		desc = !null
+	 * 		desc != null
 	 * Ensures:
 	 * 		if there exists a request such that request.id == id
 	 * 			the desc of the request is set to the desc

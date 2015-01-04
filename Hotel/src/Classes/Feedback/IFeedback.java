@@ -90,7 +90,7 @@ public interface IFeedback extends Serializable {
 	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		id != null
-	 * 		desc = !null
+	 * 		desc != null
 	 * Ensures:
 	 * 		if there exists a feedback such that feedback.id == id
 	 * 			the desc of the feedback is set to the desc

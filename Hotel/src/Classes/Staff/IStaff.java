@@ -165,7 +165,7 @@ public interface IStaff extends Serializable {
 	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		id != null
-	 * 		firstname = !null
+	 * 		firstname != null
 	 * Ensures:
 	 * 		if there exists a staff such that staff.ssid == ssid
 	 * 			the firstname of the staff is set to the firstname
@@ -182,7 +182,7 @@ public interface IStaff extends Serializable {
 	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		id != null
-	 * 		lastname = !null
+	 * 		lastname != null
 	 * Ensures:
 	 * 		if there exists a staff such that staff.ssid == ssid
 	 * 			the lastname of the staff is set to the lastname
@@ -199,7 +199,7 @@ public interface IStaff extends Serializable {
 	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		id != null
-	 * 		job = !null
+	 * 		job != null
 	 * Ensures:
 	 * 		if there exists a staff such that staff.ssid == ssid
 	 * 			the job of the staff is set to the job
@@ -216,7 +216,7 @@ public interface IStaff extends Serializable {
 	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		id != null
-	 * 		phone = !null
+	 * 		phone != null
 	 * Ensures:
 	 * 		if there exists a staff such that staff.ssid == ssid
 	 * 			the phone of the staff is set to the phone
@@ -233,7 +233,7 @@ public interface IStaff extends Serializable {
 	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		id != null
-	 * 		contract = !null
+	 * 		contract != null
 	 * Ensures:
 	 * 		if there exists a staff such that staff.ssid == ssid
 	 * 			the contract of the staff is set to the contract
