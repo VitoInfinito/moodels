@@ -38,8 +38,8 @@ public class IRestaurantsAccessTest {
 			"testaurant", 
 			tables, 
 			"010101-0101", 
-			LocalDateTime.parse("2014-10-22 12:00", formatter), 
-			LocalDateTime.parse("2014-10-22 14:00", formatter)
+			LocalDateTime.parse("2014-10-22 14:00", formatter), 
+			LocalDateTime.parse("2014-10-22 12:00", formatter)
 		);
 	}
 	
@@ -237,6 +237,11 @@ public class IRestaurantsAccessTest {
 		IRestaurantsManage.INSTANCE.changeReservedTables("apabepacepa", "", tables);
 	}
 	
+	public void testGetReservationTables() {
+		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
+		assertTrue(IRestaurantsManage.INSTANCE.getReservationTables("testaurant", reservationID).size() == 2);
+	}
+	
 	@Test(expected=InvalidIDException.class)
 	public void testGetReservationTables_notExists_throwsException() {
 		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
@@ -246,11 +251,6 @@ public class IRestaurantsAccessTest {
 	@Test(expected=InvalidIDException.class)
 	public void testGetReservationTables_reservationNotExists_throwsException() {
 		IRestaurantsManage.INSTANCE.getReservationTables("testaurant", "");
-	}
-	
-	public void testGetReservationTables() {
-		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
-		assertTrue(IRestaurantsManage.INSTANCE.getReservationTables("testaurant", reservationID).size() == 2);
 	}
 
 	@Test
@@ -286,20 +286,44 @@ public class IRestaurantsAccessTest {
 
 	@Test
 	public void testGetReservationFromTime() {
-		boolean result = IRestaurantsManage.INSTANCE.getReservationFromTime(
-				"testaurant", 
-				"010101-0101") == LocalDateTime.parse("2014-10-20 12:00", formatter);
+		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
+		
+		boolean result = 	IRestaurantsManage.INSTANCE.getReservationFromTime("testaurant", reservationID).isEqual(
+							LocalDateTime.parse("2014-10-22 12:00", formatter));
 		
 		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetReservationFromTime_notExists_throwsException() {
+		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
+		IRestaurantsManage.INSTANCE.getReservationFromTime("", reservationID);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetReservationFromTime_reservationNotExists_throwsException() {
+		IRestaurantsManage.INSTANCE.getReservationFromTime("testaurant", "");
 	}
 
 	@Test
 	public void testGetReservationToTime() {
-		boolean result = IRestaurantsManage.INSTANCE.getReservationToTime(
-				"testaurant", 
-				"010101-0101") == LocalDateTime.parse("2014-10-20 12:00", formatter);
+		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
+		
+		boolean result = 	IRestaurantsManage.INSTANCE.getReservationToTime("testaurant", reservationID).isEqual(
+							LocalDateTime.parse("2014-10-22 14:00", formatter));
 		
 		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetReservationToTime_notExists_throwsException() {
+		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
+		IRestaurantsManage.INSTANCE.getReservationToTime("", reservationID);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetReservationToTime_reservationNotExists_throwsException() {
+		IRestaurantsManage.INSTANCE.getReservationToTime("testaurant", "");
 	}
 
 	@Test

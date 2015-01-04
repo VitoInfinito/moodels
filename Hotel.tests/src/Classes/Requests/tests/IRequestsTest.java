@@ -3,7 +3,6 @@ package Classes.Requests.tests;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import java.util.List;
 
@@ -12,7 +11,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import Classes.Feedback.IFeedback;
 import Classes.Requests.IRequests;
 import Classes.Utils.InvalidIDException;
 
@@ -124,24 +122,20 @@ public class IRequestsTest {
 	@Test
 	public void testSearchRequests_requestEmpty_expectEmptyList() {
 		tearDown();
-		System.out.println(IRequests.INSTANCE.searchRequests("ab"));
 		boolean result = IRequests.INSTANCE.searchRequests("ab").isEmpty();
 		assertTrue(result);
-		// TODO
 	}
 	
 	@Test
 	public void testSearchFeedback_feedbackNotEmpty_expectEmptyList() {
 		boolean result = IRequests.INSTANCE.searchRequests("xx").isEmpty();
 		assertTrue(result);
-		// TODO
 	}
 	
 	@Test
 	public void testSearchFeedback_expectsListNonNull() {
 		List<String> list = IRequests.INSTANCE.searchRequests("xx");
 		assertNotNull(list);
-		// TODO
 	}
 	
 	@Test
@@ -149,24 +143,19 @@ public class IRequestsTest {
 		List<String> list = IRequests.INSTANCE.searchRequests("abababababahej");
 		assertTrue(IRequests.INSTANCE.getRequestDescription(list.get(0)).equals("abababababahej"));
 		assertTrue(list.size() == 1);
-		// TODO
 	}
 	
 	@Test
 	public void testSearchFeedback_idMatchSomewhat() {
-		List<String> list = IFeedback.INSTANCE.searchFeedback("bab");
-		assertTrue(IFeedback.INSTANCE.getFeedbackDescription(list.get(0)).equals("abababababahej"));
+		List<String> list = IRequests.INSTANCE.searchRequests("bab");
+		assertTrue(IRequests.INSTANCE.getRequestDescription(list.get(0)).equals("abababababahej"));
 		assertTrue(list.size() == 1);
-		
-		// TODO
 	}
 	
 	@Test
 	public void testSearchFeedback_multipleMatches() {
-		List<String> list = IFeedback.INSTANCE.searchFeedback("hej");
+		List<String> list = IRequests.INSTANCE.searchRequests("hej");
 		assertTrue(list.size() == 2);
-		
-		// TODO
 	}
 
 	@Test

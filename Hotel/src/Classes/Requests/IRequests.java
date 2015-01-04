@@ -102,6 +102,12 @@ public interface IRequests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		keyword != null
+	 * Ensures:
+	 * 	 	returns a non-null list of all request ids matching something in the following order:
+	 * 			1. Requests with id that exactly matches the keyword
+	 * 			2. Requests with id that has some matching to the keyword
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT

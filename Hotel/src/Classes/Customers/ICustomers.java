@@ -237,8 +237,8 @@ public interface ICustomers extends Serializable {
 	 * 		keyword != null
 	 * Ensures:
 	 * 	 	returns a non-null list of all customer ids matching something in the following order:
-	 * 			1. Accounts with id that exactly matches the keyword
-	 * 			2. Accounts with id that has some matching to the keyword
+	 * 			1. Customers with id that exactly matches the keyword
+	 * 			2. Customers with id that has some matching to the keyword
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT

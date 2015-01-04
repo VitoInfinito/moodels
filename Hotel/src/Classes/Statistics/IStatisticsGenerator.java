@@ -28,6 +28,7 @@ public interface IStatisticsGenerator extends Serializable {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
@@ -37,6 +38,7 @@ public interface IStatisticsGenerator extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
@@ -46,6 +48,7 @@ public interface IStatisticsGenerator extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"

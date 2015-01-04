@@ -150,6 +150,7 @@ public interface IRestaurantsAccess extends Serializable {
 	 * 		keyword != null
 	 * Ensures:
 	 * 		that the restaurants with the keyword will be returned
+	 * 		//TODO BETTER DESC?
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
@@ -190,6 +191,7 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" tablesDataType="org.eclipse.uml2.types.String" tablesMany="true" tablesOrdered="false" guestIDDataType="org.eclipse.uml2.types.String" guestIDRequired="true" guestIDOrdered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false"
@@ -199,6 +201,7 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" reservationIDDataType="org.eclipse.uml2.types.String" reservationIDRequired="true" reservationIDOrdered="false"
@@ -208,6 +211,7 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" reservationIDDataType="org.eclipse.uml2.types.String" reservationIDRequired="true" reservationIDOrdered="false" tablesDataType="org.eclipse.uml2.types.String" tablesMany="true" tablesOrdered="false"
@@ -217,6 +221,7 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false" nbrGuestsDataType="org.eclipse.uml2.types.Integer" nbrGuestsRequired="true" nbrGuestsOrdered="false"
@@ -226,6 +231,7 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false"
@@ -235,6 +241,7 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" reservationIDDataType="org.eclipse.uml2.types.String" reservationIDRequired="true" reservationIDOrdered="false"
@@ -244,6 +251,7 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" reservationIDDataType="org.eclipse.uml2.types.String" reservationIDRequired="true" reservationIDOrdered="false"
@@ -253,6 +261,7 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"

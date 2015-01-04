@@ -57,6 +57,7 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated
@@ -65,6 +66,7 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated
@@ -201,6 +203,7 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false" isDeliveredDataType="org.eclipse.uml2.types.Boolean" isDeliveredRequired="true" isDeliveredOrdered="false"
@@ -210,6 +213,7 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false" dateRequired="true" dateOrdered="false"
@@ -219,6 +223,7 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
@@ -227,6 +232,7 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
@@ -235,6 +241,7 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
@@ -244,6 +251,7 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false"
@@ -253,6 +261,7 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 		//TODO
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model itemsDataType="org.eclipse.uml2.types.String" itemsMany="true" itemsOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false" billDataType="org.eclipse.uml2.types.String" billRequired="true" billOrdered="false" bookableDataType="org.eclipse.uml2.types.String" bookableRequired="true" bookableOrdered="false" deliveryDateRequired="true" deliveryDateOrdered="false" isDeliveredDataType="org.eclipse.uml2.types.Boolean" isDeliveredRequired="true" isDeliveredOrdered="false"
