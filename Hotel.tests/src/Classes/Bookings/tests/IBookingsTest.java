@@ -691,7 +691,6 @@ public class IBookingsTest {
 		List<String> requests = IBookings.INSTANCE.getBookingRequests(booking2);
 		assertTrue(requests.contains(reqID));
 		assertTrue(requests.size() == 1);
-		IRequests.INSTANCE.deleteRequest(reqID);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -707,12 +706,12 @@ public class IBookingsTest {
 		List<String> requests = IBookings.INSTANCE.getBookingRequests(booking2);
 		assertFalse(requests.contains(reqID));
 		assertTrue(requests.size() == 0);
-		IRequests.INSTANCE.deleteRequest(reqID);
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testRemoveBookingRequest_invalid_booking_expects_exception() {
-		IBookings.INSTANCE.addBookingRequest(booking2, "someid");
+		String reqID = IRequests.INSTANCE.addRequest("korv");
+		IBookings.INSTANCE.addBookingRequest(booking2, reqID);
 		IBookings.INSTANCE.removeBookingRequest("finnsej", "someid");
 	}
 
@@ -723,7 +722,6 @@ public class IBookingsTest {
 		List<String> requests = IBookings.INSTANCE.getBookingRequests(booking2);
 		assertTrue(requests.contains(reqID));
 		assertTrue(requests.size() == 1);
-		IRequests.INSTANCE.deleteRequest(reqID);
 	}
 	
 	@Test(expected=InvalidIDException.class)
