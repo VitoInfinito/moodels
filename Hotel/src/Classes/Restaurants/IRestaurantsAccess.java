@@ -31,7 +31,7 @@ public interface IRestaurantsAccess extends Serializable {
 	 * 		restaurantID != null
 	 * Ensures:
 	 * 		if there exists a restaurant with the ID restaurantID  
-	 * 			the restaurant is returned
+	 * 			the all reservations for that restaurant is returned
 	 * 		otherwise
 	 * 			an InvalidIDException will be thrown
 	 * <!-- end-user-doc -->
