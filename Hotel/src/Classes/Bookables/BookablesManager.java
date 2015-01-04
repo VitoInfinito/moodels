@@ -319,7 +319,7 @@ class BookablesManager implements IBookablesManage {
 		Collection<Bookable> c = bookables.values();
 		List<HotelRoom> rooms = new ArrayList<HotelRoom>();
 		for (Bookable b : c) {			
-			if (b instanceof HotelRoom && (((HotelRoom)bookable).getCategory() == category) || category == null) {
+			if (b instanceof HotelRoom && (((HotelRoom)b).getCategory() == category) || category == null) {
 				if (regexPattern.matcher(b.getId()).matches()) {
 					searchResult.add(b.getId());
 				} else {
