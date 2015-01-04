@@ -27,6 +27,13 @@ public interface IServicesAccess extends Serializable {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		Nothing
+	 * Ensures:
+	 * 		if there are more than zero stored services
+	 * 			return a list of all the stored services IDs
+	 * 		otherwise
+	 * 			return an empty list
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
@@ -35,6 +42,13 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		Nothing
+	 * Ensures:
+	 * 		if there are more than zero stored room service orders
+	 * 			return a list of all the stored room service orders IDs
+	 * 		otherwise
+	 * 			return an empty list
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
@@ -59,6 +73,13 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a service such that service.id == id
+	 * 			the non null name of the service is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" serviceIDDataType="org.eclipse.uml2.types.String" serviceIDRequired="true" serviceIDOrdered="false"
@@ -68,6 +89,13 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a service such that service.id == id
+	 * 			the non null price of the service is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" serviceIDDataType="org.eclipse.uml2.types.String" serviceIDRequired="true" serviceIDOrdered="false"
@@ -77,6 +105,13 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a service such that service.id == id
+	 * 			the non null expense of the service is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" serviceIDDataType="org.eclipse.uml2.types.String" serviceIDRequired="true" serviceIDOrdered="false"
@@ -86,6 +121,13 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a room service order such that rso.id == id
+	 * 			the delivery status of the order is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false"
@@ -95,6 +137,13 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a room service order such that rso.id == id
+	 * 			the delivery date of the order is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false"
@@ -104,6 +153,13 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a room service order such that rso.id == id
+	 * 			the bookable of the order is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false"
@@ -113,6 +169,13 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a room service order such that rso.id == id
+	 * 			a of the items of order is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false"
@@ -122,6 +185,13 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a room service order such that rso.id == id
+	 * 			a of the services of order is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false"
