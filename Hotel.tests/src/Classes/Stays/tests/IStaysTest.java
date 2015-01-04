@@ -98,14 +98,14 @@ public class IStaysTest {
 		String booking4 = IBookings.INSTANCE.makeBooking(bookableList4, "930607-0098", LocalDateTime.of(2015, 1, 1, 15, 0), LocalDateTime.of(2015, 1, 2, 10, 0), 2, "34563532", "831", 11, 19, "Yvar","Svensson", 0, false);
 		String booking5 = IBookings.INSTANCE.makeBooking(bookableList5, "861008-0028", LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 23, 17, 0), 4, "45565426", "892", 1, 17, "Anders","Hallgren", 0.2, true);
 		String booking6 = IBookings.INSTANCE.makeBooking(bookableList6, "861008-0028", LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 22, 17, 0), 6, "45565426", "892", 1, 17, "Anders","Hallgren", 0, false);
+
 		
-		
-		stay1 = IStays.INSTANCE.addNewStay("402", booking1, LocalDateTime.of(2015, 1, 1, 15, 0), LocalDateTime.of(2016, 1, 5, 10, 0));
-		stay2 = IStays.INSTANCE.addNewStay("402", booking2, LocalDateTime.of(2016, 1, 6, 15, 0), LocalDateTime.of(2017, 4, 18, 10, 0));
-		stay3 = IStays.INSTANCE.addNewStay("301", booking3, LocalDateTime.of(2015, 1, 4, 15, 0), LocalDateTime.of(2017, 4, 20, 10, 0));
-		stay4 = IStays.INSTANCE.addNewStay("302", booking4, LocalDateTime.of(2015, 1, 1, 15, 0), LocalDateTime.of(2015, 1, 2, 10, 0));
-		stay5 = IStays.INSTANCE.addNewStay("503", booking5, LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 23, 17, 0));
-		stay6 = IStays.INSTANCE.addNewStay("601", booking6, LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 22, 17, 0));
+		stay1 = IBookings.INSTANCE.getBookedStaysOfBooking(booking1).get(0);
+		stay2 = IBookings.INSTANCE.getBookedStaysOfBooking(booking2).get(0);
+		stay3 = IBookings.INSTANCE.getBookedStaysOfBooking(booking3).get(0);
+		stay4 = IBookings.INSTANCE.getBookedStaysOfBooking(booking4).get(0);
+		stay5 = IBookings.INSTANCE.getBookedStaysOfBooking(booking5).get(0);
+		stay6 = IBookings.INSTANCE.getBookedStaysOfBooking(booking6).get(0);
 		
 		
 		IStays.INSTANCE.addResponsibleCreditCard(stay1, "12342352", "523", 9, 17, "Alfred","Johansson");
@@ -117,13 +117,18 @@ public class IStaysTest {
 	}
 	
 	@After
-	public void tearDown() throws InvalidIDException {
+	public void tearDown() throws InvalidIDException, GuestNotCheckedInException, GuestAlreadyCheckedOutException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		for (String id : IStays.INSTANCE.getAllHotelStayIDs()) {
+			//IStays.INSTANCE.removeStay(id);
+			for(String gid : IStays.INSTANCE.getCheckedInGuestsOfHotelStay(id)) {
+				IStays.INSTANCE.checkOutGuest(id, gid);
+			}
+			
+		}
 		for(String id : IBookings.INSTANCE.getAllBookings()) {
 			IBookings.INSTANCE.cancelBooking(id);
 		}
-		for (String id : IStays.INSTANCE.getAllHotelStayIDs()) {
-			IStays.INSTANCE.removeStay(id);
-		}
+		
 	}
 	
 	@AfterClass
@@ -154,7 +159,7 @@ public class IStaysTest {
 		assertTrue(checkedInList.contains("760911-0078"));
 	}
 	
-	@Test(expected=InvalidIDException.class)
+	/*@Test(expected=InvalidIDException.class)
 	public void testCheckInGuest_guest_not_exist() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
 		IStays.INSTANCE.checkInGuest(stay1, "666666-6666");
 	}
@@ -240,7 +245,7 @@ public class IStaysTest {
 		bookableList.add("403");
 		//String booking = IBookings.INSTANCE.makeBooking(bookableList, "760911-0078", LocalDateTime.of(2016, 1, 1, 15, 0), LocalDateTime.of(2016, 1, 5, 10, 0), 4, "12342352", "523", 9, 17, "Alfred","Johansson", 0, true);
 		String stay = IStays.INSTANCE.addNewStay("402", "6666", LocalDateTime.of(2018, 1, 1, 15, 0), LocalDateTime.of(2018, 1, 5, 10, 0));
-	}
+	}*/
 	
 	/*@Test(expected=InvalidIDException.class)
 	public void testAddNewStay_bookable_not_exists() throws InvalidIDException {

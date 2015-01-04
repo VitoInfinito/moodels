@@ -150,7 +150,7 @@ public class StaysManager implements IStays {
 	public void changeBookableOfStay(String stayID, String bookableID) throws InvalidIDException {
 		if (stays.containsKey(stayID)) {
 			Stay stay = stays.get(stayID);
-			if (!iBookings.getAvailableBookablesInPeriod(stay.getFromDate(), stay.getToDate()).contains(bookableID)) {
+			if (!IBookings.INSTANCE.getAvailableBookablesInPeriod(stay.getFromDate(), stay.getToDate()).contains(bookableID)) {
 				logger.warn("Tried to change the bookable of a stay when the bookable is already booked within the period of the stay!");
 				throw new InvalidIDException();
 			}
@@ -184,10 +184,13 @@ public class StaysManager implements IStays {
 	 * @generated NOT
 	 */
 	public String addNewStay(String bookableID, String bookingID, LocalDateTime fromDate, LocalDateTime toDate) {
-		//******THIS THING HERE********
-		iBookings.getAllBookings();
-		//***************************
-
+		if(!IBookablesAccess.INSTANCE.getAllBookableIDs().contains(bookableID)) {
+			logger.warn("A bookable with ID {} could not be found.", bookableID);
+			throw new InvalidIDException();
+		}/*else if(!IBookings.INSTANCE.getAllBookings().contains(bookingID)) {
+			logger.warn("A booking with ID {} could not be found.", bookingID);
+			throw new InvalidIDException();
+		}*/
 		String id = generateID();
 
 		Stay stay = StaysFactory.INSTANCE.createStay();
