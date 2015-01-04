@@ -30,7 +30,7 @@ public class IBookablesAccessTest {
 		bookableList1.add(bookableID);
 		bookableID = IBookablesManage.INSTANCE.addHotelRoom("003", 200, "desc for hotelroom 3", 1, "info 3", HotelRoomCategory.SUITE, 6);
 		bookableList1.add(bookableID);
-		bookableID = IBookablesManage.INSTANCE.addHotelRoom("006", 200, "desc for hotelroom with hostel bed 3", 1, "info 6", HotelRoomCategory.STANDARD_ROOM, 2);
+		bookableID = IBookablesManage.INSTANCE.addHotelRoom("006", 200, "3", 1, "info 6", HotelRoomCategory.STANDARD_ROOM, 2);
 		bookableList1.add(bookableID);
 		bookableID = IBookablesManage.INSTANCE.addHotelRoom("004", 200, "desc for hotelroom 4", 1, "info 4", HotelRoomCategory.SUITE, 6);
 		bookableList1.add(bookableID);
@@ -38,7 +38,7 @@ public class IBookablesAccessTest {
 		bookableList1.add(bookableID);
 		bookableID = IBookablesManage.INSTANCE.addHostelBed("101", 50, "hostelbed", "006");
 		bookableList1.add(bookableID);
-		bookableID = IBookablesManage.INSTANCE.addHostelBed("103", 50, "hostelbed", "006");
+		bookableID = IBookablesManage.INSTANCE.addHostelBed("203", 50, "hostelbed", "006");
 		bookableList1.add(bookableID);
 	}
 	
@@ -90,7 +90,7 @@ public class IBookablesAccessTest {
 
 	@Test
 	public void testGetAllBookableIDs() {
-		boolean result = IBookablesManage.INSTANCE.getAllBookableIDs().size() == 7;
+		boolean result = IBookablesManage.INSTANCE.getAllBookableIDs().size() == 8;
 		assertTrue(result);
 	}
 
@@ -148,10 +148,15 @@ public class IBookablesAccessTest {
 
 	@Test
 	public void testSearchForBookable() {
+		IBookablesManage.INSTANCE.addHotelRoom("3", 200, "desc for hotelroom 3", 1, "info", HotelRoomCategory.SUITE, 6);
+		
 		List<String> tmp = IBookablesManage.INSTANCE.searchForBookable("3");
-		boolean result = (tmp.get(0).equals("003") || tmp.get(0).equals("103")) &&
-				(tmp.get(1).equals("003") || tmp.get(1).equals("103")) &&
-				tmp.get(2).equals("005") && tmp.get(3).equals("006");
+		System.out.println(tmp.toString());
+		boolean result = tmp.get(0).equals("3") &&
+				(tmp.get(1).equals("003") || tmp.get(1).equals("203")) &&
+				(tmp.get(2).equals("003") || tmp.get(2).equals("203")) &&
+				(tmp.get(3).equals("005") || tmp.get(3).equals("006")) &&
+				(tmp.get(4).equals("005") || tmp.get(4).equals("006"));
 		assertTrue(result);
 	}
 
@@ -182,7 +187,7 @@ public class IBookablesAccessTest {
 
 	@Test
 	public void testGetAllHostelBedIDs() {
-		boolean result = IBookablesManage.INSTANCE.getAllHostelBedIDs().size() == 1;
+		boolean result = IBookablesManage.INSTANCE.getAllHostelBedIDs().size() == 2;
 		assertTrue(result);
 	}
 
@@ -201,54 +206,87 @@ public class IBookablesAccessTest {
 
 	@Test
 	public void testSearchHotelRooms() {
-		IBookablesManage.INSTANCE.addHotelRoom("011", 200, "desc for hotelroom222", 1, "info 3", HotelRoomCategory.SUITE, 6);
+		IBookablesManage.INSTANCE.addHotelRoom("011", 200, "desc for hotelroom222", 1, "info 3", HotelRoomCategory.STANDARD_ROOM, 6);
 		IBookablesManage.INSTANCE.addHotelRoom("012", 200, "desc for hotelroom1111", 1, "info 57", HotelRoomCategory.SUITE, 3);
-		IBookablesManage.INSTANCE.addHotelRoom("013", 200, "desc for hotelroom 3", 1, "info", HotelRoomCategory.SUITE, 6);
+		IBookablesManage.INSTANCE.addHotelRoom("013", 200, "desc for hotelroom 3", 1, "info", HotelRoomCategory.FAMILY_ROOM, 6);
 		IBookablesManage.INSTANCE.addHotelRoom("3", 200, "desc for hotelroom 3", 1, "info", HotelRoomCategory.SUITE, 6);
 		IBookablesManage.INSTANCE.addConferenceRoom("023", 200.0, "desc for hotelroom 3", 1, "info", ConferenceRoomCategory.DINING_ROOM, 6);
 		
 		List<String> tmp = IBookablesManage.INSTANCE.searchHotelRooms("3", HotelRoomCategory.SUITE);
 		System.out.println(tmp.toString());
 		boolean result = tmp.get(0).equals("3") &&
-				(tmp.get(1).equals("013") || tmp.get(1).equals("003")) &&
-				(tmp.get(2).equals("013") || tmp.get(2).equals("003")) &&
-				tmp.get(3).equals("012") && tmp.get(4).equals("011");
+				tmp.get(1).equals("003") &&
+				tmp.get(2).equals("012");
 		assertTrue(result);
 	}
 
 	@Test
 	public void testSearchHostelBeds() {
-		fail("Not yet implemented");
-		//TODO
-		//TODO
+		IBookablesManage.INSTANCE.addHostelBed("000", 200, "desc for hotelroom222", "001");
+		IBookablesManage.INSTANCE.addHostelBed("012", 200, "desc for hotelroom1111", "002");
+		IBookablesManage.INSTANCE.addHostelBed("013", 200, "desc for hostelbed", "001");
+		IBookablesManage.INSTANCE.addHostelBed("1", 200, "desc for hotelrooms bed", "001");
+		IBookablesManage.INSTANCE.addConferenceRoom("023", 200.0, "desc for hotelroom 3", 1, "info", ConferenceRoomCategory.DINING_ROOM, 6);
+		
+		List<String> tmp = IBookablesManage.INSTANCE.searchHostelBeds("1");
+		System.out.println(tmp.toString());
+		boolean result = tmp.get(0).equals("1") &&
+				(tmp.get(1).equals("013") || tmp.get(1).equals("012")|| tmp.get(1).equals("101")) &&
+				(tmp.get(2).equals("013") || tmp.get(2).equals("101")|| tmp.get(2).equals("012")) &&
+				(tmp.get(3).equals("012") || tmp.get(3).equals("101")|| tmp.get(3).equals("013"))
+				&& tmp.get(4).equals("000");
+		assertTrue(result);
 	}
 
 	@Test
 	public void testSearchConferenceRooms() {
-		fail("Not yet implemented");
-		//TODO
-		//TODO
+		IBookablesManage.INSTANCE.addHotelRoom("011", 200, "desc for hotelroom222", 1, "info 3", HotelRoomCategory.STANDARD_ROOM, 6);
+		IBookablesManage.INSTANCE.addConferenceRoom("023", 300.0, "desc for hotelroom 3", 1, "info", ConferenceRoomCategory.DINING_ROOM, 6);
+		IBookablesManage.INSTANCE.addConferenceRoom("034", 300.0, "desc for hotelroom 3", 1, "info", ConferenceRoomCategory.LECTURE_ROOM, 2);
+		IBookablesManage.INSTANCE.addConferenceRoom("031", 300.0, "desc for hotelroom 2", 1, "info", ConferenceRoomCategory.DINING_ROOM, 6);
+		IBookablesManage.INSTANCE.addConferenceRoom("2", 200.0, "desc for hotelroom 3", 1, "info", ConferenceRoomCategory.LECTURE_ROOM, 6);
+		
+		List<String> tmp = IBookablesManage.INSTANCE.searchConferenceRooms("2", ConferenceRoomCategory.LECTURE_ROOM);
+		System.out.println(tmp.toString());
+		boolean result = tmp.get(0).equals("2") &&
+				tmp.get(1).equals("034");
+		assertTrue(result);
 	}
 	
 	@Test
 	public void testSearchHotelRoomsWithNull() {
-		fail("Not yet implemented");
-		//TODO
-		//TODO
-	}
-
-	@Test
-	public void testSearchHostelBedsWithNull() {
-		fail("Not yet implemented");
-		//TODO
-		//TODO
+		IBookablesManage.INSTANCE.addHotelRoom("011", 200, "desc for hotelroom222", 1, "info 3", HotelRoomCategory.STANDARD_ROOM, 6);
+		IBookablesManage.INSTANCE.addHotelRoom("012", 200, "desc for hotelroom1111", 1, "info 57", HotelRoomCategory.SUITE, 3);
+		IBookablesManage.INSTANCE.addHotelRoom("013", 200, "desc for hotelroom 3", 1, "info", HotelRoomCategory.FAMILY_ROOM, 6);
+		IBookablesManage.INSTANCE.addHotelRoom("3", 200, "desc for hotelroom 3", 1, "info", HotelRoomCategory.SUITE, 6);
+		IBookablesManage.INSTANCE.addConferenceRoom("023", 200.0, "desc for hotelroom 3", 1, "info", ConferenceRoomCategory.DINING_ROOM, 6);
+		
+		List<String> tmp = IBookablesManage.INSTANCE.searchHotelRooms("3", null);
+		System.out.println(tmp.toString());
+		boolean result = tmp.get(0).equals("3") &&
+				(tmp.get(1).equals("013") || tmp.get(1).equals("003")) &&
+				(tmp.get(2).equals("013") || tmp.get(2).equals("003")) &&
+				(tmp.get(3).equals("012") || tmp.get(3).equals("006")) &&
+				(tmp.get(4).equals("012") || tmp.get(4).equals("006")) &&
+				tmp.get(5).equals("011");
+		assertTrue(result);
 	}
 
 	@Test
 	public void testSearchConferenceRoomsWithNull() {
-		fail("Not yet implemented");
-		//TODO
-		//TODO
+		IBookablesManage.INSTANCE.addHotelRoom("011", 200, "desc for hotelroom222", 1, "info 3", HotelRoomCategory.STANDARD_ROOM, 6);
+		IBookablesManage.INSTANCE.addConferenceRoom("023", 300.0, "desc for hotelroom 3", 1, "info", ConferenceRoomCategory.DINING_ROOM, 6);
+		IBookablesManage.INSTANCE.addConferenceRoom("034", 300.0, "desc for hotelroom 3", 1, "info", ConferenceRoomCategory.LECTURE_ROOM, 2);
+		IBookablesManage.INSTANCE.addConferenceRoom("031", 300.0, "desc for hotelroom 2", 1, "info", ConferenceRoomCategory.DINING_ROOM, 6);
+		IBookablesManage.INSTANCE.addConferenceRoom("2", 200.0, "desc for hotelroom 3", 1, "info", ConferenceRoomCategory.LECTURE_ROOM, 6);
+		
+		List<String> tmp = IBookablesManage.INSTANCE.searchConferenceRooms("2", null);
+		System.out.println(tmp.toString());
+		boolean result = tmp.get(0).equals("2") &&
+				tmp.get(1).equals("023") &&
+				tmp.get(2).equals("034") &&
+				tmp.get(3).equals("031");
+		assertTrue(result);
 	}
 
 }
