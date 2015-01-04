@@ -201,5 +201,10 @@ public class IStaffTest {
 		
 		assertTrue(result);
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testAddEmployee_id_already_exists() {
+		IStaff.INSTANCE.addEmployee("", "", "", "", "", "010101-0101", "", 0);
+	}
 
 }
