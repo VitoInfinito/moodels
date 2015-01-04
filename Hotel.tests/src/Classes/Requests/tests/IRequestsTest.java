@@ -1,14 +1,18 @@
 package Classes.Requests.tests;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+
+import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import Classes.Feedback.IFeedback;
 import Classes.Requests.IRequests;
 import Classes.Utils.InvalidIDException;
 
@@ -20,14 +24,15 @@ public class IRequestsTest {
 
 	@Before
 	public void setUp() {
-		IRequests.INSTANCE.addRequest("abababababa");
+		IRequests.INSTANCE.addRequest("abababababahej");
+		IRequests.INSTANCE.addRequest("lolololololhej");
+		IRequests.INSTANCE.addRequest("test");
 	}
 	
 	@After
 	public void tearDown() {
-		if (IRequests.INSTANCE.getAllRequestIDs().size() > 0) {
-			String id = IRequests.INSTANCE.getAllRequestIDs().get(0);
-			IRequests.INSTANCE.deleteRequest(id);
+		for(String reqID : IRequests.INSTANCE.getAllRequestIDs()) {
+			IRequests.INSTANCE.deleteRequest(reqID);
 		}
 	}
 	
@@ -42,14 +47,14 @@ public class IRequestsTest {
 	@Test
 	public void testGetAllRequestIDsNotEmpty() {
 		int result = IRequests.INSTANCE.getAllRequestIDs().size();
-		assertTrue(result == 1);
+		assertTrue(result == 3);
 	}
 
 	@Test
 	public void testGetRequestDescription() {
 		String id = IRequests.INSTANCE.getAllRequestIDs().get(0);
 		String result = IRequests.INSTANCE.getRequestDescription(id);
-		assertTrue(result == "abababababa");
+		assertTrue(result == "lolololololhej");
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -95,7 +100,7 @@ public class IRequestsTest {
 		String id = IRequests.INSTANCE.getAllRequestIDs().get(0);
 		IRequests.INSTANCE.deleteRequest(id);
 		int result = IRequests.INSTANCE.getAllRequestIDs().size();
-		assertTrue(result == 0);
+		assertTrue(result == 2);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -117,8 +122,50 @@ public class IRequestsTest {
 	}
 
 	@Test
-	public void testSearchRequests() {
-		fail("Not yet implemented");
+	public void testSearchRequests_requestEmpty_expectEmptyList() {
+		tearDown();
+		System.out.println(IRequests.INSTANCE.searchRequests("ab"));
+		boolean result = IRequests.INSTANCE.searchRequests("ab").isEmpty();
+		assertTrue(result);
+		// TODO
+	}
+	
+	@Test
+	public void testSearchFeedback_feedbackNotEmpty_expectEmptyList() {
+		boolean result = IRequests.INSTANCE.searchRequests("xx").isEmpty();
+		assertTrue(result);
+		// TODO
+	}
+	
+	@Test
+	public void testSearchFeedback_expectsListNonNull() {
+		List<String> list = IRequests.INSTANCE.searchRequests("xx");
+		assertNotNull(list);
+		// TODO
+	}
+	
+	@Test
+	public void testSearchFeedback_idMatchExactly() {
+		List<String> list = IRequests.INSTANCE.searchRequests("abababababahej");
+		assertTrue(IRequests.INSTANCE.getRequestDescription(list.get(0)).equals("abababababahej"));
+		assertTrue(list.size() == 1);
+		// TODO
+	}
+	
+	@Test
+	public void testSearchFeedback_idMatchSomewhat() {
+		List<String> list = IFeedback.INSTANCE.searchFeedback("bab");
+		assertTrue(IFeedback.INSTANCE.getFeedbackDescription(list.get(0)).equals("abababababahej"));
+		assertTrue(list.size() == 1);
+		
+		// TODO
+	}
+	
+	@Test
+	public void testSearchFeedback_multipleMatches() {
+		List<String> list = IFeedback.INSTANCE.searchFeedback("hej");
+		assertTrue(list.size() == 2);
+		
 		// TODO
 	}
 
