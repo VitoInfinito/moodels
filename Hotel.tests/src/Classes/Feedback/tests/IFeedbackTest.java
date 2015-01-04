@@ -104,6 +104,11 @@ public class IFeedbackTest {
 		String result = IFeedback.INSTANCE.getFeedbackDescription(id);
 		assertTrue(result == "bcbcbcbc");
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testSetFeedbackDescription_id_not_exists() {
+		IFeedback.INSTANCE.setFeedbackDescription("", "");
+	}
 
 	@Test
 	public void testSetFeedbackIsResolved() {
@@ -112,6 +117,11 @@ public class IFeedbackTest {
 		Boolean result = IFeedback.INSTANCE.getFeedbackIsResolved(id);
 		assertTrue(result);
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testSetFeedbackIsResolved_id_not_exists() {
+		IFeedback.INSTANCE.setFeedbackIsResolved("", true);
+	}
 
 	@Test
 	public void testSetFeedbackIsNoted() {
@@ -119,6 +129,11 @@ public class IFeedbackTest {
 		IFeedback.INSTANCE.setFeedbackIsNoted(id, true);
 		Boolean result = IFeedback.INSTANCE.getFeedbackIsNoted(id);
 		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testSetFeedbackIsNoted_id_not_exists() {
+		IFeedback.INSTANCE.setFeedbackIsNoted("", true);
 	}
 
 	@Test
@@ -144,6 +159,11 @@ public class IFeedbackTest {
 		IFeedback.INSTANCE.removeFeedback(id);
 		int result = IFeedback.INSTANCE.getAllFeedbackIDs().size();
 		assertTrue(result == 0);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testRemoveFeedback_id_not_exists() {
+		IFeedback.INSTANCE.removeFeedback("");
 	}
 
 }
