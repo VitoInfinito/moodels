@@ -510,8 +510,76 @@ public class IBookingsTest {
 	}
 
 	@Test
-	public void testSearchBookingsWithStaysInPeriod() {
-		fail("Not yet implemented");
+	public void testSearchBookingsWithStaysInPeriod_empty_string_period_intersects_expects_intersecting_stay_period_bookings() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookings = IBookings.INSTANCE.searchBookingsWithStaysInPeriod("", from, to);
+		assertTrue(bookings.contains(booking4));
+		assertTrue(bookings.contains(booking5));
+		assertTrue(bookings.contains(booking6));
+		assertTrue(bookings.size() == 3);
+	}
+	
+	@Test
+	public void testSearchBookingsWithStaysInPeriod_empty_string_period_does_not_intersect_expects_no_bookings() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookings = IBookings.INSTANCE.searchBookingsWithStaysInPeriod("", from, to);
+		assertTrue(bookings.isEmpty());
+	}
+	
+	@Test
+	public void testSearchBookingsWithStaysInPeriod_empty_string_period_overlaps_expects_overlapped_stay_period_bookings() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookings = IBookings.INSTANCE.searchBookingsWithStaysInPeriod("", from, to);
+		assertTrue(bookings.contains(booking4));
+		assertTrue(bookings.contains(booking5));
+		assertTrue(bookings.contains(booking6));
+		assertTrue(bookings.size() == 3);
+	}
+	
+	@Test
+	public void testSearchBookingsWithStaysInPeriod_no_bookings_with_stays_in_period_expects_no_bookings_found() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookings = IBookings.INSTANCE.searchBookingsWithStaysInPeriod("", from, to);
+		assertTrue(bookings.isEmpty());
+	}
+	
+	@Test
+	public void testSearchBookingsWithStaysInPeriod_exact_id_match_expects_first_element_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> result = IBookings.INSTANCE.searchBookingsWithStaysInPeriod(booking4, from, to);
+		assertTrue(result.get(0).equals(booking4));
+		assertTrue(result.size() == 1);
+	}
+	
+	@Test
+	public void testSearchBookingsWithStaysInPeriod_id_match_somewhat_expects_booking_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> result = IBookings.INSTANCE.searchBookingsWithStaysInPeriod(booking4.substring(2), from, to);
+		assertTrue(result.contains(booking4));
+	}
+	
+	@Test
+	public void testSearchBookingsWithStaysInPeriod_on_customer_id_expects_customer_bookings_found() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> result = IBookings.INSTANCE.searchBookingsWithStaysInPeriod("861104-0058", from, to);
+		assertTrue(result.contains(booking5));
+		assertTrue(result.contains(booking6));
+	}
+	
+	@Test
+	public void testSearchBookingsWithStaysInPeriod_on_part_of_customer_id_expects_customer_bookings_found() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> result = IBookings.INSTANCE.searchBookingsWithStaysInPeriod("104", from, to);
+		assertTrue(result.contains(booking5));
+		assertTrue(result.contains(booking6));
 	}
 
 	@Test

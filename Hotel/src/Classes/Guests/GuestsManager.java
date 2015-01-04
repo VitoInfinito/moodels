@@ -366,9 +366,9 @@ class GuestsManager implements IGuests {
 	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void addGuestRequest(String SSID, String description) throws InvalidIDException {
+	public void addGuestRequest(String SSID, String requestID) throws InvalidIDException {
 		if(guests.containsKey(SSID)) {
-			guests.get(SSID).addRequest(iRequests.addRequest(description));
+			guests.get(SSID).addRequest(requestID);
 		} else {
 			logger.warn("A guest with SSID {} could not be found.", SSID);
 			throw new InvalidIDException();
