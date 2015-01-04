@@ -236,7 +236,7 @@ public interface IStaff extends Serializable {
 	 * 		contract != null
 	 * Ensures:
 	 * 		if there exists a staff such that staff.ssid == ssid
-	 * 			the contract of the staff is set to the contract
+	 * 			the contract of the staff is set to contract
 	 * 		otherwise
 	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
