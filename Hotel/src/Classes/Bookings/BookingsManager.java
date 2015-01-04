@@ -127,6 +127,8 @@ public class BookingsManager implements IBookings {
 		booking.setCustomer(customerID);
 		booking.setCreditCard(creditCard);
 		booking.setIssueDate(LocalDateTime.now());
+		
+		bookings.put(bookingNbr, booking);
 
 		for (String bookableID : bookables) {
 			String stayID = iHotelStayManager.addNewStay(bookableID, bookingNbr, from, to);
@@ -138,8 +140,6 @@ public class BookingsManager implements IBookings {
 		}
 
 		iCustomer.addCustomerBooking(customerID, bookingNbr);
-
-		bookings.put(bookingNbr, booking);
 
 		return bookingNbr;
 	}
@@ -288,9 +288,6 @@ public class BookingsManager implements IBookings {
 		for (String stay : stays) {
 			if (!iHotelStayManager.getCheckedInGuestsOfHotelStay(stay).isEmpty()) {
 				logger.warn("There are checked in guests of the booking, hence cancellation of the booking is prohibited!");
-				throw new InvalidIDException();
-			} else if (!iHotelStayManager.getCheckedOutGuestsOfHotelStay(stay).isEmpty()) {
-				logger.warn("The booking has already taken place, hence cancellation of the booking is prohibited!");
 				throw new InvalidIDException();
 			}
 		}

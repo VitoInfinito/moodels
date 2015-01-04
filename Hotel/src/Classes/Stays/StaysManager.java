@@ -187,10 +187,10 @@ public class StaysManager implements IStays {
 		if(!IBookablesAccess.INSTANCE.getAllBookableIDs().contains(bookableID)) {
 			logger.warn("A bookable with ID {} could not be found.", bookableID);
 			throw new InvalidIDException();
-		}/*else if(!IBookings.INSTANCE.getAllBookings().contains(bookingID)) {
+		}else if(!IBookings.INSTANCE.getAllBookings().contains(bookingID)) {
 			logger.warn("A booking with ID {} could not be found.", bookingID);
 			throw new InvalidIDException();
-		}*/
+		}
 		String id = generateID();
 
 		Stay stay = StaysFactory.INSTANCE.createStay();
