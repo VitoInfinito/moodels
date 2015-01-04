@@ -77,19 +77,19 @@ public class IStaysTest {
 		bookableList1.add("402");
 		
 		List<String> bookableList2 = new ArrayList<String>();
-		bookableList1.add("402");
+		bookableList2.add("402");
 		
 		List<String> bookableList3 = new ArrayList<String>();
-		bookableList1.add("301");
+		bookableList3.add("301");
 		
 		List<String> bookableList4 = new ArrayList<String>();
-		bookableList1.add("302");
+		bookableList4.add("302");
 		
 		List<String> bookableList5 = new ArrayList<String>();
-		bookableList1.add("503");
+		bookableList5.add("503");
 		
 		List<String> bookableList6 = new ArrayList<String>();
-		bookableList1.add("601");
+		bookableList6.add("601");
 		
 
 		String booking1 = IBookings.INSTANCE.makeBooking(bookableList1, "760911-0078", LocalDateTime.of(2015, 2, 12, 15, 0), LocalDateTime.of(2015, 2, 16, 10, 0), 4, "12342352", "523", 9, 23, "Alfred","Johansson", 0, true);
@@ -117,6 +117,11 @@ public class IStaysTest {
 		for(String id : IBookings.INSTANCE.getAllBookings()) {
 			IBookings.INSTANCE.cancelBooking(id);
 		}
+
+	}
+	
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
 		for(String id : ICustomers.INSTANCE.getAllCustomers()) {
 			ICustomers.INSTANCE.removeCustomer(id);
 		}
@@ -126,15 +131,14 @@ public class IStaysTest {
 		for(String id : IBookablesManage.INSTANCE.getAllBookableIDs()) {
 			IBookablesManage.INSTANCE.deleteBookable(id);
 		}
-	}
-	
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
+		
 		AdministratorRequires bankingAdmin = AdministratorRequires.instance();
 		bankingAdmin.removeCreditCard("12342352", "523", 9, 23, "Alfred","Johansson");
 		bankingAdmin.removeCreditCard("23453262", "833", 7, 18, "Sigurd","Matsson");
 		bankingAdmin.removeCreditCard("34563532", "831", 11, 19, "Yvar","Svensson");
 		bankingAdmin.removeCreditCard("45565426", "892", 1, 3, "Anders","Hallgren");
+		
+		
 	}
 	
 	@Test
