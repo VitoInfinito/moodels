@@ -624,8 +624,205 @@ public class IBookingsTest {
 	}
 
 	@Test
-	public void testSearchForAvailableBookablesInPeriod() {
-		fail("Not yet implemented");
+	public void testSearchForAvailableBookablesInPeriod_empty_string_period_intersects_expects_non_intersecting_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "");
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("202"));
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.contains("655"));
+		assertTrue(bookables.size() == 5);
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_empty_string_period_overlaps_expects_non_intersecting_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "");
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("202"));
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.contains("655"));
+		assertTrue(bookables.size() == 5);
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_empty_string_period_does_not_intersect_expects_all_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "");
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("202"));
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.contains("653"));
+		assertTrue(bookables.contains("654"));
+		assertTrue(bookables.contains("655"));
+		assertTrue(bookables.contains("23"));
+		assertTrue(bookables.contains("24"));
+		assertTrue(bookables.contains("25"));
+		assertTrue(bookables.size() == 10);
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_empty_string_period_overlaps_all_bookings_expects_all_unbooked_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 1, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 1, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "");
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.contains("655"));
+		assertTrue(bookables.size() == 2);
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_exact_id_match_period_intersects_expects_first_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "101");
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.size() == 1);
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_exact_id_match_period_overlaps_expects_first_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "202");
+		assertTrue(bookables.contains("202"));
+		assertTrue(bookables.size() == 1);
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_exact_id_match_period_does_not_intersect_expects_first_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "303");
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.size() == 1);
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_exact_id_match_period_overlaps_all_bookings_expects_first_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 1, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 1, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "501");
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.contains("655"));
+		assertTrue(bookables.size() == 2);
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_id_match_somewhat_period_intersects_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "55");
+		assertTrue(bookables.contains("655"));
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_id_match_somewhat_period_overlaps_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "3");
+		assertTrue(bookables.contains("303"));
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_id_match_somewhat_period_does_not_intersect_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "01");
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("501"));
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_id_match_somewhat_period_overlaps_all_bookings_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 1, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 1, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "5");
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.contains("655"));
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_on_decription_id_period_intersects_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "desc1");
+		assertTrue(bookables.contains("101"));
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_on_decription_period_overlaps_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "desc2");
+		assertTrue(bookables.contains("202"));
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_on_decription_period_does_not_intersect_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "desc3");
+		assertTrue(bookables.contains("303"));
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_on_decription_period_overlaps_all_bookings_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 1, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 1, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "desc9");
+		assertTrue(bookables.contains("655"));
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_on_part_of_decription_period_intersects_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "sc1");
+		assertTrue(bookables.contains("101"));
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_on_part_of_decription_period_overlaps_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "de");
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("202"));
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.contains("655"));
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_on_part_of_decription_period_does_not_intersect_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "sc");
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("202"));
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.contains("653"));
+		assertTrue(bookables.contains("654"));
+		assertTrue(bookables.contains("655"));
+		assertTrue(bookables.contains("23"));
+		assertTrue(bookables.contains("24"));
+		assertTrue(bookables.contains("25"));
+	}
+	
+	@Test
+	public void testSearchForAvailableBookablesInPeriod_on_part_of_decription_period_overlaps_all_bookings_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 1, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 1, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableBookablesInPeriod(from, to, "sc10");
+		assertTrue(bookables.contains("501"));
 	}
 
 	@Test
@@ -792,6 +989,183 @@ public class IBookingsTest {
 	public void testSearchForAvailableHotelRoomsInPeriod() {
 		fail("Not yet implemented");
 	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_empty_string_period_intersects_expects_non_intersecting_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "", null);
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("202"));
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.size() == 4);
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_empty_string_period_overlaps_expects_non_intersecting_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "", HotelRoomCategory.STANDARD_ROOM);
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.size() == 2);
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_empty_string_period_does_not_intersect_expects_all_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "", HotelRoomCategory.SUITE);
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.size() == 1);
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_empty_string_period_overlaps_all_bookings_expects_all_unbooked_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 1, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 1, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "", null);
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.size() == 1);
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_exact_id_match_period_intersects_expects_first_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "101", HotelRoomCategory.STANDARD_ROOM);
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.size() == 1);
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_exact_id_match_period_overlaps_expects_first_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "202", HotelRoomCategory.FAMILY_ROOM);
+		assertTrue(bookables.contains("202"));
+		assertTrue(bookables.size() == 1);
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_exact_id_match_period_does_not_intersect_expects_first_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "303", null);
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.size() == 1);
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_exact_id_match_period_overlaps_all_bookings_expects_first_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 1, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 1, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "501", HotelRoomCategory.STANDARD_ROOM);
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.size() == 1);
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_id_match_somewhat_period_intersects_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "50", null);
+		assertTrue(bookables.contains("501"));
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_id_match_somewhat_period_overlaps_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "3", HotelRoomCategory.SUITE);
+		assertTrue(bookables.contains("303"));
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_id_match_somewhat_period_does_not_intersect_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "01", HotelRoomCategory.STANDARD_ROOM);
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("501"));
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_id_match_somewhat_period_overlaps_all_bookings_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 1, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 1, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "5", null);
+		assertTrue(bookables.contains("501"));
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_on_decription_id_period_intersects_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "desc1", HotelRoomCategory.STANDARD_ROOM);
+		assertTrue(bookables.contains("101"));
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_on_decription_period_overlaps_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "desc2", HotelRoomCategory.FAMILY_ROOM);
+		assertTrue(bookables.contains("202"));
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_on_decription_period_does_not_intersect_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "desc3", HotelRoomCategory.SUITE);
+		assertTrue(bookables.contains("303"));
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_on_decription_period_overlaps_all_bookings_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 1, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 1, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "desc2", null);
+		assertTrue(bookables.isEmpty());
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_on_part_of_decription_period_intersects_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "sc1", null);
+		assertTrue(bookables.contains("101"));
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_on_part_of_decription_period_overlaps_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "de", null);
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("202"));
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.contains("501"));
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_on_part_of_decription_period_does_not_intersect_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "sc", HotelRoomCategory.STANDARD_ROOM);
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("501"));
+	}
+	
+	@Test
+	public void testSearchForAvailableHotelRoomsInPeriod_on_part_of_decription_period_overlaps_all_bookings_expects_in_result() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 1, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 1, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.searchForAvailableHotelRoomsInPeriod(from, to, "sc10", null);
+		assertTrue(bookables.contains("501"));
+	}
 
 	@Test
 	public void testSearchForAvailableHostelBedsInPeriod() {
@@ -802,20 +1176,126 @@ public class IBookingsTest {
 	public void testSearchForAvailableConferenceRoomsInPeriod() {
 		fail("Not yet implemented");
 	}
-
+	
 	@Test
-	public void testGetAvailableHotelRoomsInPeriod() {
-		fail("Not yet implemented");
+	public void testGetAvailableHotelRoomsInPeriod_period_intersects_expects_non_intersecting_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 12, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 14, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableHotelRoomsInPeriod(from, to);
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.size() == 3);
+	}
+	
+	@Test
+	public void testGetAvailableHotelRoomsInPeriod_period_overlaps_expects_expects_non_intersecting_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableHotelRoomsInPeriod(from, to);
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("202"));
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.size() == 4);
+	}
+	
+	
+	@Test
+	public void testGetAvailableHotelRoomsInPeriod_period_does_not_intersect_expects_all_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableHotelRoomsInPeriod(from, to);
+		assertTrue(bookables.contains("101"));
+		assertTrue(bookables.contains("202"));
+		assertTrue(bookables.contains("303"));
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.size() == 4);
+	}
+	
+	@Test
+	public void testGetAvailableHotelRoomsInPeriod_period_overlaps_all_bookings_expects_all_unbooked_bookables() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 1, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 1, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableHotelRoomsInPeriod(from, to);
+		assertTrue(bookables.contains("501"));
+		assertTrue(bookables.size() == 1);
 	}
 
 	@Test
-	public void testGetAvailableConferenceRoomsInPeriod() {
-		fail("Not yet implemented");
+	public void testGetAvailableConferenceRoomsInPeriod_period_intersects_expects_non_intersecting_conference_rooms() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 23, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableConferenceRoomsInPeriod(from, to);
+		assertTrue(bookables.contains("25"));
+		assertTrue(bookables.size() == 1);
 	}
-
+	
 	@Test
-	public void testGetAvailableHostelBedsInPeriod() {
-		fail("Not yet implemented");
+	public void testGetAvailableConferenceRoomsInPeriod_period_overlaps_expects_expects_non_intersecting_conference_rooms() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableConferenceRoomsInPeriod(from, to);
+		assertTrue(bookables.isEmpty());
+	}
+	
+	
+	@Test
+	public void testGetAvailableConferenceRoomsInPeriod_period_does_not_intersect_expects_all_conference_rooms() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableConferenceRoomsInPeriod(from, to);
+		assertTrue(bookables.contains("23"));
+		assertTrue(bookables.contains("24"));
+		assertTrue(bookables.contains("25"));
+		assertTrue(bookables.size() == 3);
+	}
+	
+	@Test
+	public void testGetAvailableConferenceRoomsInPeriod_period_overlaps_all_bookings_expects_all_unbooked_conference_rooms() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 1, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 1, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableConferenceRoomsInPeriod(from, to);
+		assertTrue(bookables.isEmpty());
+	}
+	
+	@Test
+	public void testGetAvailableHostelBedsInPeriod_period_intersects_expects_non_intersecting_hostel_beds() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableHostelBedsInPeriod(from, to);
+		assertTrue(bookables.contains("655"));
+		assertTrue(bookables.size() == 1);
+	}
+	
+	@Test
+	public void testGetAvailableHostelBedsInPeriod_period_overlaps_expects_expects_non_intersecting_hostel_beds() {
+		LocalDateTime to = LocalDateTime.of(2015, 2, 24, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableHostelBedsInPeriod(from, to);
+		assertTrue(bookables.contains("655"));
+		assertTrue(bookables.size() == 1);
+	}
+	
+	
+	@Test
+	public void testGetAvailableHostelBedsInPeriod_period_does_not_intersect_expects_all_hostel_beds() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 22, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 3, 21, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableHostelBedsInPeriod(from, to);
+		assertTrue(bookables.contains("653"));
+		assertTrue(bookables.contains("654"));
+		assertTrue(bookables.contains("655"));
+		assertTrue(bookables.size() == 3);
+	}
+	
+	@Test
+	public void testGetAvailableHostelBedsInPeriod_period_overlaps_all_bookings_expects_all_unbooked_hostel_beds() {
+		LocalDateTime to = LocalDateTime.of(2015, 3, 1, 0, 0);
+		LocalDateTime from = LocalDateTime.of(2015, 2, 1, 0, 0);
+		List<String> bookables = IBookings.INSTANCE.getAvailableHostelBedsInPeriod(from, to);
+		assertTrue(bookables.contains("655"));
+		assertTrue(bookables.size() == 1);
 	}
 
 }
