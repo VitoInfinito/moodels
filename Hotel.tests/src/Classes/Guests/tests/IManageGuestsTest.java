@@ -12,7 +12,7 @@ import org.junit.Test;
 
 import Classes.Guests.IGuests;
 
-public class IGuestsTest {
+public class IManageGuestsTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -30,8 +30,8 @@ public class IGuestsTest {
 		/*IGuests.INSTANCE.generateGuestAccount("010101-0101");
 		IGuests.INSTANCE.generateGuestAccount("020202-0202");
 		IGuests.INSTANCE.generateGuestAccount("030303-0303");*/
-		
-	
+
+
 
 	}
 
@@ -46,7 +46,7 @@ public class IGuestsTest {
 		for(String SSID : IGuests.INSTANCE.getAllGuestIDs()){
 			IGuests.INSTANCE.removeGuestRequest(SSID, SSID);
 		}
-		
+
 
 	}
 
@@ -126,8 +126,9 @@ public class IGuestsTest {
 
 	@Test
 	public void testSearchGuests() {
-		fail("Not yet implemented");
-		//TODO: write it
+		List<String> tmp = IGuests.INSTANCE.searchGuests("01");
+		boolean result = (tmp.get(0).equals("010101-0101") || tmp.get(1).equals("010101-0101") || tmp.get(2).equals("010101-0101"));
+		assertTrue(result);
 	}
 
 	@Test
