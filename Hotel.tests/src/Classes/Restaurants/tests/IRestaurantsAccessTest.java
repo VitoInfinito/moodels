@@ -2,10 +2,12 @@ package Classes.Restaurants.tests;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import Classes.Restaurants.IRestaurantsAccess;
 import Classes.Restaurants.IRestaurantsManage;
 
 public class IRestaurantsAccessTest {
@@ -16,6 +18,14 @@ public class IRestaurantsAccessTest {
 
 	@Before
 	public void setUp() throws Exception {
+		IRestaurantsManage.INSTANCE.addRestaurant("testaurant");
+		IRestaurantsManage.INSTANCE.addRestaurantTable("testaurant", 2, "5");
+	}
+	
+	@After
+	public void teardown() {
+		for(String id : IRestaurantsAccess.INSTANCE.getAllRestaurantNames())
+			IRestaurantsManage.INSTANCE.removeRestaurant(id);
 	}
 
 	@Test

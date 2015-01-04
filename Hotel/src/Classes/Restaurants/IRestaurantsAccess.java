@@ -27,6 +27,13 @@ public interface IRestaurantsAccess extends Serializable {
 	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		restaurantID != null
+	 * Ensures:
+	 * 		if there exists a restaurant with the ID restaurantID  
+	 * 			the restaurant is returned
+	 * 		otherwise
+	 * 			an InvalidIDException will be thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false"
@@ -36,6 +43,13 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		restaurantID != null
+	 * Ensures:
+	 * 		if there exists a restaurant with the ID restaurantID  
+	 * 			the restaurant's  tables will be returned
+	 * 		otherwise
+	 * 			an InvalidIDException will be thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false"
@@ -45,6 +59,13 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		restaurantID != null && tableNbr != null
+	 * Ensures:
+	 * 		if there exists a restaurant with the ID restaurantID  
+	 * 			the number of seats by the table is returned
+	 * 		otherwise
+	 * 			an InvalidIDException will be thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" tableNbrDataType="org.eclipse.uml2.types.String" tableNbrRequired="true" tableNbrOrdered="false"
@@ -54,6 +75,13 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		to != null && from != null && != restaurantID != null
+	 * Ensures:
+	 * 		if there exists a table at the restaurant with the ID restaurantID  
+	 * 			available table times will be returned 
+	 * 		otherwise
+	 * 			an InvalidIDException will be thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false"
@@ -63,6 +91,13 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		reservationID != null && != restaurantID != null
+	 * Ensures:
+	 * 		if there exists a guest at the restaurant with the ID restaurantID  
+	 * 			the guest with ID reservation ID will be returned 
+	 * 		otherwise
+	 * 			an InvalidIDException will be thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" reservationIDDataType="org.eclipse.uml2.types.String" reservationIDRequired="true" reservationIDOrdered="false"
@@ -72,6 +107,10 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		restaurantID != null
+	 * Ensures:
+	 * 		that the restaurant menu names will be returned if any exists
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false"
@@ -81,6 +120,8 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Ensures:
+	 * 		that all restaurant names will be returned
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -89,6 +130,10 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		keyword != null
+	 * Ensures:
+	 * 		that the restaurants with the keyword will be returned
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
@@ -97,6 +142,13 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		restaurantID != null && keyword != null
+	 * Ensures:
+	 * 		if restaurant with ID restaurantID exists
+	 * 			it will be returned if it matches the keyword
+	 * 		otherwise
+	 * 			throws InvalidIDException
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
@@ -106,6 +158,13 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		keyword != null && restaurantID != null
+	 * Ensures:
+	 * 		if there exists a table at the restaurant with the ID restaurantID  
+	 * 			it will be returned if it matches the keyword 
+	 * 		otherwise
+	 * 			an InvalidIDException will be thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
