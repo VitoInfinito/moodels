@@ -157,8 +157,33 @@ public class IRestaurantsAccessTest {
 
 	@Test
 	public void testMakeReservation() {
-		//TODO
-		fail("Not yet implemented");
+		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
+		IRestaurantsManage.INSTANCE.cancelReservation("testaurant", reservationID);
+		
+		ArrayList<String> tables = new ArrayList<String>();
+		tables.add("1");
+		tables.add("2");
+		
+		IRestaurantsManage.INSTANCE.makeReservation(
+			"testaurant", 
+			tables, 
+			"010101-0101", 
+			LocalDateTime.parse("2014-10-22 12:00", formatter), 
+			LocalDateTime.parse("2014-10-22 14:00", formatter)
+		);
+		
+		assertTrue(IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").size() == 1);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testMakeReservation_notExists_throwsException() {
+		IRestaurantsManage.INSTANCE.makeReservation(
+			"", 
+			new ArrayList<String>(), 
+			"", 
+			LocalDateTime.parse("2014-10-10 12:00", formatter), 
+			LocalDateTime.parse("2014-10-10 14:00", formatter)
+		);
 	}
 
 	@Test
@@ -170,7 +195,7 @@ public class IRestaurantsAccessTest {
 	}
 	
 	@Test(expected=InvalidIDException.class)
-	public void testCancelReservation_notExists_throwsException(){
+	public void testCancelReservation_notExists_throwsException() {
 		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
 		IRestaurantsManage.INSTANCE.cancelReservation("apabepacepa", reservationID);
 	}
