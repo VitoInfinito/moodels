@@ -2,6 +2,8 @@ package Classes.Bills.tests;
 
 import static org.junit.Assert.*;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,8 +13,11 @@ import org.junit.Test;
 
 import Classes.Bills.IBills;
 import Classes.Inventory.IInventoryAccess;
+import Classes.Utils.InvalidIDException;
 
 public class IBillsTest {
+	
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -45,6 +50,11 @@ public class IBillsTest {
 		assertFalse(IBills.INSTANCE.getIsBillPaid(billid));
 	}
 	
+	@Test(expected=InvalidIDException.class)
+	public void testGetIsBillPaid_expects_exception() {
+		IBills.INSTANCE.getIsBillPaid("loljkNobillhere");
+	}
+	
 	@Test
 	public void testGetIsBillPaid_expects_billIsPaid() {
 		IBills.INSTANCE.payBillsWithCash(IBills.INSTANCE.getAllBillIDs());
@@ -75,12 +85,33 @@ public class IBillsTest {
 
 	@Test
 	public void testGetBillPaymentDate() {
-		fail("Not yet implemented");
+		removeAllBills();
+		
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, LocalDateTime.parse("2014-10-19 08:00", formatter), LocalDateTime.parse("2014-10-19 09:00", formatter), 0.9);
+	
+		assertTrue(IBills.INSTANCE.getBillPaymentDate(IBills.INSTANCE.getAllBillIDs().get(0)).equals(LocalDateTime.parse("2014-10-19 09:00", formatter)));
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetBillPaymentDate_expects_exception() {
+		removeAllBills();
+		
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, LocalDateTime.parse("2014-10-19 08:00", formatter), LocalDateTime.parse("2014-10-19 09:00", formatter), 0.9);
+	
+		assertTrue(IBills.INSTANCE.getBillPaymentDate("ehmhergherd").equals(LocalDateTime.parse("2014-10-19 09:00", formatter)));
 	}
 
 	@Test
 	public void testGetAllBillIDs() {
-		fail("Not yet implemented");
+		removeAllBills();
+		
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, LocalDateTime.parse("2014-10-19 08:02", formatter), LocalDateTime.parse("2014-10-19 09:00", formatter), 0.9);
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, LocalDateTime.parse("2014-10-19 13:26", formatter), LocalDateTime.parse("2014-10-19 09:00", formatter), 0.9);
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, LocalDateTime.parse("2014-10-19 02:03", formatter), LocalDateTime.parse("2014-10-19 09:00", formatter), 0.9);
+		
+		int count = IBills.INSTANCE.getAllBillIDs().size();
+		
+		assertTrue(count == 3);
 	}
 
 	@Test
@@ -113,7 +144,27 @@ public class IBillsTest {
 
 	@Test
 	public void testGetBillItems() {
-		fail("Not yet implemented");
+		//TODO
+	}
+	
+	@Test
+	public void testGetBillItems_excpets_noItems() {
+		removeAllBills();
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		
+		int count = IBills.INSTANCE.getBillItems(IBills.INSTANCE.getAllBillIDs().get(0)).size();
+		
+		assertTrue(count == 0);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetBillItems_excpets_exception() {
+		removeAllBills();
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		
+		int count = IBills.INSTANCE.getBillItems("nein").size();
+		
+		assertTrue(count == 0);
 	}
 
 	@Test
@@ -128,7 +179,20 @@ public class IBillsTest {
 
 	@Test
 	public void testGetBillIssueDate() {
-		fail("Not yet implemented");
+		removeAllBills();
+		
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, LocalDateTime.parse("2014-10-19 08:00", formatter), LocalDateTime.parse("2014-10-19 09:00", formatter), 0.9);
+		
+		assertTrue(IBills.INSTANCE.getBillPaymentDate(IBills.INSTANCE.getAllBillIDs().get(0)).equals(LocalDateTime.parse("2014-10-19 08:00", formatter)));
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetBillIssueDate_expects_exception() {
+		removeAllBills();
+		
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, LocalDateTime.parse("2014-10-19 08:00", formatter), LocalDateTime.parse("2014-10-19 09:00", formatter), 0.9);
+		
+		assertTrue(IBills.INSTANCE.getBillPaymentDate("invalid_ID").equals(LocalDateTime.parse("2014-10-19 08:00", formatter)));
 	}
 
 	@Test
