@@ -367,9 +367,24 @@ import Classes.Utils.InvalidIDException;
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void changeTableNumber(String restaurantID, String oldTableNbr, String newTableNbr) throws InvalidIDException{
+	public void changeTableNumber(String restaurantID, String oldTableNbr, String newTableNbr) throws InvalidIDException {
 		Restaurant rest = getRestaurantByID(restaurantID);
 		rest.changeTableNumber(oldTableNbr, newTableNbr);
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public List<String> getReservationTables(String restaurantID, String reservationID) throws InvalidIDException {
+		List<String> tables = new ArrayList<String>();
+		
+		for (RestaurantTable t : getRestaurantByID(restaurantID).getReservation(reservationID).getTables()) {
+			tables.add(t.getTableNumber());
+		}
+		
+		return tables;
 	}
 
 	/**

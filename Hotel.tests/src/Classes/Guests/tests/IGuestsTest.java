@@ -1,10 +1,9 @@
 package Classes.Guests.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.util.List;
-
-import javax.management.InstanceAlreadyExistsException;
 
 import org.junit.After;
 import org.junit.Before;
@@ -14,10 +13,10 @@ import org.junit.Test;
 import Classes.Guests.IGuests;
 
 public class IGuestsTest {
-	
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-	
+
 	}
 
 	@Before
@@ -25,15 +24,30 @@ public class IGuestsTest {
 		IGuests.INSTANCE.addGuest("010101-0101", "Kalle", "Karlsson", "Mr", "kalle.karlsson@mail.mail", "0101010101");
 		IGuests.INSTANCE.addGuest("020202-0202", "Erik", "Eriksson", "Mr", "erik.eriksson@mail.mail", "0202020202");
 		IGuests.INSTANCE.addGuest("030303-0303", "Anna", "Andersson", "Mrs", "anna.andersson@mail.mail", "0303030303");
+		IGuests.INSTANCE.addGuestRequest("010101-0101", "010101-0101");
+		IGuests.INSTANCE.addGuestRequest("020202-0202", "020202-0202");
+		IGuests.INSTANCE.addGuestRequest("030303-0303", "030303-0303");
+		/*IGuests.INSTANCE.generateGuestAccount("010101-0101");
+		IGuests.INSTANCE.generateGuestAccount("020202-0202");
+		IGuests.INSTANCE.generateGuestAccount("030303-0303");*/
+		
 	
+
 	}
-	
+
 	@After
 	public void tearDown() throws Exception {
 		for(String id : IGuests.INSTANCE.getAllGuestIDs()){
 			IGuests.INSTANCE.removeGuest(id);
 		}
+		for(String SSID : IGuests.INSTANCE.getAllGuestIDs()){
+			IGuests.INSTANCE.removeGuestAccount(SSID);
+		}
+		for(String SSID : IGuests.INSTANCE.getAllGuestIDs()){
+			IGuests.INSTANCE.removeGuestRequest(SSID, SSID);
+		}
 		
+
 	}
 
 	@Test
@@ -54,7 +68,7 @@ public class IGuestsTest {
 		assertTrue(IGuests.INSTANCE.getGuestFirstName("010101-0101") == "Kalle");
 		IGuests.INSTANCE.changeGuestFirstName("010101-0101", "Karl");
 		assertTrue(IGuests.INSTANCE.getGuestFirstName("010101-0101") == "Karl");
-		
+
 	}
 
 	@Test
@@ -107,8 +121,7 @@ public class IGuestsTest {
 
 	@Test
 	public void testGetGuestPhone() {
-		fail("Not yet implemented");
-		//TODO: write it
+		assertTrue(IGuests.INSTANCE.getGuestPhone("010101-0101") == "0101010101");
 	}
 
 	@Test
@@ -125,8 +138,7 @@ public class IGuestsTest {
 
 	@Test
 	public void testGetGuestRequests() {
-		fail("Not yet implemented");
-		//TODO: write it
+		assertTrue(IGuests.INSTANCE.getGuestRequests("010101-0101").size() == 1);
 	}
 
 	@Test

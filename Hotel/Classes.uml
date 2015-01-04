@@ -1400,6 +1400,19 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_l5kKQJQZEeSaJug2cV1XYQ" name="getReservationTables">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_p1sooJQZEeSaJug2cV1XYQ" name="restaurantID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_r_lGQJQZEeSaJug2cV1XYQ" name="reservationID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_u619gJQZEeSaJug2cV1XYQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vwM4MJQZEeSaJug2cV1XYQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vwNfQJQZEeSaJug2cV1XYQ" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w9NQ6npsEeST-65JbGUt8g" name="RestaurantsManager" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w9NQ7npsEeST-65JbGUt8g" name="restaurant" visibility="private" type="_w9NQ8npsEeST-65JbGUt8g" association="_w9NRJHpsEeST-65JbGUt8g">

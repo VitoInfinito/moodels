@@ -171,9 +171,9 @@ public interface IGuests extends Serializable {
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false" desctiptionDataType="org.eclipse.uml2.types.String" desctiptionRequired="true" desctiptionOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void addGuestRequest(String SSID, String description) throws InvalidIDException;
+	void addGuestRequest(String SSID, String requestID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->

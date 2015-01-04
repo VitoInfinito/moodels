@@ -8,12 +8,14 @@ import java.util.ArrayList;
 
 import javax.xml.soap.SOAPException;
 
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import Classes.Bills.IBills;
+import Classes.Inventory.IManageInventory;
 import Classes.Utils.InsufficientFundsException;
 import Classes.Utils.InvalidCreditCardException;
 import Classes.Utils.InvalidIDException;
@@ -32,11 +34,19 @@ public class IBillsTest {
 			//AdministratorRequires bankingAdmin = AdministratorRequires.instance();
 			//bankingAdmin.removeCreditCard("12345678", "234", 3, 17, "Adolf","Eriksson");
 	}
-
+	
 	@Before
 	public void setUp() throws Exception {
 		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
-		
+		IManageInventory.INSTANCE.addItem("Toppias", 23.15, 13.37, 15);
+		IManageInventory.INSTANCE.addItem("Ba-na-na", 5.99, 25.65, 100);
+	}
+	
+	@After
+	public void tearDown() throws InvalidIDException {
+		for (String id : IManageInventory.INSTANCE.getAllItemIDs()) {
+			IManageInventory.INSTANCE.removeItem(id);
+		}
 	}
 	
 	public void removeAllBills() {
@@ -154,11 +164,6 @@ public class IBillsTest {
 		
 		assertTrue(IBills.INSTANCE.getAllBillsNotPaid().size() == 0);
 	}
-
-	@Test
-	public void testGetBillItems() {
-		fail("Not yet implemented");
-	}
 	
 	@Test
 	public void testGetBillItems_excpets_noItems() {
@@ -201,11 +206,6 @@ public class IBillsTest {
 	@Test(expected=InvalidIDException.class)
 	public void testGetBillBookable_expects_exception() {
 		IBills.INSTANCE.getBillBookable("ASD");
-	}
-
-	@Test
-	public void testGetBillServices() {
-		fail("Not yet implemented");
 	}
 	
 	@Test
@@ -251,7 +251,16 @@ public class IBillsTest {
 
 	@Test
 	public void testGetBillPaymentType() {
-		fail("Not yet implemented");
+		removeAllBills();
+		
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, LocalDateTime.parse("2014-10-19 08:00", formatter), LocalDateTime.parse("2014-10-19 09:00", formatter), 0.9);
+		
+		assertTrue(IBills.INSTANCE.getBillPaymentType(IBills.INSTANCE.getAllBillIDs().get(0)) == null);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetBillPaymentType_expects_exception() {
+		IBills.INSTANCE.getBillPaymentType("ASDASD");
 	}
 
 	@Test
@@ -264,10 +273,10 @@ public class IBillsTest {
 		
 		assertTrue(IBills.INSTANCE.getAllBillsNotPaid().size() == 0);
 	}
-
-	@Test
+	
+	@Test(expected=UnsupportedOperationException.class)
 	public void testSendInvoice() {
-		fail("Not yet implemented");
+		IBills.INSTANCE.sendInvoice("", "");
 	}
 
 	@Test
@@ -307,7 +316,23 @@ public class IBillsTest {
 
 	@Test
 	public void testGetBillTotalAmount() {
-		fail("Not yet implemented");
+		removeAllBills();
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		double price = IBills.INSTANCE.getBillTotalAmount(IBills.INSTANCE.getAllBillIDs().get(0));
+		assertTrue(price == 0);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetBillTotalAmount_expect_exception() {
+		removeAllBills();
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		double price = IBills.INSTANCE.getBillTotalAmount("ASDAS");
+		assertTrue(price == 0);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetBillTotalAmount_expects_exception() {
+		IBills.INSTANCE.getBillTotalAmount("LOL");
 	}
 
 }

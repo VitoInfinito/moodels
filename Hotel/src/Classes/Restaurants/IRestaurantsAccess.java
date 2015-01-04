@@ -88,7 +88,7 @@ public interface IRestaurantsAccess extends Serializable {
 	 * @generated NOT
 	 */
 	List<String> getAvailableTables(LocalDateTime to, LocalDateTime from, String restaurantID) throws InvalidIDException;
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * Requires:
@@ -104,6 +104,22 @@ public interface IRestaurantsAccess extends Serializable {
 	 * @generated
 	 */
 	String getReservationGuest(String restaurantID, String reservationID) throws InvalidIDException;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		reservationID != null && != restaurantID != null
+	 * Ensures:
+	 * 		if there exists a restaurant with id restaurantID and a reservation at that restaurant with the ID reservationID 
+	 * 			a list of the reserved tables for that reservation is returned
+	 * 		otherwise
+	 * 			an InvalidIDException will be thrown
+	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" reservationIDDataType="org.eclipse.uml2.types.String" reservationIDRequired="true" reservationIDOrdered="false"
+	 * @generated
+	 */
+	List<String> getReservationTables(String restaurantID, String reservationID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->

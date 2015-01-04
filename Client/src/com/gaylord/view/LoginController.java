@@ -16,6 +16,7 @@ import Classes.Accounts.IAccountsAccess;
 
 import com.gaylord.MainApp;
 
+@SuppressWarnings("deprecation")
 public class LoginController {
 
 	@FXML
@@ -33,7 +34,6 @@ public class LoginController {
 	 * Initializes the controller class. This method is automatically called
 	 * after the fxml file has been loaded.
 	 */
-	@SuppressWarnings("deprecation")
 	@FXML
 	private void initialize() {
 		// get a handle to the stage
