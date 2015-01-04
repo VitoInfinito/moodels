@@ -3,7 +3,6 @@ package Classes.Feedback.tests;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import java.util.List;
 
@@ -12,7 +11,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import Classes.Customers.ICustomers;
 import Classes.Feedback.IFeedback;
 import Classes.Utils.InvalidIDException;
 
