@@ -152,7 +152,7 @@ public class ICustomersTest {
 
 	@Test
 	public void testGetCustomerPhone() {
-		boolean result = ICustomers.INSTANCE.getCustomerPhone("010101-0101").equals("0707-777777");
+		boolean result = ICustomers.INSTANCE.getCustomerPhone("010101-0101").equals("0707-777776");
 		assertTrue(result);
 	}
 
@@ -185,15 +185,41 @@ public class ICustomersTest {
 	}
 
 	@Test
-	public void testAddCustomerBooking() {
-		// TODO 
-		fail("Not yet implemented");
+	public void testAddCustomerBooking_exists_bookingAdded() {
+		ICustomers.INSTANCE.addCustomerBooking("010101-0101", "003");
+		boolean result = ICustomers.INSTANCE.getCustomerBookings("010101-0101").size() == 3;
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testAddCustomerBooking_exists_bookingAreadyExists_throwsException() {
+		ICustomers.INSTANCE.addCustomerBooking("010101-0101", "001");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testAddCustomerBooking_notExists_throwsException() {
+		ICustomers.INSTANCE.addCustomerBooking("0", "003");
 	}
 
 	@Test
-	public void testRemoveCustomerBooking() {
-		// TODO 
-		fail("Not yet implemented");
+	public void testRemoveCustomerBooking_customerExistsListNotEmpty_bookingRemoved() {
+		String reqID = ICustomers.INSTANCE.getCustomerBookings("010101-0101").get(0);
+		ICustomers.INSTANCE.removeCustomerBooking("010101-0101", reqID);
+		boolean result = ICustomers.INSTANCE.getCustomerBookings("010101-0101").size() == 1;
+		assertTrue(result);
+	}
+	
+	@Test(expected=IndexOutOfBoundsException.class)
+	public void testRemoveCustomerBooking_customerExistsListEmpty_throwsException() {
+		for(String bookID : ICustomers.INSTANCE.getCustomerBookings("010101-0101")) {
+			ICustomers.INSTANCE.removeCustomerBooking("010101-0101", bookID);
+		}
+		ICustomers.INSTANCE.getCustomerBookings("010101-0101").get(0);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testRemoveCustomerBooking_customerExistsBookingNotExists_throwsException() {
+		ICustomers.INSTANCE.removeCustomerBooking("010101-0101", "0");
 	}
 
 	@Test
