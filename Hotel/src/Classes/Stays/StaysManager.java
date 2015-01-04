@@ -137,7 +137,8 @@ public class StaysManager implements IStays {
 
 		// Check in guest
 		stay.addCheckedInGuest(guestID);
-		iGuests.generateGuestAccount(guestID);
+		if(!iGuests.getAllGuestIDs().contains(guestID))
+			iGuests.generateGuestAccount(guestID);
 	}
 
 	/**

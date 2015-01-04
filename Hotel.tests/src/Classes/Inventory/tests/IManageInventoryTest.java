@@ -2,13 +2,12 @@ package Classes.Inventory.tests;
 
 import static org.junit.Assert.*;
 
-import java.util.List;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import Classes.Inventory.IInventoryAccess;
 import Classes.Inventory.IManageInventory;
 import Classes.Utils.InvalidIDException;
 
@@ -34,28 +33,40 @@ public class IManageInventoryTest {
 
 	@Test
 	public void testChangeItemName() {
-		List<String> itemIDs = IManageInventory.INSTANCE.getAllItemIDs();
-		IManageInventory.INSTANCE.changeItemName(itemIDs.get(0), "Tikkat");
-		boolean result = (IManageInventory.INSTANCE.getItemName(itemIDs.get(0)) == "Tikkat");
+		boolean result = false;
+		for(String id : IManageInventory.INSTANCE.getAllItemIDs()){
+			if( IManageInventory.INSTANCE.getItemName(id) == "Toppias"){
+				IManageInventory.INSTANCE.changeItemName(id, "Tikkat");
+				result = IInventoryAccess.INSTANCE.getItemName(id) == "Tikkat";
+			}
+		}
 		assertTrue(result);
 	}
 
 	@Test
 	public void testChangeItemPrice() {
-		List<String> itemIDs = IManageInventory.INSTANCE.getAllItemIDs();
-		IManageInventory.INSTANCE.changeItemPrice(itemIDs.get(1), 0);
-		boolean result = (IManageInventory.INSTANCE.getItemPrice(itemIDs.get(1)) == 0);
+		boolean result = false;
+		for(String id : IManageInventory.INSTANCE.getAllItemIDs()){
+			if( IManageInventory.INSTANCE.getItemPrice(id) == 5.99){
+				IManageInventory.INSTANCE.changeItemPrice(id, 0);
+				result = IInventoryAccess.INSTANCE.getItemPrice(id) == 0;
+			}
+		}
 		assertTrue(result);
 	}
 
 	@Test
 	public void testChangeItemExpense() {
-		List<String> itemIDs = IManageInventory.INSTANCE.getAllItemIDs();
-		IManageInventory.INSTANCE.changeItemExpense(itemIDs.get(0), 73);
-		boolean result = (IManageInventory.INSTANCE.getItemExpense(itemIDs.get(0)) == 73);
+		boolean result = false;
+		for(String id : IManageInventory.INSTANCE.getAllItemIDs()){
+			if( IManageInventory.INSTANCE.getItemExpense(id) == 13.37){
+				IManageInventory.INSTANCE.changeItemExpense(id, 2.5);
+				result = IInventoryAccess.INSTANCE.getItemExpense(id) == 2.5;
+			}
+		}
 		assertTrue(result);
 	}
-
+	
 	@Test
 	public void testAddItem() {
 		IManageInventory.INSTANCE.addItem("Everything", 500.3, 5, 12378);
@@ -71,10 +82,12 @@ public class IManageInventoryTest {
 		}
 		assertTrue(result);
 	}
+	
 
 	@Test
 	public void testRemoveItem() {
 		tearDown();
+		
 		boolean result = (IManageInventory.INSTANCE.getAllItemIDs().size() == 0);
 		assertTrue(result);
 	}

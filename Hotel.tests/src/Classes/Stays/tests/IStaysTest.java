@@ -108,8 +108,7 @@ public class IStaysTest {
 		stay6 = IStays.INSTANCE.addNewStay("601", booking6, LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 22, 17, 0));
 		
 		IStays.INSTANCE.addResponsibleCreditCard(stay1, "12342352", "523", 9, 17, "Alfred","Johansson");
-		IStays.INSTANCE.addResponsibleCreditCard(stay2, "23453262", "833", 7, 18, "Sigurd","Matsson");
-		IStays.INSTANCE.addResponsibleCreditCard(stay3, "12342352", "523", 9, 17, "Alfred","Johansson");
+		IStays.INSTANCE.addResponsibleCreditCard(stay2, "12342352", "523", 9, 17, "Alfred","Johansson");
 		IStays.INSTANCE.addResponsibleCreditCard(stay4, "34563532", "831", 11, 19, "Yvar","Svensson");
 		IStays.INSTANCE.addResponsibleCreditCard(stay5, "45565426", "892", 1, 17, "Anders","Hallgren");
 		IStays.INSTANCE.addResponsibleCreditCard(stay6, "45565426", "892", 1, 17, "Anders","Hallgren");
@@ -165,18 +164,17 @@ public class IStaysTest {
 	}
 	
 	@Test(expected=ResponsibleCreditCardNotAddedException.class)
-	public void testCheckInGuest_responsible_creditcard_not_added() throws ResponsibleCreditCardNotAddedException {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testCheckInGuest_responsible_creditcard_not_added() throws ResponsibleCreditCardNotAddedException, InvalidIDException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay3, "760911-0078");
 	}
 	
 	@Test(expected=GuestAlreadyCheckedInException.class)
-	public void testCheckInGuest_guest_already_checked_in() throws GuestAlreadyCheckedInException {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testCheckInGuest_guest_already_checked_in() throws GuestAlreadyCheckedInException, InvalidIDException, ResponsibleCreditCardNotAddedException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "760911-0078");
+		IStays.INSTANCE.checkInGuest(stay1, "760911-0078");
 	}
 	
-	@Test(expected=GuestAlreadyCheckedOutException.class)
+	/*@Test(expected=GuestAlreadyCheckedOutException.class)
 	public void testCheckInGuest_guest_already_checked_out() throws GuestAlreadyCheckedOutException {
 		fail("Not yet implemented");
 		//TODO make test
@@ -593,5 +591,5 @@ public class IStaysTest {
 	public void testRemoveBillFromStay_stay_not_exist() throws InvalidIDException {
 		fail("Not yet implemented");
 		//TODO make test
-	}
+	}*/
 }
