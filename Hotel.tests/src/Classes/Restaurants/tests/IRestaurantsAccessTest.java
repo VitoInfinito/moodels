@@ -53,6 +53,8 @@ public class IRestaurantsAccessTest {
 	@Test
 	public void testGetRestaurantReservations() {
 		assertTrue(IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").size() == 1);
+		int result = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").size();
+		assertTrue(result == 1);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -284,14 +286,20 @@ public class IRestaurantsAccessTest {
 
 	@Test
 	public void testGetReservationFromTime() {
-		//TODO
-		fail("Not yet implemented");
+		boolean result = IRestaurantsManage.INSTANCE.getReservationFromTime(
+				"testaurant", 
+				"010101-0101") == LocalDateTime.parse("2014-10-20 12:00", formatter);
+		
+		assertTrue(result);
 	}
 
 	@Test
 	public void testGetReservationToTime() {
-		//TODO
-		fail("Not yet implemented");
+		boolean result = IRestaurantsManage.INSTANCE.getReservationToTime(
+				"testaurant", 
+				"010101-0101") == LocalDateTime.parse("2014-10-20 12:00", formatter);
+		
+		assertTrue(result);
 	}
 
 	@Test
