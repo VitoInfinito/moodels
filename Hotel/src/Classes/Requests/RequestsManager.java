@@ -120,7 +120,10 @@ import Classes.Utils.InvalidIDException;
 		Set<String> searchResult = new LinkedHashSet<String>();
 		Pattern regexPattern = Pattern.compile("(?i:.*" + keyword + ".*)");
 		// Exact ID match. First Order!
-		searchResult.add(specialRequest.get(keyword).getId());
+		
+		if (specialRequest.containsKey(keyword)) {
+			searchResult.add(keyword);
+		}
 
 		Collection<Request> tmpC = specialRequest.values();
 		
