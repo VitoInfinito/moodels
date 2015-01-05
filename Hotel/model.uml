@@ -65,10 +65,9 @@ Customer Service representative inherits the uses of Staff</body>
         <packagedElement xmi:type="uml:Usage" xmi:id="_hQUF0Hj_EeST-65JbGUt8g" name="Usage1011" client="_CO1hAHT9EeSTN6KBMiF9rQ" supplier="_ud--4HW7EeSfyJE4wiQQOg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_YyrR8HiNEeS8a9tzu_DvHw" name="Usage0" client="_DrO1QHT3EeSTN6KBMiF9rQ" supplier="_a6YNAHiHEeS8a9tzu_DvHw"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_Zvjw8HiNEeS8a9tzu_DvHw" name="Usage1" client="_DrO1QHT3EeSTN6KBMiF9rQ" supplier="_PnB-kHiJEeS8a9tzu_DvHw"/>
       <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_CUm50HcWEeS8a9tzu_DvHw" name="Realization0" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_A-o9EHUAEeSTN6KBMiF9rQ" contract="_A-o9EHUAEeSTN6KBMiF9rQ"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_H_qYIHcWEeS8a9tzu_DvHw" name="Usage0" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_RRny4HbuEeSWb_3hJA4u-g"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_J0BRsHcWEeS8a9tzu_DvHw" name="Usage1" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_2n-2wHW5EeSfyJE4wiQQOg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_J0BRsHcWEeS8a9tzu_DvHw" name="Usage1" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_-sPlAHTxEeSTN6KBMiF9rQ"/>
       <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_G1xb8HiXEeS9MsZyYSaWPA" name="Realization0" client="_uRE8oHT9EeSTN6KBMiF9rQ" supplier="_J5ePwHiSEeS9MsZyYSaWPA" contract="_J5ePwHiSEeS9MsZyYSaWPA"/>
       <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="__tVy8HiREeS9MsZyYSaWPA" name="Realization0" client="_vrQboHT9EeSTN6KBMiF9rQ" supplier="_7_X-UHiPEeS8a9tzu_DvHw" contract="_7_X-UHiPEeS8a9tzu_DvHw"/>
       <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_L7cVcHi8EeS9MsZyYSaWPA" name="Realization0" client="_x2WaMHT9EeSTN6KBMiF9rQ" supplier="_EFf0UHWEEeS1Iek-sidDrg" contract="_EFf0UHWEEeS1Iek-sidDrg"/>
@@ -1265,6 +1264,8 @@ LinkedHashMap&lt;LocalDateTime, Double></body>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FZX61pTwEeSbXvIKPebrJw" value="1"/>
           </ownedEnd>
         </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_pU4toJT1EeSbXvIKPebrJw" name="Usage0" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_qRGJYHcIEeS8a9tzu_DvHw"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_xIZtQJT1EeSbXvIKPebrJw" name="Usage1" client="_uOvMkHT4EeSTN6KBMiF9rQ" supplier="_SgRRMHi4EeS9MsZyYSaWPA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_w0b8IHT7EeSTN6KBMiF9rQ" name="Inventory">
         <packagedElement xmi:type="uml:Component" xmi:id="_s2yv8HT9EeSTN6KBMiF9rQ" name="InventoryComponent">
@@ -3106,6 +3107,7 @@ LinkedHashMap&lt;LocalDateTime, Double></body>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jHCBE5TxEeSbXvIKPebrJw" value="1"/>
           </ownedEnd>
         </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_5IzyAJT4EeSbXvIKPebrJw" name="Usage0" client="_wFsU4HT9EeSTN6KBMiF9rQ" supplier="_EFf0UHWEEeS1Iek-sidDrg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_ms-HcHT8EeSTN6KBMiF9rQ" name="Customers">
         <packagedElement xmi:type="uml:Component" xmi:id="_wqd14HT9EeSTN6KBMiF9rQ" name="CustomersComponent">
@@ -3365,6 +3367,7 @@ LinkedHashMap&lt;LocalDateTime, Double></body>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s3ToVpTxEeSbXvIKPebrJw" value="1"/>
           </ownedEnd>
         </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_6o32kJT4EeSbXvIKPebrJw" name="Usage0" client="_wqd14HT9EeSTN6KBMiF9rQ" supplier="_EFf0UHWEEeS1Iek-sidDrg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_pW5-IHT8EeSTN6KBMiF9rQ" name="Stays">
         <packagedElement xmi:type="uml:Component" xmi:id="_xJTuAHT9EeSTN6KBMiF9rQ" name="StaysComponent">
