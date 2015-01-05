@@ -213,12 +213,9 @@ public class IStaffTest {
 		IStaff.INSTANCE.getStaffSalaryContractType("");
 	}
 
-	@Test(expected=InvalidIDException.class)
+	@Test
 	public void testScheduleStaff() {
-		tearDown();
-		
 		IStaff.INSTANCE.scheduleStaff(LocalDateTime.now(), LocalDateTime.of(2015, 1, 22, 0, 0));
-		IStaff.INSTANCE.getStaffJob("010101-0101");
 	}
 	
 	@Test
