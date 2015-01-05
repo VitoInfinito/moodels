@@ -24,7 +24,6 @@ import Classes.Bookables.IBookablesManage;
 import Classes.Bookings.IBookings;
 import Classes.Customers.ICustomers;
 import Classes.Guests.IGuests;
-import Classes.Inventory.IManageInventory;
 import Classes.Stays.IStays;
 import Classes.Utils.GuestAlreadyCheckedInException;
 import Classes.Utils.GuestAlreadyCheckedOutException;
@@ -56,13 +55,13 @@ public class IStaysTest {
 		bankingAdmin.addCreditCard("34563532", "831", 11, 19, "Yvar","Svensson");
 		bankingAdmin.addCreditCard("45565426", "892", 1, 17, "Anders","Hallgren");
 		
-		IBookablesManage.INSTANCE.addHotelRoom("301", 1300, "desc1", 1, "loc1", HotelRoomCategory.STANDARD_ROOM, 2);
-		IBookablesManage.INSTANCE.addHotelRoom("302", 1300, "desc2", 2, "loc2", HotelRoomCategory.STANDARD_ROOM, 2);	
-		IBookablesManage.INSTANCE.addHotelRoom("402", 2000, "desc8", 8, "loc8", HotelRoomCategory.FAMILY_ROOM, 4);
-		IBookablesManage.INSTANCE.addHotelRoom("503", 3000, "desc9", 9, "loc9", HotelRoomCategory.SUITE, 4);
-		IBookablesManage.INSTANCE.addConferenceRoom("601", 13000, "desc13", 13, "loc13", ConferenceRoomCategory.DINING_ROOM, 30);
-		IBookablesManage.INSTANCE.addHotelRoom("403", 2000, "desc7", 7, "loc7", HotelRoomCategory.FAMILY_ROOM, 4);	
-		IBookablesManage.INSTANCE.addHotelRoom("777", 2000, "desc77", 77, "loc77", HotelRoomCategory.FAMILY_ROOM, 4);	
+		IBookablesManage.INSTANCE.addHotelRoom("301", 130, "desc1", 1, "loc1", HotelRoomCategory.STANDARD_ROOM, 2);
+		IBookablesManage.INSTANCE.addHotelRoom("302", 130, "desc2", 2, "loc2", HotelRoomCategory.STANDARD_ROOM, 2);	
+		IBookablesManage.INSTANCE.addHotelRoom("402", 200, "desc8", 8, "loc8", HotelRoomCategory.FAMILY_ROOM, 4);
+		IBookablesManage.INSTANCE.addHotelRoom("503", 300, "desc9", 9, "loc9", HotelRoomCategory.SUITE, 4);
+		IBookablesManage.INSTANCE.addConferenceRoom("601", 1300, "desc13", 13, "loc13", ConferenceRoomCategory.DINING_ROOM, 30);
+		IBookablesManage.INSTANCE.addHotelRoom("403", 200, "desc7", 7, "loc7", HotelRoomCategory.FAMILY_ROOM, 4);	
+		IBookablesManage.INSTANCE.addHotelRoom("777", 200, "desc77", 77, "loc77", HotelRoomCategory.FAMILY_ROOM, 4);	
 		IBookablesManage.INSTANCE.addHostelBed("1", 2, "desc1", "403");
 		
 		ICustomers.INSTANCE.addCustomer("760911-0078", "Alfred","Johansson", "mr", "aj@korv.se", "0700-000071");
@@ -114,7 +113,7 @@ public class IStaysTest {
 		String booking5 = IBookings.INSTANCE.makeBooking(bookableList5, "861008-0028", LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 23, 17, 0), 4, "45565426", "892", 1, 17, "Anders","Hallgren", 0.2, true);
 		String booking6 = IBookings.INSTANCE.makeBooking(bookableList6, "861008-0028", LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 22, 17, 0), 6, "45565426", "892", 1, 17, "Anders","Hallgren", 0, true);
 		String booking7 = IBookings.INSTANCE.makeBooking(bookableList7, "750411-0068", LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 22, 17, 0), 2, "23453262", "833", 7, 18, "Sigurd","Matsson", 0, true);
-		String booking8 = IBookings.INSTANCE.makeBooking(bookableList8, "750411-0068", LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 22, 17, 0), 1, "23453262", "833", 7, 18, "Sigurd","Matsson", 0, true);
+		String booking8 = IBookings.INSTANCE.makeBooking(bookableList8, "750411-0068", LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 22, 17, 0), 1, "45565426", "892", 1, 17, "Anders","Hallgren", 0, true);
 		
 		stay1 = IBookings.INSTANCE.getBookedStaysOfBooking(booking1).get(0);
 		stay2 = IBookings.INSTANCE.getBookedStaysOfBooking(booking2).get(0);
@@ -140,7 +139,6 @@ public class IStaysTest {
 			for(String gid : IStays.INSTANCE.getCheckedInGuestsOfHotelStay(id)) {
 				IStays.INSTANCE.checkOutGuest(id, gid);
 			}
-			//IStays.INSTANCE.removeStay(id);
 			
 		}
 		for(String id : IBookings.INSTANCE.getAllBookings()) {
@@ -286,9 +284,7 @@ public class IStaysTest {
 	
 	@Test(expected=InvalidIDException.class)
 	public void testAddNewStay_bookable_not_exists() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException {
-		List<String> bookableList = new ArrayList<String>();
-		bookableList.add("667788");
-		IBookings.INSTANCE.makeBooking(bookableList, "760911-0078", LocalDateTime.of(2020, 1, 1, 15, 0), LocalDateTime.of(2020, 1, 5, 10, 0), 4, "12342352", "523", 9, 17, "Alfred","Johansson", 0, true);
+		IStays.INSTANCE.addNewStay("6666", "6666", LocalDateTime.of(2018, 1, 1, 15, 0), LocalDateTime.of(2018, 1, 5, 10, 0));
 	}
 
 	
@@ -895,6 +891,27 @@ public class IStaysTest {
 	}
 	
 	@Test(expected=InvalidIDException.class)
+	public void testChangePeriodOfStay_stay_exists_booking_taken_with_later_end_time() throws InvalidIDException{
+		IStays.INSTANCE.changePeriodOfStay(stay1, LocalDateTime.of(2015,1,2,15,0), LocalDateTime.of(2017,1,4,10,0));
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangePeriodOfStay_stay_exists_booking_taken_with_sooner_start_time() throws InvalidIDException{
+		IStays.INSTANCE.changePeriodOfStay(stay2, LocalDateTime.of(2015,1,2,15,0), LocalDateTime.of(2016,8,4,10,0));
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangePeriodOfStay_stay_exists_booking_taken_sooner_start_time_and_later_end_time() throws InvalidIDException{
+		IStays.INSTANCE.changePeriodOfStay(stay1, LocalDateTime.of(2015,1,1,1,0), LocalDateTime.of(2017,8,4,10,0));
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangePeriodOfStay_stay_exists_booking_taken_outside_stay_time() throws InvalidIDException{
+		IStays.INSTANCE.changePeriodOfStay(stay1, LocalDateTime.of(2016,3,2,15,0), LocalDateTime.of(2017,1,4,10,0));
+	}
+	
+	
+	@Test(expected=InvalidIDException.class)
 	public void testChangePeriodOfStay_stay_not_exist() throws InvalidIDException {
 		IStays.INSTANCE.changePeriodOfStay("6666", LocalDateTime.of(2015,1,2,15,0), LocalDateTime.of(2015,1,4,10,0));
 	}
@@ -921,5 +938,15 @@ public class IStaysTest {
 	@Test(expected=InvalidIDException.class)
 	public void testRemoveBillFromStay_stay_not_exist() throws InvalidIDException {
 		IStays.INSTANCE.removeBillFromStay("6666", "thisbilldoesnotmatterifitisreal");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetFromDateOfHotelStay_stay_not_exist() throws InvalidIDException {
+		IStays.INSTANCE.getFromDateOfHotelStay("6666");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetToDateOfHotelStay_stay_not_exist() throws InvalidIDException {
+		IStays.INSTANCE.getToDateOfHotelStay("6666");
 	}
 }
