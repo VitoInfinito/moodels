@@ -148,6 +148,7 @@ import Classes.Utils.InvalidIDException;
 				}
 			}
 			
+			iStaff = IStaff.INSTANCE;
 			for (String employee : iStaff.getAllStaff()) {
 				if (iStaff.getStaffSalaryContractType(employee).equals("Hourly")) {
 					entryValue -= iStaff.getStaffSalary(employee) * 40/7.0; // Average salary per day assuming working 40 hours a week...
