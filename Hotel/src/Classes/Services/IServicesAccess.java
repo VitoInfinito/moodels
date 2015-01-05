@@ -305,7 +305,13 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * 	Requires:
+	 * 		items != null && services != null && bill != null && bookable != null && deliveryDate != null && isDelivery != null
+	 * Ensures:
+	 * 		if there exists a bill such that bill == billID
+	 * 			adds room service order to that bill
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model itemsDataType="org.eclipse.uml2.types.String" itemsMany="true" itemsOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false" billDataType="org.eclipse.uml2.types.String" billRequired="true" billOrdered="false" bookableDataType="org.eclipse.uml2.types.String" bookableRequired="true" bookableOrdered="false" deliveryDateRequired="true" deliveryDateOrdered="false" isDeliveredDataType="org.eclipse.uml2.types.Boolean" isDeliveredRequired="true" isDeliveredOrdered="false"
