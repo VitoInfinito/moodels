@@ -15,6 +15,7 @@ import Classes.Services.IServicesManager;
 import Classes.Utils.InvalidIDException;
 
 public class IServicesManagerTest {
+	String service1, roomServiceOrder1;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -22,17 +23,17 @@ public class IServicesManagerTest {
 
 	@Before
 	public void setUp() throws Exception {
-		IServicesManager.INSTANCE.addService("a", 100, 50);
+		service1 = IServicesManager.INSTANCE.addService("a", 100, 50);
 		IServicesManager.INSTANCE.addRoomServiceMenuItem("b");
 		IServicesManager.INSTANCE.changeRoomServiceMenuName("The Menu");
 		
 		ArrayList<String> services = new ArrayList<String>();
-		services.add(IServicesAccess.INSTANCE.getAllServiceIDs().get(0));
+		services.add(service1);
 		
 		ArrayList<String> items = new ArrayList<String>();
 		items.add("b");
 		
-		IServicesManager.INSTANCE.makeRoomServiceOrder(items, services, "bill", "bookable", LocalDateTime.of(2015, 01, 20, 20, 15), false);
+		roomServiceOrder1 = IServicesManager.INSTANCE.makeRoomServiceOrder(items, services, "bill", "bookable", LocalDateTime.of(2015, 01, 20, 20, 15), false);
 	}
 	
 	@After
@@ -52,10 +53,9 @@ public class IServicesManagerTest {
 
 	@Test
 	public void testChangeServiceName() {
-		String serviceID = IServicesManager.INSTANCE.getAllServiceIDs().get(0);
-		IServicesManager.INSTANCE.changeServiceName(serviceID, "b");
+		IServicesManager.INSTANCE.changeServiceName(service1, "b");
 		
-		assertTrue(IServicesManager.INSTANCE.getServiceName(serviceID) == "b");
+		assertTrue(IServicesManager.INSTANCE.getServiceName(service1) == "b");
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -65,10 +65,9 @@ public class IServicesManagerTest {
 
 	@Test
 	public void testChangeServicePrice() {
-		String serviceID = IServicesManager.INSTANCE.getAllServiceIDs().get(0);
-		IServicesManager.INSTANCE.changeServicePrice(serviceID, 200);
+		IServicesManager.INSTANCE.changeServicePrice(service1, 200);
 		
-		assertTrue(IServicesManager.INSTANCE.getServicePrice(serviceID) == 200);
+		assertTrue(IServicesManager.INSTANCE.getServicePrice(service1) == 200);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -78,16 +77,14 @@ public class IServicesManagerTest {
 	
 	@Test(expected=IllegalArgumentException.class)
 	public void testChangeServicePrice_is_negative() {
-		String serviceID = IServicesManager.INSTANCE.getAllServiceIDs().get(0);
-		IServicesManager.INSTANCE.changeServicePrice(serviceID, -200);
+		IServicesManager.INSTANCE.changeServicePrice(service1, -200);
 	}
 
 	@Test
 	public void testChangeServiceExpense() {
-		String serviceID = IServicesManager.INSTANCE.getAllServiceIDs().get(0);
-		IServicesManager.INSTANCE.changeServiceExpense(serviceID, 200);
+		IServicesManager.INSTANCE.changeServiceExpense(service1, 200);
 		
-		assertTrue(IServicesManager.INSTANCE.getServiceExpense(serviceID) == 200);
+		assertTrue(IServicesManager.INSTANCE.getServiceExpense(service1) == 200);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -97,8 +94,7 @@ public class IServicesManagerTest {
 	
 	@Test(expected=IllegalArgumentException.class)
 	public void testChangeServiceExpense_is_negative() {
-		String serviceID = IServicesManager.INSTANCE.getAllServiceIDs().get(0);
-		IServicesManager.INSTANCE.changeServiceExpense(serviceID, -200);
+		IServicesManager.INSTANCE.changeServiceExpense(service1, -200);
 	}
 
 	@Test
@@ -159,9 +155,7 @@ public class IServicesManagerTest {
 	
 	@Test
 	public void testRemoveRoomServiceOrder() {
-		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
-		
-		IServicesManager.INSTANCE.removeRoomServiceOrder(orderID);
+		IServicesManager.INSTANCE.removeRoomServiceOrder(roomServiceOrder1);
 		assertTrue(IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().size() == 0);
 	}
 	
