@@ -1,13 +1,17 @@
 package Classes.Staff.tests;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+
+import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import Classes.Customers.ICustomers;
 import Classes.Staff.IStaff;
 import Classes.Utils.InvalidIDException;
 
@@ -46,8 +50,49 @@ public class IStaffTest {
 
 	@Test
 	public void testSearchStaff() {
-		//TODO
-		fail("Not yet implemented");
+		tearDown();
+		
+		boolean result = IStaff.INSTANCE.searchStaff("Svenne").isEmpty();
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchStaff_staffEmpty_expectEmptyList() throws InvalidIDException{
+		tearDown();
+		boolean result = IStaff.INSTANCE.searchStaff("Sven").isEmpty();
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchStaff_staffNotEmpty_expectsEmptyList() {
+		boolean result = IStaff.INSTANCE.searchStaff("XXX").isEmpty();
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchStaff_expectsListNonNull() {
+		List<String> list = IStaff.INSTANCE.searchStaff("XXX");
+		assertNotNull(list);
+	}
+	
+	@Test
+	public void testSearchStaff_idMatchExactly() {
+		List<String> list = IStaff.INSTANCE.searchStaff("Svensson");
+		assertTrue(list.contains("010101-0102"));
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchStaff_idMatchSomewhat() {
+		List<String> list = IStaff.INSTANCE.searchStaff("vensson");
+		assertTrue(list.contains("010101-0102"));
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchStaff_multipleMatches() {
+		List<String> list = IStaff.INSTANCE.searchStaff("son");
+		assertTrue(list.size() == 2);
 	}
 
 	@Test
