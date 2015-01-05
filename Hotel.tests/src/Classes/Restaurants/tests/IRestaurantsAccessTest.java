@@ -1,8 +1,6 @@
 package Classes.Restaurants.tests;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -486,39 +484,31 @@ public class IRestaurantsAccessTest {
 	}
 	
 	@Test
-	public void testSearchRestaurantReservationsWithTime() {
-		
-		boolean result = !IRestaurantsManage.INSTANCE.searchRestaurantReservationsWithTime("testaurant", "010101-0101", LocalDateTime.parse("2014-10-22 14:00", formatter), LocalDateTime.parse("2014-10-22 12:00", formatter)).isEmpty();
+	public void testSearchRestaurantReservationsWithTime_expects_results() {
+		boolean result = IRestaurantsManage.INSTANCE.searchRestaurantReservationsWithTime("testaurant", "010101-0101", LocalDateTime.parse("2014-10-22 14:00", formatter), LocalDateTime.parse("2014-10-22 12:00", formatter)).isEmpty();
+		assertFalse(result);
+	}
+
+	@Test
+	public void testSearchRestaurantReservationsWithTime_expects_notFound() {
+		boolean result = IRestaurantsManage.INSTANCE.searchRestaurantReservationsWithTime("lolololololhej", "lolololololhej", LocalDateTime.parse("2014-10-10 10:00", formatter), LocalDateTime.parse("2014-10-10 12:00", formatter)).isEmpty();
+		assertTrue(result);
+	}
 	
+	@Test
+	public void testSearchRestaurantReservationsWithTime_expects_oneFound() {	
+		int count= IRestaurantsManage.INSTANCE.searchRestaurantReservationsWithTime("testaurant", "010101-0101", LocalDateTime.parse("2014-10-22 14:00", formatter), LocalDateTime.parse("2014-10-22 12:00", formatter)).size();
+		assertTrue(count == 1);
+	}
+	
+	@Test
+	public void testSearchRestaurantReservationsWithTime_expects_found_searchKeywordIsPartlyCorrect() {
+		boolean result = !IRestaurantsManage.INSTANCE.searchRestaurantReservationsWithTime("testaurant", "0101", LocalDateTime.parse("2014-10-22 14:00", formatter), LocalDateTime.parse("2014-10-22 12:00", formatter)).isEmpty();
 		assertTrue(result);
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testSearchRestaurantReservationsWithTime_notExists_throwsException() {
 		IRestaurantsManage.INSTANCE.searchRestaurantReservationsWithTime("", "", null, null);
-	}
-
-	@Test
-	public void testSearchRestaurantReservationsWithTime_expects_notFound() {
-		
-		boolean result = IRestaurantsManage.INSTANCE.searchRestaurantReservationsWithTime("lolololololhej", "lolololololhej", LocalDateTime.parse("2014-10-10 10:00", formatter), LocalDateTime.parse("2014-10-10 12:00", formatter)).isEmpty();
-	
-		assertTrue(result);
-	}
-	
-	@Test
-	public void testSearchRestaurantReservationsWithTime_expects_oneFound() {
-		
-		int count= IRestaurantsManage.INSTANCE.searchRestaurantReservationsWithTime("testaurant", "010101-0101", LocalDateTime.parse("2014-10-22 14:00", formatter), LocalDateTime.parse("2014-10-22 12:00", formatter)).size();
-	
-		assertTrue(count == 1);
-	}
-	
-	@Test
-	public void testSearchRestaurantReservationsWithTime_expects_found_searchKeywordIsPartlyCorrect() {
-		
-		boolean result = !IRestaurantsManage.INSTANCE.searchRestaurantReservationsWithTime("testaurant", "0101", LocalDateTime.parse("2014-10-22 14:00", formatter), LocalDateTime.parse("2014-10-22 12:00", formatter)).isEmpty();
-	
-		assertTrue(result);
 	}
 }
