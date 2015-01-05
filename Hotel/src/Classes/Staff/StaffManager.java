@@ -316,7 +316,6 @@ import Classes.Utils.InvalidIDException;
 	 * @generated
 	 */
 	public LinkedHashMap<LocalDateTime, List<String>> scheduleStaff(LocalDateTime from, LocalDateTime to) {
-		// TODO implement this better...
 		LinkedHashMap<LocalDateTime, List<String>> dailyWorkers = new LinkedHashMap<LocalDateTime, List<String>>();
 		LinkedHashMap<LocalDateTime, Integer> stat = iStatisticsGenerator.getOccupancyStatistics(from, to);
 		List<Staff> allEmplyees = new ArrayList<Staff>(employees.values());
