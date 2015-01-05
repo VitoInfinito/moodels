@@ -18,6 +18,7 @@ import org.junit.Test;
 import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires;
 import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
 import Classes.Bills.IBills;
+import Classes.Bookables.ConferenceRoomCategory;
 import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.IBookablesManage;
 import Classes.Bookings.IBookings;
@@ -45,6 +46,7 @@ public class IStaysTest {
 	private static String stay5;
 	private static String stay6;
 	private static String stay7;
+	private static String stay8;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -58,9 +60,10 @@ public class IStaysTest {
 		IBookablesManage.INSTANCE.addHotelRoom("302", 1300, "desc2", 2, "loc2", HotelRoomCategory.STANDARD_ROOM, 2);	
 		IBookablesManage.INSTANCE.addHotelRoom("402", 2000, "desc8", 8, "loc8", HotelRoomCategory.FAMILY_ROOM, 4);
 		IBookablesManage.INSTANCE.addHotelRoom("503", 3000, "desc9", 9, "loc9", HotelRoomCategory.SUITE, 4);
-		IBookablesManage.INSTANCE.addHotelRoom("601", 1300, "desc13", 13, "loc13", HotelRoomCategory.STANDARD_ROOM, 6);
+		IBookablesManage.INSTANCE.addConferenceRoom("601", 13000, "desc13", 13, "loc13", ConferenceRoomCategory.DINING_ROOM, 30);
 		IBookablesManage.INSTANCE.addHotelRoom("403", 2000, "desc7", 7, "loc7", HotelRoomCategory.FAMILY_ROOM, 4);	
 		IBookablesManage.INSTANCE.addHotelRoom("777", 2000, "desc77", 77, "loc77", HotelRoomCategory.FAMILY_ROOM, 4);	
+		IBookablesManage.INSTANCE.addHostelBed("1", 2, "desc1", "403");
 		
 		ICustomers.INSTANCE.addCustomer("760911-0078", "Alfred","Johansson", "mr", "aj@korv.se", "0700-000071");
 		ICustomers.INSTANCE.addCustomer("750411-0068", "Sigurd","Matsson", "mr", "sm@korv.se", "0700-000072");
@@ -100,6 +103,9 @@ public class IStaysTest {
 		List<String> bookableList7 = new ArrayList<String>();
 		bookableList7.add("777");
 		
+		List<String> bookableList8 = new ArrayList<String>();
+		bookableList8.add("1");
+		
 
 		booking1 = IBookings.INSTANCE.makeBooking(bookableList1, "760911-0078", LocalDateTime.of(2015, 1, 1, 15, 0), LocalDateTime.of(2016, 1, 5, 10, 0), 4, "12342352", "523", 9, 17, "Alfred","Johansson", 0, true);
 		String booking2 = IBookings.INSTANCE.makeBooking(bookableList2, "760911-0078", LocalDateTime.of(2016, 1, 6, 15, 0), LocalDateTime.of(2017, 4, 18, 10, 0), 2, "12342352", "523", 9, 17, "Alfred","Johansson", 0.2, true);
@@ -108,7 +114,7 @@ public class IStaysTest {
 		String booking5 = IBookings.INSTANCE.makeBooking(bookableList5, "861008-0028", LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 23, 17, 0), 4, "45565426", "892", 1, 17, "Anders","Hallgren", 0.2, true);
 		String booking6 = IBookings.INSTANCE.makeBooking(bookableList6, "861008-0028", LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 22, 17, 0), 6, "45565426", "892", 1, 17, "Anders","Hallgren", 0, true);
 		String booking7 = IBookings.INSTANCE.makeBooking(bookableList7, "750411-0068", LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 22, 17, 0), 2, "23453262", "833", 7, 18, "Sigurd","Matsson", 0, true);
-
+		String booking8 = IBookings.INSTANCE.makeBooking(bookableList8, "750411-0068", LocalDateTime.of(2015, 1, 2, 8, 0), LocalDateTime.of(2017, 4, 22, 17, 0), 1, "23453262", "833", 7, 18, "Sigurd","Matsson", 0, true);
 		
 		stay1 = IBookings.INSTANCE.getBookedStaysOfBooking(booking1).get(0);
 		stay2 = IBookings.INSTANCE.getBookedStaysOfBooking(booking2).get(0);
@@ -117,6 +123,7 @@ public class IStaysTest {
 		stay5 = IBookings.INSTANCE.getBookedStaysOfBooking(booking5).get(0);
 		stay6 = IBookings.INSTANCE.getBookedStaysOfBooking(booking6).get(0);
 		stay7 = IBookings.INSTANCE.getBookedStaysOfBooking(booking7).get(0);
+		stay8 = IBookings.INSTANCE.getBookedStaysOfBooking(booking8).get(0);
 		
 		AdministratorRequires.instance().makeDeposit("12342352", "523", 9, 17, "Alfred","Johansson", 10000000);
 		AdministratorRequires.instance().makeDeposit("34563532", "831", 11, 19, "Yvar","Svensson", 10000000);
@@ -216,6 +223,18 @@ public class IStaysTest {
 	@Test(expected=InvalidCheckInDateException.class)
 	public void testCheckInGuest_check_in_after_check_out_time() throws InvalidCheckInDateException, InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, GuestAlreadyCheckedOutException {
 		IStays.INSTANCE.checkInGuest(stay4, "760911-0078");
+	}
+	
+	@Test(expected=StayAlreadyFullyCheckedInException.class)
+	public void testCheckInGuest_check_in_to_taken_hostel_bed() throws InvalidCheckInDateException, InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay8, "760911-0078");
+		IStays.INSTANCE.checkInGuest(stay8, "861008-0028");
+	}
+
+	
+	@Test(expected=InvalidIDException.class)
+	public void testCheckInGuest_check_in_to_conference_room() throws InvalidCheckInDateException, InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay6, "760911-0078");
 	}
 
 	@Test(expected=StayAlreadyFullyCheckedInException.class)
@@ -464,7 +483,7 @@ public class IStaysTest {
 	@Test
 	public void testGetAllHotelStayIDs_expected_non_null_list_with_stays() {
 		List<String> staysList = IStays.INSTANCE.getAllHotelStayIDs();
-		assertTrue(staysList.size() == 7);
+		assertTrue(staysList.size() == 8);
 		assertTrue(staysList.contains(stay1));
 		assertTrue(staysList.contains(stay2));
 		assertTrue(staysList.contains(stay3));
@@ -472,6 +491,7 @@ public class IStaysTest {
 		assertTrue(staysList.contains(stay5));
 		assertTrue(staysList.contains(stay6));
 		assertTrue(staysList.contains(stay7));
+		assertTrue(staysList.contains(stay8));
 	}
 
 	
@@ -635,7 +655,7 @@ public class IStaysTest {
 	@Test
 	public void testSearchHotelStays_empty_string_expects_all_bookings() {
 		List<String> search = IStays.INSTANCE.searchHotelStays("");
-		assertTrue(search.size() == 7);
+		assertTrue(search.size() == 8);
 		assertTrue(search.contains(stay1));
 		assertTrue(search.contains(stay2));
 		assertTrue(search.contains(stay3));
@@ -643,6 +663,7 @@ public class IStaysTest {
 		assertTrue(search.contains(stay5));
 		assertTrue(search.contains(stay6));
 		assertTrue(search.contains(stay7));
+		assertTrue(search.contains(stay8));
 	}
 	
 	@Test
@@ -785,15 +806,14 @@ public class IStaysTest {
 	@Test
 	public void testSearchHotelStaysWithinPeriod_empty_string_expects_all_bookings_within_time_period() {
 		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod("", LocalDateTime.of(2015, 1, 2, 1, 0), LocalDateTime.of(2015, 5, 5, 10, 0));
-		System.out.println(search.toString());
-		System.out.println(search.size());
-		assertTrue(search.size() == 6);
+		assertTrue(search.size() == 7);
 		assertTrue(search.contains(stay1));
 		assertTrue(search.contains(stay3));
 		assertTrue(search.contains(stay4));
 		assertTrue(search.contains(stay5));
 		assertTrue(search.contains(stay6));
 		assertTrue(search.contains(stay7));
+		assertTrue(search.contains(stay8));
 	}
 
 	
@@ -802,15 +822,14 @@ public class IStaysTest {
 	@Test
 	public void testGetAllHotelStaysWithinPeriod_expected_list_with_stays_within_time_period() {
 		List<String> search = IStays.INSTANCE.getAllHotelStaysWithinPeriod(LocalDateTime.of(2015, 1, 2, 1, 0), LocalDateTime.of(2015, 5, 5, 10, 0));
-		System.out.println(search.toString());
-		System.out.println(search.size());
-		assertTrue(search.size() == 6);
+		assertTrue(search.size() == 7);
 		assertTrue(search.contains(stay1));
 		assertTrue(search.contains(stay3));
 		assertTrue(search.contains(stay4));
 		assertTrue(search.contains(stay5));
 		assertTrue(search.contains(stay6));
 		assertTrue(search.contains(stay7));
+		assertTrue(search.contains(stay8));
 	}
 
 	
