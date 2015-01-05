@@ -281,9 +281,10 @@ public class IBillsTest {
 		assertTrue(IBills.INSTANCE.getAllBillsNotPaid().size() == 0);
 	}
 	
-	@Test(expected=UnsupportedOperationException.class)
 	public void testSendInvoice() {
-		IBills.INSTANCE.sendInvoice("", "");
+		removeAllBills();
+		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		IBills.INSTANCE.sendInvoice(IBills.INSTANCE.getAllBillIDs().get(0), "");
 	}
 
 	@Test
