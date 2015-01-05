@@ -13,6 +13,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import Classes.Requests.IRequests;
 import Classes.Restaurants.IRestaurantsAccess;
 import Classes.Restaurants.IRestaurantsManage;
 import Classes.Utils.InvalidIDException;
@@ -490,8 +491,10 @@ public class IRestaurantsAccessTest {
 	}
 
 	@Test
-	public void testSearchRestaurantReservationsWithTime() {
-		//TODO
-		fail("Not yet implemented");
+	public void testSearchRestaurantReservationsWithTime_expects_notFound() {
+		
+		boolean result = IRestaurantsManage.INSTANCE.searchRestaurantReservationsWithTime("lolololololhej", "lolololololhej", LocalDateTime.parse("2014-10-10 10:00", formatter), LocalDateTime.parse("2014-10-10 12:00", formatter)).isEmpty();
+	
+		assertTrue(result);
 	}
 }

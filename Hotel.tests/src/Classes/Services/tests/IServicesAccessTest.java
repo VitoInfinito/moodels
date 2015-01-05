@@ -1,11 +1,13 @@
 package Classes.Services.tests;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
@@ -26,6 +28,9 @@ public class IServicesAccessTest {
 	public void setUp() throws Exception {
 		IServicesManager.INSTANCE.addService("a", 100, 50);
 		IServicesManager.INSTANCE.addService("b", 200, 75);
+		
+		IServicesManager.INSTANCE.addService("abababababahej", 0, 0);
+		IServicesManager.INSTANCE.addService("lolololololhej", 0, 0);
 		
 		IServicesManager.INSTANCE.addRoomServiceMenuItem("c");
 		IServicesManager.INSTANCE.addRoomServiceMenuItem("d");
@@ -67,7 +72,7 @@ public class IServicesAccessTest {
 	@Test
 	public void testGetAllServiceIDsNotEmpty() {
 		int result = IServicesAccess.INSTANCE.getAllServiceIDs().size();
-		assertTrue(result == 2);
+		assertTrue(result == 4);
 	}
 	
 	@Test
@@ -83,17 +88,72 @@ public class IServicesAccessTest {
 		int result = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().size();
 		assertTrue(result == 1);
 	}
-
+	
 	@Test
-	public void testSearchServices() {
-		fail("Unimplemented");
-		// TODO
+	public void testSearchServices_servicesEmpty_expectEmptyList() {
+		tearDown();
+		
+		boolean result = IServicesAccess.INSTANCE.searchServices("ab").isEmpty();
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchServices_servicesNotEmpty_expectEmptyList() {
+		boolean result = IServicesAccess.INSTANCE.searchServices("xx").isEmpty();
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchServices_expectsListNonNull() {
+		List<String> list = IServicesAccess.INSTANCE.searchServices("xx");
+		assertNotNull(list);
+	}
+	
+	@Test
+	public void testSearchServices_idMatchExactly() {
+		String serviceID = IServicesAccess.INSTANCE.getAllServiceIDs().get(0);
+		
+		List<String> list = IServicesAccess.INSTANCE.searchServices(serviceID);
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchServices_idMatchSomewhat() {
+		String serviceID = IServicesAccess.INSTANCE.getAllServiceIDs().get(0).substring(2);
+		
+		List<String> list = IServicesAccess.INSTANCE.searchServices(serviceID);
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchServices_nameMatchExactly() {
+		List<String> list = IServicesAccess.INSTANCE.searchServices("abababababahej");
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchServices_nameMatchSomewhat() {
+		List<String> list = IServicesAccess.INSTANCE.searchServices("bab");
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchServices_nameMatchSomewhat_multipleMatches() {
+		List<String> list = IServicesAccess.INSTANCE.searchServices("hej");
+		assertTrue(list.size() == 2);
 	}
 
 	@Test
 	public void testSearchRoomServiceOrders() {
 		fail("Unimplemented");
 		// TODO
+		
+		// #### OBSERVERA!	Detta ska testas:
+		
+		// Exact ID match. First Order!
+		// Some property match exactly. Second Order! (Bill, Bookable, Items, Service)
+		// ID match somewhat. Third Order!
+		// Some property match somewhat. Fourth Order. (Bill, Bookable)
 	}
 
 	@Test
