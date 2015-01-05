@@ -38,6 +38,7 @@ import Classes.Utils.StayAlreadyFullyCheckedInException;
 public class IStaysTest {
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 	private static String stay1;
+	private static String booking1;
 	private static String stay2;
 	private static String stay3;
 	private static String stay4;
@@ -100,7 +101,7 @@ public class IStaysTest {
 		bookableList7.add("777");
 		
 
-		String booking1 = IBookings.INSTANCE.makeBooking(bookableList1, "760911-0078", LocalDateTime.of(2015, 1, 1, 15, 0), LocalDateTime.of(2016, 1, 5, 10, 0), 4, "12342352", "523", 9, 17, "Alfred","Johansson", 0, true);
+		booking1 = IBookings.INSTANCE.makeBooking(bookableList1, "760911-0078", LocalDateTime.of(2015, 1, 1, 15, 0), LocalDateTime.of(2016, 1, 5, 10, 0), 4, "12342352", "523", 9, 17, "Alfred","Johansson", 0, true);
 		String booking2 = IBookings.INSTANCE.makeBooking(bookableList2, "760911-0078", LocalDateTime.of(2016, 1, 6, 15, 0), LocalDateTime.of(2017, 4, 18, 10, 0), 2, "12342352", "523", 9, 17, "Alfred","Johansson", 0.2, true);
 		String booking3 = IBookings.INSTANCE.makeBooking(bookableList3, "750411-0068", LocalDateTime.of(2015, 1, 4, 15, 0), LocalDateTime.of(2017, 4, 20, 10, 0), 2, "23453262", "833", 7, 18, "Sigurd","Matsson", 0.2, false);
 		String booking4 = IBookings.INSTANCE.makeBooking(bookableList4, "930607-0098", LocalDateTime.of(2015, 1, 1, 15, 0), LocalDateTime.of(2015, 1, 2, 10, 0), 2, "34563532", "831", 11, 19, "Yvar","Svensson", 0, true);
@@ -443,21 +444,19 @@ public class IStaysTest {
 	@Test(expected=InvalidIDException.class)
 	public void testGetBookableOfHotelStay_stay_not_exist() throws InvalidIDException {
 		IStays.INSTANCE.getBookableOfHotelStay("6666");
-	}*/
+	}
 	
 	
 	
 	
 	@Test
 	public void testGetBookingOfHotelStay_stay_exists_expected_booking_in_stay() {
-		fail("Not yet implemented");
-		//TODO make test
+		assertTrue(IStays.INSTANCE.getBookingOfHotelStay(stay1).equals(booking1));
 	}
 	
-	/*@Test(expected=InvalidIDException.class)
+	@Test(expected=InvalidIDException.class)
 	public void testGetBookingOfHotelStay_stay_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+		IStays.INSTANCE.getBookingOfHotelStay("6666");
 	}
 	
 	
@@ -465,56 +464,337 @@ public class IStaysTest {
 	
 	@Test
 	public void testGetAllHotelStayIDs_expected_non_null_list_with_stays() {
-		fail("Not yet implemented");
-		//TODO make test
+		List<String> staysList = IStays.INSTANCE.getAllHotelStayIDs();
+		assertTrue(staysList.size() == 7);
+		assertTrue(staysList.contains(stay1));
+		assertTrue(staysList.contains(stay2));
+		assertTrue(staysList.contains(stay3));
+		assertTrue(staysList.contains(stay4));
+		assertTrue(staysList.contains(stay5));
+		assertTrue(staysList.contains(stay6));
+		assertTrue(staysList.contains(stay7));
 	}
 
 	
 	
 	
 	@Test
-	public void testGetCheckedInGuestsOfHotelStay_stay_exists_expected_list_of_checked_in_guests() {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testGetCheckedInGuestsOfHotelStay_stay_exists_expected_list_of_checked_in_guests() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkInGuest(stay1, "760912-0016");
+		IStays.INSTANCE.checkInGuest(stay1, "760913-0094");
+		List<String> guests = IStays.INSTANCE.getCheckedInGuestsOfHotelStay(stay1);
+		assertTrue(guests.size() == 3);
+		assertTrue(guests.contains("861008-0028"));
+		assertTrue(guests.contains("760912-0016"));
+		assertTrue(guests.contains("760913-0094"));
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testGetCheckedInGuestsOfHotelStay_stay_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+		IStays.INSTANCE.getCheckedInGuestsOfHotelStay("6666");
 	}
 
 	
 	
 	
 	@Test
-	public void testGetCheckedOutGuestsOfHotelStay_stay_exists_expected_list_of_checked_out_guests() {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testGetCheckedOutGuestsOfHotelStay_stay_exists_expected_list_of_checked_out_guests() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException, GuestNotCheckedInException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkInGuest(stay1, "760912-0016");
+		IStays.INSTANCE.checkInGuest(stay1, "760913-0094");
+		IStays.INSTANCE.checkOutGuest(stay1, "760913-0094");
+		IStays.INSTANCE.checkOutGuest(stay1, "760912-0016");
+		List<String> guests = IStays.INSTANCE.getCheckedOutGuestsOfHotelStay(stay1);
+		assertTrue(guests.size() == 2);
+		assertTrue(guests.contains("760913-0094"));
+		assertTrue(guests.contains("760912-0016"));
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testGetCheckedOutGuestsOfHotelStay_stay_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+		IStays.INSTANCE.getCheckedOutGuestsOfHotelStay("6666");
 	}
 
 	
 	
 	
 	@Test
-	public void testSearchHotelStays_expected_non_null_list_matching_or_somewhat_matching_search() {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testSearchHotelStays_exact_id_match_expects_first_element_in_result() {
+		List<String> search = IStays.INSTANCE.searchHotelStays(stay1);
+		assertTrue(search.get(0).equals(stay1));
 	}
-
-	
-	
 	
 	@Test
-	public void testSearchHotelStaysWithinPeriod_expected_non_null_list_matching_or_somewhat_matching_search_within_time_period() {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testSearchHotelStays_id_match_somewhat_expects_stay_in_result() {
+		List<String> search = IStays.INSTANCE.searchHotelStays(stay1.substring(2));
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_on_bookable_id_expects_bookable_stay_found() {
+		List<String> search = IStays.INSTANCE.searchHotelStays(IStays.INSTANCE.getBookableOfHotelStay(stay1));
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_on_part_of_bookable_id_expects_bookable_stay_found() {
+		List<String> search = IStays.INSTANCE.searchHotelStays(IStays.INSTANCE.getBookableOfHotelStay(stay1).substring(2));
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_on_booking_id_expects_booking_stay_found() {
+		List<String> search = IStays.INSTANCE.searchHotelStays(IStays.INSTANCE.getBookingOfHotelStay(stay1));
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_on_part_of_booking_id_expects_booking_stay_found() {
+		List<String> search = IStays.INSTANCE.searchHotelStays(IStays.INSTANCE.getBookingOfHotelStay(stay1).substring(2));
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_on_checked_in_guest_id_expects_checked_in_guest_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStays("861008-0028");
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_on_part_of_checked_in_guest_id_expects_checked_in_guest_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStays("861008");
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_on_checked_in_guest_by_first_name_id_expects_checked_in_guest_by_first_name_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStays("Anders");
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_on_part_of_checked_in_guest_by_first_name_id_expects_checked_in_guest_by_first_name_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStays("Ande");
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_on_checked_in_guest_by_last_name_id_expects_checked_in_guest_by_last_name_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStays("Hallgren");
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_on_part_of_checked_in_guest_by_last_name_id_expects_checked_in_guest_by_last_name_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStays("Hallg");
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_on_checked_in_guest_by_email_id_expects_checked_in_guest_by_email_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStays("ah@korv.se");
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_on_part_of_checked_in_guest_by_email_id_expects_checked_in_guest_by_email_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStays("ah@korv");
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_on_checked_in_guest_by_phone_id_expects_checked_in_guest_by_phone_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStays("0700-000074");
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_on_part_of_checked_in_guest_by_phone_id_expects_checked_in_guest_by_phone_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStays("000074");
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_on_checked_out_guest_id_expects_checked_out_guest_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException, GuestNotCheckedInException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkOutGuest(stay1, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStays("861008-0028");
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStays_empty_string_expects_all_bookings() {
+		List<String> search = IStays.INSTANCE.searchHotelStays("");
+		assertTrue(search.size() == 7);
+		assertTrue(search.contains(stay1));
+		assertTrue(search.contains(stay2));
+		assertTrue(search.contains(stay3));
+		assertTrue(search.contains(stay4));
+		assertTrue(search.contains(stay5));
+		assertTrue(search.contains(stay6));
+		assertTrue(search.contains(stay7));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_exact_id_match_expects_first_element_in_result() {
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod(stay1, LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 5, 5, 10, 0));
+		assertTrue(search.get(0).equals(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_id_match_somewhat_expects_stay_in_result() {
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod(stay1.substring(2), LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 5, 5, 10, 0));
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_on_bookable_id_expects_bookable_stay_found() {
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod(IStays.INSTANCE.getBookableOfHotelStay(stay1), LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 5, 5, 10, 0));
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_on_part_of_bookable_id_expects_bookable_stay_found() {
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod(IStays.INSTANCE.getBookableOfHotelStay(stay1).substring(2), LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 5, 5, 10, 0));
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_on_booking_id_expects_booking_stay_found() {
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod(IStays.INSTANCE.getBookingOfHotelStay(stay1), LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 5, 5, 10, 0));
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_on_part_of_booking_id_expects_booking_stay_found() {
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod(IStays.INSTANCE.getBookingOfHotelStay(stay1).substring(2), LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 5, 5, 10, 0));
+		assertTrue(search.contains(stay1));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_on_checked_in_guest_id_expects_checked_in_guest_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkInGuest(stay5, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod("861008-0028", LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 1, 2, 3, 0));
+		assertTrue(search.contains(stay1));
+		assertFalse(search.contains(stay5));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_on_part_of_checked_in_guest_id_expects_checked_in_guest_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkInGuest(stay5, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod("861008", LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 1, 2, 3, 0));
+		assertTrue(search.contains(stay1));
+		assertFalse(search.contains(stay5));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_on_checked_in_guest_by_first_name_id_expects_checked_in_guest_by_first_name_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkInGuest(stay5, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod("Anders", LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 1, 2, 3, 0));
+		assertTrue(search.contains(stay1));
+		assertFalse(search.contains(stay5));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_on_part_of_checked_in_guest_by_first_name_id_expects_checked_in_guest_by_first_name_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkInGuest(stay5, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod("Ande", LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 1, 2, 3, 0));
+		assertTrue(search.contains(stay1));
+		assertFalse(search.contains(stay5));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_on_checked_in_guest_by_last_name_id_expects_checked_in_guest_by_last_name_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkInGuest(stay5, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod("Hallgren", LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 1, 2, 3, 0));
+		assertTrue(search.contains(stay1));
+		assertFalse(search.contains(stay5));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_on_part_of_checked_in_guest_by_last_name_id_expects_checked_in_guest_by_last_name_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkInGuest(stay5, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod("Hallg", LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 1, 2, 3, 0));
+		assertTrue(search.contains(stay1));
+		assertFalse(search.contains(stay5));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_on_checked_in_guest_by_email_id_expects_checked_in_guest_by_email_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkInGuest(stay5, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod("ah@korv.se", LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 1, 2, 3, 0));
+		assertTrue(search.contains(stay1));
+		assertFalse(search.contains(stay5));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_on_part_of_checked_in_guest_by_email_id_expects_checked_in_guest_by_email_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkInGuest(stay5, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod("ah@korv", LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 1, 2, 3, 0));
+		assertTrue(search.contains(stay1));
+		assertFalse(search.contains(stay5));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_on_checked_in_guest_by_phone_id_expects_checked_in_guest_by_phone_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkInGuest(stay5, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod("0700-000074", LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 1, 2, 3, 0));
+		assertTrue(search.contains(stay1));
+		assertFalse(search.contains(stay5));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_on_part_of_checked_in_guest_by_phone_id_expects_checked_in_guest_by_phone_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkInGuest(stay5, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod("000074", LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 1, 2, 3, 0));
+		assertTrue(search.contains(stay1));
+		assertFalse(search.contains(stay5));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_on_checked_out_guest_id_expects_checked_out_guest_stay_found() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException, GuestNotCheckedInException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkInGuest(stay5, "861008-0028");
+		IStays.INSTANCE.checkOutGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkOutGuest(stay5, "861008-0028");
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod("861008-0028", LocalDateTime.of(2015, 1, 1, 14, 0), LocalDateTime.of(2015, 1, 2, 3, 0));
+		assertTrue(search.contains(stay1));
+		assertFalse(search.contains(stay5));
+	}
+	
+	@Test
+	public void testSearchHotelStaysWithinPeriod_empty_string_expects_all_bookings_within_time_period() {
+		List<String> search = IStays.INSTANCE.searchHotelStaysWithinPeriod("", LocalDateTime.of(2015, 1, 2, 1, 0), LocalDateTime.of(2015, 5, 5, 10, 0));
+		System.out.println(search.toString());
+		System.out.println(search.size());
+		assertTrue(search.size() == 6);
+		assertTrue(search.contains(stay1));
+		assertTrue(search.contains(stay3));
+		assertTrue(search.contains(stay4));
+		assertTrue(search.contains(stay5));
+		assertTrue(search.contains(stay6));
+		assertTrue(search.contains(stay7));
 	}
 
 	
@@ -522,9 +802,17 @@ public class IStaysTest {
 	
 	@Test
 	public void testGetAllHotelStaysWithinPeriod_expected_list_with_stays_within_time_period() {
-		fail("Not yet implemented");
-		//TODO make test
-	}
+		List<String> search = IStays.INSTANCE.getAllHotelStaysWithinPeriod(LocalDateTime.of(2015, 1, 2, 1, 0), LocalDateTime.of(2015, 5, 5, 10, 0));
+		System.out.println(search.toString());
+		System.out.println(search.size());
+		assertTrue(search.size() == 6);
+		assertTrue(search.contains(stay1));
+		assertTrue(search.contains(stay3));
+		assertTrue(search.contains(stay4));
+		assertTrue(search.contains(stay5));
+		assertTrue(search.contains(stay6));
+		assertTrue(search.contains(stay7));
+	}*/
 
 	
 	
@@ -535,7 +823,7 @@ public class IStaysTest {
 		//TODO make test
 	}
 	
-	@Test(expected=InvalidIDException.class)
+	/*@Test(expected=InvalidIDException.class)
 	public void testGetAllUnpayedBillsOfHotelStay_stay_not_exists() throws InvalidIDException {
 		fail("Not yet implemented");
 		//TODO make test

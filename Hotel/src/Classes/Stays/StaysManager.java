@@ -512,7 +512,9 @@ public class StaysManager implements IStays {
 				searchResult.add(b.getID());
 			} else {
 				for (String guest : b.getCheckedInGuests()) {
-					if (regexPattern.matcher(iGuests.getGuestFirstName(guest)).matches()) {
+					if (regexPattern.matcher(guest).matches()) {
+						searchResult.add(b.getID());
+					} else if (regexPattern.matcher(iGuests.getGuestFirstName(guest)).matches()) {
 						searchResult.add(b.getID());
 					} else if (regexPattern.matcher(iGuests.getGuestLastName(guest)).matches()) {
 						searchResult.add(b.getID());
@@ -604,7 +606,9 @@ public class StaysManager implements IStays {
 					searchResult.add(b.getID());
 				} else {
 					for (String guest : b.getCheckedInGuests()) {
-						if (regexPattern.matcher(iGuests.getGuestFirstName(guest)).matches()) {
+						if (regexPattern.matcher(guest).matches()) {
+							searchResult.add(b.getID());
+						} else if (regexPattern.matcher(iGuests.getGuestFirstName(guest)).matches()) {
 							searchResult.add(b.getID());
 						} else if (regexPattern.matcher(iGuests.getGuestLastName(guest)).matches()) {
 							searchResult.add(b.getID());
