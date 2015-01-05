@@ -167,9 +167,10 @@ public interface IServicesManager extends IServicesAccess {
 	 * 		otherwise
 	 * 			IllegalArgumentException is thrown
 	 * <!-- end-user-doc -->
+	 * @return 
 	 * @model nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" priceRequired="true" priceOrdered="false" expenseRequired="true" expenseOrdered="false"
 	 * @generated
 	 */
-	void addService(String name, double price, double expense) throws IllegalArgumentException;
+	String addService(String name, double price, double expense) throws IllegalArgumentException;
 
 } // IServicesManager

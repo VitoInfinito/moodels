@@ -486,7 +486,7 @@ import Classes.Utils.InvalidIDException;
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addService(String name, double price, double expense) {
+	public String addService(String name, double price, double expense) {
 		if (price < 0 || expense < 0) {
 			logger.warn("The price or expense is negative.");
 			throw new IllegalArgumentException("The price or expense is negative.");
@@ -502,6 +502,8 @@ import Classes.Utils.InvalidIDException;
 		service.setExpense(expense);
 		
 		services.put(ID, service);
+		
+		return ID;
 	}
 	
 	/**

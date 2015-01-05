@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import javax.xml.soap.SOAPException;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -14,12 +16,18 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires;
+import Classes.Bills.IBills;
 import Classes.Bookables.ConferenceRoomCategory;
 import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.IBookablesManage;
 import Classes.Bookings.IBookings;
 import Classes.Customers.ICustomers;
+import Classes.Inventory.IInventoryAccess;
+import Classes.Inventory.IManageInventory;
+import Classes.Services.IServicesManager;
 import Classes.Statistics.IStatisticsGenerator;
+import Classes.Utils.InsufficientFundsException;
+import Classes.Utils.InvalidCreditCardException;
 import Classes.Utils.InvalidIDException;
 
 public class IStatisticsGeneratorTest {
@@ -144,8 +152,55 @@ public class IStatisticsGeneratorTest {
 	}
 
 	@Test
-	public void testGetRevenueStatistics() {
-		fail("Not yet implemented");
+	public void testGetRevenueStatistics_no_payments_expects_zero_entry_values() {
+		LinkedHashMap<LocalDateTime, Double> stats = IStatisticsGenerator.INSTANCE.getRevenueStatistics(LocalDateTime.of(2015, 2, 12, 8, 0), LocalDateTime.of(2015, 2, 23, 17, 0));
+		assertTrue(stats.keySet().size() == 12);
+		assertTrue(stats.values().size() == 12);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 12, 0, 0)) == 0);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 13, 0, 0)) == 0);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 14, 0, 0)) == 0);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 15, 0, 0)) == 0);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 16, 0, 0)) == 0);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 17, 0, 0)) == 0);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 18, 0, 0)) == 0);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 19, 0, 0)) == 0);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 20, 0, 0)) == 0);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 21, 0, 0)) == 0);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 22, 0, 0)) == 0);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 23, 0, 0)) == 0);
+	}
+	
+	@Test
+	public void testGetRevenueStatistics_with_payments_expects_entry_values_correct() throws SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		AdministratorRequires.instance().makeDeposit("12345678", "234", 3, 17, "Adolf","Eriksson", 90000);
+		String service = IServicesManager.INSTANCE.addService("massage", 599, 200);
+		List<String> purchasedServices = new ArrayList<String>();
+		purchasedServices.add(service);
+		
+		String item1 = IManageInventory.INSTANCE.addItem("gurka", 99, 40, 20);
+		String item2 = IManageInventory.INSTANCE.addItem("korv", 50, 20, 20);
+		List<String> purchasedItems = new ArrayList<String>();
+		purchasedItems.add(item1);
+		purchasedItems.add(item2);
+		
+		String bill1 = IBills.INSTANCE.addBill(purchasedItems, new ArrayList<String>(), null, null, null, 0);
+		String bill2 = IBills.INSTANCE.addBill(new ArrayList<String>(), purchasedServices, null, null, null, 0);
+		String bill3 = IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), "303", LocalDateTime.of(2015, 2, 12, 8, 0), LocalDateTime.of(2015, 2, 23, 17, 0), 0.2);
+		List<String> bills = new ArrayList<String>();
+		bills.add(bill1);
+		bills.add(bill2);
+		bills.add(bill3);
+		
+		IBills.INSTANCE.payBillsWithCreditCard(bills, "12345678", "234", 3, 17, "Adolf","Eriksson");
+		
+		LinkedHashMap<LocalDateTime, Double> stats = IStatisticsGenerator.INSTANCE.getRevenueStatistics(LocalDateTime.now().minusDays(1), LocalDateTime.now().plusDays(1));
+		
+		assertTrue(stats.keySet().size() == 3);
+		assertTrue(stats.values().size() == 3);
+		
+		assertTrue(stats.get(LocalDateTime.of(LocalDateTime.now().minusDays(1).getYear(), LocalDateTime.now().minusDays(1).getMonth(), LocalDateTime.now().minusDays(1).getDayOfMonth(), 0, 0)) == 0);
+		assertTrue(stats.get(LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonth(), LocalDateTime.now().getDayOfMonth(), 0, 0)) == 27148);
+		assertTrue(stats.get(LocalDateTime.of(LocalDateTime.now().plusDays(1).getYear(), LocalDateTime.now().plusDays(1).getMonth(), LocalDateTime.now().plusDays(1).getDayOfMonth(), 0, 0)) == 0);
 	}
 
 	@Test
