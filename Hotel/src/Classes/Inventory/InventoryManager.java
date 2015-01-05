@@ -222,7 +222,7 @@ class InventoryManager implements IManageInventory {
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addItem(String name, double price, double expense, int stock) {
+	public String addItem(String name, double price, double expense, int stock) {
 		String id = generateID();
 		
 		Item item = InventoryFactory.INSTANCE.createItem();
@@ -234,6 +234,8 @@ class InventoryManager implements IManageInventory {
 		item.setStock(stock);
 		
 		items.put(id, item);
+		
+		return id;
 	}
 	
 	private String generateID() {

@@ -78,10 +78,11 @@ public interface IManageInventory extends IInventoryAccess {
 	 * 		Creates a new item with the generated ID and sets all attributes</br>
 	 * 		Adds item into inventory</br>
 	 * <!-- end-user-doc -->
+	 * @return 
 	 * @model nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" priceRequired="true" priceOrdered="false" expenseRequired="true" expenseOrdered="false" stockDataType="org.eclipse.uml2.types.Integer" stockRequired="true" stockOrdered="false"
 	 * @generated
 	 */
-	void addItem(String name, double price, double expense, int stock);
+	String addItem(String name, double price, double expense, int stock);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.soap.SOAPException;
 
@@ -14,7 +15,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires;
+import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
 import Classes.Bills.IBills;
+import Classes.Inventory.IInventoryAccess;
 import Classes.Inventory.IManageInventory;
 import Classes.Utils.InsufficientFundsException;
 import Classes.Utils.InvalidCreditCardException;
@@ -26,13 +30,14 @@ public class IBillsTest {
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-			//AdministratorRequires bankingAdmin = AdministratorRequires.instance();
-			//bankingAdmin.addCreditCard("12345678", "234", 3, 17, "Adolf","Eriksson");
+			AdministratorRequires bankingAdmin = AdministratorRequires.instance();
+			bankingAdmin.addCreditCard("12345678", "234", 3, 17, "Adolf","Eriksson");
 	}
-		@AfterClass
-		public static void tearDownAfterClass() throws Exception {
-			//AdministratorRequires bankingAdmin = AdministratorRequires.instance();
-			//bankingAdmin.removeCreditCard("12345678", "234", 3, 17, "Adolf","Eriksson");
+	
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+			AdministratorRequires bankingAdmin = AdministratorRequires.instance();
+			bankingAdmin.removeCreditCard("12345678", "234", 3, 17, "Adolf","Eriksson");
 	}
 	
 	@Before
@@ -160,12 +165,16 @@ public class IBillsTest {
 	@Test
 	public void testPayBillsWithCreditCard() throws SOAPException, InvalidCreditCardException, InsufficientFundsException {
 		removeAllBills();
+		List<String> items = new ArrayList<String>();
+		items.add(IManageInventory.INSTANCE.addItem("blabla", 99, 20, 13));
+		IBills.INSTANCE.addBill(items, new ArrayList<String>(), null, null, null, 0.9);
 		
-		IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 0.9);
+		AdministratorRequires.instance().makeDeposit("12345678", "234", 3, 17, "Adolf","Eriksson", 999999);
 		
-		//IBills.INSTANCE.payBillsWithCreditCard(IBills.INSTANCE.getAllBillIDs(), "12345678", "234", 3, 17, "Adolf", "Eriksson");
+		IBills.INSTANCE.payBillsWithCreditCard(IBills.INSTANCE.getAllBillIDs(), "12345678", "234", 3, 17, "Adolf", "Eriksson");
 		
 		assertTrue(IBills.INSTANCE.getAllBillsNotPaid().size() == 0);
+		CustomerRequires.instance().makePayment("12345678", "234", 3, 17, "Adolf","Eriksson", AdministratorRequires.instance().getBalance("12345678", "234", 3, 17, "Adolf", "Eriksson"));
 	}
 	
 	@Test

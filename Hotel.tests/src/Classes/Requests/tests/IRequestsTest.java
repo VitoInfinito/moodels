@@ -16,15 +16,19 @@ import Classes.Utils.InvalidIDException;
 
 public class IRequestsTest {
 	
+	private static String request1;
+	private static String request2;
+	private static String request3;
+	
 	@BeforeClass
 	public static void setUpBeforeClass() {
 	}
 
 	@Before
 	public void setUp() {
-		IRequests.INSTANCE.addRequest("abababababahej");
-		IRequests.INSTANCE.addRequest("lolololololhej");
-		IRequests.INSTANCE.addRequest("test");
+		request1 = IRequests.INSTANCE.addRequest("abababababahej");
+		request2 = IRequests.INSTANCE.addRequest("lolololololhej");
+		request3 = IRequests.INSTANCE.addRequest("test");
 	}
 	
 	@After
@@ -50,9 +54,8 @@ public class IRequestsTest {
 
 	@Test
 	public void testGetRequestDescription() {
-		String id = IRequests.INSTANCE.getAllRequestIDs().get(0);
-		String result = IRequests.INSTANCE.getRequestDescription(id);
-		assertTrue(result == "lolololololhej");
+		String result = IRequests.INSTANCE.getRequestDescription(request2);
+		assertTrue(result.equals("lolololololhej"));
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -175,8 +178,7 @@ public class IRequestsTest {
 	public void testAddRequest() {
 		tearDown();
 		
-		IRequests.INSTANCE.addRequest("bcbcbcbcbc");
-		String id = IRequests.INSTANCE.getAllRequestIDs().get(0);
+		String id = IRequests.INSTANCE.addRequest("bcbcbcbcbc");
 		String result = IRequests.INSTANCE.getRequestDescription(id);
 		
 		assertTrue(result == "bcbcbcbcbc");

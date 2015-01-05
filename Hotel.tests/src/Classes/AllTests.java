@@ -22,9 +22,10 @@ import Classes.Services.tests.IServicesAccessTest;
 import Classes.Services.tests.IServicesManagerTest;
 import Classes.Staff.tests.IStaffTest;
 import Classes.Statistics.tests.IStatisticsGeneratorTest;
+import Classes.Stays.tests.IStaysTest;
 
 @RunWith(Suite.class)
-@SuiteClasses({ IAccountsAccessTest.class, IManageAccountsTest.class, IBillsTest.class, IBookablesAccessTest.class, IBookablesManageTest.class, IBookingsTest.class, ICustomersTest.class, IFeedbackTest.class, IManageGuestsTest.class, IInventoryAccessTest.class, IManageInventoryTest.class, IRequestsTest.class, IRestaurantsAccessTest.class, IRestaurantsManageTest.class, IServicesAccessTest.class, IServicesManagerTest.class, IStaffTest.class, IStatisticsGeneratorTest.class })
+@SuiteClasses({ IAccountsAccessTest.class, IManageAccountsTest.class, IBillsTest.class, IBookablesAccessTest.class, IBookablesManageTest.class, IBookingsTest.class, ICustomersTest.class, IFeedbackTest.class, IManageGuestsTest.class, IInventoryAccessTest.class, IManageInventoryTest.class, IRequestsTest.class, IRestaurantsAccessTest.class, IRestaurantsManageTest.class, IServicesAccessTest.class, IServicesManagerTest.class, IStaffTest.class, IStatisticsGeneratorTest.class, IStaysTest.class })
 public class AllTests {
 
 }

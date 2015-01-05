@@ -471,4 +471,15 @@ class GuestsManager implements IGuests {
 		
 
 	}
+
+	@Override
+	public void addGuestStay(String guestID, String stayID) {
+		if(guests.containsKey(guestID)){
+			guests.get(guestID).addStay(stayID);
+		}
+		else{
+			logger.warn("A guest with SSID {} could not be found");
+			throw new InvalidIDException();
+		}
+	}
 } //GuestsManagerImpl

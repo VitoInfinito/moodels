@@ -3,18 +3,35 @@ package Classes.Guests.tests;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.xml.soap.SOAPException;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires;
 import Classes.Accounts.IManageAccounts;
+import Classes.Bookables.HotelRoomCategory;
+import Classes.Bookables.IBookablesManage;
+import Classes.Bookings.IBookings;
+import Classes.Customers.ICustomers;
 import Classes.Guests.IGuests;
 import Classes.Requests.IRequests;
 import Classes.Stays.IStays;
+import Classes.Utils.GuestAlreadyCheckedInException;
+import Classes.Utils.GuestAlreadyCheckedOutException;
+import Classes.Utils.GuestNotCheckedInException;
+import Classes.Utils.InsufficientFundsException;
+import Classes.Utils.InvalidCheckInDateException;
+import Classes.Utils.InvalidCreditCardException;
 import Classes.Utils.InvalidIDException;
+import Classes.Utils.ResponsibleCreditCardNotAddedException;
+import Classes.Utils.StayAlreadyFullyCheckedInException;
 
 public class IManageGuestsTest {
 
@@ -127,9 +144,24 @@ public class IManageGuestsTest {
 	}
 
 	@Test 
-	public void testGetGuestStays() {
-		fail("Not yet implemented");
-		//TODO: write it
+	public void testGetGuestStays() throws InvalidIDException, IllegalArgumentException, SOAPException, InvalidCreditCardException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException, GuestNotCheckedInException, InsufficientFundsException {
+		ICustomers.INSTANCE.addCustomer("861104-0078", "Greger","Gregersson", "mr", "gg@korv.se", "0700-000003");
+		AdministratorRequires.instance().addCreditCard("34336534", "655", 10, 18, "Greger","Gregersson");
+		AdministratorRequires.instance().makeDeposit("34336534", "655", 10, 18, "Greger","Gregersson", 999999);
+		IBookablesManage.INSTANCE.addHotelRoom("202", 1300, "desc1", 1, "loc1", HotelRoomCategory.STANDARD_ROOM, 2);	
+		List<String> bookables1 = new ArrayList<String>();
+		bookables1.add("202");
+		String bookingID = IBookings.INSTANCE.makeBooking(bookables1, "861104-0078", LocalDateTime.now().minusMinutes(1), LocalDateTime.now().plusDays(4), 1, "34336534", "655", 10, 18, "Greger","Gregersson", 0, true);
+		String stayID = IBookings.INSTANCE.getBookedStaysOfBooking(bookingID).get(0);
+		IStays.INSTANCE.checkInGuest(stayID, "010101-0101");
+		
+		assertTrue(IGuests.INSTANCE.getGuestStays("010101-0101").contains(stayID));
+		
+		IStays.INSTANCE.checkOutGuest(stayID,  "010101-0101");
+		IBookings.INSTANCE.cancelBooking(bookingID);
+		ICustomers.INSTANCE.removeCustomer("861104-0078");
+		AdministratorRequires.instance().removeCreditCard("34336534", "655", 10, 18, "Greger","Gregersson");
+		IBookablesManage.INSTANCE.deleteBookable("202");
 	}
 
 	@Test
@@ -141,8 +173,9 @@ public class IManageGuestsTest {
 
 	@Test
 	public void testRemoveGuestStay() {
-		fail("Not yet implemented");
-		//TODO: write it
+		IGuests.INSTANCE.addGuestStay("010101-0101", "someid");
+		IGuests.INSTANCE.removeGuestStay("010101-0101", "someid");
+		assertTrue(IGuests.INSTANCE.getGuestStays("010101-0101").isEmpty());
 	}
 
 	@Test

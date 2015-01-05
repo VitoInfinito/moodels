@@ -27,9 +27,14 @@ public class IServicesAccessTest {
 	
 	@After
 	public void tearDown() {
-		for (String id : IServicesManager.INSTANCE.getAllServiceIDs()) {
+		for (String id : IServicesManager.INSTANCE.getRoomServiceMenuItems()) {
 			 IServicesManager.INSTANCE.removeRoomServiceMenuItem(id);
 		}
+		for (String id : IServicesManager.INSTANCE.getAllServiceIDs()) {
+			 IServicesManager.INSTANCE.removeService(id);
+		}
+		
+		
 	}
 
 	@Test
