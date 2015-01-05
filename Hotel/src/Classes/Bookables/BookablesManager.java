@@ -489,7 +489,6 @@ class BookablesManager implements IBookablesManage {
 			logger.warn("The bookable with ID {} could not be found. Invalid ID!", bookableID);
 			throw new InvalidIDException();
 		}
-		// TODO might need to notify so that stays in this bookable get another bookable.
 	}
 
 	/**

@@ -23,7 +23,7 @@ public class MainApp extends Application {
         this.STAGE = primaryStage;
         this.STAGE.setTitle("Login");
 
-		// TODO remove this when persistance works
+		//  remove this when persistance works
 		IManageAccounts.INSTANCE.addAccount("guest", "guest", AccountType.GUEST);
 		IManageAccounts.INSTANCE.addAccount("customerservice", "customerservice", AccountType.CUSTOMER_SERVICE);
 		IManageAccounts.INSTANCE.addAccount("staff", "staff", AccountType.STAFF);

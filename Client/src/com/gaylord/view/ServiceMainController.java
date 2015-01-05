@@ -92,35 +92,35 @@ public class ServiceMainController {
 		});
 
 		restaurantsButton.setOnAction((event) -> {
-			// TODO
+	
 		});
 
 		servicesButton.setOnAction((event) -> {
-			// TODO
+			
 		});
 
 		customersButton.setOnAction((event) -> {
-			// TODO
+			
 		});
 		
 		guestsButton.setOnAction((event) -> {
-			// TODO
+			
 		});
 		
 		roomsButton.setOnAction((event) -> {
-			// TODO
+
 		});
 		
 		bookingsButton.setOnAction((event) -> {
-			// TODO
+		
 		});
 		
 		feedbackButton.setOnAction((event) -> {
-			// TODO
+			
 		});
 		
 		inventoryButton.setOnAction((event) -> {
-			// TODO
+			
 		});
 	}
 }

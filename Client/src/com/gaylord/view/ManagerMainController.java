@@ -101,47 +101,47 @@ public class ManagerMainController {
 		});
 
 		restaurantsButton.setOnAction((event) -> {
-			//TODO
+			
 		});
 
 		servicesButton.setOnAction((event) -> {
-			//TODO
+			
 		});
 
 		roomsButton.setOnAction((event) -> {
-			//TODO
+			
 		});
 		
 		statisticsButton.setOnAction((event) -> {
-			//TODO
+			
 		});
 		
 		bookingsButton.setOnAction((event) -> {
-			//TODO
+			
 		});
 		
 		accountsButton.setOnAction((event) -> {
-			//TODO
+			
 		});
 		
 		feedbackButton.setOnAction((event) -> {
-			//TODO
+			
 		});
 		
 		inventoryButton.setOnAction((event) -> {
-			//TODO
+			
 		});
 		
 		employeesButton.setOnAction((event) -> {
-			//TODO
+			
 		});
 		
 		customersButton.setOnAction((event) -> {
-			//TODO
+			
 		});
 		
 		guestsButton.setOnAction((event) -> {
-			//TODO
+			
 		});
 	}
 }

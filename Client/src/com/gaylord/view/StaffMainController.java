@@ -71,7 +71,7 @@ public class StaffMainController {
 		});
 
 		inventoryButton.setOnAction((event) -> {
-			// TODO
+			
 		});
 	}
 }
