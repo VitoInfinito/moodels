@@ -289,7 +289,13 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		orderID != null
+	 * Ensures:
+	 * 		if there exists an RoomServiceOrder rso such that rso.id == orderID
+	 * 			returns the RSOBill where bill.orderID == orderID
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false"
