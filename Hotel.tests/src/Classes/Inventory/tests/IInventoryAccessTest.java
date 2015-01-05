@@ -43,6 +43,11 @@ public class IInventoryAccessTest {
 		}
 		assertTrue(result);
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeItemStock_expects_exception() {
+		IInventoryAccess.INSTANCE.changeItemStock("lulcake", 1000);
+	}
 
 	@Test
 	public void testGetItemPrice() {
@@ -52,6 +57,13 @@ public class IInventoryAccessTest {
 				result = IInventoryAccess.INSTANCE.getItemPrice(id) == 23.15;
 			}
 		}
+		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetItemPrice_expects_exception() {
+		
+		boolean result = IInventoryAccess.INSTANCE.getItemPrice("lulcake") == 23.15;
 		assertTrue(result);
 	}
 
@@ -65,6 +77,13 @@ public class IInventoryAccessTest {
 		}
 		assertTrue(result);
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetItemName_expects_exception() {
+		
+		String result = IInventoryAccess.INSTANCE.getItemName("lulcake");
+		assertTrue(result.equals("lulcake"));
+	}
 
 	@Test
 	public void testGetItemStock() {
@@ -76,6 +95,13 @@ public class IInventoryAccessTest {
 		}
 		assertTrue(result);
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetItemStock_expects_exception() {
+		
+		double result = IInventoryAccess.INSTANCE.getItemStock("lulcake");
+		assertTrue(result == 0);
+	}
 
 	@Test
 	public void testGetItemExpense() {
@@ -86,6 +112,13 @@ public class IInventoryAccessTest {
 			}
 		}
 		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetItemExpense_expects_exception() {
+		
+		double result = IInventoryAccess.INSTANCE.getItemExpense("lulcake");
+		assertTrue(result == 0);
 	}
 
 	@Test
