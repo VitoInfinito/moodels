@@ -101,16 +101,12 @@ public class IServicesAccessTest {
 	public void testSearchServices_servicesNotEmpty_expectEmptyList() {
 		boolean result = IServicesAccess.INSTANCE.searchServices("xx").isEmpty();
 		assertTrue(result);
-		
-		// TODO
 	}
 	
 	@Test
 	public void testSearchServices_expectsListNonNull() {
 		List<String> list = IServicesAccess.INSTANCE.searchServices("xx");
 		assertNotNull(list);
-		
-		// TODO
 	}
 	
 	@Test
@@ -119,8 +115,6 @@ public class IServicesAccessTest {
 		
 		List<String> list = IServicesAccess.INSTANCE.searchServices(serviceID);
 		assertTrue(list.size() == 1);
-		
-		// TODO
 	}
 	
 	@Test
@@ -129,24 +123,18 @@ public class IServicesAccessTest {
 		
 		List<String> list = IServicesAccess.INSTANCE.searchServices(serviceID);
 		assertTrue(list.size() == 1);
-		
-		// TODO
 	}
 	
 	@Test
 	public void testSearchServices_nameMatchExactly() {
 		List<String> list = IServicesAccess.INSTANCE.searchServices("abababababahej");
 		assertTrue(list.size() == 1);
-		
-		// TODO
 	}
 	
 	@Test
 	public void testSearchServices_nameMatchSomewhat() {
 		List<String> list = IServicesAccess.INSTANCE.searchServices("bab");
 		assertTrue(list.size() == 1);
-		
-		// TODO
 	}
 	
 	@Test
