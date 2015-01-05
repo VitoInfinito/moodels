@@ -682,7 +682,7 @@ public class StaysManager implements IStays {
 				iBills.payBillsWithCreditCard(getAllUnpayedBillsOfHotelStay(stayID), creditCard.getCcNumber(), creditCard.getCcv(), creditCard.getExpiryMonth(), creditCard.getExpiryYear(), creditCard.getFirstName(), creditCard.getLastName());
 			} else {
 				logger.warn("A credit card is not registered with the stay.");
-				throw new InvalidIDException();
+				throw new InvalidCreditCardException();
 			}
 		} else {
 			logger.warn("A stay with ID {} does not exist.", stayID);
@@ -744,7 +744,7 @@ public class StaysManager implements IStays {
 					throw new InvalidIDException();
 				}
 			}
-
+			
 			// Checks passed.. Conclusion -> The room is free for the specified period and the period can be changed accordingly.
 
 			stay.setFromDate(from);

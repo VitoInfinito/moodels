@@ -173,7 +173,7 @@ public class IStaysTest {
 		
 	}
 	
-	/*@Test
+	@Test
 	public void testCheckInGuest_stay_exists_and_guest_exist_expects_checked_in_guest() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
 		IStays.INSTANCE.checkInGuest(stay1, "760911-0078");
 		List<String> checkedInList = IStays.INSTANCE.getCheckedInGuestsOfHotelStay(stay1);
@@ -300,7 +300,6 @@ public class IStaysTest {
 		String bill = IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 1);
 		IStays.INSTANCE.addBillToStay(stay1, bill);
 		assertTrue(IStays.INSTANCE.getBillsOfHotelStay(stay1).contains(bill));
-		IBills.INSTANCE.removeBill(bill);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -812,48 +811,40 @@ public class IStaysTest {
 		assertTrue(search.contains(stay5));
 		assertTrue(search.contains(stay6));
 		assertTrue(search.contains(stay7));
-	}*/
+	}
 
 	
 	
 	
 	@Test
 	public void testGetAllUnpayedBillsOfHotelStay_stay_exists_expected_list_of_unpayed_bills_in_stay() {
-		fail("Not yet implemented");
-		//TODO make test
+		String bill = IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 1);
+		IStays.INSTANCE.addBillToStay(stay1, bill);
+		List<String> bills = IStays.INSTANCE.getAllUnpayedBillsOfHotelStay(stay1);
+		assertTrue(bills.contains(bill));
 	}
 	
-	/*@Test(expected=InvalidIDException.class)
+	@Test(expected=InvalidIDException.class)
 	public void testGetAllUnpayedBillsOfHotelStay_stay_not_exists() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+		IStays.INSTANCE.getAllUnpayedBillsOfHotelStay("6666");
 	}
 
 	
 	
 	
-	@Test(expected=SOAPException.class)
-	public void testBillCreditCardWithAllUnpaidBillsOfHotelStay_no_connection_to_bank() throws SOAPException {
-		fail("Not yet implemented");
-		//TODO make test
-	}
-	
 	@Test
-	public void testBillCreditCardWithAllUnpaidBillsOfHotelStay_stay_exists_and_valid_creditcard_expected_creditcard_billed_and_bills_set_as_payed() {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testBillCreditCardWithAllUnpaidBillsOfHotelStay_stay_exists_and_valid_creditcard_expected_creditcard_billed_and_bills_set_as_payed() throws InvalidIDException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		IStays.INSTANCE.billCreditCardWithAllUnpaidBillsOfHotelStay(stay1);
 	}
 	
 	@Test(expected=InvalidCreditCardException.class)
-	public void testBillCreditCardWithAllUnpaidBillsOfHotelStay_stay_exists_without_creditcard() throws InvalidCreditCardException {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testBillCreditCardWithAllUnpaidBillsOfHotelStay_stay_exists_without_creditcard() throws InvalidCreditCardException, InvalidIDException, SOAPException, InsufficientFundsException {
+		IStays.INSTANCE.billCreditCardWithAllUnpaidBillsOfHotelStay(stay3);
 	}
 	
 	@Test(expected=InvalidIDException.class)
-	public void testBillCreditCardWithAllUnpaidBillsOfHotelStay_stay_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testBillCreditCardWithAllUnpaidBillsOfHotelStay_stay_not_exist() throws InvalidIDException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		IStays.INSTANCE.billCreditCardWithAllUnpaidBillsOfHotelStay("6666");
 	}
 
 	
@@ -861,20 +852,17 @@ public class IStaysTest {
 	
 	@Test
 	public void testIsResponsibleCreditCardAdded_stay_exists_and_creditcard_added_expected_returned_true() {
-		fail("Not yet implemented");
-		//TODO make test
+		assertTrue(IStays.INSTANCE.isResponsibleCreditCardAdded(stay1));
 	}
 	
 	@Test
 	public void testIsResponsibleCreditCardAdded_stay_exists_and_creditcard_not_added_expected_returned_false() {
-		fail("Not yet implemented");
-		//TODO make test
+		assertFalse(IStays.INSTANCE.isResponsibleCreditCardAdded(stay3));
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testIsResponsibleCreditCardAdded_stay_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+		IStays.INSTANCE.isResponsibleCreditCardAdded("6666");
 	}
 
 	
@@ -882,14 +870,15 @@ public class IStaysTest {
 	
 	@Test
 	public void testChangePeriodOfStay_stay_exists_expects_time_period_of_stay_changed() {
-		fail("Not yet implemented");
-		//TODO make test
+		System.out.println(IStays.INSTANCE.getFromDateOfHotelStay(stay1));
+		IStays.INSTANCE.changePeriodOfStay(stay1, LocalDateTime.of(2015,1,2,15,0), LocalDateTime.of(2015,1,4,10,0));
+		LocalDateTime from = IStays.INSTANCE.getFromDateOfHotelStay(stay1);
+		System.out.println(from);
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testChangePeriodOfStay_stay_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+		IStays.INSTANCE.changePeriodOfStay("6666", LocalDateTime.of(2015,1,2,15,0), LocalDateTime.of(2015,1,4,10,0));
 	}
 
 	
@@ -897,19 +886,22 @@ public class IStaysTest {
 	
 	@Test
 	public void testRemoveBillFromStay_stay_and_bill_exists_expected_bill_removed_from_stay() {
-		fail("Not yet implemented");
-		//TODO make test
+		String bill = IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 1);
+		IStays.INSTANCE.addBillToStay(stay1, bill);
+		List<String> bills = IStays.INSTANCE.getBillsOfHotelStay(stay1);
+		assertTrue(bills.contains(bill));
+		IStays.INSTANCE.removeBillFromStay(stay1, bill);
+		bills = IStays.INSTANCE.getBillsOfHotelStay(stay1);
+		assertFalse(bills.contains(bill));
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testRemoveBillFromStay_bill_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+		IStays.INSTANCE.removeBillFromStay(stay1, "thisbillaintreal");
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testRemoveBillFromStay_stay_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
-	}*/
+		IStays.INSTANCE.removeBillFromStay("6666", "thisbilldoesnotmatterifitisreal");
+	}
 }
