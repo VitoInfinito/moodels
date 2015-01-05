@@ -3,7 +3,6 @@ package Classes.Services.tests;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -44,6 +43,7 @@ public class IServicesAccessTest {
 		items.add("c");
 		
 		IServicesAccess.INSTANCE.makeRoomServiceOrder(items, services, "bill", "bookable", LocalDateTime.of(2015, 01, 20, 20, 15), false);
+		IServicesAccess.INSTANCE.makeRoomServiceOrder(items, services, "billinge", "bookable", LocalDateTime.of(2015, 01, 20, 20, 15), false);
 	}
 	
 	@After
@@ -86,7 +86,7 @@ public class IServicesAccessTest {
 	@Test
 	public void testGetAllRoomServiceOrderIDsNotEmpty() {
 		int result = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().size();
-		assertTrue(result == 1);
+		assertTrue(result == 2);
 	}
 	
 	@Test
@@ -144,16 +144,33 @@ public class IServicesAccessTest {
 	}
 
 	@Test
-	public void testSearchRoomServiceOrders() {
-		fail("Unimplemented");
-		// TODO
+	public void testSearchRoomServiceOrders_id_exact_match() {
+		String serviceID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
 		
-		// #### OBSERVERA!	Detta ska testas:
+		List<String> list = IServicesAccess.INSTANCE.searchRoomServiceOrders(serviceID);
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchRoomServiceOrders_name_partial_match() {
+		List<String> list = IServicesAccess.INSTANCE.searchRoomServiceOrders("bill");
+		assertTrue(list.size() == 2);
+	}
+	
+
+	
+	@Test
+	public void testSearchRoomServiceOrders_id_partial_match() {
+		String serviceID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0).substring(2);
 		
-		// Exact ID match. First Order!
-		// Some property match exactly. Second Order! (Bill, Bookable, Items, Service)
-		// ID match somewhat. Third Order!
-		// Some property match somewhat. Fourth Order. (Bill, Bookable)
+		List<String> list = IServicesAccess.INSTANCE.searchRoomServiceOrders(serviceID);
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchRoomServiceOrders_exact_match() {
+		List<String> list = IServicesAccess.INSTANCE.searchRoomServiceOrders("billinge");
+		assertTrue(list.size() == 1);
 	}
 
 	@Test
@@ -327,7 +344,7 @@ public class IServicesAccessTest {
 		items.add("c");
 		
 		IServicesAccess.INSTANCE.makeRoomServiceOrder(items, services, "bill", "bookable", LocalDateTime.of(2015, 01, 20, 20, 15), false);
-		assertTrue(IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().size() == 2);
+		assertTrue(IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().size() == 3);
 	}
 
 }
