@@ -265,19 +265,19 @@ public class StaysManager implements IStays {
 		} 
 
 		Stay stay = stays.get(stayID);
+		
+		// Validate so the guest is not already checked out
+		List<String> alreadyCheckedOut = stay.getCheckedOutGuests();
+		if (alreadyCheckedOut.contains(guestID)) {
+			logger.warn("The guest {} has already checked out from the stay with id {}!", guestID, stayID);
+			throw new GuestAlreadyCheckedOutException();
+		}
 
 		// Validate so the guest is checked in
 		List<String> checkedInGuests = stay.getCheckedInGuests();
 		if (!checkedInGuests.contains(guestID)) {
 			logger.warn("The guest {} is not checked in to the stay with id {}!", guestID, stayID);
 			throw new GuestNotCheckedInException();
-		}
-
-		// Validate so the guest is not already checked out
-		List<String> alreadyCheckedOut = stay.getCheckedOutGuests();
-		if (alreadyCheckedOut.contains(guestID)) {
-			logger.warn("The guest {} has already checked out from the stay with id {}!", guestID, stayID);
-			throw new GuestAlreadyCheckedOutException();
 		}
 
 		// If last guest checking out and bills unpaid bills exist we bill the responsible credit card for those.
