@@ -361,6 +361,10 @@ public class StaysManager implements IStays {
 	 * @generated NOT
 	 */
 	public List<String> getGuestsOfHotelStay(String stayID) {
+		if(!stays.containsKey(stayID)) {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		}
 		return new ArrayList<String>(stays.get(stayID).getCheckedInGuests());
 	}
 
@@ -371,6 +375,10 @@ public class StaysManager implements IStays {
 	 * @generated NOT
 	 */
 	public List<String> getBillsOfHotelStay(String stayID) {
+		if(!stays.containsKey(stayID)) {
+			logger.warn("A stay with ID {} does not exist.", stayID);
+			throw new InvalidIDException();
+		}
 		return new ArrayList<String>(stays.get(stayID).getBills());
 	}
 
@@ -765,7 +773,6 @@ public class StaysManager implements IStays {
 	 */
 	public void removeBillFromStay(String stayID, String billID) throws InvalidIDException {
 		if (stays.containsKey(stayID) && stays.get(stayID).getBills().contains(billID)) {
-			iBills.removeBill(billID);
 			stays.get(stayID).removeBill(billID);
 		} else {
 			logger.warn("A stay with ID {} does not exist.", stayID);

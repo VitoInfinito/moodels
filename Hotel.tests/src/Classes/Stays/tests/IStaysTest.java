@@ -159,6 +159,9 @@ public class IStaysTest {
 		for(String id : IBookablesManage.INSTANCE.getAllBookableIDs()) {
 			IBookablesManage.INSTANCE.deleteBookable(id);
 		}
+		for(String id : IBills.INSTANCE.getAllBillIDs()) {
+			IBills.INSTANCE.removeBill(id);
+		}
 		
 		AdministratorRequires bankingAdmin = AdministratorRequires.instance();
 		bankingAdmin.removeCreditCard("12342352", "523", 9, 23, "Alfred","Johansson");
@@ -329,6 +332,11 @@ public class IStaysTest {
 		IStays.INSTANCE.checkOutGuest("66666", "760911-0078");
 	}
 	
+	@Test(expected=InvalidIDException.class)
+	public void testCheckOutGuest_guest_not_exist() throws InvalidIDException, GuestNotCheckedInException, GuestAlreadyCheckedOutException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		IStays.INSTANCE.checkOutGuest(stay1, "666666");
+	}
+	
 	@Test(expected=GuestAlreadyCheckedOutException.class)
 	public void testCheckOutGuest_guest_already_checked_out() throws GuestAlreadyCheckedOutException, InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestNotCheckedInException, SOAPException, InvalidCreditCardException, InsufficientFundsException {
 		IStays.INSTANCE.checkInGuest(stay1, "760911-0078");
@@ -350,12 +358,6 @@ public class IStaysTest {
 	
 	
 	
-	@Test(expected=SOAPException.class)
-	public void testAddResponsibleCreditCard_no_connection_to_bank() throws SOAPException {
-		fail("Not yet implemented");
-		//TODO make test
-	}
-	
 	@Test
 	public void testAddResponsibleCreditCard_stay_exists_and_valid_creditcard_expects_card_added_to_stay() throws InvalidIDException, SOAPException, InvalidCreditCardException {
 		IStays.INSTANCE.addResponsibleCreditCard(stay3, "34563532", "831", 11, 19, "Yvar","Svensson");
@@ -375,46 +377,43 @@ public class IStaysTest {
 	
 	
 	
-	@Test(expected=SOAPException.class)
-	public void testChangeResponsibleCreditCard_no_connection_to_bank() throws SOAPException {
-		fail("Not yet implemented");
-		//TODO make test
-	}*/
-	
 	@Test
 	public void testChangeResponsibleCreditCard_stay_exists_and_valid_creditcard_expects_card_added_to_stay() throws InvalidIDException, SOAPException, InvalidCreditCardException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException, GuestNotCheckedInException, InsufficientFundsException {
-		System.out.println(AdministratorRequires.instance().getBalance("45565426", "892", 1, 17, "Anders","Hallgren"));
+		double originalBalance = AdministratorRequires.instance().getBalance("45565426", "892", 1, 17, "Anders","Hallgren");
 		IStays.INSTANCE.changeResponsibleCreditCard(stay1, "45565426", "892", 1, 17, "Anders","Hallgren");
-		System.out.println(AdministratorRequires.instance().getBalance("45565426", "892", 1, 17, "Anders","Hallgren"));
 		IStays.INSTANCE.checkInGuest(stay1, "760911-0078");
 		IStays.INSTANCE.checkOutGuest(stay1, "760911-0078");
+		assertTrue(AdministratorRequires.instance().getBalance("45565426", "892", 1, 17, "Anders","Hallgren") < originalBalance);
 	}
 	
-	/*@Test(expected=InvalidIDException.class)
-	public void testChangeResponsibleCreditCard_stay_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+	@Test(expected=InvalidIDException.class)
+	public void testChangeResponsibleCreditCard_stay_not_exist() throws InvalidIDException, SOAPException, InvalidCreditCardException {
+		IStays.INSTANCE.changeResponsibleCreditCard("6666", "45565426", "892", 1, 17, "Anders","Hallgren");
 	}
 	
 	@Test(expected=InvalidCreditCardException.class)
-	public void testChangeResponsibleCreditCard_stay_exists_and_not_valid_creditcard() throws InvalidCreditCardException {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testChangeResponsibleCreditCard_stay_exists_and_not_valid_creditcard() throws InvalidCreditCardException, InvalidIDException, SOAPException {
+		IStays.INSTANCE.changeResponsibleCreditCard(stay1, "66666", "666", 1, 1, "a","b");
 	}
 	
 	
 	
 	
 	@Test
-	public void testGetGuestsOfHotelStay_stay_exists_expected_list_of_guests_in_stay() {
-		fail("Not yet implemented");
-		//TODO make test
+	public void testGetGuestsOfHotelStay_stay_exists_expected_list_of_guests_in_stay() throws InvalidIDException, ResponsibleCreditCardNotAddedException, GuestAlreadyCheckedInException, StayAlreadyFullyCheckedInException, InvalidCheckInDateException, GuestAlreadyCheckedOutException {
+		IStays.INSTANCE.checkInGuest(stay1, "861008-0028");
+		IStays.INSTANCE.checkInGuest(stay1, "760912-0016");
+		IStays.INSTANCE.checkInGuest(stay1, "760913-0094");
+		List<String> guests = IStays.INSTANCE.getGuestsOfHotelStay(stay1);
+		assertTrue(guests.size() == 3);
+		assertTrue(guests.contains("861008-0028"));
+		assertTrue(guests.contains("760912-0016"));
+		assertTrue(guests.contains("760913-0094"));
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testGetGuestsOfHotelStay_stay_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+		IStays.INSTANCE.getGuestsOfHotelStay("6666");
 	}
 	
 	
@@ -422,14 +421,15 @@ public class IStaysTest {
 	
 	@Test
 	public void testGetBillsOfHotelStay_stay_exists_expected_list_of_bills_in_stay() {
-		fail("Not yet implemented");
-		//TODO make test
+		String bill = IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), null, null, null, 1);
+		IStays.INSTANCE.addBillToStay(stay1, bill);
+		assertTrue(IStays.INSTANCE.getBillsOfHotelStay(stay1).contains(bill));
+		IBills.INSTANCE.removeBill(bill);
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testGetBillsOfHotelStay_stay_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
+		IStays.INSTANCE.getBillsOfHotelStay("6666");
 	}
 	
 	
@@ -437,15 +437,13 @@ public class IStaysTest {
 	
 	@Test
 	public void testGetBookableOfHotelStay_stay_exists_expected_bookable_in_stay() {
-		fail("Not yet implemented");
-		//TODO make test
+		assertTrue(IStays.INSTANCE.getBookableOfHotelStay(stay1).equals("402"));
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testGetBookableOfHotelStay_stay_not_exist() throws InvalidIDException {
-		fail("Not yet implemented");
-		//TODO make test
-	}
+		IStays.INSTANCE.getBookableOfHotelStay("6666");
+	}*/
 	
 	
 	
@@ -456,7 +454,7 @@ public class IStaysTest {
 		//TODO make test
 	}
 	
-	@Test(expected=InvalidIDException.class)
+	/*@Test(expected=InvalidIDException.class)
 	public void testGetBookingOfHotelStay_stay_not_exist() throws InvalidIDException {
 		fail("Not yet implemented");
 		//TODO make test
