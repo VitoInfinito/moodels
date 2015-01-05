@@ -18,6 +18,8 @@ import Classes.Utils.InvalidIDException;
 
 public class IRestaurantsAccessTest {
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+	
+	private String reservation1, reservation2, reservation3;
 
 	@Before
 	public void setUp() throws Exception {
@@ -33,7 +35,7 @@ public class IRestaurantsAccessTest {
 		tables.add("abababababahej");
 		tables.add("lolololololhej");
 		
-		IRestaurantsManage.INSTANCE.makeReservation(
+		reservation2 = IRestaurantsManage.INSTANCE.makeReservation(
 				"abababababahej", 
 				tables, 
 				"abababababahej", 
@@ -41,7 +43,7 @@ public class IRestaurantsAccessTest {
 				LocalDateTime.parse("2014-10-10 12:00", formatter)
 			);
 		
-		IRestaurantsManage.INSTANCE.makeReservation(
+		reservation3 = IRestaurantsManage.INSTANCE.makeReservation(
 				"abababababahej", 
 				tables, 
 				"lolololololhej", 
@@ -61,7 +63,7 @@ public class IRestaurantsAccessTest {
 		tables2.add("1");
 		tables2.add("2");
 		
-		IRestaurantsManage.INSTANCE.makeReservation(
+		reservation1 = IRestaurantsManage.INSTANCE.makeReservation(
 			"testaurant", 
 			tables2, 
 			"010101-0101", 
@@ -142,8 +144,7 @@ public class IRestaurantsAccessTest {
 
 	@Test
 	public void testGetReservationGuest() {
-		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
-		assertTrue(IRestaurantsManage.INSTANCE.getReservationGuest("testaurant", reservationID) == "010101-0101");
+		assertTrue(IRestaurantsManage.INSTANCE.getReservationGuest("testaurant", reservation1) == "010101-0101");
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -241,17 +242,17 @@ public class IRestaurantsAccessTest {
 	
 	@Test
 	public void testSearchRestaurantReservations_idMatchExactly() {
-		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("abababababahej").get(0);
+		String reservation1 = IRestaurantsManage.INSTANCE.getRestaurantReservations("abababababahej").get(0);
 		
-		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurantReservations("abababababahej", reservationID);
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurantReservations("abababababahej", reservation1);
 		assertTrue(list.size() == 1);
 	}
 	
 	@Test
 	public void testSearchRestaurantReservations_idMatchSomewhat() {
-		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("abababababahej").get(0).substring(2);
+		String reservation1 = IRestaurantsManage.INSTANCE.getRestaurantReservations("abababababahej").get(0).substring(2);
 		
-		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurantReservations("abababababahej", reservationID);
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurantReservations("abababababahej", reservation1);
 		assertTrue(list.size() == 1);
 	}
 	
@@ -316,8 +317,7 @@ public class IRestaurantsAccessTest {
 
 	@Test
 	public void testMakeReservation() {
-		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
-		IRestaurantsManage.INSTANCE.cancelReservation("testaurant", reservationID);
+		IRestaurantsManage.INSTANCE.cancelReservation("testaurant", reservation1);
 		
 		ArrayList<String> tables = new ArrayList<String>();
 		tables.add("1");
@@ -347,16 +347,14 @@ public class IRestaurantsAccessTest {
 
 	@Test
 	public void testCancelReservation() {
-		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
-		IRestaurantsManage.INSTANCE.cancelReservation("testaurant", reservationID);
+		IRestaurantsManage.INSTANCE.cancelReservation("testaurant", reservation1);
 		
 		assertTrue(IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").size() == 0);
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testCancelReservation_notExists_throwsException() {
-		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
-		IRestaurantsManage.INSTANCE.cancelReservation("apabepacepa", reservationID);
+		IRestaurantsManage.INSTANCE.cancelReservation("apabepacepa", reservation1);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -366,24 +364,20 @@ public class IRestaurantsAccessTest {
 
 	@Test
 	public void testChangeReservedTables() {
-		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
-		
 		ArrayList<String> tables = new ArrayList<String>();
 		tables.add("1");
 		
-		IRestaurantsManage.INSTANCE.changeReservedTables("testaurant", reservationID, tables);
+		IRestaurantsManage.INSTANCE.changeReservedTables("testaurant", reservation1, tables);
 		
-		assertTrue(IRestaurantsManage.INSTANCE.getReservationTables("testaurant", reservationID).size() == 1);
+		assertTrue(IRestaurantsManage.INSTANCE.getReservationTables("testaurant", reservation1).size() == 1);
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testChangeReservedTables_notExists_throwsException() {
-		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
-		
 		ArrayList<String> tables = new ArrayList<String>();
 		tables.add("1");
 		
-		IRestaurantsManage.INSTANCE.changeReservedTables("apabepacepa", reservationID, tables);
+		IRestaurantsManage.INSTANCE.changeReservedTables("apabepacepa", reservation1, tables);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -395,14 +389,12 @@ public class IRestaurantsAccessTest {
 	}
 	
 	public void testGetReservationTables() {
-		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
-		assertTrue(IRestaurantsManage.INSTANCE.getReservationTables("testaurant", reservationID).size() == 2);
+		assertTrue(IRestaurantsManage.INSTANCE.getReservationTables("testaurant", reservation1).size() == 2);
 	}
 	
 	@Test(expected=InvalidIDException.class)
 	public void testGetReservationTables_notExists_throwsException() {
-		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
-		IRestaurantsManage.INSTANCE.getReservationTables("", reservationID);
+		IRestaurantsManage.INSTANCE.getReservationTables("", reservation1);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -443,9 +435,7 @@ public class IRestaurantsAccessTest {
 
 	@Test
 	public void testGetReservationFromTime() {
-		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
-		
-		boolean result = 	IRestaurantsManage.INSTANCE.getReservationFromTime("testaurant", reservationID).isEqual(
+		boolean result = 	IRestaurantsManage.INSTANCE.getReservationFromTime("testaurant", reservation1).isEqual(
 							LocalDateTime.parse("2014-10-22 12:00", formatter));
 		
 		assertTrue(result);
@@ -453,8 +443,7 @@ public class IRestaurantsAccessTest {
 	
 	@Test(expected=InvalidIDException.class)
 	public void testGetReservationFromTime_notExists_throwsException() {
-		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
-		IRestaurantsManage.INSTANCE.getReservationFromTime("", reservationID);
+		IRestaurantsManage.INSTANCE.getReservationFromTime("", reservation1);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -464,9 +453,7 @@ public class IRestaurantsAccessTest {
 
 	@Test
 	public void testGetReservationToTime() {
-		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
-		
-		boolean result = 	IRestaurantsManage.INSTANCE.getReservationToTime("testaurant", reservationID).isEqual(
+		boolean result = 	IRestaurantsManage.INSTANCE.getReservationToTime("testaurant", reservation1).isEqual(
 							LocalDateTime.parse("2014-10-22 14:00", formatter));
 		
 		assertTrue(result);
@@ -474,8 +461,7 @@ public class IRestaurantsAccessTest {
 	
 	@Test(expected=InvalidIDException.class)
 	public void testGetReservationToTime_notExists_throwsException() {
-		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("testaurant").get(0);
-		IRestaurantsManage.INSTANCE.getReservationToTime("", reservationID);
+		IRestaurantsManage.INSTANCE.getReservationToTime("", reservation1);
 	}
 	
 	@Test(expected=InvalidIDException.class)
