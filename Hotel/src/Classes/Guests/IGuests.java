@@ -26,7 +26,10 @@ public interface IGuests extends Serializable {
 	
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		nothing
+	 * Ensures:
+	 * 	 	A non null list of all guest id's is returned.
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT
@@ -35,7 +38,13 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * 		SSID != null && firstname != null && lastname != null && title != null && email != null && phone != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			InvalidIDException is thrown.
+	 * 		otherwise
+	 * 			a guest is added where guest.SSID == SSID && guest.firstname == firstname && guest.lastname = lastname &&
+	 * 			guest.title = title && guest.email == email && guest.phone == phone
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" firstnameDataType="org.eclipse.uml2.types.String" firstnameRequired="true" firstnameOrdered="false" lastnameDataType="org.eclipse.uml2.types.String" lastnameRequired="true" lastnameOrdered="false" titleDataType="org.eclipse.uml2.types.String" titleRequired="true" titleOrdered="false" emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false" phoneDataType="org.eclipse.uml2.types.String" phoneRequired="true" phoneOrdered="false"
@@ -45,7 +54,13 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		SSID != null && firstname == null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			guest.firstname == firstname
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false"
@@ -55,7 +70,12 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * 		SSID != null && lastname == null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			guest.lastname == lastname
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
@@ -65,7 +85,12 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * 		SSID != null && title == null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			guest.title == title
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" titleDataType="org.eclipse.uml2.types.String" titleRequired="true" titleOrdered="false"
@@ -75,7 +100,12 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * 		SSID != null && email == null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			guest.email == email
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" eMailDataType="org.eclipse.uml2.types.String" eMailRequired="true" eMailOrdered="false"
@@ -85,7 +115,12 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * 		SSID != null && phone == null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			guest.phone == phone
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" phoneNrDataType="org.eclipse.uml2.types.String" phoneNrRequired="true" phoneNrOrdered="false"
@@ -95,7 +130,13 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		SSID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			non null guest.firstname is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -105,7 +146,12 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * 		SSID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			non null guest.lastname is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -115,7 +161,12 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * 		SSID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			non null guest.title is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -125,7 +176,12 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * 		SSID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			non null guest.email is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -135,7 +191,12 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * 		SSID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			non null guest.phone is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -145,7 +206,12 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		keyword != null
+	 * Ensures:
+	 * 	 	returns a non-null list of all guests matching something in the following order:
+	 * 			1. Guests with id that exactly matches the keyword
+	 * 			2. Guests with id that has some matching to the keyword
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
@@ -154,7 +220,13 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		SSID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 	 		A non null list of all guest stays is returned.
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -164,7 +236,13 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires
+	 * 		SSID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 	 		A non null list of all guest requests is returned.
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -174,7 +252,13 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		SSID != null && stayID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID && guest.stayID == stayID
+	 * 			stay is removed.
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" stayIDDataType="org.eclipse.uml2.types.String" stayIDRequired="true" stayIDOrdered="false"
@@ -184,7 +268,13 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		SSID != null && requestID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			a request is added where guest.requestID == requestID
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false" desctiptionDataType="org.eclipse.uml2.types.String" desctiptionRequired="true" desctiptionOrdered="false"
@@ -194,7 +284,13 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		SSID != null && requestID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID && guest.requestID == requestID
+	 * 			request is removed.
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false" requestIDDataType="org.eclipse.uml2.types.String" requestIDRequired="true" requestIDOrdered="false"
@@ -204,7 +300,13 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires
+	 * 		SSID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			non null guest.accountusername is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -214,7 +316,13 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires
+	 * 		SSID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			non null guest.accountupassword is returned
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -224,7 +332,13 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires
+	 * 		SSID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			a guest with guest.SSID == SSID and a generated 6-character password is created
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -234,7 +348,12 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * 		SSID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			guest.account is removed.
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -244,7 +363,12 @@ public interface IGuests extends Serializable {
 	
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * 		SSID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			guest is removed.
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
@@ -254,7 +378,13 @@ public interface IGuests extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		SSID != null && stayID != null
+	 * Ensures:
+	 * 		if there exists a guest such that guest.SSID == SSID
+	 * 			a request is added where guest.stayID == stayID
+	 * 		otherwise
+	 * 			InvalidIDException is thrown.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model SSIDDataType="org.eclipse.uml2.types.String" SSIDRequired="true" SSIDOrdered="false"
