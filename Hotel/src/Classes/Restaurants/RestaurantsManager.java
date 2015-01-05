@@ -142,14 +142,14 @@ import Classes.Utils.InvalidIDException;
 		
 		//Some property match exactly
 		for(Restaurant r : c) {
-			if(r.getMenu().getName().equalsIgnoreCase(keyword)) {
+			if(r.getMenu().getName() != null && r.getMenu().getName().equalsIgnoreCase(keyword)) {
 				searchResult.add(r.getName());
 			}
 		}
 		
 		//Some property match somewhat
-		for(Restaurant r : c) {
-			if(regexPattern.matcher(r.getMenu().getName()).matches()) {
+		for(Restaurant r : c) {			
+			if(r.getMenu().getName() != null && regexPattern.matcher(r.getMenu().getName()).matches()) {
 				searchResult.add(r.getName());
 			}
 		}
@@ -269,6 +269,7 @@ import Classes.Utils.InvalidIDException;
 		}
 		
 		Restaurant rest = RestaurantsFactory.INSTANCE.createRestaurant();
+		rest.setName(name);
 
 		restaurant.put(name, rest);
 	}

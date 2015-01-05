@@ -1,11 +1,13 @@
 package Classes.Restaurants.tests;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
@@ -22,6 +24,32 @@ public class IRestaurantsAccessTest {
 	public void setUp() throws Exception {
 		IRestaurantsManage.INSTANCE.addRestaurant("testaurant");
 		
+		IRestaurantsManage.INSTANCE.addRestaurant("abababababahej");
+		IRestaurantsManage.INSTANCE.addRestaurant("lolololololhej");
+		
+		IRestaurantsManage.INSTANCE.addRestaurantTable("abababababahej", 4, "abababababahej");
+		IRestaurantsManage.INSTANCE.addRestaurantTable("abababababahej", 6, "lolololololhej");
+		
+		ArrayList<String> tables = new ArrayList<String>();
+		tables.add("abababababahej");
+		tables.add("lolololololhej");
+		
+		IRestaurantsManage.INSTANCE.makeReservation(
+				"abababababahej", 
+				tables, 
+				"abababababahej", 
+				LocalDateTime.parse("2014-10-10 10:00", formatter), 
+				LocalDateTime.parse("2014-10-10 12:00", formatter)
+			);
+		
+		IRestaurantsManage.INSTANCE.makeReservation(
+				"abababababahej", 
+				tables, 
+				"lolololololhej", 
+				LocalDateTime.parse("2014-10-10 10:00", formatter), 
+				LocalDateTime.parse("2014-10-10 12:00", formatter)
+			);
+		
 		IRestaurantsManage.INSTANCE.changeMenuName("testaurant", "The Menu");
 		
 		IRestaurantsManage.INSTANCE.addMenuItem("testaurant", "10");
@@ -30,13 +58,13 @@ public class IRestaurantsAccessTest {
 		IRestaurantsManage.INSTANCE.addRestaurantTable("testaurant", 4, "1");
 		IRestaurantsManage.INSTANCE.addRestaurantTable("testaurant", 6, "2");
 		
-		ArrayList<String> tables = new ArrayList<String>();
-		tables.add("1");
-		tables.add("2");
+		ArrayList<String> tables2 = new ArrayList<String>();
+		tables2.add("1");
+		tables2.add("2");
 		
 		IRestaurantsManage.INSTANCE.makeReservation(
 			"testaurant", 
-			tables, 
+			tables2, 
 			"010101-0101", 
 			LocalDateTime.parse("2014-10-22 14:00", formatter), 
 			LocalDateTime.parse("2014-10-22 12:00", formatter)
@@ -44,7 +72,7 @@ public class IRestaurantsAccessTest {
 	}
 	
 	@After
-	public void teardown() {
+	public void tearDown() {
 		for(String id : IRestaurantsAccess.INSTANCE.getAllRestaurantNames()) {
 			IRestaurantsManage.INSTANCE.removeRestaurant(id);
 		}
@@ -136,25 +164,155 @@ public class IRestaurantsAccessTest {
 
 	@Test
 	public void testGetAllRestaurantNames() {
-		assertTrue(IRestaurantsManage.INSTANCE.getAllRestaurantNames().size() == 1);
+		assertTrue(IRestaurantsManage.INSTANCE.getAllRestaurantNames().size() == 3);
 	}
-
+	
 	@Test
-	public void testSearchRestaurants() {
-		//TODO
-		fail("Not yet implemented");
+	public void testSearchRestaurants_restaurantsEmpty_expectEmptyList() {
+		tearDown();
+		
+		boolean result = IRestaurantsManage.INSTANCE.searchRestaurants("ab").isEmpty();
+		assertTrue(result);
 	}
-
+	
 	@Test
-	public void testSearchRestaurantReservations() {
-		//TODO
-		fail("Not yet implemented");
+	public void testSearchRestaurants_restaurantsNotEmpty_expectEmptyList() {
+		boolean result = IRestaurantsManage.INSTANCE.searchRestaurants("xx").isEmpty();
+		assertTrue(result);
 	}
-
+	
 	@Test
-	public void testSearchRestaurantTables() {
-		//TODO
-		fail("Not yet implemented");
+	public void testSearchRestaurants_expectsListNonNull() {
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurants("xx");
+		assertNotNull(list);
+	}
+	
+	@Test
+	public void testSearchRestaurants_nameMatchExactly() {
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurants("abababababahej");
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchRestaurants_nameMatchSomewhat() {
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurants("bab");
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchRestaurants_menuMatchExactly() {
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurants("The Menu");
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchRestaurants_menuMatchSomewhat() {
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurants("The Men");
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchRestaurants_multipleMatches() {
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurants("hej");
+		assertTrue(list.size() == 2);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testSearchRestaurantReservations_notExists_throwsException() {
+		IRestaurantsManage.INSTANCE.searchRestaurantReservations("", "");
+	}
+	
+	@Test
+	public void testSearchRestaurantReservations_reservationsEmpty_expectEmptyList() {
+		boolean result = IRestaurantsManage.INSTANCE.searchRestaurantReservations("lolololololhej", "ab").isEmpty();
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchRestaurantReservations_reservationsNotEmpty_expectEmptyList() {
+		boolean result = IRestaurantsManage.INSTANCE.searchRestaurantReservations("abababababahej", "xx").isEmpty();
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchRestaurantReservations_expectsListNonNull() {
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurantReservations("abababababahej", "xx");
+		assertNotNull(list);
+	}
+	
+	@Test
+	public void testSearchRestaurantReservations_idMatchExactly() {
+		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("abababababahej").get(0);
+		
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurantReservations("abababababahej", reservationID);
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchRestaurantReservations_idMatchSomewhat() {
+		String reservationID = IRestaurantsManage.INSTANCE.getRestaurantReservations("abababababahej").get(0).substring(2);
+		
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurantReservations("abababababahej", reservationID);
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchRestaurantReservations_reservedByMatchExactly() {
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurantReservations("abababababahej", "abababababahej");
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchRestaurantReservations_reservedByMatchSomewhat() {
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurantReservations("abababababahej", "bab");
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchRestaurantReservations_reservedByMatchSomewhat_multipleMatches() {
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurantReservations("abababababahej", "hej");
+		assertTrue(list.size() == 2);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testSearchRestaurantTables_notExists_throwsException() {
+		IRestaurantsManage.INSTANCE.searchRestaurantTables("", "");
+	}
+	
+	@Test
+	public void testSearchRestaurantTables_tablesEmpty_expectEmptyList() {
+		boolean result = IRestaurantsManage.INSTANCE.searchRestaurantTables("lolololololhej", "ab").isEmpty();
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchRestaurantTables_tablesNotEmpty_expectEmptyList() {
+		boolean result = IRestaurantsManage.INSTANCE.searchRestaurantTables("abababababahej", "xx").isEmpty();
+		assertTrue(result);
+	}
+	
+	@Test
+	public void testSearchRestaurantTables_tablesListNonNull() {
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurantTables("abababababahej", "xx");
+		assertNotNull(list);
+	}
+	
+	@Test
+	public void testSearchRestaurantTables_nameMatchExactly() {
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurantTables("abababababahej", "abababababahej");
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchRestaurantTables_nameMatchSomewhat() {
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurantTables("abababababahej", "bab");
+		assertTrue(list.size() == 1);
+	}
+	
+	@Test
+	public void testSearchRestaurantTables_seatsMatchExactly() {
+		List<String> list = IRestaurantsManage.INSTANCE.searchRestaurantTables("abababababahej", "4");
+		assertTrue(list.size() == 1);
 	}
 
 	@Test
@@ -324,6 +482,11 @@ public class IRestaurantsAccessTest {
 	@Test(expected=InvalidIDException.class)
 	public void testGetReservationToTime_reservationNotExists_throwsException() {
 		IRestaurantsManage.INSTANCE.getReservationToTime("testaurant", "");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testSearchRestaurantReservationsWithTime_notExists_throwsException() {
+		IRestaurantsManage.INSTANCE.searchRestaurantReservationsWithTime("", "", null, null);
 	}
 
 	@Test
