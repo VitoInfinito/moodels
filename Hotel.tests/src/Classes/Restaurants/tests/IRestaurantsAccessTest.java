@@ -497,44 +497,4 @@ public class IRestaurantsAccessTest {
 	
 		assertTrue(result);
 	}
-	
-	/*
-	@Test
-	public void testSearchRequests_requestEmpty_expectEmptyList() {
-		tearDown();
-		boolean result = IRequests.INSTANCE.searchRequests("ab").isEmpty();
-		assertTrue(result);
-	}
-	
-	@Test
-	public void testSearchFeedback_feedbackNotEmpty_expectEmptyList() {
-		boolean result = IRequests.INSTANCE.searchRequests("xx").isEmpty();
-		assertTrue(result);
-	}
-	
-	@Test
-	public void testSearchFeedback_expectsListNonNull() {
-		List<String> list = IRequests.INSTANCE.searchRequests("xx");
-		assertNotNull(list);
-	}
-	
-	@Test
-	public void testSearchFeedback_idMatchExactly() {
-		List<String> list = IRequests.INSTANCE.searchRequests("abababababahej");
-		assertTrue(IRequests.INSTANCE.getRequestDescription(list.get(0)).equals("abababababahej"));
-		assertTrue(list.size() == 1);
-	}
-	
-	@Test
-	public void testSearchFeedback_idMatchSomewhat() {
-		List<String> list = IRequests.INSTANCE.searchRequests("bab");
-		assertTrue(IRequests.INSTANCE.getRequestDescription(list.get(0)).equals("abababababahej"));
-		assertTrue(list.size() == 1);
-	}
-	
-	@Test
-	public void testSearchFeedback_multipleMatches() {
-		List<String> list = IRequests.INSTANCE.searchRequests("hej");
-		assertTrue(list.size() == 2);
-	}*/
 }
