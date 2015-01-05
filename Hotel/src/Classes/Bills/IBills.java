@@ -133,7 +133,7 @@ public interface IBills {
 	String addBill(List<String> items, List<String> services, @Nullable String bookable, @Nullable LocalDateTime from, @Nullable LocalDateTime to, double discount) throws InvalidIDException;
 
 	/**
-	 * <!-- begin-user-doc --> TODO: This needs polish
+	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		bills != null && ccNumber != null && ccv != null && expiryMonth != null && expiryYear != null && firstName != null && lastName != null
 	 * Ensures:
