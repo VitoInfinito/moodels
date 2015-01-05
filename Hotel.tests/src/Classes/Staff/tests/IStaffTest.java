@@ -48,14 +48,6 @@ public class IStaffTest {
 		int result = IStaff.INSTANCE.getAllStaff().size();
 		assertTrue(result == 2);
 	}
-
-	@Test
-	public void testSearchStaff() {
-		tearDown();
-		
-		boolean result = IStaff.INSTANCE.searchStaff("Svenne").isEmpty();
-		assertTrue(result);
-	}
 	
 	@Test
 	public void testSearchStaff_staffEmpty_expectEmptyList() throws InvalidIDException{
