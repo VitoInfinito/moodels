@@ -362,10 +362,11 @@ import Classes.Utils.InvalidIDException;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @return 
 	 * @throws InvalidIDException 
 	 * @generated
 	 */
-	public void makeRoomServiceOrder(List<String> items, List<String> services, String bill, String bookable, LocalDateTime deliveryDate, boolean isDelivered) throws InvalidIDException {
+	public String makeRoomServiceOrder(List<String> items, List<String> services, String bill, String bookable, LocalDateTime deliveryDate, boolean isDelivered) throws InvalidIDException {
 		
 		RoomServiceOrder order = ServicesFactory.INSTANCE.createRoomServiceOrder();
 		
@@ -391,6 +392,8 @@ import Classes.Utils.InvalidIDException;
 		}
 		
 		roomServiceOrders.put(ID, order);
+		
+		return ID;
 	}
 
 	private String generateOrderID() {

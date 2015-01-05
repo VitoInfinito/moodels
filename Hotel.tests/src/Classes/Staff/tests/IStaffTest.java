@@ -213,7 +213,6 @@ public class IStaffTest {
 		IStaff.INSTANCE.getStaffSalaryContractType("");
 	}
 
-	//TODO This test may be inaccurate
 	@Test(expected=InvalidIDException.class)
 	public void testScheduleStaff() {
 		tearDown();

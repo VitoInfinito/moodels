@@ -18,6 +18,7 @@ import Classes.Services.IServicesManager;
 import Classes.Utils.InvalidIDException;
 
 public class IServicesAccessTest {
+	private String service1, service2, service3, service4, roomServiceOrder1, roomServiceOrder2;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() {
@@ -25,11 +26,11 @@ public class IServicesAccessTest {
 
 	@Before
 	public void setUp() throws Exception {
-		IServicesManager.INSTANCE.addService("a", 100, 50);
-		IServicesManager.INSTANCE.addService("b", 200, 75);
+		service1 = IServicesManager.INSTANCE.addService("a", 100, 50);
+		service2 = IServicesManager.INSTANCE.addService("b", 200, 75);
 		
-		IServicesManager.INSTANCE.addService("abababababahej", 0, 0);
-		IServicesManager.INSTANCE.addService("lolololololhej", 0, 0);
+		service3 = IServicesManager.INSTANCE.addService("abababababahej", 0, 0);
+		service4 = IServicesManager.INSTANCE.addService("lolololololhej", 0, 0);
 		
 		IServicesManager.INSTANCE.addRoomServiceMenuItem("c");
 		IServicesManager.INSTANCE.addRoomServiceMenuItem("d");
@@ -37,13 +38,13 @@ public class IServicesAccessTest {
 		IServicesManager.INSTANCE.changeRoomServiceMenuName("The Menu");
 		
 		ArrayList<String> services = new ArrayList<String>();
-		services.add(IServicesAccess.INSTANCE.getAllServiceIDs().get(0));
+		services.add(service1);
 		
 		ArrayList<String> items = new ArrayList<String>();
 		items.add("c");
 		
-		IServicesAccess.INSTANCE.makeRoomServiceOrder(items, services, "bill", "bookable", LocalDateTime.of(2015, 01, 20, 20, 15), false);
-		IServicesAccess.INSTANCE.makeRoomServiceOrder(items, services, "billinge", "bookable", LocalDateTime.of(2015, 01, 20, 20, 15), false);
+		roomServiceOrder1 = IServicesAccess.INSTANCE.makeRoomServiceOrder(items, services, "bill", "bookable", LocalDateTime.of(2015, 01, 20, 20, 15), false);
+		roomServiceOrder2 = IServicesAccess.INSTANCE.makeRoomServiceOrder(items, services, "billinge", "bookable", LocalDateTime.of(2015, 01, 20, 20, 15), false);
 	}
 	
 	@After
@@ -110,16 +111,14 @@ public class IServicesAccessTest {
 	}
 	
 	@Test
-	public void testSearchServices_idMatchExactly() {
-		String serviceID = IServicesAccess.INSTANCE.getAllServiceIDs().get(0);
-		
-		List<String> list = IServicesAccess.INSTANCE.searchServices(serviceID);
+	public void testSearchServices_idMatchExactly() {	
+		List<String> list = IServicesAccess.INSTANCE.searchServices(service1);
 		assertTrue(list.size() == 1);
 	}
 	
 	@Test
 	public void testSearchServices_idMatchSomewhat() {
-		String serviceID = IServicesAccess.INSTANCE.getAllServiceIDs().get(0).substring(2);
+		String serviceID = service1.substring(2);
 		
 		List<String> list = IServicesAccess.INSTANCE.searchServices(serviceID);
 		assertTrue(list.size() == 1);
@@ -145,9 +144,9 @@ public class IServicesAccessTest {
 
 	@Test
 	public void testSearchRoomServiceOrders_id_exact_match() {
-		String serviceID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
+		String service1 = roomServiceOrder1;
 		
-		List<String> list = IServicesAccess.INSTANCE.searchRoomServiceOrders(serviceID);
+		List<String> list = IServicesAccess.INSTANCE.searchRoomServiceOrders(service1);
 		assertTrue(list.size() == 1);
 	}
 	
@@ -157,13 +156,11 @@ public class IServicesAccessTest {
 		assertTrue(list.size() == 2);
 	}
 	
-
-	
 	@Test
 	public void testSearchRoomServiceOrders_id_partial_match() {
-		String serviceID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0).substring(2);
+		String service1 = roomServiceOrder1.substring(2);
 		
-		List<String> list = IServicesAccess.INSTANCE.searchRoomServiceOrders(serviceID);
+		List<String> list = IServicesAccess.INSTANCE.searchRoomServiceOrders(service1);
 		assertTrue(list.size() == 1);
 	}
 	
@@ -175,8 +172,7 @@ public class IServicesAccessTest {
 
 	@Test
 	public void testGetServiceName() {
-		String serviceID = IServicesAccess.INSTANCE.getAllServiceIDs().get(0);
-		assertTrue(IServicesAccess.INSTANCE.getServiceName(serviceID) == "a");
+		assertTrue(IServicesAccess.INSTANCE.getServiceName(service1) == "a");
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -186,8 +182,7 @@ public class IServicesAccessTest {
 
 	@Test
 	public void testGetServicePrice() {
-		String serviceID = IServicesAccess.INSTANCE.getAllServiceIDs().get(0);
-		assertTrue(IServicesAccess.INSTANCE.getServicePrice(serviceID) == 100);
+		assertTrue(IServicesAccess.INSTANCE.getServicePrice(service1) == 100);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -196,9 +191,8 @@ public class IServicesAccessTest {
 	}
 
 	@Test
-	public void testGetServiceExpense() {
-		String serviceID = IServicesAccess.INSTANCE.getAllServiceIDs().get(0);
-		assertTrue(IServicesAccess.INSTANCE.getServiceExpense(serviceID) == 50);
+	public void testGetServiceExpense() {	
+		assertTrue(IServicesAccess.INSTANCE.getServiceExpense(service1) == 50);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -208,16 +202,13 @@ public class IServicesAccessTest {
 
 	@Test
 	public void testIsRSODelivered_isNotDelivered_ExpectNo() {
-		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
-		assertFalse(IServicesAccess.INSTANCE.isRSODelivered(orderID));
+		assertFalse(IServicesAccess.INSTANCE.isRSODelivered(roomServiceOrder1));
 	}
 
 	@Test
 	public void testIsRSODelivered_isDelivered_ExpectYes() {
-		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
-		
-		IServicesAccess.INSTANCE.changeRSOISDelivered(orderID, true);
-		assertTrue(IServicesAccess.INSTANCE.isRSODelivered(orderID));
+		IServicesAccess.INSTANCE.changeRSOISDelivered(roomServiceOrder1, true);
+		assertTrue(IServicesAccess.INSTANCE.isRSODelivered(roomServiceOrder1));
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -227,8 +218,7 @@ public class IServicesAccessTest {
 
 	@Test
 	public void testGetRSODeliveryDate() {
-		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
-		boolean result = IServicesAccess.INSTANCE.getRSODeliveryDate(orderID).isEqual(LocalDateTime.of(2015, 01, 20, 20, 15));
+		boolean result = IServicesAccess.INSTANCE.getRSODeliveryDate(roomServiceOrder1).isEqual(LocalDateTime.of(2015, 01, 20, 20, 15));
 		assertTrue(result);
 	}
 	
@@ -239,8 +229,7 @@ public class IServicesAccessTest {
 
 	@Test
 	public void testGetRSOBookable() {
-		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
-		assertTrue(IServicesAccess.INSTANCE.getRSOBookable(orderID) == "bookable");
+		assertTrue(IServicesAccess.INSTANCE.getRSOBookable(roomServiceOrder1) == "bookable");
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -250,8 +239,7 @@ public class IServicesAccessTest {
 
 	@Test
 	public void testGetRSOItems() {
-		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
-		assertTrue(IServicesAccess.INSTANCE.getRSOItems(orderID).size() == 1);
+		assertTrue(IServicesAccess.INSTANCE.getRSOItems(roomServiceOrder1).size() == 1);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -261,8 +249,7 @@ public class IServicesAccessTest {
 
 	@Test
 	public void testGetRSOServices() {
-		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
-		assertTrue(IServicesAccess.INSTANCE.getRSOServices(orderID).size() == 1);
+		assertTrue(IServicesAccess.INSTANCE.getRSOServices(roomServiceOrder1).size() == 1);
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -272,10 +259,8 @@ public class IServicesAccessTest {
 
 	@Test
 	public void testChangeRSOISDelivered() {
-		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
-		
-		IServicesAccess.INSTANCE.changeRSOISDelivered(orderID, true);
-		assertTrue(IServicesAccess.INSTANCE.isRSODelivered(orderID));
+		IServicesAccess.INSTANCE.changeRSOISDelivered(roomServiceOrder1, true);
+		assertTrue(IServicesAccess.INSTANCE.isRSODelivered(roomServiceOrder1));
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -285,12 +270,10 @@ public class IServicesAccessTest {
 
 	@Test
 	public void testChangeRSODeliveryDate() {
-		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
-		
 		LocalDateTime date = LocalDateTime.of(2016, 01, 20, 20, 15);
 		
-		IServicesAccess.INSTANCE.changeRSODeliveryDate(orderID, date);
-		boolean result = IServicesAccess.INSTANCE.getRSODeliveryDate(orderID).isEqual(date);
+		IServicesAccess.INSTANCE.changeRSODeliveryDate(roomServiceOrder1, date);
+		boolean result = IServicesAccess.INSTANCE.getRSODeliveryDate(roomServiceOrder1).isEqual(date);
 		
 		assertTrue(result);
 	}
@@ -312,11 +295,9 @@ public class IServicesAccessTest {
 
 	@Test
 	public void testSetRSOBill() {
-		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
+		IServicesAccess.INSTANCE.setRSOBill(roomServiceOrder1, "bill2");
 		
-		IServicesAccess.INSTANCE.setRSOBill(orderID, "bill2");
-		
-		assertTrue(IServicesAccess.INSTANCE.getRSOBill(orderID) == "bill2");
+		assertTrue(IServicesAccess.INSTANCE.getRSOBill(roomServiceOrder1) == "bill2");
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -326,8 +307,7 @@ public class IServicesAccessTest {
 
 	@Test
 	public void testGetRSOBill() {
-		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
-		assertTrue(IServicesAccess.INSTANCE.getRSOBill(orderID) == "bill");
+		assertTrue(IServicesAccess.INSTANCE.getRSOBill(roomServiceOrder1) == "bill");
 	}
 	
 	@Test(expected=InvalidIDException.class)
@@ -338,7 +318,7 @@ public class IServicesAccessTest {
 	@Test
 	public void testMakeRoomServiceOrder() {
 		ArrayList<String> services = new ArrayList<String>();
-		services.add(IServicesAccess.INSTANCE.getAllServiceIDs().get(0));
+		services.add(service1);
 		
 		ArrayList<String> items = new ArrayList<String>();
 		items.add("c");

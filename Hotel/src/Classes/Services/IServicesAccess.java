@@ -57,7 +57,14 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:</br>
+	 * 		<i>keyword != null</i></br></br>
+	 * Ensures:</br>
+	 * 		returns a non-null list of all services matching something in the following order:</br>
+	 * 			1. Services with id that exactly matches <i>keyword</i></br>
+	 * 			2. Services with id that has some matching to <i>keyword</i></br>
+	 * 			3. Services with attributes that exactly matches <i>keyword</i></br>
+	 * 			4. Services with attributes that has some matching to <i>keyword</i></br>
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated
@@ -66,7 +73,14 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:</br>
+	 * 		<i>keyword != null</i></br></br>
+	 * Ensures:</br>
+	 * 		returns a non-null list of all RoomServiceOrders matching something in the following order:</br>
+	 * 			1. RoomServiceOrders with id that exactly matches <i>keyword</i></br>
+	 * 			2. RoomServiceOrders with id that has some matching to <i>keyword</i></br>
+	 * 			3. RoomServiceOrders with attributes that exactly matches <i>keyword</i></br>
+	 * 			4. RoomServiceOrders with attributes that has some matching to <i>keyword</i></br>
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated
@@ -203,7 +217,13 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		orderID != null && isDelivered != null
+	 * Ensures:
+	 * 		if there is an RoomServiceOrder rso such that rso.id = orderID
+	 * 			set rso.isDelivered = isDelivered
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false" isDeliveredDataType="org.eclipse.uml2.types.Boolean" isDeliveredRequired="true" isDeliveredOrdered="false"
@@ -213,7 +233,13 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		orderID != null && date != null
+	 * Ensures:
+	 * 		if there is an RoomServiceOrder rso such that rso.id = orderID
+	 * 			set rso.deliveryDate = date
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false" dateRequired="true" dateOrdered="false"
@@ -223,7 +249,10 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		Nothing
+	 * Ensures:
+	 * 		returns the name of the RoomServiceMenu
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
@@ -232,7 +261,10 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		Nothing
+	 * Ensures:
+	 * 		returns a non-null list with all the MenuItems
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
@@ -241,7 +273,13 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		orderID != null && billID != null
+	 * Ensures:
+	 * 		if there exists an RoomServiceOrder rso such that rso.id == orderID
+	 * 			sets the rsos bill to billID
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false" billIDDataType="org.eclipse.uml2.types.String" billIDRequired="true" billIDOrdered="false"
@@ -251,7 +289,13 @@ public interface IServicesAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		orderID != null
+	 * Ensures:
+	 * 		if there exists an RoomServiceOrder rso such that rso.id == orderID
+	 * 			returns the RSOBill where bill.orderID == orderID
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" orderIDDataType="org.eclipse.uml2.types.String" orderIDRequired="true" orderIDOrdered="false"
@@ -267,6 +311,6 @@ public interface IServicesAccess extends Serializable {
 	 * @model itemsDataType="org.eclipse.uml2.types.String" itemsMany="true" itemsOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false" billDataType="org.eclipse.uml2.types.String" billRequired="true" billOrdered="false" bookableDataType="org.eclipse.uml2.types.String" bookableRequired="true" bookableOrdered="false" deliveryDateRequired="true" deliveryDateOrdered="false" isDeliveredDataType="org.eclipse.uml2.types.Boolean" isDeliveredRequired="true" isDeliveredOrdered="false"
 	 * @generated
 	 */
-	void makeRoomServiceOrder(List<String> items, List<String> services, String bill, String bookable, LocalDateTime deliveryDate, boolean isDelivered) throws InvalidIDException;
+	String makeRoomServiceOrder(List<String> items, List<String> services, String bill, String bookable, LocalDateTime deliveryDate, boolean isDelivered) throws InvalidIDException;
 
 } // IServicesAccess

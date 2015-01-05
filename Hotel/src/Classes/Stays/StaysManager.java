@@ -718,28 +718,28 @@ public class StaysManager implements IStays {
 			// Check if period is outside of the old period
 			if (stay.getFromDate().isBefore(from) && stay.getToDate().isBefore(from) || stay.getFromDate().isAfter(to) && stay.getToDate().isAfter(to)) {
 				// Ensure that the bookable is free in the new period
-				if (!iBookings.getAvailableBookablesInPeriod(from, to).contains(stay.getBookable())) {
+				if (!IBookings.INSTANCE.getAvailableBookablesInPeriod(from, to).contains(stay.getBookable())) {
 					logger.warn("Tried to change the period of a stay when the bookable is already booked in the requested period!");
 					throw new InvalidIDException();
 				}
 				// Check if new period interleaves the old period with a sooner start time
 			} else if (stay.getFromDate().isBefore(from) && stay.getToDate().isAfter(from) && stay.getToDate().isBefore(to)) {
 				// Ensure that the bookable is free for the new earlier days
-				if (!iBookings.getAvailableBookablesInPeriod(from, stay.getFromDate().minusNanos(1)).contains(stay.getBookable())) {
+				if (!IBookings.INSTANCE.getAvailableBookablesInPeriod(from, stay.getFromDate().minusNanos(1)).contains(stay.getBookable())) {
 					logger.warn("Tried to change the period of a stay when the bookable is already booked in the requested period!");
 					throw new InvalidIDException();
 				}
 				// Check if new period interleaves the old period with a later end time
 			} else if (stay.getFromDate().isAfter(from) && stay.getFromDate().isBefore(to) && stay.getToDate().isAfter(to)) {
 				// Ensure that the bookable is free for the new later days
-				if (!iBookings.getAvailableBookablesInPeriod(stay.getToDate().plusNanos(1), to).contains(stay.getBookable())) {
+				if (!IBookings.INSTANCE.getAvailableBookablesInPeriod(stay.getToDate().plusNanos(1), to).contains(stay.getBookable())) {
 					logger.warn("Tried to change the period of a stay when the bookable is already booked in the requested period!");
 					throw new InvalidIDException();
 				}
 				// Check if new period interleaves the old period with a sooner start time and a later end time
-			} else if (stay.getFromDate().isBefore(from) && stay.getToDate().isAfter(to)) {
+			} else if (stay.getFromDate().isAfter(from) && stay.getToDate().isBefore(to)) {
 				// Ensure that the bookable is free for the new days outside the old booked period
-				if (!iBookings.getAvailableBookablesInPeriod(stay.getToDate().plusNanos(1), to).contains(stay.getBookable()) || !iBookings.getAvailableBookablesInPeriod(from, stay.getFromDate().minusNanos(1)).contains(stay.getBookable())) {
+				if (!IBookings.INSTANCE.getAvailableBookablesInPeriod(stay.getToDate().plusNanos(1), to).contains(stay.getBookable()) || !iBookings.getAvailableBookablesInPeriod(from, stay.getFromDate().minusNanos(1)).contains(stay.getBookable())) {
 					logger.warn("Tried to change the period of a stay when the bookable is already booked in the requested period!");
 					throw new InvalidIDException();
 				}
@@ -753,7 +753,7 @@ public class StaysManager implements IStays {
 			// Remove the old bill for the old bookable
 			String oldBill = "";
 			for (String bill : stay.getBills()) {
-				if (iBills.getBillBookable(bill) != null) {
+				if (IBills.INSTANCE.getBillBookable(bill) != null) {
 					removeBillFromStay(stayID, bill);
 					oldBill = bill;
 					// There can only be one such bill per stay so just break..
@@ -762,7 +762,7 @@ public class StaysManager implements IStays {
 			}
 
 			// Add a new bill for the new bookable
-			addBillToStay(stayID, iBills.addBill(new ArrayList<String>(), new ArrayList<String>(), stay.getBookable(), from, to, iBills.getBillDiscount(oldBill)));
+			addBillToStay(stayID, IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), stay.getBookable(), from, to, iBills.getBillDiscount(oldBill)));
 		} else {
 			logger.warn("A stay with ID {} does not exist.", stayID);
 			throw new InvalidIDException();

@@ -183,8 +183,8 @@ import Classes.Utils.InvalidIDException;
 	 * @throws InvalidIDException 
 	 * @generated NOT
 	 */
-	public void makeReservation(String restaurantID, List<String> tables, String guestID, LocalDateTime to, LocalDateTime from) throws InvalidIDException {
-		getRestaurantByID(restaurantID).addReservation(tables, guestID, to, from);
+	public String makeReservation(String restaurantID, List<String> tables, String guestID, LocalDateTime to, LocalDateTime from) throws InvalidIDException {
+		return getRestaurantByID(restaurantID).addReservation(tables, guestID, to, from);
 	}
 
 	/**

@@ -206,7 +206,7 @@ public interface IRestaurantsAccess extends Serializable {
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" tablesDataType="org.eclipse.uml2.types.String" tablesMany="true" tablesOrdered="false" guestIDDataType="org.eclipse.uml2.types.String" guestIDRequired="true" guestIDOrdered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false"
 	 * @generated NOT
 	 */
-	void makeReservation(String restaurantID, List<String> tables, String guestID, LocalDateTime to, LocalDateTime from) throws InvalidIDException;
+	String makeReservation(String restaurantID, List<String> tables, String guestID, LocalDateTime to, LocalDateTime from) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->

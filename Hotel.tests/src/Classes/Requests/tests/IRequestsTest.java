@@ -15,7 +15,6 @@ import Classes.Requests.IRequests;
 import Classes.Utils.InvalidIDException;
 
 public class IRequestsTest {
-	
 	private static String request1;
 	private static String request2;
 	private static String request3;
@@ -65,16 +64,14 @@ public class IRequestsTest {
 	
 	@Test
 	public void testHasRequestBeenResolved_not_resolved() {
-		String id = IRequests.INSTANCE.getAllRequestIDs().get(0);
-		Boolean result = IRequests.INSTANCE.hasRequestBeenResolved(id);
+		Boolean result = IRequests.INSTANCE.hasRequestBeenResolved(request1);
 		assertFalse(result);
 	}
 	
 	@Test
 	public void testHasRequestBeenResolved_is_resolved() {
-		String id = IRequests.INSTANCE.getAllRequestIDs().get(0);
-		IRequests.INSTANCE.setRequestResolved(id);
-		Boolean result = IRequests.INSTANCE.hasRequestBeenResolved(id);
+		IRequests.INSTANCE.setRequestResolved(request1);
+		Boolean result = IRequests.INSTANCE.hasRequestBeenResolved(request1);
 		assertTrue(result);
 	}
 	
@@ -85,9 +82,8 @@ public class IRequestsTest {
 
 	@Test
 	public void testSetRequestResolved() {
-		String id = IRequests.INSTANCE.getAllRequestIDs().get(0);
-		IRequests.INSTANCE.setRequestResolved(id);
-		Boolean result = IRequests.INSTANCE.hasRequestBeenResolved(id);
+		IRequests.INSTANCE.setRequestResolved(request1);
+		Boolean result = IRequests.INSTANCE.hasRequestBeenResolved(request1);
 		assertTrue(result);
 	}
 	
@@ -98,8 +94,7 @@ public class IRequestsTest {
 
 	@Test
 	public void testDeleteRequest() {
-		String id = IRequests.INSTANCE.getAllRequestIDs().get(0);
-		IRequests.INSTANCE.deleteRequest(id);
+		IRequests.INSTANCE.deleteRequest(request1);
 		int result = IRequests.INSTANCE.getAllRequestIDs().size();
 		assertTrue(result == 2);
 	}
@@ -111,9 +106,8 @@ public class IRequestsTest {
 
 	@Test
 	public void testChangeRequestDesc() {
-		String id = IRequests.INSTANCE.getAllRequestIDs().get(0);
-		IRequests.INSTANCE.changeRequestDesc(id, "bcbcbcbc");
-		String result = IRequests.INSTANCE.getRequestDescription(id);
+		IRequests.INSTANCE.changeRequestDesc(request1, "bcbcbcbc");
+		String result = IRequests.INSTANCE.getRequestDescription(request1);
 		assertTrue(result == "bcbcbcbc");
 	}
 	
@@ -163,9 +157,8 @@ public class IRequestsTest {
 
 	@Test
 	public void testSetRequestDescription() {
-		String id = IRequests.INSTANCE.getAllRequestIDs().get(0);
-		IRequests.INSTANCE.setRequestDescription(id, "bcbcbcbc");
-		String result = IRequests.INSTANCE.getRequestDescription(id);
+		IRequests.INSTANCE.setRequestDescription(request1, "bcbcbcbc");
+		String result = IRequests.INSTANCE.getRequestDescription(request1);
 		assertTrue(result == "bcbcbcbc");
 	}
 	

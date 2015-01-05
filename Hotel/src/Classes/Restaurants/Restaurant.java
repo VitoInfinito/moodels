@@ -274,7 +274,7 @@ import Classes.Utils.InvalidIDException;
 	  return true;  
 	}
 
-	public void addReservation(List<String> tables, String guestID, LocalDateTime to, LocalDateTime from) {
+	public String addReservation(List<String> tables, String guestID, LocalDateTime to, LocalDateTime from) {
 		Reservation reservation = RestaurantsFactory.INSTANCE.createReservation();
 		
 		reservation.setId(generateReservationID());
@@ -287,6 +287,8 @@ import Classes.Utils.InvalidIDException;
 		}
 		
 		reservations.put(reservation.getId(), reservation);
+		
+		return reservation.getId();
 	}
 	
 	/**

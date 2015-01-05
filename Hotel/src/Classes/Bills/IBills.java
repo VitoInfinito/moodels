@@ -114,7 +114,7 @@ public interface IBills {
 	/**
 	 * <!-- begin-user-doc -->
 	 * Requires:
-	 * 		items != null && services != null TODO: not done yet.. more not nulls?
+	 * 		items != null && services != null && discount != null
 	 * Ensures:
 	 * 		if the requirements are satisfied 
 	 * 			a bill is added
@@ -133,7 +133,7 @@ public interface IBills {
 	String addBill(List<String> items, List<String> services, @Nullable String bookable, @Nullable LocalDateTime from, @Nullable LocalDateTime to, double discount) throws InvalidIDException;
 
 	/**
-	 * <!-- begin-user-doc --> TODO: This needs polish
+	 * <!-- begin-user-doc -->
 	 * Requires:
 	 * 		bills != null && ccNumber != null && ccv != null && expiryMonth != null && expiryYear != null && firstName != null && lastName != null
 	 * Ensures:

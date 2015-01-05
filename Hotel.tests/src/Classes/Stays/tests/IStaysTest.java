@@ -870,10 +870,9 @@ public class IStaysTest {
 	
 	@Test
 	public void testChangePeriodOfStay_stay_exists_expects_time_period_of_stay_changed() {
-		System.out.println(IStays.INSTANCE.getFromDateOfHotelStay(stay1));
 		IStays.INSTANCE.changePeriodOfStay(stay1, LocalDateTime.of(2015,1,2,15,0), LocalDateTime.of(2015,1,4,10,0));
-		LocalDateTime from = IStays.INSTANCE.getFromDateOfHotelStay(stay1);
-		System.out.println(from);
+		assertTrue(IStays.INSTANCE.getFromDateOfHotelStay(stay1).compareTo(LocalDateTime.of(2015,1,2,15,0)) == 0);
+		assertTrue(IStays.INSTANCE.getToDateOfHotelStay(stay1).compareTo(LocalDateTime.of(2015,1,4,10,0)) == 0);
 	}
 	
 	@Test(expected=InvalidIDException.class)

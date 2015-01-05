@@ -198,7 +198,7 @@ class FeedbackManager implements IFeedback {
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addFeedback(String desc) {
+	public String addFeedback(String desc) {
 		String id = generateID();
 		Feedback feedback = FeedbackFactory.INSTANCE.createFeedback();
 
@@ -208,6 +208,7 @@ class FeedbackManager implements IFeedback {
 		feedback.setIsResolved(false);
 
 		feedbacks.put(id, feedback);
+		return id;
 	}
 	
 	@Override
