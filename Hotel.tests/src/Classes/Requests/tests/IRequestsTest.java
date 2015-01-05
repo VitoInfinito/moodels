@@ -17,7 +17,6 @@ import Classes.Utils.InvalidIDException;
 public class IRequestsTest {
 	private static String request1;
 	private static String request2;
-	private static String request3;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() {
@@ -27,7 +26,7 @@ public class IRequestsTest {
 	public void setUp() {
 		request1 = IRequests.INSTANCE.addRequest("abababababahej");
 		request2 = IRequests.INSTANCE.addRequest("lolololololhej");
-		request3 = IRequests.INSTANCE.addRequest("test");
+		IRequests.INSTANCE.addRequest("test");
 	}
 	
 	@After
