@@ -15,6 +15,7 @@ import Classes.Feedback.IFeedback;
 import Classes.Utils.InvalidIDException;
 
 public class IFeedbackTest {
+	private String feedback1, feedback2, feedback3;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() {
@@ -22,9 +23,9 @@ public class IFeedbackTest {
 
 	@Before
 	public void setUp() {
-		IFeedback.INSTANCE.addFeedback("abababababahej");
-		IFeedback.INSTANCE.addFeedback("lolololololhej");
-		IFeedback.INSTANCE.addFeedback("test");
+		feedback1 = IFeedback.INSTANCE.addFeedback("abababababahej");
+		feedback2 = IFeedback.INSTANCE.addFeedback("lolololololhej");
+		feedback3 = IFeedback.INSTANCE.addFeedback("test");
 	}
 	
 	@After
@@ -50,8 +51,7 @@ public class IFeedbackTest {
 
 	@Test
 	public void testGetFeedbackDescription() {
-		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
-		String result = IFeedback.INSTANCE.getFeedbackDescription(id);
+		String result = IFeedback.INSTANCE.getFeedbackDescription(feedback1);
 		assertTrue(result == "abababababahej");
 	}
 	
@@ -62,16 +62,14 @@ public class IFeedbackTest {
 	
 	@Test
 	public void testGetFeedbackIsResolved_not_resolved() {
-		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
-		Boolean result = IFeedback.INSTANCE.getFeedbackIsResolved(id);
+		Boolean result = IFeedback.INSTANCE.getFeedbackIsResolved(feedback1);
 		assertFalse(result);
 	}
 	
 	@Test
 	public void testGetFeedbackIsResolved_is_resolved() {
-		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
-		IFeedback.INSTANCE.setFeedbackIsResolved(id, true);
-		Boolean result = IFeedback.INSTANCE.getFeedbackIsResolved(id);
+		IFeedback.INSTANCE.setFeedbackIsResolved(feedback1, true);
+		Boolean result = IFeedback.INSTANCE.getFeedbackIsResolved(feedback1);
 		assertTrue(result);
 	}
 	
@@ -82,16 +80,14 @@ public class IFeedbackTest {
 
 	@Test
 	public void testGetFeedbackIsNoted_not_noted() {
-		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
-		Boolean result = IFeedback.INSTANCE.getFeedbackIsNoted(id);
+		Boolean result = IFeedback.INSTANCE.getFeedbackIsNoted(feedback1);
 		assertFalse(result);
 	}
 	
 	@Test
 	public void testGetFeedbackIsNoted_is_noted() {
-		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
-		IFeedback.INSTANCE.setFeedbackIsNoted(id, true);
-		Boolean result = IFeedback.INSTANCE.getFeedbackIsNoted(id);
+		IFeedback.INSTANCE.setFeedbackIsNoted(feedback1, true);
+		Boolean result = IFeedback.INSTANCE.getFeedbackIsNoted(feedback1);
 		assertTrue(result);
 	}
 	
@@ -102,9 +98,8 @@ public class IFeedbackTest {
 
 	@Test
 	public void testSetFeedbackDescription() {
-		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
-		IFeedback.INSTANCE.setFeedbackDescription(id, "bcbcbcbc");
-		String result = IFeedback.INSTANCE.getFeedbackDescription(id);
+		IFeedback.INSTANCE.setFeedbackDescription(feedback1, "bcbcbcbc");
+		String result = IFeedback.INSTANCE.getFeedbackDescription(feedback1);
 		assertTrue(result == "bcbcbcbc");
 	}
 	
@@ -115,9 +110,8 @@ public class IFeedbackTest {
 
 	@Test
 	public void testSetFeedbackIsResolved() {
-		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
-		IFeedback.INSTANCE.setFeedbackIsResolved(id, true);
-		Boolean result = IFeedback.INSTANCE.getFeedbackIsResolved(id);
+		IFeedback.INSTANCE.setFeedbackIsResolved(feedback1, true);
+		Boolean result = IFeedback.INSTANCE.getFeedbackIsResolved(feedback1);
 		assertTrue(result);
 	}
 	
@@ -128,9 +122,8 @@ public class IFeedbackTest {
 
 	@Test
 	public void testSetFeedbackIsNoted() {
-		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
-		IFeedback.INSTANCE.setFeedbackIsNoted(id, true);
-		Boolean result = IFeedback.INSTANCE.getFeedbackIsNoted(id);
+		IFeedback.INSTANCE.setFeedbackIsNoted(feedback1, true);
+		Boolean result = IFeedback.INSTANCE.getFeedbackIsNoted(feedback1);
 		assertTrue(result);
 	}
 	
@@ -182,17 +175,15 @@ public class IFeedbackTest {
 	public void testAddFeedback() {
 		tearDown();
 		
-		IFeedback.INSTANCE.addFeedback("bcbcbcbcbc");
-		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
-		String result = IFeedback.INSTANCE.getFeedbackDescription(id);
+		String feedbackID = IFeedback.INSTANCE.addFeedback("bcbcbcbcbc");
+		String result = IFeedback.INSTANCE.getFeedbackDescription(feedbackID);
 		
 		assertTrue(result == "bcbcbcbcbc");
 	}
 	
 	@Test
 	public void testRemoveFeedback() {
-		String id = IFeedback.INSTANCE.getAllFeedbackIDs().get(0);
-		IFeedback.INSTANCE.removeFeedback(id);
+		IFeedback.INSTANCE.removeFeedback(feedback1);
 		int result = IFeedback.INSTANCE.getAllFeedbackIDs().size();
 		assertTrue(result == 2);
 	}

@@ -159,7 +159,7 @@ public interface IFeedback extends Serializable {
 	 * @model descDataType="org.eclipse.uml2.types.String" descRequired="true" descOrdered="false"
 	 * @generated
 	 */
-	void addFeedback(String desc);
+	String addFeedback(String desc);
 	
 	/**
 	 * <!-- begin-user-doc -->
