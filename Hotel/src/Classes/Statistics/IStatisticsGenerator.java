@@ -28,32 +28,63 @@ public interface IStatisticsGenerator extends Serializable {
 	
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		from != null && to != null && from.isBefore(to)
+	 * Ensures:
+	 * 		returns a non null LinkedHashMap were for each day between from and to there exists and entry mapped to the expected guest occupancy on that day.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	LinkedHashMap<LocalDateTime, Integer> getOccupancyStatistics(LocalDateTime from, LocalDateTime to) throws InvalidIDException;
+	LinkedHashMap<LocalDateTime, Integer> getOccupancyStatistics(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		from != null && to != null && from.isBefore(to)
+	 * Ensures:
+	 * 		returns a non null LinkedHashMap were for each day between from and to there exists and entry mapped to the revenue for that day.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	LinkedHashMap<LocalDateTime, Double> getRevenueStatistics(LocalDateTime from, LocalDateTime to) throws InvalidIDException;
+	LinkedHashMap<LocalDateTime, Double> getRevenueStatistics(LocalDateTime from, LocalDateTime to);
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		from != null && to != null && from.isBefore(to)
+	 * Ensures:
+	 * 		returns a non null LinkedHashMap were for each day between from and to there exists and entry mapped to the profit for that day.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
 	 */
-	LinkedHashMap<LocalDateTime, Double> getProfitStatistics(LocalDateTime from, LocalDateTime to) throws InvalidIDException;
+	LinkedHashMap<LocalDateTime, Double> getProfitStatistics(LocalDateTime from, LocalDateTime to);
+	
+	/**
+	 * <!-- begin-user-doc -->
+	  * Requires:
+	 * 		nothing
+	 * Ensures:
+	 * 		the static expenses of the hotel is returned.
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	double getStaticExpenses();
+
+	/**
+	 * <!-- begin-user-doc -->
+	  * Requires:
+	 * 		nothing
+	 * Ensures:
+	 * 		the static expenses of the hotel is set to newStaticExpenses.
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	void setStaticExpenses(double newStaticExpenses);
 
 } // IStatisticsGenerator
