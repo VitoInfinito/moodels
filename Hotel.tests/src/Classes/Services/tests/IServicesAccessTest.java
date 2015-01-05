@@ -159,6 +159,13 @@ public class IServicesAccessTest {
 	public void testSearchRoomServiceOrders() {
 		fail("Unimplemented");
 		// TODO
+		
+		// #### OBSERVERA!	Detta ska testas:
+		
+		// Exact ID match. First Order!
+		// Some property match exactly. Second Order! (Bill, Bookable, Items, Service)
+		// ID match somewhat. Third Order!
+		// Some property match somewhat. Fourth Order. (Bill, Bookable)
 	}
 
 	@Test
