@@ -114,7 +114,7 @@ public interface IBills {
 	/**
 	 * <!-- begin-user-doc -->
 	 * Requires:
-	 * 		items != null && services != null TODO: not done yet.. more not nulls?
+	 * 		items != null && services != null && discount != null
 	 * Ensures:
 	 * 		if the requirements are satisfied 
 	 * 			a bill is added
