@@ -356,9 +356,8 @@ class BillsManager implements IBills {
 	 * @generated
 	 */
 	public void sendInvoice(String billID, String email) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		System.out.println("Sending the following invoice to " + email + ".");
+		System.out.println(bills.get(billID));
 	}
 
 	/**
