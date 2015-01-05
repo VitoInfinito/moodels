@@ -150,7 +150,6 @@ public interface IRestaurantsAccess extends Serializable {
 	 * 		keyword != null
 	 * Ensures:
 	 * 		that the restaurants with the keyword will be returned
-	 * 		//TODO BETTER DESC?
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false"
 	 * @generated NOT
@@ -191,7 +190,17 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		restaurantID != null && 
+	 * 		tables != null &&
+	 * 		guestID != null &&
+	 * 		to != null &&
+	 * 		from != null
+	 * Ensures:
+	 * 		if the restaurantID and the specified time are valid 
+	 * 			make a reservation for the selected time 
+	 * 		otherwise
+	 * 			an InvalidIDException will be thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" tablesDataType="org.eclipse.uml2.types.String" tablesMany="true" tablesOrdered="false" guestIDDataType="org.eclipse.uml2.types.String" guestIDRequired="true" guestIDOrdered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false"
@@ -201,7 +210,14 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		restaurantID != null && 
+	 * 		reservationID != null 
+	 * Ensures:
+	 * 		if the restaurantID exists and reservationID is valid 
+	 * 			cancel the reservation with ID reservationID 
+	 * 		otherwise
+	 * 			an InvalidIDException will be thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" reservationIDDataType="org.eclipse.uml2.types.String" reservationIDRequired="true" reservationIDOrdered="false"
@@ -211,7 +227,15 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		restaurantID != null && 
+	 * 		reservationID != null &&
+	 * 		tables != null  
+	 * Ensures:
+	 * 		if the restaurantID exists and reservationID is valid 
+	 * 			change the time for the table with ID reservationID
+	 * 		otherwise
+	 * 			an InvalidIDException will be thrown
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" reservationIDDataType="org.eclipse.uml2.types.String" reservationIDRequired="true" reservationIDOrdered="false" tablesDataType="org.eclipse.uml2.types.String" tablesMany="true" tablesOrdered="false"
@@ -221,7 +245,13 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		restaurantID != null && 
+	 * 		to != null &&
+	 * 		from != null &&
+	 * 		nbrGuests != null  
+	 * Ensures:
+	 * 		return all the abailable tables for the specified number of guests during the time period given.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" toRequired="true" toOrdered="false" fromRequired="true" fromOrdered="false" nbrGuestsDataType="org.eclipse.uml2.types.Integer" nbrGuestsRequired="true" nbrGuestsOrdered="false"
@@ -231,7 +261,10 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	  Requires:
+	 * 		restaurantID != null  
+	 * Ensures:
+	 * 		returns the menu items on the restaurant with ID restaurantID
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false"
@@ -241,7 +274,11 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	  Requires:
+	 * 		restaurantID != null && 
+	 * 		reservationID != null 
+	 * Ensures:
+	 * 		gives the starting time for a reservation at the specified restaurant.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" reservationIDDataType="org.eclipse.uml2.types.String" reservationIDRequired="true" reservationIDOrdered="false"
@@ -251,7 +288,11 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	  Requires:
+	 * 		restaurantID != null && 
+	 * 		reservationID != null 
+	 * Ensures:
+	 * 		gives the ending time for a reservation at the specified restaurant.
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model required="true" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" reservationIDDataType="org.eclipse.uml2.types.String" reservationIDRequired="true" reservationIDOrdered="false"
@@ -261,7 +302,13 @@ public interface IRestaurantsAccess extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 Requires:
+	 * 		restaurantID != null && 
+	 * 		keyword != null &&
+	 * 		from != null &&
+	 * 		to != null  
+	 * Ensures:
+	 * 		gives the reservations during the specified time period
 	 * <!-- end-user-doc -->
 	 * @throws InvalidIDException 
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" restaurantIDDataType="org.eclipse.uml2.types.String" restaurantIDRequired="true" restaurantIDOrdered="false" keywordDataType="org.eclipse.uml2.types.String" keywordRequired="true" keywordOrdered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
