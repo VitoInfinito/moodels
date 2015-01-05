@@ -16,6 +16,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires;
+import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
 import Classes.Bills.IBills;
 import Classes.Bookables.ConferenceRoomCategory;
 import Classes.Bookables.HotelRoomCategory;
@@ -105,6 +106,20 @@ public class IStatisticsGeneratorTest {
 		for (String id : IBookings.INSTANCE.getAllBookings()) {
 			IBookings.INSTANCE.cancelBooking(id);
 		}
+		
+		IStatisticsGenerator.INSTANCE.setStaticExpenses(0);
+		
+		for (String id : IBills.INSTANCE.getAllBillIDs()) {
+			IBills.INSTANCE.removeBill(id);
+		}
+		
+		for (String id : IServicesManager.INSTANCE.getAllServiceIDs()) {
+			IServicesManager.INSTANCE.removeService(id);
+		}
+		
+		for (String id : IManageInventory.INSTANCE.getAllItemIDs()) {
+			IManageInventory.INSTANCE.removeItem(id);
+		}
 	}
 	
 	@AfterClass
@@ -185,7 +200,7 @@ public class IStatisticsGeneratorTest {
 		
 		String bill1 = IBills.INSTANCE.addBill(purchasedItems, new ArrayList<String>(), null, null, null, 0);
 		String bill2 = IBills.INSTANCE.addBill(new ArrayList<String>(), purchasedServices, null, null, null, 0);
-		String bill3 = IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), "303", LocalDateTime.of(2015, 2, 12, 8, 0), LocalDateTime.of(2015, 2, 23, 17, 0), 0.2);
+		String bill3 = IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), "303", LocalDateTime.of(2015, 2, 12, 8, 0), LocalDateTime.of(2015, 2, 23, 17, 0), 0.2); // 11 nights in a suite for 3000 a night with 20% discount
 		List<String> bills = new ArrayList<String>();
 		bills.add(bill1);
 		bills.add(bill2);
@@ -199,27 +214,84 @@ public class IStatisticsGeneratorTest {
 		assertTrue(stats.values().size() == 3);
 		
 		assertTrue(stats.get(LocalDateTime.of(LocalDateTime.now().minusDays(1).getYear(), LocalDateTime.now().minusDays(1).getMonth(), LocalDateTime.now().minusDays(1).getDayOfMonth(), 0, 0)) == 0);
+		// 599 + 99 + 50 + 11 * 3000 * 0.2 = 27148
 		assertTrue(stats.get(LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonth(), LocalDateTime.now().getDayOfMonth(), 0, 0)) == 27148);
 		assertTrue(stats.get(LocalDateTime.of(LocalDateTime.now().plusDays(1).getYear(), LocalDateTime.now().plusDays(1).getMonth(), LocalDateTime.now().plusDays(1).getDayOfMonth(), 0, 0)) == 0);
+		
+		CustomerRequires.instance().makePayment("12345678", "234", 3, 17, "Adolf","Eriksson", AdministratorRequires.instance().getBalance("12345678", "234", 3, 17, "Adolf","Eriksson"));
 	}
 
 	@Test
-	public void testGetProfitStatistics() {
-		fail("Not yet implemented");
+	public void testGetProfitStatistics_no_payments_expects_negative_static_expenses_entry_values() {
+		IStatisticsGenerator.INSTANCE.setStaticExpenses(5000);
+		
+		LinkedHashMap<LocalDateTime, Double> stats = IStatisticsGenerator.INSTANCE.getProfitStatistics(LocalDateTime.of(2015, 2, 12, 8, 0), LocalDateTime.of(2015, 2, 23, 17, 0));
+		assertTrue(stats.keySet().size() == 12);
+		assertTrue(stats.values().size() == 12);
+		
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 12, 0, 0)) == -5000);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 13, 0, 0)) == -5000);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 14, 0, 0)) == -5000);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 15, 0, 0)) == -5000);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 16, 0, 0)) == -5000);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 17, 0, 0)) == -5000);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 18, 0, 0)) == -5000);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 19, 0, 0)) == -5000);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 20, 0, 0)) == -5000);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 21, 0, 0)) == -5000);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 22, 0, 0)) == -5000);
+		assertTrue(stats.get(LocalDateTime.of(2015, 2, 23, 0, 0)) == -5000);
+	}
+	
+	@Test
+	public void testGetProfitStatistics_with_payments_expects_entry_values_correct() throws SOAPException, InvalidCreditCardException, InsufficientFundsException {
+		IStatisticsGenerator.INSTANCE.setStaticExpenses(5000);
+		
+		AdministratorRequires.instance().makeDeposit("12345678", "234", 3, 17, "Adolf","Eriksson", 90000);
+		String service = IServicesManager.INSTANCE.addService("massage", 599, 200);
+		List<String> purchasedServices = new ArrayList<String>();
+		purchasedServices.add(service);
+		
+		String item1 = IManageInventory.INSTANCE.addItem("gurka", 99, 40, 20);
+		String item2 = IManageInventory.INSTANCE.addItem("korv", 50, 20, 20);
+		List<String> purchasedItems = new ArrayList<String>();
+		purchasedItems.add(item1);
+		purchasedItems.add(item2);
+		
+		String bill1 = IBills.INSTANCE.addBill(purchasedItems, new ArrayList<String>(), null, null, null, 0);
+		String bill2 = IBills.INSTANCE.addBill(new ArrayList<String>(), purchasedServices, null, null, null, 0);
+		String bill3 = IBills.INSTANCE.addBill(new ArrayList<String>(), new ArrayList<String>(), "303", LocalDateTime.of(2015, 2, 12, 8, 0), LocalDateTime.of(2015, 2, 23, 17, 0), 0.2); // 11 nights in a suite for 3000 a night with 20% discount
+		List<String> bills = new ArrayList<String>();
+		bills.add(bill1);
+		bills.add(bill2);
+		bills.add(bill3);
+		
+		IBills.INSTANCE.payBillsWithCreditCard(bills, "12345678", "234", 3, 17, "Adolf","Eriksson");
+		
+		LinkedHashMap<LocalDateTime, Double> stats = IStatisticsGenerator.INSTANCE.getProfitStatistics(LocalDateTime.now().minusDays(1), LocalDateTime.now().plusDays(1));
+		
+		assertTrue(stats.keySet().size() == 3);
+		assertTrue(stats.values().size() == 3);
+		
+		double v = stats.get(LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonth(), LocalDateTime.now().getDayOfMonth(), 0, 0));
+		assertTrue(stats.get(LocalDateTime.of(LocalDateTime.now().minusDays(1).getYear(), LocalDateTime.now().minusDays(1).getMonth(), LocalDateTime.now().minusDays(1).getDayOfMonth(), 0, 0)) == -5000);
+		// 599 + 99 + 50 + 11 * 3000 * 0.2 - (40 + 20 + 200 + 5000) = 21888
+		assertTrue(stats.get(LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonth(), LocalDateTime.now().getDayOfMonth(), 0, 0)) == 21888);
+		assertTrue(stats.get(LocalDateTime.of(LocalDateTime.now().plusDays(1).getYear(), LocalDateTime.now().plusDays(1).getMonth(), LocalDateTime.now().plusDays(1).getDayOfMonth(), 0, 0)) == -5000);
+		
+		CustomerRequires.instance().makePayment("12345678", "234", 3, 17, "Adolf","Eriksson", AdministratorRequires.instance().getBalance("12345678", "234", 3, 17, "Adolf","Eriksson"));
 	}
 	
 	@Test
 	public void testGetStaticExpenses() {
 		IStatisticsGenerator.INSTANCE.setStaticExpenses(10000);
 		assertTrue(IStatisticsGenerator.INSTANCE.getStaticExpenses() == 10000);
-		IStatisticsGenerator.INSTANCE.setStaticExpenses(0);
 	}
 	
 	@Test
 	public void testSetStaticExpenses() {
 		IStatisticsGenerator.INSTANCE.setStaticExpenses(20000);
 		assertTrue(IStatisticsGenerator.INSTANCE.getStaticExpenses() == 20000);
-		IStatisticsGenerator.INSTANCE.setStaticExpenses(0);
 	}
 
 }
