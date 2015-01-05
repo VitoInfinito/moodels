@@ -22,7 +22,6 @@ import Classes.Bookables.ConferenceRoomCategory;
 import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.IBookablesAccess;
 import Classes.Customers.ICustomers;
-import Classes.Guests.IGuests;
 import Classes.Requests.IRequests;
 import Classes.Stays.IStays;
 import Classes.Utils.CreditCard;
@@ -48,7 +47,6 @@ public class BookingsManager implements IBookings {
 
 	private IBookablesAccess iBookableAccess;
 	private IStays iHotelStayManager;
-	private IGuests iGuest;
 	private ICustomers iCustomer;
 	private IBills iBills;
 	private IRequests iRequests;
@@ -65,7 +63,6 @@ public class BookingsManager implements IBookings {
 		bookings = new HashMap<String,Booking>();
 		iBookableAccess = IBookablesAccess.INSTANCE;
 		iHotelStayManager = IStays.INSTANCE;
-		iGuest = IGuests.INSTANCE;
 		iCustomer = ICustomers.INSTANCE;
 		iBills = IBills.INSTANCE;
 		iRequests = IRequests.INSTANCE;

@@ -18,7 +18,7 @@ import Classes.Services.IServicesManager;
 import Classes.Utils.InvalidIDException;
 
 public class IServicesAccessTest {
-	private String service1, service2, service3, service4, roomServiceOrder1, roomServiceOrder2;
+	private String service1, roomServiceOrder1;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() {
@@ -27,10 +27,10 @@ public class IServicesAccessTest {
 	@Before
 	public void setUp() throws Exception {
 		service1 = IServicesManager.INSTANCE.addService("a", 100, 50);
-		service2 = IServicesManager.INSTANCE.addService("b", 200, 75);
+		IServicesManager.INSTANCE.addService("b", 200, 75);
 		
-		service3 = IServicesManager.INSTANCE.addService("abababababahej", 0, 0);
-		service4 = IServicesManager.INSTANCE.addService("lolololololhej", 0, 0);
+		IServicesManager.INSTANCE.addService("abababababahej", 0, 0);
+		IServicesManager.INSTANCE.addService("lolololololhej", 0, 0);
 		
 		IServicesManager.INSTANCE.addRoomServiceMenuItem("c");
 		IServicesManager.INSTANCE.addRoomServiceMenuItem("d");
@@ -44,7 +44,7 @@ public class IServicesAccessTest {
 		items.add("c");
 		
 		roomServiceOrder1 = IServicesAccess.INSTANCE.makeRoomServiceOrder(items, services, "bill", "bookable", LocalDateTime.of(2015, 01, 20, 20, 15), false);
-		roomServiceOrder2 = IServicesAccess.INSTANCE.makeRoomServiceOrder(items, services, "billinge", "bookable", LocalDateTime.of(2015, 01, 20, 20, 15), false);
+		IServicesAccess.INSTANCE.makeRoomServiceOrder(items, services, "billinge", "bookable", LocalDateTime.of(2015, 01, 20, 20, 15), false);
 	}
 	
 	@After

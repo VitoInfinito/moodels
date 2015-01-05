@@ -2,7 +2,6 @@ package Classes.Staff.tests;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -12,7 +11,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import Classes.Customers.ICustomers;
 import Classes.Staff.IStaff;
 import Classes.Utils.InvalidIDException;
 

@@ -1,6 +1,7 @@
 package Classes.Bills.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -18,7 +19,6 @@ import org.junit.Test;
 import se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires;
 import se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires;
 import Classes.Bills.IBills;
-import Classes.Inventory.IInventoryAccess;
 import Classes.Inventory.IManageInventory;
 import Classes.Utils.InsufficientFundsException;
 import Classes.Utils.InvalidCreditCardException;

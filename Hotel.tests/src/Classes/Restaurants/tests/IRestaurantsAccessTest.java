@@ -1,6 +1,8 @@
 package Classes.Restaurants.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -11,7 +13,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import Classes.Requests.IRequests;
 import Classes.Restaurants.IRestaurantsAccess;
 import Classes.Restaurants.IRestaurantsManage;
 import Classes.Utils.InvalidIDException;
@@ -19,7 +20,7 @@ import Classes.Utils.InvalidIDException;
 public class IRestaurantsAccessTest {
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 	
-	private String reservation1, reservation2, reservation3;
+	private String reservation1;
 
 	@Before
 	public void setUp() throws Exception {
@@ -35,7 +36,7 @@ public class IRestaurantsAccessTest {
 		tables.add("abababababahej");
 		tables.add("lolololololhej");
 		
-		reservation2 = IRestaurantsManage.INSTANCE.makeReservation(
+		IRestaurantsManage.INSTANCE.makeReservation(
 				"abababababahej", 
 				tables, 
 				"abababababahej", 
@@ -43,7 +44,7 @@ public class IRestaurantsAccessTest {
 				LocalDateTime.parse("2014-10-10 12:00", formatter)
 			);
 		
-		reservation3 = IRestaurantsManage.INSTANCE.makeReservation(
+		IRestaurantsManage.INSTANCE.makeReservation(
 				"abababababahej", 
 				tables, 
 				"lolololololhej", 

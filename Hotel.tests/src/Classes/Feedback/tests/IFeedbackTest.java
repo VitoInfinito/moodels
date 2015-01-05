@@ -15,7 +15,7 @@ import Classes.Feedback.IFeedback;
 import Classes.Utils.InvalidIDException;
 
 public class IFeedbackTest {
-	private String feedback1, feedback2, feedback3;
+	private String feedback1;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() {
@@ -24,8 +24,8 @@ public class IFeedbackTest {
 	@Before
 	public void setUp() {
 		feedback1 = IFeedback.INSTANCE.addFeedback("abababababahej");
-		feedback2 = IFeedback.INSTANCE.addFeedback("lolololololhej");
-		feedback3 = IFeedback.INSTANCE.addFeedback("test");
+		IFeedback.INSTANCE.addFeedback("lolololololhej");
+		IFeedback.INSTANCE.addFeedback("test");
 	}
 	
 	@After
