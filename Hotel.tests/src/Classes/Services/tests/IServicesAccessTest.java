@@ -3,11 +3,14 @@ package Classes.Services.tests;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.time.chrono.ChronoLocalDateTime;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import Classes.Services.IServicesAccess;
 import Classes.Services.IServicesManager;
 
 public class IServicesAccessTest {
@@ -67,27 +70,47 @@ public class IServicesAccessTest {
 
 	@Test
 	public void testSearchServices() {
-		fail("Not yet implemented");
+		boolean result = IServicesManager.INSTANCE.searchServices("a").size() == 1;
+		assertTrue(result);
 	}
 
 	@Test
 	public void testSearchRoomServiceOrders() {
-		fail("Not yet implemented");
+		boolean result = IServicesManager.INSTANCE.searchRoomServiceOrders("b").size() == 0;
+		assertTrue(result);
 	}
 
 	@Test
 	public void testGetServiceName() {
-		fail("Not yet implemented");
+		boolean result = false;
+		for (String id : IServicesAccess.INSTANCE.getAllServiceIDs()){
+			if(IServicesAccess.INSTANCE.getServiceName(id) == "a"){
+				result = IServicesAccess.INSTANCE.getServiceName(id) == "a";
+			}
+		}
+		assertTrue(result);
 	}
 
 	@Test
 	public void testGetServicePrice() {
-		fail("Not yet implemented");
+		boolean result = false;
+		for (String id : IServicesAccess.INSTANCE.getAllServiceIDs()){
+			if(IServicesAccess.INSTANCE.getServiceName(id) == "b"){
+				result = IServicesAccess.INSTANCE.getServicePrice(id) == 200;
+			}
+		}
+		assertTrue(result);
 	}
 
 	@Test
 	public void testGetServiceExpense() {
-		fail("Not yet implemented");
+		boolean result = false;
+		for (String id : IServicesAccess.INSTANCE.getAllServiceIDs()){
+			if(IServicesAccess.INSTANCE.getServiceName(id) == "a"){
+				result = IServicesAccess.INSTANCE.getServiceExpense(id) == 50;
+			}
+		}
+		assertTrue(result);
 	}
 
 	@Test
