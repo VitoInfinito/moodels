@@ -267,7 +267,11 @@ public interface IStaff extends Serializable {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 		//TODO
+	 * Requires:
+	 * 		from != null
+	 * 		to != null
+	 * Ensures:
+	 * 		that the staff are scheduled for work using statistics
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.String" ordered="false" fromRequired="true" fromOrdered="false" toRequired="true" toOrdered="false"
 	 * @generated
