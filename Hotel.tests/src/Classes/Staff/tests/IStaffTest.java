@@ -4,6 +4,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.junit.After;
@@ -220,10 +221,13 @@ public class IStaffTest {
 		IStaff.INSTANCE.getStaffSalaryContractType("");
 	}
 
-	@Test
+	//TODO This test may be inaccurate
+	@Test(expected=InvalidIDException.class)
 	public void testScheduleStaff() {
-		// TODO
-		fail("Not yet implemented");
+		tearDown();
+		
+		IStaff.INSTANCE.scheduleStaff(LocalDateTime.now(), LocalDateTime.of(2015, 1, 22, 0, 0));
+		IStaff.INSTANCE.getStaffJob("010101-0101");
 	}
 	
 	@Test
