@@ -1,6 +1,8 @@
 package Classes.Restaurants.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -11,7 +13,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import Classes.Requests.IRequests;
 import Classes.Restaurants.IRestaurantsAccess;
 import Classes.Restaurants.IRestaurantsManage;
 import Classes.Utils.InvalidIDException;

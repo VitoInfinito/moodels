@@ -1,6 +1,6 @@
 package Classes.Statistics.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -23,7 +23,6 @@ import Classes.Bookables.HotelRoomCategory;
 import Classes.Bookables.IBookablesManage;
 import Classes.Bookings.IBookings;
 import Classes.Customers.ICustomers;
-import Classes.Inventory.IInventoryAccess;
 import Classes.Inventory.IManageInventory;
 import Classes.Services.IServicesManager;
 import Classes.Statistics.IStatisticsGenerator;
