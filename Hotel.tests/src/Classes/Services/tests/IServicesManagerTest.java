@@ -2,11 +2,15 @@ package Classes.Services.tests;
 
 import static org.junit.Assert.assertTrue;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import Classes.Services.IServicesAccess;
 import Classes.Services.IServicesManager;
 import Classes.Utils.InvalidIDException;
 
@@ -21,6 +25,14 @@ public class IServicesManagerTest {
 		IServicesManager.INSTANCE.addService("a", 100, 50);
 		IServicesManager.INSTANCE.addRoomServiceMenuItem("b");
 		IServicesManager.INSTANCE.changeRoomServiceMenuName("The Menu");
+		
+		ArrayList<String> services = new ArrayList<String>();
+		services.add(IServicesAccess.INSTANCE.getAllServiceIDs().get(0));
+		
+		ArrayList<String> items = new ArrayList<String>();
+		items.add("b");
+		
+		IServicesManager.INSTANCE.makeRoomServiceOrder(items, services, "bill", "bookable", LocalDateTime.of(2015, 01, 20, 20, 15), false);
 	}
 	
 	@After
@@ -31,6 +43,10 @@ public class IServicesManagerTest {
 		
 		for (String ID : IServicesManager.INSTANCE.getRoomServiceMenuItems()) {
 			IServicesManager.INSTANCE.removeRoomServiceMenuItem(ID);
+		}
+		
+		for (String id : IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs()) {
+			IServicesManager.INSTANCE.removeRoomServiceOrder(id);
 		}
 	}
 
@@ -139,6 +155,19 @@ public class IServicesManagerTest {
 	@Test(expected=InvalidIDException.class)
 	public void testRemoveService_id_not_exists() {
 		IServicesManager.INSTANCE.removeService("c");
+	}
+	
+	@Test
+	public void testRemoveRoomServiceOrder() {
+		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
+		
+		IServicesManager.INSTANCE.removeRoomServiceOrder(orderID);
+		assertTrue(IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().size() == 0);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testRemoveRoomServiceOrder_id_not_exists() {
+		IServicesManager.INSTANCE.removeRoomServiceOrder("");
 	}
 
 }

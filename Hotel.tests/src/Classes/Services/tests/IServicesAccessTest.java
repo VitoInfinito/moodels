@@ -14,6 +14,7 @@ import org.junit.Test;
 
 import Classes.Services.IServicesAccess;
 import Classes.Services.IServicesManager;
+import Classes.Utils.InvalidIDException;
 
 public class IServicesAccessTest {
 	
@@ -85,8 +86,8 @@ public class IServicesAccessTest {
 
 	@Test
 	public void testSearchServices() {
-		boolean result = IServicesAccess.INSTANCE.searchServices("a").size() == 1;
-		assertTrue(result);
+		fail("Unimplemented");
+		// TODO
 	}
 
 	@Test
@@ -97,35 +98,35 @@ public class IServicesAccessTest {
 
 	@Test
 	public void testGetServiceName() {
-		boolean result = false;
-		for (String id : IServicesAccess.INSTANCE.getAllServiceIDs()){
-			if(IServicesAccess.INSTANCE.getServiceName(id) == "a"){
-				result = IServicesAccess.INSTANCE.getServiceName(id) == "a";
-			}
-		}
-		assertTrue(result);
+		String serviceID = IServicesAccess.INSTANCE.getAllServiceIDs().get(0);
+		assertTrue(IServicesAccess.INSTANCE.getServiceName(serviceID) == "a");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetServiceName_id_not_exists() {
+		IServicesAccess.INSTANCE.getServiceName("");
 	}
 
 	@Test
 	public void testGetServicePrice() {
-		boolean result = false;
-		for (String id : IServicesAccess.INSTANCE.getAllServiceIDs()){
-			if(IServicesAccess.INSTANCE.getServiceName(id) == "b"){
-				result = IServicesAccess.INSTANCE.getServicePrice(id) == 200;
-			}
-		}
-		assertTrue(result);
+		String serviceID = IServicesAccess.INSTANCE.getAllServiceIDs().get(0);
+		assertTrue(IServicesAccess.INSTANCE.getServicePrice(serviceID) == 100);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetServicePrice_id_not_exists() {
+		IServicesAccess.INSTANCE.getServicePrice("");
 	}
 
 	@Test
 	public void testGetServiceExpense() {
-		boolean result = false;
-		for (String id : IServicesAccess.INSTANCE.getAllServiceIDs()){
-			if(IServicesAccess.INSTANCE.getServiceName(id) == "a"){
-				result = IServicesAccess.INSTANCE.getServiceExpense(id) == 50;
-			}
-		}
-		assertTrue(result);
+		String serviceID = IServicesAccess.INSTANCE.getAllServiceIDs().get(0);
+		assertTrue(IServicesAccess.INSTANCE.getServiceExpense(serviceID) == 50);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetServiceExpense_id_not_exists() {
+		IServicesAccess.INSTANCE.getServiceExpense("");
 	}
 
 	@Test
@@ -141,13 +142,22 @@ public class IServicesAccessTest {
 		IServicesAccess.INSTANCE.changeRSOISDelivered(orderID, true);
 		assertTrue(IServicesAccess.INSTANCE.isRSODelivered(orderID));
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testIsRSODelivered_id_not_exists() {
+		IServicesAccess.INSTANCE.isRSODelivered("");
+	}
 
 	@Test
 	public void testGetRSODeliveryDate() {
 		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
-		
 		boolean result = IServicesAccess.INSTANCE.getRSODeliveryDate(orderID).isEqual(LocalDateTime.of(2015, 01, 20, 20, 15));
 		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetRSODeliveryDate_id_not_exists() {
+		IServicesAccess.INSTANCE.getRSODeliveryDate("");
 	}
 
 	@Test
@@ -155,17 +165,32 @@ public class IServicesAccessTest {
 		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
 		assertTrue(IServicesAccess.INSTANCE.getRSOBookable(orderID) == "bookable");
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetRSOBookable_id_not_exists() {
+		IServicesAccess.INSTANCE.getRSOBookable("");
+	}
 
 	@Test
 	public void testGetRSOItems() {
 		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
 		assertTrue(IServicesAccess.INSTANCE.getRSOItems(orderID).size() == 1);
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetRSOItems_id_not_exists() {
+		IServicesAccess.INSTANCE.getRSOItems("");
+	}
 
 	@Test
 	public void testGetRSOServices() {
 		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
 		assertTrue(IServicesAccess.INSTANCE.getRSOServices(orderID).size() == 1);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetRSOServices_id_not_exists() {
+		IServicesAccess.INSTANCE.getRSOServices("");
 	}
 
 	@Test
@@ -174,6 +199,11 @@ public class IServicesAccessTest {
 		
 		IServicesAccess.INSTANCE.changeRSOISDelivered(orderID, true);
 		assertTrue(IServicesAccess.INSTANCE.isRSODelivered(orderID));
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeRSOISDelivered_id_not_exists() {
+		IServicesAccess.INSTANCE.isRSODelivered("");
 	}
 
 	@Test
@@ -186,6 +216,11 @@ public class IServicesAccessTest {
 		boolean result = IServicesAccess.INSTANCE.getRSODeliveryDate(orderID).isEqual(date);
 		
 		assertTrue(result);
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testChangeRSODeliveryDate_id_not_exists() {
+		IServicesAccess.INSTANCE.changeRSODeliveryDate("", null);
 	}
 
 	@Test
@@ -206,11 +241,21 @@ public class IServicesAccessTest {
 		
 		assertTrue(IServicesAccess.INSTANCE.getRSOBill(orderID) == "bill2");
 	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testSetRSOBill_id_not_exists() {
+		IServicesAccess.INSTANCE.setRSOBill("", null);
+	}
 
 	@Test
 	public void testGetRSOBill() {
 		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
 		assertTrue(IServicesAccess.INSTANCE.getRSOBill(orderID) == "bill");
+	}
+	
+	@Test(expected=InvalidIDException.class)
+	public void testGetRSOBill_id_not_exists() {
+		IServicesAccess.INSTANCE.getRSOBill("");
 	}
 
 	@Test
@@ -222,17 +267,7 @@ public class IServicesAccessTest {
 		items.add("c");
 		
 		IServicesAccess.INSTANCE.makeRoomServiceOrder(items, services, "bill", "bookable", LocalDateTime.of(2015, 01, 20, 20, 15), false);
-	
 		assertTrue(IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().size() == 2);
-	}
-	
-	@Test
-	public void testRemoveRoomServiceOrder() {
-		String orderID = IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().get(0);
-		
-		IServicesManager.INSTANCE.removeRoomServiceOrder(orderID);
-		
-		assertTrue(IServicesAccess.INSTANCE.getAllRoomServiceOrderIDs().size() == 0);
 	}
 
 }
