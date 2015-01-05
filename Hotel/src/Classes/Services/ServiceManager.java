@@ -521,4 +521,14 @@ import Classes.Utils.InvalidIDException;
 	private String generateServiceID() {
 		return String.format("se%06d", ServiceIDCounter++);
 	}
+
+	@Override
+	public void removeRoomServiceOrder(String orderID) {
+		if (roomServiceOrders.containsKey(orderID)) {
+			roomServiceOrders.remove(orderID);
+		} else {
+			logger.warn("A order with id {} could not be found.", orderID);
+			throw new InvalidIDException();
+		}
+	}
 } //ServiceManagerImpl

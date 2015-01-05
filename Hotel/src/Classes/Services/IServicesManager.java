@@ -126,6 +126,22 @@ public interface IServicesManager extends IServicesAccess {
 	 * @generated
 	 */
 	void removeService(String serviceID) throws InvalidIDException;
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Requires:
+	 * 		id != null
+	 * Ensures:
+	 * 		if there exists a room service order such that service.id == id
+	 * 			the room service order with id ID is removed
+	 * 		otherwise
+	 * 			InvalidIDException is thrown
+	 * <!-- end-user-doc -->
+	 * @throws InvalidIDException 
+	 * @model itemIDDataType="org.eclipse.uml2.types.String" itemIDRequired="true" itemIDOrdered="false"
+	 * @generated
+	 */
+	void removeRoomServiceOrder(String orderID) throws InvalidIDException;
 
 	/**
 	 * <!-- begin-user-doc -->

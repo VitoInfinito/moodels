@@ -2322,6 +2322,11 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_kAzeUJTIEeS3Fc27tocGlw" name="removeRoomServiceOrder" concurrency="concurrent">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_wDXRQJTIEeS3Fc27tocGlw" name="orderID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_w9OfXXpsEeST-65JbGUt8g" name="ordered" visibility="private" memberEnd="_w9OfXnpsEeST-65JbGUt8g _w9OfLnpsEeST-65JbGUt8g">
       <ownedEnd xmi:type="uml:Property" xmi:id="_w9OfXnpsEeST-65JbGUt8g" name="roomServiceOrder" type="_w9OfLXpsEeST-65JbGUt8g" association="_w9OfXXpsEeST-65JbGUt8g">
